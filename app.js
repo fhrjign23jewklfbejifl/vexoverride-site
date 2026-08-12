@@ -515,8 +515,8 @@ function renderDashboard() {
       metric("Auton", "12", "Bonus tracking + AWP"),
       metric("Data", "Local", "Export/import for events")
     ].join("");
-    $("scoreTrend").innerHTML = `<div class="empty-state"><b>No match trend yet.</b><span>Enter a match or load demo data to see the analysis engine wake up.</span><button class="primary" data-action="load-demo">Load Demo Data</button></div>`;
-    $("coachSummary").innerHTML = `<b>Start here:</b> use Match Lab after practice or competition matches. The dashboard will turn those records into trend, pressure, scorecard, and correlation evidence.`;
+    $("scoreTrend").innerHTML = `<div class="empty-state"><b>Enter your first match to start building the dashboard.</b><span>A demo chart appears here once you save match records.</span><button class="primary" data-action="load-demo">Load Demo Data</button></div>`;
+    $("coachSummary").innerHTML = `<b>Start with Match.</b> Save one official score after a practice or event match. Override will turn it into trend, pressure, scorecard, and correlation evidence.`;
     $("scorecard").innerHTML = `<div class="empty-state compact-empty"><b>Scorecard waiting for data</b><span>Auton, scoring, field control, and resistance grades appear after saved matches.</span></div>`;
     $("matchList").innerHTML = `<p class="muted">No matches saved yet.</p>`;
     setupCorrelation(data);
@@ -527,12 +527,12 @@ function renderDashboard() {
   const close = data.filter(m => Math.abs(m.margin) <= 10);
   const blowouts = data.filter(m => Math.abs(m.margin) >= 20);
   $("dashboardMetrics").innerHTML = [
-    metric("Matches", data.length, "Current filter view"),
-    metric("Record", record(data), "Win-loss-tie"),
-    metric("Win rate", pct(wins.length / data.length), "Result frequency"),
-    metric("Average score", fmt(avg(data, m => m.youScore)), "Our final score"),
-    metric("Average margin", fmt(avg(data, m => m.margin)), "Positive is good"),
-    metric("AWP rate", pct(avg(data, m => m.awp ? 1 : 0)), "Autonomous Win Point"),
+    metric("Avg Score", fmt(avg(data, m => m.youScore)), "Our final score"),
+    metric("Win Rate", pct(wins.length / data.length), `${record(data)} record`),
+    metric("Auton Win %", pct(avg(data, m => m.auton === "you" || m.auton === "tie" ? 1 : 0)), "Won or split auton"),
+    metric("AWP %", pct(avg(data, m => m.awp ? 1 : 0)), "Autonomous Win Point"),
+    metric("Matches", data.length, "Current filter"),
+    metric("Avg Margin", fmt(avg(data, m => m.margin)), "Positive is good"),
     metric("Yellow ownership", fmt(avg(data, m => m.you.yellowPins)), "Avg owned yellow Pin halves"),
     metric("Consistency", fmt(stdev(data, m => m.youScore)), "Lower is steadier")
   ].join("");
@@ -556,9 +556,9 @@ function renderCoachSummary(data, wins, losses, close, blowouts) {
   const low = data.filter(m => pressure(m.opp) < highCut);
   const lever = bestLever(data);
   $("coachSummary").innerHTML = `
-    <p><b>Current read:</b> ${record(data)} in this view, averaging <b>${fmt(avg(data,m=>m.youScore))}</b> points and <b>${fmt(avg(data,m=>m.margin))}</b> margin.</p>
-    <p><b>High-pressure opponents:</b> ${record(high)} with average margin <b>${fmt(avg(high,m=>m.margin))}</b>. Low-pressure average margin: <b>${fmt(avg(low,m=>m.margin))}</b>.</p>
-    <p><b>Likely win lever:</b> ${escapeHtml(lever)}. <b>Close match record:</b> ${record(close)}. <b>Blowout record:</b> ${record(blowouts)}.</p>
+    <p><b>Your biggest win lever is ${escapeHtml(lever)}.</b></p>
+    <p>You are <b>${record(data)}</b> in this view, averaging <b>${fmt(avg(data,m=>m.youScore))}</b> points and <b>${fmt(avg(data,m=>m.margin))}</b> margin.</p>
+    <p>Against high-pressure opponents: <b>${record(high)}</b>. Close match record: <b>${record(close)}</b>.</p>
   `;
 }
 function grade(score) {
@@ -625,9 +625,16 @@ function setupCorrelation(data) {
   const render = () => {
     const vx = variables.find(v => v[0] === x.value), vy = variables.find(v => v[0] === y.value);
     const r = corr(data.map(vx[2]), data.map(vy[2]));
-    $("correlationReadout").innerHTML = `<b>${Number.isFinite(r) ? r.toFixed(2) : "N/A"}</b> - ${corrLabel(r)} relationship between <b>${vx[1]}</b> and <b>${vy[1]}</b>. Matches used: <b>${data.length}</b>. Ordered pairings available: <b>${variables.length * (variables.length - 1)}</b>.`;
+    $("correlationReadout").innerHTML = `<b>${Number.isFinite(r) ? r.toFixed(2) : "N/A"}</b> - ${corrLabel(r)} relationship between <b>${vx[1]}</b> and <b>${vy[1]}</b>. Matches used: <b>${data.length}</b>.`;
   };
   x.onchange = render; y.onchange = render; render();
+  $("correlationReadout").insertAdjacentHTML("beforeend", `
+    <div class="suggested-correlations">
+      <button type="button" data-corr-preset="autonWon:win">Auton -> Win % <span>recommended</span></button>
+      <button type="button" data-corr-preset="youMidfield:youScore">Midfield -> Score <span>field control</span></button>
+      <button type="button" data-corr-preset="youGoals:youScore">Goals Used -> Score <span>efficiency</span></button>
+    </div>
+  `);
 }
 function bestLever(data) {
   if (data.length < 3) return "not enough data yet";
@@ -694,11 +701,18 @@ function renderSkills() {
   const actual = state.skills;
   const driver = actual.filter(s => s.type === "driver");
   const auton = actual.filter(s => s.type === "auton");
+  const bestDriver = max(driver, s => s.score);
+  const bestAuton = max(auton, s => s.score);
+  const bestOverall = Math.max(Number.isFinite(bestDriver) ? bestDriver : 0, Number.isFinite(bestAuton) ? bestAuton : 0);
+  const linkedGaps = actual.map(s => {
+    const target = state.targets.find(t => t.id === s.linkedTarget);
+    return target ? s.score - target.score : null;
+  }).filter(Number.isFinite);
+  const latestGap = linkedGaps.at(-1);
   $("skillsMetrics").innerHTML = [
-    metric("Runs", actual.length, "Actual only"),
+    `<div class="skills-hero"><span class="muted">Personal Best</span><strong>${bestOverall || "N/A"}</strong><small>${Number.isFinite(latestGap) ? `Latest target gap ${latestGap >= 0 ? "+" : ""}${latestGap}` : "Link a run to a target to track the gap."}</small><div class="skills-bars"><span>Driver<i style="--w:${Math.min(100, (bestDriver || 0) / 150 * 100)}%"></i><b>${bestDriver || 0}</b></span><span>Auton<i style="--w:${Math.min(100, (bestAuton || 0) / 150 * 100)}%"></i><b>${bestAuton || 0}</b></span></div></div>`,
+    metric("Runs", actual.length, "Actual"),
     metric("Targets", state.targets.length, "Blueprints"),
-    metric("Best driver", max(driver, s => s.score) || "N/A", "Driver Skills"),
-    metric("Best auton", max(auton, s => s.score) || "N/A", "Autonomous Skills"),
     metric("Average", fmt(avg(actual, s => s.score)), "Actual runs"),
     metric("Best stop", max(actual, s => s.stopTime) || 0, "Skills Stop Time")
   ].join("");
@@ -710,7 +724,7 @@ function skillItem(s, isTarget) {
   const linked = state.targets.find(t => t.id === s.linkedTarget);
   const title = isTarget ? (s.targetName || "Unnamed target") : `${s.type} run`;
   const gap = linked && !isTarget ? ` / vs ${escapeHtml(linked.targetName)} (${s.score - linked.score >= 0 ? "+" : ""}${s.score - linked.score})` : "";
-  return `<article class="item">
+  return `<article class="item ${isTarget ? "target-skill-card" : "actual-skill-card"}">
     <div class="item-head"><div><span class="pill">${isTarget ? "TARGET" : "ACTUAL"}</span> <span class="pill">${s.type}</span><h3>${escapeHtml(title)} - ${s.score}${gap}</h3></div>
     <button class="danger" data-delete-skill="${s.id}" data-kind="${isTarget ? "target" : "actual"}">Delete</button></div>
     <p>Red/blue halves: ${s.alliancePins}; owned yellow: ${s.yellowPins}; Midfield: ${s.midfield ? "yes" : "no"}; Toggles: ${s.toggles}; stop time: ${s.stopTime || 0}.</p>
@@ -746,17 +760,17 @@ function renderScouts() {
   }
   renderStandingsPreview();
   $("scoutList").innerHTML = sorted.length ? sorted.map((s, index) => `
-    <article class="item">
-      <div class="item-head">
+    <article class="item scout-card-shell">
+      <div class="scout-card-top">
         <div>
           <div class="pills">
-            <span class="pill">#${index + 1} pick</span>
             <span class="pill">Rank ${s.rank || "?"}</span>
             <span class="pill">${escapeHtml(s.record || "record ?")}</span>
             ${scoutTags(s).map(t => `<span class="pill">${escapeHtml(t)}</span>`).join("")}
           </div>
-          <h3>${escapeHtml(s.team)} - pick value ${fmt(s.score,0)}/100</h3>
+          <h3 class="scout-team">${escapeHtml(s.team)}</h3>
         </div>
+        <div class="pick-rank-card"><span>Pick</span><b>${index + 1}</b><small>${fmt(s.score,0)}/100</small></div>
         <button class="danger" data-delete-scout="${s.id}">Delete</button>
       </div>
       <div class="scout-lines">
@@ -983,9 +997,17 @@ document.addEventListener("click", (e) => {
     $(tab.dataset.tab).classList.add("active");
     updateLayoutMode();
     renderAll();
+    $("overrideApp")?.scrollIntoView({ behavior: "smooth", block: "start" });
   }
   const jump = e.target.closest("[data-jump]");
   if (jump) document.querySelector(`[data-tab="${jump.dataset.jump}"]`).click();
+  const preset = e.target.closest("[data-corr-preset]");
+  if (preset) {
+    const [x, y] = preset.dataset.corrPreset.split(":");
+    $("corrX").value = x;
+    $("corrY").value = y;
+    $("corrX").dispatchEvent(new Event("change", { bubbles: true }));
+  }
   const action = e.target.closest("[data-action]")?.dataset.action;
   if (action === "export-json") exportJson();
   if (action === "load-demo") demoData();
