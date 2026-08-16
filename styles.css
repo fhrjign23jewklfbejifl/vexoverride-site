@@ -244,6 +244,10 @@ button {
   grid-template-columns: 140px minmax(360px, 520px) 140px;
 }
 
+.topbar:not(.skills-topbar) > .icon-reset {
+  justify-self: end;
+}
+
 .skills-topbar {
   width: min(900px, 100%);
   grid-template-columns: 52px minmax(260px, 1fr) 240px 140px;
