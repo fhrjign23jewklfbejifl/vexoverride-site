@@ -352,7 +352,7 @@ button {
 
 .scoring-board {
   position: relative;
-  --board-size: clamp(700px, 72vw, 840px);
+  --board-size: clamp(660px, 68vw, 790px);
   display: grid;
   place-items: center;
   min-height: 0;
@@ -368,7 +368,7 @@ button {
 }
 
 .skills-board {
-  --board-size: clamp(720px, 74vw, 860px);
+  --board-size: clamp(675px, 69vw, 810px);
   padding-top: 22px;
 }
 
@@ -1782,12 +1782,12 @@ body.modal-open {
   }
 
   .scoring-board {
-    --board-size: min(92vw, 720px);
+    --board-size: min(90vw, 680px);
     padding: 70px 8px 12px;
   }
 
   .skills-board {
-    --board-size: min(92vw, 740px);
+    --board-size: min(90vw, 700px);
     padding-top: 12px;
   }
 
@@ -1964,13 +1964,13 @@ body.modal-open {
   }
 
   .scoring-board {
-    --board-size: min(92vw, 620px);
+    --board-size: min(90vw, 585px);
     border-radius: 18px;
     padding-top: 62px;
   }
 
   .skills-board {
-    --board-size: min(92vw, 640px);
+    --board-size: min(90vw, 605px);
     padding-top: 10px;
   }
 
