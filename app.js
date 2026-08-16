@@ -1,1114 +1,1152 @@
-﻿"use strict";
+"use strict";
 
-const STORE = "4330p_override_engine_v2";
-const POINTS = { alliancePin: 5, yellowPin: 10, midfield: 8, auton: 12, autonTie: 6 };
-const state = loadState();
-let selectedFilter = "all";
-const goalScorer = Array.from({ length: 9 }, () => ({ red: 0, blue: 0, yellow: 0, yellowOwner: "none" }));
-let selectedGoalMode = "blue";
-const goalUndoStack = [];
+const POINTS = {
+  auton: 12,
+  autonTie: 6,
+  alliancePin: 5,
+  yellowPin: 10,
+  midfieldRobot: 8
+};
 
-const $ = (id) => document.getElementById(id);
-const $$ = (sel) => [...document.querySelectorAll(sel)];
-const num = (id) => Math.max(0, Number($(id).value || 0));
-const text = (id) => ($(id).value || "").trim();
-const avg = (arr, fn) => arr.length ? arr.reduce((s, x) => s + fn(x), 0) / arr.length : NaN;
-const sum = (arr, fn) => arr.reduce((s, x) => s + fn(x), 0);
-const max = (arr, fn) => arr.length ? Math.max(...arr.map(fn)) : NaN;
-const min = (arr, fn) => arr.length ? Math.min(...arr.map(fn)) : NaN;
-const fmt = (x, d = 1) => Number.isFinite(x) ? Number(x).toFixed(d) : "N/A";
-const pct = (x) => Number.isFinite(x) ? `${(x * 100).toFixed(1)}%` : "N/A";
-const escapeHtml = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#039;" }[c]));
-const clamp = (value, minValue = 0, maxValue = Infinity) => Math.max(minValue, Math.min(maxValue, value));
+const MATCH_STORE_KEY = "vexOverrideMatches:v1";
+const PROFILE_STORE_KEY = "vexOverrideProfile:v1";
+const HISTORY_INITIAL_LIMIT = 3;
+const quadrants = ["top", "right", "bottom", "left", "center"];
+const colors = ["yellow", "red", "blue"];
+const toggleStates = ["neutral", "blue", "red"];
 
-function loadState() {
+const state = {
+  auton: "none",
+  robots: {
+    "red-1": false,
+    "red-2": false,
+    "blue-1": false,
+    "blue-2": false
+  },
+  quadrants: Object.fromEntries(quadrants.map(name => [
+    name,
+    { toggle: "neutral", yellow: 0, red: 0, blue: 0 }
+  ]))
+};
+
+const skillsQuadrants = ["top", "right", "bottom", "left", "center"];
+const skillsState = {
+  centerToggle: false,
+  toggles: {
+    top: "neutral",
+    right: "neutral",
+    bottom: "neutral",
+    left: "neutral"
+  },
+  quadrants: Object.fromEntries(skillsQuadrants.map(name => [
+    name,
+    { yellow: 0, red: 0, blue: 0 }
+  ]))
+};
+
+const $ = (selector) => document.querySelector(selector);
+const $$ = (selector) => [...document.querySelectorAll(selector)];
+const isDevMode = new URLSearchParams(window.location.search).get("dev") === "1" || window.location.hash === "#dev";
+let profile = loadProfile();
+let activeMode = "head";
+let teamAlliance = "none";
+let skillsRunType = "none";
+let showAllHistory = false;
+let showAllSkillsHistory = false;
+let expandedMatchId = null;
+let expandedSkillsRunId = null;
+let editingMatchId = null;
+let pendingDeleteMatchId = null;
+let lastModalFocus = null;
+let toastTimer = null;
+
+function buildCounters() {
+  quadrants.forEach((quadrant) => {
+    const wrap = $(`[data-quadrant="${quadrant}"]`);
+    wrap.innerHTML = colors.map(color => `
+      <div class="counter ${color}" data-counter="${quadrant}:${color}">
+        <button type="button" data-step="${quadrant}:${color}:-1" aria-label="Decrease ${color} pins in ${quadrant} quadrant">-</button>
+        <output aria-label="${color} pins in ${quadrant} quadrant">0</output>
+        <button type="button" data-step="${quadrant}:${color}:1" aria-label="Increase ${color} pins in ${quadrant} quadrant">+</button>
+      </div>
+    `).join("");
+  });
+}
+
+function setAuton(next) {
+  if (state.auton === next) {
+    state.auton = "none";
+  } else if ((state.auton === "red" && next === "blue") || (state.auton === "blue" && next === "red")) {
+    state.auton = "tie";
+  } else if (state.auton === "tie") {
+    state.auton = next;
+  } else {
+    state.auton = next;
+  }
+  render();
+}
+
+function cycleToggle(quadrant) {
+  if (quadrant === "center") return;
+  const current = state.quadrants[quadrant].toggle;
+  const index = toggleStates.indexOf(current);
+  state.quadrants[quadrant].toggle = toggleStates[(index + 1) % toggleStates.length];
+  render();
+}
+
+function stepCounter(quadrant, color, amount) {
+  const current = state.quadrants[quadrant][color];
+  state.quadrants[quadrant][color] = Math.max(0, current + amount);
+  render();
+}
+
+function toggleRobot(robotId) {
+  state.robots[robotId] = !state.robots[robotId];
+  render();
+}
+
+function stepSkillsCounter(quadrant, color, amount) {
+  if (!skillsState.quadrants[quadrant] || !Object.hasOwn(skillsState.quadrants[quadrant], color)) return;
+  const current = skillsState.quadrants[quadrant][color];
+  skillsState.quadrants[quadrant][color] = Math.max(0, current + amount);
+  renderSkills();
+}
+
+function toggleSkillsCenter() {
+  skillsState.centerToggle = !skillsState.centerToggle;
+  renderSkills();
+}
+
+function cycleSkillsToggle(quadrant) {
+  if (!Object.hasOwn(skillsState.toggles, quadrant)) return;
+  const index = toggleStates.indexOf(skillsState.toggles[quadrant]);
+  skillsState.toggles[quadrant] = toggleStates[(index + 1) % toggleStates.length];
+  renderSkills();
+}
+
+function scoreSkills() {
+  const q = skillsState.quadrants;
+  let score = 0;
+
+  score += (q.left.red + q.bottom.red + q.center.red) * POINTS.alliancePin;
+  score += (q.top.blue + q.right.blue + q.center.blue) * POINTS.alliancePin;
+
+  if (skillsState.toggles.left === "red") score += q.left.yellow * POINTS.yellowPin;
+  if (skillsState.toggles.bottom === "red") score += q.bottom.yellow * POINTS.yellowPin;
+  if (skillsState.toggles.top === "blue") score += q.top.yellow * POINTS.yellowPin;
+  if (skillsState.toggles.right === "blue") score += q.right.yellow * POINTS.yellowPin;
+
+  if (skillsState.centerToggle) {
+    score += POINTS.midfieldRobot;
+    score += q.center.yellow * POINTS.yellowPin;
+  }
+
+  return score;
+}
+
+function setSkillsRunType(type) {
+  skillsRunType = skillsRunType === type ? "none" : type;
+  renderSkills();
+}
+
+function scoreAlliance(alliance) {
+  let score = 0;
+  const centerOwner = midfieldOwner();
+
+  if (state.auton === alliance) score += POINTS.auton;
+  if (state.auton === "tie") score += POINTS.autonTie;
+
+  quadrants.forEach((quadrant) => {
+    const q = state.quadrants[quadrant];
+    score += q[alliance] * POINTS.alliancePin;
+    const owner = quadrant === "center" ? centerOwner : q.toggle;
+    if (owner === alliance) score += q.yellow * POINTS.yellowPin;
+  });
+
+  Object.entries(state.robots).forEach(([robotId, active]) => {
+    if (active && robotId.startsWith(alliance)) score += POINTS.midfieldRobot;
+  });
+
+  return score;
+}
+
+function midfieldOwner() {
+  const red = Number(state.robots["red-1"]) + Number(state.robots["red-2"]);
+  const blue = Number(state.robots["blue-1"]) + Number(state.robots["blue-2"]);
+  if (red > blue) return "red";
+  if (blue > red) return "blue";
+  return "neutral";
+}
+
+function autonText() {
+  if (state.auton === "red") return "Red autonomous bonus: +12 red.";
+  if (state.auton === "blue") return "Blue autonomous bonus: +12 blue.";
+  if (state.auton === "tie") return "Autonomous tied: +6 red, +6 blue.";
+  return "No autonomous bonus selected.";
+}
+
+function savedMatches() {
   try {
-    const saved = JSON.parse(localStorage.getItem(STORE)) || {};
-    return {
-      matches: Array.isArray(saved.matches) ? saved.matches : [],
-      skills: Array.isArray(saved.skills) ? saved.skills : [],
-      targets: Array.isArray(saved.targets) ? saved.targets : [],
-      scouts: Array.isArray(saved.scouts) ? saved.scouts : []
-    };
+    const matches = JSON.parse(localStorage.getItem(MATCH_STORE_KEY));
+    return Array.isArray(matches) ? matches : [];
   } catch {
-    return { matches: [], skills: [], targets: [], scouts: [] };
+    return [];
   }
 }
-function persist() {
-  localStorage.setItem(STORE, JSON.stringify(state));
-}
-function uid() {
-  return (crypto?.randomUUID?.() || `id-${Date.now()}-${Math.random().toString(16).slice(2)}`);
-}
-function toast(message) {
-  const el = $("toast");
-  el.textContent = message;
-  el.classList.add("show");
-  clearTimeout(toast.t);
-  toast.t = setTimeout(() => el.classList.remove("show"), 2200);
+
+function writeSavedMatches(matches) {
+  localStorage.setItem(MATCH_STORE_KEY, JSON.stringify(matches));
 }
 
-function scoreSide(side, autonPoints = 0) {
-  return side.alliancePins * POINTS.alliancePin +
-    side.yellowPins * POINTS.yellowPin +
-    side.midfield * POINTS.midfield +
-    autonPoints;
+function matchRecordSummary(matches) {
+  return matches.reduce((record, match) => {
+    if (match.result === "win") record.wins += 1;
+    if (match.result === "loss") record.losses += 1;
+    if (match.result === "tie") record.ties += 1;
+    return record;
+  }, { wins: 0, losses: 0, ties: 0 });
 }
-function autonPoints(winner, side) {
-  if (winner === "tie") return POINTS.autonTie;
-  if (winner === "none") return 0;
-  return winner === side ? POINTS.auton : 0;
+
+function isHeadMatch(match) {
+  return match?.mode !== "skills";
 }
-function side(prefix) {
+
+function isSkillsRun(match) {
+  return match?.mode === "skills";
+}
+
+function renderBanner() {
+  const team = $("[data-banner-team]");
+  const count = $("[data-banner-matches]");
+  const record = $("[data-banner-record]");
+  if (!team || !count || !record) return;
+
+  const matches = savedMatches().filter(isHeadMatch);
+  const summary = matchRecordSummary(matches);
+  team.textContent = profile?.teamNumber || "4330P";
+  count.textContent = String(matches.length);
+  record.textContent = `${summary.wins}-${summary.losses}-${summary.ties}`;
+}
+
+function escapeHtml(value) {
+  return String(value ?? "").replace(/[&<>"']/g, char => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    "\"": "&quot;",
+    "'": "&#039;"
+  })[char]);
+}
+
+function loadProfile() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(PROFILE_STORE_KEY));
+    if (saved && typeof saved.teamNumber === "string" && saved.teamNumber.trim()) {
+      return {
+        teamNumber: saved.teamNumber.trim(),
+        createdAt: saved.createdAt || new Date().toISOString()
+      };
+    }
+  } catch {
+    return null;
+  }
+  return null;
+}
+
+function saveProfile(teamNumber) {
+  const nextProfile = {
+    teamNumber: teamNumber.trim(),
+    createdAt: new Date().toISOString()
+  };
+  localStorage.setItem(PROFILE_STORE_KEY, JSON.stringify(nextProfile));
+  profile = nextProfile;
+  return nextProfile;
+}
+
+function cloneScorerState() {
   return {
-    alliancePins: num(`${prefix}AlliancePins`),
-    yellowPins: num(`${prefix}YellowPins`),
-    midfield: Math.min(2, num(`${prefix}Midfield`)),
-    toggles: Math.min(4, num(`${prefix}Toggles`)),
-    placedPins: num(`${prefix}PlacedPins`),
-    cups: num(`${prefix}Cups`),
-    goals: Math.min(9, num(`${prefix}Goals`)),
-    highStack: num(`${prefix}HighStack`)
+    auton: state.auton,
+    robots: { ...state.robots },
+    quadrants: Object.fromEntries(quadrants.map(quadrant => [
+      quadrant,
+      { ...state.quadrants[quadrant] }
+    ]))
   };
 }
-function pressure(s) {
-  return s.alliancePins + s.yellowPins * 2.2 + s.midfield * 5 + s.toggles * 4 + s.goals * 2 + s.highStack * 1.6 + s.cups * 0.35;
-}
-function buildMatch() {
-  const auton = $("autonBonus").value;
-  const you = side("you");
-  const opp = side("opp");
-  const youScore = scoreSide(you, autonPoints(auton, "you"));
-  const oppScore = scoreSide(opp, autonPoints(auton, "opp"));
-  const automatic = youScore > oppScore ? "win" : youScore < oppScore ? "loss" : "tie";
-  const override = $("resultOverride").value;
+
+function cloneSkillsState() {
   return {
-    id: uid(),
-    createdAt: new Date().toISOString(),
-    event: text("matchEvent"),
-    matchNumber: text("matchNumber"),
-    team: text("matchTeam") || "4330P",
-    partner: text("partnerTeam"),
-    opponents: text("opponents"),
-    alliance: $("matchAlliance").value,
-    auton,
-    awp: $("awpEarned").value === "yes",
-    awpChecklist: {
-      pins: $("awpPins").checked,
-      goals: $("awpGoals").checked,
-      noPerimeter: $("awpNoPerimeter").checked
-    },
-    you,
-    opp,
-    goalMap: cloneGoalScorer(),
-    goalMapSummary: summarizeGoalScorer(goalScorer),
-    youScore,
-    oppScore,
-    margin: youScore - oppScore,
-    result: override === "auto" ? automatic : override,
-    notes: text("matchNotes")
+    centerToggle: skillsState.centerToggle,
+    toggles: { ...skillsState.toggles },
+    quadrants: Object.fromEntries(skillsQuadrants.map(quadrant => [
+      quadrant,
+      { ...skillsState.quadrants[quadrant] }
+    ]))
   };
 }
-function cloneGoalScorer() {
-  return goalScorer.map(g => {
-    const yellow = goalYellow(g);
-    const owner = goalYellowOwner(g);
-    return {
-      red: Number(g.red || 0),
-      blue: Number(g.blue || 0),
-      yellow,
-      yellowOwner: owner,
-      yellowRed: owner === "red" ? yellow : 0,
-      yellowBlue: owner === "blue" ? yellow : 0
-    };
-  });
+
+function blankDetails() {
+  return {
+    partnerTeam: "",
+    partnerNotes: "",
+    opponentOne: "",
+    opponentOneNotes: "",
+    opponentTwo: "",
+    opponentTwoNotes: ""
+  };
 }
-function goalYellow(g = {}) {
-  return Number(g.yellow || g.yellowRed || g.yellowBlue || 0);
+
+function formDetails() {
+  const form = $("[data-save-form]");
+  if (!form) return blankDetails();
+  const data = new FormData(form);
+  return Object.fromEntries(Object.keys(blankDetails()).map(key => [
+    key,
+    String(data.get(key) || "").trim()
+  ]));
 }
-function goalYellowOwner(g = {}) {
-  const legacyOwner = g.yellowRed ? "red" : g.yellowBlue ? "blue" : "none";
-  const owner = g.yellowOwner || legacyOwner;
-  return ["red", "blue", "none"].includes(owner) ? owner : "none";
+
+function matchResult(ourScore, opponentScore) {
+  if (ourScore > opponentScore) return "win";
+  if (ourScore < opponentScore) return "loss";
+  return "tie";
 }
-function hasGoalScorerData() {
-  return goalScorer.some(g => g.red || g.blue || goalYellow(g));
+
+function createMatchRecord(details) {
+  const savedAt = new Date();
+  const redScore = scoreAlliance("red");
+  const blueScore = scoreAlliance("blue");
+  const ourScore = teamAlliance === "red" ? redScore : blueScore;
+  const opponentScore = teamAlliance === "red" ? blueScore : redScore;
+  return {
+    id: crypto?.randomUUID?.() || `match-${savedAt.getTime()}-${Math.random().toString(16).slice(2)}`,
+    savedAt: savedAt.toISOString(),
+    savedDate: savedAt.toLocaleDateString(undefined, {
+      year: "numeric",
+      month: "short",
+      day: "numeric"
+    }),
+    teamNumber: profile?.teamNumber || "",
+    teamAlliance,
+    redScore,
+    blueScore,
+    ourScore,
+    opponentScore,
+    result: matchResult(ourScore, opponentScore),
+    scorer: cloneScorerState(),
+    details: { ...blankDetails(), ...details }
+  };
 }
-function pushGoalUndo() {
-  goalUndoStack.push(cloneGoalScorer());
-  if (goalUndoStack.length > 20) goalUndoStack.shift();
-  renderGoalUndoState();
+
+function createSkillsRunRecord(notes = "") {
+  const savedAt = new Date();
+  return {
+    id: crypto?.randomUUID?.() || `skills-${savedAt.getTime()}-${Math.random().toString(16).slice(2)}`,
+    mode: "skills",
+    savedAt: savedAt.toISOString(),
+    savedDate: savedAt.toLocaleDateString(undefined, {
+      year: "numeric",
+      month: "short",
+      day: "numeric"
+    }),
+    teamNumber: profile?.teamNumber || "",
+    skillsType: skillsRunType,
+    score: scoreSkills(),
+    skills: cloneSkillsState(),
+    notes: String(notes || "").trim()
+  };
 }
-function restoreGoalScorer(snapshot = []) {
-  goalScorer.forEach((goal, i) => {
-    const source = snapshot[i] || {};
-    goal.red = Number(source.red || 0);
-    goal.blue = Number(source.blue || 0);
-    goal.yellow = Number(source.yellow || source.yellowRed || source.yellowBlue || 0);
-    goal.yellowOwner = source.yellowOwner || (source.yellowRed ? "red" : source.yellowBlue ? "blue" : "none");
-    goal.yellowRed = 0;
-    goal.yellowBlue = 0;
-  });
+
+function showToast(message) {
+  const toast = $("[data-toast]");
+  if (!toast) return;
+  toast.textContent = message;
+  toast.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => {
+    toast.classList.remove("show");
+  }, 2600);
 }
-function renderGoalUndoState() {
-  const button = document.querySelector('[data-action="undo-goal-scorer"]');
-  if (button) button.disabled = goalUndoStack.length === 0;
-}
-function undoGoalScorer() {
-  const snapshot = goalUndoStack.pop();
-  if (!snapshot) {
-    toast("Nothing to undo.");
-    renderGoalUndoState();
+
+function openSaveModal() {
+  if (teamAlliance !== "red" && teamAlliance !== "blue") {
+    showToast("Choose your alliance color before saving.");
     return;
   }
-  restoreGoalScorer(snapshot);
-  syncGoalScorerToTotals();
-  renderGoalScorer();
-  renderGoalScoreStrip();
-  renderMatchPreview();
-  renderGoalUndoState();
-}
-function buildSkill() {
-  const side = {
-    alliancePins: num("skillAlliancePins"),
-    yellowPins: num("skillYellowPins"),
-    midfield: Number($("skillMidfield").value),
-    toggles: num("skillToggles"),
-    placedPins: num("skillPlacedPins"),
-    cups: num("skillCups"),
-    goals: num("skillGoals"),
-    highStack: 0
-  };
-  return {
-    id: uid(),
-    createdAt: new Date().toISOString(),
-    entry: $("skillEntry").value,
-    type: $("skillType").value,
-    targetName: text("skillTargetName"),
-    linkedTarget: $("linkedTarget").value,
-    ...side,
-    stopTime: num("skillStop"),
-    score: scoreSide(side, 0),
-    notes: text("skillNotes")
-  };
+
+  const modal = $("[data-save-modal]");
+  const form = $("[data-save-form]");
+  if (!modal || !form) return;
+  lastModalFocus = document.activeElement;
+  form.reset();
+  modal.hidden = false;
+  document.body.classList.add("modal-open");
+  form.elements.partnerTeam?.focus();
 }
 
-function metric(label, value, hint) {
-  return `<div class="metric"><span>${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong><small>${escapeHtml(hint)}</small></div>`;
+function closeSaveModal() {
+  const modal = $("[data-save-modal]");
+  if (!modal) return;
+  modal.hidden = true;
+  document.body.classList.remove("modal-open");
+  if (lastModalFocus && typeof lastModalFocus.focus === "function") {
+    lastModalFocus.focus();
+  }
 }
-function previewBox(label, value, hint = "") {
-  return `<div class="preview-box"><span>${escapeHtml(label)}</span><strong>${escapeHtml(value)}</strong><small>${escapeHtml(hint)}</small></div>`;
+
+function openSkillsSaveModal() {
+  if (skillsRunType !== "driver" && skillsRunType !== "autonomous") {
+    showToast("Choose Driver or Autonomous before saving.");
+    return;
+  }
+
+  const modal = $("[data-skills-save-modal]");
+  const form = $("[data-skills-save-form]");
+  if (!modal || !form) return;
+  lastModalFocus = document.activeElement;
+  form.reset();
+  modal.hidden = false;
+  document.body.classList.add("modal-open");
+  form.elements.notes?.focus();
 }
-function scoreBadge(label, value, cls = "") {
-  return `<span class="score-badge ${cls}"><b>${escapeHtml(value)}</b><small>${escapeHtml(label)}</small></span>`;
+
+function closeSkillsSaveModal() {
+  const modal = $("[data-skills-save-modal]");
+  if (!modal) return;
+  modal.hidden = true;
+  document.body.classList.remove("modal-open");
+  if (lastModalFocus && typeof lastModalFocus.focus === "function") {
+    lastModalFocus.focus();
+  }
 }
-function renderGoalScorer() {
-  const grid = $("goalScorerGrid");
-  if (!grid) return;
-  grid.innerHTML = goalScorer.map((g, i) => {
-    const yellow = goalYellow(g);
-    const owner = goalYellowOwner(g);
-    const total = Number(g.red || 0) + Number(g.blue || 0) + yellow;
-    return `
-    <article class="goal-tile field-map-tile ${total ? "used" : ""}" data-goal-tap="${i}" aria-label="Goal ${i + 1}. Tap to add selected object.">
-      <div class="goal-tile-head">
-        <b>Goal ${i + 1}</b>
-        <small>${total ? `${total} objects · ${owner === "none" ? "yellow neutral" : `yellow ${owner}`}` : "empty"}</small>
+
+function saveCurrentMatch(details) {
+  if (teamAlliance !== "red" && teamAlliance !== "blue") {
+    showToast("Choose your alliance color before saving.");
+    return;
+  }
+
+  const record = createMatchRecord(details);
+  const matches = savedMatches();
+  matches.push(record);
+
+  try {
+    writeSavedMatches(matches);
+  } catch {
+    showToast("Match could not be saved on this device.");
+    return;
+  }
+
+  closeSaveModal();
+  resetScorer();
+  renderHistory();
+  showToast("Match saved on this device.");
+}
+
+function saveCurrentSkillsRun(notes = "") {
+  if (skillsRunType !== "driver" && skillsRunType !== "autonomous") {
+    showToast("Choose Driver or Autonomous before saving.");
+    return;
+  }
+
+  const record = createSkillsRunRecord(notes);
+  const matches = savedMatches();
+  matches.push(record);
+
+  try {
+    writeSavedMatches(matches);
+  } catch {
+    showToast("Skills run could not be saved on this device.");
+    return;
+  }
+
+  closeSkillsSaveModal();
+  resetSkillsScorer();
+  renderSkillsHistory();
+  showToast("Skills run saved on this device.");
+}
+
+function setTeamAlliance(alliance) {
+  teamAlliance = teamAlliance === alliance ? "none" : alliance;
+  render();
+}
+
+function openSetupModal() {
+  const modal = $("[data-setup-modal]");
+  const form = $("[data-setup-form]");
+  if (!modal || !form) return;
+  modal.hidden = false;
+  document.body.classList.add("modal-open");
+  form.elements.teamNumber?.focus();
+}
+
+function closeSetupModal() {
+  const modal = $("[data-setup-modal]");
+  if (!modal) return;
+  modal.hidden = true;
+  document.body.classList.remove("modal-open");
+}
+
+function initializeProfileGate() {
+  if (!profile) {
+    openSetupModal();
+  }
+}
+
+function setMode(mode) {
+  activeMode = mode === "head" ? "head" : "skills";
+  renderMode();
+}
+
+function renderMode() {
+  $$("[data-mode-choice]").forEach((button) => {
+    button.setAttribute("aria-pressed", String(button.dataset.modeChoice === activeMode));
+  });
+
+  $$("[data-mode-section]").forEach((section) => {
+    section.hidden = section.dataset.modeSection !== activeMode;
+  });
+}
+
+function renderSkills() {
+  $$("[data-skills-counter]").forEach((output) => {
+    const [quadrant, color] = output.dataset.skillsCounter.split(":");
+    output.textContent = skillsState.quadrants[quadrant]?.[color] ?? 0;
+  });
+
+  $$("[data-skills-center-toggle]").forEach((button) => {
+    button.setAttribute("aria-pressed", String(skillsState.centerToggle));
+  });
+
+  $$("[data-skills-toggle]").forEach((button) => {
+    const quadrant = button.dataset.skillsToggle;
+    const value = skillsState.toggles[quadrant] || "neutral";
+    button.className = `toggle toggle-${quadrant} ${value} skills-side-toggle`;
+    button.setAttribute("aria-label", `Skills ${quadrant} toggle ${value}`);
+  });
+
+  $$("[data-skills-score]").forEach((score) => {
+    score.textContent = scoreSkills();
+  });
+
+  $$("[data-skills-type]").forEach((button) => {
+    button.setAttribute("aria-pressed", String(button.dataset.skillsType === skillsRunType));
+  });
+}
+
+function render() {
+  $("#redTotal").textContent = scoreAlliance("red");
+  $("#blueTotal").textContent = scoreAlliance("blue");
+  $$("[data-auton]").forEach((button) => {
+    const color = button.dataset.auton;
+    const active = state.auton === color || state.auton === "tie";
+    button.setAttribute("aria-pressed", String(active));
+  });
+
+  $$("[data-toggle]").forEach((button) => {
+    const quadrant = button.dataset.toggle;
+    const value = state.quadrants[quadrant].toggle;
+    button.className = `toggle toggle-${quadrant} ${value}`;
+    button.setAttribute("aria-label", `${quadrant} toggle ${value}`);
+  });
+
+  $$("[data-counter]").forEach((counter) => {
+    const [quadrant, color] = counter.dataset.counter.split(":");
+    counter.querySelector("output").textContent = state.quadrants[quadrant][color];
+  });
+
+  $$("[data-robot]").forEach((button) => {
+    button.setAttribute("aria-pressed", String(state.robots[button.dataset.robot]));
+  });
+
+  $$("[data-team-alliance]").forEach((button) => {
+    const active = button.dataset.teamAlliance === teamAlliance;
+    button.setAttribute("aria-pressed", String(active));
+  });
+
+  $(".midfield-diamond").dataset.owner = midfieldOwner();
+}
+
+function sortedSavedMatches() {
+  return savedMatches().sort((a, b) => {
+    const bTime = new Date(b.savedAt || 0).getTime();
+    const aTime = new Date(a.savedAt || 0).getTime();
+    return bTime - aTime;
+  });
+}
+
+function sortedHeadMatches() {
+  return sortedSavedMatches().filter(isHeadMatch);
+}
+
+function sortedSkillsRuns() {
+  return sortedSavedMatches().filter(isSkillsRun);
+}
+
+function formatMatchDate(match) {
+  if (match.savedDate) return match.savedDate;
+  const date = new Date(match.savedAt || Date.now());
+  return date.toLocaleDateString(undefined, {
+    year: "numeric",
+    month: "short",
+    day: "numeric"
+  });
+}
+
+function formatMatchTime(match) {
+  if (!match.savedAt) return "Saved match";
+  return new Date(match.savedAt).toLocaleTimeString(undefined, {
+    hour: "numeric",
+    minute: "2-digit"
+  });
+}
+
+function matchResultLabel(match) {
+  if (["win", "loss", "tie"].includes(match.result)) return match.result;
+  return "saved";
+}
+
+function scoreForSummary(match) {
+  if (Number.isFinite(match.ourScore) && Number.isFinite(match.opponentScore)) {
+    return { left: match.ourScore, right: match.opponentScore };
+  }
+  return { left: match.redScore ?? 0, right: match.blueScore ?? 0 };
+}
+
+function detailValue(value) {
+  const text = String(value || "").trim();
+  return text || "Not entered";
+}
+
+function hasDetail(...values) {
+  return values.some(value => String(value || "").trim());
+}
+
+function optionalDetailBox(label, primary, notes) {
+  if (!hasDetail(primary, notes)) return "";
+  return `
+    <div class="detail-box wide">
+      <span>${escapeHtml(label)}</span>
+      ${String(primary || "").trim() ? `<p>${escapeHtml(primary)}</p>` : ""}
+      ${String(notes || "").trim() ? `<p>${escapeHtml(notes)}</p>` : ""}
+    </div>
+  `;
+}
+
+function historyCounter(color, value = 0) {
+  return `
+    <div class="history-counter ${color}">
+      <i>-</i><strong>${Number(value || 0)}</strong><i>+</i>
+    </div>
+  `;
+}
+
+function historyStack(name, scorer) {
+  const q = scorer?.quadrants?.[name] || { yellow: 0, red: 0, blue: 0 };
+  return `
+    <div class="history-stack ${name}">
+      ${historyCounter("yellow", q.yellow)}
+      ${historyCounter("red", q.red)}
+      ${historyCounter("blue", q.blue)}
+    </div>
+  `;
+}
+
+function historyStackWithColors(name, scorer, stackColors, extraClass = "") {
+  const q = scorer?.quadrants?.[name] || { yellow: 0, red: 0, blue: 0 };
+  return `
+    <div class="history-stack ${extraClass} ${name}">
+      ${stackColors.map(color => historyCounter(color, q[color])).join("")}
+    </div>
+  `;
+}
+
+function historyRobotClass(id, active) {
+  const color = id.startsWith("red") ? "red" : "blue";
+  const position = ({
+    "red-1": "r1",
+    "red-2": "r2",
+    "blue-1": "b1",
+    "blue-2": "b2"
+  })[id];
+  return `history-robot ${color} ${position} ${active ? "active" : ""}`;
+}
+
+function renderHistoryField(match) {
+  const scorer = match.scorer || {};
+  const q = scorer.quadrants || {};
+  const robots = scorer.robots || {};
+  return `
+    <div class="history-field" aria-label="Saved field snapshot">
+      <div class="history-field-board">
+        <div class="history-diamond"></div>
+        <span class="history-toggle top ${q.top?.toggle || "neutral"}"></span>
+        <span class="history-toggle right ${q.right?.toggle || "neutral"}"></span>
+        <span class="history-toggle bottom ${q.bottom?.toggle || "neutral"}"></span>
+        <span class="history-toggle left ${q.left?.toggle || "neutral"}"></span>
+        ${["top", "right", "bottom", "left", "center"].map(name => historyStack(name, scorer)).join("")}
+        ${Object.keys({ "red-1": 1, "red-2": 1, "blue-1": 1, "blue-2": 1 }).map(id => (
+          `<span class="${historyRobotClass(id, Boolean(robots[id]))}"></span>`
+        )).join("")}
       </div>
-      <button class="goal-quick-add ${escapeHtml(selectedGoalMode)}" type="button" data-goal-tap="${i}">
-        <span class="goal-quick-icon ${escapeHtml(selectedGoalMode)}">${escapeHtml(goalModeShort(selectedGoalMode))}</span>
-        <span>Add ${escapeHtml(goalModeLabel(selectedGoalMode))}</span>
-      </button>
-      <div class="goal-object-grid">
-        ${goalControl(i, "red", "red", "+", "Red")}
-        ${goalControl(i, "blue", "blue", "+", "Blue")}
-        ${goalControl(i, "yellow", `yellow ${owner}-owner`, "+", "Yellow")}
+    </div>
+  `;
+}
+
+function renderSkillsHistoryField(run) {
+  const skills = run.skills || {};
+  const q = skills.quadrants || {};
+  const toggles = skills.toggles || {};
+  return `
+    <div class="history-field" aria-label="Saved Skills field snapshot">
+      <div class="history-field-board skills-history-field-board">
+        <span class="skills-history-zone blue top"></span>
+        <span class="skills-history-zone blue right"></span>
+        <span class="skills-history-zone red bottom"></span>
+        <span class="skills-history-zone red left"></span>
+        <div class="history-diamond"></div>
+        <span class="history-toggle top ${toggles.top || "neutral"}"></span>
+        <span class="history-toggle right ${toggles.right || "neutral"}"></span>
+        <span class="history-toggle bottom ${toggles.bottom || "neutral"}"></span>
+        <span class="history-toggle left ${toggles.left || "neutral"}"></span>
+        <span class="skills-history-center-toggle ${skills.centerToggle ? "active" : ""}"></span>
+        ${historyStackWithColors("top", { quadrants: q }, ["yellow", "blue"], "skills-snapshot-stack")}
+        ${historyStackWithColors("right", { quadrants: q }, ["yellow", "blue"], "skills-snapshot-stack")}
+        ${historyStackWithColors("bottom", { quadrants: q }, ["yellow", "red"], "skills-snapshot-stack")}
+        ${historyStackWithColors("left", { quadrants: q }, ["yellow", "red"], "skills-snapshot-stack")}
+        ${historyStackWithColors("center", { quadrants: q }, ["yellow", "red", "blue"], "skills-snapshot-stack")}
       </div>
-      <div class="yellow-owner-row" aria-label="Yellow ownership for Goal ${i + 1}">
-        ${goalOwnerButton(i, owner, "none", "Neutral")}
-        ${goalOwnerButton(i, owner, "red", "Red owns")}
-        ${goalOwnerButton(i, owner, "blue", "Blue owns")}
+    </div>
+  `;
+}
+
+function renderMatchDetails(match) {
+  const details = match.details || {};
+  const alliance = match.teamAlliance ? match.teamAlliance.toUpperCase() : "Not saved";
+  return `
+    <div class="detail-grid">
+      <div class="detail-box">
+        <span>Team</span>
+        <strong>${escapeHtml(match.teamNumber || "Not saved")}</strong>
+      </div>
+      <div class="detail-box">
+        <span>Alliance</span>
+        <strong>${escapeHtml(alliance)}</strong>
+      </div>
+      <div class="detail-box">
+        <span>Our score</span>
+        <strong>${escapeHtml(match.ourScore ?? match.redScore ?? 0)}</strong>
+      </div>
+      <div class="detail-box">
+        <span>Opponent score</span>
+        <strong>${escapeHtml(match.opponentScore ?? match.blueScore ?? 0)}</strong>
+      </div>
+      ${optionalDetailBox("Partner", details.partnerTeam, details.partnerNotes)}
+      ${optionalDetailBox("Opponent 1", details.opponentOne, details.opponentOneNotes)}
+      ${optionalDetailBox("Opponent 2", details.opponentTwo, details.opponentTwoNotes)}
+      ${isDevMode ? `
+        <div class="detail-box wide">
+          <span>Dev tools</span>
+          <div class="history-dev-actions">
+            <button class="dev-button" type="button" data-dev-edit-match="${escapeHtml(match.id)}">Edit JSON</button>
+            <button class="dev-button danger" type="button" data-dev-delete-match="${escapeHtml(match.id)}">Delete Match</button>
+          </div>
+        </div>
+      ` : ""}
+    </div>
+    ${renderHistoryField(match)}
+  `;
+}
+
+function renderHistoryCard(match) {
+  const result = matchResultLabel(match);
+  const score = scoreForSummary(match);
+  const open = expandedMatchId === match.id;
+  const confirmingDelete = pendingDeleteMatchId === match.id;
+  return `
+    <article class="history-card ${open ? "open" : ""}">
+      <div class="history-summary">
+        <button class="history-main" type="button" data-history-toggle="${escapeHtml(match.id)}" aria-expanded="${open}">
+          <span class="history-date">
+            ${escapeHtml(formatMatchDate(match))}
+            <small>${escapeHtml(formatMatchTime(match))}</small>
+          </span>
+          <span class="history-score">
+            <strong>${escapeHtml(score.left)}</strong><span>-</span><strong>${escapeHtml(score.right)}</strong>
+          </span>
+          <span class="result-pill ${escapeHtml(result)}">${escapeHtml(result)}</span>
+        </button>
+        <button class="history-delete ${confirmingDelete ? "confirming" : ""}" type="button" data-delete-match="${escapeHtml(match.id)}">
+          ${confirmingDelete ? "Confirm Delete" : "Delete Match"}
+        </button>
+      </div>
+      <div class="history-detail">
+        ${open ? renderMatchDetails(match) : ""}
       </div>
     </article>
   `;
-  }).join("");
 }
-function summarizeGoalScorer(map = []) {
-  const used = map.filter(g => g.red || g.blue || goalYellow(g));
-  return {
-    usedGoals: used.length,
-    red: sum(map, g => Number(g.red || 0)),
-    blue: sum(map, g => Number(g.blue || 0)),
-    yellowRed: sum(map, g => goalYellowOwner(g) === "red" ? goalYellow(g) : 0),
-    yellowBlue: sum(map, g => goalYellowOwner(g) === "blue" ? goalYellow(g) : 0),
-    yellowNeutral: sum(map, g => goalYellowOwner(g) === "none" ? goalYellow(g) : 0)
-  };
+
+function skillsTypeLabel(type) {
+  if (type === "driver") return "Driver";
+  if (type === "autonomous") return "Autonomous";
+  return "Skills";
 }
-function goalMapAudit(match) {
-  const map = Array.isArray(match.goalMap) ? match.goalMap : [];
-  if (!map.length) return `<p><b>Goal map:</b> no goal-by-goal scorer snapshot saved for this match.</p>`;
-  const summary = match.goalMapSummary || summarizeGoalScorer(map);
-  const cells = map.map((g, i) => {
-    const yellow = goalYellow(g);
-    const owner = goalYellowOwner(g);
-    const parts = [
-      g.red ? `R ${g.red}` : "",
-      g.blue ? `B ${g.blue}` : "",
-      yellow ? `Y ${yellow} (${owner})` : ""
-    ].filter(Boolean);
-    return `<span class="goal-audit-cell ${parts.length ? "used" : ""}"><b>G${i + 1}</b><small>${parts.length ? escapeHtml(parts.join(" / ")) : "empty"}</small></span>`;
-  }).join("");
+
+function renderSkillsRunDetails(run) {
+  const notes = String(run.notes || "").trim();
   return `
-    <p><b>Goal map:</b> ${summary.usedGoals || 0}/9 goals used - R ${summary.red || 0}, B ${summary.blue || 0}, yellow red ${summary.yellowRed || 0}, yellow blue ${summary.yellowBlue || 0}, yellow neutral ${summary.yellowNeutral || 0}.</p>
-    <div class="goal-audit-grid">${cells}</div>
-  `;
-}
-function goalModeLabel(mode) {
-  return ({
-    red: "red Pin half",
-    blue: "blue Pin half",
-    yellow: "yellow Pin half"
-  })[mode] || "selected object";
-}
-function goalModeShort(mode) {
-  return ({ red: "R", blue: "B", yellow: "Y" })[mode] || "?";
-}
-function renderGoalScoreStrip() {
-  const strip = $("goalScoreStrip");
-  if (!strip) return;
-  const m = buildMatch();
-  const redScore = m.alliance === "red" ? m.youScore : m.oppScore;
-  const blueScore = m.alliance === "blue" ? m.youScore : m.oppScore;
-  const redLabel = m.alliance === "red" ? "our red" : "opp red";
-  const blueLabel = m.alliance === "blue" ? "our blue" : "opp blue";
-  const marginLabel = m.margin > 0 ? `+${m.margin}` : String(m.margin);
-  strip.innerHTML = `
-    <div class="mini-score red-side"><strong>${redScore}</strong><span>${escapeHtml(redLabel)}</span></div>
-    <div class="mini-score-center">
-      <b>${escapeHtml(marginLabel)}</b>
-      <span>${escapeHtml(goalModeLabel(selectedGoalMode))}</span>
+    <div class="detail-grid">
+      <div class="detail-box compact">
+        <span>Team</span>
+        <strong>${escapeHtml(run.teamNumber || "Not saved")}</strong>
+      </div>
+      <div class="detail-box compact">
+        <span>Run type</span>
+        <strong>${escapeHtml(skillsTypeLabel(run.skillsType))}</strong>
+      </div>
+      <div class="detail-box compact">
+        <span>Score</span>
+        <strong>${escapeHtml(run.score ?? 0)}</strong>
+      </div>
+      ${notes ? `
+        <div class="detail-box wide">
+          <span>Notes</span>
+          <p>${escapeHtml(notes)}</p>
+        </div>
+      ` : ""}
     </div>
-    <div class="mini-score blue-side"><strong>${blueScore}</strong><span>${escapeHtml(blueLabel)}</span></div>
-  `;
-}
-function goalControl(goalIndex, key, kind, mark, label) {
-  const value = goalScorer[goalIndex][key] || 0;
-  return `<div class="goal-control ${kind} ${value ? "has-value" : ""}">
-    <button class="goal-object-button" type="button" data-goal-index="${goalIndex}" data-goal-key="${key}" data-goal-step="1" aria-label="Add ${escapeHtml(label)} to goal ${goalIndex + 1}">
-      <span class="goal-icon ${kind}">${escapeHtml(mark)}</span>
-      <b>${value}</b>
-      <small>${escapeHtml(label)}</small>
-    </button>
-    <button class="goal-object-minus" type="button" data-goal-index="${goalIndex}" data-goal-key="${key}" data-goal-step="-1" aria-label="Remove ${escapeHtml(label)} from goal ${goalIndex + 1}" ${value ? "" : "disabled"}>-</button>
-  </div>`;
-}
-function goalOwnerButton(goalIndex, currentOwner, owner, label) {
-  const active = currentOwner === owner;
-  return `<button class="${escapeHtml(owner)} ${active ? "active" : ""}" type="button" data-goal-owner-index="${goalIndex}" data-goal-owner="${escapeHtml(owner)}" aria-pressed="${active ? "true" : "false"}">${escapeHtml(label)}</button>`;
-}
-function syncGoalScorerToTotals() {
-  const redHalves = sum(goalScorer, g => g.red);
-  const blueHalves = sum(goalScorer, g => g.blue);
-  const redYellow = sum(goalScorer, g => goalYellowOwner(g) === "red" ? goalYellow(g) : 0);
-  const blueYellow = sum(goalScorer, g => goalYellowOwner(g) === "blue" ? goalYellow(g) : 0);
-  const alliance = $("matchAlliance").value;
-  const youAlliance = alliance === "red" ? redHalves : blueHalves;
-  const oppAlliance = alliance === "red" ? blueHalves : redHalves;
-  const youYellow = alliance === "red" ? redYellow : blueYellow;
-  const oppYellow = alliance === "red" ? blueYellow : redYellow;
-  const redGoals = goalScorer.filter(g => g.red || (goalYellowOwner(g) === "red" && goalYellow(g))).length;
-  const blueGoals = goalScorer.filter(g => g.blue || (goalYellowOwner(g) === "blue" && goalYellow(g))).length;
-  const youGoals = alliance === "red" ? redGoals : blueGoals;
-  const oppGoals = alliance === "red" ? blueGoals : redGoals;
-  setInputValue("youAlliancePins", youAlliance);
-  setInputValue("oppAlliancePins", oppAlliance);
-  setInputValue("youYellowPins", youYellow);
-  setInputValue("oppYellowPins", oppYellow);
-  setInputValue("youGoals", youGoals);
-  setInputValue("oppGoals", oppGoals);
-  setInputValue("youPlacedPins", youAlliance + youYellow);
-  setInputValue("oppPlacedPins", oppAlliance + oppYellow);
-}
-function setInputValue(id, value) {
-  const el = $(id);
-  if (!el) return;
-  el.value = value;
-}
-function adjustGoalScorer(goalIndex, key, delta) {
-  const goal = goalScorer[goalIndex];
-  if (!goal) return;
-  const current = Number(goal[key] || 0);
-  const next = clamp(current + delta, 0, 12);
-  if (next === current) return;
-  pushGoalUndo();
-  goal[key] = next;
-  syncGoalScorerToTotals();
-  renderGoalScorer();
-  renderGoalScoreStrip();
-  renderMatchPreview();
-}
-function setGoalMode(mode) {
-  if (!["red", "blue", "yellow"].includes(mode)) return;
-  selectedGoalMode = mode;
-  renderGoalScorerMode();
-  renderGoalScorer();
-  renderGoalScoreStrip();
-}
-function setGoalYellowOwner(goalIndex, owner) {
-  const goal = goalScorer[goalIndex];
-  if (!goal || !["none", "red", "blue"].includes(owner)) return;
-  if (goalYellowOwner(goal) === owner) return;
-  pushGoalUndo();
-  goal.yellowOwner = owner;
-  goal.yellowRed = 0;
-  goal.yellowBlue = 0;
-  syncGoalScorerToTotals();
-  renderGoalScorer();
-  renderGoalScoreStrip();
-  renderMatchPreview();
-}
-function renderGoalScorerMode() {
-  const wrap = $("goalScorerMode");
-  if (!wrap) return;
-  wrap.querySelectorAll("[data-goal-mode]").forEach(btn => {
-    const active = btn.dataset.goalMode === selectedGoalMode;
-    btn.classList.toggle("active", active);
-    btn.setAttribute("aria-pressed", active ? "true" : "false");
-  });
-}
-function resetGoalScorer(trackUndo = true) {
-  if (trackUndo && hasGoalScorerData()) pushGoalUndo();
-  goalScorer.forEach(g => {
-    g.red = 0;
-    g.blue = 0;
-    g.yellow = 0;
-    g.yellowOwner = "none";
-    g.yellowRed = 0;
-    g.yellowBlue = 0;
-  });
-  syncGoalScorerToTotals();
-  renderGoalScorer();
-  renderGoalScoreStrip();
-  renderMatchPreview();
-  renderGoalUndoState();
-}
-function resetMatchEntryAfterSave() {
-  ["matchNumber", "partnerTeam", "opponents", "matchNotes"].forEach(id => {
-    const el = $(id);
-    if (el) el.value = "";
-  });
-  $("autonBonus").value = "you";
-  $("awpEarned").value = "no";
-  $("resultOverride").value = "auto";
-  ["awpPins", "awpGoals", "awpNoPerimeter"].forEach(id => {
-    const el = $(id);
-    if (el) el.checked = false;
-  });
-  goalUndoStack.length = 0;
-  resetGoalScorer(false);
-  ["youMidfield", "oppMidfield", "youToggles", "oppToggles", "youCups", "oppCups", "youHighStack", "oppHighStack"].forEach(id => setInputValue(id, 0));
-  renderGoalScoreStrip();
-  renderMatchPreview();
-}
-function record(arr) {
-  return `${arr.filter(m => m.result === "win").length}-${arr.filter(m => m.result === "loss").length}-${arr.filter(m => m.result === "tie").length}`;
-}
-function stdev(arr, fn) {
-  if (arr.length < 2) return 0;
-  const a = avg(arr, fn);
-  return Math.sqrt(avg(arr, x => (fn(x) - a) ** 2));
-}
-function filterMatches() {
-  let data = [...state.matches];
-  const f = selectedFilter;
-  if (f === "last5") data = data.slice(-5);
-  if (f === "last10") data = data.slice(-10);
-  if (f === "wins") data = data.filter(m => m.result === "win");
-  if (f === "losses") data = data.filter(m => m.result === "loss");
-  if (f === "close") data = data.filter(m => Math.abs(m.margin) <= 10);
-  if (f === "blowouts") data = data.filter(m => Math.abs(m.margin) >= 20);
-  if (f === "autonWon") data = data.filter(m => m.auton === "you" || m.auton === "tie");
-  if (f === "awp") data = data.filter(m => m.awp);
-  if (f === "red" || f === "blue") data = data.filter(m => m.alliance === f);
-  return data;
-}
-
-function renderMatchPreview() {
-  const m = buildMatch();
-  const youAuton = autonPoints(m.auton, "you");
-  const oppAuton = autonPoints(m.auton, "opp");
-  const redScore = m.alliance === "red" ? m.youScore : m.oppScore;
-  const blueScore = m.alliance === "blue" ? m.youScore : m.oppScore;
-  const redSide = m.alliance === "red" ? m.you : m.opp;
-  const blueSide = m.alliance === "blue" ? m.you : m.opp;
-  const redAuton = m.alliance === "red" ? youAuton : oppAuton;
-  const blueAuton = m.alliance === "blue" ? youAuton : oppAuton;
-  const redLabel = m.alliance === "red" ? "Our alliance" : "Opponent";
-  const blueLabel = m.alliance === "blue" ? "Our alliance" : "Opponent";
-  $("matchPreview").innerHTML = `
-    <div class="vex-score-screen ${m.alliance}">
-      <div class="vex-appbar">
-        <span class="hamburger" aria-hidden="true"><i></i><i></i><i></i></span>
-        <span>Override</span>
-        <b>V5RC Match</b>
-        <button class="trash-mark" type="button" data-action="reset-goal-scorer">CLR</button>
-      </div>
-      <div class="vex-scoreline">
-        <div class="score-number red-score">
-          <strong>${redScore}</strong>
-          <small>${escapeHtml(redLabel)}</small>
-        </div>
-        <div class="auton-pair">
-          <span class="${redAuton ? "on" : ""}">A</span>
-          <small>${m.auton === "tie" ? "split auton" : m.auton === "none" ? "no auton" : "auton bonus"}</small>
-          <span class="${blueAuton ? "on" : ""}">A</span>
-        </div>
-        <div class="score-number blue-score">
-          <strong>${blueScore}</strong>
-          <small>${escapeHtml(blueLabel)}</small>
-        </div>
-      </div>
-      <div class="vex-field-mini" aria-hidden="true">
-        <span class="mini-line a"></span>
-        <span class="mini-line b"></span>
-        <span class="mini-diamond"></span>
-        <span class="mini-goal red"></span>
-        <span class="mini-goal yellow"></span>
-        <span class="mini-goal blue"></span>
-        <span class="mini-toggle one"></span>
-        <span class="mini-toggle two"></span>
-      </div>
-      <div class="score-ledger">
-        ${scoreLedgerRow("red", "+", redSide.alliancePins, "Alliance Pin halves", "5 each")}
-        ${scoreLedgerRow("yellow", "+", redSide.yellowPins, "Owned yellow halves", "10 each")}
-        ${scoreLedgerRow("blue", "M", redSide.midfield, "Robots in Midfield", "8 each")}
-        ${scoreLedgerRow("auton", "A", redAuton, "Autonomous bonus", "12 / 6 split", blueAuton)}
-        ${scoreLedgerRow("red", "+", blueSide.alliancePins, "Alliance Pin halves", "5 each", null, true)}
-        ${scoreLedgerRow("yellow", "+", blueSide.yellowPins, "Owned yellow halves", "10 each", null, true)}
-        ${scoreLedgerRow("blue", "M", blueSide.midfield, "Robots in Midfield", "8 each", null, true)}
-      </div>
-      <div class="vex-summary-strip">
-        <span><b>${m.margin > 0 ? `+${m.margin}` : m.margin}</b> margin</span>
-        <span><b>${m.result.toUpperCase()}</b> result</span>
-        <span><b>${fmt(pressure(m.you))}</b> pressure</span>
-      </div>
-      <div class="vex-bottom-nav">
-        <span>Manual</span>
-        <span class="active">Calculator</span>
-        <span>Timer</span>
-      </div>
-    </div>`;
-}
-function scoreLedgerRow(kind, mark, value, label, hint, altValue = null, blueSide = false) {
-  const shown = altValue ?? value;
-  return `<div class="score-ledger-row ${blueSide ? "blue-team-row" : "red-team-row"}">
-    <span class="score-ledger-icon ${kind}">${escapeHtml(mark)}</span>
-    <span><b>${escapeHtml(shown)}</b><small>${escapeHtml(label)} - ${escapeHtml(hint)}</small></span>
-  </div>`;
-}
-function renderDashboard() {
-  const data = filterMatches();
-  if (!data.length) {
-    $("dashboardMetrics").innerHTML = [
-      metric("Ready", "0", "No match records yet"),
-      metric("Scoring", "5/10/8", "Pins, yellow ownership, Midfield"),
-      metric("Auton", "12", "Bonus tracking + AWP"),
-      metric("Data", "Local", "Export/import for events")
-    ].join("");
-    $("scoreTrend").innerHTML = `<div class="empty-state"><b>Enter your first match to start building the dashboard.</b><span>A demo chart appears here once you save match records.</span><button class="primary" data-action="load-demo">Load Demo Data</button></div>`;
-    $("coachSummary").innerHTML = `<b>Start with Match.</b> Save one official score after a practice or event match. Override will turn it into trend, pressure, scorecard, and correlation evidence.`;
-    $("scorecard").innerHTML = `<div class="empty-state compact-empty"><b>Scorecard waiting for data</b><span>Auton, scoring, field control, and resistance grades appear after saved matches.</span></div>`;
-    $("matchList").innerHTML = `<p class="muted">No matches saved yet.</p>`;
-    setupCorrelation(data);
-    return;
-  }
-  const wins = data.filter(m => m.result === "win");
-  const losses = data.filter(m => m.result === "loss");
-  const close = data.filter(m => Math.abs(m.margin) <= 10);
-  const blowouts = data.filter(m => Math.abs(m.margin) >= 20);
-  $("dashboardMetrics").innerHTML = [
-    metric("Avg Score", fmt(avg(data, m => m.youScore)), "Our final score"),
-    metric("Win Rate", pct(wins.length / data.length), `${record(data)} record`),
-    metric("Auton Win %", pct(avg(data, m => m.auton === "you" || m.auton === "tie" ? 1 : 0)), "Won or split auton"),
-    metric("AWP %", pct(avg(data, m => m.awp ? 1 : 0)), "Autonomous Win Point"),
-    metric("Matches", data.length, "Current filter"),
-    metric("Avg Margin", fmt(avg(data, m => m.margin)), "Positive is good"),
-    metric("Yellow ownership", fmt(avg(data, m => m.you.yellowPins)), "Avg owned yellow Pin halves"),
-    metric("Consistency", fmt(stdev(data, m => m.youScore)), "Lower is steadier")
-  ].join("");
-  renderTrend(data);
-  renderCoachSummary(data, wins, losses, close, blowouts);
-  renderScorecard(data);
-  renderMatches(data);
-  setupCorrelation(data);
-}
-function renderTrend(data) {
-  const recent = data.slice(-12);
-  const top = Math.max(1, max(recent, m => Math.max(m.youScore, m.oppScore)));
-  $("scoreTrend").innerHTML = recent.map((m, i) => {
-    const h = Math.max(8, (m.youScore / top) * 100);
-    return `<div class="bar ${m.result}" style="height:${h}%"><span>${m.youScore}</span></div>`;
-  }).join("");
-}
-function renderCoachSummary(data, wins, losses, close, blowouts) {
-  const highCut = [...data].map(m => pressure(m.opp)).sort((a,b)=>a-b)[Math.floor(data.length * .66)] ?? 0;
-  const high = data.filter(m => pressure(m.opp) >= highCut);
-  const low = data.filter(m => pressure(m.opp) < highCut);
-  const lever = bestLever(data);
-  $("coachSummary").innerHTML = `
-    <p><b>Your biggest win lever is ${escapeHtml(lever)}.</b></p>
-    <p>You are <b>${record(data)}</b> in this view, averaging <b>${fmt(avg(data,m=>m.youScore))}</b> points and <b>${fmt(avg(data,m=>m.margin))}</b> margin.</p>
-    <p>Against high-pressure opponents: <b>${record(high)}</b>. Close match record: <b>${record(close)}</b>.</p>
-  `;
-}
-function grade(score) {
-  if (score >= 90) return ["A","a"];
-  if (score >= 78) return ["B","b"];
-  if (score >= 65) return ["C","c"];
-  if (score >= 50) return ["D","d"];
-  return ["F","f"];
-}
-function gradeRow(label, score, hint) {
-  const [g,c] = grade(score);
-  return `<div class="grade-row"><b>${escapeHtml(label)}</b><div class="grade ${c}">${g}</div><div><div class="meter"><span style="width:${Math.max(0,Math.min(100,score))}%"></span></div><small class="muted">${escapeHtml(hint)}</small></div></div>`;
-}
-function renderScorecard(data) {
-  const auton = avg(data, m => (m.auton === "you" ? 65 : m.auton === "tie" ? 35 : 0) + (m.awp ? 35 : 0));
-  const scoring = Math.min(100, avg(data, m => m.youScore) / 165 * 100);
-  const field = Math.min(100, avg(data, m => m.you.toggles * 12 + m.you.midfield * 20 + m.you.goals * 4 + m.you.highStack * 2));
-  const resistant = Math.max(0, Math.min(100, 62 + avg(data, m => m.margin) / 2));
-  $("scorecard").innerHTML = [
-    gradeRow("Auton", auton, "Bonus + AWP reliability"),
-    gradeRow("Scoring", scoring, "Average score on a competitive curve"),
-    gradeRow("Field control", field, "Toggles, Midfield, goals, stack height"),
-    gradeRow("Resistance", resistant, "Margin-based pressure survival")
-  ].join("");
-}
-
-const variables = [
-  ["youAlliancePins", "Our alliance Pin halves", m => m.you.alliancePins],
-  ["youYellowPins", "Our yellow Pin halves", m => m.you.yellowPins],
-  ["youMidfield", "Our Midfield robots", m => m.you.midfield],
-  ["youToggles", "Our Toggles", m => m.you.toggles],
-  ["youGoals", "Our goals used", m => m.you.goals],
-  ["youHighStack", "Our highest stack", m => m.you.highStack],
-  ["youPressure", "Our pressure score", m => pressure(m.you)],
-  ["youScore", "Our final score", m => m.youScore],
-  ["oppScore", "Opponent final score", m => m.oppScore],
-  ["oppPressure", "Opponent pressure score", m => pressure(m.opp)],
-  ["autonWon", "Auton won", m => m.auton === "you" ? 1 : 0],
-  ["awp", "AWP earned", m => m.awp ? 1 : 0],
-  ["margin", "Score differential", m => m.margin],
-  ["totalScore", "Total match score", m => m.youScore + m.oppScore],
-  ["win", "Win", m => m.result === "win" ? 1 : 0],
-  ["resultValue", "Result value", m => m.result === "win" ? 1 : m.result === "tie" ? .5 : 0]
-];
-function corr(xs, ys) {
-  if (xs.length < 2) return NaN;
-  const ax = avg(xs, x => x), ay = avg(ys, y => y);
-  const num = xs.reduce((s, x, i) => s + (x - ax) * (ys[i] - ay), 0);
-  const den = Math.sqrt(xs.reduce((s, x) => s + (x - ax) ** 2, 0) * ys.reduce((s, y) => s + (y - ay) ** 2, 0));
-  return den ? num / den : NaN;
-}
-function corrLabel(r) {
-  if (!Number.isFinite(r)) return "not enough data or variation";
-  const a = Math.abs(r);
-  if (a > .8) return r > 0 ? "very strong positive" : "very strong negative";
-  if (a > .55) return r > 0 ? "strong positive" : "strong negative";
-  if (a > .3) return r > 0 ? "moderate positive" : "moderate negative";
-  return "weak / noisy";
-}
-function setupCorrelation(data) {
-  const x = $("corrX"), y = $("corrY");
-  const opts = variables.map(v => `<option value="${v[0]}">${v[1]}</option>`).join("");
-  if (x.innerHTML !== opts) { x.innerHTML = opts; y.innerHTML = opts; x.value = "youYellowPins"; y.value = "youScore"; }
-  const render = () => {
-    const vx = variables.find(v => v[0] === x.value), vy = variables.find(v => v[0] === y.value);
-    const r = corr(data.map(vx[2]), data.map(vy[2]));
-    $("correlationReadout").innerHTML = `<b>${Number.isFinite(r) ? r.toFixed(2) : "N/A"}</b> - ${corrLabel(r)} relationship between <b>${vx[1]}</b> and <b>${vy[1]}</b>. Matches used: <b>${data.length}</b>.`;
-  };
-  x.onchange = render; y.onchange = render; render();
-  $("correlationReadout").insertAdjacentHTML("beforeend", `
-    <div class="suggested-correlations">
-      <button type="button" data-corr-preset="autonWon:win">Auton -> Win % <span>recommended</span></button>
-      <button type="button" data-corr-preset="youMidfield:youScore">Midfield -> Score <span>field control</span></button>
-      <button type="button" data-corr-preset="youGoals:youScore">Goals Used -> Score <span>efficiency</span></button>
-    </div>
-  `);
-}
-function bestLever(data) {
-  if (data.length < 3) return "not enough data yet";
-  const result = data.map(m => m.result === "win" ? 1 : 0);
-  return variables
-    .filter(v => !["win", "resultValue"].includes(v[0]))
-    .map(v => [v[1], Math.abs(corr(data.map(v[2]), result))])
-    .filter(x => Number.isFinite(x[1]))
-    .sort((a,b) => b[1] - a[1])[0]?.[0] || "not enough variation yet";
-}
-function renderMatches(data) {
-  $("matchList").innerHTML = data.slice().reverse().map((m) => `
-    <article class="item">
-      <div class="item-head">
-        <div>
-          <div class="pills">
-            <span class="pill ${m.result}">${m.result.toUpperCase()}</span>
-            <span class="pill">${escapeHtml(m.event || "No event")}</span>
-            <span class="pill">${escapeHtml(m.matchNumber || "No match #")}</span>
-            <span class="pill">${m.alliance}</span>
-          </div>
-          <h3>${escapeHtml(m.team)} ${m.partner ? `+ ${escapeHtml(m.partner)}` : ""} vs ${escapeHtml(m.opponents || "opponents")}</h3>
-        </div>
-        <button class="danger" data-delete-match="${m.id}">Delete</button>
-      </div>
-      <div class="metric-grid skinny">
-        ${metric("Our score", m.youScore, `margin ${m.margin >= 0 ? "+" : ""}${m.margin}`)}
-        ${metric("Opponent", m.oppScore, `pressure ${fmt(pressure(m.opp))}`)}
-      </div>
-      <details>
-        <summary>Full score audit</summary>
-        <p><b>Our scoring:</b> ${m.you.alliancePins} alliance halves, ${m.you.yellowPins} yellow halves, ${m.you.midfield} Midfield robots, ${m.you.toggles} Toggles, ${m.you.goals} goals, high stack ${m.you.highStack}.</p>
-        <p><b>Opponent scoring:</b> ${m.opp.alliancePins} alliance halves, ${m.opp.yellowPins} yellow halves, ${m.opp.midfield} Midfield robots, ${m.opp.toggles} Toggles, ${m.opp.goals} goals, high stack ${m.opp.highStack}.</p>
-        ${goalMapAudit(m)}
-        <p><b>Auton:</b> ${m.auton}; <b>AWP:</b> ${m.awp ? "earned" : "not earned"}; <b>Notes:</b> ${escapeHtml(m.notes || "none")}</p>
-      </details>
-    </article>`).join("");
-}
-
-function renderLatestChange() {
-  const latest = state.matches.at(-1);
-  if (!latest) {
-    $("latestChange").innerHTML = "No saved match yet.";
-    return;
-  }
-  const before = state.matches.slice(0, -1);
-  if (!before.length) {
-    $("latestChange").innerHTML = `<b>Latest:</b> ${latest.result.toUpperCase()} ${latest.youScore}-${latest.oppScore}. First match saved.`;
-    return;
-  }
-  $("latestChange").innerHTML = `<b>Latest:</b> ${latest.result.toUpperCase()} ${latest.youScore}-${latest.oppScore}. Average score moved from <b>${fmt(avg(before,m=>m.youScore))}</b> to <b>${fmt(avg(state.matches,m=>m.youScore))}</b>.`;
-}
-
-function renderSkillsPreview() {
-  const s = buildSkill();
-  const target = state.targets.find(t => t.id === s.linkedTarget);
-  $("skillsPreview").innerHTML = [
-    previewBox("Score", s.score, `${s.alliancePins} red/blue halves, ${s.yellowPins} owned yellow halves`),
-    previewBox("Entry", s.entry === "target" ? "Target" : "Actual", s.type),
-    previewBox("Target gap", target ? `${s.score - target.score >= 0 ? "+" : ""}${s.score - target.score}` : "N/A", target ? target.targetName : "no linked target")
-  ].join("");
-}
-function renderSkills() {
-  const actual = state.skills;
-  const driver = actual.filter(s => s.type === "driver");
-  const auton = actual.filter(s => s.type === "auton");
-  const bestDriver = max(driver, s => s.score);
-  const bestAuton = max(auton, s => s.score);
-  const bestOverall = Math.max(Number.isFinite(bestDriver) ? bestDriver : 0, Number.isFinite(bestAuton) ? bestAuton : 0);
-  const linkedGaps = actual.map(s => {
-    const target = state.targets.find(t => t.id === s.linkedTarget);
-    return target ? s.score - target.score : null;
-  }).filter(Number.isFinite);
-  const latestGap = linkedGaps.at(-1);
-  $("skillsMetrics").innerHTML = [
-    `<div class="skills-hero"><span class="muted">Personal Best</span><strong>${bestOverall || "N/A"}</strong><small>${Number.isFinite(latestGap) ? `Latest target gap ${latestGap >= 0 ? "+" : ""}${latestGap}` : "Link a run to a target to track the gap."}</small><div class="skills-bars"><span>Driver<i style="--w:${Math.min(100, (bestDriver || 0) / 150 * 100)}%"></i><b>${bestDriver || 0}</b></span><span>Auton<i style="--w:${Math.min(100, (bestAuton || 0) / 150 * 100)}%"></i><b>${bestAuton || 0}</b></span></div></div>`,
-    metric("Runs", actual.length, "Actual"),
-    metric("Targets", state.targets.length, "Blueprints"),
-    metric("Average", fmt(avg(actual, s => s.score)), "Actual runs"),
-    metric("Best stop", max(actual, s => s.stopTime) || 0, "Skills Stop Time")
-  ].join("");
-  renderTargetOptions();
-  $("targetList").innerHTML = state.targets.length ? state.targets.map(t => skillItem(t, true)).join("") : `<p class="muted">No target blueprints saved yet.</p>`;
-  $("skillsList").innerHTML = actual.length ? actual.slice().reverse().map(s => skillItem(s, false)).join("") : `<p class="muted">No actual skills runs saved yet.</p>`;
-}
-function skillItem(s, isTarget) {
-  const linked = state.targets.find(t => t.id === s.linkedTarget);
-  const title = isTarget ? (s.targetName || "Unnamed target") : `${s.type} run`;
-  const gap = linked && !isTarget ? ` / vs ${escapeHtml(linked.targetName)} (${s.score - linked.score >= 0 ? "+" : ""}${s.score - linked.score})` : "";
-  return `<article class="item ${isTarget ? "target-skill-card" : "actual-skill-card"}">
-    <div class="item-head"><div><span class="pill">${isTarget ? "TARGET" : "ACTUAL"}</span> <span class="pill">${s.type}</span><h3>${escapeHtml(title)} - ${s.score}${gap}</h3></div>
-    <button class="danger" data-delete-skill="${s.id}" data-kind="${isTarget ? "target" : "actual"}">Delete</button></div>
-    <p>Red/blue halves: ${s.alliancePins}; owned yellow: ${s.yellowPins}; Midfield: ${s.midfield ? "yes" : "no"}; Toggles: ${s.toggles}; stop time: ${s.stopTime || 0}.</p>
-    <p class="muted">${escapeHtml(s.notes || "")}</p>
-  </article>`;
-}
-function renderTargetOptions() {
-  const type = $("skillType").value;
-  const options = state.targets.filter(t => t.type === type);
-  $("linkedTarget").innerHTML = `<option value="">No linked target</option>` + options.map(t => `<option value="${t.id}">${escapeHtml(t.targetName || "Unnamed")} - ${t.score}</option>`).join("");
-  const isTarget = $("skillEntry").value === "target";
-  $("linkedTarget").disabled = isTarget;
-  $("skillTargetNameWrap").style.display = isTarget ? "grid" : "none";
-  $("saveSkillBtn").textContent = isTarget ? "Save Target Blueprint" : "Save Skills Run";
-}
-
-function scoutTags(s) {
-  const tags = [];
-  if (s.rank && s.rank <= 8) tags.push("Top seed");
-  if ((s.ap || 0) >= 30) tags.push("High AP");
-  if ((s.skills || 0) >= 100) tags.push("Skills threat");
-  if ((s.driver || 0) > (s.autonSkills || 0) * 1.5 && s.driver >= 50) tags.push("Driver-heavy");
-  if ((s.autonSkills || 0) >= 35) tags.push("Auton capable");
-  if ((s.fit || 0) >= 8) tags.push("Good fit");
-  return tags.slice(0, 3);
-}
-
-function renderScouts() {
-  const sorted = [...state.scouts].sort((a,b)=>(b.score || 0)-(a.score || 0));
-  const teamList = $("scoutTeams");
-  if (teamList) {
-    teamList.innerHTML = sorted.map(s => `<option value="${escapeHtml(s.team)}">${escapeHtml(`Rank ${s.rank || "?"} / ${s.record || "record ?"}`)}</option>`).join("");
-  }
-  renderStandingsPreview();
-  $("scoutList").innerHTML = sorted.length ? sorted.map((s, index) => `
-    <article class="item scout-card-shell">
-      <div class="scout-card-top">
-        <div>
-          <div class="pills">
-            <span class="pill">Rank ${s.rank || "?"}</span>
-            <span class="pill">${escapeHtml(s.record || "record ?")}</span>
-            ${scoutTags(s).map(t => `<span class="pill">${escapeHtml(t)}</span>`).join("")}
-          </div>
-          <h3 class="scout-team">${escapeHtml(s.team)}</h3>
-        </div>
-        <div class="pick-rank-card"><span>Pick</span><b>${index + 1}</b><small>${fmt(s.score,0)}/100</small></div>
-        <button class="danger" data-delete-scout="${s.id}">Delete</button>
-      </div>
-      <div class="scout-lines">
-        <span>WP <b>${s.wp || 0}</b></span>
-        <span>AP <b>${s.ap || 0}</b></span>
-        <span>SP <b>${s.sp || 0}</b></span>
-        <span>Skills <b>${s.skills || 0}</b></span>
-        <span>Driver <b>${s.driver || 0}</b></span>
-        <span>Auton <b>${s.autonSkills || 0}</b></span>
-        <span>Fit <b>${s.fit || 0}/10</b></span>
-      </div>
-      <p class="muted">${escapeHtml(s.notes || "")}</p>
-    </article>`).join("") : `<p class="muted">No scouting cards yet.</p>`;
-}
-
-function scoutScore(s) {
-  const rankScore = s.rank ? Math.max(0, 24 - Math.min(24, (s.rank - 1) * 1.2)) : 4;
-  const wpScore = Math.min(20, (s.wp || 0) * 1.4);
-  const apScore = Math.min(18, (s.ap || 0) * .45);
-  const spScore = Math.min(12, (s.sp || 0) / 45);
-  const skillsScore = Math.min(16, (s.skills || 0) / 9);
-  const fitScore = Math.min(10, (s.fit || 0));
-  return Math.max(0, Math.min(100, rankScore + wpScore + apScore + spScore + skillsScore + fitScore));
-}
-
-function parseStandings(raw) {
-  return raw.split(/\r?\n/)
-    .map(line => line.trim())
-    .filter(Boolean)
-    .filter(line => !/^rank[\s,;\t|]+team/i.test(line))
-    .filter(line => !/^team[\s,;\t|]+rank/i.test(line))
-    .map(line => {
-      const parts = line.includes(",") ? line.split(",") : line.split(/\t|\s{2,}|\|/);
-      let clean = parts.map(p => p.trim()).filter(Boolean);
-      if (clean.length < 4) {
-        const simple = line.split(/\s+/).map(p => p.trim()).filter(Boolean);
-        if (simple.length >= 4) clean = simple;
-      }
-      if (clean.length < 2) return null;
-      const rankFirst = /^\d+$/.test(clean[0]);
-      const rank = Number(rankFirst ? clean[0] : clean[1]) || 0;
-      const team = (rankFirst ? clean[1] : clean[0] || "").toUpperCase();
-      if (!team || !/[A-Z0-9]/.test(team)) return null;
-      return {
-        rank,
-        team,
-        record: clean[2] || "",
-        wp: Number(clean[3]) || 0,
-        ap: Number(clean[4]) || 0,
-        sp: Number(clean[5]) || 0,
-        skills: Number(clean[6]) || 0,
-        driver: Number(clean[7]) || 0,
-        autonSkills: Number(clean[8]) || 0
-      };
-    })
-    .filter(Boolean);
-}
-
-function importStandings() {
-  const rows = parseStandings($("standingsPaste").value);
-  if (!rows.length) {
-    toast("No standings rows found.");
-    return;
-  }
-  rows.forEach(row => {
-    const existing = findScoutByTeam(row.team);
-    const scout = existing || { id: uid(), createdAt: new Date().toISOString(), team: row.team, fit: 5, notes: "" };
-    Object.assign(scout, row, { importedAt: new Date().toISOString() });
-    scout.score = scoutScore(scout);
-    if (!existing) state.scouts.push(scout);
-  });
-  persist();
-  renderAll();
-  toast(`${rows.length} standings rows imported.`);
-}
-
-function renderStandingsPreview() {
-  const box = $("standingsPreview");
-  if (!box) return;
-  const imported = state.scouts.filter(s => s.importedAt).length;
-  const best = [...state.scouts].sort((a,b)=>(b.score || 0)-(a.score || 0)).slice(0, 3);
-  box.innerHTML = `
-    <div class="standings-stats">
-      <span><b>${state.scouts.length}</b><small>scout cards</small></span>
-      <span><b>${imported}</b><small>from standings</small></span>
-      <span><b>${best[0]?.team ? escapeHtml(best[0].team) : "none"}</b><small>top pick value</small></span>
-    </div>
-    ${best.length ? `<p class="muted">Current top three: ${best.map(s => escapeHtml(s.team)).join(", ")}</p>` : `<p class="muted">Import standings or save team notes to build a pick list.</p>`}
+    ${renderSkillsHistoryField(run)}
   `;
 }
 
-function findScoutByTeam(team) {
-  const normalized = String(team || "").trim().toUpperCase();
-  return state.scouts.find(s => String(s.team || "").toUpperCase() === normalized);
-}
-
-function fillScoutFormFromTeam(team) {
-  const scout = findScoutByTeam(team);
-  if (!scout) return;
-  setInputValue("scoutRank", scout.rank || 0);
-  $("scoutRecord").value = scout.record || "";
-  setInputValue("scoutWp", scout.wp || 0);
-  setInputValue("scoutAp", scout.ap || 0);
-  setInputValue("scoutSp", scout.sp || 0);
-  setInputValue("scoutSkills", scout.skills || 0);
-  setInputValue("scoutDriver", scout.driver || 0);
-  setInputValue("scoutAutonSkills", scout.autonSkills || 0);
-  setInputValue("scoutFit", scout.fit || 5);
-  $("scoutNotes").value = scout.notes || "";
-}
-
-function renderEvidence() {
-  const data = state.matches;
-  const actual = state.skills;
-  $("evidenceSummary").innerHTML = `
-    <p><b>Current evidence base:</b> ${data.length} match records, ${actual.length} actual skills runs, ${state.targets.length} target blueprints, and ${state.scouts.length} scout cards.</p>
-    <p><b>Performance claim:</b> 4330P is averaging ${fmt(avg(data,m=>m.youScore))} match points with ${pct(avg(data,m=>m.awp?1:0))} AWP reliability and ${fmt(avg(data,m=>m.you.yellowPins))} owned yellow Pin halves per match.</p>
-    <p><b>Engineering loop:</b> Use the notes fields to tie mechanism/code/driver changes to before-after changes in scoring, yellow ownership, Toggles, Midfield success, and skills route consistency.</p>
+function renderSkillsRunCard(run) {
+  const open = expandedSkillsRunId === run.id;
+  return `
+    <article class="history-card skills-run-card ${open ? "open" : ""}">
+      <button class="history-summary skills-history-summary" type="button" data-skills-history-toggle="${escapeHtml(run.id)}" aria-expanded="${open}">
+        <span class="history-date">
+          ${escapeHtml(formatMatchDate(run))}
+          <small>${escapeHtml(formatMatchTime(run))}</small>
+        </span>
+        <span class="skills-run-type">${escapeHtml(skillsTypeLabel(run.skillsType))}</span>
+        <span class="history-score skills-run-score">
+          <strong>${escapeHtml(run.score ?? 0)}</strong>
+        </span>
+      </button>
+      <div class="history-detail">
+        ${open ? renderSkillsRunDetails(run) : ""}
+      </div>
+    </article>
   `;
-  const map = [
-    ["Historical Match Archive", "Override match records with event, partner, opponents, official scoring breakdown, notes, and deletion/reset controls."],
-    ["Score Tracker", "Alliance Pin halves, owned yellow Pin halves, Midfield robots, autonomous bonus, and AWP."],
-    ["What Changed?", "Latest-match summary and average-score movement after each saved match."],
-    ["Advanced Trends", "Coach summary, scorecard, pressure tracking, recipe/win lever logic, and correlation explorer."],
-    ["Skills Targets", "Driver/auton actual runs and target blueprints, including target gap comparison."],
-    ["Correlation Analysis", "Override-specific variables: yellow ownership, Toggles, Midfield, pressure, AWP, score, and result."],
-    ["Community Value", "Scouting board and pick-list style compatibility rankings for other teams."],
-    ["Engineering Log", "Generated process summary for engineering notebook entries, team reflection, and sharing the process with other VEX teams."]
-  ];
-  $("adaptationMap").innerHTML = map.map(([a,b]) => `<div class="item"><h3>${a}</h3><p>${b}</p></div>`).join("");
 }
 
-function renderAll() {
-  updateLayoutMode();
-  renderGoalScorer();
-  renderGoalScorerMode();
-  renderGoalScoreStrip();
-  renderGoalUndoState();
-  renderMatchPreview();
-  renderDashboard();
-  renderLatestChange();
-  renderSkillsPreview();
+function renderHistory() {
+  const list = $("[data-history-list]");
+  const more = $("[data-history-more]");
+  renderBanner();
+  if (!list || !more) return;
+
+  const devPanel = $("[data-dev-panel]");
+  if (devPanel) devPanel.hidden = !isDevMode;
+
+  const matches = sortedHeadMatches();
+  if (!matches.length) {
+    list.innerHTML = `<p class="history-empty">Saved matches will appear here after you score and save one.</p>`;
+    more.hidden = true;
+    return;
+  }
+
+  const visible = showAllHistory ? matches : matches.slice(0, HISTORY_INITIAL_LIMIT);
+  list.innerHTML = visible.map(renderHistoryCard).join("");
+  more.hidden = matches.length <= HISTORY_INITIAL_LIMIT;
+  more.textContent = showAllHistory ? "Show Less" : "Show More";
+}
+
+function renderSkillsHistory() {
+  const list = $("[data-skills-history-list]");
+  const more = $("[data-skills-history-more]");
+  if (!list || !more) return;
+
+  const runs = sortedSkillsRuns();
+  if (!runs.length) {
+    list.innerHTML = `<p class="history-empty">Saved Skills runs will appear here after you score and save one.</p>`;
+    more.hidden = true;
+    return;
+  }
+
+  const visible = showAllSkillsHistory ? runs : runs.slice(0, HISTORY_INITIAL_LIMIT);
+  list.innerHTML = visible.map(renderSkillsRunCard).join("");
+  more.hidden = runs.length <= HISTORY_INITIAL_LIMIT;
+  more.textContent = showAllSkillsHistory ? "Show Less" : "Show More";
+}
+
+function deleteMatch(id) {
+  const nextMatches = savedMatches().filter(match => match.id !== id);
+  writeSavedMatches(nextMatches);
+  if (expandedMatchId === id) expandedMatchId = null;
+  if (expandedSkillsRunId === id) expandedSkillsRunId = null;
+  if (pendingDeleteMatchId === id) pendingDeleteMatchId = null;
+  renderHistory();
+  renderSkillsHistory();
+  showToast("Match deleted.");
+}
+
+function requestDeleteMatch(id) {
+  if (pendingDeleteMatchId === id) {
+    deleteMatch(id);
+    return;
+  }
+  pendingDeleteMatchId = id;
+  renderHistory();
+  showToast("Press Confirm Delete to remove this match.");
+}
+
+function clearMatches() {
+  writeSavedMatches([]);
+  expandedMatchId = null;
+  expandedSkillsRunId = null;
+  showAllHistory = false;
+  showAllSkillsHistory = false;
+  renderHistory();
+  renderSkillsHistory();
+  showToast("Saved matches cleared.");
+}
+
+function wipeAllData() {
+  localStorage.removeItem(MATCH_STORE_KEY);
+  localStorage.removeItem(PROFILE_STORE_KEY);
+  profile = null;
+  expandedMatchId = null;
+  expandedSkillsRunId = null;
+  showAllHistory = false;
+  showAllSkillsHistory = false;
+  renderHistory();
+  renderSkillsHistory();
+  openSetupModal();
+  showToast("Local app data wiped.");
+}
+
+function openDevEditor(id) {
+  const match = savedMatches().find(item => item.id === id);
+  const modal = $("[data-dev-edit-modal]");
+  const form = $("[data-dev-edit-form]");
+  if (!match || !modal || !form) return;
+  editingMatchId = id;
+  form.elements.matchJson.value = JSON.stringify(match, null, 2);
+  modal.hidden = false;
+  document.body.classList.add("modal-open");
+  form.elements.matchJson.focus();
+}
+
+function closeDevEditor() {
+  const modal = $("[data-dev-edit-modal]");
+  if (!modal) return;
+  modal.hidden = true;
+  editingMatchId = null;
+  document.body.classList.remove("modal-open");
+}
+
+function saveDevEdit() {
+  const form = $("[data-dev-edit-form]");
+  if (!form || !editingMatchId) return;
+  let edited;
+  try {
+    edited = JSON.parse(form.elements.matchJson.value);
+  } catch {
+    showToast("Invalid JSON. Match was not changed.");
+    return;
+  }
+
+  if (!edited || typeof edited !== "object" || !edited.id) {
+    showToast("Edited match needs an id.");
+    return;
+  }
+
+  const matches = savedMatches();
+  const index = matches.findIndex(match => match.id === editingMatchId);
+  if (index === -1) return;
+  matches[index] = edited;
+  writeSavedMatches(matches);
+  expandedMatchId = edited.id;
+  expandedSkillsRunId = edited.id;
+  closeDevEditor();
+  renderHistory();
+  renderSkillsHistory();
+  showToast("Match updated.");
+}
+
+function resetScorer() {
+  state.auton = "none";
+  Object.keys(state.robots).forEach(robot => {
+    state.robots[robot] = false;
+  });
+  quadrants.forEach(quadrant => {
+    state.quadrants[quadrant] = { toggle: "neutral", yellow: 0, red: 0, blue: 0 };
+  });
+  teamAlliance = "none";
+  render();
+}
+
+function resetSkillsScorer() {
+  skillsState.centerToggle = false;
+  Object.keys(skillsState.toggles).forEach(quadrant => {
+    skillsState.toggles[quadrant] = "neutral";
+  });
+  skillsQuadrants.forEach(quadrant => {
+    skillsState.quadrants[quadrant] = { yellow: 0, red: 0, blue: 0 };
+  });
+  skillsRunType = "none";
   renderSkills();
-  renderScouts();
-  renderEvidence();
-}
-function updateLayoutMode() {
-  const active = document.querySelector(".view.active")?.id || "dashboard";
-  document.body.classList.toggle("app-focused", active !== "dashboard");
 }
 
-function demoData() {
-  if (state.matches.length || state.skills.length || state.targets.length) {
-    if (!confirm("Add demo data to your existing data?")) return;
-  }
-  const samples = [
-    [92,64,"you",true,8,3,1,2,2,"fast preload stack, missed one Toggle"],
-    [118,104,"tie",false,12,4,1,3,4,"good yellow ownership, partner traffic"],
-    [86,96,"opp",false,7,2,1,1,3,"auton drift, lost one stack"],
-    [132,101,"you",true,14,5,2,3,5,"best route so far, clean loader cycle"],
-    [109,112,"opp",false,11,3,1,2,4,"close loss, late Midfield push failed"]
-  ];
-  samples.forEach((s,i) => {
-    const you = { alliancePins:s[4], yellowPins:s[5], midfield:s[6], toggles:s[7], placedPins:s[4], cups:6+i, goals:4, highStack:s[8] };
-    const opp = { alliancePins:Math.floor(s[1]/8), yellowPins:2+i%2, midfield:1, toggles:1+i%3, placedPins:9, cups:5, goals:3, highStack:3 };
-    state.matches.push({ id:uid(), createdAt:new Date(Date.now()-1000000*(samples.length-i)).toISOString(), event:"Demo Event", matchNumber:`Q${i+1}`, team:"4330P", partner:`${4000+i}A`, opponents:`${5000+i}B + ${6000+i}C`, alliance:i%2?"red":"blue", auton:s[2], awp:s[3], awpChecklist:{pins:s[3],goals:s[3],noPerimeter:s[3]}, you, opp, youScore:s[0], oppScore:s[1], margin:s[0]-s[1], result:s[0]>s[1]?"win":"loss", notes:s[9] });
-  });
-  state.targets.push({ id:uid(), createdAt:new Date().toISOString(), entry:"target", type:"driver", targetName:"State driver target", alliancePins:15, yellowPins:5, midfield:1, toggles:3, placedPins:15, cups:8, goals:5, stopTime:18, score:133, notes:"clean route ceiling" });
-  state.skills.push({ id:uid(), createdAt:new Date().toISOString(), entry:"actual", type:"driver", linkedTarget:state.targets.at(-1).id, alliancePins:13, yellowPins:4, midfield:1, toggles:3, placedPins:13, cups:7, goals:4, stopTime:12, score:113, notes:"lost one yellow ownership stack" });
-  persist(); renderAll(); toast("Demo data loaded.");
-}
+document.addEventListener("click", (event) => {
+  if (event.target.closest("[data-save-open]")) openSaveModal();
+  if (event.target.closest("[data-save-close]")) closeSaveModal();
+  if (event.target.closest("[data-save-skip]")) saveCurrentMatch(blankDetails());
+  if (event.target === $("[data-save-modal]")) closeSaveModal();
+  if (event.target.closest("[data-skills-save-open]")) openSkillsSaveModal();
+  if (event.target.closest("[data-skills-save-close]")) closeSkillsSaveModal();
+  if (event.target.closest("[data-skills-save-skip]")) saveCurrentSkillsRun("");
+  if (event.target === $("[data-skills-save-modal]")) closeSkillsSaveModal();
 
-function exportJson() {
-  const blob = new Blob([JSON.stringify({ exportedAt:new Date().toISOString(), version:2, ...state }, null, 2)], { type:"application/json" });
-  const a = document.createElement("a");
-  a.href = URL.createObjectURL(blob);
-  a.download = "4330p-override-analytics-data.json";
-  a.click();
-  URL.revokeObjectURL(a.href);
-}
-async function copyEvidence() {
-  const plain = $("evidenceSummary").innerText;
-  await navigator.clipboard.writeText(plain);
-  toast("Process summary copied.");
-}
+  const modeChoice = event.target.closest("[data-mode-choice]");
+  if (modeChoice) setMode(modeChoice.dataset.modeChoice);
 
-document.addEventListener("click", (e) => {
-  const goalOwner = e.target.closest("[data-goal-owner-index]");
-  if (goalOwner) {
-    setGoalYellowOwner(Number(goalOwner.dataset.goalOwnerIndex), goalOwner.dataset.goalOwner);
+  const skillsType = event.target.closest("[data-skills-type]");
+  if (skillsType) {
+    setSkillsRunType(skillsType.dataset.skillsType);
     return;
   }
-  const goalButton = e.target.closest("[data-goal-index]");
-  if (goalButton) {
-    adjustGoalScorer(Number(goalButton.dataset.goalIndex), goalButton.dataset.goalKey, Number(goalButton.dataset.goalStep));
+
+  const skillsStep = event.target.closest("[data-skills-step]");
+  if (skillsStep) {
+    const [quadrant, color, amount] = skillsStep.dataset.skillsStep.split(":");
+    stepSkillsCounter(quadrant, color, Number(amount));
     return;
   }
-  const goalTap = e.target.closest("[data-goal-tap]");
-  if (goalTap) {
-    adjustGoalScorer(Number(goalTap.dataset.goalTap), selectedGoalMode, 1);
+
+  if (event.target.closest("[data-skills-center-toggle]")) {
+    toggleSkillsCenter();
     return;
   }
-  const goalMode = e.target.closest("[data-goal-mode]");
-  if (goalMode) {
-    setGoalMode(goalMode.dataset.goalMode);
+
+  const skillsToggle = event.target.closest("[data-skills-toggle]");
+  if (skillsToggle) {
+    cycleSkillsToggle(skillsToggle.dataset.skillsToggle);
     return;
   }
-  const stepButton = e.target.closest("[data-step-target]");
-  if (stepButton) {
-    const input = $(stepButton.dataset.stepTarget);
-    if (!input) return;
-    const next = Number(input.value || 0) + Number(stepButton.dataset.step || 0);
-    const minValue = input.min === "" ? 0 : Number(input.min);
-    const maxValue = input.max === "" ? Infinity : Number(input.max);
-    input.value = Math.max(minValue, Math.min(maxValue, next));
-    input.dispatchEvent(new Event("input", { bubbles: true }));
-    input.dispatchEvent(new Event("change", { bubbles: true }));
+
+  if (event.target.closest("[data-history-more]")) {
+    showAllHistory = !showAllHistory;
+    renderHistory();
   }
-  const tab = e.target.closest("[data-tab]");
-  if (tab) {
-    $$(".tab").forEach(t => t.classList.remove("active"));
-    $$(".view").forEach(v => v.classList.remove("active"));
-    tab.classList.add("active");
-    $(tab.dataset.tab).classList.add("active");
-    updateLayoutMode();
-    renderAll();
-    $("overrideApp")?.scrollIntoView({ behavior: "smooth", block: "start" });
+
+  if (event.target.closest("[data-skills-history-more]")) {
+    showAllSkillsHistory = !showAllSkillsHistory;
+    renderSkillsHistory();
   }
-  const jump = e.target.closest("[data-jump]");
-  if (jump) document.querySelector(`[data-tab="${jump.dataset.jump}"]`).click();
-  const preset = e.target.closest("[data-corr-preset]");
-  if (preset) {
-    const [x, y] = preset.dataset.corrPreset.split(":");
-    $("corrX").value = x;
-    $("corrY").value = y;
-    $("corrX").dispatchEvent(new Event("change", { bubbles: true }));
+
+  if (isDevMode && event.target.closest("[data-dev-clear-matches]")) clearMatches();
+  if (isDevMode && event.target.closest("[data-dev-clear-all]")) wipeAllData();
+
+  const devDelete = event.target.closest("[data-dev-delete-match]");
+  if (isDevMode && devDelete) deleteMatch(devDelete.dataset.devDeleteMatch);
+
+  const deleteButton = event.target.closest("[data-delete-match]");
+  if (deleteButton) {
+    event.preventDefault();
+    event.stopPropagation();
+    requestDeleteMatch(deleteButton.dataset.deleteMatch);
+    return;
   }
-  const action = e.target.closest("[data-action]")?.dataset.action;
-  if (action === "export-json") exportJson();
-  if (action === "load-demo") demoData();
-  if (action === "copy-evidence") copyEvidence().catch(() => toast("Clipboard blocked; select text manually."));
-  if (action === "undo-goal-scorer") undoGoalScorer();
-  if (action === "reset-goal-scorer") resetGoalScorer();
-  if (action === "import-standings") importStandings();
-  if (action === "open-vex-standings") window.open("https://events.vex.com/robot-competitions/vex-robotics-competition/standings/skills", "_blank", "noopener");
-  if (action === "clear-matches" && confirm("Erase all match data on this device?")) { state.matches = []; persist(); renderAll(); }
-  if (action === "clear-skills" && confirm("Erase all skills targets and actual runs on this device?")) { state.skills = []; state.targets = []; persist(); renderAll(); }
-  const dm = e.target.closest("[data-delete-match]");
-  if (dm) { state.matches = state.matches.filter(m => m.id !== dm.dataset.deleteMatch); persist(); renderAll(); }
-  const ds = e.target.closest("[data-delete-skill]");
-  if (ds) {
-    if (ds.dataset.kind === "target") state.targets = state.targets.filter(s => s.id !== ds.dataset.deleteSkill);
-    else state.skills = state.skills.filter(s => s.id !== ds.dataset.deleteSkill);
-    persist(); renderAll();
+
+  const devEdit = event.target.closest("[data-dev-edit-match]");
+  if (isDevMode && devEdit) openDevEditor(devEdit.dataset.devEditMatch);
+
+  if (event.target.closest("[data-dev-edit-close]")) closeDevEditor();
+  if (event.target === $("[data-dev-edit-modal]")) closeDevEditor();
+
+  const historyToggle = event.target.closest("[data-history-toggle]");
+  if (historyToggle) {
+    const id = historyToggle.dataset.historyToggle;
+    expandedMatchId = expandedMatchId === id ? null : id;
+    renderHistory();
   }
-  const dsc = e.target.closest("[data-delete-scout]");
-  if (dsc) { state.scouts = state.scouts.filter(s => s.id !== dsc.dataset.deleteScout); persist(); renderAll(); }
+
+  const skillsHistoryToggle = event.target.closest("[data-skills-history-toggle]");
+  if (skillsHistoryToggle) {
+    const id = skillsHistoryToggle.dataset.skillsHistoryToggle;
+    expandedSkillsRunId = expandedSkillsRunId === id ? null : id;
+    renderSkillsHistory();
+  }
+
+  const auton = event.target.closest("[data-auton]");
+  if (auton) setAuton(auton.dataset.auton);
+
+  const toggle = event.target.closest("[data-toggle]");
+  if (toggle) cycleToggle(toggle.dataset.toggle);
+
+  const step = event.target.closest("[data-step]");
+  if (step) {
+    const [quadrant, color, amount] = step.dataset.step.split(":");
+    stepCounter(quadrant, color, Number(amount));
+  }
+
+  const robot = event.target.closest("[data-robot]");
+  if (robot) toggleRobot(robot.dataset.robot);
+
+  const alliance = event.target.closest("[data-team-alliance]");
+  if (alliance) setTeamAlliance(alliance.dataset.teamAlliance);
+
+  if (event.target.closest("[data-reset]")) resetScorer();
 });
 
-document.addEventListener("input", (e) => {
-  if (e.target.matches("input, select, textarea")) {
-    if (e.target.id === "matchAlliance") syncGoalScorerToTotals();
-    if (e.target.id === "scoutTeam") fillScoutFormFromTeam(e.target.value);
-    renderGoalScoreStrip();
-    renderMatchPreview();
-    renderSkillsPreview();
-    renderTargetOptions();
-  }
-});
-$("filterMatches").addEventListener("change", (e) => { selectedFilter = e.target.value; renderDashboard(); });
-$("matchForm").addEventListener("submit", (e) => {
-  e.preventDefault();
-  state.matches.push(buildMatch());
-  persist();
-  resetMatchEntryAfterSave();
-  renderDashboard();
-  renderLatestChange();
-  renderEvidence();
-  toast("Match saved.");
-});
-$("skillsForm").addEventListener("submit", (e) => {
-  e.preventDefault();
-  const entry = buildSkill();
-  if (entry.entry === "target") {
-    if (!entry.targetName) entry.targetName = `${entry.type} target ${state.targets.length + 1}`;
-    state.targets.push(entry);
-  } else {
-    state.skills.push(entry);
-  }
-  persist();
-  $("skillNotes").value = "";
-  $("skillTargetName").value = "";
-  renderAll();
-  toast(entry.entry === "target" ? "Target blueprint saved." : "Skills run saved.");
-});
-$("scoutForm").addEventListener("submit", (e) => {
-  e.preventDefault();
-  const team = text("scoutTeam").toUpperCase() || `TEAM ${state.scouts.length + 1}`;
-  const existing = findScoutByTeam(team);
-  const scout = existing || {
-    id: uid(),
-    createdAt: new Date().toISOString()
-  };
-  Object.assign(scout, {
-    team,
-    rank: num("scoutRank") || 0,
-    record: text("scoutRecord"),
-    wp: num("scoutWp"),
-    ap: num("scoutAp"),
-    sp: num("scoutSp"),
-    skills: num("scoutSkills"),
-    driver: num("scoutDriver"),
-    autonSkills: num("scoutAutonSkills"),
-    fit: num("scoutFit"),
-    notes: text("scoutNotes"),
-    updatedAt: new Date().toISOString()
-  });
-  scout.score = scoutScore(scout);
-  if (!existing) state.scouts.push(scout);
-  persist();
-  $("scoutTeam").value = "";
-  $("scoutRank").value = "";
-  $("scoutRecord").value = "";
-  $("scoutNotes").value = "";
-  renderAll();
-  toast(existing ? "Scout card updated." : "Scout card saved.");
-});
-$("importFile").addEventListener("change", async (e) => {
-  const file = e.target.files[0];
-  if (!file) return;
-  const imported = JSON.parse(await file.text());
-  state.matches = imported.matches || [];
-  state.skills = imported.skills || [];
-  state.targets = imported.targets || [];
-  state.scouts = imported.scouts || [];
-  persist();
-  renderAll();
-  toast("Data imported.");
+$("[data-save-form]")?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  saveCurrentMatch(formDetails());
 });
 
-renderAll();
+$("[data-skills-save-form]")?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const notes = String(new FormData(event.currentTarget).get("notes") || "").trim();
+  saveCurrentSkillsRun(notes);
+});
+
+$("[data-setup-form]")?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const value = String(new FormData(event.currentTarget).get("teamNumber") || "").trim();
+  if (!value) {
+    showToast("Enter your team number first.");
+    return;
+  }
+  saveProfile(value);
+  renderBanner();
+  closeSetupModal();
+  showToast(`Team ${value} saved on this device.`);
+});
+
+$("[data-dev-edit-form]")?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  if (isDevMode) saveDevEdit();
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && !$("[data-save-modal]")?.hidden) {
+    closeSaveModal();
+  }
+  if (event.key === "Escape" && !$("[data-skills-save-modal]")?.hidden) {
+    closeSkillsSaveModal();
+  }
+  if (event.key === "Escape" && !$("[data-dev-edit-modal]")?.hidden) {
+    closeDevEditor();
+  }
+});
+
+buildCounters();
+renderMode();
+render();
+renderSkills();
+renderHistory();
+renderSkillsHistory();
+initializeProfileGate();
