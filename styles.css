@@ -352,11 +352,11 @@ button {
 
 .scoring-board {
   position: relative;
-  --board-size: min(86vw, calc(100vh - 274px), 760px);
+  --board-size: clamp(700px, 72vw, 840px);
   display: grid;
   place-items: center;
   min-height: 0;
-  padding: 112px 18px 18px;
+  padding: 112px clamp(18px, 3vw, 34px) 28px;
   border: 1px solid rgba(255, 255, 255, .12);
   border-radius: var(--radius-lg);
   background:
@@ -368,7 +368,8 @@ button {
 }
 
 .skills-board {
-  padding-top: 18px;
+  --board-size: clamp(720px, 74vw, 860px);
+  padding-top: 22px;
 }
 
 .field {
@@ -1781,15 +1782,17 @@ body.modal-open {
   }
 
   .scoring-board {
+    --board-size: min(92vw, 720px);
     padding: 70px 8px 12px;
   }
 
   .skills-board {
+    --board-size: min(92vw, 740px);
     padding-top: 12px;
   }
 
   .field {
-    width: min(94vw, calc(100vh - 180px));
+    width: var(--board-size);
   }
 
   .auton-button {
@@ -1944,7 +1947,7 @@ body.modal-open {
   }
 
   .field {
-    width: min(100%, calc(100vh - 150px));
+    width: var(--board-size);
   }
 
   .auton-row {
@@ -1961,11 +1964,13 @@ body.modal-open {
   }
 
   .scoring-board {
+    --board-size: min(92vw, 620px);
     border-radius: 18px;
     padding-top: 62px;
   }
 
   .skills-board {
+    --board-size: min(92vw, 640px);
     padding-top: 10px;
   }
 
