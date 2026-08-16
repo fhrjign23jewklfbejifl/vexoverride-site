@@ -1,5 +1,6 @@
-const ROBOT_EVENTS_BASE = "https://www.robotevents.com/api/v2";
+const VEX_EVENTS_BASE = "https://events.vex.com/api/v2";
 const PROGRAM_ID = "1";
+const SEASON_ID = "204";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -71,12 +72,13 @@ function normalizeSkill(skill) {
   };
 }
 
-async function robotEvents(env, path, params = {}) {
-  if (!env.ROBOT_EVENTS_TOKEN) {
-    return { error: "ROBOT_EVENTS_TOKEN is not configured on the proxy.", status: 500 };
+async function vexEvents(env, path, params = {}) {
+  const token = env.VEX_EVENTS_TOKEN || env.ROBOT_EVENTS_TOKEN;
+  if (!token) {
+    return { error: "VEX_EVENTS_TOKEN is not configured on the proxy.", status: 500 };
   }
 
-  const url = new URL(`${ROBOT_EVENTS_BASE}${path}`);
+  const url = new URL(`${VEX_EVENTS_BASE}${path}`);
   Object.entries(params).forEach(([key, value]) => {
     if (Array.isArray(value)) {
       value.forEach(item => url.searchParams.append(key, item));
@@ -87,27 +89,27 @@ async function robotEvents(env, path, params = {}) {
 
   const response = await fetch(url, {
     headers: {
-      "Authorization": `Bearer ${env.ROBOT_EVENTS_TOKEN}`,
+      "Authorization": `Bearer ${token}`,
       "Accept": "application/json"
     }
   });
   const payload = await response.json().catch(() => ({}));
   if (!response.ok) {
     return {
-      error: payload.message || payload.error || "RobotEvents API request failed.",
+      error: payload.message || payload.error || "VEX Events API request failed.",
       status: response.status
     };
   }
   return payload;
 }
 
-async function pagedRobotEvents(env, path, params = {}, limit = 250) {
-  const first = await robotEvents(env, path, { ...params, per_page: Math.min(limit, 250) });
+async function pagedVexEvents(env, path, params = {}, limit = 250) {
+  const first = await vexEvents(env, path, { ...params, per_page: Math.min(limit, 250) });
   if (first.error) return first;
   const data = [...(first.data || [])];
   const lastPage = first.meta?.last_page || 1;
   for (let page = 2; page <= lastPage && data.length < limit; page += 1) {
-    const next = await robotEvents(env, path, { ...params, page, per_page: Math.min(limit, 250) });
+    const next = await vexEvents(env, path, { ...params, page, per_page: Math.min(limit, 250) });
     if (next.error) break;
     data.push(...(next.data || []));
   }
@@ -118,8 +120,9 @@ async function searchEvents(env, requestUrl) {
   const q = requestUrl.searchParams.get("q")?.trim();
   if (!q || q.length < 2) return json({ events: [] });
   const today = new Date().toISOString().slice(0, 10);
-  const payload = await robotEvents(env, "/events", {
+  const payload = await vexEvents(env, "/events", {
     "program[]": PROGRAM_ID,
+    "season[]": SEASON_ID,
     search: q,
     start: today,
     per_page: 12
@@ -129,22 +132,22 @@ async function searchEvents(env, requestUrl) {
 }
 
 async function eventDetail(env, eventId) {
-  const payload = await robotEvents(env, `/events/${eventId}`);
+  const payload = await vexEvents(env, `/events/${eventId}`);
   if (payload.error) return json({ error: payload.error }, payload.status || 500);
   return json({ event: normalizeEvent(payload.data || payload) });
 }
 
 async function eventTeams(env, eventId) {
-  const payload = await pagedRobotEvents(env, `/events/${eventId}/teams`, {}, 300);
+  const payload = await pagedVexEvents(env, `/events/${eventId}/teams`, {}, 300);
   if (payload.error) return json({ error: payload.error }, payload.status || 500);
   return json({ teams: (payload.data || []).map(normalizeTeam) });
 }
 
 async function teamHistory(env, teamId) {
   const [matches, skills, rankings] = await Promise.all([
-    pagedRobotEvents(env, `/teams/${teamId}/matches`, {}, 40),
-    pagedRobotEvents(env, `/teams/${teamId}/skills`, {}, 20),
-    pagedRobotEvents(env, `/teams/${teamId}/rankings`, {}, 20)
+    pagedVexEvents(env, `/teams/${teamId}/matches`, { "season[]": SEASON_ID }, 40),
+    pagedVexEvents(env, `/teams/${teamId}/skills`, { "season[]": SEASON_ID }, 20),
+    pagedVexEvents(env, `/teams/${teamId}/rankings`, { "season[]": SEASON_ID }, 20)
   ]);
 
   return json({

@@ -1,0 +1,6 @@
+name = "vexoverride-data-proxy"
+main = "workers/vex-data-proxy.js"
+compatibility_date = "2026-08-16"
+
+[observability]
+enabled = true
