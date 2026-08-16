@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Override Scoring Prototype</title>
   <meta name="description" content="Interactive VEX V5 Override scoring prototype." />
-  <link rel="stylesheet" href="./styles.css?v=head-trash-align-20260816-9" />
+  <link rel="stylesheet" href="./styles.css?v=vex-data-import-20260816-1" />
 </head>
 <body>
   <main class="score-app">
@@ -35,6 +35,44 @@
       <button class="mode-choice" type="button" data-mode-choice="head" aria-pressed="true">Head-on-head</button>
       <button class="mode-choice" type="button" data-mode-choice="skills" aria-pressed="false">Skills</button>
     </nav>
+
+    <section class="competition-data" aria-labelledby="competitionDataTitle">
+      <div class="competition-head">
+        <div>
+          <span class="brand-kicker">Official data import</span>
+          <h2 id="competitionDataTitle">Competition Data</h2>
+          <p>Search a VEX event, import the teams, and cache official history for later analysis.</p>
+        </div>
+        <span class="competition-source" data-competition-source>Proxy not connected</span>
+      </div>
+
+      <form class="competition-search" data-competition-search-form>
+        <label>
+          <span>Competition search</span>
+          <input name="competitionSearch" type="search" autocomplete="off" placeholder="Event name, city, region, or date" />
+        </label>
+        <button class="save-trigger" type="submit">Search Events</button>
+      </form>
+
+      <div class="competition-status" data-competition-status>
+        Competition data needs the private proxy before it can load live VEX results.
+      </div>
+
+      <div class="competition-results" data-competition-results hidden></div>
+
+      <article class="competition-current" data-competition-current hidden>
+        <div class="competition-current-head">
+          <div>
+            <span>Imported competition</span>
+            <h3 data-competition-name></h3>
+            <p data-competition-meta></p>
+          </div>
+          <strong data-competition-team-count>0 teams</strong>
+        </div>
+        <div class="competition-progress" data-competition-progress></div>
+        <div class="competition-team-list" data-competition-team-list></div>
+      </article>
+    </section>
 
     <section class="skills-panel" data-mode-section="skills" aria-label="Skills analysis and scorer" hidden>
       <header class="topbar skills-topbar">
@@ -349,6 +387,6 @@
   </div>
 
   <div class="toast" data-toast role="status" aria-live="polite"></div>
-  <script src="./app.js?v=head-trash-align-20260816-9"></script>
+  <script src="./app.js?v=vex-data-import-20260816-1"></script>
 </body>
 </html>

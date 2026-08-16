@@ -10,7 +10,10 @@ const POINTS = {
 
 const MATCH_STORE_KEY = "vexOverrideMatches:v1";
 const PROFILE_STORE_KEY = "vexOverrideProfile:v1";
+const COMPETITION_STORE_KEY = "vexOverrideCompetitionData:v1";
+const PROXY_URL_STORE_KEY = "vexOverrideDataProxyUrl:v1";
 const HISTORY_INITIAL_LIMIT = 3;
+const DEFAULT_VEX_PROXY_URL = "";
 const quadrants = ["top", "right", "bottom", "left", "center"];
 const colors = ["yellow", "red", "blue"];
 const toggleStates = ["neutral", "blue", "red"];
@@ -57,8 +60,18 @@ let expandedMatchId = null;
 let expandedSkillsRunId = null;
 let editingMatchId = null;
 let pendingDeleteMatchId = null;
+let competitionSearchResults = [];
+let importedCompetition = loadCompetitionData();
 let lastModalFocus = null;
 let toastTimer = null;
+const initialProxyParam = new URLSearchParams(window.location.search).get("proxy");
+if (initialProxyParam) {
+  localStorage.setItem(PROXY_URL_STORE_KEY, initialProxyParam.trim().replace(/\/$/, ""));
+}
+
+function vexProxyUrl() {
+  return (window.VEX_OVERRIDE_PROXY_URL || localStorage.getItem(PROXY_URL_STORE_KEY) || DEFAULT_VEX_PROXY_URL).trim().replace(/\/$/, "");
+}
 
 function buildCounters() {
   quadrants.forEach((quadrant) => {
@@ -198,6 +211,20 @@ function writeSavedMatches(matches) {
   localStorage.setItem(MATCH_STORE_KEY, JSON.stringify(matches));
 }
 
+function loadCompetitionData() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(COMPETITION_STORE_KEY));
+    return saved && typeof saved === "object" ? saved : null;
+  } catch {
+    return null;
+  }
+}
+
+function writeCompetitionData(competition) {
+  localStorage.setItem(COMPETITION_STORE_KEY, JSON.stringify(competition));
+  importedCompetition = competition;
+}
+
 function matchRecordSummary(matches) {
   return matches.reduce((record, match) => {
     if (match.result === "win") record.wins += 1;
@@ -226,6 +253,180 @@ function renderBanner() {
   team.textContent = profile?.teamNumber || "4330P";
   count.textContent = String(matches.length);
   record.textContent = `${summary.wins}-${summary.losses}-${summary.ties}`;
+}
+
+function competitionLocation(event) {
+  return [event.city, event.region, event.country].filter(Boolean).join(", ");
+}
+
+function competitionDateLabel(event) {
+  const value = event.date || event.start;
+  if (!value) return "Date not listed";
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return String(value);
+  return date.toLocaleDateString(undefined, {
+    year: "numeric",
+    month: "short",
+    day: "numeric"
+  });
+}
+
+function setCompetitionStatus(message, tone = "") {
+  const status = $("[data-competition-status]");
+  if (!status) return;
+  status.textContent = message;
+  status.dataset.tone = tone;
+}
+
+async function vexProxyFetch(path) {
+  const baseUrl = vexProxyUrl();
+  if (!baseUrl) {
+    throw new Error("Competition data needs the private proxy before it can load live VEX results.");
+  }
+
+  const response = await fetch(`${baseUrl}${path}`, {
+    headers: { "Accept": "application/json" }
+  });
+  let payload = null;
+  try {
+    payload = await response.json();
+  } catch {
+    payload = null;
+  }
+  if (!response.ok) {
+    throw new Error(payload?.error || "Competition data could not load. Try again later.");
+  }
+  return payload;
+}
+
+function renderCompetitionSource() {
+  const source = $("[data-competition-source]");
+  if (!source) return;
+  source.textContent = vexProxyUrl() ? "Live proxy connected" : "Proxy not connected";
+  source.dataset.connected = String(Boolean(vexProxyUrl()));
+}
+
+function renderCompetitionResults(events = []) {
+  const results = $("[data-competition-results]");
+  if (!results) return;
+  results.hidden = false;
+  if (!events.length) {
+    results.innerHTML = `<p class="competition-empty">No matching competitions found.</p>`;
+    return;
+  }
+
+  results.innerHTML = events.map(event => `
+    <article class="competition-result">
+      <div>
+        <span>${escapeHtml(event.code || "Event")}</span>
+        <h3>${escapeHtml(event.name || "Unnamed event")}</h3>
+        <p>${escapeHtml(competitionDateLabel(event))}${competitionLocation(event) ? ` • ${escapeHtml(competitionLocation(event))}` : ""}</p>
+      </div>
+      <button class="modal-button secondary" type="button" data-import-event="${escapeHtml(event.id)}">Import</button>
+    </article>
+  `).join("");
+}
+
+function renderImportedCompetition() {
+  renderCompetitionSource();
+  const panel = $("[data-competition-current]");
+  if (!panel) return;
+
+  if (!importedCompetition) {
+    panel.hidden = true;
+    return;
+  }
+
+  panel.hidden = false;
+  $("[data-competition-name]").textContent = importedCompetition.name || "Imported competition";
+  $("[data-competition-meta]").textContent = [
+    importedCompetition.eventCode,
+    importedCompetition.date,
+    importedCompetition.location
+  ].filter(Boolean).join(" • ");
+  const teams = Array.isArray(importedCompetition.teams) ? importedCompetition.teams : [];
+  $("[data-competition-team-count]").textContent = `${teams.length} team${teams.length === 1 ? "" : "s"}`;
+  $("[data-competition-progress]").textContent = importedCompetition.loadedAt
+    ? `Loaded ${new Date(importedCompetition.loadedAt).toLocaleString()}.`
+    : "";
+  const visibleTeams = teams.slice(0, 36);
+  $("[data-competition-team-list]").innerHTML = visibleTeams.map(team => `
+    <span class="competition-team">
+      <strong>${escapeHtml(team.teamNumber || team.number || "Team")}</strong>
+      <small>${escapeHtml(team.teamName || team.name || team.organization || "Official history cached")}</small>
+    </span>
+  `).join("") + (teams.length > visibleTeams.length
+    ? `<p class="competition-extra">+${teams.length - visibleTeams.length} more teams cached for analysis.</p>`
+    : "");
+}
+
+async function searchCompetitions(query) {
+  setCompetitionStatus("Searching official VEX events...", "loading");
+  const payload = await vexProxyFetch(`/api/events/search?q=${encodeURIComponent(query)}`);
+  competitionSearchResults = Array.isArray(payload.events) ? payload.events : [];
+  renderCompetitionResults(competitionSearchResults);
+  setCompetitionStatus(competitionSearchResults.length
+    ? `Found ${competitionSearchResults.length} matching competition${competitionSearchResults.length === 1 ? "" : "s"}.`
+    : "No matching competitions found.",
+    competitionSearchResults.length ? "ready" : "warn"
+  );
+}
+
+async function mapWithConcurrency(items, limit, mapper, onProgress) {
+  const results = new Array(items.length);
+  let index = 0;
+  let completed = 0;
+  async function worker() {
+    while (index < items.length) {
+      const currentIndex = index;
+      index += 1;
+      try {
+        results[currentIndex] = await mapper(items[currentIndex], currentIndex);
+      } catch {
+        results[currentIndex] = { ...items[currentIndex], officialMatches: [], officialSkills: [], officialRankings: [] };
+      }
+      completed += 1;
+      onProgress?.(completed, items.length);
+    }
+  }
+  await Promise.all(Array.from({ length: Math.min(limit, items.length) }, worker));
+  return results;
+}
+
+async function importCompetition(eventId) {
+  setCompetitionStatus("Loading selected competition...", "loading");
+  const [eventPayload, teamsPayload] = await Promise.all([
+    vexProxyFetch(`/api/events/${encodeURIComponent(eventId)}`),
+    vexProxyFetch(`/api/events/${encodeURIComponent(eventId)}/teams`)
+  ]);
+  const event = eventPayload.event || {};
+  const teams = Array.isArray(teamsPayload.teams) ? teamsPayload.teams : [];
+
+  setCompetitionStatus(`Loaded event. Caching official history for ${teams.length} teams...`, "loading");
+  const teamsWithHistory = await mapWithConcurrency(teams, 4, async (team) => {
+    const history = await vexProxyFetch(`/api/teams/${encodeURIComponent(team.id)}/history`);
+    return {
+      ...team,
+      officialMatches: history.matches || [],
+      officialSkills: history.skills || [],
+      officialRankings: history.rankings || []
+    };
+  }, (done, total) => {
+    setCompetitionStatus(`Loaded ${done} of ${total} teams.`, "loading");
+  });
+
+  writeCompetitionData({
+    eventId: event.id || eventId,
+    eventCode: event.code || "",
+    name: event.name || "Imported competition",
+    date: competitionDateLabel(event),
+    location: competitionLocation(event),
+    loadedAt: new Date().toISOString(),
+    teams: teamsWithHistory
+  });
+  renderImportedCompetition();
+  setCompetitionStatus("Competition data loaded and saved on this device.", "ready");
+  showToast("Competition data imported.");
 }
 
 function escapeHtml(value) {
@@ -916,13 +1117,16 @@ function clearMatches() {
 function wipeAllData() {
   localStorage.removeItem(MATCH_STORE_KEY);
   localStorage.removeItem(PROFILE_STORE_KEY);
+  localStorage.removeItem(COMPETITION_STORE_KEY);
   profile = null;
+  importedCompetition = null;
   expandedMatchId = null;
   expandedSkillsRunId = null;
   showAllHistory = false;
   showAllSkillsHistory = false;
   renderHistory();
   renderSkillsHistory();
+  renderImportedCompetition();
   openSetupModal();
   showToast("Local app data wiped.");
 }
@@ -1081,6 +1285,17 @@ document.addEventListener("click", (event) => {
     renderSkillsHistory();
   }
 
+  const importButton = event.target.closest("[data-import-event]");
+  if (importButton) {
+    importButton.disabled = true;
+    importCompetition(importButton.dataset.importEvent).catch((error) => {
+      importButton.disabled = false;
+      setCompetitionStatus(error.message || "Competition data could not load. Try again later.", "warn");
+      showToast("Competition data could not load. Try again later.");
+    });
+    return;
+  }
+
   const auton = event.target.closest("[data-auton]");
   if (auton) setAuton(auton.dataset.auton);
 
@@ -1131,6 +1346,19 @@ $("[data-dev-edit-form]")?.addEventListener("submit", (event) => {
   if (isDevMode) saveDevEdit();
 });
 
+$("[data-competition-search-form]")?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const query = String(new FormData(event.currentTarget).get("competitionSearch") || "").trim();
+  if (query.length < 2) {
+    setCompetitionStatus("Type at least 2 characters to search competitions.", "warn");
+    return;
+  }
+  searchCompetitions(query).catch((error) => {
+    setCompetitionStatus(error.message || "Competition data could not load. Try again later.", "warn");
+    showToast("Competition data could not load. Try again later.");
+  });
+});
+
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && !$("[data-save-modal]")?.hidden) {
     closeSaveModal();
@@ -1149,4 +1377,5 @@ render();
 renderSkills();
 renderHistory();
 renderSkillsHistory();
+renderImportedCompetition();
 initializeProfileGate();

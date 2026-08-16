@@ -27,3 +27,13 @@ The app is designed for pre-match, post-match, practice, scouting, and notebook 
 ## Data
 
 Data is stored locally in the browser using LocalStorage. Use Export Data / Import JSON to move data between devices.
+
+## VEX competition data proxy
+
+The website never stores a RobotEvents/VEX API token in browser code. Live competition import uses the Cloudflare Worker source in `workers/vex-data-proxy.js`.
+
+Worker setup:
+
+- Deploy `workers/vex-data-proxy.js` to a free Cloudflare Worker.
+- Add a Worker secret named `ROBOT_EVENTS_TOKEN`.
+- Open the website once with `?proxy=https://YOUR-WORKER.workers.dev` to save the proxy URL on that device.
