@@ -241,7 +241,7 @@ button {
 .topbar:not(.skills-topbar) {
   width: 100%;
   justify-content: center;
-  grid-template-columns: 52px minmax(360px, 520px) 140px;
+  grid-template-columns: 140px minmax(360px, 520px) 140px;
 }
 
 .skills-topbar {
@@ -1755,7 +1755,7 @@ body.modal-open {
 
   .topbar:not(.skills-topbar) {
     width: min(620px, 100%);
-    grid-template-columns: 48px minmax(0, 1fr) 116px;
+    grid-template-columns: 116px minmax(0, 1fr) 116px;
   }
 
   .skills-topbar {
