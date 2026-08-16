@@ -238,6 +238,12 @@ button {
   gap: 12px;
 }
 
+.topbar:not(.skills-topbar) {
+  width: 100%;
+  justify-content: center;
+  grid-template-columns: 52px minmax(360px, 520px) 140px;
+}
+
 .skills-topbar {
   width: min(900px, 100%);
   grid-template-columns: 52px minmax(260px, 1fr) 240px 140px;
@@ -1743,6 +1749,11 @@ body.modal-open {
   }
 
   .topbar {
+    width: min(620px, 100%);
+    grid-template-columns: 48px minmax(0, 1fr) 116px;
+  }
+
+  .topbar:not(.skills-topbar) {
     width: min(620px, 100%);
     grid-template-columns: 48px minmax(0, 1fr) 116px;
   }
