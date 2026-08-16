@@ -46,6 +46,7 @@ button {
   gap: 14px;
   margin: 0 auto;
   padding: 14px 0;
+  zoom: .86;
 }
 
 .score-app > * {
