@@ -18,9 +18,24 @@
     return;
   }
 
-  const delayMs = 700;
+  const baseDelayMs = 9000;
+  const detailDelayMs = 3500;
+  const maxRetries = 3;
+  const minRateLimitWaitMs = 10 * 60 * 1000;
+  const checkpointPauseEvery = 25;
+  const checkpointPauseMs = 2 * 60 * 1000;
 
   const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+  const jitter = ms => Math.round(ms + Math.random() * Math.min(ms * 0.35, 1200));
+
+  function retryAfterMs(response, fallbackMs) {
+    const header = response.headers.get("retry-after");
+    const seconds = Number(header);
+    if (Number.isFinite(seconds) && seconds > 0) return seconds * 1000;
+    const dateMs = Date.parse(header || "");
+    if (!Number.isNaN(dateMs)) return Math.max(0, dateMs - Date.now());
+    return fallbackMs;
+  }
 
   function parseIds(text) {
     const ids = new Set();
@@ -61,26 +76,38 @@
     }
   }
 
-  async function getJson(path) {
-    const response = await fetch(path, {
-      credentials: "include",
-      headers: { accept: "application/json, text/plain, */*" }
-    });
-    if (response.status === 401 || response.status === 403) throw new Error(`Unauthorized (${response.status})`);
-    if (response.status === 404) throw new Error("Not found (404)");
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    return response.json();
+  async function getJson(path, label = path) {
+    for (let attempt = 0; attempt <= maxRetries; attempt += 1) {
+      const response = await fetch(path, {
+        credentials: "include",
+        headers: { accept: "application/json, text/plain, */*" }
+      });
+      if (response.status === 429) {
+        const fallbackMs = minRateLimitWaitMs * Math.max(1, attempt + 1);
+        const waitMs = jitter(retryAfterMs(response, fallbackMs));
+        console.warn(
+          `Rate limited on ${label}. Waiting ${Math.round(waitMs / 60000)} minute(s) before retry ${attempt + 1}/${maxRetries}.`
+        );
+        await sleep(waitMs);
+        continue;
+      }
+      if (response.status === 401 || response.status === 403) throw new Error(`Unauthorized (${response.status})`);
+      if (response.status === 404) throw new Error("Not found (404)");
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      return response.json();
+    }
+    throw new Error("HTTP 429 after retries; stop the scan and wait before trying again");
   }
 
-  async function getPaged(path) {
-    const first = await getJson(path);
+  async function getPaged(path, label) {
+    const first = await getJson(path, `${label} page 1`);
     const data = Array.isArray(first.data) ? [...first.data] : [];
     const lastPage = Number(first.meta?.last_page || 1);
     const url = new URL(path, location.origin);
     for (let page = 2; page <= lastPage; page += 1) {
       url.searchParams.set("page", String(page));
-      await sleep(delayMs);
-      const next = await getJson(`${url.pathname}?${url.searchParams}`);
+      await sleep(jitter(detailDelayMs));
+      const next = await getJson(`${url.pathname}?${url.searchParams}`, `${label} page ${page}`);
       data.push(...(Array.isArray(next.data) ? next.data : []));
     }
     return { ...first, data, meta: { ...first.meta, merged_pages: lastPage } };
@@ -104,11 +131,15 @@
   console.clear();
   console.log(`VEX collector starting: ${orderedIds.length} event id(s). Season filter: ${targetSeasonId}.`);
   console.log("Tip: keep this tab open until the bundle downloads. Current progress is also stored on window.vexCollectorBundle.");
+  console.log("This version runs slowly, pauses during large scans, and backs off when VEX returns 429 Too Many Requests.");
+  if (orderedIds.length > 2000) {
+    console.log("Large range note: 60000-70000 can take many hours. That is intentional so Cloudflare does not ban the browser.");
+  }
 
   for (const [index, eventId] of orderedIds.entries()) {
     try {
       console.log(`[${index + 1}/${orderedIds.length}] Checking event ${eventId}...`);
-      const event = await getJson(`/api/v2/events/${eventId}`);
+      const event = await getJson(`/api/v2/events/${eventId}`, `event ${eventId}`);
       const seasonId = seasonIdOf(event);
       if (seasonId !== targetSeasonId) {
         bundle.skipped.push({ eventId, reason: `season ${seasonId || "unknown"}` });
@@ -116,12 +147,12 @@
         continue;
       }
 
-      await sleep(delayMs);
-      const teams = await getPaged(`/api/v2/events/${eventId}/teams?per_page=250&page=1`);
-      await sleep(delayMs);
-      const skills = await getPaged(`/api/v2/events/${eventId}/skills?per_page=250&page=1`);
-      await sleep(delayMs);
-      const awards = await getPaged(`/api/v2/events/${eventId}/awards?per_page=999`);
+      await sleep(jitter(detailDelayMs));
+      const teams = await getPaged(`/api/v2/events/${eventId}/teams?per_page=250&page=1`, `event ${eventId} teams`);
+      await sleep(jitter(detailDelayMs));
+      const skills = await getPaged(`/api/v2/events/${eventId}/skills?per_page=250&page=1`, `event ${eventId} skills`);
+      await sleep(jitter(detailDelayMs));
+      const awards = await getPaged(`/api/v2/events/${eventId}/awards?per_page=999`, `event ${eventId} awards`);
 
       bundle.events.push({
         eventId,
@@ -143,7 +174,11 @@
     if ((index + 1) % 100 === 0) {
       console.log(`Progress: checked ${index + 1}/${orderedIds.length}; saved ${bundle.events.length}; skipped ${bundle.skipped.length}.`);
     }
-    await sleep(delayMs);
+    if (orderedIds.length > 2000 && (index + 1) % checkpointPauseEvery === 0) {
+      console.log(`Cooling down for ${Math.round(checkpointPauseMs / 60000)} minute(s) after ${index + 1} checks.`);
+      await sleep(jitter(checkpointPauseMs));
+    }
+    await sleep(jitter(baseDelayMs));
   }
 
   const blob = new Blob([JSON.stringify(bundle, null, 2)], { type: "application/json" });
