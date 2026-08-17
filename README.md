@@ -74,7 +74,7 @@ all
 
 That first tries the VEX season event index for season id `204`. If VEX returns a usable event list, the collector skips the broad brute-force range and downloads only those event IDs. If the index endpoint is blocked or empty, it falls back to checking event IDs `60000-70000`, keeps only season id `204`, and downloads full event data only for matching events. That fallback scan can take many hours because the collector intentionally runs slowly, pauses after small batches, and backs off for several minutes if VEX/Cloudflare returns `429 Too Many Requests`.
 
-After a successful broad discovery run, reuse the saved event IDs instead of scanning the whole range every day. Daily updates should check known working season-204 event IDs, not rediscover thousands of old or missing events.
+After a successful broad discovery run, the collector remembers what it learned in `events.vex.com` browser storage. Future `all` runs check known working season-204 event IDs, recheck a rotating batch of IDs that were previously blank/404, and discover a small batch of not-yet-seen IDs from `60000-70000`. That catches newly added competitions without rediscovering thousands of old-season events every day.
 
 If Chrome shows `Error 1015` or says you are rate limited, stop the scan and wait before trying again. That block is from Cloudflare on `events.vex.com`, not from this app. After waiting, copy the newest collector again with `npm.cmd run vex:copy-collector`, refresh `events.vex.com`, and paste the updated collector into the Console.
 

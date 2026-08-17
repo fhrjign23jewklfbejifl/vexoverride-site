@@ -18,16 +18,19 @@
     return;
   }
 
+  const isAllSearch = allPresets.has(input.trim().toLowerCase());
   const baseDelayMs = 9000;
   const detailDelayMs = 3500;
   const maxRetries = 3;
   const minRateLimitWaitMs = 10 * 60 * 1000;
   const checkpointPauseEvery = 25;
   const checkpointPauseMs = 2 * 60 * 1000;
+  const discoveryBatchSize = 300;
+  const blankRecheckBatchSize = 300;
+  const memoryKey = `vexEventCollectorMemory:season:${targetSeasonId}`;
 
   const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
   const jitter = ms => Math.round(ms + Math.random() * Math.min(ms * 0.35, 1200));
-  const isAllSearch = allPresets.has(input.trim().toLowerCase());
 
   function retryAfterMs(response, fallbackMs) {
     const header = response.headers.get("retry-after");
@@ -59,13 +62,109 @@
     return ids;
   }
 
+  function parseRange(text) {
+    const range = text.match(/^(\d+)\s*-\s*(\d+)$/);
+    if (!range) return null;
+    const start = Number(range[1]);
+    const end = Number(range[2]);
+    return { start: Math.min(start, end), end: Math.max(start, end) };
+  }
+
+  function loadMemory() {
+    try {
+      const parsed = JSON.parse(localStorage.getItem(memoryKey) || "null");
+      if (!parsed || parsed.targetSeasonId !== targetSeasonId) throw new Error("wrong memory");
+      return {
+        targetSeasonId,
+        range: parsed.range || parseRange(defaultRange),
+        nextDiscoveryId: Number(parsed.nextDiscoveryId || parseRange(defaultRange)?.start || 0),
+        blankCursor: Number(parsed.blankCursor || 0),
+        knownSeason204Ids: Array.isArray(parsed.knownSeason204Ids) ? parsed.knownSeason204Ids : [],
+        blankIds: Array.isArray(parsed.blankIds) ? parsed.blankIds : [],
+        otherSeasonIds: Array.isArray(parsed.otherSeasonIds) ? parsed.otherSeasonIds : [],
+        updatedAt: parsed.updatedAt || null
+      };
+    } catch {
+      const range = parseRange(defaultRange);
+      return {
+        targetSeasonId,
+        range,
+        nextDiscoveryId: range?.start || 0,
+        blankCursor: 0,
+        knownSeason204Ids: [],
+        blankIds: [],
+        otherSeasonIds: [],
+        updatedAt: null
+      };
+    }
+  }
+
+  function saveMemory(memory) {
+    memory.knownSeason204Ids = [...new Set(memory.knownSeason204Ids.map(Number).filter(Boolean))].sort((a, b) => a - b);
+    memory.blankIds = [...new Set(memory.blankIds.map(Number).filter(Boolean))].sort((a, b) => a - b);
+    memory.otherSeasonIds = [...new Set(memory.otherSeasonIds.map(Number).filter(Boolean))].sort((a, b) => a - b);
+    memory.updatedAt = new Date().toISOString();
+    localStorage.setItem(memoryKey, JSON.stringify(memory));
+  }
+
+  function rememberKnown(memory, eventId) {
+    eventId = Number(eventId);
+    memory.knownSeason204Ids.push(eventId);
+    memory.blankIds = memory.blankIds.filter(id => Number(id) !== eventId);
+    memory.otherSeasonIds = memory.otherSeasonIds.filter(id => Number(id) !== eventId);
+  }
+
+  function rememberBlank(memory, eventId) {
+    eventId = Number(eventId);
+    memory.blankIds.push(eventId);
+    memory.knownSeason204Ids = memory.knownSeason204Ids.filter(id => Number(id) !== eventId);
+    memory.otherSeasonIds = memory.otherSeasonIds.filter(id => Number(id) !== eventId);
+  }
+
+  function rememberOtherSeason(memory, eventId) {
+    eventId = Number(eventId);
+    memory.otherSeasonIds.push(eventId);
+    memory.knownSeason204Ids = memory.knownSeason204Ids.filter(id => Number(id) !== eventId);
+    memory.blankIds = memory.blankIds.filter(id => Number(id) !== eventId);
+  }
+
+  function getNextDiscoveryIds(memory) {
+    const range = memory.range || parseRange(defaultRange);
+    if (!range) return [];
+    const known = new Set([
+      ...memory.knownSeason204Ids.map(Number),
+      ...memory.blankIds.map(Number),
+      ...memory.otherSeasonIds.map(Number)
+    ]);
+    const discovery = [];
+    let candidate = Math.max(Number(memory.nextDiscoveryId || range.start), range.start);
+    while (candidate <= range.end && discovery.length < discoveryBatchSize) {
+      if (!known.has(candidate)) discovery.push(candidate);
+      candidate += 1;
+    }
+    memory.nextDiscoveryId = candidate > range.end ? range.start : candidate;
+    return discovery;
+  }
+
+  function getBlankRecheckIds(memory) {
+    const blankIds = [...new Set(memory.blankIds.map(Number).filter(Boolean))].sort((a, b) => a - b);
+    if (!blankIds.length) return [];
+    const start = Math.min(Math.max(Number(memory.blankCursor || 0), 0), blankIds.length - 1);
+    const ids = [];
+    for (let offset = 0; offset < Math.min(blankRecheckBatchSize, blankIds.length); offset += 1) {
+      ids.push(blankIds[(start + offset) % blankIds.length]);
+    }
+    memory.blankCursor = (start + ids.length) % blankIds.length;
+    return ids;
+  }
+
   const ids = parseIds(input);
   if (!ids.size) {
     console.warn("No valid event IDs or ranges were entered.");
     return;
   }
 
-  if (ids.size > 2000) {
+  if (ids.size > 2000 && !isAllSearch) {
     const ok = confirm(
       `This will check ${ids.size} event IDs and may take a while.\n\n` +
       "It only downloads teams/skills/awards for events that match season 204.\n\n" +
@@ -154,37 +253,56 @@
     skipped: []
   };
 
+  const memory = loadMemory();
   let indexedEvents = [];
   if (isAllSearch) {
     indexedEvents = await getSeasonEventsFromIndex();
+    for (const event of indexedEvents) rememberKnown(memory, Number(event.id));
   }
 
   const indexedEventById = new Map(indexedEvents.map(event => [Number(event.id), event]));
-  const orderedIds = indexedEvents.length
-    ? [...indexedEventById.keys()].sort((a, b) => a - b)
-    : [...ids].sort((a, b) => a - b);
+  const rememberedIds = isAllSearch
+    ? [
+      ...memory.knownSeason204Ids,
+      ...getBlankRecheckIds(memory),
+      ...getNextDiscoveryIds(memory)
+    ]
+    : [];
+  const orderedIds = [
+    ...(indexedEvents.length ? [...indexedEventById.keys()] : []),
+    ...(isAllSearch ? rememberedIds : [...ids])
+  ].map(Number).filter(Boolean);
+  const uniqueOrderedIds = [...new Set(orderedIds)].sort((a, b) => a - b);
+  saveMemory(memory);
 
   console.clear();
-  console.log(`VEX collector starting: ${orderedIds.length} event id(s). Season filter: ${targetSeasonId}.`);
+  console.log(`VEX collector starting: ${uniqueOrderedIds.length} event id(s). Season filter: ${targetSeasonId}.`);
   console.log("Tip: keep this tab open until the bundle downloads. Current progress is also stored on window.vexCollectorBundle.");
   console.log("This version runs slowly, pauses during large scans, and backs off when VEX returns 429 Too Many Requests.");
   if (indexedEvents.length) {
-    console.log("Using the VEX season event index, so this run skips the 60000-70000 brute-force scan.");
-  } else if (orderedIds.length > 2000) {
+    console.log("Using the VEX season event index plus collector memory.");
+  }
+  if (isAllSearch) {
+    console.log(`Memory: ${memory.knownSeason204Ids.length} known season events, ${memory.blankIds.length} previously blank IDs, ${memory.otherSeasonIds.length} old-season IDs.`);
+    console.log(`Daily scan rechecks up to ${blankRecheckBatchSize} previous blanks and discovers up to ${discoveryBatchSize} not-yet-seen IDs from ${defaultRange}.`);
+  } else if (uniqueOrderedIds.length > 2000) {
     console.log("Large range note: 60000-70000 can take many hours. That is intentional so Cloudflare does not ban the browser.");
   }
 
-  for (const [index, eventId] of orderedIds.entries()) {
+  for (const [index, eventId] of uniqueOrderedIds.entries()) {
     try {
-      console.log(`[${index + 1}/${orderedIds.length}] Checking event ${eventId}...`);
+      console.log(`[${index + 1}/${uniqueOrderedIds.length}] Checking event ${eventId}...`);
       const indexedEvent = indexedEventById.get(Number(eventId));
       const event = indexedEvent ? { data: indexedEvent } : await getJson(`/api/v2/events/${eventId}`, `event ${eventId}`);
       const seasonId = seasonIdOf(event);
       if (seasonId !== targetSeasonId) {
+        rememberOtherSeason(memory, eventId);
         bundle.skipped.push({ eventId, reason: `season ${seasonId || "unknown"}` });
         console.log(`Skipped ${eventId}: season ${seasonId || "unknown"}`);
+        saveMemory(memory);
         continue;
       }
+      rememberKnown(memory, eventId);
 
       await sleep(jitter(detailDelayMs));
       const teams = await getPaged(`/api/v2/events/${eventId}/teams?per_page=250&page=1`, `event ${eventId} teams`);
@@ -206,14 +324,16 @@
       });
       console.log(`Saved ${eventId}: ${teams.data?.length || 0} teams, ${skills.data?.length || 0} skills rows.`);
     } catch (error) {
+      if (error.message === "Not found (404)") rememberBlank(memory, eventId);
       bundle.skipped.push({ eventId, reason: error.message });
       console.warn(`Skipped ${eventId}: ${error.message}`);
     }
+    saveMemory(memory);
     window.vexCollectorBundle = bundle;
     if ((index + 1) % 100 === 0) {
-      console.log(`Progress: checked ${index + 1}/${orderedIds.length}; saved ${bundle.events.length}; skipped ${bundle.skipped.length}.`);
+      console.log(`Progress: checked ${index + 1}/${uniqueOrderedIds.length}; saved ${bundle.events.length}; skipped ${bundle.skipped.length}.`);
     }
-    if (orderedIds.length > 2000 && (index + 1) % checkpointPauseEvery === 0) {
+    if (uniqueOrderedIds.length > 2000 && (index + 1) % checkpointPauseEvery === 0) {
       console.log(`Cooling down for ${Math.round(checkpointPauseMs / 60000)} minute(s) after ${index + 1} checks.`);
       await sleep(jitter(checkpointPauseMs));
     }
@@ -228,5 +348,6 @@
   link.click();
   link.remove();
   console.log(`Done. Downloaded bundle with ${bundle.events.length} event(s), ${bundle.skipped.length} skipped.`);
+  console.log(`Collector memory saved: ${memory.knownSeason204Ids.length} known season events, ${memory.blankIds.length} blank IDs.`);
   console.log("Import it with: npm.cmd run vex:import-bundle -- \"C:\\\\Users\\\\29SSchwartz\\\\Downloads\\\\vex-event-bundle-...json\"");
 })();
