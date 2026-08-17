@@ -3,7 +3,7 @@
 
 (async () => {
   const targetSeasonId = 204;
-  const defaultRange = "64000-70000";
+  const defaultRange = "60000-70000";
   const allPresets = new Set(["all", "season204", "2026-2027", "2026", "override"]);
   const input = prompt(
     [
