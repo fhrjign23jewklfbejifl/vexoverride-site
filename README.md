@@ -57,14 +57,21 @@ Public synced files are written here:
 Setup:
 
 1. Run `npm install`.
-2. Run `npm run vex:login`.
-3. Sign into VEX Events in the Chrome window that opens.
-4. Return to the terminal and press Enter. This saves only the local browser session.
-5. Edit `data/vex-updater-config.json` to add known event IDs or conservative ranges.
-6. Test without pushing: `npm run vex:update:headed`.
-7. Run the real update: `npm run vex:update`.
+2. Sign into VEX Events in your normal Chrome browser.
+3. Close Chrome before running the updater. The updater uses your existing Chrome profile by default.
+4. Edit `data/vex-updater-config.json` to add known event IDs or conservative ranges.
+5. Test without pushing: `npm run vex:update:headed`.
+6. Run the real update: `npm run vex:update`.
 
-If the automated login browser gets stuck on the robot check, use the normal-Chrome header fallback instead:
+The default config uses:
+
+- `useExistingChromeProfile: true`
+- `%LOCALAPPDATA%\Google\Chrome\User Data`
+- Chrome profile `Default`
+
+If your VEX login is in a different Chrome profile, change `chromeProfileDirectory` in `data/vex-updater-config.json`.
+
+If the existing Chrome profile is locked or still gets blocked, use the normal-Chrome header fallback:
 
 1. Run `npm run vex:headers-help`.
 2. Sign into VEX Events in your normal Chrome browser.

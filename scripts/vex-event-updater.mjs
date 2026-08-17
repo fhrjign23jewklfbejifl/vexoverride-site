@@ -45,6 +45,10 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+function expandEnvPath(value) {
+  return String(value || "").replace(/%([^%]+)%/g, (_, name) => process.env[name] || `%${name}%`);
+}
+
 function eventIdsFromConfig(config) {
   const ids = new Set((config.knownEventIds || []).map(Number).filter(Number.isFinite));
   for (const range of config.eventIdRanges || []) {
@@ -81,11 +85,22 @@ function eventMatchesTargetSeason(event, config) {
 }
 
 async function launchContext(config, forceHeaded = false) {
-  await fs.mkdir(SESSION_DIR, { recursive: true });
-  return chromium.launchPersistentContext(SESSION_DIR, {
+  const useExistingChrome = Boolean(config.useExistingChromeProfile);
+  const userDataDir = useExistingChrome
+    ? expandEnvPath(config.chromeUserDataDir || "%LOCALAPPDATA%\\Google\\Chrome\\User Data")
+    : SESSION_DIR;
+  const profileDirectory = config.chromeProfileDirectory || "Default";
+
+  await fs.mkdir(userDataDir, { recursive: true });
+  if (useExistingChrome) {
+    await log(`Using existing Chrome profile ${profileDirectory}. Close Chrome before running if it is locked.`);
+  }
+
+  return chromium.launchPersistentContext(userDataDir, {
     channel: "chrome",
-    headless: forceHeaded ? false : Boolean(config.headless),
-    viewport: { width: 1280, height: 900 }
+    headless: useExistingChrome ? false : forceHeaded ? false : Boolean(config.headless),
+    viewport: { width: 1280, height: 900 },
+    args: useExistingChrome ? [`--profile-directory=${profileDirectory}`] : []
   });
 }
 
