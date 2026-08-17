@@ -66,7 +66,15 @@ npm.cmd run vex:copy-collector
 ```
 
 5. Press `F12`, open the Chrome DevTools `Console` tab, paste, and press Enter.
-6. Enter event IDs or ranges when prompted, for example:
+6. Enter event IDs or ranges when prompted. To scan the broad current-season window, type:
+
+```text
+all
+```
+
+That checks event IDs `60000-70000`, keeps only season id `204`, and downloads full event data only for matching events. It can take a while, so leave the tab open until the bundle downloads.
+
+You can also enter exact IDs:
 
 ```text
 65030,64306

@@ -2,23 +2,33 @@
 // It fetches data from the trusted browser session and downloads one JSON bundle.
 
 (async () => {
+  const targetSeasonId = 204;
+  const defaultRange = "60000-70000";
+  const allPresets = new Set(["all", "season204", "2026-2027", "2026", "override"]);
   const input = prompt(
-    "Enter VEX event IDs and/or ranges. Examples: 65030,64306 or 64000-65100",
-    "65030,64306"
+    [
+      "Enter VEX event IDs/ranges, or type all.",
+      "Examples: 65030,64306 or 64000-65100",
+      `all scans ${defaultRange} and only keeps season ${targetSeasonId}.`
+    ].join("\n"),
+    "all"
   );
   if (!input) {
     console.warn("VEX collector canceled.");
     return;
   }
 
-  const targetSeasonId = 204;
   const delayMs = 700;
 
   const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
   function parseIds(text) {
     const ids = new Set();
-    for (const token of text.split(/[\s,]+/).map(part => part.trim()).filter(Boolean)) {
+    const normalized = text.trim().toLowerCase();
+    const tokens = allPresets.has(normalized)
+      ? [defaultRange]
+      : text.split(/[\s,]+/).map(part => part.trim()).filter(Boolean);
+    for (const token of tokens) {
       const range = token.match(/^(\d+)\s*-\s*(\d+)$/);
       if (range) {
         const start = Number(range[1]);
@@ -37,6 +47,18 @@
   if (!ids.size) {
     console.warn("No valid event IDs or ranges were entered.");
     return;
+  }
+
+  if (ids.size > 2000) {
+    const ok = confirm(
+      `This will check ${ids.size} event IDs and may take a while.\n\n` +
+      "It only downloads teams/skills/awards for events that match season 204.\n\n" +
+      "Continue?"
+    );
+    if (!ok) {
+      console.warn("Large VEX collector scan canceled.");
+      return;
+    }
   }
 
   async function getJson(path) {
@@ -81,6 +103,7 @@
 
   console.clear();
   console.log(`VEX collector starting: ${orderedIds.length} event id(s). Season filter: ${targetSeasonId}.`);
+  console.log("Tip: keep this tab open until the bundle downloads. Current progress is also stored on window.vexCollectorBundle.");
 
   for (const [index, eventId] of orderedIds.entries()) {
     try {
@@ -115,6 +138,10 @@
     } catch (error) {
       bundle.skipped.push({ eventId, reason: error.message });
       console.warn(`Skipped ${eventId}: ${error.message}`);
+    }
+    window.vexCollectorBundle = bundle;
+    if ((index + 1) % 100 === 0) {
+      console.log(`Progress: checked ${index + 1}/${orderedIds.length}; saved ${bundle.events.length}; skipped ${bundle.skipped.length}.`);
     }
     await sleep(delayMs);
   }
