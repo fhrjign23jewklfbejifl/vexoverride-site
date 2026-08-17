@@ -3,7 +3,7 @@
 
 (async () => {
   const targetSeasonId = 204;
-  const defaultRange = "60000-70000";
+  const defaultRange = "64000-70000";
   const allPresets = new Set(["all", "season204", "2026-2027", "2026", "override"]);
   const input = prompt(
     [
@@ -71,21 +71,28 @@
   }
 
   function loadMemory() {
+    const defaultParsedRange = parseRange(defaultRange);
     try {
       const parsed = JSON.parse(localStorage.getItem(memoryKey) || "null");
       if (!parsed || parsed.targetSeasonId !== targetSeasonId) throw new Error("wrong memory");
+      const parsedRange = parsed.range || defaultParsedRange;
+      const rangeChanged = parsedRange?.start !== defaultParsedRange?.start || parsedRange?.end !== defaultParsedRange?.end;
       return {
         targetSeasonId,
-        range: parsed.range || parseRange(defaultRange),
-        nextDiscoveryId: Number(parsed.nextDiscoveryId || parseRange(defaultRange)?.start || 0),
+        range: defaultParsedRange,
+        nextDiscoveryId: rangeChanged ? defaultParsedRange?.start || 0 : Number(parsed.nextDiscoveryId || defaultParsedRange?.start || 0),
         blankCursor: Number(parsed.blankCursor || 0),
         knownSeason204Ids: Array.isArray(parsed.knownSeason204Ids) ? parsed.knownSeason204Ids : [],
-        blankIds: Array.isArray(parsed.blankIds) ? parsed.blankIds : [],
-        otherSeasonIds: Array.isArray(parsed.otherSeasonIds) ? parsed.otherSeasonIds : [],
+        blankIds: Array.isArray(parsed.blankIds)
+          ? parsed.blankIds.filter(id => Number(id) >= defaultParsedRange.start && Number(id) <= defaultParsedRange.end)
+          : [],
+        otherSeasonIds: Array.isArray(parsed.otherSeasonIds)
+          ? parsed.otherSeasonIds.filter(id => Number(id) >= defaultParsedRange.start && Number(id) <= defaultParsedRange.end)
+          : [],
         updatedAt: parsed.updatedAt || null
       };
     } catch {
-      const range = parseRange(defaultRange);
+      const range = defaultParsedRange;
       return {
         targetSeasonId,
         range,
@@ -286,7 +293,7 @@
     console.log(`Memory: ${memory.knownSeason204Ids.length} known season events, ${memory.blankIds.length} previously blank IDs, ${memory.otherSeasonIds.length} old-season IDs.`);
     console.log(`Daily scan rechecks up to ${blankRecheckBatchSize} previous blanks and discovers up to ${discoveryBatchSize} not-yet-seen IDs from ${defaultRange}.`);
   } else if (uniqueOrderedIds.length > 2000) {
-    console.log("Large range note: 60000-70000 can take many hours. That is intentional so Cloudflare does not ban the browser.");
+    console.log(`Large range note: ${defaultRange} can take a long time. That is intentional so Cloudflare does not ban the browser.`);
   }
 
   for (const [index, eventId] of uniqueOrderedIds.entries()) {
