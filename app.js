@@ -62,6 +62,8 @@ let editingMatchId = null;
 let pendingDeleteMatchId = null;
 let competitionSearchResults = [];
 let importedCompetition = loadCompetitionData();
+let teamSkillsResults = [];
+let expandedTeamSkillId = null;
 let lastModalFocus = null;
 let toastTimer = null;
 const initialProxyParam = new URLSearchParams(window.location.search).get("proxy");
@@ -278,10 +280,17 @@ function setCompetitionStatus(message, tone = "") {
   status.dataset.tone = tone;
 }
 
+function setTeamSkillsStatus(message, tone = "") {
+  const status = $("[data-team-skills-status]");
+  if (!status) return;
+  status.textContent = message;
+  status.dataset.tone = tone;
+}
+
 async function vexProxyFetch(path) {
   const baseUrl = vexProxyUrl();
   if (!baseUrl) {
-    throw new Error("Competition data needs the private proxy before it can load live VEX results.");
+    throw new Error("Live VEX data needs the proxy before it can load official results.");
   }
 
   const response = await fetch(`${baseUrl}${path}`, {
@@ -301,9 +310,88 @@ async function vexProxyFetch(path) {
 
 function renderCompetitionSource() {
   const source = $("[data-competition-source]");
-  if (!source) return;
-  source.textContent = vexProxyUrl() ? "Live proxy connected" : "Proxy not connected";
-  source.dataset.connected = String(Boolean(vexProxyUrl()));
+  const teamSource = $("[data-team-skills-source]");
+  [source, teamSource].filter(Boolean).forEach((element) => {
+    element.textContent = vexProxyUrl() ? "Live proxy connected" : "Proxy not connected";
+    element.dataset.connected = String(Boolean(vexProxyUrl()));
+  });
+}
+
+function officialSkillsId(row) {
+  return String(row.team?.id || row.team?.teamRegId || row.team?.teamNumber || `rank-${row.rank || "unknown"}`);
+}
+
+function officialDateLabel(value) {
+  if (!value) return "Date not listed";
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return String(value);
+  return date.toLocaleDateString(undefined, {
+    year: "numeric",
+    month: "short",
+    day: "numeric"
+  });
+}
+
+function teamSkillsLocation(row) {
+  return [row.team?.city, row.team?.region, row.team?.country].filter(Boolean).join(", ");
+}
+
+function renderTeamSkillsResults(rows = []) {
+  const results = $("[data-team-skills-results]");
+  if (!results) return;
+  results.hidden = false;
+  if (!rows.length) {
+    results.innerHTML = `<p class="competition-empty">No matching teams found in the public Skills standings.</p>`;
+    return;
+  }
+
+  results.innerHTML = rows.map((row) => {
+    const id = officialSkillsId(row);
+    const open = expandedTeamSkillId === id;
+    const team = row.team || {};
+    const scores = row.scores || {};
+    const event = row.event || {};
+    return `
+      <article class="team-skill-card ${open ? "open" : ""}">
+        <button class="team-skill-summary" type="button" data-team-skill-toggle="${escapeHtml(id)}" aria-expanded="${open}">
+          <span class="team-skill-identity">
+            <strong>${escapeHtml(team.teamNumber || "Team")}</strong>
+            <small>${escapeHtml(team.teamName || team.organization || "Official Skills result")}</small>
+          </span>
+          <span class="team-skill-chip">Rank #${escapeHtml(row.rank ?? "-")}</span>
+          <span class="team-skill-score">${escapeHtml(scores.score ?? 0)}</span>
+        </button>
+        <div class="team-skill-detail">
+          ${open ? `
+            <div class="team-skill-stats">
+              <span><small>Driver</small><strong>${escapeHtml(scores.driver ?? 0)}</strong></span>
+              <span><small>Autonomous</small><strong>${escapeHtml(scores.programming ?? 0)}</strong></span>
+              <span><small>Event</small><strong>${escapeHtml(event.sku || "Not listed")}</strong></span>
+              <span><small>Date</small><strong>${escapeHtml(officialDateLabel(event.startDate))}</strong></span>
+            </div>
+            <p>${escapeHtml([
+              team.organization,
+              teamSkillsLocation(row),
+              team.eventRegion
+            ].filter(Boolean).join(" • ") || "No extra team details listed.")}</p>
+          ` : ""}
+        </div>
+      </article>
+    `;
+  }).join("");
+}
+
+async function searchTeamSkills(query) {
+  setTeamSkillsStatus("Searching public VEX Skills standings...", "loading");
+  const payload = await vexProxyFetch(`/api/skills/search?q=${encodeURIComponent(query)}`);
+  teamSkillsResults = Array.isArray(payload.skills) ? payload.skills : [];
+  expandedTeamSkillId = null;
+  renderTeamSkillsResults(teamSkillsResults);
+  setTeamSkillsStatus(teamSkillsResults.length
+    ? `Found ${teamSkillsResults.length} matching team${teamSkillsResults.length === 1 ? "" : "s"}.`
+    : "No matching teams found.",
+    teamSkillsResults.length ? "ready" : "warn"
+  );
 }
 
 function renderCompetitionResults(events = []) {
@@ -361,15 +449,10 @@ function renderImportedCompetition() {
 }
 
 async function searchCompetitions(query) {
-  setCompetitionStatus("Searching official VEX events...", "loading");
-  const payload = await vexProxyFetch(`/api/events/search?q=${encodeURIComponent(query)}`);
-  competitionSearchResults = Array.isArray(payload.events) ? payload.events : [];
+  void query;
+  competitionSearchResults = [];
   renderCompetitionResults(competitionSearchResults);
-  setCompetitionStatus(competitionSearchResults.length
-    ? `Found ${competitionSearchResults.length} matching competition${competitionSearchResults.length === 1 ? "" : "s"}.`
-    : "No matching competitions found.",
-    competitionSearchResults.length ? "ready" : "warn"
-  );
+  setCompetitionStatus("Event-specific import is coming next once we have the VEX competition response endpoint.", "warn");
 }
 
 async function mapWithConcurrency(items, limit, mapper, onProgress) {
@@ -695,7 +778,7 @@ function initializeProfileGate() {
 }
 
 function setMode(mode) {
-  activeMode = mode === "head" ? "head" : "skills";
+  activeMode = ["head", "skills", "scouting"].includes(mode) ? mode : "head";
   renderMode();
 }
 
@@ -1285,6 +1368,14 @@ document.addEventListener("click", (event) => {
     renderSkillsHistory();
   }
 
+  const teamSkillToggle = event.target.closest("[data-team-skill-toggle]");
+  if (teamSkillToggle) {
+    const id = teamSkillToggle.dataset.teamSkillToggle;
+    expandedTeamSkillId = expandedTeamSkillId === id ? null : id;
+    renderTeamSkillsResults(teamSkillsResults);
+    return;
+  }
+
   const importButton = event.target.closest("[data-import-event]");
   if (importButton) {
     importButton.disabled = true;
@@ -1356,6 +1447,19 @@ $("[data-competition-search-form]")?.addEventListener("submit", (event) => {
   searchCompetitions(query).catch((error) => {
     setCompetitionStatus(error.message || "Competition data could not load. Try again later.", "warn");
     showToast("Competition data could not load. Try again later.");
+  });
+});
+
+$("[data-team-skills-search-form]")?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const query = String(new FormData(event.currentTarget).get("teamSkillsSearch") || "").trim();
+  if (query.length < 2) {
+    setTeamSkillsStatus("Type at least 2 characters to search teams.", "warn");
+    return;
+  }
+  searchTeamSkills(query).catch((error) => {
+    setTeamSkillsStatus(error.message || "Team Skills data could not load. Try again later.", "warn");
+    showToast("Team Skills data could not load. Try again later.");
   });
 });
 

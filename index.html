@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Override Scoring Prototype</title>
   <meta name="description" content="Interactive VEX V5 Override scoring prototype." />
-  <link rel="stylesheet" href="./styles.css?v=vex-public-skills-20260816-1" />
+  <link rel="stylesheet" href="./styles.css?v=scouting-tab-20260816-1" />
 </head>
 <body>
   <main class="score-app">
@@ -34,44 +34,72 @@
     <nav class="mode-switch" aria-label="Scoring mode">
       <button class="mode-choice" type="button" data-mode-choice="head" aria-pressed="true">Head-on-head</button>
       <button class="mode-choice" type="button" data-mode-choice="skills" aria-pressed="false">Skills</button>
+      <button class="mode-choice" type="button" data-mode-choice="scouting" aria-pressed="false">Scouting</button>
     </nav>
 
-    <section class="competition-data" aria-labelledby="competitionDataTitle">
-      <div class="competition-head">
-        <div>
-          <span class="brand-kicker">Official data import</span>
-          <h2 id="competitionDataTitle">Competition Data</h2>
-          <p>Search a VEX event, import the teams, and cache official history for later analysis.</p>
-        </div>
-        <span class="competition-source" data-competition-source>Proxy not connected</span>
-      </div>
-
-      <form class="competition-search" data-competition-search-form>
-        <label>
-          <span>Competition search</span>
-          <input name="competitionSearch" type="search" autocomplete="off" placeholder="Event name, city, region, or date" />
-        </label>
-        <button class="save-trigger" type="submit">Search Events</button>
-      </form>
-
-      <div class="competition-status" data-competition-status>
-        Competition data needs the private proxy before it can load live VEX results.
-      </div>
-
-      <div class="competition-results" data-competition-results hidden></div>
-
-      <article class="competition-current" data-competition-current hidden>
-        <div class="competition-current-head">
+    <section class="scouting-panel" data-mode-section="scouting" aria-label="Scouting and official data" hidden>
+      <section class="team-skills-search" aria-labelledby="teamSkillsTitle">
+        <div class="competition-head">
           <div>
-            <span>Imported competition</span>
-            <h3 data-competition-name></h3>
-            <p data-competition-meta></p>
+            <span class="brand-kicker">Official Skills standings</span>
+            <h2 id="teamSkillsTitle">Team Skills Search</h2>
+            <p>Search teams from the public VEX V5RC Override Skills standings.</p>
           </div>
-          <strong data-competition-team-count>0 teams</strong>
+          <span class="competition-source" data-team-skills-source>Proxy not connected</span>
         </div>
-        <div class="competition-progress" data-competition-progress></div>
-        <div class="competition-team-list" data-competition-team-list></div>
-      </article>
+
+        <form class="competition-search" data-team-skills-search-form>
+          <label>
+            <span>Team search</span>
+            <input name="teamSkillsSearch" type="search" autocomplete="off" placeholder="Team number, name, city, region, or event code" />
+          </label>
+          <button class="save-trigger" type="submit">Search Teams</button>
+        </form>
+
+        <div class="competition-status" data-team-skills-status>
+          Search official season Skills results by team number, team name, or region.
+        </div>
+
+        <div class="team-skills-results" data-team-skills-results hidden></div>
+      </section>
+
+      <section class="competition-data" aria-labelledby="competitionDataTitle">
+        <div class="competition-head">
+          <div>
+            <span class="brand-kicker">Official data import</span>
+            <h2 id="competitionDataTitle">Competition Data</h2>
+            <p>Search a VEX event, import the teams, and cache official history for later analysis.</p>
+          </div>
+          <span class="competition-source" data-competition-source>Proxy not connected</span>
+        </div>
+
+        <form class="competition-search" data-competition-search-form>
+          <label>
+            <span>Competition search</span>
+            <input name="competitionSearch" type="search" autocomplete="off" placeholder="Event name, city, region, or date" />
+          </label>
+          <button class="save-trigger" type="submit">Search Events</button>
+        </form>
+
+        <div class="competition-status" data-competition-status>
+          Event-specific import is next once we have the VEX competition response endpoint.
+        </div>
+
+        <div class="competition-results" data-competition-results hidden></div>
+
+        <article class="competition-current" data-competition-current hidden>
+          <div class="competition-current-head">
+            <div>
+              <span>Imported competition</span>
+              <h3 data-competition-name></h3>
+              <p data-competition-meta></p>
+            </div>
+            <strong data-competition-team-count>0 teams</strong>
+          </div>
+          <div class="competition-progress" data-competition-progress></div>
+          <div class="competition-team-list" data-competition-team-list></div>
+        </article>
+      </section>
     </section>
 
     <section class="skills-panel" data-mode-section="skills" aria-label="Skills analysis and scorer" hidden>

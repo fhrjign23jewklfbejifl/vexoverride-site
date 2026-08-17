@@ -157,9 +157,9 @@ button {
 
 .mode-switch {
   justify-self: center;
-  width: min(430px, 100%);
+  width: min(560px, 100%);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 4px;
   padding: 5px;
   border: 1px solid rgba(255, 255, 255, .13);
@@ -196,7 +196,13 @@ button {
   box-shadow: 0 8px 18px rgba(102, 217, 208, .14);
 }
 
-.competition-data {
+.scouting-panel {
+  display: grid;
+  gap: 14px;
+}
+
+.competition-data,
+.team-skills-search {
   display: grid;
   gap: 12px;
   padding: 14px;
@@ -325,15 +331,25 @@ button {
   gap: 8px;
 }
 
-.competition-result {
+.team-skills-results {
   display: grid;
+  gap: 8px;
+}
+
+.competition-result,
+.team-skill-card {
+  display: grid;
+  border: 1px solid rgba(255, 255, 255, .10);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, .040);
+  overflow: hidden;
+}
+
+.competition-result {
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
   gap: 12px;
-  border: 1px solid rgba(255, 255, 255, .10);
-  border-radius: var(--radius-sm);
   padding: 10px;
-  background: rgba(255, 255, 255, .040);
 }
 
 .competition-result span,
@@ -355,6 +371,114 @@ button {
   margin: 4px 0 0;
   color: #aeb9bd;
   font-size: 13px;
+}
+
+.team-skill-summary {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 12px;
+  border: 0;
+  padding: 12px;
+  color: inherit;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.team-skill-summary:hover {
+  background: rgba(255, 255, 255, .045);
+}
+
+.team-skill-identity {
+  min-width: 0;
+  display: grid;
+  gap: 3px;
+}
+
+.team-skill-identity strong {
+  color: var(--white);
+  font-size: 19px;
+  line-height: 1;
+  font-weight: 1000;
+}
+
+.team-skill-identity small {
+  color: #aeb9bd;
+  font-size: 12px;
+  line-height: 1.25;
+  font-weight: 850;
+}
+
+.team-skill-chip {
+  min-width: 78px;
+  border: 1px solid rgba(102, 217, 208, .22);
+  border-radius: 999px;
+  padding: 7px 10px;
+  color: #dff5f1;
+  background: rgba(102, 217, 208, .10);
+  font-size: 11px;
+  font-weight: 1000;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.team-skill-score {
+  min-width: 54px;
+  color: var(--white);
+  font-size: 30px;
+  line-height: .9;
+  font-weight: 1000;
+  text-align: right;
+}
+
+.team-skill-detail {
+  display: grid;
+  gap: 10px;
+  padding: 0 12px 12px;
+}
+
+.team-skill-detail:empty {
+  display: none;
+}
+
+.team-skill-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.team-skill-stats span {
+  display: grid;
+  gap: 4px;
+  min-height: 58px;
+  align-content: center;
+  border: 1px solid rgba(255, 255, 255, .10);
+  border-radius: var(--radius-sm);
+  padding: 8px 9px;
+  background: rgba(255, 255, 255, .040);
+}
+
+.team-skill-stats small {
+  color: #8ca0a8;
+  font-size: 10px;
+  font-weight: 1000;
+  text-transform: uppercase;
+}
+
+.team-skill-stats strong {
+  color: var(--white);
+  font-size: 15px;
+  line-height: 1.1;
+  font-weight: 1000;
+}
+
+.team-skill-detail p {
+  margin: 0;
+  color: #aeb9bd;
+  font-size: 13px;
+  line-height: 1.35;
 }
 
 .competition-empty,
@@ -1996,6 +2120,10 @@ body.modal-open {
     grid-template-columns: 1fr;
   }
 
+  .team-skill-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .topbar {
     width: min(620px, 100%);
     grid-template-columns: 48px minmax(0, 1fr) 116px;
@@ -2167,12 +2295,27 @@ body.modal-open {
     font-size: 15px;
   }
 
-  .competition-data {
+  .competition-data,
+  .team-skills-search {
     padding: 12px;
     border-radius: 16px;
   }
 
-  .competition-result {
+  .competition-result,
+  .team-skill-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .team-skill-score {
+    min-width: 0;
+    text-align: left;
+  }
+
+  .team-skill-chip {
+    justify-self: start;
+  }
+
+  .team-skill-stats {
     grid-template-columns: 1fr;
   }
 
