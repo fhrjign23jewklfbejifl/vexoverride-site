@@ -9,7 +9,7 @@
     [
       "Enter VEX event IDs/ranges, or type all.",
       "Examples: 65030,64306 or 64000-65100",
-      `all scans ${defaultRange} and only keeps season ${targetSeasonId}.`
+      `all first tries the season ${targetSeasonId} event index, then falls back to ${defaultRange}.`
     ].join("\n"),
     "all"
   );
@@ -27,6 +27,7 @@
 
   const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
   const jitter = ms => Math.round(ms + Math.random() * Math.min(ms * 0.35, 1200));
+  const isAllSearch = allPresets.has(input.trim().toLowerCase());
 
   function retryAfterMs(response, fallbackMs) {
     const header = response.headers.get("retry-after");
@@ -118,6 +119,33 @@
     return Number(data.season_id || data.seasonId || data.season?.id || data.season?.season_id);
   }
 
+  async function getSeasonEventsFromIndex() {
+    const candidates = [
+      `/api/v2/events?season[]=${targetSeasonId}&program[]=1&per_page=250&page=1`,
+      `/api/v2/events?season_id=${targetSeasonId}&program_id=1&per_page=250&page=1`,
+      `/api/v2/events?season=${targetSeasonId}&program=1&per_page=250&page=1`
+    ];
+
+    for (const candidate of candidates) {
+      try {
+        console.log(`Trying season event index: ${candidate}`);
+        const result = await getPaged(candidate, "season event index");
+        const seasonEvents = (Array.isArray(result.data) ? result.data : [])
+          .filter(event => seasonIdOf(event) === targetSeasonId && Number(event.id));
+        if (seasonEvents.length) {
+          console.log(`Found ${seasonEvents.length} season ${targetSeasonId} events from the index.`);
+          return seasonEvents;
+        }
+        console.log(`Event index returned ${result.data?.length || 0} rows, but none matched season ${targetSeasonId}.`);
+      } catch (error) {
+        console.warn(`Season event index failed: ${error.message}`);
+      }
+      await sleep(jitter(detailDelayMs));
+    }
+
+    return [];
+  }
+
   const bundle = {
     generatedAt: new Date().toISOString(),
     source: location.origin,
@@ -126,20 +154,31 @@
     skipped: []
   };
 
-  const orderedIds = [...ids].sort((a, b) => a - b);
+  let indexedEvents = [];
+  if (isAllSearch) {
+    indexedEvents = await getSeasonEventsFromIndex();
+  }
+
+  const indexedEventById = new Map(indexedEvents.map(event => [Number(event.id), event]));
+  const orderedIds = indexedEvents.length
+    ? [...indexedEventById.keys()].sort((a, b) => a - b)
+    : [...ids].sort((a, b) => a - b);
 
   console.clear();
   console.log(`VEX collector starting: ${orderedIds.length} event id(s). Season filter: ${targetSeasonId}.`);
   console.log("Tip: keep this tab open until the bundle downloads. Current progress is also stored on window.vexCollectorBundle.");
   console.log("This version runs slowly, pauses during large scans, and backs off when VEX returns 429 Too Many Requests.");
-  if (orderedIds.length > 2000) {
+  if (indexedEvents.length) {
+    console.log("Using the VEX season event index, so this run skips the 60000-70000 brute-force scan.");
+  } else if (orderedIds.length > 2000) {
     console.log("Large range note: 60000-70000 can take many hours. That is intentional so Cloudflare does not ban the browser.");
   }
 
   for (const [index, eventId] of orderedIds.entries()) {
     try {
       console.log(`[${index + 1}/${orderedIds.length}] Checking event ${eventId}...`);
-      const event = await getJson(`/api/v2/events/${eventId}`, `event ${eventId}`);
+      const indexedEvent = indexedEventById.get(Number(eventId));
+      const event = indexedEvent ? { data: indexedEvent } : await getJson(`/api/v2/events/${eventId}`, `event ${eventId}`);
       const seasonId = seasonIdOf(event);
       if (seasonId !== targetSeasonId) {
         bundle.skipped.push({ eventId, reason: `season ${seasonId || "unknown"}` });
