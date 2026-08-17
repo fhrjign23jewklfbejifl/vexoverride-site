@@ -1,0 +1,15 @@
+{
+  "name": "vexoverride-site",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "vex:login": "node scripts/vex-event-updater.mjs --login",
+    "vex:update": "node scripts/vex-event-updater.mjs",
+    "vex:update:headed": "node scripts/vex-event-updater.mjs --headed --no-push",
+    "check": "node --check app.js && node --check scripts/vex-event-updater.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.54.2"
+  }
+}

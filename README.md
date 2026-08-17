@@ -38,3 +38,36 @@ Worker setup:
 - The public season skills endpoint does not need a token.
 - Event/team-history API endpoints may still need an official VEX route or token before they can be fully automated.
 - Open the website once with `?proxy=https://YOUR-WORKER.workers.dev` to override the default proxy URL on that device.
+
+## Local VEX event updater
+
+The local updater is for protected VEX Events data that should be fetched from this computer, cleaned into public JSON files, and pushed to GitHub Pages.
+
+Private local files stay under `.local/` and are ignored by Git. Do not commit `.local/`, `.env`, browser session folders, or logs.
+
+Public synced files are written here:
+
+- `data/events/index.json`
+- `data/events/{eventId}/event.json`
+- `data/events/{eventId}/teams.json`
+- `data/events/{eventId}/skills.json`
+- `data/events/{eventId}/awards.json`
+- `data/events/{eventId}/meta.json`
+
+Setup:
+
+1. Run `npm install`.
+2. Run `npm run vex:login`.
+3. Sign into VEX Events in the Chrome window that opens.
+4. Return to the terminal and press Enter. This saves only the local browser session.
+5. Edit `data/vex-updater-config.json` to add known event IDs or conservative ranges.
+6. Test without pushing: `npm run vex:update:headed`.
+7. Run the real update: `npm run vex:update`.
+
+Install the 3:00 AM Windows scheduled task:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/install-vex-updater-task.ps1
+```
+
+The updater only publishes events that match the configured target season, currently `2026-2027` / season id `204`. Older event IDs from previous seasons are skipped and logged.

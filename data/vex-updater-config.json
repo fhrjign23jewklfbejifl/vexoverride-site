@@ -1,0 +1,12 @@
+{
+  "knownEventIds": [65030, 64306],
+  "eventIdRanges": [],
+  "targetSeasonId": 204,
+  "targetSeasonName": "2026-2027",
+  "delayMs": 900,
+  "requestTimeoutMs": 30000,
+  "maxEventsPerRun": 250,
+  "headless": true,
+  "autoCommitPush": true,
+  "commitMessage": "Update VEX event data"
+}
