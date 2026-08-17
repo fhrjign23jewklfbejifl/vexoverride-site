@@ -1,4 +1,5 @@
 const VEX_EVENTS_BASE = "https://events.vex.com/api/v2";
+const VEX_PUBLIC_BASE = "https://events.vex.com/api";
 const PROGRAM_ID = "1";
 const SEASON_ID = "204";
 
@@ -70,6 +71,66 @@ function normalizeSkill(skill) {
     score: skill.score ?? skill.driver ?? skill.programming ?? null,
     attempts: skill.attempts ?? null
   };
+}
+
+function normalizeSeasonSkill(entry) {
+  return {
+    rank: entry.rank ?? null,
+    eligible: Boolean(entry.eligible),
+    team: {
+      id: entry.team?.id ?? null,
+      teamRegId: entry.team?.teamRegId ?? null,
+      teamNumber: entry.team?.team || "",
+      teamName: entry.team?.teamName || "",
+      organization: entry.team?.organization || "",
+      city: entry.team?.city || "",
+      region: entry.team?.region || "",
+      country: entry.team?.country || "",
+      gradeLevel: entry.team?.gradeLevel || "",
+      eventRegion: entry.team?.eventRegion || ""
+    },
+    event: {
+      sku: entry.event?.sku || "",
+      startDate: entry.event?.startDate || "",
+      seasonName: entry.event?.seasonName || ""
+    },
+    scores: {
+      score: entry.scores?.score ?? 0,
+      driver: entry.scores?.driver ?? entry.scores?.maxDriver ?? 0,
+      programming: entry.scores?.programming ?? entry.scores?.maxProgramming ?? 0,
+      maxDriver: entry.scores?.maxDriver ?? 0,
+      maxProgramming: entry.scores?.maxProgramming ?? 0,
+      driverStopTime: entry.scores?.driverStopTime ?? 0,
+      progStopTime: entry.scores?.progStopTime ?? 0,
+      combinedStopTime: entry.scores?.combinedStopTime ?? 0,
+      driverScoredAt: entry.scores?.driverScoredAt || "",
+      progScoredAt: entry.scores?.progScoredAt || ""
+    }
+  };
+}
+
+async function vexPublic(path, params = {}) {
+  const url = new URL(`${VEX_PUBLIC_BASE}${path}`);
+  Object.entries(params).forEach(([key, value]) => {
+    if (value !== undefined && value !== null && value !== "") {
+      url.searchParams.set(key, value);
+    }
+  });
+
+  const response = await fetch(url, {
+    headers: {
+      "Accept": "application/json",
+      "User-Agent": "vexoverride-data-proxy/1.0"
+    }
+  });
+  const payload = await response.json().catch(() => null);
+  if (!response.ok) {
+    return {
+      error: payload?.message || payload?.error || "VEX Events public API request failed.",
+      status: response.status
+    };
+  }
+  return payload;
 }
 
 async function vexEvents(env, path, params = {}) {
@@ -157,6 +218,42 @@ async function teamHistory(env, teamId) {
   });
 }
 
+async function seasonSkills(requestUrl) {
+  const gradeLevel = requestUrl.searchParams.get("grade_level") || "High School";
+  const payload = await vexPublic(`/seasons/${SEASON_ID}/skills`, {
+    post_season: requestUrl.searchParams.get("post_season") || "0",
+    grade_level: gradeLevel
+  });
+  if (payload.error) return json({ error: payload.error }, payload.status || 500);
+  const rows = Array.isArray(payload) ? payload : (payload.data || []);
+  return json({
+    seasonId: SEASON_ID,
+    gradeLevel,
+    skills: rows.map(normalizeSeasonSkill)
+  });
+}
+
+async function searchSeasonSkills(requestUrl) {
+  const q = requestUrl.searchParams.get("q")?.trim().toLowerCase();
+  if (!q || q.length < 2) return json({ skills: [] });
+  const response = await seasonSkills(requestUrl);
+  const payload = await response.json();
+  const skills = (payload.skills || []).filter(row => {
+    const haystack = [
+      row.team.teamNumber,
+      row.team.teamName,
+      row.team.organization,
+      row.team.city,
+      row.team.region,
+      row.team.country,
+      row.team.eventRegion,
+      row.event.sku
+    ].join(" ").toLowerCase();
+    return haystack.includes(q);
+  }).slice(0, 50);
+  return json({ skills });
+}
+
 export default {
   async fetch(request, env) {
     if (request.method === "OPTIONS") {
@@ -172,6 +269,8 @@ export default {
 
     try {
       if (path === "/api/events/search") return searchEvents(env, requestUrl);
+      if (path === "/api/skills/standings") return seasonSkills(requestUrl);
+      if (path === "/api/skills/search") return searchSeasonSkills(requestUrl);
       if (parts[0] === "api" && parts[1] === "events" && parts[2] && parts.length === 3) {
         return eventDetail(env, parts[2]);
       }
