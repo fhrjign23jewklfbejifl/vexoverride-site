@@ -64,6 +64,16 @@ Setup:
 6. Test without pushing: `npm run vex:update:headed`.
 7. Run the real update: `npm run vex:update`.
 
+If the automated login browser gets stuck on the robot check, use the normal-Chrome header fallback instead:
+
+1. Run `npm run vex:headers-help`.
+2. Sign into VEX Events in your normal Chrome browser.
+3. Use DevTools Network on a working VEX API request.
+4. Copy only the `cookie` and `user-agent` request headers into `.local/vex-request-headers.json`.
+5. Run `npm run vex:update:headed`.
+
+Never paste `.local/vex-request-headers.json`, cookies, passwords, or session tokens into chat. The `.local/` folder is ignored by Git and stays on this computer.
+
 Install the 3:00 AM Windows scheduled task:
 
 ```powershell

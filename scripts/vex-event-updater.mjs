@@ -13,6 +13,7 @@ const LOGIN_URL = "https://events.vex.com/auth/login";
 const LOCAL_DIR = path.join(ROOT, ".local");
 const SESSION_DIR = path.join(LOCAL_DIR, "vex-browser-session");
 const LOG_DIR = path.join(LOCAL_DIR, "logs");
+const HEADERS_PATH = path.join(LOCAL_DIR, "vex-request-headers.json");
 const DATA_DIR = path.join(ROOT, "data", "events");
 const CONFIG_PATH = path.join(ROOT, "data", "vex-updater-config.json");
 const INDEX_PATH = path.join(DATA_DIR, "index.json");
@@ -88,6 +89,77 @@ async function launchContext(config, forceHeaded = false) {
   });
 }
 
+async function loadHeaderClient(config) {
+  const local = await readJson(HEADERS_PATH, null);
+  if (!local) return null;
+
+  const headers = { ...(local.headers || local) };
+  if (local.cookie && !headers.cookie) headers.cookie = local.cookie;
+  if (local.userAgent && !headers["user-agent"]) headers["user-agent"] = local.userAgent;
+  if (!headers.accept) headers.accept = "application/json, text/plain, */*";
+  if (!headers.referer) headers.referer = "https://events.vex.com/";
+
+  return {
+    usingLocalHeaders: true,
+    async json(url, timeoutMs) {
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), timeoutMs || config.requestTimeoutMs || 30000);
+      try {
+        const response = await fetch(url, {
+          headers,
+          signal: controller.signal
+        });
+        const text = await response.text();
+        if (response.status === 401 || response.status === 403) {
+          throw new Error(`Unauthorized (${response.status})`);
+        }
+        if (response.status === 404) {
+          throw new Error("Not found (404)");
+        }
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+        try {
+          return JSON.parse(text);
+        } catch {
+          throw new Error(`Response was not JSON: ${text.slice(0, 80)}`);
+        }
+      } finally {
+        clearTimeout(timeout);
+      }
+    },
+    async close() {}
+  };
+}
+
+function printHeadersHelp() {
+  console.log(`
+VEX updater local-header fallback
+
+Use this only if the automated login browser gets stuck on the robot check.
+
+1. Open VEX Events in your normal Chrome browser and sign in normally.
+2. Open DevTools -> Network.
+3. Open a working API URL, such as:
+   https://events.vex.com/api/v2/events/65030
+4. Click that request and copy the Request Headers values for:
+   - cookie
+   - user-agent
+5. Create this local-only ignored file:
+   .local/vex-request-headers.json
+6. Put this shape in it:
+
+{
+  "cookie": "PASTE_COOKIE_HEADER_HERE",
+  "user-agent": "PASTE_USER_AGENT_HERE"
+}
+
+Do not paste this file into chat. Do not commit it. The repo .gitignore excludes .local/.
+After that, run:
+  npm.cmd run vex:update:headed
+`);
+}
+
 async function loginMode() {
   const config = await readJson(CONFIG_PATH, {});
   const context = await launchContext({ ...config, headless: false }, true);
@@ -102,6 +174,8 @@ async function loginMode() {
 }
 
 async function pageJson(page, url, timeoutMs) {
+  if (page?.json) return page.json(url, timeoutMs);
+
   const response = await page.goto(url, { waitUntil: "domcontentloaded", timeout: timeoutMs });
   const status = response?.status() || 0;
   const body = (await page.locator("body").innerText({ timeout: 8000 })).trim();
@@ -166,7 +240,7 @@ function eventSummary(eventId, event, teams, skills, awards, meta) {
 }
 
 async function fetchEvent(context, config, eventId, shared) {
-  const page = await context.newPage();
+  const page = context.newPage ? await context.newPage() : context;
   const timeoutMs = config.requestTimeoutMs || 30000;
   const delayMs = config.delayMs || 900;
   const folder = path.join(DATA_DIR, String(eventId));
@@ -209,27 +283,27 @@ async function fetchEvent(context, config, eventId, shared) {
     await writeJson(path.join(folder, "program.json"), shared.program);
     await writeJson(path.join(folder, "season.json"), shared.season);
     await writeJson(path.join(folder, "meta.json"), meta);
-    await page.close();
+    if (page.close) await page.close();
     await log(`Fetched event ${eventId}: ${teams?.data?.length || 0} teams, ${skills?.data?.length || 0} skills rows.`);
     return eventSummary(eventId, event, teams, skills, awards, meta);
   } catch (error) {
     meta.status = "skipped";
     meta.error = error.message;
     await writeJson(path.join(folder, "meta.json"), meta);
-    await page.close();
+    if (page.close) await page.close();
     await log(`Skipped event ${eventId}: ${error.message}`);
     return null;
   }
 }
 
 async function fetchShared(context, config) {
-  const page = await context.newPage();
+  const page = context.newPage ? await context.newPage() : context;
   const timeoutMs = config.requestTimeoutMs || 30000;
   const programUrl = `${API_BASE}/programs/1`;
   const seasonUrl = `${API_BASE}/seasons/204`;
   const program = await pageJson(page, programUrl, timeoutMs).catch(error => ({ error: error.message, source: programUrl }));
   const season = await pageJson(page, seasonUrl, timeoutMs).catch(error => ({ error: error.message, source: seasonUrl }));
-  await page.close();
+  if (page.close) await page.close();
   return { program, season };
 }
 
@@ -274,7 +348,9 @@ async function updateMode() {
     return;
   }
 
-  const context = await launchContext(config, args.has("--headed"));
+  const headerClient = await loadHeaderClient(config);
+  const context = headerClient || await launchContext(config, args.has("--headed"));
+  if (headerClient) await log(`Using local request headers from ${path.relative(ROOT, HEADERS_PATH)}.`);
   const shared = await fetchShared(context, config);
   const events = [];
 
@@ -298,7 +374,9 @@ async function updateMode() {
   await publishIfNeeded(config);
 }
 
-if (args.has("--login")) {
+if (args.has("--headers-help")) {
+  printHeadersHelp();
+} else if (args.has("--login")) {
   await loginMode();
 } else {
   await updateMode();

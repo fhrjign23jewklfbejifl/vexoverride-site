@@ -7,6 +7,7 @@
     "vex:login": "node scripts/vex-event-updater.mjs --login",
     "vex:update": "node scripts/vex-event-updater.mjs",
     "vex:update:headed": "node scripts/vex-event-updater.mjs --headed --no-push",
+    "vex:headers-help": "node scripts/vex-event-updater.mjs --headers-help",
     "check": "node --check app.js && node --check scripts/vex-event-updater.mjs"
   },
   "devDependencies": {
