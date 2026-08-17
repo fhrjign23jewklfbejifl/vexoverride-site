@@ -1,5 +1,5 @@
 import { chromium } from "playwright";
-import { execFileSync } from "node:child_process";
+import { execFileSync, spawn } from "node:child_process";
 import fs from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
@@ -12,6 +12,7 @@ const API_BASE = "https://events.vex.com/api/v2";
 const LOGIN_URL = "https://events.vex.com/auth/login";
 const LOCAL_DIR = path.join(ROOT, ".local");
 const SESSION_DIR = path.join(LOCAL_DIR, "vex-browser-session");
+const PROFILE_COPY_DIR = path.join(LOCAL_DIR, "vex-chrome-profile-copy");
 const LOG_DIR = path.join(LOCAL_DIR, "logs");
 const HEADERS_PATH = path.join(LOCAL_DIR, "vex-request-headers.json");
 const DATA_DIR = path.join(ROOT, "data", "events");
@@ -47,6 +48,88 @@ function sleep(ms) {
 
 function expandEnvPath(value) {
   return String(value || "").replace(/%([^%]+)%/g, (_, name) => process.env[name] || `%${name}%`);
+}
+
+async function copyChromeProfile(config) {
+  const sourceRoot = expandEnvPath(config.chromeUserDataDir || "%LOCALAPPDATA%\\Google\\Chrome\\User Data");
+  const profileDirectory = config.chromeProfileDirectory || "Default";
+  const sourceProfile = path.join(sourceRoot, profileDirectory);
+  const targetProfile = path.join(PROFILE_COPY_DIR, profileDirectory);
+
+  if (!sourceProfile.toLowerCase().startsWith(sourceRoot.toLowerCase())) {
+    throw new Error("Chrome profile path failed safety check.");
+  }
+  if (!PROFILE_COPY_DIR.toLowerCase().startsWith(LOCAL_DIR.toLowerCase())) {
+    throw new Error("Local profile copy path failed safety check.");
+  }
+
+  await log(`Copying Chrome profile ${profileDirectory} into private updater profile.`);
+  await fs.rm(PROFILE_COPY_DIR, { recursive: true, force: true });
+  await fs.mkdir(path.join(targetProfile, "Network"), { recursive: true });
+
+  const files = [
+    [path.join(sourceRoot, "Local State"), path.join(PROFILE_COPY_DIR, "Local State")],
+    [path.join(sourceProfile, "Preferences"), path.join(targetProfile, "Preferences")],
+    [path.join(sourceProfile, "Secure Preferences"), path.join(targetProfile, "Secure Preferences")],
+    [path.join(sourceProfile, "Network", "Cookies"), path.join(targetProfile, "Network", "Cookies")],
+    [path.join(sourceProfile, "Network", "Trust Tokens"), path.join(targetProfile, "Network", "Trust Tokens")]
+  ];
+
+  for (const [from, to] of files) {
+    await fs.copyFile(from, to).catch(error => log(`Could not copy ${path.basename(from)}: ${error.message}`));
+  }
+  return PROFILE_COPY_DIR;
+}
+
+async function waitForRemoteChrome(port, timeoutMs = 15000) {
+  const deadline = Date.now() + timeoutMs;
+  const url = `http://127.0.0.1:${port}/json/version`;
+  while (Date.now() < deadline) {
+    try {
+      const response = await fetch(url);
+      if (response.ok) return true;
+    } catch {}
+    await sleep(350);
+  }
+  return false;
+}
+
+async function launchRemoteChromeClient(config) {
+  const port = Number(config.remoteDebuggingPort || 9222);
+  const chromePath = expandEnvPath(config.chromePath || "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe");
+  const userDataDir = expandEnvPath(config.chromeUserDataDir || "%LOCALAPPDATA%\\Google\\Chrome\\User Data");
+  const profileDirectory = config.chromeProfileDirectory || "Default";
+
+  if (!(await waitForRemoteChrome(port, 1000))) {
+    await log(`Launching normal Chrome with remote debugging on port ${port}.`);
+    const child = spawn(chromePath, [
+      `--remote-debugging-port=${port}`,
+      `--profile-directory=${profileDirectory}`,
+      `--user-data-dir=${userDataDir}`,
+      "about:blank"
+    ], {
+      detached: true,
+      stdio: "ignore"
+    });
+    child.unref();
+  } else {
+    await log(`Using existing remote Chrome on port ${port}.`);
+  }
+
+  if (!(await waitForRemoteChrome(port, config.requestTimeoutMs || 30000))) {
+    throw new Error(`Could not connect to Chrome remote debugging port ${port}. Close Chrome and try again.`);
+  }
+
+  const browser = await chromium.connectOverCDP(`http://127.0.0.1:${port}`);
+  const context = browser.contexts()[0] || await browser.newContext();
+  return {
+    async newPage() {
+      return context.newPage();
+    },
+    async close() {
+      await browser.close();
+    }
+  };
 }
 
 function eventIdsFromConfig(config) {
@@ -86,14 +169,17 @@ function eventMatchesTargetSeason(event, config) {
 
 async function launchContext(config, forceHeaded = false) {
   const useExistingChrome = Boolean(config.useExistingChromeProfile);
-  const userDataDir = useExistingChrome
-    ? expandEnvPath(config.chromeUserDataDir || "%LOCALAPPDATA%\\Google\\Chrome\\User Data")
-    : SESSION_DIR;
+  const userDataDir = useExistingChrome && config.copyChromeProfileBeforeRun
+    ? await copyChromeProfile(config)
+    : useExistingChrome
+      ? expandEnvPath(config.chromeUserDataDir || "%LOCALAPPDATA%\\Google\\Chrome\\User Data")
+      : SESSION_DIR;
   const profileDirectory = config.chromeProfileDirectory || "Default";
 
   await fs.mkdir(userDataDir, { recursive: true });
   if (useExistingChrome) {
-    await log(`Using existing Chrome profile ${profileDirectory}. Close Chrome before running if it is locked.`);
+    const mode = config.copyChromeProfileBeforeRun ? "copied private profile" : "existing Chrome profile";
+    await log(`Using ${mode} ${profileDirectory}.`);
   }
 
   return chromium.launchPersistentContext(userDataDir, {
@@ -175,6 +261,12 @@ After that, run:
 `);
 }
 
+async function clearSessionMode() {
+  await fs.rm(SESSION_DIR, { recursive: true, force: true });
+  await fs.rm(PROFILE_COPY_DIR, { recursive: true, force: true });
+  await log("Cleared local updater browser sessions.");
+}
+
 async function loginMode() {
   const config = await readJson(CONFIG_PATH, {});
   const context = await launchContext({ ...config, headless: false }, true);
@@ -188,9 +280,27 @@ async function loginMode() {
   await log("Saved local browser session.");
 }
 
+async function updaterLoginMode() {
+  const config = await readJson(CONFIG_PATH, {});
+  const context = await chromium.launchPersistentContext(SESSION_DIR, {
+    channel: "chrome",
+    headless: false,
+    viewport: { width: 1280, height: 900 }
+  });
+  const page = await context.newPage();
+  await page.goto(`${API_BASE}/events/65030`, { waitUntil: "domcontentloaded", timeout: config.requestTimeoutMs || 30000 });
+  await log("Updater session browser opened. Sign in or clear checks until the event JSON is visible, then return here.");
+  const rl = readline.createInterface({ input, output });
+  await rl.question("Press Enter after the event JSON is visible in the updater browser...");
+  rl.close();
+  await context.close();
+  await log("Saved updater-only browser session.");
+}
+
 async function pageJson(page, url, timeoutMs) {
   if (page?.json) return page.json(url, timeoutMs);
 
+  await log(`Fetching ${url}`);
   const response = await page.goto(url, { waitUntil: "domcontentloaded", timeout: timeoutMs });
   const status = response?.status() || 0;
   const body = (await page.locator("body").innerText({ timeout: 8000 })).trim();
@@ -341,6 +451,10 @@ function hasDataChanges() {
 }
 
 async function publishIfNeeded(config) {
+  if (args.has("--no-push")) {
+    await log("Publish skipped because --no-push is active.");
+    return;
+  }
   git(["add", "data/events"], { stdio: "inherit" });
   if (!hasDataChanges()) {
     await log("No event data changes to publish.");
@@ -364,18 +478,31 @@ async function updateMode() {
   }
 
   const headerClient = await loadHeaderClient(config);
-  const context = headerClient || await launchContext(config, args.has("--headed"));
+  const sessionExists = await fs.stat(SESSION_DIR).then(() => true).catch(() => false);
+  const updateConfig = sessionExists ? { ...config, useExistingChromeProfile: false } : config;
+  const context = headerClient
+    || (config.useRemoteChrome
+      ? await launchRemoteChromeClient(config)
+      : sessionExists
+        ? await launchContext(updateConfig, args.has("--headed"))
+        : await launchContext(updateConfig, args.has("--headed")));
   if (headerClient) await log(`Using local request headers from ${path.relative(ROOT, HEADERS_PATH)}.`);
-  const shared = await fetchShared(context, config);
+  await log(`Configured event IDs: ${ids.join(", ")}`);
   const events = [];
+  let shared;
 
-  for (const eventId of ids) {
-    const summary = await fetchEvent(context, config, eventId, shared);
-    if (summary) events.push(summary);
-    await sleep(config.delayMs || 900);
+  try {
+    shared = await fetchShared(context, config);
+
+    for (const eventId of ids) {
+      const summary = await fetchEvent(context, config, eventId, shared);
+      if (summary) events.push(summary);
+      await sleep(config.delayMs || 900);
+    }
+  } finally {
+    await context.close();
   }
 
-  await context.close();
   const previous = await readJson(INDEX_PATH, {});
   const previousById = new Map((previous.events || []).map(event => [String(event.eventId), event]));
   for (const event of events) previousById.set(String(event.eventId), event);
@@ -391,6 +518,10 @@ async function updateMode() {
 
 if (args.has("--headers-help")) {
   printHeadersHelp();
+} else if (args.has("--clear-session")) {
+  await clearSessionMode();
+} else if (args.has("--login-updater")) {
+  await updaterLoginMode();
 } else if (args.has("--login")) {
   await loginMode();
 } else {

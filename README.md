@@ -58,18 +58,53 @@ Setup:
 
 1. Run `npm install`.
 2. Sign into VEX Events in your normal Chrome browser.
-3. Close Chrome before running the updater. The updater uses your existing Chrome profile by default.
-4. Edit `data/vex-updater-config.json` to add known event IDs or conservative ranges.
-5. Test without pushing: `npm run vex:update:headed`.
-6. Run the real update: `npm run vex:update`.
+3. Open `https://events.vex.com/` in that signed-in Chrome window.
+4. Copy the browser-side collector:
+
+```powershell
+npm.cmd run vex:copy-collector
+```
+
+5. Press `F12`, open the Chrome DevTools `Console` tab, paste, and press Enter.
+6. Enter event IDs or ranges when prompted, for example:
+
+```text
+65030,64306
+```
+
+or:
+
+```text
+64000-65100
+```
+
+The collector runs inside `events.vex.com`, so VEX sees the same trusted browser session that can already view the JSON pages. It filters to season id `204`, downloads teams/skills/awards/event JSON for matching events, and saves one bundle file to Downloads.
+
+7. Import the downloaded bundle:
+
+```powershell
+npm.cmd run vex:import-bundle -- "C:\Users\29SSchwartz\Downloads\vex-event-bundle-PASTE-THE-REAL-NAME.json"
+```
+
+8. Commit and push the public JSON files when ready.
+
+This is the preferred batch path. It scales to hundreds of event IDs in one run without putting your VEX password, cookies, or session data in this repo.
+
+Experimental direct updater:
+
+```powershell
+npm.cmd run vex:update:headed
+```
 
 The default config uses:
 
-- `useExistingChromeProfile: true`
+- `useRemoteChrome: false`
+- remote debugging port `9222`
+- `useExistingChromeProfile: false`
 - `%LOCALAPPDATA%\Google\Chrome\User Data`
 - Chrome profile `Default`
 
-If your VEX login is in a different Chrome profile, change `chromeProfileDirectory` in `data/vex-updater-config.json`.
+The direct updater is kept for future experiments, but VEX currently rejects many non-browser automation attempts with `401` / `403` or robot checks. Use the browser-side collector first.
 
 If the existing Chrome profile is locked or still gets blocked, use the normal-Chrome header fallback:
 
@@ -80,6 +115,26 @@ If the existing Chrome profile is locked or still gets blocked, use the normal-C
 5. Run `npm run vex:update:headed`.
 
 Never paste `.local/vex-request-headers.json`, cookies, passwords, or session tokens into chat. The `.local/` folder is ignored by Git and stays on this computer.
+
+Manual API import fallback:
+
+If VEX blocks automated API reads, open each API URL directly in normal Chrome, copy the visible JSON, then save it from the clipboard:
+
+```powershell
+npm.cmd run vex:save-clipboard -- --event 65030 --kind event
+npm.cmd run vex:save-clipboard -- --event 65030 --kind teams
+npm.cmd run vex:save-clipboard -- --event 65030 --kind skills
+npm.cmd run vex:save-clipboard -- --event 65030 --kind awards
+```
+
+Use these URLs for event `65030`:
+
+- `https://events.vex.com/api/v2/events/65030`
+- `https://events.vex.com/api/v2/events/65030/teams?&per_page=250&page=1`
+- `https://events.vex.com/api/v2/events/65030/skills?&page=1&per_page=250`
+- `https://events.vex.com/api/v2/events/65030/awards?&per_page=999`
+
+The manual importer still enforces the configured `2026-2027` / season id `204` check for event metadata.
 
 Install the 3:00 AM Windows scheduled task:
 

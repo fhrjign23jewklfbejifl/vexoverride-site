@@ -5,10 +5,15 @@
   "type": "module",
   "scripts": {
     "vex:login": "node scripts/vex-event-updater.mjs --login",
+    "vex:login-updater": "node scripts/vex-event-updater.mjs --login-updater",
+    "vex:clear-session": "node scripts/vex-event-updater.mjs --clear-session",
     "vex:update": "node scripts/vex-event-updater.mjs",
     "vex:update:headed": "node scripts/vex-event-updater.mjs --headed --no-push",
+    "vex:save-clipboard": "node scripts/vex-save-clipboard.mjs",
+    "vex:import-bundle": "node scripts/vex-save-clipboard.mjs --bundle",
+    "vex:copy-collector": "node scripts/vex-copy-collector.mjs",
     "vex:headers-help": "node scripts/vex-event-updater.mjs --headers-help",
-    "check": "node --check app.js && node --check scripts/vex-event-updater.mjs"
+    "check": "node --check app.js && node --check scripts/vex-event-updater.mjs && node --check scripts/vex-save-clipboard.mjs && node --check scripts/vex-copy-collector.mjs && node --check scripts/vex-browser-collector.js"
   },
   "devDependencies": {
     "playwright": "^1.54.2"

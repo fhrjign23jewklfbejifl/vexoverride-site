@@ -53,8 +53,12 @@ button {
   min-width: 0;
 }
 
-[data-mode-section][hidden] {
+[data-mode-section] {
   display: none !important;
+}
+
+[data-mode-section].is-active-mode-section {
+  display: grid !important;
 }
 
 .brand-banner {
@@ -265,6 +269,10 @@ button {
   align-items: end;
 }
 
+.competition-search.event-browser {
+  grid-template-columns: minmax(140px, .62fr) minmax(260px, 1.25fr) minmax(180px, .85fr) 140px;
+}
+
 .competition-search label {
   display: grid;
   gap: 6px;
@@ -277,7 +285,8 @@ button {
   text-transform: uppercase;
 }
 
-.competition-search input {
+.competition-search input,
+.competition-search select {
   width: 100%;
   min-height: 44px;
   border: 1px solid rgba(255, 255, 255, .14);
@@ -290,7 +299,12 @@ button {
   outline: none;
 }
 
-.competition-search input:focus {
+.competition-search select {
+  cursor: pointer;
+}
+
+.competition-search input:focus,
+.competition-search select:focus {
   border-color: rgba(102, 217, 208, .76);
   background: rgba(255, 255, 255, .095);
 }
@@ -371,6 +385,24 @@ button {
   margin: 4px 0 0;
   color: #aeb9bd;
   font-size: 13px;
+}
+
+.competition-counts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.competition-counts strong {
+  border: 1px solid rgba(102, 217, 208, .18);
+  border-radius: 999px;
+  padding: 5px 8px;
+  color: #dff5f1;
+  background: rgba(102, 217, 208, .075);
+  font-size: 10px;
+  font-weight: 1000;
+  text-transform: uppercase;
 }
 
 .team-skill-summary {
@@ -2117,6 +2149,10 @@ body.modal-open {
   }
 
   .competition-search {
+    grid-template-columns: 1fr;
+  }
+
+  .competition-search.event-browser {
     grid-template-columns: 1fr;
   }
 

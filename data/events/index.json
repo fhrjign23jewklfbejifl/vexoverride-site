@@ -1,6 +1,49 @@
 {
-  "updatedAt": null,
+  "updatedAt": "2026-08-17T03:31:23.693Z",
   "seasonId": 204,
   "programId": 1,
-  "events": []
+  "events": [
+    {
+      "eventId": 65030,
+      "sku": "RE-V5RC-26-5030",
+      "name": "Override™ At Ransom Everglades HS Qualifier to SFL Regionals: VEX V5 Robotics Competition™ - High School Teams",
+      "start": "2026-10-18T00:00:00-04:00",
+      "end": "2026-10-18T00:00:00-04:00",
+      "city": "Miami",
+      "region": "Florida",
+      "country": "United States",
+      "teamCount": 23,
+      "skillCount": 0,
+      "awardCount": 12,
+      "updatedAt": "2026-08-17T03:31:23.693Z",
+      "paths": {
+        "event": "data/events/65030/event.json",
+        "teams": "data/events/65030/teams.json",
+        "skills": "data/events/65030/skills.json",
+        "awards": "data/events/65030/awards.json",
+        "meta": "data/events/65030/meta.json"
+      }
+    },
+    {
+      "eventId": 64306,
+      "sku": "RE-V5RC-26-4306",
+      "name": "VEX V5 Robotics Competition™ - Override™: Middle School & High School teams, Digital Notebook Submissions",
+      "start": "2026-10-31T00:00:00-04:00",
+      "end": "2026-10-31T00:00:00-04:00",
+      "city": "Miramar",
+      "region": "Florida",
+      "country": "United States",
+      "teamCount": 9,
+      "skillCount": 0,
+      "awardCount": 10,
+      "updatedAt": "2026-08-17T03:31:23.658Z",
+      "paths": {
+        "event": "data/events/64306/event.json",
+        "teams": "data/events/64306/teams.json",
+        "skills": "data/events/64306/skills.json",
+        "awards": "data/events/64306/awards.json",
+        "meta": "data/events/64306/meta.json"
+      }
+    }
+  ]
 }

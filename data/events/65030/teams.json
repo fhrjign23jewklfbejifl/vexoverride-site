@@ -1,0 +1,639 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65030/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65030/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65030/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 23,
+    "total": 23,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 17050,
+      "number": "4330P",
+      "team_name": "RoboPigeons",
+      "robot_name": "The Pigeon",
+      "organization": "RANSOM EVERGLADES SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Miami",
+        "region": "Florida",
+        "postcode": "33133",
+        "country": "United States",
+        "coordinates": {
+          "lat": 25.7,
+          "lon": -80.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 27289,
+      "number": "4330R",
+      "team_name": "The Live Wires",
+      "robot_name": "Sparky",
+      "organization": "RANSOM EVERGLADES SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Miami",
+        "region": "Florida",
+        "postcode": "33133",
+        "country": "United States",
+        "coordinates": {
+          "lat": 25.7,
+          "lon": -80.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 107112,
+      "number": "4330V",
+      "team_name": "Apple",
+      "robot_name": "Banana",
+      "organization": "RANSOM EVERGLADES SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Miami",
+        "region": "Florida",
+        "postcode": "33133",
+        "country": "United States",
+        "coordinates": {
+          "lat": 25.7,
+          "lon": -80.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 193341,
+      "number": "4330W",
+      "team_name": "Zappies",
+      "robot_name": "Al U. Minium",
+      "organization": "RANSOM EVERGLADES SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Miami",
+        "region": "Florida",
+        "postcode": "33133",
+        "country": "United States",
+        "coordinates": {
+          "lat": 25.7,
+          "lon": -80.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 49714,
+      "number": "7121A",
+      "team_name": "Maverick Robotics",
+      "robot_name": "Team 7121A",
+      "organization": "ARCHBISHOP EDWARD MCCARTHY HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Southwest Ranches",
+        "region": "Florida",
+        "postcode": "33330",
+        "country": "United States",
+        "coordinates": {
+          "lat": 26.1,
+          "lon": -80.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 49852,
+      "number": "7121B",
+      "team_name": "Maverick Robotics “BLITZ”",
+      "robot_name": "BLITZ",
+      "organization": "ARCHBISHOP EDWARD MCCARTHY HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Southwest Ranches",
+        "region": "Florida",
+        "postcode": "33330",
+        "country": "United States",
+        "coordinates": {
+          "lat": 26.1,
+          "lon": -80.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 49871,
+      "number": "7121E",
+      "team_name": "Maverick Robotics",
+      "robot_name": "",
+      "organization": "ARCHBISHOP EDWARD MCCARTHY HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Southwest Ranches",
+        "region": "Florida",
+        "postcode": "33330",
+        "country": "United States",
+        "coordinates": {
+          "lat": 26.1,
+          "lon": -80.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 70968,
+      "number": "10101F",
+      "team_name": "Megazord",
+      "robot_name": "Megazord",
+      "organization": "IMMOKALEE HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Immokalee",
+        "region": "Florida",
+        "postcode": "34142",
+        "country": "United States",
+        "coordinates": {
+          "lat": 26.4,
+          "lon": -81.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 146560,
+      "number": "10101P",
+      "team_name": "Pterazord",
+      "robot_name": "Pterazord",
+      "organization": "IMMOKALEE HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Immokalee",
+        "region": "Florida",
+        "postcode": "34142",
+        "country": "United States",
+        "coordinates": {
+          "lat": 26.4,
+          "lon": -81.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 70969,
+      "number": "10101R",
+      "team_name": "Dragonzord",
+      "robot_name": "Dragonzord",
+      "organization": "IMMOKALEE HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Immokalee",
+        "region": "Florida",
+        "postcode": "34142",
+        "country": "United States",
+        "coordinates": {
+          "lat": 26.4,
+          "lon": -81.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 71984,
+      "number": "11342A",
+      "team_name": "Life Support",
+      "robot_name": "CCHS",
+      "organization": "Christopher Columbus High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Miami",
+        "region": "Florida",
+        "postcode": "33165",
+        "country": "United States",
+        "coordinates": {
+          "lat": 25.7,
+          "lon": -80.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199605,
+      "number": "11342N",
+      "team_name": "NSAR",
+      "robot_name": "CCHS",
+      "organization": "Christopher Columbus High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Miami",
+        "region": "Florida",
+        "postcode": "33165",
+        "country": "United States",
+        "coordinates": {
+          "lat": 25.7,
+          "lon": -80.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199604,
+      "number": "11342S",
+      "team_name": "Cereal Killers",
+      "robot_name": "CCHS",
+      "organization": "Christopher Columbus High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Miami",
+        "region": "Florida",
+        "postcode": "33165",
+        "country": "United States",
+        "coordinates": {
+          "lat": 25.7,
+          "lon": -80.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199608,
+      "number": "11342X",
+      "team_name": "Bits & Giggles",
+      "robot_name": "CCHS",
+      "organization": "Christopher Columbus High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Miami",
+        "region": "Florida",
+        "postcode": "33165",
+        "country": "United States",
+        "coordinates": {
+          "lat": 25.7,
+          "lon": -80.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199606,
+      "number": "11342Z",
+      "team_name": "No CAD No Problem",
+      "robot_name": "CCHS",
+      "organization": "Christopher Columbus High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Miami",
+        "region": "Florida",
+        "postcode": "33165",
+        "country": "United States",
+        "coordinates": {
+          "lat": 25.7,
+          "lon": -80.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 154283,
+      "number": "39792D",
+      "team_name": "Delta Aviators",
+      "robot_name": "",
+      "organization": "ACADEMY FOR INNOVATIVE EDUCATION CHARTER SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Miami Springs",
+        "region": "Florida",
+        "postcode": "33166",
+        "country": "United States",
+        "coordinates": {
+          "lat": 25.8,
+          "lon": -80.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 154284,
+      "number": "39792E",
+      "team_name": "ECHO Aviators",
+      "robot_name": "",
+      "organization": "ACADEMY FOR INNOVATIVE EDUCATION CHARTER SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Miami Springs",
+        "region": "Florida",
+        "postcode": "33166",
+        "country": "United States",
+        "coordinates": {
+          "lat": 25.8,
+          "lon": -80.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 196969,
+      "number": "47400J",
+      "team_name": "Sputnik",
+      "robot_name": "",
+      "organization": "RoboLab",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Aventura",
+        "region": "Florida",
+        "postcode": "33160",
+        "country": "United States",
+        "coordinates": {
+          "lat": 25.9,
+          "lon": -80.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 184641,
+      "number": "76624S",
+      "team_name": "Box Bots",
+      "robot_name": "",
+      "organization": "Box Bots",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Miami",
+        "region": "Florida",
+        "postcode": "33173",
+        "country": "United States",
+        "coordinates": {
+          "lat": 25.7,
+          "lon": -80.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 184894,
+      "number": "88170A",
+      "team_name": "Buccaneer Robotics",
+      "robot_name": "",
+      "organization": "South Dade Senior High",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Homestead",
+        "region": "Florida",
+        "postcode": "33030",
+        "country": "United States",
+        "coordinates": {
+          "lat": 25.5,
+          "lon": -80.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 187393,
+      "number": "89250K",
+      "team_name": "Katastrophe",
+      "robot_name": "Krotech",
+      "organization": "PINECREST NORTH PREPARATORY (FONTAINEBLEAU CAMPUS)",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Miami",
+        "region": "Florida",
+        "postcode": "33172",
+        "country": "United States",
+        "coordinates": {
+          "lat": 25.8,
+          "lon": -80.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 172379,
+      "number": "89250X",
+      "team_name": "Xerneas",
+      "robot_name": "Pikachu",
+      "organization": "PINECREST NORTH PREPARATORY (FONTAINEBLEAU CAMPUS)",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Miami",
+        "region": "Florida",
+        "postcode": "33172",
+        "country": "United States",
+        "coordinates": {
+          "lat": 25.8,
+          "lon": -80.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 159233,
+      "number": "89250Z",
+      "team_name": "Zipties",
+      "robot_name": "Barbatos",
+      "organization": "PINECREST NORTH PREPARATORY (FONTAINEBLEAU CAMPUS)",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Miami",
+        "region": "Florida",
+        "postcode": "33172",
+        "country": "United States",
+        "coordinates": {
+          "lat": 25.8,
+          "lon": -80.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
+}

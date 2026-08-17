@@ -62,6 +62,9 @@ let editingMatchId = null;
 let pendingDeleteMatchId = null;
 let competitionSearchResults = [];
 let importedCompetition = loadCompetitionData();
+let syncedEvents = [];
+let syncedEventsLoaded = false;
+let syncedEventsError = null;
 let teamSkillsResults = [];
 let expandedTeamSkillId = null;
 let lastModalFocus = null;
@@ -273,6 +276,104 @@ function competitionDateLabel(event) {
   });
 }
 
+function eventLocationFromData(event) {
+  const data = event?.data || event || {};
+  const location = data.location || {};
+  return [location.city || data.city, location.region || data.region, location.country || data.country].filter(Boolean).join(", ");
+}
+
+function localEventId(event) {
+  return String(event.eventId || event.id || "");
+}
+
+function eventRegionKey(event) {
+  return [event.region, event.country].filter(Boolean).join("|");
+}
+
+function eventRegionLabel(event) {
+  return [event.region, event.country].filter(Boolean).join(", ") || "Region not listed";
+}
+
+function localEventMatches(event, query, region = "") {
+  if (region && eventRegionKey(event) !== region) return false;
+  if (!query) return true;
+  const haystack = [
+    event.eventId,
+    event.id,
+    event.sku,
+    event.code,
+    event.name,
+    event.start,
+    event.end,
+    event.city,
+    event.region,
+    event.country
+  ].filter(Boolean).join(" ").toLowerCase();
+  return haystack.includes(query.toLowerCase());
+}
+
+function sortedSyncedEvents(events = []) {
+  return [...events].sort((a, b) => {
+    const aTime = new Date(a.start || a.date || 0).getTime();
+    const bTime = new Date(b.start || b.date || 0).getTime();
+    if (!Number.isNaN(aTime) && !Number.isNaN(bTime) && aTime !== bTime) return aTime - bTime;
+    return String(a.name || "").localeCompare(String(b.name || ""));
+  });
+}
+
+function competitionFilterValues() {
+  const form = $("[data-competition-search-form]");
+  if (!form) return { query: "", region: "" };
+  const formData = new FormData(form);
+  return {
+    query: String(formData.get("competitionSearch") || "").trim(),
+    region: String(formData.get("competitionRegion") || "")
+  };
+}
+
+function filteredSyncedEvents() {
+  const { query, region } = competitionFilterValues();
+  return sortedSyncedEvents(syncedEvents.filter(event => localEventMatches(event, query, region)));
+}
+
+function renderCompetitionPickers(events = syncedEvents) {
+  const regionSelect = $("[data-competition-region]");
+  const eventSelect = $("[data-competition-event]");
+  if (!regionSelect || !eventSelect) return;
+
+  const selectedRegion = regionSelect.value;
+  const selectedEvent = eventSelect.value;
+  const regions = Array.from(new Map(sortedSyncedEvents(events)
+    .map(event => [eventRegionKey(event), eventRegionLabel(event)])
+    .filter(([key]) => key)
+  ).entries());
+
+  regionSelect.innerHTML = [
+    `<option value="">All synced regions</option>`,
+    ...regions.map(([key, label]) => `<option value="${escapeHtml(key)}">${escapeHtml(label)}</option>`)
+  ].join("");
+  if ([...regionSelect.options].some(option => option.value === selectedRegion)) {
+    regionSelect.value = selectedRegion;
+  }
+
+  const availableEvents = filteredSyncedEvents();
+  eventSelect.innerHTML = [
+    `<option value="">Choose a synced competition</option>`,
+    ...availableEvents.map(event => {
+      const id = localEventId(event);
+      const label = [
+        event.name || `Event ${id}`,
+        competitionDateLabel(event),
+        competitionLocation(event)
+      ].filter(Boolean).join(" - ");
+      return `<option value="${escapeHtml(id)}">${escapeHtml(label)}</option>`;
+    })
+  ].join("");
+  if ([...eventSelect.options].some(option => option.value === selectedEvent)) {
+    eventSelect.value = selectedEvent;
+  }
+}
+
 function setCompetitionStatus(message, tone = "") {
   const status = $("[data-competition-status]");
   if (!status) return;
@@ -311,10 +412,19 @@ async function vexProxyFetch(path) {
 function renderCompetitionSource() {
   const source = $("[data-competition-source]");
   const teamSource = $("[data-team-skills-source]");
-  [source, teamSource].filter(Boolean).forEach((element) => {
-    element.textContent = vexProxyUrl() ? "Live proxy connected" : "Proxy not connected";
-    element.dataset.connected = String(Boolean(vexProxyUrl()));
-  });
+  if (source) {
+    if (syncedEventsLoaded && syncedEvents.length) {
+      source.textContent = "Synced local data";
+      source.dataset.connected = "true";
+    } else {
+      source.textContent = "No synced data";
+      source.dataset.connected = "false";
+    }
+  }
+  if (teamSource) {
+    teamSource.textContent = vexProxyUrl() ? "Live proxy connected" : "Proxy not connected";
+    teamSource.dataset.connected = String(Boolean(vexProxyUrl()));
+  }
 }
 
 function officialSkillsId(row) {
@@ -406,11 +516,16 @@ function renderCompetitionResults(events = []) {
   results.innerHTML = events.map(event => `
     <article class="competition-result">
       <div>
-        <span>${escapeHtml(event.code || "Event")}</span>
+        <span>${escapeHtml(event.sku || event.code || `Event ${localEventId(event)}`)}</span>
         <h3>${escapeHtml(event.name || "Unnamed event")}</h3>
         <p>${escapeHtml(competitionDateLabel(event))}${competitionLocation(event) ? ` • ${escapeHtml(competitionLocation(event))}` : ""}</p>
+        <div class="competition-counts" aria-label="Synced data counts">
+          <strong>${escapeHtml(event.teamCount ?? 0)} teams</strong>
+          <strong>${escapeHtml(event.skillCount ?? 0)} skills</strong>
+          <strong>${escapeHtml(event.awardCount ?? 0)} awards</strong>
+        </div>
       </div>
-      <button class="modal-button secondary" type="button" data-import-event="${escapeHtml(event.id)}">Import</button>
+      <button class="modal-button secondary" type="button" data-import-event="${escapeHtml(localEventId(event))}">Import</button>
     </article>
   `).join("");
 }
@@ -433,15 +548,22 @@ function renderImportedCompetition() {
     importedCompetition.location
   ].filter(Boolean).join(" • ");
   const teams = Array.isArray(importedCompetition.teams) ? importedCompetition.teams : [];
-  $("[data-competition-team-count]").textContent = `${teams.length} team${teams.length === 1 ? "" : "s"}`;
+  const teamCount = importedCompetition.teamCount ?? teams.length;
+  const skillCount = importedCompetition.skillCount ?? 0;
+  const awardCount = importedCompetition.awardCount ?? 0;
+  $("[data-competition-team-count]").textContent = `${teamCount} team${teamCount === 1 ? "" : "s"}`;
   $("[data-competition-progress]").textContent = importedCompetition.loadedAt
-    ? `Loaded ${new Date(importedCompetition.loadedAt).toLocaleString()}.`
+    ? `Loaded ${new Date(importedCompetition.loadedAt).toLocaleString()}. ${skillCount} skills rows • ${awardCount} awards.`
     : "";
   const visibleTeams = teams.slice(0, 36);
   $("[data-competition-team-list]").innerHTML = visibleTeams.map(team => `
     <span class="competition-team">
       <strong>${escapeHtml(team.teamNumber || team.number || "Team")}</strong>
-      <small>${escapeHtml(team.teamName || team.name || team.organization || "Official history cached")}</small>
+      <small>${escapeHtml([
+        team.teamName || team.name,
+        team.organization,
+        team.location
+      ].filter(Boolean).join(" • ") || "Official event data cached")}</small>
     </span>
   `).join("") + (teams.length > visibleTeams.length
     ? `<p class="competition-extra">+${teams.length - visibleTeams.length} more teams cached for analysis.</p>`
@@ -449,10 +571,52 @@ function renderImportedCompetition() {
 }
 
 async function searchCompetitions(query) {
-  void query;
-  competitionSearchResults = [];
+  await ensureSyncedEventsLoaded();
+  if (!syncedEvents.length) {
+    competitionSearchResults = [];
+    renderCompetitionResults(competitionSearchResults);
+    renderCompetitionPickers();
+    setCompetitionStatus(syncedEventsError || "No synced competitions found yet. Run the VEX collector and import a bundle.", "warn");
+    return;
+  }
+  const regionSelect = $("[data-competition-region]");
+  const region = regionSelect?.value || "";
+  const searchInput = $("[data-competition-search-form] input[name='competitionSearch']");
+  if (searchInput && searchInput.value.trim() !== query) searchInput.value = query;
+  competitionSearchResults = sortedSyncedEvents(syncedEvents.filter(event => localEventMatches(event, query, region)));
+  renderCompetitionPickers();
   renderCompetitionResults(competitionSearchResults);
-  setCompetitionStatus("Event-specific import is coming next once we have the VEX competition response endpoint.", "warn");
+  setCompetitionStatus(competitionSearchResults.length
+    ? `Found ${competitionSearchResults.length} synced competition${competitionSearchResults.length === 1 ? "" : "s"}.`
+    : "No matching competitions found.",
+    competitionSearchResults.length ? "ready" : "warn"
+  );
+}
+
+async function ensureSyncedEventsLoaded() {
+  if (syncedEventsLoaded || syncedEventsError) return;
+  try {
+    const response = await fetch("data/events/index.json", { headers: { "Accept": "application/json" } });
+    if (!response.ok) throw new Error("No synced competitions found yet. Run the VEX collector and import a bundle.");
+    const payload = await response.json();
+    syncedEvents = Array.isArray(payload.events) ? payload.events : [];
+    syncedEventsLoaded = true;
+    renderCompetitionSource();
+    if (syncedEvents.length) {
+      setCompetitionStatus(`${syncedEvents.length} synced competition${syncedEvents.length === 1 ? "" : "s"} available.`, "ready");
+      renderCompetitionPickers();
+      renderCompetitionResults(sortedSyncedEvents(syncedEvents).slice(0, 6));
+    } else {
+      renderCompetitionPickers();
+      setCompetitionStatus("No synced competitions found yet. Run the VEX collector and import a bundle.", "warn");
+    }
+  } catch (error) {
+    syncedEvents = [];
+    syncedEventsError = error.message || "No synced competitions found yet. Run the VEX collector and import a bundle.";
+    renderCompetitionSource();
+    renderCompetitionPickers();
+    setCompetitionStatus(syncedEventsError, "warn");
+  }
 }
 
 async function mapWithConcurrency(items, limit, mapper, onProgress) {
@@ -477,6 +641,73 @@ async function mapWithConcurrency(items, limit, mapper, onProgress) {
 }
 
 async function importCompetition(eventId) {
+  await ensureSyncedEventsLoaded();
+  if (syncedEvents.length) {
+    await importLocalCompetition(eventId);
+    return;
+  }
+  await importCompetitionFromProxy(eventId);
+}
+
+async function readLocalJson(path) {
+  const response = await fetch(path, { headers: { "Accept": "application/json" } });
+  if (!response.ok) throw new Error("Synced competition data could not load. Try importing the VEX bundle again.");
+  return response.json();
+}
+
+function normalizeLocalTeam(team) {
+  const location = team.location || {};
+  return {
+    id: team.id,
+    teamNumber: team.number || team.teamNumber || "",
+    teamName: team.team_name || team.teamName || team.name || "",
+    robotName: team.robot_name || team.robotName || "",
+    organization: team.organization || "",
+    location: [location.city, location.region, location.country].filter(Boolean).join(", "),
+    grade: team.grade || "",
+    registered: team.registered ?? null
+  };
+}
+
+async function importLocalCompetition(eventId) {
+  const event = syncedEvents.find(item => localEventId(item) === String(eventId));
+  if (!event) throw new Error("That synced competition was not found. Search again after importing a fresh bundle.");
+
+  setCompetitionStatus("Loading synced competition files...", "loading");
+  const [eventPayload, teamsPayload, skillsPayload, awardsPayload, metaPayload] = await Promise.all([
+    readLocalJson(event.paths?.event || `data/events/${eventId}/event.json`),
+    readLocalJson(event.paths?.teams || `data/events/${eventId}/teams.json`),
+    readLocalJson(event.paths?.skills || `data/events/${eventId}/skills.json`),
+    readLocalJson(event.paths?.awards || `data/events/${eventId}/awards.json`),
+    readLocalJson(event.paths?.meta || `data/events/${eventId}/meta.json`).catch(() => ({}))
+  ]);
+
+  const teams = Array.isArray(teamsPayload.data) ? teamsPayload.data.map(normalizeLocalTeam) : [];
+  const skills = Array.isArray(skillsPayload.data) ? skillsPayload.data : [];
+  const awards = Array.isArray(awardsPayload.data) ? awardsPayload.data : [];
+  const eventData = eventPayload?.data || {};
+
+  writeCompetitionData({
+    eventId: event.eventId || eventData.id || eventId,
+    eventCode: event.sku || eventData.sku || eventData.code || "",
+    name: event.name || eventData.name || "Imported competition",
+    date: competitionDateLabel(event),
+    location: competitionLocation(event) || eventLocationFromData(eventPayload),
+    loadedAt: new Date().toISOString(),
+    teamCount: teams.length,
+    skillCount: skills.length,
+    awardCount: awards.length,
+    teams,
+    skills,
+    awards,
+    meta: metaPayload
+  });
+  renderImportedCompetition();
+  setCompetitionStatus(`Imported ${teams.length} teams, ${skills.length} skills rows, and ${awards.length} awards from synced data.`, "ready");
+  showToast("Competition data imported.");
+}
+
+async function importCompetitionFromProxy(eventId) {
   setCompetitionStatus("Loading selected competition...", "loading");
   const [eventPayload, teamsPayload] = await Promise.all([
     vexProxyFetch(`/api/events/${encodeURIComponent(eventId)}`),
@@ -788,7 +1019,9 @@ function renderMode() {
   });
 
   $$("[data-mode-section]").forEach((section) => {
-    section.hidden = section.dataset.modeSection !== activeMode;
+    const isActive = section.dataset.modeSection === activeMode;
+    section.hidden = !isActive;
+    section.classList.toggle("is-active-mode-section", isActive);
   });
 }
 
@@ -1298,7 +1531,10 @@ document.addEventListener("click", (event) => {
   if (event.target === $("[data-skills-save-modal]")) closeSkillsSaveModal();
 
   const modeChoice = event.target.closest("[data-mode-choice]");
-  if (modeChoice) setMode(modeChoice.dataset.modeChoice);
+  if (modeChoice) {
+    setMode(modeChoice.dataset.modeChoice);
+    return;
+  }
 
   const skillsType = event.target.closest("[data-skills-type]");
   if (skillsType) {
@@ -1379,7 +1615,9 @@ document.addEventListener("click", (event) => {
   const importButton = event.target.closest("[data-import-event]");
   if (importButton) {
     importButton.disabled = true;
-    importCompetition(importButton.dataset.importEvent).catch((error) => {
+    importCompetition(importButton.dataset.importEvent).then(() => {
+      importButton.disabled = false;
+    }).catch((error) => {
       importButton.disabled = false;
       setCompetitionStatus(error.message || "Competition data could not load. Try again later.", "warn");
       showToast("Competition data could not load. Try again later.");
@@ -1440,13 +1678,33 @@ $("[data-dev-edit-form]")?.addEventListener("submit", (event) => {
 $("[data-competition-search-form]")?.addEventListener("submit", (event) => {
   event.preventDefault();
   const query = String(new FormData(event.currentTarget).get("competitionSearch") || "").trim();
-  if (query.length < 2) {
-    setCompetitionStatus("Type at least 2 characters to search competitions.", "warn");
-    return;
-  }
   searchCompetitions(query).catch((error) => {
     setCompetitionStatus(error.message || "Competition data could not load. Try again later.", "warn");
     showToast("Competition data could not load. Try again later.");
+  });
+});
+
+$("[data-competition-region]")?.addEventListener("change", () => {
+  const eventSelect = $("[data-competition-event]");
+  if (eventSelect) eventSelect.value = "";
+  searchCompetitions(competitionFilterValues().query).catch((error) => {
+    setCompetitionStatus(error.message || "Competition data could not load. Try again later.", "warn");
+  });
+});
+
+$("[data-competition-event]")?.addEventListener("change", (event) => {
+  const eventId = event.currentTarget.value;
+  if (!eventId) return;
+  importCompetition(eventId).catch((error) => {
+    setCompetitionStatus(error.message || "Competition data could not load. Try again later.", "warn");
+    showToast("Competition data could not load. Try again later.");
+  });
+});
+
+$("[data-competition-search-form] input[name='competitionSearch']")?.addEventListener("input", (event) => {
+  const value = String(event.currentTarget.value || "").trim();
+  searchCompetitions(value).catch((error) => {
+    setCompetitionStatus(error.message || "Competition data could not load. Try again later.", "warn");
   });
 });
 
@@ -1482,4 +1740,5 @@ renderSkills();
 renderHistory();
 renderSkillsHistory();
 renderImportedCompetition();
+ensureSyncedEventsLoaded();
 initializeProfileGate();
