@@ -165,6 +165,18 @@
     return ids;
   }
 
+  function uniqueInPriorityOrder(idsToDeduplicate) {
+    const seen = new Set();
+    const unique = [];
+    for (const id of idsToDeduplicate) {
+      const numericId = Number(id);
+      if (!numericId || seen.has(numericId)) continue;
+      seen.add(numericId);
+      unique.push(numericId);
+    }
+    return unique;
+  }
+
   const ids = parseIds(input);
   if (!ids.size) {
     console.warn("No valid event IDs or ranges were entered.");
@@ -279,7 +291,7 @@
     ...(indexedEvents.length ? [...indexedEventById.keys()] : []),
     ...(isAllSearch ? rememberedIds : [...ids])
   ].map(Number).filter(Boolean);
-  const uniqueOrderedIds = [...new Set(orderedIds)].sort((a, b) => a - b);
+  const uniqueOrderedIds = uniqueInPriorityOrder(orderedIds);
   saveMemory(memory);
 
   console.clear();
