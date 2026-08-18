@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64703/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64703/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64703/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 2,
+    "total": 2,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 143210,
+      "number": "99009A",
+      "team_name": "the little red pony",
+      "robot_name": "pony",
+      "organization": "RGB bots",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bryn Mawr",
+        "region": "Pennsylvania",
+        "postcode": "19010",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40,
+          "lon": -75.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 146188,
+      "number": "99009B",
+      "team_name": "The Big Blue Wildebeest",
+      "robot_name": "Beast",
+      "organization": "RGB bots",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bryn Mawr",
+        "region": "Pennsylvania",
+        "postcode": "19010",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40,
+          "lon": -75.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    }
+  ]
+}

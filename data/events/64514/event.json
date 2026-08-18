@@ -1,0 +1,97 @@
+{
+  "data": {
+    "id": 64514,
+    "sku": "RE-V5RC-26-4514",
+    "name": "Niagara Battlefields VEX V5 Robotics Competition MS HS: Weekday League Series of 4 weekday daytime league events",
+    "start": "2026-10-20T00:00:00-04:00",
+    "end": "2027-02-09T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "A.N. Myer Secondary School - DSBN",
+      "address_1": "6338 O’Neil St.",
+      "address_2": null,
+      "city": "Niagara Falls",
+      "region": "Ontario",
+      "postcode": "L2J 1M7",
+      "country": "Canada",
+      "coordinates": {
+        "lat": 43.121985,
+        "lon": -79.102104
+      }
+    },
+    "locations": {
+      "2026-10-20": {
+        "venue": "A.N. Myer Secondary School - DSBN",
+        "address_1": "6338 O’Neil St.",
+        "address_2": null,
+        "city": "Niagara Falls",
+        "region": "Ontario",
+        "postcode": "L2J 1M7",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 43.121985,
+          "lon": -79.102104
+        }
+      },
+      "2026-11-19": {
+        "venue": "A. N. Myer Secondary School",
+        "address_1": "6338 O'Neil Street",
+        "address_2": null,
+        "city": "Niagara Falls",
+        "region": null,
+        "postcode": "L2J 1M7",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 43.121985,
+          "lon": -79.102104
+        }
+      },
+      "2026-12-15": {
+        "venue": "A. N. Myer Secondary School",
+        "address_1": "6338 O'Neil Street",
+        "address_2": null,
+        "city": "Niagara Falls",
+        "region": "Ontario",
+        "postcode": "L2J 1M7",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 43.121985,
+          "lon": -79.102104
+        }
+      },
+      "2027-02-09": {
+        "venue": "A. N. Myer Secondary School",
+        "address_1": "6338 O'Neil Street",
+        "address_2": null,
+        "city": "Niagara Falls",
+        "region": "Ontario",
+        "postcode": "L2J 1M7",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 43.121985,
+          "lon": -79.102104
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

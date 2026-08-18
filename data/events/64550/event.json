@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64550,
+    "sku": "RE-V5RC-26-4550",
+    "name": "2026-2027赛季VEX机器人公开赛北京城市赛 V5RC（混组）",
+    "start": "2026-07-19T00:00:00-04:00",
+    "end": "2026-07-20T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "北京市十一学校石景山实验中学",
+      "address_1": "北京市石景山区北辛安南岔丁香苑西侧约130米",
+      "address_2": null,
+      "city": "Beijing",
+      "region": "Beijing",
+      "postcode": "100000",
+      "country": "China",
+      "coordinates": {
+        "lat": 39.91555,
+        "lon": 116.17239
+      }
+    },
+    "locations": {
+      "2026-07-19": {
+        "venue": "北京市十一学校石景山实验中学",
+        "address_1": "北京市石景山区北辛安南岔丁香苑西侧约130米",
+        "address_2": null,
+        "city": "Beijing",
+        "region": "Beijing",
+        "postcode": "100000",
+        "country": "China",
+        "coordinates": {
+          "lat": 39.91555,
+          "lon": 116.17239
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Division 1",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": true,
+    "event_type": null
+  }
+}

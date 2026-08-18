@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64606,
+    "sku": "RE-V5RC-26-4606",
+    "name": "Palmerston North VEX V5 Robotics Competition™ Tournament 1: Override™  @ Palmerston North Boys' High School (Kiwibots Event in Central Robotics Region)",
+    "start": "2026-06-27T00:00:00-04:00",
+    "end": "2026-06-27T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Palmerston North Boys’ High School",
+      "address_1": "263 Featherston Street",
+      "address_2": null,
+      "city": "Palmerston North",
+      "region": null,
+      "postcode": "4442",
+      "country": "New Zealand",
+      "coordinates": {
+        "lat": -40.348787,
+        "lon": 175.607256
+      }
+    },
+    "locations": {
+      "2026-06-27": {
+        "venue": "Palmerston North Boys’ High School",
+        "address_1": "263 Featherston Street",
+        "address_2": null,
+        "city": "Palmerston North",
+        "region": null,
+        "postcode": "4442",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -40.348787,
+          "lon": 175.607256
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

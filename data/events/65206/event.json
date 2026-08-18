@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65206,
+    "sku": "RE-V5RC-26-5206",
+    "name": "SA | VEX V5 Robotics Competition™ (HS): Override™ Tournament @ Pedare",
+    "start": "2026-08-26T00:00:00-04:00",
+    "end": "2026-08-26T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Pedare Christian College",
+      "address_1": "12-30 Surrey Farm Drive",
+      "address_2": null,
+      "city": "Golden Grove",
+      "region": "South Australia",
+      "postcode": "5125",
+      "country": "Australia",
+      "coordinates": {
+        "lat": -34.794459,
+        "lon": 138.692326
+      }
+    },
+    "locations": {
+      "2026-08-26": {
+        "venue": "Pedare Christian College",
+        "address_1": "12-30 Surrey Farm Drive",
+        "address_2": null,
+        "city": "Golden Grove",
+        "region": "South Australia",
+        "postcode": "5125",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -34.794459,
+          "lon": 138.692326
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65048/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65048/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65048/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 2,
+    "total": 2,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 184723,
+      "number": "3660X",
+      "team_name": "I mean, it works",
+      "robot_name": "Suki",
+      "organization": "Barton Academy for Advanced World Studies",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Mobile",
+        "region": "Alabama",
+        "postcode": "36602",
+        "country": "United States",
+        "coordinates": {
+          "lat": 30.7,
+          "lon": -88
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 184725,
+      "number": "3660Z",
+      "team_name": "LoOsE sCrEwS",
+      "robot_name": "",
+      "organization": "Barton Academy for Advanced World Studies",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Mobile",
+        "region": "Alabama",
+        "postcode": "36602",
+        "country": "United States",
+        "coordinates": {
+          "lat": 30.7,
+          "lon": -88
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    }
+  ]
+}

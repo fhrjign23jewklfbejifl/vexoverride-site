@@ -1,0 +1,450 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65010/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65010/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65010/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 16,
+    "total": 16,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 197629,
+      "number": "12410W",
+      "team_name": "MS Wallies",
+      "robot_name": "WW",
+      "organization": "MOUNT BARKER HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Mount Barker",
+        "region": "South Australia",
+        "postcode": "5251",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -35.1,
+          "lon": 138.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 197515,
+      "number": "12819C",
+      "team_name": "Clankers",
+      "robot_name": "",
+      "organization": "Adelaide Botanic High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Adelaide",
+        "region": "South Australia",
+        "postcode": "5000",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -34.9,
+          "lon": 138.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 197514,
+      "number": "12819D",
+      "team_name": "No name yet",
+      "robot_name": "",
+      "organization": "Adelaide Botanic High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Adelaide",
+        "region": "South Australia",
+        "postcode": "5000",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -34.9,
+          "lon": 138.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 197513,
+      "number": "12819T",
+      "team_name": "Tech-Tonic",
+      "robot_name": "",
+      "organization": "Adelaide Botanic High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Adelaide",
+        "region": "South Australia",
+        "postcode": "5000",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -34.9,
+          "lon": 138.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 153531,
+      "number": "12906C",
+      "team_name": "Air Fried Deluxe",
+      "robot_name": "",
+      "organization": "Salisbury East High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Salisbury East",
+        "region": "South Australia",
+        "postcode": "5109",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -34.8,
+          "lon": 138.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 197556,
+      "number": "12906D",
+      "team_name": "TBD",
+      "robot_name": "",
+      "organization": "Salisbury East High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Salisbury East",
+        "region": "South Australia",
+        "postcode": "5109",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -34.8,
+          "lon": 138.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 172441,
+      "number": "14671B",
+      "team_name": "Techimmanuel",
+      "robot_name": "Mechi2",
+      "organization": "Immanuel College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Adelaide",
+        "region": "South Australia",
+        "postcode": "5040",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -35,
+          "lon": 138.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 199390,
+      "number": "14671C",
+      "team_name": "Wreckimmanuel",
+      "robot_name": "Wrecki",
+      "organization": "Immanuel College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Adelaide",
+        "region": "South Australia",
+        "postcode": "5040",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -35,
+          "lon": 138.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 199393,
+      "number": "14671D",
+      "team_name": "Deckimmanuel",
+      "robot_name": "Decki",
+      "organization": "Immanuel College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Adelaide",
+        "region": "South Australia",
+        "postcode": "5040",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -35,
+          "lon": 138.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 188859,
+      "number": "26425A",
+      "team_name": "Black Watch Bionics",
+      "robot_name": "BEJKVZZ",
+      "organization": "Seymour College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Adelaide",
+        "region": "South Australia",
+        "postcode": "5064",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -35,
+          "lon": 138.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 188860,
+      "number": "26425B",
+      "team_name": "Black Watch Blitz",
+      "robot_name": "Agnes",
+      "organization": "Seymour College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Adelaide",
+        "region": "South Australia",
+        "postcode": "5064",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -35,
+          "lon": 138.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 199639,
+      "number": "26425C",
+      "team_name": "Black Watch B-Bots",
+      "robot_name": "Barbera",
+      "organization": "Seymour College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Adelaide",
+        "region": "South Australia",
+        "postcode": "5064",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -35,
+          "lon": 138.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 186227,
+      "number": "41103W",
+      "team_name": "Overdrive",
+      "robot_name": "",
+      "organization": "Pedare Christian College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Golden Grove",
+        "region": "South Australia",
+        "postcode": "5125",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -34.8,
+          "lon": 138.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199482,
+      "number": "41103Z",
+      "team_name": "Outstanding Warrants",
+      "robot_name": "",
+      "organization": "Pedare Christian College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Golden Grove",
+        "region": "South Australia",
+        "postcode": "5125",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -34.8,
+          "lon": 138.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 197070,
+      "number": "44260A",
+      "team_name": "mechaMaidens",
+      "robot_name": "Nidhogg",
+      "organization": "St Aloysius College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Adelaide",
+        "region": "South Australia",
+        "postcode": "5000",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -34.9,
+          "lon": 138.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 188815,
+      "number": "69153C",
+      "team_name": "Braced",
+      "robot_name": "Braced",
+      "organization": "St Peters College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Hackney",
+        "region": "South Australia",
+        "postcode": "5069",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -34.9,
+          "lon": 138.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    }
+  ]
+}

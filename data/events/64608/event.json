@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64608,
+    "sku": "RE-V5RC-26-4608",
+    "name": "Feilding VEX V5 Robotics Competition™ Tournament 2: Override™  @ Feilding High School (Kiwibots Event in Central Robotics Region)",
+    "start": "2026-08-01T00:00:00-04:00",
+    "end": "2026-08-01T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "FAHS Feilding High School",
+      "address_1": "1 Churcher Street",
+      "address_2": null,
+      "city": "Feilding",
+      "region": null,
+      "postcode": "4702",
+      "country": "New Zealand",
+      "coordinates": {
+        "lat": -40.214259,
+        "lon": 175.573475
+      }
+    },
+    "locations": {
+      "2026-08-01": {
+        "venue": "FAHS Feilding High School",
+        "address_1": "1 Churcher Street",
+        "address_2": null,
+        "city": "Feilding",
+        "region": null,
+        "postcode": "4702",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -40.214259,
+          "lon": 175.573475
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default Division",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

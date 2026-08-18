@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64295/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64295/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64295/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 6,
+    "total": 6,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 280784,
+      "event": {
+        "id": 64295,
+        "name": "Lake Park High School West Campus V5RC HS Override Roselle IL: VEX V5 Robotics Competition Tournament with In-Person Judging and Skills",
+        "code": "RE-V5RC-26-4295"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280785,
+      "event": {
+        "id": 64295,
+        "name": "Lake Park High School West Campus V5RC HS Override Roselle IL: VEX V5 Robotics Competition Tournament with In-Person Judging and Skills",
+        "code": "RE-V5RC-26-4295"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280786,
+      "event": {
+        "id": 64295,
+        "name": "Lake Park High School West Campus V5RC HS Override Roselle IL: VEX V5 Robotics Competition Tournament with In-Person Judging and Skills",
+        "code": "RE-V5RC-26-4295"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280787,
+      "event": {
+        "id": 64295,
+        "name": "Lake Park High School West Campus V5RC HS Override Roselle IL: VEX V5 Robotics Competition Tournament with In-Person Judging and Skills",
+        "code": "RE-V5RC-26-4295"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282759,
+      "event": {
+        "id": 64295,
+        "name": "Lake Park High School West Campus V5RC HS Override Roselle IL: VEX V5 Robotics Competition Tournament with In-Person Judging and Skills",
+        "code": "RE-V5RC-26-4295"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282760,
+      "event": {
+        "id": 64295,
+        "name": "Lake Park High School West Campus V5RC HS Override Roselle IL: VEX V5 Robotics Competition Tournament with In-Person Judging and Skills",
+        "code": "RE-V5RC-26-4295"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

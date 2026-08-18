@@ -1,0 +1,213 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64813/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64813/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64813/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 13,
+    "total": 13,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 284741,
+      "event": {
+        "id": 64813,
+        "name": "Great Planes Signature Event: High School VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-4813"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284742,
+      "event": {
+        "id": 64813,
+        "name": "Great Planes Signature Event: High School VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-4813"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284743,
+      "event": {
+        "id": 64813,
+        "name": "Great Planes Signature Event: High School VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-4813"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284744,
+      "event": {
+        "id": 64813,
+        "name": "Great Planes Signature Event: High School VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-4813"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284745,
+      "event": {
+        "id": 64813,
+        "name": "Great Planes Signature Event: High School VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-4813"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284746,
+      "event": {
+        "id": 64813,
+        "name": "Great Planes Signature Event: High School VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-4813"
+      },
+      "order": 71,
+      "title": "Robot Skills 2nd Place (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284747,
+      "event": {
+        "id": 64813,
+        "name": "Great Planes Signature Event: High School VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-4813"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284748,
+      "event": {
+        "id": 64813,
+        "name": "Great Planes Signature Event: High School VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-4813"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284749,
+      "event": {
+        "id": 64813,
+        "name": "Great Planes Signature Event: High School VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-4813"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284750,
+      "event": {
+        "id": 64813,
+        "name": "Great Planes Signature Event: High School VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-4813"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284751,
+      "event": {
+        "id": 64813,
+        "name": "Great Planes Signature Event: High School VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-4813"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284752,
+      "event": {
+        "id": 64813,
+        "name": "Great Planes Signature Event: High School VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-4813"
+      },
+      "order": 78,
+      "title": "Create Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284753,
+      "event": {
+        "id": 64813,
+        "name": "Great Planes Signature Event: High School VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-4813"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

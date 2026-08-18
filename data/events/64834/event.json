@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64834,
+    "sku": "RE-V5RC-26-4834",
+    "name": "NSW | Northwest | VEX V5 Robotics Competition™: (Blended) : Override™ School Tournament @ Oxley High School",
+    "start": "2026-07-26T00:00:00-04:00",
+    "end": "2026-07-26T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Oxley High School",
+      "address_1": "Piper St",
+      "address_2": null,
+      "city": "North Tamworth",
+      "region": "New South Wales",
+      "postcode": "2340",
+      "country": "Australia",
+      "coordinates": {
+        "lat": -31.077802,
+        "lon": 150.926069
+      }
+    },
+    "locations": {
+      "2026-07-26": {
+        "venue": "Oxley High School",
+        "address_1": "Piper St",
+        "address_2": null,
+        "city": "North Tamworth",
+        "region": "New South Wales",
+        "postcode": "2340",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -31.077802,
+          "lon": 150.926069
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Division 1",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

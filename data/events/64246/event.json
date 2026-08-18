@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64246,
+    "sku": "RE-V5RC-26-4246",
+    "name": "The Highlander Summit Signature 2026: VEX V5 Robotics Competition High School Override",
+    "start": "2026-09-25T00:00:00-04:00",
+    "end": "2026-09-27T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "NJIT Wellness and Events Center",
+      "address_1": "104 Lock Street",
+      "address_2": null,
+      "city": "Newark",
+      "region": "New Jersey",
+      "postcode": "07103",
+      "country": "United States",
+      "coordinates": {
+        "lat": 40.74231,
+        "lon": -74.180327
+      }
+    },
+    "locations": {
+      "2026-09-25": {
+        "venue": "NJIT Wellness and Events Center",
+        "address_1": "104 Lock Street",
+        "address_2": null,
+        "city": "Newark",
+        "region": "New Jersey",
+        "postcode": "07103",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40.74231,
+          "lon": -74.180327
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Signature",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

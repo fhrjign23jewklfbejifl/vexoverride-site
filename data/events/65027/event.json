@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65027,
+    "sku": "RE-V5RC-26-5027",
+    "name": "Rubber City Rumble - Presented by Akron Roobotics: VEX V5 Robotics Competition™ Override™ Middle School",
+    "start": "2027-01-08T00:00:00-05:00",
+    "end": "2027-01-08T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Jean Hower Taber Student Union",
+      "address_1": "303 Carroll Street",
+      "address_2": null,
+      "city": "Akron",
+      "region": "Ohio",
+      "postcode": "44325",
+      "country": "United States",
+      "coordinates": {
+        "lat": 41.075625,
+        "lon": -81.512543
+      }
+    },
+    "locations": {
+      "2027-01-08": {
+        "venue": "Jean Hower Taber Student Union",
+        "address_1": "303 Carroll Street",
+        "address_2": null,
+        "city": "Akron",
+        "region": "Ohio",
+        "postcode": "44325",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.075625,
+          "lon": -81.512543
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

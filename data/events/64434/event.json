@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64434,
+    "sku": "RE-V5RC-26-4434",
+    "name": "2026-2027 VEX Robotics iSTEMn Signature Event: VEX V5 Robotics Competition Middle School",
+    "start": "2026-12-17T00:00:00-05:00",
+    "end": "2026-12-20T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Yaohu Town",
+      "address_1": "No.13 Jingxi Street, Yaohu Town, Zhangzhu Town, Yixing City,",
+      "address_2": null,
+      "city": "Wuxi City",
+      "region": "Jiangsu",
+      "postcode": "214231",
+      "country": "China",
+      "coordinates": {
+        "lat": 31.26878,
+        "lon": 119.63496
+      }
+    },
+    "locations": {
+      "2026-12-17": {
+        "venue": "Yaohu Town",
+        "address_1": "No.13 Jingxi Street, Yaohu Town, Zhangzhu Town, Yixing City,",
+        "address_2": null,
+        "city": "Wuxi City",
+        "region": "Jiangsu",
+        "postcode": "214231",
+        "country": "China",
+        "coordinates": {
+          "lat": 31.26878,
+          "lon": 119.63496
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Signature",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

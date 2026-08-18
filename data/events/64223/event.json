@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64223,
+    "sku": "RE-V5RC-26-4223",
+    "name": "OWL Firehouse Fall Classic | VEX V5 Blended Tournament",
+    "start": "2026-11-08T00:00:00-05:00",
+    "end": "2026-11-08T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Occoquan-Woodbridge-Lorton Volunteer Fire Department",
+      "address_1": "1306 F Street",
+      "address_2": null,
+      "city": "Woodbridge",
+      "region": "Virginia",
+      "postcode": "22191",
+      "country": "United States",
+      "coordinates": {
+        "lat": 38.663491,
+        "lon": -77.255692
+      }
+    },
+    "locations": {
+      "2026-11-08": {
+        "venue": "Occoquan-Woodbridge-Lorton Volunteer Fire Department",
+        "address_1": "1306 F Street",
+        "address_2": null,
+        "city": "Woodbridge",
+        "region": "Virginia",
+        "postcode": "22191",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.663491,
+          "lon": -77.255692
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

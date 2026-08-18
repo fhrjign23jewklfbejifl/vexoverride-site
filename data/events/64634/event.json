@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64634,
+    "sku": "RE-V5RC-26-4634",
+    "name": "VEX V5 Robotics Competition - Aiglon Robot Rumble 2026: @ Aiglon College",
+    "start": "2026-11-14T00:00:00-05:00",
+    "end": "2026-11-14T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Aiglon College",
+      "address_1": "Aiglon College",
+      "address_2": null,
+      "city": "Chesieres",
+      "region": "Waadt",
+      "postcode": "1885",
+      "country": "Switzerland",
+      "coordinates": {
+        "lat": 46.302167,
+        "lon": 7.046655
+      }
+    },
+    "locations": {
+      "2026-11-14": {
+        "venue": "Aiglon College",
+        "address_1": "Aiglon College",
+        "address_2": null,
+        "city": "Chesieres",
+        "region": "Waadt",
+        "postcode": "1885",
+        "country": "Switzerland",
+        "coordinates": {
+          "lat": 46.302167,
+          "lon": 7.046655
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

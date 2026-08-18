@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64438,
+    "sku": "RE-V5RC-26-4438",
+    "name": "CANCELED: Back to School: UrbanSTEM V5RC HS: VEX V5 Robotics Competition",
+    "start": "2026-08-29T00:00:00-04:00",
+    "end": "2026-08-29T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "HCC Southeast College - The Learning Hub",
+      "address_1": "6815 Rustic Street",
+      "address_2": null,
+      "city": "Houston",
+      "region": "Texas",
+      "postcode": "77087",
+      "country": "United States",
+      "coordinates": {
+        "lat": 29.70496,
+        "lon": -95.297452
+      }
+    },
+    "locations": {
+      "2026-08-29": {
+        "venue": "HCC Southeast College - The Learning Hub",
+        "address_1": "6815 Rustic Street",
+        "address_2": null,
+        "city": "Houston",
+        "region": "Texas",
+        "postcode": "77087",
+        "country": "United States",
+        "coordinates": {
+          "lat": 29.70496,
+          "lon": -95.297452
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

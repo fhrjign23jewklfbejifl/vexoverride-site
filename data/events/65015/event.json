@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65015,
+    "sku": "RE-V5RC-26-5015",
+    "name": "Great Lakes VEX V5 Robotics Competition™ #2: Override™ Middle and High School Teams",
+    "start": "2027-01-03T00:00:00-05:00",
+    "end": "2027-01-03T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Batavia High School",
+      "address_1": "1201 W. Main Street",
+      "address_2": null,
+      "city": "Batavia",
+      "region": "Illinois",
+      "postcode": "60510",
+      "country": "United States",
+      "coordinates": {
+        "lat": 41.848627,
+        "lon": -88.331826
+      }
+    },
+    "locations": {
+      "2027-01-03": {
+        "venue": "Batavia High School",
+        "address_1": "1201 W. Main Street",
+        "address_2": null,
+        "city": "Batavia",
+        "region": "Illinois",
+        "postcode": "60510",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.848627,
+          "lon": -88.331826
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

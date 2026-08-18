@@ -1,0 +1,855 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64843/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64843/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64843/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 31,
+    "total": 31,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 41,
+      "number": "10A",
+      "team_name": "Exothermic Alpha",
+      "robot_name": "",
+      "organization": "Exothermic Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bellevue",
+        "region": "Washington",
+        "postcode": "98005",
+        "country": "United States",
+        "coordinates": {
+          "lat": 47.6,
+          "lon": -122.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 5226,
+      "number": "10B",
+      "team_name": "Exothermic Burnout",
+      "robot_name": "Exothermic Burnout",
+      "organization": "Exothermic Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bellevue",
+        "region": "Washington",
+        "postcode": "98005",
+        "country": "United States",
+        "coordinates": {
+          "lat": 47.6,
+          "lon": -122.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 3506,
+      "number": "10E",
+      "team_name": "Exothermic Equinox",
+      "robot_name": "Bob",
+      "organization": "Exothermic Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bellevue",
+        "region": "Washington",
+        "postcode": "98005",
+        "country": "United States",
+        "coordinates": {
+          "lat": 47.6,
+          "lon": -122.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 143647,
+      "number": "10G",
+      "team_name": "Exothermic Greenish-Yellow Highlighter",
+      "robot_name": "",
+      "organization": "Exothermic Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Redmond",
+        "region": "Washington",
+        "postcode": "98005",
+        "country": "United States",
+        "coordinates": {
+          "lat": 47.6,
+          "lon": -122.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 135369,
+      "number": "10T",
+      "team_name": "Exothermic Triple T (Tung Tung Tung Sahur)",
+      "robot_name": "",
+      "organization": "Exothermic Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Redmond",
+        "region": "Washington",
+        "postcode": "98005",
+        "country": "United States",
+        "coordinates": {
+          "lat": 47.6,
+          "lon": -122.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 56,
+      "number": "10X",
+      "team_name": "Exothermic 小笼包",
+      "robot_name": "",
+      "organization": "Exothermic Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bellevue",
+        "region": "Washington",
+        "postcode": "98005",
+        "country": "United States",
+        "coordinates": {
+          "lat": 47.6,
+          "lon": -122.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 189332,
+      "number": "96Z",
+      "team_name": "Ctrl Z",
+      "robot_name": "",
+      "organization": "96",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Richmond",
+        "region": "British Columbia",
+        "postcode": "V7C3H1",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 49.1,
+          "lon": -123.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 198886,
+      "number": "800Y",
+      "team_name": "Richmond Robotics Activity Center",
+      "robot_name": "",
+      "organization": "Richmond Robotics Activity Center",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Richmond",
+        "region": "British Columbia",
+        "postcode": "V6X 0R1",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 49.2,
+          "lon": -123.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 198885,
+      "number": "800Z",
+      "team_name": "Richmond Robotics Activity Center",
+      "robot_name": "",
+      "organization": "Richmond Robotics Activity Center",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Richmond",
+        "region": "British Columbia",
+        "postcode": "V6X 0R1",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 49.2,
+          "lon": -123.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 152010,
+      "number": "886A",
+      "team_name": "ARPW | WPRA",
+      "robot_name": "",
+      "organization": "Western Pacific Robotics Academy",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Richmond",
+        "region": "British Columbia",
+        "postcode": "V6X 0R1",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 49.2,
+          "lon": -123.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 181767,
+      "number": "886E",
+      "team_name": "Excel | WPRA",
+      "robot_name": "",
+      "organization": "Western Pacific Robotics Academy",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Richmond",
+        "region": "British Columbia",
+        "postcode": "V6X 1X5",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 49.2,
+          "lon": -123.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 197455,
+      "number": "886F",
+      "team_name": "Faailures | WPRA",
+      "robot_name": "",
+      "organization": "Western Pacific Robotics Academy",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Richmond",
+        "region": "British Columbia",
+        "postcode": "V6X 1X5",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 49.2,
+          "lon": -123.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 173768,
+      "number": "886H",
+      "team_name": "High Stakes | WPRA",
+      "robot_name": "",
+      "organization": "Western Pacific Robotics Academy",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Richmond",
+        "region": "British Columbia",
+        "postcode": "V6X 1X5",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 49.2,
+          "lon": -123.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 198884,
+      "number": "886J",
+      "team_name": "J | WPRA",
+      "robot_name": "",
+      "organization": "Western Pacific Robotics Academy",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Richmond",
+        "region": "British Columbia",
+        "postcode": "V6X 1X5",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 49.2,
+          "lon": -123.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 173767,
+      "number": "886M",
+      "team_name": "Milk & Cookies | WPRA",
+      "robot_name": "",
+      "organization": "Western Pacific Robotics Academy",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Richmond",
+        "region": "British Columbia",
+        "postcode": "V6X 1X5",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 49.2,
+          "lon": -123.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 169898,
+      "number": "886S",
+      "team_name": "Why So Serious | WPRA",
+      "robot_name": "",
+      "organization": "Western Pacific Robotics Academy",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Richmond",
+        "region": "British Columbia",
+        "postcode": "V6X0R1",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 49.2,
+          "lon": -123.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 170526,
+      "number": "886U",
+      "team_name": "Über | WPRA",
+      "robot_name": "",
+      "organization": "Western Pacific Robotics Academy",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Richmond",
+        "region": "British Columbia",
+        "postcode": "V6X 1X5",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 49.2,
+          "lon": -123.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 155497,
+      "number": "886Y",
+      "team_name": "Yabadabadoo | WPRA",
+      "robot_name": "",
+      "organization": "Western Pacific Robotics Academy",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Richmond",
+        "region": "British Columbia",
+        "postcode": "V6X 0R1",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 49.2,
+          "lon": -123.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 133414,
+      "number": "938F",
+      "team_name": "Blaze Robotics Qubits",
+      "robot_name": "",
+      "organization": "Blaze Robotics Academy",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bellevue",
+        "region": "Washington",
+        "postcode": "98005",
+        "country": "United States",
+        "coordinates": {
+          "lat": 47.6,
+          "lon": -122.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 133415,
+      "number": "938G",
+      "team_name": "Blaze Good Game",
+      "robot_name": ":)",
+      "organization": "Ignite Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bellevue",
+        "region": "Washington",
+        "postcode": "98005",
+        "country": "United States",
+        "coordinates": {
+          "lat": 47.6,
+          "lon": -122.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 159387,
+      "number": "938V",
+      "team_name": "Blaze Vortex",
+      "robot_name": "",
+      "organization": "Blaze Robotics Academy",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bellevue",
+        "region": "Washington",
+        "postcode": "98005",
+        "country": "United States",
+        "coordinates": {
+          "lat": 47.6,
+          "lon": -122.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 123981,
+      "number": "938X",
+      "team_name": "Blaze Xtra hot sauce",
+      "robot_name": "",
+      "organization": "Blaze Robotics Academy",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bellevue",
+        "region": "Washington",
+        "postcode": "98005",
+        "country": "United States",
+        "coordinates": {
+          "lat": 47.6,
+          "lon": -122.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 177183,
+      "number": "938Y",
+      "team_name": "Blaze Yellow Dragon",
+      "robot_name": "Y",
+      "organization": "Blaze Robotics Academy",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bellevue",
+        "region": "Washington",
+        "postcode": "98005",
+        "country": "United States",
+        "coordinates": {
+          "lat": 47.6,
+          "lon": -122.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 172270,
+      "number": "938Z",
+      "team_name": "Everytime",
+      "robot_name": "Timeless1",
+      "organization": "Blaze Robotics Academy",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bellevue",
+        "region": "Washington",
+        "postcode": "98005",
+        "country": "United States",
+        "coordinates": {
+          "lat": 47.6,
+          "lon": -122.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 197576,
+      "number": "1523A",
+      "team_name": "Avarice",
+      "robot_name": "Robor",
+      "organization": "Steamoji-Elevate Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bellevue",
+        "region": "Washington",
+        "postcode": "98007",
+        "country": "United States",
+        "coordinates": {
+          "lat": 47.6,
+          "lon": -122.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 179010,
+      "number": "2551A",
+      "team_name": "Bee",
+      "robot_name": "Bee",
+      "organization": "Bee",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Calgary",
+        "region": "Alberta",
+        "postcode": "T3G5Z8",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 51.2,
+          "lon": -114.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 198455,
+      "number": "5798V",
+      "team_name": "Voltage",
+      "robot_name": "",
+      "organization": "IgniteVolt",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Vancouver",
+        "region": "British Columbia",
+        "postcode": "V7C1J2",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 49.1,
+          "lon": -123.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 195630,
+      "number": "8894X",
+      "team_name": "XERØ",
+      "robot_name": "",
+      "organization": "MRZ Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Burnaby",
+        "region": "British Columbia",
+        "postcode": "V5A 3M5",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 49.3,
+          "lon": -122.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 185771,
+      "number": "10836X",
+      "team_name": "Blue Whales",
+      "robot_name": "",
+      "organization": "Robostorm",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Vancouver",
+        "region": "British Columbia",
+        "postcode": "V6N 3E6",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 49.2,
+          "lon": -123.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 157636,
+      "number": "44344S",
+      "team_name": "Skill Issue",
+      "robot_name": "Skill Issue",
+      "organization": "Mukilteo Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Mukilteo",
+        "region": "Washington",
+        "postcode": "98275",
+        "country": "United States",
+        "coordinates": {
+          "lat": 47.9,
+          "lon": -122.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 139066,
+      "number": "98040C",
+      "team_name": "Slippery Penguins",
+      "robot_name": " Chinstrap Penguin",
+      "organization": "Islander Robotics Academy",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Mercer Island",
+        "region": "Washington",
+        "postcode": "98040",
+        "country": "United States",
+        "coordinates": {
+          "lat": 47.5,
+          "lon": -122.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
+}

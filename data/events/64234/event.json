@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64234,
+    "sku": "RE-V5RC-26-4234",
+    "name": "Caution Tape VEX V5RC Robotics Competition Halloween Qualifier",
+    "start": "2026-10-31T00:00:00-04:00",
+    "end": "2026-10-31T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Markham Pan Am Centre",
+      "address_1": "16 Main Street Unionville",
+      "address_2": null,
+      "city": "Markham",
+      "region": "Ontario",
+      "postcode": "L3R 2E4",
+      "country": "Canada",
+      "coordinates": {
+        "lat": 43.855083,
+        "lon": -79.308996
+      }
+    },
+    "locations": {
+      "2026-10-31": {
+        "venue": "Markham Pan Am Centre",
+        "address_1": "16 Main Street Unionville",
+        "address_2": null,
+        "city": "Markham",
+        "region": "Ontario",
+        "postcode": "L3R 2E4",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 43.855083,
+          "lon": -79.308996
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

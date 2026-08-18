@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65148,
+    "sku": "RE-V5RC-26-5148",
+    "name": "2027 Utah High School State Championship: VEX V5 Robotics Competition",
+    "start": "2027-03-05T00:00:00-05:00",
+    "end": "2027-03-06T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Adobe - Lehi",
+      "address_1": "3900 Adobe Way",
+      "address_2": null,
+      "city": "Lehi",
+      "region": "Utah",
+      "postcode": "84043",
+      "country": "United States",
+      "coordinates": {
+        "lat": 40.43492,
+        "lon": -111.891843
+      }
+    },
+    "locations": {
+      "2027-03-05": {
+        "venue": "Adobe - Lehi",
+        "address_1": "3900 Adobe Way",
+        "address_2": null,
+        "city": "Lehi",
+        "region": "Utah",
+        "postcode": "84043",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40.43492,
+          "lon": -111.891843
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Regional",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

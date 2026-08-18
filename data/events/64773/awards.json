@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64773/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64773/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64773/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 4,
+    "total": 4,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 284563,
+      "event": {
+        "id": 64773,
+        "name": "VEX第二届北京校际活动V5RC_MS",
+        "code": "RE-V5RC-26-4773"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284564,
+      "event": {
+        "id": 64773,
+        "name": "VEX第二届北京校际活动V5RC_MS",
+        "code": "RE-V5RC-26-4773"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284565,
+      "event": {
+        "id": 64773,
+        "name": "VEX第二届北京校际活动V5RC_MS",
+        "code": "RE-V5RC-26-4773"
+      },
+      "order": 65,
+      "title": "Tournament Semifinalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284566,
+      "event": {
+        "id": 64773,
+        "name": "VEX第二届北京校际活动V5RC_MS",
+        "code": "RE-V5RC-26-4773"
+      },
+      "order": 66,
+      "title": "Tournament Quarterfinalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

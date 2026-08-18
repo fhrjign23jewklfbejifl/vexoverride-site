@@ -1,0 +1,207 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64272/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64272/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64272/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 7,
+    "total": 7,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 56089,
+      "number": "2011A",
+      "team_name": "APEX",
+      "robot_name": "Apex",
+      "organization": "BRECKSVILLE-BROADVIEW HEIGHTS HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Broadview Heights",
+        "region": "Ohio",
+        "postcode": "44147",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.3,
+          "lon": -81.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 56090,
+      "number": "2011B",
+      "team_name": "BlastOff",
+      "robot_name": "Launch",
+      "organization": "BRECKSVILLE-BROADVIEW HEIGHTS HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Broadview Heights",
+        "region": "Ohio",
+        "postcode": "44147",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.3,
+          "lon": -81.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 56091,
+      "number": "2011C",
+      "team_name": "Carbon Copy",
+      "robot_name": "Carbon Copy",
+      "organization": "BRECKSVILLE-BROADVIEW HEIGHTS HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Broadview Heights",
+        "region": "Ohio",
+        "postcode": "44147",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.3,
+          "lon": -81.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 64218,
+      "number": "2011D",
+      "team_name": "Dopamine",
+      "robot_name": "Dopamine",
+      "organization": "BRECKSVILLE-BROADVIEW HEIGHTS HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Broadview Heights",
+        "region": "Ohio",
+        "postcode": "44147",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.3,
+          "lon": -81.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 72997,
+      "number": "2011E",
+      "team_name": "E-lit-erit",
+      "robot_name": "E-lit-erit",
+      "organization": "BRECKSVILLE-BROADVIEW HEIGHTS HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Broadview Heights",
+        "region": "Ohio",
+        "postcode": "44147",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.3,
+          "lon": -81.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 72998,
+      "number": "2011F",
+      "team_name": "FaZe Clan",
+      "robot_name": "FaZe Clan",
+      "organization": "BRECKSVILLE-BROADVIEW HEIGHTS HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Broadview Heights",
+        "region": "Ohio",
+        "postcode": "44147",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.3,
+          "lon": -81.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 81070,
+      "number": "2011G",
+      "team_name": "Godspeed",
+      "robot_name": "Godspeed",
+      "organization": "BRECKSVILLE-BROADVIEW HEIGHTS HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Broadview Heights",
+        "region": "Ohio",
+        "postcode": "44147",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.3,
+          "lon": -81.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
+}

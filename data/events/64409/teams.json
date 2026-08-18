@@ -1,0 +1,369 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64409/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64409/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64409/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 13,
+    "total": 13,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 157300,
+      "number": "12223F",
+      "team_name": "Flamingos",
+      "robot_name": "",
+      "organization": "Pembroke School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Kensington Gardens",
+        "region": "South Australia",
+        "postcode": "5068",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -34.9,
+          "lon": 138.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 128556,
+      "number": "12223X",
+      "team_name": "DisKoalafied",
+      "robot_name": "",
+      "organization": "Pembroke School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Kensington Gardens",
+        "region": "South Australia",
+        "postcode": "5068",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -34.9,
+          "lon": 138.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 139183,
+      "number": "12906A",
+      "team_name": "blackout.",
+      "robot_name": "",
+      "organization": "Salisbury East High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Salisbury East",
+        "region": "South Australia",
+        "postcode": "5109",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -34.8,
+          "lon": 138.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 139536,
+      "number": "12906B",
+      "team_name": "Circuit Breakers",
+      "robot_name": "",
+      "organization": "Salisbury East High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Salisbury East",
+        "region": "South Australia",
+        "postcode": "5109",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -34.8,
+          "lon": 138.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 184602,
+      "number": "23140A",
+      "team_name": "PAC RED",
+      "robot_name": "PAC RED",
+      "organization": "Prince Alfred College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Kent Town",
+        "region": "South Australia",
+        "postcode": "5069",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -34.9,
+          "lon": 138.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 135776,
+      "number": "41103C",
+      "team_name": "1/3",
+      "robot_name": "",
+      "organization": "Pedare Christian College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Golden Grove",
+        "region": "South Australia",
+        "postcode": "5125",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -34.8,
+          "lon": 138.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 156309,
+      "number": "41103X",
+      "team_name": "ASDF",
+      "robot_name": "",
+      "organization": "Pedare Christian College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Golden Grove",
+        "region": "South Australia",
+        "postcode": "5125",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -34.8,
+          "lon": 138.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 197630,
+      "number": "49898G",
+      "team_name": "GDC ",
+      "robot_name": "LTT Phchwrouddaighvour",
+      "organization": "Gawler and District College B-12",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Evanston",
+        "region": "South Australia",
+        "postcode": "5116",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -34.6,
+          "lon": 138.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 197522,
+      "number": "52111A",
+      "team_name": "Invictus",
+      "robot_name": "",
+      "organization": "Investigator College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Victor Harbor",
+        "region": "South Australia",
+        "postcode": "5211",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -35.6,
+          "lon": 138.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 187479,
+      "number": "76981A",
+      "team_name": "fUSCion",
+      "robot_name": "The Combine",
+      "organization": "University Senior College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Adelaide",
+        "region": "South Australia",
+        "postcode": "5000",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -34.9,
+          "lon": 138.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 187480,
+      "number": "76981B",
+      "team_name": "A Nice Team",
+      "robot_name": "Megatron",
+      "organization": "University Senior College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Adelaide",
+        "region": "South Australia",
+        "postcode": "5000",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -34.9,
+          "lon": 138.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 196932,
+      "number": "81321C",
+      "team_name": "AWESOM-0",
+      "robot_name": "Mini Me",
+      "organization": "Woodcroft College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Morphett Vale",
+        "region": "South Australia",
+        "postcode": "5162",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -35.1,
+          "lon": 138.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 196933,
+      "number": "81321D",
+      "team_name": "SML",
+      "robot_name": "SpiderBot",
+      "organization": "Woodcroft College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Morphett Vale",
+        "region": "South Australia",
+        "postcode": "5162",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -35.1,
+          "lon": 138.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
+}

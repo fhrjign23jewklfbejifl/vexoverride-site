@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64710,
+    "sku": "RE-V5RC-26-4710",
+    "name": "Override Qualifier at Norristown - HS teams: VEX V5 Robotics Competition Override",
+    "start": "2027-02-20T00:00:00-05:00",
+    "end": "2027-02-20T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "1900 Eagle Dr",
+      "address_1": "1900 Eagle Drive",
+      "address_2": null,
+      "city": "Norristown",
+      "region": "Pennsylvania",
+      "postcode": "19403",
+      "country": "United States",
+      "coordinates": {
+        "lat": 40.146211,
+        "lon": -75.362351
+      }
+    },
+    "locations": {
+      "2027-02-20": {
+        "venue": "1900 Eagle Dr",
+        "address_1": "1900 Eagle Drive",
+        "address_2": null,
+        "city": "Norristown",
+        "region": "Pennsylvania",
+        "postcode": "19403",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40.146211,
+          "lon": -75.362351
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

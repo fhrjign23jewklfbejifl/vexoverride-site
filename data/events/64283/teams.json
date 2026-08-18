@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64283/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64283/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64283/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 4,
+    "total": 4,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 170152,
+      "number": "11811A",
+      "team_name": "Hula Hooligans",
+      "robot_name": "",
+      "organization": "Hula Hooligans",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Kansas City",
+        "region": "Missouri",
+        "postcode": "64151",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39.2,
+          "lon": -94.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 174068,
+      "number": "50130A",
+      "team_name": "Trobots",
+      "robot_name": "",
+      "organization": "PARK HILL HIGH",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Kansas City",
+        "region": "Missouri",
+        "postcode": "64153",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39.2,
+          "lon": -94.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 192311,
+      "number": "50130B",
+      "team_name": "trojan.exe",
+      "robot_name": "",
+      "organization": "PARK HILL HIGH",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Kansas City",
+        "region": "Missouri",
+        "postcode": "64153",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39.2,
+          "lon": -94.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 185291,
+      "number": "63379A",
+      "team_name": "Mech Masters",
+      "robot_name": "",
+      "organization": "McAllisters",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Troy ",
+        "region": "Missouri",
+        "postcode": "63379",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39,
+          "lon": -90.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
+}

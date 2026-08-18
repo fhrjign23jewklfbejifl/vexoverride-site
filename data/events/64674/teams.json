@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64674/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64674/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64674/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 2,
+    "total": 2,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 142616,
+      "number": "40591A",
+      "team_name": "Cobratics",
+      "robot_name": "",
+      "organization": "Surabaya Intercultural School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Surabaya",
+        "region": null,
+        "postcode": "60225",
+        "country": "Indonesia",
+        "coordinates": {
+          "lat": -7.3,
+          "lon": 112.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 194929,
+      "number": "40591B",
+      "team_name": "Cobratics",
+      "robot_name": "",
+      "organization": "Surabaya Intercultural School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Surabaya",
+        "region": null,
+        "postcode": "60225",
+        "country": "Indonesia",
+        "coordinates": {
+          "lat": -7.3,
+          "lon": 112.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
+}

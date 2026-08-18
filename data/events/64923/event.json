@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64923,
+    "sku": "RE-V5RC-26-4923",
+    "name": "DC Knights Override Qualifier - (High School): VEX V5 Robotics Competition",
+    "start": "2027-01-16T00:00:00-05:00",
+    "end": "2027-01-16T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "462 Malin Rd",
+      "address_1": "462 Malin Road",
+      "address_2": null,
+      "city": "Newtown Square",
+      "region": "Pennsylvania",
+      "postcode": "19073",
+      "country": "United States",
+      "coordinates": {
+        "lat": 39.999724,
+        "lon": -75.38421
+      }
+    },
+    "locations": {
+      "2027-01-16": {
+        "venue": "462 Malin Rd",
+        "address_1": "462 Malin Road",
+        "address_2": null,
+        "city": "Newtown Square",
+        "region": "Pennsylvania",
+        "postcode": "19073",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39.999724,
+          "lon": -75.38421
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

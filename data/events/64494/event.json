@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64494,
+    "sku": "RE-V5RC-26-4494",
+    "name": "Brampton V5RC Override Qualifier: Blended In-Person Remote Judging and digital notebook",
+    "start": "2027-02-20T00:00:00-05:00",
+    "end": "2027-02-20T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Turner Fenton Secondary School",
+      "address_1": "7935 Kennedy Road South",
+      "address_2": null,
+      "city": "Brampton",
+      "region": "Ontario",
+      "postcode": "L6W 0A2",
+      "country": "Canada",
+      "coordinates": {
+        "lat": 43.674976,
+        "lon": -79.719148
+      }
+    },
+    "locations": {
+      "2027-02-20": {
+        "venue": "Turner Fenton Secondary School",
+        "address_1": "7935 Kennedy Road South",
+        "address_2": null,
+        "city": "Brampton",
+        "region": "Ontario",
+        "postcode": "L6W 0A2",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 43.674976,
+          "lon": -79.719148
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

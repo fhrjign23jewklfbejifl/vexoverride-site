@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65048/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65048/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65048/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 8,
+    "total": 8,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 286457,
+      "event": {
+        "id": 65048,
+        "name": "MCPSS VEX V5 JROTC Robotics League (MS & HS)  Override: MCPSS VEX V5 Competition #1-4",
+        "code": "RE-V5RC-26-5048"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286458,
+      "event": {
+        "id": 65048,
+        "name": "MCPSS VEX V5 JROTC Robotics League (MS & HS)  Override: MCPSS VEX V5 Competition #1-4",
+        "code": "RE-V5RC-26-5048"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286459,
+      "event": {
+        "id": 65048,
+        "name": "MCPSS VEX V5 JROTC Robotics League (MS & HS)  Override: MCPSS VEX V5 Competition #1-4",
+        "code": "RE-V5RC-26-5048"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286460,
+      "event": {
+        "id": 65048,
+        "name": "MCPSS VEX V5 JROTC Robotics League (MS & HS)  Override: MCPSS VEX V5 Competition #1-4",
+        "code": "RE-V5RC-26-5048"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286461,
+      "event": {
+        "id": 65048,
+        "name": "MCPSS VEX V5 JROTC Robotics League (MS & HS)  Override: MCPSS VEX V5 Competition #1-4",
+        "code": "RE-V5RC-26-5048"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286462,
+      "event": {
+        "id": 65048,
+        "name": "MCPSS VEX V5 JROTC Robotics League (MS & HS)  Override: MCPSS VEX V5 Competition #1-4",
+        "code": "RE-V5RC-26-5048"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286463,
+      "event": {
+        "id": 65048,
+        "name": "MCPSS VEX V5 JROTC Robotics League (MS & HS)  Override: MCPSS VEX V5 Competition #1-4",
+        "code": "RE-V5RC-26-5048"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286464,
+      "event": {
+        "id": 65048,
+        "name": "MCPSS VEX V5 JROTC Robotics League (MS & HS)  Override: MCPSS VEX V5 Competition #1-4",
+        "code": "RE-V5RC-26-5048"
+      },
+      "order": 81,
+      "title": "Inspire Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

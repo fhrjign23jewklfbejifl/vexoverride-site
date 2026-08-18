@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65273,
+    "sku": "RE-V5RC-26-5273",
+    "name": "爱因斯坦联盟2026-2027VEX机器人全国邀请赛（威海）: VEX V5 Robotics Competition 高中组",
+    "start": "2026-09-26T00:00:00-04:00",
+    "end": "2026-09-27T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "哈尔滨工业大学（威海）校区综合球类馆",
+      "address_1": "山东省威海市环翠区文化西路2号",
+      "address_2": null,
+      "city": "WeiHai",
+      "region": "Shandong",
+      "postcode": "371000",
+      "country": "China",
+      "coordinates": {
+        "lat": 37.52603,
+        "lon": 122.08389
+      }
+    },
+    "locations": {
+      "2026-09-26": {
+        "venue": "哈尔滨工业大学（威海）校区综合球类馆",
+        "address_1": "山东省威海市环翠区文化西路2号",
+        "address_2": null,
+        "city": "WeiHai",
+        "region": "Shandong",
+        "postcode": "371000",
+        "country": "China",
+        "coordinates": {
+          "lat": 37.52603,
+          "lon": 122.08389
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64439/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64439/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64439/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 6,
+    "total": 6,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 282063,
+      "event": {
+        "id": 64439,
+        "name": "LD Override - UrbanSTEM V5RC HS: VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-4439"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282064,
+      "event": {
+        "id": 64439,
+        "name": "LD Override - UrbanSTEM V5RC HS: VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-4439"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282065,
+      "event": {
+        "id": 64439,
+        "name": "LD Override - UrbanSTEM V5RC HS: VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-4439"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282066,
+      "event": {
+        "id": 64439,
+        "name": "LD Override - UrbanSTEM V5RC HS: VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-4439"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282067,
+      "event": {
+        "id": 64439,
+        "name": "LD Override - UrbanSTEM V5RC HS: VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-4439"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282720,
+      "event": {
+        "id": 64439,
+        "name": "LD Override - UrbanSTEM V5RC HS: VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-4439"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

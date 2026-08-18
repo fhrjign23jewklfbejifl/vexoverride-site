@@ -1,0 +1,258 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64401/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64401/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64401/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 16,
+    "total": 16,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 281736,
+      "event": {
+        "id": 64401,
+        "name": "NWI Region Robotics Rumble V5RC MS: VEX V5 Robotics Competition Middle School Qualifying Tournament",
+        "code": "RE-V5RC-26-4401"
+      },
+      "order": 61,
+      "title": "Excellence Award - Middle School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281737,
+      "event": {
+        "id": 64401,
+        "name": "NWI Region Robotics Rumble V5RC MS: VEX V5 Robotics Competition Middle School Qualifying Tournament",
+        "code": "RE-V5RC-26-4401"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281738,
+      "event": {
+        "id": 64401,
+        "name": "NWI Region Robotics Rumble V5RC MS: VEX V5 Robotics Competition Middle School Qualifying Tournament",
+        "code": "RE-V5RC-26-4401"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281739,
+      "event": {
+        "id": 64401,
+        "name": "NWI Region Robotics Rumble V5RC MS: VEX V5 Robotics Competition Middle School Qualifying Tournament",
+        "code": "RE-V5RC-26-4401"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281740,
+      "event": {
+        "id": 64401,
+        "name": "NWI Region Robotics Rumble V5RC MS: VEX V5 Robotics Competition Middle School Qualifying Tournament",
+        "code": "RE-V5RC-26-4401"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281741,
+      "event": {
+        "id": 64401,
+        "name": "NWI Region Robotics Rumble V5RC MS: VEX V5 Robotics Competition Middle School Qualifying Tournament",
+        "code": "RE-V5RC-26-4401"
+      },
+      "order": 71,
+      "title": "Robot Skills 2nd Place (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281742,
+      "event": {
+        "id": 64401,
+        "name": "NWI Region Robotics Rumble V5RC MS: VEX V5 Robotics Competition Middle School Qualifying Tournament",
+        "code": "RE-V5RC-26-4401"
+      },
+      "order": 72,
+      "title": "Robot Skills 3rd Place (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281743,
+      "event": {
+        "id": 64401,
+        "name": "NWI Region Robotics Rumble V5RC MS: VEX V5 Robotics Competition Middle School Qualifying Tournament",
+        "code": "RE-V5RC-26-4401"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281744,
+      "event": {
+        "id": 64401,
+        "name": "NWI Region Robotics Rumble V5RC MS: VEX V5 Robotics Competition Middle School Qualifying Tournament",
+        "code": "RE-V5RC-26-4401"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281745,
+      "event": {
+        "id": 64401,
+        "name": "NWI Region Robotics Rumble V5RC MS: VEX V5 Robotics Competition Middle School Qualifying Tournament",
+        "code": "RE-V5RC-26-4401"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281746,
+      "event": {
+        "id": 64401,
+        "name": "NWI Region Robotics Rumble V5RC MS: VEX V5 Robotics Competition Middle School Qualifying Tournament",
+        "code": "RE-V5RC-26-4401"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281747,
+      "event": {
+        "id": 64401,
+        "name": "NWI Region Robotics Rumble V5RC MS: VEX V5 Robotics Competition Middle School Qualifying Tournament",
+        "code": "RE-V5RC-26-4401"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281748,
+      "event": {
+        "id": 64401,
+        "name": "NWI Region Robotics Rumble V5RC MS: VEX V5 Robotics Competition Middle School Qualifying Tournament",
+        "code": "RE-V5RC-26-4401"
+      },
+      "order": 78,
+      "title": "Create Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281749,
+      "event": {
+        "id": 64401,
+        "name": "NWI Region Robotics Rumble V5RC MS: VEX V5 Robotics Competition Middle School Qualifying Tournament",
+        "code": "RE-V5RC-26-4401"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281750,
+      "event": {
+        "id": 64401,
+        "name": "NWI Region Robotics Rumble V5RC MS: VEX V5 Robotics Competition Middle School Qualifying Tournament",
+        "code": "RE-V5RC-26-4401"
+      },
+      "order": 80,
+      "title": "Energy Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281751,
+      "event": {
+        "id": 64401,
+        "name": "NWI Region Robotics Rumble V5RC MS: VEX V5 Robotics Competition Middle School Qualifying Tournament",
+        "code": "RE-V5RC-26-4401"
+      },
+      "order": 81,
+      "title": "Inspire Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

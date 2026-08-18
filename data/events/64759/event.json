@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64759,
+    "sku": "RE-V5RC-26-4759",
+    "name": "North Union Middle School Qualifier: VEX V5 Robotics Competition Override",
+    "start": "2026-10-31T00:00:00-04:00",
+    "end": "2026-10-31T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "North Union High School",
+      "address_1": "401 North Franklin Street",
+      "address_2": null,
+      "city": "Richwood",
+      "region": "Ohio",
+      "postcode": "43344",
+      "country": "United States",
+      "coordinates": {
+        "lat": 40.437464,
+        "lon": -83.298089
+      }
+    },
+    "locations": {
+      "2026-10-31": {
+        "venue": "North Union High School",
+        "address_1": "401 North Franklin Street",
+        "address_2": null,
+        "city": "Richwood",
+        "region": "Ohio",
+        "postcode": "43344",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40.437464,
+          "lon": -83.298089
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

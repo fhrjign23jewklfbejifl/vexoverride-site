@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64240/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64240/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64240/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 2,
+    "total": 2,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 280326,
+      "event": {
+        "id": 64240,
+        "name": "Blended - VEX V5 2026-2027 India National Championship: Override™: VEX V5 Robotics Competition™ - Hosted by Get set learn",
+        "code": "RE-V5RC-26-4240"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280327,
+      "event": {
+        "id": 64240,
+        "name": "Blended - VEX V5 2026-2027 India National Championship: Override™: VEX V5 Robotics Competition™ - Hosted by Get set learn",
+        "code": "RE-V5RC-26-4240"
+      },
+      "order": 71,
+      "title": "Robot Skills 2nd Place (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

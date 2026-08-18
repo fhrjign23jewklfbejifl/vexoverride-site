@@ -1,0 +1,97 @@
+{
+  "data": {
+    "id": 64717,
+    "sku": "RE-V5RC-26-4717",
+    "name": "Lake Effect League - VEX V5 Blended - Elyria, Ohio: VEX V5 Robotics Competition",
+    "start": "2026-11-17T00:00:00-05:00",
+    "end": "2027-02-16T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Elyria High School - ImaginEering Hub",
+      "address_1": "601 Middle Avenue",
+      "address_2": null,
+      "city": "Elyria",
+      "region": "Ohio",
+      "postcode": "44035",
+      "country": "United States",
+      "coordinates": {
+        "lat": 41.362259,
+        "lon": -82.10828
+      }
+    },
+    "locations": {
+      "2026-11-17": {
+        "venue": "Elyria High School - ImaginEering Hub",
+        "address_1": "601 Middle Avenue",
+        "address_2": null,
+        "city": "Elyria",
+        "region": "Ohio",
+        "postcode": "44035",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.362259,
+          "lon": -82.10828
+        }
+      },
+      "2026-12-15": {
+        "venue": "Elyria High School",
+        "address_1": "601 Middle Avenue",
+        "address_2": null,
+        "city": "Elyria",
+        "region": "Ohio",
+        "postcode": "44035",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.362259,
+          "lon": -82.10828
+        }
+      },
+      "2027-01-19": {
+        "venue": "Elyria High School",
+        "address_1": "601 Middle Avenue",
+        "address_2": null,
+        "city": "Elyria",
+        "region": "Ohio",
+        "postcode": "44035",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.362259,
+          "lon": -82.10828
+        }
+      },
+      "2027-02-16": {
+        "venue": "Elyria High School",
+        "address_1": "601 Middle Avenue",
+        "address_2": null,
+        "city": "Elyria",
+        "region": "Ohio",
+        "postcode": "44035",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.362259,
+          "lon": -82.10828
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

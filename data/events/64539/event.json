@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64539,
+    "sku": "RE-V5RC-26-4539",
+    "name": "Auckland | VEX V5 Robotics Competition™ (Blended): Override™ Scrimmage #2 @ Sacred Heart College",
+    "start": "2026-07-25T00:00:00-04:00",
+    "end": "2026-07-25T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Sacred Heart College Auckland",
+      "address_1": "250 West Tamaki Road",
+      "address_2": null,
+      "city": "Auckland",
+      "region": "Auckland",
+      "postcode": "1071",
+      "country": "New Zealand",
+      "coordinates": {
+        "lat": -36.86701,
+        "lon": 174.872933
+      }
+    },
+    "locations": {
+      "2026-07-25": {
+        "venue": "Sacred Heart College Auckland",
+        "address_1": "250 West Tamaki Road",
+        "address_2": null,
+        "city": "Auckland",
+        "region": "Auckland",
+        "postcode": "1071",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -36.86701,
+          "lon": 174.872933
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

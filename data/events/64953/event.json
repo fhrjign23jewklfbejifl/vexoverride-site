@@ -1,0 +1,110 @@
+{
+  "data": {
+    "id": 64953,
+    "sku": "RE-V5RC-26-4953",
+    "name": "Appleby College CAIS League Play, V5 VRC, Blended MS/HS: 4 rank sessions + finals, November - February",
+    "start": "2026-11-03T00:00:00-05:00",
+    "end": "2027-02-02T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Appleby College",
+      "address_1": "540 Lakeshore Road West",
+      "address_2": null,
+      "city": "Oakville",
+      "region": "Ontario",
+      "postcode": "L6K3P1",
+      "country": "Canada",
+      "coordinates": {
+        "lat": 43.426417,
+        "lon": -79.685713
+      }
+    },
+    "locations": {
+      "2026-11-03": {
+        "venue": "Appleby College",
+        "address_1": "540 Lakeshore Road West",
+        "address_2": null,
+        "city": "Oakville",
+        "region": "Ontario",
+        "postcode": "L6K3P1",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 43.426417,
+          "lon": -79.685713
+        }
+      },
+      "2026-11-19": {
+        "venue": "Appleby College",
+        "address_1": "",
+        "address_2": null,
+        "city": "Oakville",
+        "region": "Ontario",
+        "postcode": "",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 43.450746,
+          "lon": -79.728875
+        }
+      },
+      "2026-12-08": {
+        "venue": "Appleby College",
+        "address_1": "",
+        "address_2": null,
+        "city": "Oakville",
+        "region": "Ontario",
+        "postcode": "",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 43.450746,
+          "lon": -79.728875
+        }
+      },
+      "2027-01-15": {
+        "venue": "Appleby College",
+        "address_1": "",
+        "address_2": null,
+        "city": "Oakville",
+        "region": "Ontario",
+        "postcode": "",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 43.450746,
+          "lon": -79.728875
+        }
+      },
+      "2027-02-02": {
+        "venue": "Appleby College",
+        "address_1": "",
+        "address_2": null,
+        "city": "Oakville",
+        "region": "Ontario",
+        "postcode": "",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 43.450746,
+          "lon": -79.728875
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64244,
+    "sku": "RE-V5RC-26-4244",
+    "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+    "start": "2026-08-06T00:00:00-04:00",
+    "end": "2026-08-08T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Mall of America®",
+      "address_1": "60 East Broadway",
+      "address_2": null,
+      "city": "Bloomington",
+      "region": "Minnesota",
+      "postcode": "55425",
+      "country": "United States",
+      "coordinates": {
+        "lat": 44.854698,
+        "lon": -93.241951
+      }
+    },
+    "locations": {
+      "2026-08-06": {
+        "venue": "Mall of America®",
+        "address_1": "60 East Broadway",
+        "address_2": null,
+        "city": "Bloomington",
+        "region": "Minnesota",
+        "postcode": "55425",
+        "country": "United States",
+        "coordinates": {
+          "lat": 44.854698,
+          "lon": -93.241951
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "UND",
+        "order": 1
+      }
+    ],
+    "level": "Signature",
+    "ongoing": false,
+    "awards_finalized": true,
+    "event_type": null
+  }
+}

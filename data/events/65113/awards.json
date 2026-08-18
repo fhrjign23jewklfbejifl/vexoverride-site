@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65113/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65113/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65113/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 8,
+    "total": 8,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 286918,
+      "event": {
+        "id": 65113,
+        "name": "Torneo Nacional ROBOTICA EXTREMA VEX ROBOTICS Competition",
+        "code": "RE-V5RC-26-5113"
+      },
+      "order": 60,
+      "title": "Excellence Award - High School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286919,
+      "event": {
+        "id": 65113,
+        "name": "Torneo Nacional ROBOTICA EXTREMA VEX ROBOTICS Competition",
+        "code": "RE-V5RC-26-5113"
+      },
+      "order": 61,
+      "title": "Excellence Award - Middle School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286920,
+      "event": {
+        "id": 65113,
+        "name": "Torneo Nacional ROBOTICA EXTREMA VEX ROBOTICS Competition",
+        "code": "RE-V5RC-26-5113"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286921,
+      "event": {
+        "id": 65113,
+        "name": "Torneo Nacional ROBOTICA EXTREMA VEX ROBOTICS Competition",
+        "code": "RE-V5RC-26-5113"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286922,
+      "event": {
+        "id": 65113,
+        "name": "Torneo Nacional ROBOTICA EXTREMA VEX ROBOTICS Competition",
+        "code": "RE-V5RC-26-5113"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286923,
+      "event": {
+        "id": 65113,
+        "name": "Torneo Nacional ROBOTICA EXTREMA VEX ROBOTICS Competition",
+        "code": "RE-V5RC-26-5113"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286924,
+      "event": {
+        "id": 65113,
+        "name": "Torneo Nacional ROBOTICA EXTREMA VEX ROBOTICS Competition",
+        "code": "RE-V5RC-26-5113"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286925,
+      "event": {
+        "id": 65113,
+        "name": "Torneo Nacional ROBOTICA EXTREMA VEX ROBOTICS Competition",
+        "code": "RE-V5RC-26-5113"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

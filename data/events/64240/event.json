@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64240,
+    "sku": "RE-V5RC-26-4240",
+    "name": "Blended - VEX V5 2026-2027 India National Championship: Override™: VEX V5 Robotics Competition™ - Hosted by Get set learn",
+    "start": "2027-01-16T00:00:00-05:00",
+    "end": "2027-01-16T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Ascend International School",
+      "address_1": "Sharada Devi Road",
+      "address_2": null,
+      "city": "Mumbai",
+      "region": null,
+      "postcode": "400051",
+      "country": "India",
+      "coordinates": {
+        "lat": 19.068472,
+        "lon": 72.849322
+      }
+    },
+    "locations": {
+      "2027-01-16": {
+        "venue": "Ascend International School",
+        "address_1": "Sharada Devi Road",
+        "address_2": null,
+        "city": "Mumbai",
+        "region": null,
+        "postcode": "400051",
+        "country": "India",
+        "coordinates": {
+          "lat": 19.068472,
+          "lon": 72.849322
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "National",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

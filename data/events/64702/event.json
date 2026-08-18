@@ -1,0 +1,97 @@
+{
+  "data": {
+    "id": 64702,
+    "sku": "RE-V5RC-26-4702",
+    "name": "Rio Hondo MS League - VEX V5 Invitational: VEX V5 Robotics Competition™ : Override™ : Middle School Only",
+    "start": "2026-10-10T00:00:00-04:00",
+    "end": "2027-01-30T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "The Steam Academy @ Burke",
+      "address_1": "8101 Orange Avenue",
+      "address_2": null,
+      "city": "Pico Rivera",
+      "region": "California",
+      "postcode": "90660",
+      "country": "United States",
+      "coordinates": {
+        "lat": 33.962393,
+        "lon": -118.094481
+      }
+    },
+    "locations": {
+      "2026-10-10": {
+        "venue": "The Steam Academy @ Burke",
+        "address_1": "8101 Orange Avenue",
+        "address_2": null,
+        "city": "Pico Rivera",
+        "region": "California",
+        "postcode": "90660",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.962393,
+          "lon": -118.094481
+        }
+      },
+      "2026-11-14": {
+        "venue": "The Steam Academy @ Burke",
+        "address_1": "8101 Orange Avenue",
+        "address_2": null,
+        "city": "Pico Rivera",
+        "region": "California",
+        "postcode": "90660",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.962393,
+          "lon": -118.094481
+        }
+      },
+      "2026-12-12": {
+        "venue": "The Steam Academy @ Burke",
+        "address_1": "8101 Orange Avenue",
+        "address_2": null,
+        "city": "Pico Rivera",
+        "region": "California",
+        "postcode": "90660",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.962393,
+          "lon": -118.094481
+        }
+      },
+      "2027-01-30": {
+        "venue": "The Steam Academy @ Burke",
+        "address_1": "8101 Orange Avenue",
+        "address_2": null,
+        "city": "Pico Rivera",
+        "region": "California",
+        "postcode": "90660",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.962393,
+          "lon": -118.094481
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

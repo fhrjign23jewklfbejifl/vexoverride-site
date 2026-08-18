@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64641,
+    "sku": "RE-V5RC-26-4641",
+    "name": "Kettering University Override Tournament: Gears & Gratitude: Blended VEX V5 Robotics Competition MS/HS",
+    "start": "2026-11-21T00:00:00-05:00",
+    "end": "2026-11-21T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Kettering University",
+      "address_1": "1700 University Avenue",
+      "address_2": null,
+      "city": "Flint",
+      "region": "Michigan",
+      "postcode": "48504",
+      "country": "United States",
+      "coordinates": {
+        "lat": 43.010968,
+        "lon": -83.714222
+      }
+    },
+    "locations": {
+      "2026-11-21": {
+        "venue": "Kettering University",
+        "address_1": "1700 University Avenue",
+        "address_2": null,
+        "city": "Flint",
+        "region": "Michigan",
+        "postcode": "48504",
+        "country": "United States",
+        "coordinates": {
+          "lat": 43.010968,
+          "lon": -83.714222
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

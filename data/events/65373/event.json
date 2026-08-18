@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65373,
+    "sku": "RE-V5RC-26-5373",
+    "name": "NorCal Silicon Valley Golden State Override™ Tournament # 2: VEX V5 Robotics Competition™, Blended MS & HS, In-Person with Digital Engineering Notebooks",
+    "start": "2027-01-09T00:00:00-05:00",
+    "end": "2027-01-09T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "India Community Center (ICC)",
+      "address_1": "525 Los Coches Street",
+      "address_2": null,
+      "city": "Milpitas",
+      "region": "California",
+      "postcode": "95035",
+      "country": "United States",
+      "coordinates": {
+        "lat": 37.431963,
+        "lon": -121.895299
+      }
+    },
+    "locations": {
+      "2027-01-09": {
+        "venue": "India Community Center (ICC)",
+        "address_1": "525 Los Coches Street",
+        "address_2": null,
+        "city": "Milpitas",
+        "region": "California",
+        "postcode": "95035",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.431963,
+          "lon": -121.895299
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

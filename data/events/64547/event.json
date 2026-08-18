@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64547,
+    "sku": "RE-V5RC-26-4547",
+    "name": "2026-2027赛季VEX机器人公开赛哈尔滨城市赛 V5RC",
+    "start": "2026-07-20T00:00:00-04:00",
+    "end": "2026-07-21T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "哈尔滨市松北区世贸大道99 号融创茂一楼中庭",
+      "address_1": "哈尔滨市松北区世贸大道99 号融创茂一楼中庭",
+      "address_2": null,
+      "city": "哈尔滨",
+      "region": "Heilongjiang",
+      "postcode": "150000",
+      "country": "China",
+      "coordinates": {
+        "lat": 45.80825,
+        "lon": 126.56279
+      }
+    },
+    "locations": {
+      "2026-07-20": {
+        "venue": "哈尔滨市松北区世贸大道99 号融创茂一楼中庭",
+        "address_1": "哈尔滨市松北区世贸大道99 号融创茂一楼中庭",
+        "address_2": null,
+        "city": "哈尔滨",
+        "region": "Heilongjiang",
+        "postcode": "150000",
+        "country": "China",
+        "coordinates": {
+          "lat": 45.80825,
+          "lon": 126.56279
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

@@ -1,0 +1,258 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64339/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64339/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64339/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 16,
+    "total": 16,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 281130,
+      "event": {
+        "id": 64339,
+        "name": "High School | Thailand VEX V5 National Championship 26-27: VEX V5 Robotics Competition™",
+        "code": "RE-V5RC-26-4339"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281131,
+      "event": {
+        "id": 64339,
+        "name": "High School | Thailand VEX V5 National Championship 26-27: VEX V5 Robotics Competition™",
+        "code": "RE-V5RC-26-4339"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281132,
+      "event": {
+        "id": 64339,
+        "name": "High School | Thailand VEX V5 National Championship 26-27: VEX V5 Robotics Competition™",
+        "code": "RE-V5RC-26-4339"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281133,
+      "event": {
+        "id": 64339,
+        "name": "High School | Thailand VEX V5 National Championship 26-27: VEX V5 Robotics Competition™",
+        "code": "RE-V5RC-26-4339"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281134,
+      "event": {
+        "id": 64339,
+        "name": "High School | Thailand VEX V5 National Championship 26-27: VEX V5 Robotics Competition™",
+        "code": "RE-V5RC-26-4339"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281135,
+      "event": {
+        "id": 64339,
+        "name": "High School | Thailand VEX V5 National Championship 26-27: VEX V5 Robotics Competition™",
+        "code": "RE-V5RC-26-4339"
+      },
+      "order": 71,
+      "title": "Robot Skills 2nd Place (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281136,
+      "event": {
+        "id": 64339,
+        "name": "High School | Thailand VEX V5 National Championship 26-27: VEX V5 Robotics Competition™",
+        "code": "RE-V5RC-26-4339"
+      },
+      "order": 72,
+      "title": "Robot Skills 3rd Place (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281137,
+      "event": {
+        "id": 64339,
+        "name": "High School | Thailand VEX V5 National Championship 26-27: VEX V5 Robotics Competition™",
+        "code": "RE-V5RC-26-4339"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281138,
+      "event": {
+        "id": 64339,
+        "name": "High School | Thailand VEX V5 National Championship 26-27: VEX V5 Robotics Competition™",
+        "code": "RE-V5RC-26-4339"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281139,
+      "event": {
+        "id": 64339,
+        "name": "High School | Thailand VEX V5 National Championship 26-27: VEX V5 Robotics Competition™",
+        "code": "RE-V5RC-26-4339"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281140,
+      "event": {
+        "id": 64339,
+        "name": "High School | Thailand VEX V5 National Championship 26-27: VEX V5 Robotics Competition™",
+        "code": "RE-V5RC-26-4339"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281141,
+      "event": {
+        "id": 64339,
+        "name": "High School | Thailand VEX V5 National Championship 26-27: VEX V5 Robotics Competition™",
+        "code": "RE-V5RC-26-4339"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281142,
+      "event": {
+        "id": 64339,
+        "name": "High School | Thailand VEX V5 National Championship 26-27: VEX V5 Robotics Competition™",
+        "code": "RE-V5RC-26-4339"
+      },
+      "order": 78,
+      "title": "Create Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281143,
+      "event": {
+        "id": 64339,
+        "name": "High School | Thailand VEX V5 National Championship 26-27: VEX V5 Robotics Competition™",
+        "code": "RE-V5RC-26-4339"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281144,
+      "event": {
+        "id": 64339,
+        "name": "High School | Thailand VEX V5 National Championship 26-27: VEX V5 Robotics Competition™",
+        "code": "RE-V5RC-26-4339"
+      },
+      "order": 80,
+      "title": "Energy Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281145,
+      "event": {
+        "id": 64339,
+        "name": "High School | Thailand VEX V5 National Championship 26-27: VEX V5 Robotics Competition™",
+        "code": "RE-V5RC-26-4339"
+      },
+      "order": 81,
+      "title": "Inspire Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

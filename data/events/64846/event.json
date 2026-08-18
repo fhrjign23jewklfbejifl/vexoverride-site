@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64846,
+    "sku": "RE-V5RC-26-4846",
+    "name": "Smoky Mountain Forge: High School Signature Event",
+    "start": "2026-10-09T00:00:00-04:00",
+    "end": "2026-10-10T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Sevierville Convention Center",
+      "address_1": "202 Gists Creek Road",
+      "address_2": null,
+      "city": "Sevierville",
+      "region": "Tennessee",
+      "postcode": "37876",
+      "country": "United States",
+      "coordinates": {
+        "lat": 35.89416,
+        "lon": -83.588778
+      }
+    },
+    "locations": {
+      "2026-10-09": {
+        "venue": "Sevierville Convention Center",
+        "address_1": "202 Gists Creek Road",
+        "address_2": null,
+        "city": "Sevierville",
+        "region": "Tennessee",
+        "postcode": "37876",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.89416,
+          "lon": -83.588778
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Signature",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

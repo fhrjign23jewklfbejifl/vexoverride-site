@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64913,
+    "sku": "RE-V5RC-26-4913",
+    "name": "Morris RoboRodeo VEX V5 Robotics Competition: Gears, Guts, and Glory.",
+    "start": "2026-12-05T00:00:00-05:00",
+    "end": "2026-12-05T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Morris School",
+      "address_1": "324 Toronto Ave E",
+      "address_2": null,
+      "city": "Morris",
+      "region": "Manitoba",
+      "postcode": "R0G 1K0",
+      "country": "Canada",
+      "coordinates": {
+        "lat": 49.351517,
+        "lon": -97.358795
+      }
+    },
+    "locations": {
+      "2026-12-05": {
+        "venue": "Morris School",
+        "address_1": "324 Toronto Ave E",
+        "address_2": null,
+        "city": "Morris",
+        "region": "Manitoba",
+        "postcode": "R0G 1K0",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 49.351517,
+          "lon": -97.358795
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

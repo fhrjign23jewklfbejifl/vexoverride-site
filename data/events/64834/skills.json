@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64834/skills?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64834/skills?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64834/skills",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 8,
+    "total": 8,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 79052948,
+      "event": {
+        "id": 64834,
+        "name": "NSW | Northwest | VEX V5 Robotics Competition™: (Blended) : Override™ School Tournament @ Oxley High School",
+        "code": "RE-V5RC-26-4834"
+      },
+      "team": {
+        "id": 198329,
+        "name": "23401D",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 1,
+      "score": 18,
+      "attempts": 2
+    },
+    {
+      "id": 79052949,
+      "event": {
+        "id": 64834,
+        "name": "NSW | Northwest | VEX V5 Robotics Competition™: (Blended) : Override™ School Tournament @ Oxley High School",
+        "code": "RE-V5RC-26-4834"
+      },
+      "team": {
+        "id": 198329,
+        "name": "23401D",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 1,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79052950,
+      "event": {
+        "id": 64834,
+        "name": "NSW | Northwest | VEX V5 Robotics Competition™: (Blended) : Override™ School Tournament @ Oxley High School",
+        "code": "RE-V5RC-26-4834"
+      },
+      "team": {
+        "id": 198334,
+        "name": "15820A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 2,
+      "score": 13,
+      "attempts": 3
+    },
+    {
+      "id": 79052951,
+      "event": {
+        "id": 64834,
+        "name": "NSW | Northwest | VEX V5 Robotics Competition™: (Blended) : Override™ School Tournament @ Oxley High School",
+        "code": "RE-V5RC-26-4834"
+      },
+      "team": {
+        "id": 198334,
+        "name": "15820A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 2,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79052952,
+      "event": {
+        "id": 64834,
+        "name": "NSW | Northwest | VEX V5 Robotics Competition™: (Blended) : Override™ School Tournament @ Oxley High School",
+        "code": "RE-V5RC-26-4834"
+      },
+      "team": {
+        "id": 185603,
+        "name": "23401B",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 3,
+      "score": 0,
+      "attempts": 1
+    },
+    {
+      "id": 79052953,
+      "event": {
+        "id": 64834,
+        "name": "NSW | Northwest | VEX V5 Robotics Competition™: (Blended) : Override™ School Tournament @ Oxley High School",
+        "code": "RE-V5RC-26-4834"
+      },
+      "team": {
+        "id": 185603,
+        "name": "23401B",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 3,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79052954,
+      "event": {
+        "id": 64834,
+        "name": "NSW | Northwest | VEX V5 Robotics Competition™: (Blended) : Override™ School Tournament @ Oxley High School",
+        "code": "RE-V5RC-26-4834"
+      },
+      "team": {
+        "id": 185604,
+        "name": "23401C",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 3,
+      "score": 0,
+      "attempts": 1
+    },
+    {
+      "id": 79052955,
+      "event": {
+        "id": 64834,
+        "name": "NSW | Northwest | VEX V5 Robotics Competition™: (Blended) : Override™ School Tournament @ Oxley High School",
+        "code": "RE-V5RC-26-4834"
+      },
+      "team": {
+        "id": 185604,
+        "name": "23401C",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 3,
+      "score": 0,
+      "attempts": 0
+    }
+  ]
+}

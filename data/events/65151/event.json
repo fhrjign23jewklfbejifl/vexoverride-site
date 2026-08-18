@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65151,
+    "sku": "RE-V5RC-26-5151",
+    "name": "2027 Davis DUEL: VEX V5 Robotics Competition, Blended HS/MS, Remote Notebooks, Remote First Interview",
+    "start": "2027-02-13T00:00:00-05:00",
+    "end": "2027-02-13T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Davis High School",
+      "address_1": "325 South Main Street",
+      "address_2": null,
+      "city": "Kaysville",
+      "region": "Utah",
+      "postcode": "84037",
+      "country": "United States",
+      "coordinates": {
+        "lat": 41.029518,
+        "lon": -111.93126
+      }
+    },
+    "locations": {
+      "2027-02-13": {
+        "venue": "Davis High School",
+        "address_1": "325 South Main Street",
+        "address_2": null,
+        "city": "Kaysville",
+        "region": "Utah",
+        "postcode": "84037",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.029518,
+          "lon": -111.93126
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

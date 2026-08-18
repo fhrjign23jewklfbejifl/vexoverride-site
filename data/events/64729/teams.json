@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64729/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64729/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64729/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 2,
+    "total": 2,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 197109,
+      "number": "3373X",
+      "team_name": "TBD",
+      "robot_name": "",
+      "organization": "Shores Robotics ",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Redwood City",
+        "region": "California",
+        "postcode": "94065",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.5,
+          "lon": -122.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 180849,
+      "number": "95120A",
+      "team_name": "REEVAAN",
+      "robot_name": "REEVAAN ROBOTICS A",
+      "organization": "REEVAAN ROBOTICS",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "San Jose",
+        "region": "California",
+        "postcode": "95120",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.2,
+          "lon": -121.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    }
+  ]
+}

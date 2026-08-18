@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65261/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65261/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65261/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 2,
+    "total": 2,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 287832,
+      "event": {
+        "id": 65261,
+        "name": "Auckland VRC5: Auckland | VEX V5 Robotics Competition™ (Blended) : Level Up™ Tournament #4 @ Kings College",
+        "code": "RE-V5RC-26-5261"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287833,
+      "event": {
+        "id": 65261,
+        "name": "Auckland VRC5: Auckland | VEX V5 Robotics Competition™ (Blended) : Level Up™ Tournament #4 @ Kings College",
+        "code": "RE-V5RC-26-5261"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65116/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65116/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65116/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 11,
+    "total": 11,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 286945,
+      "event": {
+        "id": 65116,
+        "name": "Rumble In the Rockies VEX V5RC Signature Event: Middle School",
+        "code": "RE-V5RC-26-5116"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286946,
+      "event": {
+        "id": 65116,
+        "name": "Rumble In the Rockies VEX V5RC Signature Event: Middle School",
+        "code": "RE-V5RC-26-5116"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286947,
+      "event": {
+        "id": 65116,
+        "name": "Rumble In the Rockies VEX V5RC Signature Event: Middle School",
+        "code": "RE-V5RC-26-5116"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286948,
+      "event": {
+        "id": 65116,
+        "name": "Rumble In the Rockies VEX V5RC Signature Event: Middle School",
+        "code": "RE-V5RC-26-5116"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286949,
+      "event": {
+        "id": 65116,
+        "name": "Rumble In the Rockies VEX V5RC Signature Event: Middle School",
+        "code": "RE-V5RC-26-5116"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286950,
+      "event": {
+        "id": 65116,
+        "name": "Rumble In the Rockies VEX V5RC Signature Event: Middle School",
+        "code": "RE-V5RC-26-5116"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286951,
+      "event": {
+        "id": 65116,
+        "name": "Rumble In the Rockies VEX V5RC Signature Event: Middle School",
+        "code": "RE-V5RC-26-5116"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286952,
+      "event": {
+        "id": 65116,
+        "name": "Rumble In the Rockies VEX V5RC Signature Event: Middle School",
+        "code": "RE-V5RC-26-5116"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286953,
+      "event": {
+        "id": 65116,
+        "name": "Rumble In the Rockies VEX V5RC Signature Event: Middle School",
+        "code": "RE-V5RC-26-5116"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286954,
+      "event": {
+        "id": 65116,
+        "name": "Rumble In the Rockies VEX V5RC Signature Event: Middle School",
+        "code": "RE-V5RC-26-5116"
+      },
+      "order": 78,
+      "title": "Create Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286955,
+      "event": {
+        "id": 65116,
+        "name": "Rumble In the Rockies VEX V5RC Signature Event: Middle School",
+        "code": "RE-V5RC-26-5116"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

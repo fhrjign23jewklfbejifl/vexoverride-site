@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64486,
+    "sku": "RE-V5RC-26-4486",
+    "name": "Auckland | VEX V5 Robotics Competition™ (Blended): Override™ Scrimmage #1 @ Glenfield College",
+    "start": "2026-06-27T00:00:00-04:00",
+    "end": "2026-06-27T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Glenfield College",
+      "address_1": "60 Kaipatiki Road",
+      "address_2": null,
+      "city": "Auckland",
+      "region": "Auckland",
+      "postcode": "0629",
+      "country": "New Zealand",
+      "coordinates": {
+        "lat": -36.780376,
+        "lon": 174.714556
+      }
+    },
+    "locations": {
+      "2026-06-27": {
+        "venue": "Glenfield College",
+        "address_1": "60 Kaipatiki Road",
+        "address_2": null,
+        "city": "Auckland",
+        "region": "Auckland",
+        "postcode": "0629",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -36.780376,
+          "lon": 174.714556
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

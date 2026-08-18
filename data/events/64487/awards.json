@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64487/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64487/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64487/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 2,
+    "total": 2,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 282450,
+      "event": {
+        "id": 64487,
+        "name": "2026 Beijing Invitational Competition(V5-MS Override)",
+        "code": "RE-V5RC-26-4487"
+      },
+      "order": 61,
+      "title": "Excellence Award - Middle School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282451,
+      "event": {
+        "id": 64487,
+        "name": "2026 Beijing Invitational Competition(V5-MS Override)",
+        "code": "RE-V5RC-26-4487"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

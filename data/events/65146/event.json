@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65146,
+    "sku": "RE-V5RC-26-5146",
+    "name": "Battle at the Bluff: VEX V5 Robotics Competition™",
+    "start": "2026-09-05T00:00:00-04:00",
+    "end": "2026-09-05T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Bluff City Elementary School",
+      "address_1": "282 J. Forrest Thomas St.",
+      "address_2": null,
+      "city": "Bluff City",
+      "region": "Tennessee",
+      "postcode": "37617",
+      "country": "United States",
+      "coordinates": {
+        "lat": 36.471754,
+        "lon": -82.262877
+      }
+    },
+    "locations": {
+      "2026-09-05": {
+        "venue": "Bluff City Elementary School",
+        "address_1": "282 J. Forrest Thomas St.",
+        "address_2": null,
+        "city": "Bluff City",
+        "region": "Tennessee",
+        "postcode": "37617",
+        "country": "United States",
+        "coordinates": {
+          "lat": 36.471754,
+          "lon": -82.262877
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

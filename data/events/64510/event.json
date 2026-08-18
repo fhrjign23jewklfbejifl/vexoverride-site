@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64510,
+    "sku": "RE-V5RC-26-4510",
+    "name": "VEX V5 Robotics Competition - German Masters (HS/MS): World Championship Qualifier",
+    "start": "2027-02-23T00:00:00-05:00",
+    "end": "2027-02-24T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "HAW Hamburg",
+      "address_1": "Berliner Tor 21",
+      "address_2": null,
+      "city": "Hamburg",
+      "region": "Hamburg",
+      "postcode": "20099",
+      "country": "Germany",
+      "coordinates": {
+        "lat": 53.555925,
+        "lon": 10.022183
+      }
+    },
+    "locations": {
+      "2027-02-23": {
+        "venue": "HAW Hamburg",
+        "address_1": "Berliner Tor 21",
+        "address_2": null,
+        "city": "Hamburg",
+        "region": "Hamburg",
+        "postcode": "20099",
+        "country": "Germany",
+        "coordinates": {
+          "lat": 53.555925,
+          "lon": 10.022183
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Regional",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

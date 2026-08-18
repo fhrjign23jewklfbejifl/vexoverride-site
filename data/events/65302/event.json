@@ -1,0 +1,84 @@
+{
+  "data": {
+    "id": 65302,
+    "sku": "RE-V5RC-26-5302",
+    "name": "2026-27 Kern Middle School V5 Robotics League: VEX V5 Robotics Competition: Override: MS Only",
+    "start": "2026-10-03T00:00:00-04:00",
+    "end": "2027-02-06T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Paul L. Cato Middle School",
+      "address_1": "4115 Vineland Road",
+      "address_2": null,
+      "city": "Bakersfield",
+      "region": "California",
+      "postcode": "93306",
+      "country": "United States",
+      "coordinates": {
+        "lat": 35.391111,
+        "lon": -118.895234
+      }
+    },
+    "locations": {
+      "2026-10-03": {
+        "venue": "Paul L. Cato Middle School",
+        "address_1": "4115 Vineland Road",
+        "address_2": null,
+        "city": "Bakersfield",
+        "region": "California",
+        "postcode": "93306",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.391111,
+          "lon": -118.895234
+        }
+      },
+      "2026-11-07": {
+        "venue": "Paul L. Cato Middle School",
+        "address_1": "4115 Vineland Road",
+        "address_2": null,
+        "city": "Bakersfield",
+        "region": "California",
+        "postcode": "93306",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.391111,
+          "lon": -118.895234
+        }
+      },
+      "2027-02-06": {
+        "venue": "Paul L. Cato Middle School",
+        "address_1": "4115 Vineland Road",
+        "address_2": null,
+        "city": "Bakersfield",
+        "region": "California",
+        "postcode": "93306",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.391111,
+          "lon": -118.895234
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65129,
+    "sku": "RE-V5RC-26-5129",
+    "name": "New Palestine High School Tournament: VEX V5 Robotics Competition™ Middle School and High School Teams",
+    "start": "2027-02-27T00:00:00-05:00",
+    "end": "2027-02-27T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "New Palestine High School",
+      "address_1": "4485 South Victory Drive",
+      "address_2": null,
+      "city": "New Palestine",
+      "region": "Indiana",
+      "postcode": "46163",
+      "country": "United States",
+      "coordinates": {
+        "lat": 39.719167,
+        "lon": -85.891473
+      }
+    },
+    "locations": {
+      "2027-02-27": {
+        "venue": "New Palestine High School",
+        "address_1": "4485 South Victory Drive",
+        "address_2": null,
+        "city": "New Palestine",
+        "region": "Indiana",
+        "postcode": "46163",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39.719167,
+          "lon": -85.891473
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

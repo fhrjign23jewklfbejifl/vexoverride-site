@@ -1,0 +1,123 @@
+{
+  "data": {
+    "id": 64527,
+    "sku": "RE-V5RC-26-4527",
+    "name": "2026 - 2027 VEX V5 (HS) KAIAC League: VEX V5 High School",
+    "start": "2026-09-30T00:00:00-04:00",
+    "end": "2026-12-11T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Seoul Foreign School",
+      "address_1": "39 Yeonhui-ro 22-gil, Seodaemun-gu, Seoul, South Korea",
+      "address_2": null,
+      "city": "Seoul",
+      "region": null,
+      "postcode": "03723",
+      "country": "Korea, Republic of",
+      "coordinates": {
+        "lat": 37.569493,
+        "lon": 126.937119
+      }
+    },
+    "locations": {
+      "2026-09-30": {
+        "venue": "Seoul Foreign School",
+        "address_1": "39 Yeonhui-ro 22-gil, Seodaemun-gu, Seoul, South Korea",
+        "address_2": null,
+        "city": "Seoul",
+        "region": null,
+        "postcode": "03723",
+        "country": "Korea, Republic of",
+        "coordinates": {
+          "lat": 37.569493,
+          "lon": 126.937119
+        }
+      },
+      "2026-10-21": {
+        "venue": "Korea International School",
+        "address_1": "373-6 Baekhyun-Dong, Bundang Gu, Seongnam-si,Gyeonggi-do, Korea",
+        "address_2": null,
+        "city": "Seoul",
+        "region": null,
+        "postcode": "",
+        "country": "Korea, Republic of",
+        "coordinates": {
+          "lat": 37.379336,
+          "lon": 127.106041
+        }
+      },
+      "2026-10-28": {
+        "venue": "Taejon Christian International School",
+        "address_1": "77 Yongsan 2-ro, Yuseong Gu",
+        "address_2": null,
+        "city": "Daejeon",
+        "region": null,
+        "postcode": "34035",
+        "country": "Korea, Republic of",
+        "coordinates": {
+          "lat": 36.415964,
+          "lon": 127.399068
+        }
+      },
+      "2026-11-11": {
+        "venue": "Seoul Foreign School",
+        "address_1": "39 Yeonhui-ro 22-gil, Seodaemun-gu, Seoul, South Korea",
+        "address_2": null,
+        "city": "Seoul",
+        "region": null,
+        "postcode": "03723",
+        "country": "Korea, Republic of",
+        "coordinates": {
+          "lat": 37.569493,
+          "lon": 126.937119
+        }
+      },
+      "2026-11-25": {
+        "venue": "Gyeonggi Suwon International School",
+        "address_1": "29-3 Young Tong Dong, Young Tong Gu Suwon, Korea",
+        "address_2": null,
+        "city": "Seoul",
+        "region": null,
+        "postcode": "443-808",
+        "country": "Korea, Republic of",
+        "coordinates": {
+          "lat": 37.550263,
+          "lon": 126.997083
+        }
+      },
+      "2026-12-11": {
+        "venue": "Seoul Foreign School",
+        "address_1": "39 Yeonhui-ro 22-gil, Seodaemun-gu, Seoul, South Korea",
+        "address_2": null,
+        "city": "Seoul",
+        "region": null,
+        "postcode": "03723",
+        "country": "Korea, Republic of",
+        "coordinates": {
+          "lat": 37.569493,
+          "lon": 126.937119
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

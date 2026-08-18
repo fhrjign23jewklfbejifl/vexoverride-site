@@ -1,0 +1,97 @@
+{
+  "data": {
+    "id": 64213,
+    "sku": "RE-V5RC-26-4213",
+    "name": "Kern Robotics High School League '26-'27 - AM: VEX V5 Robotics Competition \"Override\" - HS Only",
+    "start": "2026-10-17T00:00:00-04:00",
+    "end": "2027-01-09T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Highland High School",
+      "address_1": "2900 Royal Scots Way",
+      "address_2": null,
+      "city": "Bakersfield",
+      "region": "California",
+      "postcode": "93306",
+      "country": "United States",
+      "coordinates": {
+        "lat": 35.401071,
+        "lon": -118.933213
+      }
+    },
+    "locations": {
+      "2026-10-17": {
+        "venue": "Highland High School",
+        "address_1": "2900 Royal Scots Way",
+        "address_2": null,
+        "city": "Bakersfield",
+        "region": "California",
+        "postcode": "93306",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.401071,
+          "lon": -118.933213
+        }
+      },
+      "2026-11-14": {
+        "venue": "Centennial High School",
+        "address_1": "8601 Hageman Road",
+        "address_2": null,
+        "city": "Bakersfield",
+        "region": "California",
+        "postcode": "93312",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.397816,
+          "lon": -119.09908
+        }
+      },
+      "2026-12-12": {
+        "venue": "Frontier High School",
+        "address_1": "6401 Allen Road",
+        "address_2": null,
+        "city": "Bakersfield",
+        "region": "California",
+        "postcode": "93314",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.417437,
+          "lon": -119.148514
+        }
+      },
+      "2027-01-09": {
+        "venue": "North High School",
+        "address_1": "300 Galaxy Avenue",
+        "address_2": null,
+        "city": "Bakersfield",
+        "region": "California",
+        "postcode": "93308",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.429075,
+          "lon": -119.027808
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64500,
+    "sku": "RE-V5RC-26-4500",
+    "name": "2026 Beijing Invitational Competition(V5-HS Override)",
+    "start": "2026-08-19T00:00:00-04:00",
+    "end": "2026-08-23T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Beiren Etrong International Exhibition&Convention Center",
+      "address_1": "No.6 Rongchang East Street, Yizhuang, Daxing District, Beijing, China.",
+      "address_2": null,
+      "city": "Beijing",
+      "region": "Beijing",
+      "postcode": "100000",
+      "country": "China",
+      "coordinates": {
+        "lat": 39.78384,
+        "lon": 116.52681
+      }
+    },
+    "locations": {
+      "2026-08-19": {
+        "venue": "Beiren Etrong International Exhibition&Convention Center",
+        "address_1": "No.6 Rongchang East Street, Yizhuang, Daxing District, Beijing, China.",
+        "address_2": null,
+        "city": "Beijing",
+        "region": "Beijing",
+        "postcode": "100000",
+        "country": "China",
+        "coordinates": {
+          "lat": 39.78384,
+          "lon": 116.52681
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

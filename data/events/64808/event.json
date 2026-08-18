@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64808,
+    "sku": "RE-V5RC-26-4808",
+    "name": "Stoga Summit MS V5RC 2026-2027 : Override: Conestoga MS VEX V5 Robotics Competition",
+    "start": "2027-01-17T00:00:00-05:00",
+    "end": "2027-01-17T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Conestoga HS",
+      "address_1": "200 Irish Road",
+      "address_2": null,
+      "city": "Berwyn",
+      "region": "Pennsylvania",
+      "postcode": "19312",
+      "country": "United States",
+      "coordinates": {
+        "lat": 40.047611,
+        "lon": -75.454136
+      }
+    },
+    "locations": {
+      "2027-01-17": {
+        "venue": "Conestoga HS",
+        "address_1": "200 Irish Road",
+        "address_2": null,
+        "city": "Berwyn",
+        "region": "Pennsylvania",
+        "postcode": "19312",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40.047611,
+          "lon": -75.454136
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

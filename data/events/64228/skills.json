@@ -1,0 +1,202 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64228/skills?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64228/skills?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64228/skills",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 8,
+    "total": 8,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 79050224,
+      "event": {
+        "id": 64228,
+        "name": "VIC | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Templestowe College - Season Opener",
+        "code": "RE-V5RC-26-4228"
+      },
+      "team": {
+        "id": 170598,
+        "name": "3477D",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 1,
+      "score": 38,
+      "attempts": 1
+    },
+    {
+      "id": 79050225,
+      "event": {
+        "id": 64228,
+        "name": "VIC | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Templestowe College - Season Opener",
+        "code": "RE-V5RC-26-4228"
+      },
+      "team": {
+        "id": 170598,
+        "name": "3477D",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 1,
+      "score": 8,
+      "attempts": 1
+    },
+    {
+      "id": 79050226,
+      "event": {
+        "id": 64228,
+        "name": "VIC | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Templestowe College - Season Opener",
+        "code": "RE-V5RC-26-4228"
+      },
+      "team": {
+        "id": 154792,
+        "name": "3477C",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 2,
+      "score": 38,
+      "attempts": 2
+    },
+    {
+      "id": 79050227,
+      "event": {
+        "id": 64228,
+        "name": "VIC | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Templestowe College - Season Opener",
+        "code": "RE-V5RC-26-4228"
+      },
+      "team": {
+        "id": 154792,
+        "name": "3477C",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 2,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79050228,
+      "event": {
+        "id": 64228,
+        "name": "VIC | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Templestowe College - Season Opener",
+        "code": "RE-V5RC-26-4228"
+      },
+      "team": {
+        "id": 189308,
+        "name": "84134A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 3,
+      "score": 18,
+      "attempts": 1
+    },
+    {
+      "id": 79050229,
+      "event": {
+        "id": 64228,
+        "name": "VIC | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Templestowe College - Season Opener",
+        "code": "RE-V5RC-26-4228"
+      },
+      "team": {
+        "id": 189308,
+        "name": "84134A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 3,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79050230,
+      "event": {
+        "id": 64228,
+        "name": "VIC | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Templestowe College - Season Opener",
+        "code": "RE-V5RC-26-4228"
+      },
+      "team": {
+        "id": 170597,
+        "name": "3477B",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 4,
+      "score": 8,
+      "attempts": 1
+    },
+    {
+      "id": 79050231,
+      "event": {
+        "id": 64228,
+        "name": "VIC | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Templestowe College - Season Opener",
+        "code": "RE-V5RC-26-4228"
+      },
+      "team": {
+        "id": 170597,
+        "name": "3477B",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 4,
+      "score": 8,
+      "attempts": 1
+    }
+  ]
+}

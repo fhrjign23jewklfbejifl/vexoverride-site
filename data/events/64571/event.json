@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64571,
+    "sku": "RE-V5RC-26-4571",
+    "name": "Bots @ Bristol VEX V5 MS Robotics Competition™ Signature Event: VEX V5 Robotics Competition, Middle School",
+    "start": "2027-02-11T00:00:00-05:00",
+    "end": "2027-02-12T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Bristol Motor Speedway",
+      "address_1": "151 Speedway Boulevard",
+      "address_2": null,
+      "city": "Bristol",
+      "region": "Tennessee",
+      "postcode": "37620",
+      "country": "United States",
+      "coordinates": {
+        "lat": 36.516301,
+        "lon": -82.260287
+      }
+    },
+    "locations": {
+      "2027-02-11": {
+        "venue": "Bristol Motor Speedway",
+        "address_1": "151 Speedway Boulevard",
+        "address_2": null,
+        "city": "Bristol",
+        "region": "Tennessee",
+        "postcode": "37620",
+        "country": "United States",
+        "coordinates": {
+          "lat": 36.516301,
+          "lon": -82.260287
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Signature",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

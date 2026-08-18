@@ -1,0 +1,288 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64819/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64819/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64819/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 18,
+    "total": 18,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 284792,
+      "event": {
+        "id": 64819,
+        "name": "2027 All Service JROTC National VEX Robotics Championship: VEX Robotics Competition",
+        "code": "RE-V5RC-26-4819"
+      },
+      "order": 1,
+      "title": "VRC JROTC National Champions",
+      "qualifications": [],
+      "designation": "tournament",
+      "classification": "champion",
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284793,
+      "event": {
+        "id": 64819,
+        "name": "2027 All Service JROTC National VEX Robotics Championship: VEX Robotics Competition",
+        "code": "RE-V5RC-26-4819"
+      },
+      "order": 2,
+      "title": "VRC JROTC National Finalists",
+      "qualifications": [],
+      "designation": "tournament",
+      "classification": "finalist",
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284794,
+      "event": {
+        "id": 64819,
+        "name": "2027 All Service JROTC National VEX Robotics Championship: VEX Robotics Competition",
+        "code": "RE-V5RC-26-4819"
+      },
+      "order": 3,
+      "title": "VRC JROTC Robot Skills National Champions",
+      "qualifications": [],
+      "designation": "tournament",
+      "classification": "champion",
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284795,
+      "event": {
+        "id": 64819,
+        "name": "2027 All Service JROTC National VEX Robotics Championship: VEX Robotics Competition",
+        "code": "RE-V5RC-26-4819"
+      },
+      "order": 4,
+      "title": "VRC JROTC Robot Skills National 2nd Place",
+      "qualifications": [],
+      "designation": "tournament",
+      "classification": "finalist",
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284796,
+      "event": {
+        "id": 64819,
+        "name": "2027 All Service JROTC National VEX Robotics Championship: VEX Robotics Competition",
+        "code": "RE-V5RC-26-4819"
+      },
+      "order": 5,
+      "title": "VRC JROTC Robot Skills National 3rd Place",
+      "qualifications": [],
+      "designation": "tournament",
+      "classification": "semifinalist",
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284797,
+      "event": {
+        "id": 64819,
+        "name": "2027 All Service JROTC National VEX Robotics Championship: VEX Robotics Competition",
+        "code": "RE-V5RC-26-4819"
+      },
+      "order": 35,
+      "title": "Excellence Award (WC)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284798,
+      "event": {
+        "id": 64819,
+        "name": "2027 All Service JROTC National VEX Robotics Championship: VEX Robotics Competition",
+        "code": "RE-V5RC-26-4819"
+      },
+      "order": 44,
+      "title": "Division Champions (WC)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284799,
+      "event": {
+        "id": 64819,
+        "name": "2027 All Service JROTC National VEX Robotics Championship: VEX Robotics Competition",
+        "code": "RE-V5RC-26-4819"
+      },
+      "order": 45,
+      "title": "Division Finalists (WC)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284800,
+      "event": {
+        "id": 64819,
+        "name": "2027 All Service JROTC National VEX Robotics Championship: VEX Robotics Competition",
+        "code": "RE-V5RC-26-4819"
+      },
+      "order": 49,
+      "title": "Amaze Award (WC) ",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284801,
+      "event": {
+        "id": 64819,
+        "name": "2027 All Service JROTC National VEX Robotics Championship: VEX Robotics Competition",
+        "code": "RE-V5RC-26-4819"
+      },
+      "order": 50,
+      "title": "Build Award (WC) ",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284802,
+      "event": {
+        "id": 64819,
+        "name": "2027 All Service JROTC National VEX Robotics Championship: VEX Robotics Competition",
+        "code": "RE-V5RC-26-4819"
+      },
+      "order": 51,
+      "title": "Create Award (WC) ",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284803,
+      "event": {
+        "id": 64819,
+        "name": "2027 All Service JROTC National VEX Robotics Championship: VEX Robotics Competition",
+        "code": "RE-V5RC-26-4819"
+      },
+      "order": 52,
+      "title": "Design Award (WC) ",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284804,
+      "event": {
+        "id": 64819,
+        "name": "2027 All Service JROTC National VEX Robotics Championship: VEX Robotics Competition",
+        "code": "RE-V5RC-26-4819"
+      },
+      "order": 53,
+      "title": "Energy Award (WC) ",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284805,
+      "event": {
+        "id": 64819,
+        "name": "2027 All Service JROTC National VEX Robotics Championship: VEX Robotics Competition",
+        "code": "RE-V5RC-26-4819"
+      },
+      "order": 54,
+      "title": "Innovate Award (WC) ",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284806,
+      "event": {
+        "id": 64819,
+        "name": "2027 All Service JROTC National VEX Robotics Championship: VEX Robotics Competition",
+        "code": "RE-V5RC-26-4819"
+      },
+      "order": 55,
+      "title": "Inspire Award (WC) ",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284807,
+      "event": {
+        "id": 64819,
+        "name": "2027 All Service JROTC National VEX Robotics Championship: VEX Robotics Competition",
+        "code": "RE-V5RC-26-4819"
+      },
+      "order": 56,
+      "title": "Judges Award (WC) ",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284808,
+      "event": {
+        "id": 64819,
+        "name": "2027 All Service JROTC National VEX Robotics Championship: VEX Robotics Competition",
+        "code": "RE-V5RC-26-4819"
+      },
+      "order": 57,
+      "title": "Sportsmanship Award (WC) ",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284809,
+      "event": {
+        "id": 64819,
+        "name": "2027 All Service JROTC National VEX Robotics Championship: VEX Robotics Competition",
+        "code": "RE-V5RC-26-4819"
+      },
+      "order": 58,
+      "title": "Think Award (WC)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

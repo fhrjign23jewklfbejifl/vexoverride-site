@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64651/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64651/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64651/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 10,
+    "total": 10,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 283546,
+      "event": {
+        "id": 64651,
+        "name": "DRC VEX V5 Robotics Competition #1: HS & MS, Remote Engineering Notebooks and Interviews",
+        "code": "RE-V5RC-26-4651"
+      },
+      "order": 60,
+      "title": "Excellence Award - High School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283547,
+      "event": {
+        "id": 64651,
+        "name": "DRC VEX V5 Robotics Competition #1: HS & MS, Remote Engineering Notebooks and Interviews",
+        "code": "RE-V5RC-26-4651"
+      },
+      "order": 61,
+      "title": "Excellence Award - Middle School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283548,
+      "event": {
+        "id": 64651,
+        "name": "DRC VEX V5 Robotics Competition #1: HS & MS, Remote Engineering Notebooks and Interviews",
+        "code": "RE-V5RC-26-4651"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283549,
+      "event": {
+        "id": 64651,
+        "name": "DRC VEX V5 Robotics Competition #1: HS & MS, Remote Engineering Notebooks and Interviews",
+        "code": "RE-V5RC-26-4651"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283550,
+      "event": {
+        "id": 64651,
+        "name": "DRC VEX V5 Robotics Competition #1: HS & MS, Remote Engineering Notebooks and Interviews",
+        "code": "RE-V5RC-26-4651"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283551,
+      "event": {
+        "id": 64651,
+        "name": "DRC VEX V5 Robotics Competition #1: HS & MS, Remote Engineering Notebooks and Interviews",
+        "code": "RE-V5RC-26-4651"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283552,
+      "event": {
+        "id": 64651,
+        "name": "DRC VEX V5 Robotics Competition #1: HS & MS, Remote Engineering Notebooks and Interviews",
+        "code": "RE-V5RC-26-4651"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283553,
+      "event": {
+        "id": 64651,
+        "name": "DRC VEX V5 Robotics Competition #1: HS & MS, Remote Engineering Notebooks and Interviews",
+        "code": "RE-V5RC-26-4651"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283554,
+      "event": {
+        "id": 64651,
+        "name": "DRC VEX V5 Robotics Competition #1: HS & MS, Remote Engineering Notebooks and Interviews",
+        "code": "RE-V5RC-26-4651"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283555,
+      "event": {
+        "id": 64651,
+        "name": "DRC VEX V5 Robotics Competition #1: HS & MS, Remote Engineering Notebooks and Interviews",
+        "code": "RE-V5RC-26-4651"
+      },
+      "order": 78,
+      "title": "Create Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

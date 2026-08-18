@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64547/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64547/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64547/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 3,
+    "total": 3,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 282809,
+      "event": {
+        "id": 64547,
+        "name": "2026-2027赛季VEX机器人公开赛哈尔滨城市赛 V5RC",
+        "code": "RE-V5RC-26-4547"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282810,
+      "event": {
+        "id": 64547,
+        "name": "2026-2027赛季VEX机器人公开赛哈尔滨城市赛 V5RC",
+        "code": "RE-V5RC-26-4547"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282811,
+      "event": {
+        "id": 64547,
+        "name": "2026-2027赛季VEX机器人公开赛哈尔滨城市赛 V5RC",
+        "code": "RE-V5RC-26-4547"
+      },
+      "order": 65,
+      "title": "Tournament Semifinalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64481/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64481/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64481/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 3,
+    "total": 3,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 106314,
+      "number": "1737X",
+      "team_name": "Usually Fanta",
+      "robot_name": "",
+      "organization": "International Robotics Academy",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Almaty",
+        "region": null,
+        "postcode": "050000",
+        "country": "Kazakhstan",
+        "coordinates": {
+          "lat": 43.2,
+          "lon": 76.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 145730,
+      "number": "1737Y",
+      "team_name": "Blue Ribbon",
+      "robot_name": "",
+      "organization": "International Robotics Academy",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Almaty",
+        "region": null,
+        "postcode": "050000",
+        "country": "Kazakhstan",
+        "coordinates": {
+          "lat": 43.2,
+          "lon": 76.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 152263,
+      "number": "1737Z",
+      "team_name": "TerminatorZ",
+      "robot_name": "",
+      "organization": "International Robotics Academy",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Almaty",
+        "region": null,
+        "postcode": "050000",
+        "country": "Kazakhstan",
+        "coordinates": {
+          "lat": 43.2,
+          "lon": 76.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    }
+  ]
+}

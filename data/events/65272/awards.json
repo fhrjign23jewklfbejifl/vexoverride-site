@@ -1,0 +1,273 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65272/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65272/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65272/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 17,
+    "total": 17,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 287933,
+      "event": {
+        "id": 65272,
+        "name": "爱因斯坦联盟2026-2027 VEX机器人全国邀请赛（威海）: VEX V5 Robotics Competition初中组",
+        "code": "RE-V5RC-26-5272"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287934,
+      "event": {
+        "id": 65272,
+        "name": "爱因斯坦联盟2026-2027 VEX机器人全国邀请赛（威海）: VEX V5 Robotics Competition初中组",
+        "code": "RE-V5RC-26-5272"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287935,
+      "event": {
+        "id": 65272,
+        "name": "爱因斯坦联盟2026-2027 VEX机器人全国邀请赛（威海）: VEX V5 Robotics Competition初中组",
+        "code": "RE-V5RC-26-5272"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287936,
+      "event": {
+        "id": 65272,
+        "name": "爱因斯坦联盟2026-2027 VEX机器人全国邀请赛（威海）: VEX V5 Robotics Competition初中组",
+        "code": "RE-V5RC-26-5272"
+      },
+      "order": 65,
+      "title": "Tournament Semifinalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287937,
+      "event": {
+        "id": 65272,
+        "name": "爱因斯坦联盟2026-2027 VEX机器人全国邀请赛（威海）: VEX V5 Robotics Competition初中组",
+        "code": "RE-V5RC-26-5272"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287938,
+      "event": {
+        "id": 65272,
+        "name": "爱因斯坦联盟2026-2027 VEX机器人全国邀请赛（威海）: VEX V5 Robotics Competition初中组",
+        "code": "RE-V5RC-26-5272"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287939,
+      "event": {
+        "id": 65272,
+        "name": "爱因斯坦联盟2026-2027 VEX机器人全国邀请赛（威海）: VEX V5 Robotics Competition初中组",
+        "code": "RE-V5RC-26-5272"
+      },
+      "order": 71,
+      "title": "Robot Skills 2nd Place (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287940,
+      "event": {
+        "id": 65272,
+        "name": "爱因斯坦联盟2026-2027 VEX机器人全国邀请赛（威海）: VEX V5 Robotics Competition初中组",
+        "code": "RE-V5RC-26-5272"
+      },
+      "order": 72,
+      "title": "Robot Skills 3rd Place (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287941,
+      "event": {
+        "id": 65272,
+        "name": "爱因斯坦联盟2026-2027 VEX机器人全国邀请赛（威海）: VEX V5 Robotics Competition初中组",
+        "code": "RE-V5RC-26-5272"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287942,
+      "event": {
+        "id": 65272,
+        "name": "爱因斯坦联盟2026-2027 VEX机器人全国邀请赛（威海）: VEX V5 Robotics Competition初中组",
+        "code": "RE-V5RC-26-5272"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287943,
+      "event": {
+        "id": 65272,
+        "name": "爱因斯坦联盟2026-2027 VEX机器人全国邀请赛（威海）: VEX V5 Robotics Competition初中组",
+        "code": "RE-V5RC-26-5272"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287944,
+      "event": {
+        "id": 65272,
+        "name": "爱因斯坦联盟2026-2027 VEX机器人全国邀请赛（威海）: VEX V5 Robotics Competition初中组",
+        "code": "RE-V5RC-26-5272"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287945,
+      "event": {
+        "id": 65272,
+        "name": "爱因斯坦联盟2026-2027 VEX机器人全国邀请赛（威海）: VEX V5 Robotics Competition初中组",
+        "code": "RE-V5RC-26-5272"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287946,
+      "event": {
+        "id": 65272,
+        "name": "爱因斯坦联盟2026-2027 VEX机器人全国邀请赛（威海）: VEX V5 Robotics Competition初中组",
+        "code": "RE-V5RC-26-5272"
+      },
+      "order": 78,
+      "title": "Create Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287947,
+      "event": {
+        "id": 65272,
+        "name": "爱因斯坦联盟2026-2027 VEX机器人全国邀请赛（威海）: VEX V5 Robotics Competition初中组",
+        "code": "RE-V5RC-26-5272"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287948,
+      "event": {
+        "id": 65272,
+        "name": "爱因斯坦联盟2026-2027 VEX机器人全国邀请赛（威海）: VEX V5 Robotics Competition初中组",
+        "code": "RE-V5RC-26-5272"
+      },
+      "order": 80,
+      "title": "Energy Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287949,
+      "event": {
+        "id": 65272,
+        "name": "爱因斯坦联盟2026-2027 VEX机器人全国邀请赛（威海）: VEX V5 Robotics Competition初中组",
+        "code": "RE-V5RC-26-5272"
+      },
+      "order": 81,
+      "title": "Inspire Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

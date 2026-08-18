@@ -1,0 +1,315 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64271/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64271/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64271/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 11,
+    "total": 11,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 185367,
+      "number": "2135A",
+      "team_name": "Iron Core",
+      "robot_name": "",
+      "organization": "Iron-Core Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Omaha",
+        "region": "Nebraska",
+        "postcode": "68130",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.2,
+          "lon": -96.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 58159,
+      "number": "3141S",
+      "team_name": "Here for the Snacks",
+      "robot_name": "",
+      "organization": "Gross Catholic Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bellevue",
+        "region": "Nebraska",
+        "postcode": "68147",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.2,
+          "lon": -96
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 184670,
+      "number": "3141W",
+      "team_name": "Wow Factor",
+      "robot_name": "",
+      "organization": "Gross Catholic Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bellevue",
+        "region": "Nebraska",
+        "postcode": "68147",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.2,
+          "lon": -96
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 124457,
+      "number": "43280A",
+      "team_name": "GG",
+      "robot_name": "",
+      "organization": "Elkhorn North High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Omaha",
+        "region": "Nebraska",
+        "postcode": "68116",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.3,
+          "lon": -96.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 135462,
+      "number": "43280C",
+      "team_name": "Zeus",
+      "robot_name": "",
+      "organization": "Elkhorn North High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Omaha",
+        "region": "Nebraska",
+        "postcode": "68116",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.3,
+          "lon": -96.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 160139,
+      "number": "43280D",
+      "team_name": "DΣLTΛ",
+      "robot_name": "",
+      "organization": "Elkhorn North High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Omaha",
+        "region": "Nebraska",
+        "postcode": "68116",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.3,
+          "lon": -96.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 175912,
+      "number": "43280V",
+      "team_name": "PΛNDORΛ",
+      "robot_name": "",
+      "organization": "Elkhorn North High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Omaha",
+        "region": "Nebraska",
+        "postcode": "68116",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.3,
+          "lon": -96.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 163366,
+      "number": "43280W",
+      "team_name": "ENHS W",
+      "robot_name": "",
+      "organization": "Elkhorn North High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Omaha",
+        "region": "Nebraska",
+        "postcode": "68116",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.3,
+          "lon": -96.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 146763,
+      "number": "43280X",
+      "team_name": "X-HAUST",
+      "robot_name": "",
+      "organization": "Elkhorn North High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Omaha",
+        "region": "Nebraska",
+        "postcode": "68116",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.3,
+          "lon": -96.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 174068,
+      "number": "50130A",
+      "team_name": "Trobots",
+      "robot_name": "",
+      "organization": "PARK HILL HIGH",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Kansas City",
+        "region": "Missouri",
+        "postcode": "64153",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39.2,
+          "lon": -94.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 192311,
+      "number": "50130B",
+      "team_name": "trojan.exe",
+      "robot_name": "",
+      "organization": "PARK HILL HIGH",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Kansas City",
+        "region": "Missouri",
+        "postcode": "64153",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39.2,
+          "lon": -94.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
+}

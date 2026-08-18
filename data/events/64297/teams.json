@@ -1,0 +1,639 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64297/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64297/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64297/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 23,
+    "total": 23,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 87453,
+      "number": "94M",
+      "team_name": "m&m's",
+      "robot_name": "m&m's",
+      "organization": "COMMUNITY SCHOOL OF NAPLES",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Naples",
+        "region": "Florida",
+        "postcode": "34109",
+        "country": "United States",
+        "coordinates": {
+          "lat": 26.2,
+          "lon": -81.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 87283,
+      "number": "94S",
+      "team_name": "Seahawks",
+      "robot_name": "",
+      "organization": "COMMUNITY SCHOOL OF NAPLES",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Naples",
+        "region": "Florida",
+        "postcode": "34109",
+        "country": "United States",
+        "coordinates": {
+          "lat": 26.2,
+          "lon": -81.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 87282,
+      "number": "94T",
+      "team_name": "Tiny Titans",
+      "robot_name": "",
+      "organization": "COMMUNITY SCHOOL OF NAPLES",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Naples",
+        "region": "Florida",
+        "postcode": "34109",
+        "country": "United States",
+        "coordinates": {
+          "lat": 26.2,
+          "lon": -81.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 83884,
+      "number": "94W",
+      "team_name": "Winnovators",
+      "robot_name": "",
+      "organization": "COMMUNITY SCHOOL OF NAPLES",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Naples",
+        "region": "Florida",
+        "postcode": "34109",
+        "country": "United States",
+        "coordinates": {
+          "lat": 26.2,
+          "lon": -81.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 83883,
+      "number": "94X",
+      "team_name": "FrostByte",
+      "robot_name": "",
+      "organization": "COMMUNITY SCHOOL OF NAPLES",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Naples",
+        "region": "Florida",
+        "postcode": "34109",
+        "country": "United States",
+        "coordinates": {
+          "lat": 26.2,
+          "lon": -81.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 122820,
+      "number": "663A",
+      "team_name": "&",
+      "robot_name": "/or",
+      "organization": "CHATTANOOGA CHRISTIAN SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Chattanooga",
+        "region": "Tennessee",
+        "postcode": "37409",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35,
+          "lon": -85.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 122823,
+      "number": "663D",
+      "team_name": "UltraViolet",
+      "robot_name": "Scotty R.",
+      "organization": "CHATTANOOGA CHRISTIAN SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Chattanooga",
+        "region": "Tennessee",
+        "postcode": "37409",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35,
+          "lon": -85.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 172015,
+      "number": "663H",
+      "team_name": "Target Acquired",
+      "robot_name": "T.O.D.D.",
+      "organization": "CHATTANOOGA CHRISTIAN SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Chattanooga",
+        "region": "Tennessee",
+        "postcode": "37409",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35,
+          "lon": -85.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 130549,
+      "number": "663K",
+      "team_name": "The Kangaroos",
+      "robot_name": "",
+      "organization": "CHATTANOOGA CHRISTIAN SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Chattanooga",
+        "region": "Tennessee",
+        "postcode": "37409",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35,
+          "lon": -85.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 184998,
+      "number": "2577X",
+      "team_name": "Funky Monkeys",
+      "robot_name": "chungus mungus",
+      "organization": "Monkey Business Incorporated",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Vestavia Hills",
+        "region": "Alabama",
+        "postcode": "35243",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.4,
+          "lon": -86.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 198855,
+      "number": "2578U",
+      "team_name": "Umizoomi",
+      "robot_name": "",
+      "organization": "Glitter Gang Enterprises",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Hoover",
+        "region": "Alabama",
+        "postcode": "35226",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.4,
+          "lon": -86.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 189212,
+      "number": "2775S",
+      "team_name": "Jackson Area Robotics EELS",
+      "robot_name": "Jackson Area Robotics",
+      "organization": "Jackson Area Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Jackson",
+        "region": "Tennessee",
+        "postcode": "38305",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.7,
+          "lon": -88.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 197499,
+      "number": "7046U",
+      "team_name": "Orbital",
+      "robot_name": "7046U",
+      "organization": "Collierville Independent Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Collierville",
+        "region": "Tennessee",
+        "postcode": "38017-9310",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35,
+          "lon": -89.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 56849,
+      "number": "9364E",
+      "team_name": "Iron Eagles - Ember",
+      "robot_name": "",
+      "organization": "Brentwood Academy",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Brentwood",
+        "region": "Tennessee",
+        "postcode": "37027",
+        "country": "United States",
+        "coordinates": {
+          "lat": 36,
+          "lon": -86.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 186190,
+      "number": "11227S",
+      "team_name": "Zoophytes",
+      "robot_name": "",
+      "organization": "Momentum Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Thompsons Station",
+        "region": "Tennessee",
+        "postcode": "37179",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.8,
+          "lon": -86.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 198387,
+      "number": "13205X",
+      "team_name": "Iris",
+      "robot_name": "",
+      "organization": "STEM SCHOOL CHATTANOOGA",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Chattanooga",
+        "region": "Tennessee",
+        "postcode": "37406",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.1,
+          "lon": -85.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 175169,
+      "number": "26163A",
+      "team_name": "Team Black Knights \"Lance\"",
+      "robot_name": "Lance",
+      "organization": "KENWOOD HIGH",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Clarksville",
+        "region": "Tennessee",
+        "postcode": "37042",
+        "country": "United States",
+        "coordinates": {
+          "lat": 36.6,
+          "lon": -87.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 185129,
+      "number": "26163X",
+      "team_name": "Team Black Knights \"Excalibur\"",
+      "robot_name": "Excalibur",
+      "organization": "KENWOOD HIGH",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Clarksville",
+        "region": "Tennessee",
+        "postcode": "37042",
+        "country": "United States",
+        "coordinates": {
+          "lat": 36.6,
+          "lon": -87.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 74102,
+      "number": "50914A",
+      "team_name": "Rust Buckets",
+      "robot_name": "Claude",
+      "organization": "COLUMBIA ACADEMY",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Columbia",
+        "region": "Tennessee",
+        "postcode": "38401",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.6,
+          "lon": -87.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 176627,
+      "number": "57711A",
+      "team_name": "Aluminum",
+      "robot_name": "Craftsman",
+      "organization": "Alchemy Global STEM Institute",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "White Pine",
+        "region": "Tennessee",
+        "postcode": "37890",
+        "country": "United States",
+        "coordinates": {
+          "lat": 36.1,
+          "lon": -83.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 157200,
+      "number": "57711E",
+      "team_name": "Screws, Gears & Engineers",
+      "robot_name": "",
+      "organization": "Alchemy Global STEM Institute",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "White Pine",
+        "region": "Tennessee",
+        "postcode": "37890",
+        "country": "United States",
+        "coordinates": {
+          "lat": 36.1,
+          "lon": -83.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 140655,
+      "number": "57711N",
+      "team_name": "ZipTies",
+      "robot_name": "ZipTies",
+      "organization": "Alchemy Global STEM Institute",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "White Pine",
+        "region": "Tennessee",
+        "postcode": "37890",
+        "country": "United States",
+        "coordinates": {
+          "lat": 36.1,
+          "lon": -83.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 191243,
+      "number": "99905G",
+      "team_name": "NAT 20 RoboGryphs",
+      "robot_name": "",
+      "organization": "ST GEORGE'S INDEPENDENT SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Collierville",
+        "region": "Tennessee",
+        "postcode": "38017",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.1,
+          "lon": -89.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
+}

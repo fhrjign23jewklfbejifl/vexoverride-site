@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64352,
+    "sku": "RE-V5RC-26-4352",
+    "name": "Glenbrook South HS VEX V5 Robotics Competition 26-27: Override: VEX V5 Robotics Competition",
+    "start": "2026-12-05T00:00:00-05:00",
+    "end": "2026-12-05T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "4000 W Lake Ave",
+      "address_1": "4000 West Lake Avenue",
+      "address_2": null,
+      "city": "Glenview",
+      "region": "Illinois",
+      "postcode": "60026",
+      "country": "United States",
+      "coordinates": {
+        "lat": 42.088738,
+        "lon": -87.851599
+      }
+    },
+    "locations": {
+      "2026-12-05": {
+        "venue": "4000 W Lake Ave",
+        "address_1": "4000 West Lake Avenue",
+        "address_2": null,
+        "city": "Glenview",
+        "region": "Illinois",
+        "postcode": "60026",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.088738,
+          "lon": -87.851599
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

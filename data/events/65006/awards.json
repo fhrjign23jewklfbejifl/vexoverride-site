@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65006/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65006/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65006/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 4,
+    "total": 4,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 286084,
+      "event": {
+        "id": 65006,
+        "name": "STAR Warriors - JROTC Drill Meet With Robotics and Drone Skills: During the annual SGP Drill Meet, teams will have the opportunity to participate in Robotics and Drone Skills Runs and competition events.",
+        "code": "RE-V5RC-26-5006"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286085,
+      "event": {
+        "id": 65006,
+        "name": "STAR Warriors - JROTC Drill Meet With Robotics and Drone Skills: During the annual SGP Drill Meet, teams will have the opportunity to participate in Robotics and Drone Skills Runs and competition events.",
+        "code": "RE-V5RC-26-5006"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286086,
+      "event": {
+        "id": 65006,
+        "name": "STAR Warriors - JROTC Drill Meet With Robotics and Drone Skills: During the annual SGP Drill Meet, teams will have the opportunity to participate in Robotics and Drone Skills Runs and competition events.",
+        "code": "RE-V5RC-26-5006"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286087,
+      "event": {
+        "id": 65006,
+        "name": "STAR Warriors - JROTC Drill Meet With Robotics and Drone Skills: During the annual SGP Drill Meet, teams will have the opportunity to participate in Robotics and Drone Skills Runs and competition events.",
+        "code": "RE-V5RC-26-5006"
+      },
+      "order": 80,
+      "title": "Energy Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

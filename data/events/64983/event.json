@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64983,
+    "sku": "RE-V5RC-26-4983",
+    "name": "Beach Brawl @ McBride High School: VEX V5 Robotics Competition™ Override™",
+    "start": "2026-11-14T00:00:00-05:00",
+    "end": "2026-11-14T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "McBride High School",
+      "address_1": "7025 Parkcrest Street",
+      "address_2": null,
+      "city": "Long Beach",
+      "region": "California",
+      "postcode": "90808",
+      "country": "United States",
+      "coordinates": {
+        "lat": 33.830326,
+        "lon": -118.095952
+      }
+    },
+    "locations": {
+      "2026-11-14": {
+        "venue": "McBride High School",
+        "address_1": "7025 Parkcrest Street",
+        "address_2": null,
+        "city": "Long Beach",
+        "region": "California",
+        "postcode": "90808",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.830326,
+          "lon": -118.095952
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

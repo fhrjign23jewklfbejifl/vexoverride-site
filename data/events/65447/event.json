@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65447,
+    "sku": "RE-V5RC-26-5447",
+    "name": "Auckland  | VEX V5 Robotics Competition™ (Blended): Override™  Tournament #7 @ Mt Albert Grammar School",
+    "start": "2026-10-17T00:00:00-04:00",
+    "end": "2026-10-17T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Mt Albert Grammar School",
+      "address_1": "Alberton Avenue, Mount Albert",
+      "address_2": null,
+      "city": "Tāmaki Makaurau",
+      "region": "Auckland",
+      "postcode": "1025",
+      "country": "New Zealand",
+      "coordinates": {
+        "lat": -36.884163,
+        "lon": 174.724895
+      }
+    },
+    "locations": {
+      "2026-10-17": {
+        "venue": "Mt Albert Grammar School",
+        "address_1": "Alberton Avenue, Mount Albert",
+        "address_2": null,
+        "city": "Tāmaki Makaurau",
+        "region": "Auckland",
+        "postcode": "1025",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -36.884163,
+          "lon": 174.724895
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

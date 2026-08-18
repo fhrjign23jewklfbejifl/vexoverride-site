@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65264,
+    "sku": "RE-V5RC-26-5264",
+    "name": "Unitec VEX V5 Blended Opener: VEX V5 Robotics Competition",
+    "start": "2026-10-11T00:00:00-04:00",
+    "end": "2026-10-11T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Unitec Career Cente",
+      "address_1": "7163 Raider Rd",
+      "address_2": null,
+      "city": "Bonne Terre",
+      "region": "Missouri",
+      "postcode": "63628",
+      "country": "United States",
+      "coordinates": {
+        "lat": 37.909005,
+        "lon": -90.526808
+      }
+    },
+    "locations": {
+      "2026-10-11": {
+        "venue": "Unitec Career Cente",
+        "address_1": "7163 Raider Rd",
+        "address_2": null,
+        "city": "Bonne Terre",
+        "region": "Missouri",
+        "postcode": "63628",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.909005,
+          "lon": -90.526808
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

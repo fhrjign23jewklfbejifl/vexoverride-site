@@ -1,0 +1,228 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64537/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64537/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64537/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 14,
+    "total": 14,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 282787,
+      "event": {
+        "id": 64537,
+        "name": "CVCHS UGLY Robotics Override #1 (Moved to SAT 10/17/2026): VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-4537"
+      },
+      "order": 60,
+      "title": "Excellence Award - High School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282788,
+      "event": {
+        "id": 64537,
+        "name": "CVCHS UGLY Robotics Override #1 (Moved to SAT 10/17/2026): VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-4537"
+      },
+      "order": 61,
+      "title": "Excellence Award - Middle School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282789,
+      "event": {
+        "id": 64537,
+        "name": "CVCHS UGLY Robotics Override #1 (Moved to SAT 10/17/2026): VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-4537"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282790,
+      "event": {
+        "id": 64537,
+        "name": "CVCHS UGLY Robotics Override #1 (Moved to SAT 10/17/2026): VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-4537"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282791,
+      "event": {
+        "id": 64537,
+        "name": "CVCHS UGLY Robotics Override #1 (Moved to SAT 10/17/2026): VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-4537"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282792,
+      "event": {
+        "id": 64537,
+        "name": "CVCHS UGLY Robotics Override #1 (Moved to SAT 10/17/2026): VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-4537"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282793,
+      "event": {
+        "id": 64537,
+        "name": "CVCHS UGLY Robotics Override #1 (Moved to SAT 10/17/2026): VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-4537"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282794,
+      "event": {
+        "id": 64537,
+        "name": "CVCHS UGLY Robotics Override #1 (Moved to SAT 10/17/2026): VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-4537"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282795,
+      "event": {
+        "id": 64537,
+        "name": "CVCHS UGLY Robotics Override #1 (Moved to SAT 10/17/2026): VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-4537"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282796,
+      "event": {
+        "id": 64537,
+        "name": "CVCHS UGLY Robotics Override #1 (Moved to SAT 10/17/2026): VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-4537"
+      },
+      "order": 78,
+      "title": "Create Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282797,
+      "event": {
+        "id": 64537,
+        "name": "CVCHS UGLY Robotics Override #1 (Moved to SAT 10/17/2026): VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-4537"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282798,
+      "event": {
+        "id": 64537,
+        "name": "CVCHS UGLY Robotics Override #1 (Moved to SAT 10/17/2026): VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-4537"
+      },
+      "order": 80,
+      "title": "Energy Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282799,
+      "event": {
+        "id": 64537,
+        "name": "CVCHS UGLY Robotics Override #1 (Moved to SAT 10/17/2026): VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-4537"
+      },
+      "order": 81,
+      "title": "Inspire Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282800,
+      "event": {
+        "id": 64537,
+        "name": "CVCHS UGLY Robotics Override #1 (Moved to SAT 10/17/2026): VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-4537"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

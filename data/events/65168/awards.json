@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65168/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65168/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65168/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 7,
+    "total": 7,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 287691,
+      "event": {
+        "id": 65168,
+        "name": "Yeti Elevate Robotics League BLENDED: Hosted by The Campus Robotics",
+        "code": "RE-V5RC-26-5168"
+      },
+      "order": 60,
+      "title": "Excellence Award - High School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287692,
+      "event": {
+        "id": 65168,
+        "name": "Yeti Elevate Robotics League BLENDED: Hosted by The Campus Robotics",
+        "code": "RE-V5RC-26-5168"
+      },
+      "order": 61,
+      "title": "Excellence Award - Middle School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287693,
+      "event": {
+        "id": 65168,
+        "name": "Yeti Elevate Robotics League BLENDED: Hosted by The Campus Robotics",
+        "code": "RE-V5RC-26-5168"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287694,
+      "event": {
+        "id": 65168,
+        "name": "Yeti Elevate Robotics League BLENDED: Hosted by The Campus Robotics",
+        "code": "RE-V5RC-26-5168"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287695,
+      "event": {
+        "id": 65168,
+        "name": "Yeti Elevate Robotics League BLENDED: Hosted by The Campus Robotics",
+        "code": "RE-V5RC-26-5168"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287696,
+      "event": {
+        "id": 65168,
+        "name": "Yeti Elevate Robotics League BLENDED: Hosted by The Campus Robotics",
+        "code": "RE-V5RC-26-5168"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287697,
+      "event": {
+        "id": 65168,
+        "name": "Yeti Elevate Robotics League BLENDED: Hosted by The Campus Robotics",
+        "code": "RE-V5RC-26-5168"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

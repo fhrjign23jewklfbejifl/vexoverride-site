@@ -1,0 +1,180 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65245/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65245/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65245/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 6,
+    "total": 6,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 155033,
+      "number": "1940A",
+      "team_name": "High-Q",
+      "robot_name": "High-Q",
+      "organization": "Knox Grammar School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Wahroonga",
+        "region": "New South Wales",
+        "postcode": "2076",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -33.7,
+          "lon": 151.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 155034,
+      "number": "1940B",
+      "team_name": "Axis",
+      "robot_name": "Axis",
+      "organization": "Knox Grammar School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Wahroonga",
+        "region": "New South Wales",
+        "postcode": "2076",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -33.7,
+          "lon": 151.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 173863,
+      "number": "1940C",
+      "team_name": "Knox Knights",
+      "robot_name": "",
+      "organization": "Knox Grammar School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Wahroonga",
+        "region": "New South Wales",
+        "postcode": "2076",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -33.7,
+          "lon": 151.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 185945,
+      "number": "1940E",
+      "team_name": "1940E",
+      "robot_name": "1940E",
+      "organization": "Knox Grammar School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Wahroonga",
+        "region": "New South Wales",
+        "postcode": "2076",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -33.7,
+          "lon": 151.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199213,
+      "number": "1940J",
+      "team_name": "1940J",
+      "robot_name": "1940J",
+      "organization": "Knox Grammar School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Wahroonga",
+        "region": "New South Wales",
+        "postcode": "2076",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -33.7,
+          "lon": 151.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 199212,
+      "number": "1940K",
+      "team_name": "1940K",
+      "robot_name": "1940K",
+      "organization": "Knox Grammar School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Wahroonga",
+        "region": "New South Wales",
+        "postcode": "2076",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -33.7,
+          "lon": 151.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    }
+  ]
+}

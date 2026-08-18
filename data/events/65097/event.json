@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65097,
+    "sku": "RE-V5RC-26-5097",
+    "name": "For the LORE of Bots- VEX V5 Robotics Competition™: Lovejoy High School Teams",
+    "start": "2026-10-31T00:00:00-04:00",
+    "end": "2026-10-31T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Lovejoy High School",
+      "address_1": "2350 Estates Parkway",
+      "address_2": null,
+      "city": "Lucas",
+      "region": "Texas",
+      "postcode": "75002",
+      "country": "United States",
+      "coordinates": {
+        "lat": 33.103889,
+        "lon": -96.613716
+      }
+    },
+    "locations": {
+      "2026-10-31": {
+        "venue": "Lovejoy High School",
+        "address_1": "2350 Estates Parkway",
+        "address_2": null,
+        "city": "Lucas",
+        "region": "Texas",
+        "postcode": "75002",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.103889,
+          "lon": -96.613716
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

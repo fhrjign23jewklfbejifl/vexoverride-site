@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64460/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64460/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64460/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 4,
+    "total": 4,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 153904,
+      "number": "13176A",
+      "team_name": "Smilebots ",
+      "robot_name": "",
+      "organization": "Smilebots Academy",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Massagno",
+        "region": "Tessin",
+        "postcode": "6900",
+        "country": "Switzerland",
+        "coordinates": {
+          "lat": 46,
+          "lon": 8.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 190446,
+      "number": "13176B",
+      "team_name": "SmileTeam B",
+      "robot_name": "",
+      "organization": "Smilebots Academy",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Massagno",
+        "region": "Tessin",
+        "postcode": "6900",
+        "country": "Switzerland",
+        "coordinates": {
+          "lat": 46,
+          "lon": 8.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 197072,
+      "number": "63312X",
+      "team_name": "ISZL Eagles",
+      "robot_name": "",
+      "organization": "International School of Zug and Luzern",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Huenenberg",
+        "region": "Zug",
+        "postcode": "6331",
+        "country": "Switzerland",
+        "coordinates": {
+          "lat": 47.2,
+          "lon": 8.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 197073,
+      "number": "63312Y",
+      "team_name": "ISZL Eagles ",
+      "robot_name": "",
+      "organization": "International School of Zug and Luzern",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Huenenberg",
+        "region": "Zug",
+        "postcode": "6331",
+        "country": "Switzerland",
+        "coordinates": {
+          "lat": 47.2,
+          "lon": 8.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
+}

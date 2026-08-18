@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65470,
+    "sku": "RE-V5RC-26-5470",
+    "name": "VEX V5 Robotics Competition | Stowe Override (MS/HS): Organised by Stowe School",
+    "start": "2026-10-09T00:00:00-04:00",
+    "end": "2026-10-09T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Marble hall, Stowe school",
+      "address_1": "Stowe school",
+      "address_2": null,
+      "city": "Stowe",
+      "region": "Buckinghamshire",
+      "postcode": "MK185EH",
+      "country": "United Kingdom",
+      "coordinates": {
+        "lat": 52.031238,
+        "lon": -1.017897
+      }
+    },
+    "locations": {
+      "2026-10-09": {
+        "venue": "Marble hall, Stowe school",
+        "address_1": "Stowe school",
+        "address_2": null,
+        "city": "Stowe",
+        "region": "Buckinghamshire",
+        "postcode": "MK185EH",
+        "country": "United Kingdom",
+        "coordinates": {
+          "lat": 52.031238,
+          "lon": -1.017897
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

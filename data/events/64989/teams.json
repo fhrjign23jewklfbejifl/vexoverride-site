@@ -1,0 +1,234 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64989/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64989/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64989/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 8,
+    "total": 8,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 198912,
+      "number": "13449K",
+      "team_name": "4K",
+      "robot_name": "DPO2",
+      "organization": "Myrtleford P12 College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Myrtleford",
+        "region": "Victoria",
+        "postcode": "3737",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -36.6,
+          "lon": 146.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 198913,
+      "number": "13449T",
+      "team_name": "Armadillo Robotics",
+      "robot_name": "Adrian",
+      "organization": "Myrtleford P12 College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Myrtleford",
+        "region": "Victoria",
+        "postcode": "3737",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -36.6,
+          "lon": 146.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199038,
+      "number": "14523N",
+      "team_name": "Wyvern Technologies",
+      "robot_name": "Athena",
+      "organization": "Newington College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Sydney",
+        "region": "New South Wales",
+        "postcode": "2120",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -33.9,
+          "lon": 151.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199422,
+      "number": "32119A",
+      "team_name": "Northern Lights",
+      "robot_name": "32119A",
+      "organization": "Reddam House North Shore",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Sydney",
+        "region": "New South Wales",
+        "postcode": "2060",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -33.8,
+          "lon": 151.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 199184,
+      "number": "32119C",
+      "team_name": "101 PSI",
+      "robot_name": "32119C",
+      "organization": "Reddam House North Shore",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Sydney",
+        "region": "New South Wales",
+        "postcode": "2060",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -33.8,
+          "lon": 151.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 197503,
+      "number": "42126A",
+      "team_name": "Trinity Legacy",
+      "robot_name": "Spirit",
+      "organization": "Trinity Anglican College Albury",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Albury",
+        "region": "New South Wales",
+        "postcode": "2640",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -36,
+          "lon": 147
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 197504,
+      "number": "42126B",
+      "team_name": "Trinity Artemis",
+      "robot_name": "Orion",
+      "organization": "Trinity Anglican College Albury",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Albury",
+        "region": "New South Wales",
+        "postcode": "2640",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -36,
+          "lon": 147
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 77299,
+      "number": "48327T",
+      "team_name": "Galen VEX 1",
+      "robot_name": "GCC1",
+      "organization": "Galen Catholic College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Wangaratta",
+        "region": "Victoria",
+        "postcode": "3677",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -36.3,
+          "lon": 146.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65283/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65283/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65283/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 7,
+    "total": 7,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 288040,
+      "event": {
+        "id": 65283,
+        "name": "Saratoga VEX V5 Robotics Competition™ #2: Override™ HS & MS Teams",
+        "code": "RE-V5RC-26-5283"
+      },
+      "order": 60,
+      "title": "Excellence Award - High School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288041,
+      "event": {
+        "id": 65283,
+        "name": "Saratoga VEX V5 Robotics Competition™ #2: Override™ HS & MS Teams",
+        "code": "RE-V5RC-26-5283"
+      },
+      "order": 61,
+      "title": "Excellence Award - Middle School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288042,
+      "event": {
+        "id": 65283,
+        "name": "Saratoga VEX V5 Robotics Competition™ #2: Override™ HS & MS Teams",
+        "code": "RE-V5RC-26-5283"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288043,
+      "event": {
+        "id": 65283,
+        "name": "Saratoga VEX V5 Robotics Competition™ #2: Override™ HS & MS Teams",
+        "code": "RE-V5RC-26-5283"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288044,
+      "event": {
+        "id": 65283,
+        "name": "Saratoga VEX V5 Robotics Competition™ #2: Override™ HS & MS Teams",
+        "code": "RE-V5RC-26-5283"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288045,
+      "event": {
+        "id": 65283,
+        "name": "Saratoga VEX V5 Robotics Competition™ #2: Override™ HS & MS Teams",
+        "code": "RE-V5RC-26-5283"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288046,
+      "event": {
+        "id": 65283,
+        "name": "Saratoga VEX V5 Robotics Competition™ #2: Override™ HS & MS Teams",
+        "code": "RE-V5RC-26-5283"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

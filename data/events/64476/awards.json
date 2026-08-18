@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64476/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64476/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64476/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 12,
+    "total": 12,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 282392,
+      "event": {
+        "id": 64476,
+        "name": "VEX V5 Robotics Competition™ (HS) Hong Kong Championship 2027: Hong Kong Tech Challenge 2027 - VEX V5 High School",
+        "code": "RE-V5RC-27-4476"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282393,
+      "event": {
+        "id": 64476,
+        "name": "VEX V5 Robotics Competition™ (HS) Hong Kong Championship 2027: Hong Kong Tech Challenge 2027 - VEX V5 High School",
+        "code": "RE-V5RC-27-4476"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282394,
+      "event": {
+        "id": 64476,
+        "name": "VEX V5 Robotics Competition™ (HS) Hong Kong Championship 2027: Hong Kong Tech Challenge 2027 - VEX V5 High School",
+        "code": "RE-V5RC-27-4476"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282395,
+      "event": {
+        "id": 64476,
+        "name": "VEX V5 Robotics Competition™ (HS) Hong Kong Championship 2027: Hong Kong Tech Challenge 2027 - VEX V5 High School",
+        "code": "RE-V5RC-27-4476"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282396,
+      "event": {
+        "id": 64476,
+        "name": "VEX V5 Robotics Competition™ (HS) Hong Kong Championship 2027: Hong Kong Tech Challenge 2027 - VEX V5 High School",
+        "code": "RE-V5RC-27-4476"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282397,
+      "event": {
+        "id": 64476,
+        "name": "VEX V5 Robotics Competition™ (HS) Hong Kong Championship 2027: Hong Kong Tech Challenge 2027 - VEX V5 High School",
+        "code": "RE-V5RC-27-4476"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282398,
+      "event": {
+        "id": 64476,
+        "name": "VEX V5 Robotics Competition™ (HS) Hong Kong Championship 2027: Hong Kong Tech Challenge 2027 - VEX V5 High School",
+        "code": "RE-V5RC-27-4476"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282399,
+      "event": {
+        "id": 64476,
+        "name": "VEX V5 Robotics Competition™ (HS) Hong Kong Championship 2027: Hong Kong Tech Challenge 2027 - VEX V5 High School",
+        "code": "RE-V5RC-27-4476"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282400,
+      "event": {
+        "id": 64476,
+        "name": "VEX V5 Robotics Competition™ (HS) Hong Kong Championship 2027: Hong Kong Tech Challenge 2027 - VEX V5 High School",
+        "code": "RE-V5RC-27-4476"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282401,
+      "event": {
+        "id": 64476,
+        "name": "VEX V5 Robotics Competition™ (HS) Hong Kong Championship 2027: Hong Kong Tech Challenge 2027 - VEX V5 High School",
+        "code": "RE-V5RC-27-4476"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282402,
+      "event": {
+        "id": 64476,
+        "name": "VEX V5 Robotics Competition™ (HS) Hong Kong Championship 2027: Hong Kong Tech Challenge 2027 - VEX V5 High School",
+        "code": "RE-V5RC-27-4476"
+      },
+      "order": 80,
+      "title": "Energy Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282403,
+      "event": {
+        "id": 64476,
+        "name": "VEX V5 Robotics Competition™ (HS) Hong Kong Championship 2027: Hong Kong Tech Challenge 2027 - VEX V5 High School",
+        "code": "RE-V5RC-27-4476"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64295,
+    "sku": "RE-V5RC-26-4295",
+    "name": "Lake Park High School West Campus V5RC HS Override Roselle IL: VEX V5 Robotics Competition Tournament with In-Person Judging and Skills",
+    "start": "2026-10-24T00:00:00-04:00",
+    "end": "2026-10-24T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Lake Park High School - West Campus",
+      "address_1": "500 West Bryn Mawr Avenue",
+      "address_2": null,
+      "city": "Roselle",
+      "region": "Illinois",
+      "postcode": "60172",
+      "country": "United States",
+      "coordinates": {
+        "lat": 41.976885,
+        "lon": -88.093534
+      }
+    },
+    "locations": {
+      "2026-10-24": {
+        "venue": "Lake Park High School - West Campus",
+        "address_1": "500 West Bryn Mawr Avenue",
+        "address_2": null,
+        "city": "Roselle",
+        "region": "Illinois",
+        "postcode": "60172",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.976885,
+          "lon": -88.093534
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

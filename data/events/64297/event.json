@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64297,
+    "sku": "RE-V5RC-26-4297",
+    "name": "Tennessee State Fair Robot Rodeo VEX V5 Override™ (HS/MS): VEX V5 Robotics Competition, Presented by Volunteer State Robotics Foundation",
+    "start": "2026-08-15T00:00:00-04:00",
+    "end": "2026-08-15T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Wilson County Tennessee State Fair",
+      "address_1": "945 East Baddour Parkway",
+      "address_2": null,
+      "city": "Lebanon",
+      "region": "Tennessee",
+      "postcode": "37087",
+      "country": "United States",
+      "coordinates": {
+        "lat": 36.198317,
+        "lon": -86.272675
+      }
+    },
+    "locations": {
+      "2026-08-15": {
+        "venue": "Wilson County Tennessee State Fair",
+        "address_1": "945 East Baddour Parkway",
+        "address_2": null,
+        "city": "Lebanon",
+        "region": "Tennessee",
+        "postcode": "37087",
+        "country": "United States",
+        "coordinates": {
+          "lat": 36.198317,
+          "lon": -86.272675
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Division 1",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": true,
+    "event_type": null
+  }
+}

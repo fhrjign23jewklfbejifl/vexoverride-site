@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64367,
+    "sku": "RE-V5RC-26-4367",
+    "name": "2026长三角VEX机器人精英赛: MS，Override",
+    "start": "2026-08-24T00:00:00-04:00",
+    "end": "2026-08-27T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "上海临港凯悦酒店",
+      "address_1": "",
+      "address_2": null,
+      "city": "上海",
+      "region": "Shanghai",
+      "postcode": "",
+      "country": "China",
+      "coordinates": {
+        "lat": 31.230416,
+        "lon": 121.473701
+      }
+    },
+    "locations": {
+      "2026-08-24": {
+        "venue": "上海临港凯悦酒店",
+        "address_1": "",
+        "address_2": null,
+        "city": "上海",
+        "region": "Shanghai",
+        "postcode": "",
+        "country": "China",
+        "coordinates": {
+          "lat": 31.230416,
+          "lon": 121.473701
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64494/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64494/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64494/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 8,
+    "total": 8,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 282513,
+      "event": {
+        "id": 64494,
+        "name": "Brampton V5RC Override Qualifier: Blended In-Person Remote Judging and digital notebook",
+        "code": "RE-V5RC-26-4494"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [
+        "Event Region Championship"
+      ],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282514,
+      "event": {
+        "id": 64494,
+        "name": "Brampton V5RC Override Qualifier: Blended In-Person Remote Judging and digital notebook",
+        "code": "RE-V5RC-26-4494"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282515,
+      "event": {
+        "id": 64494,
+        "name": "Brampton V5RC Override Qualifier: Blended In-Person Remote Judging and digital notebook",
+        "code": "RE-V5RC-26-4494"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282516,
+      "event": {
+        "id": 64494,
+        "name": "Brampton V5RC Override Qualifier: Blended In-Person Remote Judging and digital notebook",
+        "code": "RE-V5RC-26-4494"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282517,
+      "event": {
+        "id": 64494,
+        "name": "Brampton V5RC Override Qualifier: Blended In-Person Remote Judging and digital notebook",
+        "code": "RE-V5RC-26-4494"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282519,
+      "event": {
+        "id": 64494,
+        "name": "Brampton V5RC Override Qualifier: Blended In-Person Remote Judging and digital notebook",
+        "code": "RE-V5RC-26-4494"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285689,
+      "event": {
+        "id": 64494,
+        "name": "Brampton V5RC Override Qualifier: Blended In-Person Remote Judging and digital notebook",
+        "code": "RE-V5RC-26-4494"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [
+        "Event Region Championship"
+      ],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289275,
+      "event": {
+        "id": 64494,
+        "name": "Brampton V5RC Override Qualifier: Blended In-Person Remote Judging and digital notebook",
+        "code": "RE-V5RC-26-4494"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

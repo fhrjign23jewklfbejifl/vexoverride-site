@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64481,
+    "sku": "RE-V5RC-26-4481",
+    "name": "VEX V5 Robotics Competition - Rockenhausen Turnier (HS/MS): International Teams Welcome!",
+    "start": "2026-12-10T00:00:00-05:00",
+    "end": "2026-12-10T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "IGS Rockenhausen",
+      "address_1": "Mühlackerweg 25",
+      "address_2": null,
+      "city": "Rockenhausen",
+      "region": "Rheinland-Pfalz",
+      "postcode": "67806",
+      "country": "Germany",
+      "coordinates": {
+        "lat": 49.623869,
+        "lon": 7.821492
+      }
+    },
+    "locations": {
+      "2026-12-10": {
+        "venue": "IGS Rockenhausen",
+        "address_1": "Mühlackerweg 25",
+        "address_2": null,
+        "city": "Rockenhausen",
+        "region": "Rheinland-Pfalz",
+        "postcode": "67806",
+        "country": "Germany",
+        "coordinates": {
+          "lat": 49.623869,
+          "lon": 7.821492
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

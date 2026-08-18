@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64381,
+    "sku": "RE-V5RC-26-4381",
+    "name": "VEX V5 Robotics Competition™ (MS) Taiwan Championship: VEX V5 Middle School Override ™  - Presented by TAI-VEX",
+    "start": "2027-01-23T00:00:00-05:00",
+    "end": "2027-01-24T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "TBD",
+      "address_1": "",
+      "address_2": null,
+      "city": "Taichung",
+      "region": null,
+      "postcode": "406",
+      "country": "Taiwan",
+      "coordinates": {
+        "lat": 24.180698,
+        "lon": 120.74649
+      }
+    },
+    "locations": {
+      "2027-01-23": {
+        "venue": "TBD",
+        "address_1": "",
+        "address_2": null,
+        "city": "Taichung",
+        "region": null,
+        "postcode": "406",
+        "country": "Taiwan",
+        "coordinates": {
+          "lat": 24.180698,
+          "lon": 120.74649
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Regional",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

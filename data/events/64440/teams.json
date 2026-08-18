@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64440/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64440/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64440/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 4,
+    "total": 4,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 46843,
+      "number": "6079B",
+      "team_name": "BattleRams",
+      "robot_name": "BattleRams",
+      "organization": "Waltrip High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Houston",
+        "region": "Texas",
+        "postcode": "77018",
+        "country": "United States",
+        "coordinates": {
+          "lat": 29.8,
+          "lon": -95.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 187016,
+      "number": "6079R",
+      "team_name": "Rambots",
+      "robot_name": "Rammy",
+      "organization": "Waltrip High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Houston",
+        "region": "Texas",
+        "postcode": "77018",
+        "country": "United States",
+        "coordinates": {
+          "lat": 29.8,
+          "lon": -95.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 119956,
+      "number": "71909X",
+      "team_name": "TESLA MODEL X",
+      "robot_name": "TESLA MODEL X",
+      "organization": "Baton Rouge Magnet High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Baton Rouge",
+        "region": "Louisiana",
+        "postcode": "70806",
+        "country": "United States",
+        "coordinates": {
+          "lat": 30.4,
+          "lon": -91.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 119192,
+      "number": "78027A",
+      "team_name": "RYSS Panthers A",
+      "robot_name": "",
+      "organization": "RAUL YZAGUIRRE SCHOOL FOR SUCCESS",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Houston",
+        "region": "Texas",
+        "postcode": "77017",
+        "country": "United States",
+        "coordinates": {
+          "lat": 29.7,
+          "lon": -95.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
+}

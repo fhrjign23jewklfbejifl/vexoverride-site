@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65147/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65147/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65147/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 7,
+    "total": 7,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 287182,
+      "event": {
+        "id": 65147,
+        "name": "2027 Utah Middle School State Championship: VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-5147"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287183,
+      "event": {
+        "id": 65147,
+        "name": "2027 Utah Middle School State Championship: VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-5147"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287184,
+      "event": {
+        "id": 65147,
+        "name": "2027 Utah Middle School State Championship: VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-5147"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287185,
+      "event": {
+        "id": 65147,
+        "name": "2027 Utah Middle School State Championship: VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-5147"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287186,
+      "event": {
+        "id": 65147,
+        "name": "2027 Utah Middle School State Championship: VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-5147"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287187,
+      "event": {
+        "id": 65147,
+        "name": "2027 Utah Middle School State Championship: VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-5147"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287188,
+      "event": {
+        "id": 65147,
+        "name": "2027 Utah Middle School State Championship: VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-5147"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

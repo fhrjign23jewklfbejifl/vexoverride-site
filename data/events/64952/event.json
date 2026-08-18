@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64952,
+    "sku": "RE-V5RC-26-4952",
+    "name": "Sunshine Showdown VEX V5 Robotics Competition™ Signature Event: High School",
+    "start": "2026-12-27T00:00:00-05:00",
+    "end": "2026-12-29T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "DoubleTree by Hilton Hotel at the Entrance to Universal Orlando",
+      "address_1": "5780 Major Boulevard",
+      "address_2": null,
+      "city": "Orlando",
+      "region": "Florida",
+      "postcode": "32819",
+      "country": "United States",
+      "coordinates": {
+        "lat": 28.479494,
+        "lon": -81.457424
+      }
+    },
+    "locations": {
+      "2026-12-27": {
+        "venue": "DoubleTree by Hilton Hotel at the Entrance to Universal Orlando",
+        "address_1": "5780 Major Boulevard",
+        "address_2": null,
+        "city": "Orlando",
+        "region": "Florida",
+        "postcode": "32819",
+        "country": "United States",
+        "coordinates": {
+          "lat": 28.479494,
+          "lon": -81.457424
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Signature",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

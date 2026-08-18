@@ -1,0 +1,97 @@
+{
+  "data": {
+    "id": 64258,
+    "sku": "RE-V5RC-26-4258",
+    "name": "Heart of Ohio VEX Robotics League - MIDDLE SCHOOL: VEX V5 Robotics Competition, hosted by Highland MS (Marengo)",
+    "start": "2026-11-17T00:00:00-05:00",
+    "end": "2027-02-16T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Highland Middle School",
+      "address_1": "6506 State Route 229",
+      "address_2": null,
+      "city": "Marengo",
+      "region": "Ohio",
+      "postcode": "43334",
+      "country": "United States",
+      "coordinates": {
+        "lat": 40.397846,
+        "lon": -82.706254
+      }
+    },
+    "locations": {
+      "2026-11-17": {
+        "venue": "Highland Middle School",
+        "address_1": "6506 State Route 229",
+        "address_2": null,
+        "city": "Marengo",
+        "region": "Ohio",
+        "postcode": "43334",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40.397846,
+          "lon": -82.706254
+        }
+      },
+      "2026-12-15": {
+        "venue": "Highland Middle School",
+        "address_1": "6506 State Route 229",
+        "address_2": null,
+        "city": "Marengo",
+        "region": "Ohio",
+        "postcode": "43334",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40.397846,
+          "lon": -82.706254
+        }
+      },
+      "2027-01-19": {
+        "venue": "Highland Middle School",
+        "address_1": "6506 State Route 229",
+        "address_2": null,
+        "city": "Marengo",
+        "region": "Ohio",
+        "postcode": "43334",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40.397846,
+          "lon": -82.706254
+        }
+      },
+      "2027-02-16": {
+        "venue": "Highland Middle School",
+        "address_1": "6506 State Route 229",
+        "address_2": null,
+        "city": "Marengo",
+        "region": "Ohio",
+        "postcode": "43334",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40.397846,
+          "lon": -82.706254
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

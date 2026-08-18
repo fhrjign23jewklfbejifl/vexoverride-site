@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65073,
+    "sku": "RE-V5RC-26-5073",
+    "name": "The Steel Stampede VEX V5RC Override Tournament",
+    "start": "2027-02-06T00:00:00-05:00",
+    "end": "2027-02-06T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Moriarty High School",
+      "address_1": "200 Center Avenue",
+      "address_2": null,
+      "city": "Moriarty",
+      "region": "New Mexico",
+      "postcode": "87035",
+      "country": "United States",
+      "coordinates": {
+        "lat": 34.986625,
+        "lon": -106.04271
+      }
+    },
+    "locations": {
+      "2027-02-06": {
+        "venue": "Moriarty High School",
+        "address_1": "200 Center Avenue",
+        "address_2": null,
+        "city": "Moriarty",
+        "region": "New Mexico",
+        "postcode": "87035",
+        "country": "United States",
+        "coordinates": {
+          "lat": 34.986625,
+          "lon": -106.04271
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

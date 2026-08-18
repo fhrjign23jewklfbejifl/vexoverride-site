@@ -1,0 +1,159 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64843/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64843/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64843/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 9,
+    "total": 9,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 284992,
+      "event": {
+        "id": 64843,
+        "name": "WPRA V5RC Override Early Season Qualifier: Sponsored by Auntie Emily's Kitchen",
+        "code": "RE-V5RC-26-4843"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [
+        "Event Region Championship"
+      ],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284993,
+      "event": {
+        "id": 64843,
+        "name": "WPRA V5RC Override Early Season Qualifier: Sponsored by Auntie Emily's Kitchen",
+        "code": "RE-V5RC-26-4843"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284994,
+      "event": {
+        "id": 64843,
+        "name": "WPRA V5RC Override Early Season Qualifier: Sponsored by Auntie Emily's Kitchen",
+        "code": "RE-V5RC-26-4843"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284995,
+      "event": {
+        "id": 64843,
+        "name": "WPRA V5RC Override Early Season Qualifier: Sponsored by Auntie Emily's Kitchen",
+        "code": "RE-V5RC-26-4843"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284996,
+      "event": {
+        "id": 64843,
+        "name": "WPRA V5RC Override Early Season Qualifier: Sponsored by Auntie Emily's Kitchen",
+        "code": "RE-V5RC-26-4843"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284997,
+      "event": {
+        "id": 64843,
+        "name": "WPRA V5RC Override Early Season Qualifier: Sponsored by Auntie Emily's Kitchen",
+        "code": "RE-V5RC-26-4843"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285533,
+      "event": {
+        "id": 64843,
+        "name": "WPRA V5RC Override Early Season Qualifier: Sponsored by Auntie Emily's Kitchen",
+        "code": "RE-V5RC-26-4843"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288988,
+      "event": {
+        "id": 64843,
+        "name": "WPRA V5RC Override Early Season Qualifier: Sponsored by Auntie Emily's Kitchen",
+        "code": "RE-V5RC-26-4843"
+      },
+      "order": 61,
+      "title": "Excellence Award - Middle School (V5)",
+      "qualifications": [
+        "Event Region Championship"
+      ],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288989,
+      "event": {
+        "id": 64843,
+        "name": "WPRA V5RC Override Early Season Qualifier: Sponsored by Auntie Emily's Kitchen",
+        "code": "RE-V5RC-26-4843"
+      },
+      "order": 60,
+      "title": "Excellence Award - High School (V5)",
+      "qualifications": [
+        "Event Region Championship"
+      ],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

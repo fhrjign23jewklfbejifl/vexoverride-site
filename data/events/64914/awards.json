@@ -1,0 +1,228 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64914/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64914/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64914/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 14,
+    "total": 14,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 285252,
+      "event": {
+        "id": 64914,
+        "name": "Robot Rodeo DFW Signature Event: VEX V5 Robotics Competition, High School",
+        "code": "RE-V5RC-26-4914"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285253,
+      "event": {
+        "id": 64914,
+        "name": "Robot Rodeo DFW Signature Event: VEX V5 Robotics Competition, High School",
+        "code": "RE-V5RC-26-4914"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285254,
+      "event": {
+        "id": 64914,
+        "name": "Robot Rodeo DFW Signature Event: VEX V5 Robotics Competition, High School",
+        "code": "RE-V5RC-26-4914"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285255,
+      "event": {
+        "id": 64914,
+        "name": "Robot Rodeo DFW Signature Event: VEX V5 Robotics Competition, High School",
+        "code": "RE-V5RC-26-4914"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285256,
+      "event": {
+        "id": 64914,
+        "name": "Robot Rodeo DFW Signature Event: VEX V5 Robotics Competition, High School",
+        "code": "RE-V5RC-26-4914"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285257,
+      "event": {
+        "id": 64914,
+        "name": "Robot Rodeo DFW Signature Event: VEX V5 Robotics Competition, High School",
+        "code": "RE-V5RC-26-4914"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285258,
+      "event": {
+        "id": 64914,
+        "name": "Robot Rodeo DFW Signature Event: VEX V5 Robotics Competition, High School",
+        "code": "RE-V5RC-26-4914"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285259,
+      "event": {
+        "id": 64914,
+        "name": "Robot Rodeo DFW Signature Event: VEX V5 Robotics Competition, High School",
+        "code": "RE-V5RC-26-4914"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285260,
+      "event": {
+        "id": 64914,
+        "name": "Robot Rodeo DFW Signature Event: VEX V5 Robotics Competition, High School",
+        "code": "RE-V5RC-26-4914"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285261,
+      "event": {
+        "id": 64914,
+        "name": "Robot Rodeo DFW Signature Event: VEX V5 Robotics Competition, High School",
+        "code": "RE-V5RC-26-4914"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285262,
+      "event": {
+        "id": 64914,
+        "name": "Robot Rodeo DFW Signature Event: VEX V5 Robotics Competition, High School",
+        "code": "RE-V5RC-26-4914"
+      },
+      "order": 78,
+      "title": "Create Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285263,
+      "event": {
+        "id": 64914,
+        "name": "Robot Rodeo DFW Signature Event: VEX V5 Robotics Competition, High School",
+        "code": "RE-V5RC-26-4914"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285264,
+      "event": {
+        "id": 64914,
+        "name": "Robot Rodeo DFW Signature Event: VEX V5 Robotics Competition, High School",
+        "code": "RE-V5RC-26-4914"
+      },
+      "order": 80,
+      "title": "Energy Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285265,
+      "event": {
+        "id": 64914,
+        "name": "Robot Rodeo DFW Signature Event: VEX V5 Robotics Competition, High School",
+        "code": "RE-V5RC-26-4914"
+      },
+      "order": 81,
+      "title": "Inspire Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64449,
+    "sku": "RE-V5RC-26-4449",
+    "name": "VEX V5 Robotics Competition™  Singapore National Championship: Override™ - VEX V5 (MS/HS)",
+    "start": "2027-01-23T00:00:00-05:00",
+    "end": "2027-01-23T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "XCL World Academy",
+      "address_1": "2 Yishun Street 42",
+      "address_2": null,
+      "city": "Singapore",
+      "region": null,
+      "postcode": "768039",
+      "country": "Singapore",
+      "coordinates": {
+        "lat": 1.424105,
+        "lon": 103.850249
+      }
+    },
+    "locations": {
+      "2027-01-23": {
+        "venue": "XCL World Academy",
+        "address_1": "2 Yishun Street 42",
+        "address_2": null,
+        "city": "Singapore",
+        "region": null,
+        "postcode": "768039",
+        "country": "Singapore",
+        "coordinates": {
+          "lat": 1.424105,
+          "lon": 103.850249
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "National",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

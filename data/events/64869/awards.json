@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64869/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64869/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64869/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 8,
+    "total": 8,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 285114,
+      "event": {
+        "id": 64869,
+        "name": "Murdoch University VEX Robotics WA Championships: VEX Robotics Western Australia Championships - V5RC Division",
+        "code": "RE-V5RC-26-4869"
+      },
+      "order": 60,
+      "title": "Excellence Award - High School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285115,
+      "event": {
+        "id": 64869,
+        "name": "Murdoch University VEX Robotics WA Championships: VEX Robotics Western Australia Championships - V5RC Division",
+        "code": "RE-V5RC-26-4869"
+      },
+      "order": 61,
+      "title": "Excellence Award - Middle School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285116,
+      "event": {
+        "id": 64869,
+        "name": "Murdoch University VEX Robotics WA Championships: VEX Robotics Western Australia Championships - V5RC Division",
+        "code": "RE-V5RC-26-4869"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285117,
+      "event": {
+        "id": 64869,
+        "name": "Murdoch University VEX Robotics WA Championships: VEX Robotics Western Australia Championships - V5RC Division",
+        "code": "RE-V5RC-26-4869"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285118,
+      "event": {
+        "id": 64869,
+        "name": "Murdoch University VEX Robotics WA Championships: VEX Robotics Western Australia Championships - V5RC Division",
+        "code": "RE-V5RC-26-4869"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285119,
+      "event": {
+        "id": 64869,
+        "name": "Murdoch University VEX Robotics WA Championships: VEX Robotics Western Australia Championships - V5RC Division",
+        "code": "RE-V5RC-26-4869"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285120,
+      "event": {
+        "id": 64869,
+        "name": "Murdoch University VEX Robotics WA Championships: VEX Robotics Western Australia Championships - V5RC Division",
+        "code": "RE-V5RC-26-4869"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285121,
+      "event": {
+        "id": 64869,
+        "name": "Murdoch University VEX Robotics WA Championships: VEX Robotics Western Australia Championships - V5RC Division",
+        "code": "RE-V5RC-26-4869"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

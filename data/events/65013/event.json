@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65013,
+    "sku": "RE-V5RC-26-5013",
+    "name": "Hudsonville Christian Override™ Tournament: VEX V5 Robotics Competition™ High School Teams",
+    "start": "2027-01-16T00:00:00-05:00",
+    "end": "2027-01-16T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Hudsonville Christian School",
+      "address_1": "3435 Oak Street",
+      "address_2": null,
+      "city": "Hudsonville",
+      "region": "Michigan",
+      "postcode": "49426",
+      "country": "United States",
+      "coordinates": {
+        "lat": 42.873071,
+        "lon": -85.866855
+      }
+    },
+    "locations": {
+      "2027-01-16": {
+        "venue": "Hudsonville Christian School",
+        "address_1": "3435 Oak Street",
+        "address_2": null,
+        "city": "Hudsonville",
+        "region": "Michigan",
+        "postcode": "49426",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.873071,
+          "lon": -85.866855
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

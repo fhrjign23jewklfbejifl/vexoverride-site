@@ -1,0 +1,321 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64746/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64746/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64746/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 10,
+    "total": 10,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 284366,
+      "event": {
+        "id": 64746,
+        "name": "2026-2027赛季VEX机器人公开赛全国邀请赛V5RC",
+        "code": "RE-V5RC-26-4746"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 197663,
+            "name": "3023A",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 284367,
+      "event": {
+        "id": 64746,
+        "name": "2026-2027赛季VEX机器人公开赛全国邀请赛V5RC",
+        "code": "RE-V5RC-26-4746"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 191047,
+            "name": "98506H",
+            "code": null
+          }
+        },
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 197907,
+            "name": "3771A",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 284368,
+      "event": {
+        "id": 64746,
+        "name": "2026-2027赛季VEX机器人公开赛全国邀请赛V5RC",
+        "code": "RE-V5RC-26-4746"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 198701,
+            "name": "3929A",
+            "code": null
+          }
+        },
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 155409,
+            "name": "12466A",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 284369,
+      "event": {
+        "id": 64746,
+        "name": "2026-2027赛季VEX机器人公开赛全国邀请赛V5RC",
+        "code": "RE-V5RC-26-4746"
+      },
+      "order": 65,
+      "title": "Tournament Semifinalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 198739,
+            "name": "3258C",
+            "code": null
+          }
+        },
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 198601,
+            "name": "81884S",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 284370,
+      "event": {
+        "id": 64746,
+        "name": "2026-2027赛季VEX机器人公开赛全国邀请赛V5RC",
+        "code": "RE-V5RC-26-4746"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 170984,
+            "name": "2676A",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 284371,
+      "event": {
+        "id": 64746,
+        "name": "2026-2027赛季VEX机器人公开赛全国邀请赛V5RC",
+        "code": "RE-V5RC-26-4746"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 171037,
+            "name": "3012A",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 284372,
+      "event": {
+        "id": 64746,
+        "name": "2026-2027赛季VEX机器人公开赛全国邀请赛V5RC",
+        "code": "RE-V5RC-26-4746"
+      },
+      "order": 71,
+      "title": "Robot Skills 2nd Place (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 197907,
+            "name": "3771A",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 284373,
+      "event": {
+        "id": 64746,
+        "name": "2026-2027赛季VEX机器人公开赛全国邀请赛V5RC",
+        "code": "RE-V5RC-26-4746"
+      },
+      "order": 72,
+      "title": "Robot Skills 3rd Place (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 155409,
+            "name": "12466A",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 284374,
+      "event": {
+        "id": 64746,
+        "name": "2026-2027赛季VEX机器人公开赛全国邀请赛V5RC",
+        "code": "RE-V5RC-26-4746"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284375,
+      "event": {
+        "id": 64746,
+        "name": "2026-2027赛季VEX机器人公开赛全国邀请赛V5RC",
+        "code": "RE-V5RC-26-4746"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 197157,
+            "name": "86668X",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    }
+  ]
+}

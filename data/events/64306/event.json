@@ -1,34 +1,21 @@
 {
-  "id": 64306,
-  "sku": "RE-V5RC-26-4306",
-  "name": "VEX V5 Robotics Competition™ - Override™: Middle School & High School teams, Digital Notebook Submissions",
-  "start": "2026-10-31T00:00:00-04:00",
-  "end": "2026-10-31T00:00:00-04:00",
-  "season": {
-    "id": 204,
-    "name": "VEX V5 Robotics Competition 2026-2027: Override",
-    "code": null
-  },
-  "program": {
-    "id": 1,
-    "name": "VEX V5 Robotics Competition",
-    "code": "V5RC"
-  },
-  "location": {
-    "venue": "Miramar High School",
-    "address_1": "3601 Southwest 89th Avenue",
-    "address_2": null,
-    "city": "Miramar",
-    "region": "Florida",
-    "postcode": "33025",
-    "country": "United States",
-    "coordinates": {
-      "lat": 25.976955,
-      "lon": -80.261135
-    }
-  },
-  "locations": {
-    "2026-10-31": {
+  "data": {
+    "id": 64306,
+    "sku": "RE-V5RC-26-4306",
+    "name": "VEX V5 Robotics Competition™ - Override™: Middle School & High School teams, Digital Notebook Submissions",
+    "start": "2026-11-01T00:00:00-04:00",
+    "end": "2026-11-01T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
       "venue": "Miramar High School",
       "address_1": "3601 Southwest 89th Avenue",
       "address_2": null,
@@ -40,17 +27,32 @@
         "lat": 25.976955,
         "lon": -80.261135
       }
-    }
-  },
-  "divisions": [
-    {
-      "id": 1,
-      "name": "Default",
-      "order": 1
-    }
-  ],
-  "level": "Other",
-  "ongoing": false,
-  "awards_finalized": false,
-  "event_type": null
+    },
+    "locations": {
+      "2026-11-01": {
+        "venue": "Miramar High School",
+        "address_1": "3601 Southwest 89th Avenue",
+        "address_2": null,
+        "city": "Miramar",
+        "region": "Florida",
+        "postcode": "33025",
+        "country": "United States",
+        "coordinates": {
+          "lat": 25.976955,
+          "lon": -80.261135
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
 }

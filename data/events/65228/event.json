@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65228,
+    "sku": "RE-V5RC-26-5228",
+    "name": "NSW | VEX V5 Robotics Competition™ (MS): Override™ Tournament @ Barker College",
+    "start": "2026-10-17T00:00:00-04:00",
+    "end": "2026-10-17T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Barker College - Robotics Middle School Lab",
+      "address_1": "91 Pacific Hwy",
+      "address_2": null,
+      "city": "Hornsby",
+      "region": "New South Wales",
+      "postcode": "2077",
+      "country": "Australia",
+      "coordinates": {
+        "lat": -33.710745,
+        "lon": 151.099909
+      }
+    },
+    "locations": {
+      "2026-10-17": {
+        "venue": "Barker College - Robotics Middle School Lab",
+        "address_1": "91 Pacific Hwy",
+        "address_2": null,
+        "city": "Hornsby",
+        "region": "New South Wales",
+        "postcode": "2077",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -33.710745,
+          "lon": 151.099909
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

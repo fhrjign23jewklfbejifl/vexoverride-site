@@ -1,0 +1,97 @@
+{
+  "data": {
+    "id": 65048,
+    "sku": "RE-V5RC-26-5048",
+    "name": "MCPSS VEX V5 JROTC Robotics League (MS & HS)  Override: MCPSS VEX V5 Competition #1-4",
+    "start": "2026-09-24T00:00:00-04:00",
+    "end": "2026-12-10T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "MCPSS Central Office. Build B. Cypress Room - VEXV5 Competition #1",
+      "address_1": "1 Magnum Pass",
+      "address_2": null,
+      "city": "Mobile",
+      "region": "Alabama",
+      "postcode": "36618",
+      "country": "United States",
+      "coordinates": {
+        "lat": 30.718696,
+        "lon": -88.219976
+      }
+    },
+    "locations": {
+      "2026-09-24": {
+        "venue": "MCPSS Central Office. Build B. Cypress Room - VEXV5 Competition #1",
+        "address_1": "1 Magnum Pass",
+        "address_2": null,
+        "city": "Mobile",
+        "region": "Alabama",
+        "postcode": "36618",
+        "country": "United States",
+        "coordinates": {
+          "lat": 30.718696,
+          "lon": -88.219976
+        }
+      },
+      "2026-10-28": {
+        "venue": "MCPSS Central Office Build B. Cypress Room - VEXV5 Competition #2",
+        "address_1": "1 Magnum Pass",
+        "address_2": null,
+        "city": "Mobile",
+        "region": "Alabama",
+        "postcode": "36618",
+        "country": "United States",
+        "coordinates": {
+          "lat": 30.718696,
+          "lon": -88.219976
+        }
+      },
+      "2026-11-12": {
+        "venue": "MCPSS Central Office Build B. Cypress Room - VEXV5 Competition #3",
+        "address_1": "1 Magnum Pass",
+        "address_2": null,
+        "city": "Mobile",
+        "region": "Alabama",
+        "postcode": "36618",
+        "country": "United States",
+        "coordinates": {
+          "lat": 30.718696,
+          "lon": -88.219976
+        }
+      },
+      "2026-12-10": {
+        "venue": "MCPSS Central Office. Build B. Cypress Room - VEXV5 Competition #4 Mix League Championship",
+        "address_1": "1 Magnum Pass",
+        "address_2": null,
+        "city": "Mobile",
+        "region": "Alabama",
+        "postcode": "36618",
+        "country": "United States",
+        "coordinates": {
+          "lat": 30.718696,
+          "lon": -88.219976
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

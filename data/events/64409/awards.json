@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64409/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64409/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64409/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 2,
+    "total": 2,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 281764,
+      "event": {
+        "id": 64409,
+        "name": "SA | VEX V5 Robotics Competition™ (Blended) Flinders NVI Open: Override™ Tournament @  Flinders University, Tonsley Innovation Precinct",
+        "code": "RE-V5RC-26-4409"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 197522,
+            "name": "52111A",
+            "code": null
+          }
+        },
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 196933,
+            "name": "81321D",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 281765,
+      "event": {
+        "id": 64409,
+        "name": "SA | VEX V5 Robotics Competition™ (Blended) Flinders NVI Open: Override™ Tournament @  Flinders University, Tonsley Innovation Precinct",
+        "code": "RE-V5RC-26-4409"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 197522,
+            "name": "52111A",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    }
+  ]
+}

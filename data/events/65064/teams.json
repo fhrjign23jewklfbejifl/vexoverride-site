@@ -1,0 +1,180 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65064/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65064/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65064/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 6,
+    "total": 6,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 3456,
+      "number": "3333B",
+      "team_name": "Bromance",
+      "robot_name": "Brochacho",
+      "organization": "Notre Dame Prep",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Pontiac",
+        "region": "Michigan",
+        "postcode": "48340",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.7,
+          "lon": -83.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 140646,
+      "number": "3333D",
+      "team_name": "Despicable",
+      "robot_name": "Gru",
+      "organization": "Notre Dame Prep",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Pontiac",
+        "region": "Michigan",
+        "postcode": "48340",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.7,
+          "lon": -83.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 85197,
+      "number": "3333N",
+      "team_name": "SnakeByterrs",
+      "robot_name": "",
+      "organization": "Notre Dame Prep",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Pontiac",
+        "region": "Michigan",
+        "postcode": "48340",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.7,
+          "lon": -83.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 85196,
+      "number": "3333X",
+      "team_name": "X-treme Bot",
+      "robot_name": "",
+      "organization": "Notre Dame Prep",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Pontiac",
+        "region": "Michigan",
+        "postcode": "48340",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.7,
+          "lon": -83.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 85064,
+      "number": "3333Y",
+      "team_name": "Trumpet Ladies",
+      "robot_name": "",
+      "organization": "Notre Dame Prep",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Pontiac",
+        "region": "Michigan",
+        "postcode": "48340",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.7,
+          "lon": -83.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 85195,
+      "number": "3333Z",
+      "team_name": "The Z Men",
+      "robot_name": "",
+      "organization": "Notre Dame Prep",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Pontiac",
+        "region": "Michigan",
+        "postcode": "48340",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.7,
+          "lon": -83.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    }
+  ]
+}

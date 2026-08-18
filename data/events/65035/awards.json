@@ -1,0 +1,213 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65035/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65035/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65035/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 13,
+    "total": 13,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 286349,
+      "event": {
+        "id": 65035,
+        "name": "Vex Override @ Immokalee High School",
+        "code": "RE-V5RC-26-5035"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286350,
+      "event": {
+        "id": 65035,
+        "name": "Vex Override @ Immokalee High School",
+        "code": "RE-V5RC-26-5035"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286351,
+      "event": {
+        "id": 65035,
+        "name": "Vex Override @ Immokalee High School",
+        "code": "RE-V5RC-26-5035"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286352,
+      "event": {
+        "id": 65035,
+        "name": "Vex Override @ Immokalee High School",
+        "code": "RE-V5RC-26-5035"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286353,
+      "event": {
+        "id": 65035,
+        "name": "Vex Override @ Immokalee High School",
+        "code": "RE-V5RC-26-5035"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286354,
+      "event": {
+        "id": 65035,
+        "name": "Vex Override @ Immokalee High School",
+        "code": "RE-V5RC-26-5035"
+      },
+      "order": 71,
+      "title": "Robot Skills 2nd Place (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286355,
+      "event": {
+        "id": 65035,
+        "name": "Vex Override @ Immokalee High School",
+        "code": "RE-V5RC-26-5035"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286356,
+      "event": {
+        "id": 65035,
+        "name": "Vex Override @ Immokalee High School",
+        "code": "RE-V5RC-26-5035"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286357,
+      "event": {
+        "id": 65035,
+        "name": "Vex Override @ Immokalee High School",
+        "code": "RE-V5RC-26-5035"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286358,
+      "event": {
+        "id": 65035,
+        "name": "Vex Override @ Immokalee High School",
+        "code": "RE-V5RC-26-5035"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286359,
+      "event": {
+        "id": 65035,
+        "name": "Vex Override @ Immokalee High School",
+        "code": "RE-V5RC-26-5035"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286360,
+      "event": {
+        "id": 65035,
+        "name": "Vex Override @ Immokalee High School",
+        "code": "RE-V5RC-26-5035"
+      },
+      "order": 78,
+      "title": "Create Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286361,
+      "event": {
+        "id": 65035,
+        "name": "Vex Override @ Immokalee High School",
+        "code": "RE-V5RC-26-5035"
+      },
+      "order": 82,
+      "title": "Volunteer of the Year Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

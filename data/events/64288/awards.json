@@ -1,0 +1,258 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64288/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64288/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64288/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 16,
+    "total": 16,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 285541,
+      "event": {
+        "id": 64288,
+        "name": "Hong Kong VEX V5 Robotics Competition™ (HS) Signature Event: VEX V5 High School",
+        "code": "RE-V5RC-26-4288"
+      },
+      "order": 60,
+      "title": "Excellence Award - High School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285542,
+      "event": {
+        "id": 64288,
+        "name": "Hong Kong VEX V5 Robotics Competition™ (HS) Signature Event: VEX V5 High School",
+        "code": "RE-V5RC-26-4288"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285543,
+      "event": {
+        "id": 64288,
+        "name": "Hong Kong VEX V5 Robotics Competition™ (HS) Signature Event: VEX V5 High School",
+        "code": "RE-V5RC-26-4288"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285544,
+      "event": {
+        "id": 64288,
+        "name": "Hong Kong VEX V5 Robotics Competition™ (HS) Signature Event: VEX V5 High School",
+        "code": "RE-V5RC-26-4288"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285545,
+      "event": {
+        "id": 64288,
+        "name": "Hong Kong VEX V5 Robotics Competition™ (HS) Signature Event: VEX V5 High School",
+        "code": "RE-V5RC-26-4288"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285546,
+      "event": {
+        "id": 64288,
+        "name": "Hong Kong VEX V5 Robotics Competition™ (HS) Signature Event: VEX V5 High School",
+        "code": "RE-V5RC-26-4288"
+      },
+      "order": 71,
+      "title": "Robot Skills 2nd Place (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285547,
+      "event": {
+        "id": 64288,
+        "name": "Hong Kong VEX V5 Robotics Competition™ (HS) Signature Event: VEX V5 High School",
+        "code": "RE-V5RC-26-4288"
+      },
+      "order": 72,
+      "title": "Robot Skills 3rd Place (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285548,
+      "event": {
+        "id": 64288,
+        "name": "Hong Kong VEX V5 Robotics Competition™ (HS) Signature Event: VEX V5 High School",
+        "code": "RE-V5RC-26-4288"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285549,
+      "event": {
+        "id": 64288,
+        "name": "Hong Kong VEX V5 Robotics Competition™ (HS) Signature Event: VEX V5 High School",
+        "code": "RE-V5RC-26-4288"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285550,
+      "event": {
+        "id": 64288,
+        "name": "Hong Kong VEX V5 Robotics Competition™ (HS) Signature Event: VEX V5 High School",
+        "code": "RE-V5RC-26-4288"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285551,
+      "event": {
+        "id": 64288,
+        "name": "Hong Kong VEX V5 Robotics Competition™ (HS) Signature Event: VEX V5 High School",
+        "code": "RE-V5RC-26-4288"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285552,
+      "event": {
+        "id": 64288,
+        "name": "Hong Kong VEX V5 Robotics Competition™ (HS) Signature Event: VEX V5 High School",
+        "code": "RE-V5RC-26-4288"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285553,
+      "event": {
+        "id": 64288,
+        "name": "Hong Kong VEX V5 Robotics Competition™ (HS) Signature Event: VEX V5 High School",
+        "code": "RE-V5RC-26-4288"
+      },
+      "order": 78,
+      "title": "Create Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285554,
+      "event": {
+        "id": 64288,
+        "name": "Hong Kong VEX V5 Robotics Competition™ (HS) Signature Event: VEX V5 High School",
+        "code": "RE-V5RC-26-4288"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285555,
+      "event": {
+        "id": 64288,
+        "name": "Hong Kong VEX V5 Robotics Competition™ (HS) Signature Event: VEX V5 High School",
+        "code": "RE-V5RC-26-4288"
+      },
+      "order": 80,
+      "title": "Energy Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285556,
+      "event": {
+        "id": 64288,
+        "name": "Hong Kong VEX V5 Robotics Competition™ (HS) Signature Event: VEX V5 High School",
+        "code": "RE-V5RC-26-4288"
+      },
+      "order": 81,
+      "title": "Inspire Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

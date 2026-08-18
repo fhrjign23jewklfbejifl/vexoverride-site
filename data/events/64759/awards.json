@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64759/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64759/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64759/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 7,
+    "total": 7,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 284455,
+      "event": {
+        "id": 64759,
+        "name": "North Union Middle School Qualifier: VEX V5 Robotics Competition Override",
+        "code": "RE-V5RC-26-4759"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284456,
+      "event": {
+        "id": 64759,
+        "name": "North Union Middle School Qualifier: VEX V5 Robotics Competition Override",
+        "code": "RE-V5RC-26-4759"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284457,
+      "event": {
+        "id": 64759,
+        "name": "North Union Middle School Qualifier: VEX V5 Robotics Competition Override",
+        "code": "RE-V5RC-26-4759"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284458,
+      "event": {
+        "id": 64759,
+        "name": "North Union Middle School Qualifier: VEX V5 Robotics Competition Override",
+        "code": "RE-V5RC-26-4759"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284459,
+      "event": {
+        "id": 64759,
+        "name": "North Union Middle School Qualifier: VEX V5 Robotics Competition Override",
+        "code": "RE-V5RC-26-4759"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284460,
+      "event": {
+        "id": 64759,
+        "name": "North Union Middle School Qualifier: VEX V5 Robotics Competition Override",
+        "code": "RE-V5RC-26-4759"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284461,
+      "event": {
+        "id": 64759,
+        "name": "North Union Middle School Qualifier: VEX V5 Robotics Competition Override",
+        "code": "RE-V5RC-26-4759"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

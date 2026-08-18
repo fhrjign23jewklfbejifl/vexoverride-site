@@ -1,0 +1,110 @@
+{
+  "data": {
+    "id": 65064,
+    "sku": "RE-V5RC-26-5064",
+    "name": "SE MI Fall VEX V5 Robotics Competition™ League Sessions: Blended Override™ HS/MS Teams",
+    "start": "2026-10-15T00:00:00-04:00",
+    "end": "2026-11-19T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Notre Dame Preparatory School",
+      "address_1": "1300 Giddings Road",
+      "address_2": null,
+      "city": "Pontiac",
+      "region": "Michigan",
+      "postcode": "48340",
+      "country": "United States",
+      "coordinates": {
+        "lat": 42.673778,
+        "lon": -83.257937
+      }
+    },
+    "locations": {
+      "2026-10-15": {
+        "venue": "Notre Dame Preparatory School",
+        "address_1": "1300 Giddings Road",
+        "address_2": null,
+        "city": "Pontiac",
+        "region": "Michigan",
+        "postcode": "48340",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.673778,
+          "lon": -83.257937
+        }
+      },
+      "2026-10-29": {
+        "venue": "Cranbrook Hoey Hall Robotics Lab",
+        "address_1": "550 Lone Pine Rd",
+        "address_2": null,
+        "city": "Bloomfield Hills",
+        "region": "Michigan",
+        "postcode": "48304",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.570015,
+          "lon": -83.255483
+        }
+      },
+      "2026-11-05": {
+        "venue": "Cranbrook Hoey Hall Robotics Lab",
+        "address_1": "550 Lone Pine Rd",
+        "address_2": null,
+        "city": "Bloomfield Hills",
+        "region": "Michigan",
+        "postcode": "48304",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.570015,
+          "lon": -83.255483
+        }
+      },
+      "2026-11-12": {
+        "venue": "Notre Dame Preparatory School",
+        "address_1": "1300 Giddings Road",
+        "address_2": null,
+        "city": "Pontiac",
+        "region": "Michigan",
+        "postcode": "48340",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.673778,
+          "lon": -83.257937
+        }
+      },
+      "2026-11-19": {
+        "venue": "Imlay City High School",
+        "address_1": "1001 Norlin Dr",
+        "address_2": null,
+        "city": "Imlay City",
+        "region": "Michigan",
+        "postcode": "48444",
+        "country": "United States",
+        "coordinates": {
+          "lat": 43.014958,
+          "lon": -83.083782
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

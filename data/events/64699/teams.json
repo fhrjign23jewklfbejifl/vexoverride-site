@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64699/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64699/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64699/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 3,
+    "total": 3,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 186292,
+      "number": "21010V",
+      "team_name": "The V5 Vipers",
+      "robot_name": "Viper MK1",
+      "organization": "Equanimity Labs, LLC",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Nolensville",
+        "region": "Tennessee",
+        "postcode": "37135",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.9,
+          "lon": -86.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 130674,
+      "number": "89227B",
+      "team_name": "Ramen Riders",
+      "robot_name": "",
+      "organization": "RIDGELAND HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Rossville",
+        "region": "Georgia",
+        "postcode": "30741",
+        "country": "United States",
+        "coordinates": {
+          "lat": 34.9,
+          "lon": -85.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 172888,
+      "number": "89227S",
+      "team_name": "Team Shrimp",
+      "robot_name": "",
+      "organization": "RIDGELAND HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Rossville",
+        "region": "Georgia",
+        "postcode": "30741",
+        "country": "United States",
+        "coordinates": {
+          "lat": 34.9,
+          "lon": -85.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
+}

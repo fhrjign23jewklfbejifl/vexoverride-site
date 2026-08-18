@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65070,
+    "sku": "RE-V5RC-26-5070",
+    "name": "The OWL Spook off VEX V5 Robotics Competition™: Blended Override™",
+    "start": "2026-10-10T00:00:00-04:00",
+    "end": "2026-10-10T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Joshua High School",
+      "address_1": "909 South Broadway Street",
+      "address_2": null,
+      "city": "Joshua",
+      "region": "Texas",
+      "postcode": "76058",
+      "country": "United States",
+      "coordinates": {
+        "lat": 32.448818,
+        "lon": -97.382962
+      }
+    },
+    "locations": {
+      "2026-10-10": {
+        "venue": "Joshua High School",
+        "address_1": "909 South Broadway Street",
+        "address_2": null,
+        "city": "Joshua",
+        "region": "Texas",
+        "postcode": "76058",
+        "country": "United States",
+        "coordinates": {
+          "lat": 32.448818,
+          "lon": -97.382962
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64775,
+    "sku": "RE-V5RC-26-4775",
+    "name": "VEX V5 Robotics Competition | Bedford Bots (MS/HS): Organised by Bedford School Robotics",
+    "start": "2026-10-17T00:00:00-04:00",
+    "end": "2026-10-17T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Bedford School",
+      "address_1": "Deparys Ave",
+      "address_2": null,
+      "city": "Bedford",
+      "region": "England",
+      "postcode": "MK40 2TU",
+      "country": "United Kingdom",
+      "coordinates": {
+        "lat": 52.141803,
+        "lon": -0.46683
+      }
+    },
+    "locations": {
+      "2026-10-17": {
+        "venue": "Bedford School",
+        "address_1": "Deparys Ave",
+        "address_2": null,
+        "city": "Bedford",
+        "region": "England",
+        "postcode": "MK40 2TU",
+        "country": "United Kingdom",
+        "coordinates": {
+          "lat": 52.141803,
+          "lon": -0.46683
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

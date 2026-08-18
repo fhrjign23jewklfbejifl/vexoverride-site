@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64256,
+    "sku": "RE-V5RC-26-4256",
+    "name": "Royal Rumble at NKMS V5RC MS Tournament: VEX V5 Robotics Competition, MLK Weekend OverRide",
+    "start": "2027-01-16T00:00:00-05:00",
+    "end": "2027-01-16T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "North Kirkwood Middle School",
+      "address_1": "11287 Manchester Road",
+      "address_2": null,
+      "city": "Kirkwood",
+      "region": "Missouri",
+      "postcode": "63122",
+      "country": "United States",
+      "coordinates": {
+        "lat": 38.600523,
+        "lon": -90.419219
+      }
+    },
+    "locations": {
+      "2027-01-16": {
+        "venue": "North Kirkwood Middle School",
+        "address_1": "11287 Manchester Road",
+        "address_2": null,
+        "city": "Kirkwood",
+        "region": "Missouri",
+        "postcode": "63122",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.600523,
+          "lon": -90.419219
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

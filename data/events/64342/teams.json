@@ -1,0 +1,774 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64342/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64342/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64342/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 28,
+    "total": 28,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 107975,
+      "number": "1002D",
+      "team_name": "Templestowe college",
+      "robot_name": "",
+      "organization": "Templestowe College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Templestowe Lower",
+        "region": "Victoria",
+        "postcode": "3107",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.8,
+          "lon": 145.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 185488,
+      "number": "1002V",
+      "team_name": "Templestowe college",
+      "robot_name": "Templestowe college",
+      "organization": "Templestowe College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Templestowe Lower",
+        "region": "Victoria",
+        "postcode": "3107",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.8,
+          "lon": 145.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199273,
+      "number": "2479D",
+      "team_name": "Rivercrest D",
+      "robot_name": "",
+      "organization": "Rivercrest Christian College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Clyde North",
+        "region": "Victoria",
+        "postcode": "3978",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -38.1,
+          "lon": 145.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 199275,
+      "number": "2479H",
+      "team_name": "Rivercrest H",
+      "robot_name": "",
+      "organization": "Rivercrest Christian College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Clyde North",
+        "region": "Victoria",
+        "postcode": "3978",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -38.1,
+          "lon": 145.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 199276,
+      "number": "2479X",
+      "team_name": "Rivercrest X",
+      "robot_name": "",
+      "organization": "Rivercrest Christian College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Clyde North",
+        "region": "Victoria",
+        "postcode": "3978",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -38.1,
+          "lon": 145.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 170583,
+      "number": "3477A",
+      "team_name": "Triple T",
+      "robot_name": "random kid",
+      "organization": "St Andrews Christian College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Wantirna South",
+        "region": "Victoria",
+        "postcode": "3152",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.9,
+          "lon": 145.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 170597,
+      "number": "3477B",
+      "team_name": "The Tax Evaders",
+      "robot_name": "Tellurium",
+      "organization": "St Andrews Christian College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Wantirna South",
+        "region": "Victoria",
+        "postcode": "3152",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.9,
+          "lon": 145.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 154792,
+      "number": "3477C",
+      "team_name": "MSND",
+      "robot_name": "Theseus",
+      "organization": "St Andrews Christian College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Wantirna South",
+        "region": "Victoria",
+        "postcode": "3152",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.9,
+          "lon": 145.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 170598,
+      "number": "3477D",
+      "team_name": "The Tax Collecters",
+      "robot_name": "Thorium",
+      "organization": "St Andrews Christian College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Wantirna South",
+        "region": "Victoria",
+        "postcode": "3152",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.9,
+          "lon": 145.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 197376,
+      "number": "3477E",
+      "team_name": "-Synt4x 3rr0r-",
+      "robot_name": "Clanker",
+      "organization": "St Andrews Christian College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Wantirna South",
+        "region": "Victoria",
+        "postcode": "3152",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.9,
+          "lon": 145.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 197841,
+      "number": "7479E",
+      "team_name": "Devastating Bushfires",
+      "robot_name": "",
+      "organization": "Hillcrest Christian College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Clyde North",
+        "region": "Victoria",
+        "postcode": "3978",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -38.1,
+          "lon": 145.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 198911,
+      "number": "13739A",
+      "team_name": "Anti-Clankers",
+      "robot_name": "Clanker",
+      "organization": "Mount Lilydale Mercy College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Melbourne",
+        "region": "Victoria",
+        "postcode": "3140",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.8,
+          "lon": 145.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 198910,
+      "number": "13739C",
+      "team_name": "Scared of Sunlight",
+      "robot_name": "Sunlight",
+      "organization": "Mount Lilydale Mercy College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Melbourne",
+        "region": "Victoria",
+        "postcode": "3140",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.8,
+          "lon": 145.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 198909,
+      "number": "13739M",
+      "team_name": "TinSkins",
+      "robot_name": "Tinskin",
+      "organization": "Mount Lilydale Mercy College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Melbourne",
+        "region": "Victoria",
+        "postcode": "3140",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.8,
+          "lon": 145.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 197613,
+      "number": "31260B",
+      "team_name": "BEECH trees",
+      "robot_name": "",
+      "organization": "Camberwell Grammar School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Canterbury",
+        "region": "Victoria",
+        "postcode": "3126",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.8,
+          "lon": 145.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 197615,
+      "number": "31260C",
+      "team_name": "TBA",
+      "robot_name": "",
+      "organization": "Camberwell Grammar School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Canterbury",
+        "region": "Victoria",
+        "postcode": "3126",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.8,
+          "lon": 145.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 197614,
+      "number": "31260R",
+      "team_name": "Running robbers",
+      "robot_name": "",
+      "organization": "Camberwell Grammar School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Canterbury",
+        "region": "Victoria",
+        "postcode": "3126",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.8,
+          "lon": 145.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 185676,
+      "number": "31260S",
+      "team_name": "Strategy",
+      "robot_name": "",
+      "organization": "Camberwell Grammar School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Canterbury",
+        "region": "Victoria",
+        "postcode": "3126",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.8,
+          "lon": 145.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 185674,
+      "number": "31260V",
+      "team_name": "1D-Sphere",
+      "robot_name": "",
+      "organization": "Camberwell Grammar School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Canterbury",
+        "region": "Victoria",
+        "postcode": "3126",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.8,
+          "lon": 145.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 185675,
+      "number": "31260X",
+      "team_name": "Yellow Panda Microwave",
+      "robot_name": "",
+      "organization": "Camberwell Grammar School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Canterbury",
+        "region": "Victoria",
+        "postcode": "3126",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.8,
+          "lon": 145.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 185673,
+      "number": "31260Y",
+      "team_name": "Underclocked",
+      "robot_name": "",
+      "organization": "Camberwell Grammar School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Canterbury",
+        "region": "Victoria",
+        "postcode": "3126",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.8,
+          "lon": 145.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199386,
+      "number": "32324A",
+      "team_name": "Guinea Pigs",
+      "robot_name": "",
+      "organization": "Oxley Christian College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Chirnside Park",
+        "region": "Victoria",
+        "postcode": "3116",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.8,
+          "lon": 145.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 97178,
+      "number": "52050A",
+      "team_name": "Layla",
+      "robot_name": "Layla",
+      "organization": "Aquinas College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Ringwood",
+        "region": "Victoria",
+        "postcode": "3134",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.8,
+          "lon": 145.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 185802,
+      "number": "61965A",
+      "team_name": "SCC Lions 1",
+      "robot_name": "",
+      "organization": "Shepparton Christian College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Shepparton",
+        "region": "Victoria",
+        "postcode": "3630",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -36.4,
+          "lon": 145.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 189308,
+      "number": "84134A",
+      "team_name": "dead game haters",
+      "robot_name": "Baymaa",
+      "organization": "Koonung Secondary College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Mont Albert North Vic ",
+        "region": "Victoria",
+        "postcode": "3129",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.8,
+          "lon": 145.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 197417,
+      "number": "84134H",
+      "team_name": "Trial and Error",
+      "robot_name": "Wall-E",
+      "organization": "Koonung Secondary College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Mont Albert North Vic ",
+        "region": "Victoria",
+        "postcode": "3129",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.8,
+          "lon": 145.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 127812,
+      "number": "87959A",
+      "team_name": "HPSC- IDK",
+      "robot_name": "Igor Da Konkerer",
+      "organization": "Hampton Park Secondary College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Hampton Park",
+        "region": "Victoria",
+        "postcode": "3976",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -38,
+          "lon": 145.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 185063,
+      "number": "91123A",
+      "team_name": "MECS 9/10s",
+      "robot_name": "",
+      "organization": "Mount Evelyn Christian School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Montrose",
+        "region": "Victoria",
+        "postcode": "3765",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.8,
+          "lon": 145.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    }
+  ]
+}

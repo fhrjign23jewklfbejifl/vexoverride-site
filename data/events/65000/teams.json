@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65000/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65000/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65000/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 4,
+    "total": 4,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 189727,
+      "number": "21169A",
+      "team_name": "Pneumatic Pioneers",
+      "robot_name": "",
+      "organization": "Stamford American School Hong Kong WK",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Hong Kong",
+        "region": null,
+        "postcode": "00000",
+        "country": "Hong Kong",
+        "coordinates": {
+          "lat": 22.3,
+          "lon": 114.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 188871,
+      "number": "21169J",
+      "team_name": "Lion Legends",
+      "robot_name": "",
+      "organization": "Stamford American School Hong Kong",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Hong Kong",
+        "region": null,
+        "postcode": "00000",
+        "country": "Hong Kong, China",
+        "coordinates": {
+          "lat": 22.3,
+          "lon": 114.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 189729,
+      "number": "21169K",
+      "team_name": "Online Delay",
+      "robot_name": "Wonyoung",
+      "organization": "Stamford American School Hong Kong WK",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Hong Kong",
+        "region": null,
+        "postcode": "00000",
+        "country": "Hong Kong, China",
+        "coordinates": {
+          "lat": 22.3,
+          "lon": 114.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 189725,
+      "number": "21169W",
+      "team_name": "Eggs on Kruh",
+      "robot_name": "Chu-Chu Kruh",
+      "organization": "Stamford American School Hong Kong WK",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Hong Kong",
+        "region": null,
+        "postcode": "00000",
+        "country": "Hong Kong, China",
+        "coordinates": {
+          "lat": 22.3,
+          "lon": 114.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
+}

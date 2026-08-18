@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65261/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65261/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65261/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 5,
+    "total": 5,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 986,
+      "number": "2918C",
+      "team_name": "GCEC",
+      "robot_name": "GCEC",
+      "organization": "Glenfield College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Glenfield",
+        "region": "Auckland",
+        "postcode": "0629",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -36.8,
+          "lon": 174.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 81641,
+      "number": "2918H",
+      "team_name": "GCEC",
+      "robot_name": "GCEC",
+      "organization": "Glenfield College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Auckland",
+        "region": "Auckland",
+        "postcode": "0629",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -36.8,
+          "lon": 174.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 128421,
+      "number": "2918X",
+      "team_name": "GCEC",
+      "robot_name": "GCEC",
+      "organization": "Glenfield College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Auckland",
+        "region": "Auckland",
+        "postcode": "0629",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -36.8,
+          "lon": 174.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 153970,
+      "number": "2923A",
+      "team_name": "King's A",
+      "robot_name": "",
+      "organization": "Kings College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Auckland",
+        "region": "Auckland",
+        "postcode": "1062",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -37,
+          "lon": 174.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 198326,
+      "number": "53149A",
+      "team_name": "Selwyn Robotics",
+      "robot_name": "",
+      "organization": "Selwyn College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Kohimarama",
+        "region": "Auckland",
+        "postcode": "1071",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -36.9,
+          "lon": 174.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
+}

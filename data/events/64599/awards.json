@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64599/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64599/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64599/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 7,
+    "total": 7,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 283253,
+      "event": {
+        "id": 64599,
+        "name": "5.1 VEX Battle:  Los Angeles_OVERRIDE: VEX V5 Robotics Competition Blended MS/HS",
+        "code": "RE-V5RC-26-4599"
+      },
+      "order": 61,
+      "title": "Excellence Award - Middle School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283254,
+      "event": {
+        "id": 64599,
+        "name": "5.1 VEX Battle:  Los Angeles_OVERRIDE: VEX V5 Robotics Competition Blended MS/HS",
+        "code": "RE-V5RC-26-4599"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283255,
+      "event": {
+        "id": 64599,
+        "name": "5.1 VEX Battle:  Los Angeles_OVERRIDE: VEX V5 Robotics Competition Blended MS/HS",
+        "code": "RE-V5RC-26-4599"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283256,
+      "event": {
+        "id": 64599,
+        "name": "5.1 VEX Battle:  Los Angeles_OVERRIDE: VEX V5 Robotics Competition Blended MS/HS",
+        "code": "RE-V5RC-26-4599"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283257,
+      "event": {
+        "id": 64599,
+        "name": "5.1 VEX Battle:  Los Angeles_OVERRIDE: VEX V5 Robotics Competition Blended MS/HS",
+        "code": "RE-V5RC-26-4599"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283258,
+      "event": {
+        "id": 64599,
+        "name": "5.1 VEX Battle:  Los Angeles_OVERRIDE: VEX V5 Robotics Competition Blended MS/HS",
+        "code": "RE-V5RC-26-4599"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283372,
+      "event": {
+        "id": 64599,
+        "name": "5.1 VEX Battle:  Los Angeles_OVERRIDE: VEX V5 Robotics Competition Blended MS/HS",
+        "code": "RE-V5RC-26-4599"
+      },
+      "order": 60,
+      "title": "Excellence Award - High School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

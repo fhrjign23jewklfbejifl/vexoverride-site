@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64657/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64657/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64657/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 10,
+    "total": 10,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 283612,
+      "event": {
+        "id": 64657,
+        "name": "West Michigan Holiday Override™ Tournament MS: VEX V5 Robotics Competition, Middle School Only",
+        "code": "RE-V5RC-26-4657"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283613,
+      "event": {
+        "id": 64657,
+        "name": "West Michigan Holiday Override™ Tournament MS: VEX V5 Robotics Competition, Middle School Only",
+        "code": "RE-V5RC-26-4657"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283614,
+      "event": {
+        "id": 64657,
+        "name": "West Michigan Holiday Override™ Tournament MS: VEX V5 Robotics Competition, Middle School Only",
+        "code": "RE-V5RC-26-4657"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283615,
+      "event": {
+        "id": 64657,
+        "name": "West Michigan Holiday Override™ Tournament MS: VEX V5 Robotics Competition, Middle School Only",
+        "code": "RE-V5RC-26-4657"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283616,
+      "event": {
+        "id": 64657,
+        "name": "West Michigan Holiday Override™ Tournament MS: VEX V5 Robotics Competition, Middle School Only",
+        "code": "RE-V5RC-26-4657"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283617,
+      "event": {
+        "id": 64657,
+        "name": "West Michigan Holiday Override™ Tournament MS: VEX V5 Robotics Competition, Middle School Only",
+        "code": "RE-V5RC-26-4657"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283618,
+      "event": {
+        "id": 64657,
+        "name": "West Michigan Holiday Override™ Tournament MS: VEX V5 Robotics Competition, Middle School Only",
+        "code": "RE-V5RC-26-4657"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283619,
+      "event": {
+        "id": 64657,
+        "name": "West Michigan Holiday Override™ Tournament MS: VEX V5 Robotics Competition, Middle School Only",
+        "code": "RE-V5RC-26-4657"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283620,
+      "event": {
+        "id": 64657,
+        "name": "West Michigan Holiday Override™ Tournament MS: VEX V5 Robotics Competition, Middle School Only",
+        "code": "RE-V5RC-26-4657"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283621,
+      "event": {
+        "id": 64657,
+        "name": "West Michigan Holiday Override™ Tournament MS: VEX V5 Robotics Competition, Middle School Only",
+        "code": "RE-V5RC-26-4657"
+      },
+      "order": 78,
+      "title": "Create Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

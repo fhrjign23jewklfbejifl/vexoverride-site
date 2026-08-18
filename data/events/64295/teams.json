@@ -1,0 +1,882 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64295/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64295/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64295/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 32,
+    "total": 32,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 6596,
+      "number": "355B",
+      "team_name": "Bob Da Builders",
+      "robot_name": "none",
+      "organization": "Fox Valley Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Batavia",
+        "region": "Illinois",
+        "postcode": "60510",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.9,
+          "lon": -88.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 18778,
+      "number": "355C",
+      "team_name": "Cardinals",
+      "robot_name": "",
+      "organization": "Fox Valley Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Batavia",
+        "region": "Illinois",
+        "postcode": "60510",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.9,
+          "lon": -88.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 161172,
+      "number": "355P",
+      "team_name": "PowerHouse",
+      "robot_name": "Shakeatron 6.0",
+      "organization": "Fox Valley Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Batavia",
+        "region": "Illinois",
+        "postcode": "60510",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.9,
+          "lon": -88.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 60016,
+      "number": "355S",
+      "team_name": "Tsunami",
+      "robot_name": "",
+      "organization": "Fox Valley Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Batavia",
+        "region": "Illinois",
+        "postcode": "60510",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.9,
+          "lon": -88.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 74980,
+      "number": "355V",
+      "team_name": "Ghost",
+      "robot_name": "",
+      "organization": "Fox Valley Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Batavia",
+        "region": "Illinois",
+        "postcode": "60510",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.9,
+          "lon": -88.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 144268,
+      "number": "355Z",
+      "team_name": "Falcons",
+      "robot_name": "Yoda",
+      "organization": "Fox Valley Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Batavia",
+        "region": "Illinois",
+        "postcode": "60510",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.9,
+          "lon": -88.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 198452,
+      "number": "1413A",
+      "team_name": "Argon",
+      "robot_name": "",
+      "organization": "ST CHARLES EAST HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "St. Charles",
+        "region": "Illinois",
+        "postcode": "60174",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.9,
+          "lon": -88.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 198449,
+      "number": "1413N",
+      "team_name": "Neon",
+      "robot_name": "",
+      "organization": "ST CHARLES EAST HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "St. Charles",
+        "region": "Illinois",
+        "postcode": "60174",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.9,
+          "lon": -88.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 198451,
+      "number": "1413R",
+      "team_name": "Radon",
+      "robot_name": "",
+      "organization": "ST CHARLES EAST HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "St. Charles",
+        "region": "Illinois",
+        "postcode": "60174",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.9,
+          "lon": -88.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 198450,
+      "number": "1413X",
+      "team_name": "Xenon",
+      "robot_name": "",
+      "organization": "ST CHARLES EAST HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "St. Charles",
+        "region": "Illinois",
+        "postcode": "60174",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.9,
+          "lon": -88.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 72175,
+      "number": "2360A",
+      "team_name": "Arachnid",
+      "robot_name": "Arachnid",
+      "organization": "Neuqua Valley High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Naperville",
+        "region": "Illinois",
+        "postcode": "60564",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.7,
+          "lon": -88.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 187718,
+      "number": "2360C",
+      "team_name": "Clockwork",
+      "robot_name": "Clockwork",
+      "organization": "Neuqua Valley High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Naperville",
+        "region": "Illinois",
+        "postcode": "60564",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.7,
+          "lon": -88.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199188,
+      "number": "2360D",
+      "team_name": "DarkMatter",
+      "robot_name": "DarkMatter",
+      "organization": "Neuqua Valley High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Naperville",
+        "region": "Illinois",
+        "postcode": "60564",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.7,
+          "lon": -88.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 51396,
+      "number": "2360H",
+      "team_name": "Helix",
+      "robot_name": "TBD-H",
+      "organization": "Neuqua Valley High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Naperville",
+        "region": "Illinois",
+        "postcode": "60564",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.7,
+          "lon": -88.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 44413,
+      "number": "2360N",
+      "team_name": "Nightmare",
+      "robot_name": "Nightmare",
+      "organization": "Neuqua Valley High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Naperville",
+        "region": "Illinois",
+        "postcode": "60564",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.7,
+          "lon": -88.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 56976,
+      "number": "2360X",
+      "team_name": "Xenon",
+      "robot_name": "Xenon",
+      "organization": "Neuqua Valley High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Naperville",
+        "region": "Illinois",
+        "postcode": "60564",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.7,
+          "lon": -88.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 76579,
+      "number": "23880A",
+      "team_name": "LT Robotics A",
+      "robot_name": "",
+      "organization": "LYONS TWP HIGH SCH",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Lagrange",
+        "region": "Illinois",
+        "postcode": "60525",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.8,
+          "lon": -87.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 76580,
+      "number": "23880B",
+      "team_name": "LT Robotics B",
+      "robot_name": "",
+      "organization": "LYONS TWP HIGH SCH",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Lagrange",
+        "region": "Illinois",
+        "postcode": "60525",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.8,
+          "lon": -87.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 83864,
+      "number": "23880D",
+      "team_name": "LT Robotics D",
+      "robot_name": "",
+      "organization": "LYONS TWP HIGH SCH",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Lagrange",
+        "region": "Illinois",
+        "postcode": "60525",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.8,
+          "lon": -87.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 130165,
+      "number": "23880F",
+      "team_name": "LT Robotics F",
+      "robot_name": "",
+      "organization": "LYONS TWP HIGH SCH",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Lagrange",
+        "region": "Illinois",
+        "postcode": "60525",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.8,
+          "lon": -87.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 185132,
+      "number": "23880G",
+      "team_name": "LT Robotics G",
+      "robot_name": "",
+      "organization": "LYONS TWP HIGH SCH",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Lagrange",
+        "region": "Illinois",
+        "postcode": "60525",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.8,
+          "lon": -87.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 187130,
+      "number": "38535X",
+      "team_name": "nox",
+      "robot_name": "Lil' Nitrous",
+      "organization": "Glenbrook South High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Glenview",
+        "region": "Illinois",
+        "postcode": "60026",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.1,
+          "lon": -87.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 73709,
+      "number": "60172S",
+      "team_name": "Sneaky Golem in the Pocket",
+      "robot_name": "Blackbeard",
+      "organization": "Lake Park High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Roselle",
+        "region": "Illinois",
+        "postcode": "60172",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42,
+          "lon": -88.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 82200,
+      "number": "60172T",
+      "team_name": "Stallions",
+      "robot_name": "Barney",
+      "organization": "Lake Park High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Roselle",
+        "region": "Illinois",
+        "postcode": "60172",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42,
+          "lon": -88.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 82201,
+      "number": "60172U",
+      "team_name": "Unicorns",
+      "robot_name": "",
+      "organization": "Lake Park High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Roselle",
+        "region": "Illinois",
+        "postcode": "60172",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42,
+          "lon": -88.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 82202,
+      "number": "60172V",
+      "team_name": "Venom",
+      "robot_name": "Lancerland",
+      "organization": "Lake Park High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Roselle",
+        "region": "Illinois",
+        "postcode": "60172",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42,
+          "lon": -88.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 95194,
+      "number": "60172W",
+      "team_name": "Wild Wigglers",
+      "robot_name": "",
+      "organization": "Lake Park High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Roselle",
+        "region": "Illinois",
+        "postcode": "60172",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42,
+          "lon": -88.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 95195,
+      "number": "60172X",
+      "team_name": "veX-Men",
+      "robot_name": "Auberchine",
+      "organization": "Lake Park High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Roselle",
+        "region": "Illinois",
+        "postcode": "60172",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42,
+          "lon": -88.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 139628,
+      "number": "60441A",
+      "team_name": "Team A",
+      "robot_name": "",
+      "organization": "Lockport Township High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Lockport",
+        "region": "Illinois",
+        "postcode": "60441",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.6,
+          "lon": -88
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 143347,
+      "number": "60441C",
+      "team_name": "Team C",
+      "robot_name": "",
+      "organization": "Lockport Township High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Lockport",
+        "region": "Illinois",
+        "postcode": "60441",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.6,
+          "lon": -88
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 157060,
+      "number": "60441X",
+      "team_name": "Teqnifii Nova",
+      "robot_name": "",
+      "organization": "Lockport Township High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Lockport",
+        "region": "Illinois",
+        "postcode": "60441",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.6,
+          "lon": -88
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 158809,
+      "number": "60441Z",
+      "team_name": "Livewire",
+      "robot_name": "",
+      "organization": "Lockport Township High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Lockport",
+        "region": "Illinois",
+        "postcode": "60441",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.6,
+          "lon": -88
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
+}

@@ -1,0 +1,708 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64650/skills?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64650/skills?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64650/skills",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 30,
+    "total": 30,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 79138234,
+      "event": {
+        "id": 64650,
+        "name": "Jeff Demaray Memorial Tournament at the Monroe County Fair: Blended VEX V5 Robotics Competition MS/HS Qualifier",
+        "code": "RE-V5RC-26-4650"
+      },
+      "team": {
+        "id": 185726,
+        "name": "16610G",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 1,
+      "score": 78,
+      "attempts": 2
+    },
+    {
+      "id": 79138235,
+      "event": {
+        "id": 64650,
+        "name": "Jeff Demaray Memorial Tournament at the Monroe County Fair: Blended VEX V5 Robotics Competition MS/HS Qualifier",
+        "code": "RE-V5RC-26-4650"
+      },
+      "team": {
+        "id": 185726,
+        "name": "16610G",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 1,
+      "score": 8,
+      "attempts": 1
+    },
+    {
+      "id": 79138236,
+      "event": {
+        "id": 64650,
+        "name": "Jeff Demaray Memorial Tournament at the Monroe County Fair: Blended VEX V5 Robotics Competition MS/HS Qualifier",
+        "code": "RE-V5RC-26-4650"
+      },
+      "team": {
+        "id": 199426,
+        "name": "38W",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 2,
+      "score": 48,
+      "attempts": 3
+    },
+    {
+      "id": 79138237,
+      "event": {
+        "id": 64650,
+        "name": "Jeff Demaray Memorial Tournament at the Monroe County Fair: Blended VEX V5 Robotics Competition MS/HS Qualifier",
+        "code": "RE-V5RC-26-4650"
+      },
+      "team": {
+        "id": 199426,
+        "name": "38W",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 2,
+      "score": 8,
+      "attempts": 2
+    },
+    {
+      "id": 79138238,
+      "event": {
+        "id": 64650,
+        "name": "Jeff Demaray Memorial Tournament at the Monroe County Fair: Blended VEX V5 Robotics Competition MS/HS Qualifier",
+        "code": "RE-V5RC-26-4650"
+      },
+      "team": {
+        "id": 199425,
+        "name": "38R",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 3,
+      "score": 28,
+      "attempts": 2
+    },
+    {
+      "id": 79138239,
+      "event": {
+        "id": 64650,
+        "name": "Jeff Demaray Memorial Tournament at the Monroe County Fair: Blended VEX V5 Robotics Competition MS/HS Qualifier",
+        "code": "RE-V5RC-26-4650"
+      },
+      "team": {
+        "id": 199425,
+        "name": "38R",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 3,
+      "score": 0,
+      "attempts": 1
+    },
+    {
+      "id": 79138240,
+      "event": {
+        "id": 64650,
+        "name": "Jeff Demaray Memorial Tournament at the Monroe County Fair: Blended VEX V5 Robotics Competition MS/HS Qualifier",
+        "code": "RE-V5RC-26-4650"
+      },
+      "team": {
+        "id": 3456,
+        "name": "3333B",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 4,
+      "score": 28,
+      "attempts": 2
+    },
+    {
+      "id": 79138241,
+      "event": {
+        "id": 64650,
+        "name": "Jeff Demaray Memorial Tournament at the Monroe County Fair: Blended VEX V5 Robotics Competition MS/HS Qualifier",
+        "code": "RE-V5RC-26-4650"
+      },
+      "team": {
+        "id": 3456,
+        "name": "3333B",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 4,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79138242,
+      "event": {
+        "id": 64650,
+        "name": "Jeff Demaray Memorial Tournament at the Monroe County Fair: Blended VEX V5 Robotics Competition MS/HS Qualifier",
+        "code": "RE-V5RC-26-4650"
+      },
+      "team": {
+        "id": 82510,
+        "name": "39K",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 5,
+      "score": 28,
+      "attempts": 1
+    },
+    {
+      "id": 79138243,
+      "event": {
+        "id": 64650,
+        "name": "Jeff Demaray Memorial Tournament at the Monroe County Fair: Blended VEX V5 Robotics Competition MS/HS Qualifier",
+        "code": "RE-V5RC-26-4650"
+      },
+      "team": {
+        "id": 82510,
+        "name": "39K",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 5,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79138244,
+      "event": {
+        "id": 64650,
+        "name": "Jeff Demaray Memorial Tournament at the Monroe County Fair: Blended VEX V5 Robotics Competition MS/HS Qualifier",
+        "code": "RE-V5RC-26-4650"
+      },
+      "team": {
+        "id": 140646,
+        "name": "3333D",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 6,
+      "score": 18,
+      "attempts": 1
+    },
+    {
+      "id": 79138245,
+      "event": {
+        "id": 64650,
+        "name": "Jeff Demaray Memorial Tournament at the Monroe County Fair: Blended VEX V5 Robotics Competition MS/HS Qualifier",
+        "code": "RE-V5RC-26-4650"
+      },
+      "team": {
+        "id": 140646,
+        "name": "3333D",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 6,
+      "score": 8,
+      "attempts": 1
+    },
+    {
+      "id": 79138246,
+      "event": {
+        "id": 64650,
+        "name": "Jeff Demaray Memorial Tournament at the Monroe County Fair: Blended VEX V5 Robotics Competition MS/HS Qualifier",
+        "code": "RE-V5RC-26-4650"
+      },
+      "team": {
+        "id": 74982,
+        "name": "38C",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 7,
+      "score": 18,
+      "attempts": 2
+    },
+    {
+      "id": 79138247,
+      "event": {
+        "id": 64650,
+        "name": "Jeff Demaray Memorial Tournament at the Monroe County Fair: Blended VEX V5 Robotics Competition MS/HS Qualifier",
+        "code": "RE-V5RC-26-4650"
+      },
+      "team": {
+        "id": 74982,
+        "name": "38C",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 7,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79138248,
+      "event": {
+        "id": 64650,
+        "name": "Jeff Demaray Memorial Tournament at the Monroe County Fair: Blended VEX V5 Robotics Competition MS/HS Qualifier",
+        "code": "RE-V5RC-26-4650"
+      },
+      "team": {
+        "id": 85195,
+        "name": "3333Z",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 8,
+      "score": 8,
+      "attempts": 1
+    },
+    {
+      "id": 79138249,
+      "event": {
+        "id": 64650,
+        "name": "Jeff Demaray Memorial Tournament at the Monroe County Fair: Blended VEX V5 Robotics Competition MS/HS Qualifier",
+        "code": "RE-V5RC-26-4650"
+      },
+      "team": {
+        "id": 85195,
+        "name": "3333Z",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 8,
+      "score": 8,
+      "attempts": 3
+    },
+    {
+      "id": 79138250,
+      "event": {
+        "id": 64650,
+        "name": "Jeff Demaray Memorial Tournament at the Monroe County Fair: Blended VEX V5 Robotics Competition MS/HS Qualifier",
+        "code": "RE-V5RC-26-4650"
+      },
+      "team": {
+        "id": 85196,
+        "name": "3333X",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 9,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79138251,
+      "event": {
+        "id": 64650,
+        "name": "Jeff Demaray Memorial Tournament at the Monroe County Fair: Blended VEX V5 Robotics Competition MS/HS Qualifier",
+        "code": "RE-V5RC-26-4650"
+      },
+      "team": {
+        "id": 85196,
+        "name": "3333X",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 9,
+      "score": 8,
+      "attempts": 2
+    },
+    {
+      "id": 79138252,
+      "event": {
+        "id": 64650,
+        "name": "Jeff Demaray Memorial Tournament at the Monroe County Fair: Blended VEX V5 Robotics Competition MS/HS Qualifier",
+        "code": "RE-V5RC-26-4650"
+      },
+      "team": {
+        "id": 62909,
+        "name": "3547X",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 10,
+      "score": 8,
+      "attempts": 3
+    },
+    {
+      "id": 79138253,
+      "event": {
+        "id": 64650,
+        "name": "Jeff Demaray Memorial Tournament at the Monroe County Fair: Blended VEX V5 Robotics Competition MS/HS Qualifier",
+        "code": "RE-V5RC-26-4650"
+      },
+      "team": {
+        "id": 62909,
+        "name": "3547X",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 10,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79138254,
+      "event": {
+        "id": 64650,
+        "name": "Jeff Demaray Memorial Tournament at the Monroe County Fair: Blended VEX V5 Robotics Competition MS/HS Qualifier",
+        "code": "RE-V5RC-26-4650"
+      },
+      "team": {
+        "id": 198447,
+        "name": "16610M",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 11,
+      "score": 8,
+      "attempts": 3
+    },
+    {
+      "id": 79138255,
+      "event": {
+        "id": 64650,
+        "name": "Jeff Demaray Memorial Tournament at the Monroe County Fair: Blended VEX V5 Robotics Competition MS/HS Qualifier",
+        "code": "RE-V5RC-26-4650"
+      },
+      "team": {
+        "id": 198447,
+        "name": "16610M",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 11,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79138256,
+      "event": {
+        "id": 64650,
+        "name": "Jeff Demaray Memorial Tournament at the Monroe County Fair: Blended VEX V5 Robotics Competition MS/HS Qualifier",
+        "code": "RE-V5RC-26-4650"
+      },
+      "team": {
+        "id": 85064,
+        "name": "3333Y",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 12,
+      "score": 8,
+      "attempts": 1
+    },
+    {
+      "id": 79138257,
+      "event": {
+        "id": 64650,
+        "name": "Jeff Demaray Memorial Tournament at the Monroe County Fair: Blended VEX V5 Robotics Competition MS/HS Qualifier",
+        "code": "RE-V5RC-26-4650"
+      },
+      "team": {
+        "id": 85064,
+        "name": "3333Y",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 12,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79138258,
+      "event": {
+        "id": 64650,
+        "name": "Jeff Demaray Memorial Tournament at the Monroe County Fair: Blended VEX V5 Robotics Competition MS/HS Qualifier",
+        "code": "RE-V5RC-26-4650"
+      },
+      "team": {
+        "id": 65201,
+        "name": "3547F",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 13,
+      "score": 5,
+      "attempts": 2
+    },
+    {
+      "id": 79138259,
+      "event": {
+        "id": 64650,
+        "name": "Jeff Demaray Memorial Tournament at the Monroe County Fair: Blended VEX V5 Robotics Competition MS/HS Qualifier",
+        "code": "RE-V5RC-26-4650"
+      },
+      "team": {
+        "id": 65201,
+        "name": "3547F",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 13,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79138260,
+      "event": {
+        "id": 64650,
+        "name": "Jeff Demaray Memorial Tournament at the Monroe County Fair: Blended VEX V5 Robotics Competition MS/HS Qualifier",
+        "code": "RE-V5RC-26-4650"
+      },
+      "team": {
+        "id": 71922,
+        "name": "39B",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 14,
+      "score": 0,
+      "attempts": 1
+    },
+    {
+      "id": 79138261,
+      "event": {
+        "id": 64650,
+        "name": "Jeff Demaray Memorial Tournament at the Monroe County Fair: Blended VEX V5 Robotics Competition MS/HS Qualifier",
+        "code": "RE-V5RC-26-4650"
+      },
+      "team": {
+        "id": 71922,
+        "name": "39B",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 14,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79138262,
+      "event": {
+        "id": 64650,
+        "name": "Jeff Demaray Memorial Tournament at the Monroe County Fair: Blended VEX V5 Robotics Competition MS/HS Qualifier",
+        "code": "RE-V5RC-26-4650"
+      },
+      "team": {
+        "id": 155679,
+        "name": "38T",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 14,
+      "score": 0,
+      "attempts": 1
+    },
+    {
+      "id": 79138263,
+      "event": {
+        "id": 64650,
+        "name": "Jeff Demaray Memorial Tournament at the Monroe County Fair: Blended VEX V5 Robotics Competition MS/HS Qualifier",
+        "code": "RE-V5RC-26-4650"
+      },
+      "team": {
+        "id": 155679,
+        "name": "38T",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 14,
+      "score": 0,
+      "attempts": 0
+    }
+  ]
+}

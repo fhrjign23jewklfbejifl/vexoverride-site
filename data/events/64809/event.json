@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64809,
+    "sku": "RE-V5RC-26-4809",
+    "name": "Haunted Override Showdown-V5RC Robotics Competition™: High School Teams @ EPISD CTE STEM Competition Center",
+    "start": "2026-10-29T00:00:00-04:00",
+    "end": "2026-10-29T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "5300 Warriors Dr",
+      "address_1": "5300 Warriors Drive",
+      "address_2": null,
+      "city": "El Paso",
+      "region": "Texas",
+      "postcode": "79932",
+      "country": "United States",
+      "coordinates": {
+        "lat": 31.850584,
+        "lon": -106.59444
+      }
+    },
+    "locations": {
+      "2026-10-29": {
+        "venue": "5300 Warriors Dr",
+        "address_1": "5300 Warriors Drive",
+        "address_2": null,
+        "city": "El Paso",
+        "region": "Texas",
+        "postcode": "79932",
+        "country": "United States",
+        "coordinates": {
+          "lat": 31.850584,
+          "lon": -106.59444
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

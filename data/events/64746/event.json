@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64746,
+    "sku": "RE-V5RC-26-4746",
+    "name": "2026-2027赛季VEX机器人公开赛全国邀请赛V5RC",
+    "start": "2026-07-29T00:00:00-04:00",
+    "end": "2026-07-31T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "长春师范大学电影学院体育馆",
+      "address_1": "吉林省长春市南关区生态大街",
+      "address_2": null,
+      "city": "长春",
+      "region": "Jilin",
+      "postcode": "130000",
+      "country": "China",
+      "coordinates": {
+        "lat": 43.771459,
+        "lon": 125.378962
+      }
+    },
+    "locations": {
+      "2026-07-29": {
+        "venue": "长春师范大学电影学院体育馆",
+        "address_1": "吉林省长春市南关区生态大街",
+        "address_2": null,
+        "city": "长春",
+        "region": "Jilin",
+        "postcode": "130000",
+        "country": "China",
+        "coordinates": {
+          "lat": 43.771459,
+          "lon": 125.378962
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Division 1",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

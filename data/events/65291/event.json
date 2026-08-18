@@ -1,0 +1,110 @@
+{
+  "data": {
+    "id": 65291,
+    "sku": "RE-V5RC-26-5291",
+    "name": "V5RC High School Override League: High School VEX V5 Robotics Competition",
+    "start": "2026-10-12T00:00:00-04:00",
+    "end": "2026-12-07T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "North Junior HIgh",
+      "address_1": "1212 29th Ave North",
+      "address_2": null,
+      "city": "Saint Cloud",
+      "region": "Minnesota",
+      "postcode": "56303",
+      "country": "United States",
+      "coordinates": {
+        "lat": 45.574238,
+        "lon": -94.190854
+      }
+    },
+    "locations": {
+      "2026-10-12": {
+        "venue": "North Junior HIgh",
+        "address_1": "1212 29th Ave North",
+        "address_2": null,
+        "city": "Saint Cloud",
+        "region": "Minnesota",
+        "postcode": "56303",
+        "country": "United States",
+        "coordinates": {
+          "lat": 45.574238,
+          "lon": -94.190854
+        }
+      },
+      "2026-10-26": {
+        "venue": "North Junior HIgh",
+        "address_1": "1212 29th Ave North",
+        "address_2": null,
+        "city": "Saint Cloud",
+        "region": "Minnesota",
+        "postcode": "56303",
+        "country": "United States",
+        "coordinates": {
+          "lat": 45.574238,
+          "lon": -94.190854
+        }
+      },
+      "2026-11-09": {
+        "venue": "North Junior HIgh",
+        "address_1": "1212 29th Ave North",
+        "address_2": null,
+        "city": "Saint Cloud",
+        "region": "Minnesota",
+        "postcode": "56303",
+        "country": "United States",
+        "coordinates": {
+          "lat": 45.574238,
+          "lon": -94.190854
+        }
+      },
+      "2026-11-23": {
+        "venue": "North Junior HIgh",
+        "address_1": "1212 29th Ave North",
+        "address_2": null,
+        "city": "Saint Cloud",
+        "region": "Minnesota",
+        "postcode": "56303",
+        "country": "United States",
+        "coordinates": {
+          "lat": 45.574238,
+          "lon": -94.190854
+        }
+      },
+      "2026-12-07": {
+        "venue": "North Junior High",
+        "address_1": "1212 29th Ave North",
+        "address_2": null,
+        "city": "Saint Cloud",
+        "region": "Minnesota",
+        "postcode": "56303",
+        "country": "United States",
+        "coordinates": {
+          "lat": 45.574238,
+          "lon": -94.190854
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

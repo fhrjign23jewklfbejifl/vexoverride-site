@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64652,
+    "sku": "RE-V5RC-26-4652",
+    "name": "AOE Robotics V5RC Summit: VEX V5 Robotics Competition, HS and MS combined In Person Judging",
+    "start": "2027-02-27T00:00:00-05:00",
+    "end": "2027-02-27T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Clarksburg",
+      "address_1": "22401 Brick Haven Way",
+      "address_2": null,
+      "city": "Clarksburg",
+      "region": "Maryland",
+      "postcode": "20871",
+      "country": "United States",
+      "coordinates": {
+        "lat": 39.222887,
+        "lon": -77.263863
+      }
+    },
+    "locations": {
+      "2027-02-27": {
+        "venue": "Clarksburg",
+        "address_1": "22401 Brick Haven Way",
+        "address_2": null,
+        "city": "Clarksburg",
+        "region": "Maryland",
+        "postcode": "20871",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39.222887,
+          "lon": -77.263863
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

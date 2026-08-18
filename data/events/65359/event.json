@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65359,
+    "sku": "RE-V5RC-26-5359",
+    "name": "Red River Valley VEX V5 Robotics Competition: Blended HS/MS V5RC",
+    "start": "2027-01-29T00:00:00-05:00",
+    "end": "2027-01-29T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Central Middle School",
+      "address_1": "1827 Bygland Road Southeast",
+      "address_2": null,
+      "city": "East Grand Forks",
+      "region": "Minnesota",
+      "postcode": "56721",
+      "country": "United States",
+      "coordinates": {
+        "lat": 47.900924,
+        "lon": -96.988812
+      }
+    },
+    "locations": {
+      "2027-01-29": {
+        "venue": "Central Middle School",
+        "address_1": "1827 Bygland Road Southeast",
+        "address_2": null,
+        "city": "East Grand Forks",
+        "region": "Minnesota",
+        "postcode": "56721",
+        "country": "United States",
+        "coordinates": {
+          "lat": 47.900924,
+          "lon": -96.988812
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

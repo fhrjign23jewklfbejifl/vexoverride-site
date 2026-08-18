@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65212,
+    "sku": "RE-V5RC-26-5212",
+    "name": "York VEX V5 Coastal Classic: Override Qualifier",
+    "start": "2026-11-14T00:00:00-05:00",
+    "end": "2026-11-14T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "York High School",
+      "address_1": "1 Robert Stevens Drive",
+      "address_2": null,
+      "city": "York",
+      "region": "Maine",
+      "postcode": "03909",
+      "country": "United States",
+      "coordinates": {
+        "lat": 43.154961,
+        "lon": -70.629022
+      }
+    },
+    "locations": {
+      "2026-11-14": {
+        "venue": "York High School",
+        "address_1": "1 Robert Stevens Drive",
+        "address_2": null,
+        "city": "York",
+        "region": "Maine",
+        "postcode": "03909",
+        "country": "United States",
+        "coordinates": {
+          "lat": 43.154961,
+          "lon": -70.629022
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

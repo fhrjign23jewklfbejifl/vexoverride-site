@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64401,
+    "sku": "RE-V5RC-26-4401",
+    "name": "NWI Region Robotics Rumble V5RC MS: VEX V5 Robotics Competition Middle School Qualifying Tournament",
+    "start": "2026-12-12T00:00:00-05:00",
+    "end": "2026-12-12T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Portage High School",
+      "address_1": "6450 U.S. 6",
+      "address_2": null,
+      "city": "Portage",
+      "region": "Indiana",
+      "postcode": "46368",
+      "country": "United States",
+      "coordinates": {
+        "lat": 41.552242,
+        "lon": -87.168101
+      }
+    },
+    "locations": {
+      "2026-12-12": {
+        "venue": "Portage High School",
+        "address_1": "6450 U.S. 6",
+        "address_2": null,
+        "city": "Portage",
+        "region": "Indiana",
+        "postcode": "46368",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.552242,
+          "lon": -87.168101
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

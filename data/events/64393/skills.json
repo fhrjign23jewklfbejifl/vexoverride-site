@@ -1,0 +1,1766 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64393/skills?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64393/skills?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64393/skills",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 76,
+    "total": 76,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 79090716,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 198084,
+        "name": "8223W",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 1,
+      "score": 50,
+      "attempts": 3
+    },
+    {
+      "id": 79090717,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 198084,
+        "name": "8223W",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 1,
+      "score": 78,
+      "attempts": 2
+    },
+    {
+      "id": 79090718,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 197869,
+        "name": "68417Y",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 2,
+      "score": 98,
+      "attempts": 2
+    },
+    {
+      "id": 79090719,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 197869,
+        "name": "68417Y",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 2,
+      "score": 28,
+      "attempts": 2
+    },
+    {
+      "id": 79090720,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 171763,
+        "name": "12808Z",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 3,
+      "score": 58,
+      "attempts": 3
+    },
+    {
+      "id": 79090721,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 171763,
+        "name": "12808Z",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 3,
+      "score": 58,
+      "attempts": 2
+    },
+    {
+      "id": 79090722,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 198026,
+        "name": "10080A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 4,
+      "score": 68,
+      "attempts": 1
+    },
+    {
+      "id": 79090723,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 198026,
+        "name": "10080A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 4,
+      "score": 38,
+      "attempts": 3
+    },
+    {
+      "id": 79090724,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 197868,
+        "name": "52994Z",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 5,
+      "score": 88,
+      "attempts": 1
+    },
+    {
+      "id": 79090725,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 197868,
+        "name": "52994Z",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 5,
+      "score": 18,
+      "attempts": 1
+    },
+    {
+      "id": 79090726,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 197598,
+        "name": "50701A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 6,
+      "score": 78,
+      "attempts": 3
+    },
+    {
+      "id": 79090727,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 197598,
+        "name": "50701A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 6,
+      "score": 20,
+      "attempts": 1
+    },
+    {
+      "id": 79090728,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 152550,
+        "name": "25836C",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 7,
+      "score": 98,
+      "attempts": 3
+    },
+    {
+      "id": 79090729,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 152550,
+        "name": "25836C",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 7,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79090730,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 198327,
+        "name": "13191A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 8,
+      "score": 78,
+      "attempts": 2
+    },
+    {
+      "id": 79090731,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 198327,
+        "name": "13191A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 8,
+      "score": 18,
+      "attempts": 3
+    },
+    {
+      "id": 79090732,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 197369,
+        "name": "3296X",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 9,
+      "score": 50,
+      "attempts": 2
+    },
+    {
+      "id": 79090733,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 197369,
+        "name": "3296X",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 9,
+      "score": 38,
+      "attempts": 1
+    },
+    {
+      "id": 79090734,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 198336,
+        "name": "222S",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 10,
+      "score": 88,
+      "attempts": 2
+    },
+    {
+      "id": 79090735,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 198336,
+        "name": "222S",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 10,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79090736,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 197998,
+        "name": "66036A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 11,
+      "score": 58,
+      "attempts": 2
+    },
+    {
+      "id": 79090737,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 197998,
+        "name": "66036A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 11,
+      "score": 28,
+      "attempts": 2
+    },
+    {
+      "id": 79090738,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 129152,
+        "name": "88825H",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 12,
+      "score": 78,
+      "attempts": 2
+    },
+    {
+      "id": 79090739,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 129152,
+        "name": "88825H",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 12,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79090740,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 152263,
+        "name": "1737Z",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 13,
+      "score": 58,
+      "attempts": 1
+    },
+    {
+      "id": 79090741,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 152263,
+        "name": "1737Z",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 13,
+      "score": 18,
+      "attempts": 3
+    },
+    {
+      "id": 79090742,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 197660,
+        "name": "10057D",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 14,
+      "score": 68,
+      "attempts": 3
+    },
+    {
+      "id": 79090743,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 197660,
+        "name": "10057D",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 14,
+      "score": 0,
+      "attempts": 1
+    },
+    {
+      "id": 79090744,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 198249,
+        "name": "222B",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 15,
+      "score": 68,
+      "attempts": 3
+    },
+    {
+      "id": 79090745,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 198249,
+        "name": "222B",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 15,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79090746,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 145730,
+        "name": "1737Y",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 16,
+      "score": 58,
+      "attempts": 1
+    },
+    {
+      "id": 79090747,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 145730,
+        "name": "1737Y",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 16,
+      "score": 8,
+      "attempts": 3
+    },
+    {
+      "id": 79090748,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 198087,
+        "name": "10070A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 17,
+      "score": 58,
+      "attempts": 2
+    },
+    {
+      "id": 79090749,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 198087,
+        "name": "10070A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 17,
+      "score": 8,
+      "attempts": 2
+    },
+    {
+      "id": 79090750,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 198024,
+        "name": "88613M",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 18,
+      "score": 63,
+      "attempts": 1
+    },
+    {
+      "id": 79090751,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 198024,
+        "name": "88613M",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 18,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79090752,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 197663,
+        "name": "3023A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 19,
+      "score": 58,
+      "attempts": 2
+    },
+    {
+      "id": 79090753,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 197663,
+        "name": "3023A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 19,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79090754,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 198095,
+        "name": "12344A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 20,
+      "score": 58,
+      "attempts": 2
+    },
+    {
+      "id": 79090755,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 198095,
+        "name": "12344A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 20,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79090756,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 161108,
+        "name": "10017A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 21,
+      "score": 58,
+      "attempts": 1
+    },
+    {
+      "id": 79090757,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 161108,
+        "name": "10017A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 21,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79090758,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 122542,
+        "name": "9123K",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 21,
+      "score": 58,
+      "attempts": 1
+    },
+    {
+      "id": 79090759,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 122542,
+        "name": "9123K",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 21,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79090760,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 140947,
+        "name": "25836A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 21,
+      "score": 58,
+      "attempts": 1
+    },
+    {
+      "id": 79090761,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 140947,
+        "name": "25836A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 21,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79090762,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 170752,
+        "name": "81266A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 24,
+      "score": 40,
+      "attempts": 3
+    },
+    {
+      "id": 79090763,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 170752,
+        "name": "81266A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 24,
+      "score": 10,
+      "attempts": 1
+    },
+    {
+      "id": 79090764,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 140948,
+        "name": "25836B",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 25,
+      "score": 48,
+      "attempts": 2
+    },
+    {
+      "id": 79090765,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 140948,
+        "name": "25836B",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 25,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79090766,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 186086,
+        "name": "52140B",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 26,
+      "score": 30,
+      "attempts": 1
+    },
+    {
+      "id": 79090767,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 186086,
+        "name": "52140B",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 26,
+      "score": 10,
+      "attempts": 2
+    },
+    {
+      "id": 79090768,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 161428,
+        "name": "10127A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 27,
+      "score": 40,
+      "attempts": 2
+    },
+    {
+      "id": 79090769,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 161428,
+        "name": "10127A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 27,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79090770,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 189125,
+        "name": "90667A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 28,
+      "score": 30,
+      "attempts": 1
+    },
+    {
+      "id": 79090771,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 189125,
+        "name": "90667A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 28,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79090772,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 187498,
+        "name": "1677Y",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 29,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79090773,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 187498,
+        "name": "1677Y",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 29,
+      "score": 28,
+      "attempts": 2
+    },
+    {
+      "id": 79090774,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 115240,
+        "name": "9123Z",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 30,
+      "score": 28,
+      "attempts": 3
+    },
+    {
+      "id": 79090775,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 115240,
+        "name": "9123Z",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 30,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79090776,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 106314,
+        "name": "1737X",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 31,
+      "score": 28,
+      "attempts": 2
+    },
+    {
+      "id": 79090777,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 106314,
+        "name": "1737X",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 31,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79090778,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 197580,
+        "name": "17017Z",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 32,
+      "score": 23,
+      "attempts": 2
+    },
+    {
+      "id": 79090779,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 197580,
+        "name": "17017Z",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 32,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79090780,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 198027,
+        "name": "10050A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 33,
+      "score": 0,
+      "attempts": 1
+    },
+    {
+      "id": 79090781,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 198027,
+        "name": "10050A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 33,
+      "score": 8,
+      "attempts": 1
+    },
+    {
+      "id": 79090782,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 186466,
+        "name": "3023V",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 34,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79090783,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 186466,
+        "name": "3023V",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 34,
+      "score": 0,
+      "attempts": 1
+    },
+    {
+      "id": 79090784,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 165302,
+        "name": "10127C",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 34,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79090785,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 165302,
+        "name": "10127C",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 34,
+      "score": 0,
+      "attempts": 1
+    },
+    {
+      "id": 79090786,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 105779,
+        "name": "9123Y",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 36,
+      "score": 0,
+      "attempts": 1
+    },
+    {
+      "id": 79090787,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 105779,
+        "name": "9123Y",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 36,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79090788,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 198343,
+        "name": "3023C",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 36,
+      "score": 0,
+      "attempts": 1
+    },
+    {
+      "id": 79090789,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 198343,
+        "name": "3023C",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 36,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79090790,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 170571,
+        "name": "19176S",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 36,
+      "score": 0,
+      "attempts": 1
+    },
+    {
+      "id": 79090791,
+      "event": {
+        "id": 64393,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (MS)",
+        "code": "RE-V5RC-26-4393"
+      },
+      "team": {
+        "id": 170571,
+        "name": "19176S",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 36,
+      "score": 0,
+      "attempts": 0
+    }
+  ]
+}

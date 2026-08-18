@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64335/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64335/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64335/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 2,
+    "total": 2,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 185418,
+      "number": "2989A",
+      "team_name": "StarkTech",
+      "robot_name": "",
+      "organization": "CodeLAB",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bangkok ",
+        "region": null,
+        "postcode": "10150",
+        "country": "Thailand",
+        "coordinates": {
+          "lat": 13.7,
+          "lon": 100.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 198258,
+      "number": "2989B",
+      "team_name": "Juice box",
+      "robot_name": "",
+      "organization": "CodeLAB RM2",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bangkok ",
+        "region": null,
+        "postcode": "10150",
+        "country": "Thailand",
+        "coordinates": {
+          "lat": 13.7,
+          "lon": 100.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    }
+  ]
+}

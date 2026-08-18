@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64865,
+    "sku": "RE-V5RC-26-4865",
+    "name": "亚洲机器人联盟2026-2027赛季VEX机器人厦门城市选拔赛-VEX V5初高混组",
+    "start": "2026-07-09T00:00:00-04:00",
+    "end": "2026-07-10T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "厦门市集美区滨水路中五里1号（IOI商场）",
+      "address_1": "",
+      "address_2": null,
+      "city": "厦门市",
+      "region": "Fujian",
+      "postcode": "",
+      "country": "China",
+      "coordinates": {
+        "lat": 24.47951,
+        "lon": 118.08948
+      }
+    },
+    "locations": {
+      "2026-07-09": {
+        "venue": "厦门市集美区滨水路中五里1号（IOI商场）",
+        "address_1": "",
+        "address_2": null,
+        "city": "厦门市",
+        "region": "Fujian",
+        "postcode": "",
+        "country": "China",
+        "coordinates": {
+          "lat": 24.47951,
+          "lon": 118.08948
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Division 1",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": true,
+    "event_type": null
+  }
+}

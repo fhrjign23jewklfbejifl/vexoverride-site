@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64823,
+    "sku": "RE-V5RC-26-4823",
+    "name": "Override MS/HS Showdown: VEX V5 MS/HS Robotics Competition",
+    "start": "2026-11-07T00:00:00-05:00",
+    "end": "2026-11-07T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "C C Griffin Middle School",
+      "address_1": "7650 Griffins Gate Drive SW",
+      "address_2": null,
+      "city": "Concord",
+      "region": "North Carolina",
+      "postcode": "28025",
+      "country": "United States",
+      "coordinates": {
+        "lat": 35.307347,
+        "lon": -80.587586
+      }
+    },
+    "locations": {
+      "2026-11-07": {
+        "venue": "C C Griffin Middle School",
+        "address_1": "7650 Griffins Gate Drive SW",
+        "address_2": null,
+        "city": "Concord",
+        "region": "North Carolina",
+        "postcode": "28025",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.307347,
+          "lon": -80.587586
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64294/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64294/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64294/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 8,
+    "total": 8,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 280776,
+      "event": {
+        "id": 64294,
+        "name": "Nordic Thunder V5RC Blended: VEX V5 Robotics Competition, Override:  The Stormbrijtor",
+        "code": "RE-V5RC-26-4294"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280777,
+      "event": {
+        "id": 64294,
+        "name": "Nordic Thunder V5RC Blended: VEX V5 Robotics Competition, Override:  The Stormbrijtor",
+        "code": "RE-V5RC-26-4294"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280778,
+      "event": {
+        "id": 64294,
+        "name": "Nordic Thunder V5RC Blended: VEX V5 Robotics Competition, Override:  The Stormbrijtor",
+        "code": "RE-V5RC-26-4294"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280779,
+      "event": {
+        "id": 64294,
+        "name": "Nordic Thunder V5RC Blended: VEX V5 Robotics Competition, Override:  The Stormbrijtor",
+        "code": "RE-V5RC-26-4294"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280780,
+      "event": {
+        "id": 64294,
+        "name": "Nordic Thunder V5RC Blended: VEX V5 Robotics Competition, Override:  The Stormbrijtor",
+        "code": "RE-V5RC-26-4294"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280781,
+      "event": {
+        "id": 64294,
+        "name": "Nordic Thunder V5RC Blended: VEX V5 Robotics Competition, Override:  The Stormbrijtor",
+        "code": "RE-V5RC-26-4294"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280782,
+      "event": {
+        "id": 64294,
+        "name": "Nordic Thunder V5RC Blended: VEX V5 Robotics Competition, Override:  The Stormbrijtor",
+        "code": "RE-V5RC-26-4294"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280802,
+      "event": {
+        "id": 64294,
+        "name": "Nordic Thunder V5RC Blended: VEX V5 Robotics Competition, Override:  The Stormbrijtor",
+        "code": "RE-V5RC-26-4294"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

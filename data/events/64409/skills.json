@@ -1,0 +1,616 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64409/skills?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64409/skills?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64409/skills",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 26,
+    "total": 26,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 79051058,
+      "event": {
+        "id": 64409,
+        "name": "SA | VEX V5 Robotics Competition™ (Blended) Flinders NVI Open: Override™ Tournament @  Flinders University, Tonsley Innovation Precinct",
+        "code": "RE-V5RC-26-4409"
+      },
+      "team": {
+        "id": 197522,
+        "name": "52111A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 1,
+      "score": 68,
+      "attempts": 3
+    },
+    {
+      "id": 79051059,
+      "event": {
+        "id": 64409,
+        "name": "SA | VEX V5 Robotics Competition™ (Blended) Flinders NVI Open: Override™ Tournament @  Flinders University, Tonsley Innovation Precinct",
+        "code": "RE-V5RC-26-4409"
+      },
+      "team": {
+        "id": 197522,
+        "name": "52111A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 1,
+      "score": 18,
+      "attempts": 2
+    },
+    {
+      "id": 79051060,
+      "event": {
+        "id": 64409,
+        "name": "SA | VEX V5 Robotics Competition™ (Blended) Flinders NVI Open: Override™ Tournament @  Flinders University, Tonsley Innovation Precinct",
+        "code": "RE-V5RC-26-4409"
+      },
+      "team": {
+        "id": 156309,
+        "name": "41103X",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 2,
+      "score": 48,
+      "attempts": 3
+    },
+    {
+      "id": 79051061,
+      "event": {
+        "id": 64409,
+        "name": "SA | VEX V5 Robotics Competition™ (Blended) Flinders NVI Open: Override™ Tournament @  Flinders University, Tonsley Innovation Precinct",
+        "code": "RE-V5RC-26-4409"
+      },
+      "team": {
+        "id": 156309,
+        "name": "41103X",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 2,
+      "score": 8,
+      "attempts": 2
+    },
+    {
+      "id": 79051062,
+      "event": {
+        "id": 64409,
+        "name": "SA | VEX V5 Robotics Competition™ (Blended) Flinders NVI Open: Override™ Tournament @  Flinders University, Tonsley Innovation Precinct",
+        "code": "RE-V5RC-26-4409"
+      },
+      "team": {
+        "id": 128556,
+        "name": "12223X",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 3,
+      "score": 38,
+      "attempts": 3
+    },
+    {
+      "id": 79051063,
+      "event": {
+        "id": 64409,
+        "name": "SA | VEX V5 Robotics Competition™ (Blended) Flinders NVI Open: Override™ Tournament @  Flinders University, Tonsley Innovation Precinct",
+        "code": "RE-V5RC-26-4409"
+      },
+      "team": {
+        "id": 128556,
+        "name": "12223X",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 3,
+      "score": 8,
+      "attempts": 3
+    },
+    {
+      "id": 79051064,
+      "event": {
+        "id": 64409,
+        "name": "SA | VEX V5 Robotics Competition™ (Blended) Flinders NVI Open: Override™ Tournament @  Flinders University, Tonsley Innovation Precinct",
+        "code": "RE-V5RC-26-4409"
+      },
+      "team": {
+        "id": 135776,
+        "name": "41103C",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 4,
+      "score": 38,
+      "attempts": 3
+    },
+    {
+      "id": 79051065,
+      "event": {
+        "id": 64409,
+        "name": "SA | VEX V5 Robotics Competition™ (Blended) Flinders NVI Open: Override™ Tournament @  Flinders University, Tonsley Innovation Precinct",
+        "code": "RE-V5RC-26-4409"
+      },
+      "team": {
+        "id": 135776,
+        "name": "41103C",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 4,
+      "score": 8,
+      "attempts": 1
+    },
+    {
+      "id": 79051066,
+      "event": {
+        "id": 64409,
+        "name": "SA | VEX V5 Robotics Competition™ (Blended) Flinders NVI Open: Override™ Tournament @  Flinders University, Tonsley Innovation Precinct",
+        "code": "RE-V5RC-26-4409"
+      },
+      "team": {
+        "id": 139183,
+        "name": "12906A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 5,
+      "score": 28,
+      "attempts": 3
+    },
+    {
+      "id": 79051067,
+      "event": {
+        "id": 64409,
+        "name": "SA | VEX V5 Robotics Competition™ (Blended) Flinders NVI Open: Override™ Tournament @  Flinders University, Tonsley Innovation Precinct",
+        "code": "RE-V5RC-26-4409"
+      },
+      "team": {
+        "id": 139183,
+        "name": "12906A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 5,
+      "score": 0,
+      "attempts": 1
+    },
+    {
+      "id": 79051068,
+      "event": {
+        "id": 64409,
+        "name": "SA | VEX V5 Robotics Competition™ (Blended) Flinders NVI Open: Override™ Tournament @  Flinders University, Tonsley Innovation Precinct",
+        "code": "RE-V5RC-26-4409"
+      },
+      "team": {
+        "id": 196933,
+        "name": "81321D",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 6,
+      "score": 13,
+      "attempts": 3
+    },
+    {
+      "id": 79051069,
+      "event": {
+        "id": 64409,
+        "name": "SA | VEX V5 Robotics Competition™ (Blended) Flinders NVI Open: Override™ Tournament @  Flinders University, Tonsley Innovation Precinct",
+        "code": "RE-V5RC-26-4409"
+      },
+      "team": {
+        "id": 196933,
+        "name": "81321D",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 6,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79051070,
+      "event": {
+        "id": 64409,
+        "name": "SA | VEX V5 Robotics Competition™ (Blended) Flinders NVI Open: Override™ Tournament @  Flinders University, Tonsley Innovation Precinct",
+        "code": "RE-V5RC-26-4409"
+      },
+      "team": {
+        "id": 157300,
+        "name": "12223F",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 7,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79051071,
+      "event": {
+        "id": 64409,
+        "name": "SA | VEX V5 Robotics Competition™ (Blended) Flinders NVI Open: Override™ Tournament @  Flinders University, Tonsley Innovation Precinct",
+        "code": "RE-V5RC-26-4409"
+      },
+      "team": {
+        "id": 157300,
+        "name": "12223F",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 7,
+      "score": 8,
+      "attempts": 1
+    },
+    {
+      "id": 79051072,
+      "event": {
+        "id": 64409,
+        "name": "SA | VEX V5 Robotics Competition™ (Blended) Flinders NVI Open: Override™ Tournament @  Flinders University, Tonsley Innovation Precinct",
+        "code": "RE-V5RC-26-4409"
+      },
+      "team": {
+        "id": 196932,
+        "name": "81321C",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 8,
+      "score": 8,
+      "attempts": 1
+    },
+    {
+      "id": 79051073,
+      "event": {
+        "id": 64409,
+        "name": "SA | VEX V5 Robotics Competition™ (Blended) Flinders NVI Open: Override™ Tournament @  Flinders University, Tonsley Innovation Precinct",
+        "code": "RE-V5RC-26-4409"
+      },
+      "team": {
+        "id": 196932,
+        "name": "81321C",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 8,
+      "score": 0,
+      "attempts": 1
+    },
+    {
+      "id": 79051074,
+      "event": {
+        "id": 64409,
+        "name": "SA | VEX V5 Robotics Competition™ (Blended) Flinders NVI Open: Override™ Tournament @  Flinders University, Tonsley Innovation Precinct",
+        "code": "RE-V5RC-26-4409"
+      },
+      "team": {
+        "id": 187480,
+        "name": "76981B",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 9,
+      "score": 8,
+      "attempts": 2
+    },
+    {
+      "id": 79051075,
+      "event": {
+        "id": 64409,
+        "name": "SA | VEX V5 Robotics Competition™ (Blended) Flinders NVI Open: Override™ Tournament @  Flinders University, Tonsley Innovation Precinct",
+        "code": "RE-V5RC-26-4409"
+      },
+      "team": {
+        "id": 187480,
+        "name": "76981B",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 9,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79051076,
+      "event": {
+        "id": 64409,
+        "name": "SA | VEX V5 Robotics Competition™ (Blended) Flinders NVI Open: Override™ Tournament @  Flinders University, Tonsley Innovation Precinct",
+        "code": "RE-V5RC-26-4409"
+      },
+      "team": {
+        "id": 139536,
+        "name": "12906B",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 10,
+      "score": 0,
+      "attempts": 2
+    },
+    {
+      "id": 79051077,
+      "event": {
+        "id": 64409,
+        "name": "SA | VEX V5 Robotics Competition™ (Blended) Flinders NVI Open: Override™ Tournament @  Flinders University, Tonsley Innovation Precinct",
+        "code": "RE-V5RC-26-4409"
+      },
+      "team": {
+        "id": 139536,
+        "name": "12906B",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 10,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79051078,
+      "event": {
+        "id": 64409,
+        "name": "SA | VEX V5 Robotics Competition™ (Blended) Flinders NVI Open: Override™ Tournament @  Flinders University, Tonsley Innovation Precinct",
+        "code": "RE-V5RC-26-4409"
+      },
+      "team": {
+        "id": 197630,
+        "name": "49898G",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 11,
+      "score": 0,
+      "attempts": 1
+    },
+    {
+      "id": 79051079,
+      "event": {
+        "id": 64409,
+        "name": "SA | VEX V5 Robotics Competition™ (Blended) Flinders NVI Open: Override™ Tournament @  Flinders University, Tonsley Innovation Precinct",
+        "code": "RE-V5RC-26-4409"
+      },
+      "team": {
+        "id": 197630,
+        "name": "49898G",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 11,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79051080,
+      "event": {
+        "id": 64409,
+        "name": "SA | VEX V5 Robotics Competition™ (Blended) Flinders NVI Open: Override™ Tournament @  Flinders University, Tonsley Innovation Precinct",
+        "code": "RE-V5RC-26-4409"
+      },
+      "team": {
+        "id": 184602,
+        "name": "23140A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 11,
+      "score": 0,
+      "attempts": 1
+    },
+    {
+      "id": 79051081,
+      "event": {
+        "id": 64409,
+        "name": "SA | VEX V5 Robotics Competition™ (Blended) Flinders NVI Open: Override™ Tournament @  Flinders University, Tonsley Innovation Precinct",
+        "code": "RE-V5RC-26-4409"
+      },
+      "team": {
+        "id": 184602,
+        "name": "23140A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 11,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79052992,
+      "event": {
+        "id": 64409,
+        "name": "SA | VEX V5 Robotics Competition™ (Blended) Flinders NVI Open: Override™ Tournament @  Flinders University, Tonsley Innovation Precinct",
+        "code": "RE-V5RC-26-4409"
+      },
+      "team": {
+        "id": 0,
+        "name": "Missing",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 0,
+      "score": 16,
+      "attempts": null
+    },
+    {
+      "id": 79052993,
+      "event": {
+        "id": 64409,
+        "name": "SA | VEX V5 Robotics Competition™ (Blended) Flinders NVI Open: Override™ Tournament @  Flinders University, Tonsley Innovation Precinct",
+        "code": "RE-V5RC-26-4409"
+      },
+      "team": {
+        "id": 0,
+        "name": "Missing",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 0,
+      "score": 16,
+      "attempts": null
+    }
+  ]
+}

@@ -1,0 +1,1314 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64560/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64560/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64560/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 48,
+    "total": 48,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 197347,
+      "number": "11C",
+      "team_name": "IRVINE RUIGUAN",
+      "robot_name": "",
+      "organization": "IRVINE RUIGUAN",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Irvine",
+        "region": "California",
+        "postcode": "92604",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.7,
+          "lon": -117.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 185494,
+      "number": "11N",
+      "team_name": "IRVINE RUIGUAN",
+      "robot_name": "",
+      "organization": "IRVINE RUIGUAN",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Irvine",
+        "region": "California",
+        "postcode": "92604",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.7,
+          "lon": -117.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 129018,
+      "number": "11X",
+      "team_name": "Irvine Ruiguan",
+      "robot_name": "",
+      "organization": "IRVINE RUIGUAN",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Irvine",
+        "region": "California",
+        "postcode": "92604",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.7,
+          "lon": -117.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 197344,
+      "number": "11Z",
+      "team_name": "IRVINE RUIGUAN",
+      "robot_name": "",
+      "organization": "IRVINE RUIGUAN",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Irvine",
+        "region": "California",
+        "postcode": "92604",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.7,
+          "lon": -117.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 154677,
+      "number": "295W",
+      "team_name": "Eclipse",
+      "robot_name": "\"Bot\"",
+      "organization": "Placer Robotics (PART)",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Roseville",
+        "region": "California",
+        "postcode": "95678",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.7,
+          "lon": -121.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 178328,
+      "number": "839X",
+      "team_name": "// Caution Tape //",
+      "robot_name": "",
+      "organization": "Caution Tape Robotics ////",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Markham",
+        "region": "Ontario",
+        "postcode": "L3R 5J8",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 43.8,
+          "lon": -79.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 112941,
+      "number": "938A",
+      "team_name": "Blaze Last Minute",
+      "robot_name": "",
+      "organization": "Blaze Robotics Academy",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bellevue",
+        "region": "Washington",
+        "postcode": "98005",
+        "country": "United States",
+        "coordinates": {
+          "lat": 47.6,
+          "lon": -122.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 133415,
+      "number": "938G",
+      "team_name": "Blaze Good Game",
+      "robot_name": ":)",
+      "organization": "Ignite Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bellevue",
+        "region": "Washington",
+        "postcode": "98005",
+        "country": "United States",
+        "coordinates": {
+          "lat": 47.6,
+          "lon": -122.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 159387,
+      "number": "938V",
+      "team_name": "Blaze Vortex",
+      "robot_name": "",
+      "organization": "Blaze Robotics Academy",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bellevue",
+        "region": "Washington",
+        "postcode": "98005",
+        "country": "United States",
+        "coordinates": {
+          "lat": 47.6,
+          "lon": -122.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 198675,
+      "number": "1211X",
+      "team_name": "Xtra! Xtra!",
+      "robot_name": "Marv",
+      "organization": "Central Arkansas Robotics Academy",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Cabot",
+        "region": "Arkansas",
+        "postcode": "72023",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35,
+          "lon": -92.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 156341,
+      "number": "1590A",
+      "team_name": "Blue Army",
+      "robot_name": "Nokia",
+      "organization": "Innovagine Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Rancho Cucamonga",
+        "region": "California",
+        "postcode": "91730",
+        "country": "United States",
+        "coordinates": {
+          "lat": 34.1,
+          "lon": -117.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 154057,
+      "number": "1698Y",
+      "team_name": "Cool Beans",
+      "robot_name": "",
+      "organization": "1698",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "San Jose",
+        "region": "California",
+        "postcode": "95126",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.3,
+          "lon": -121.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 197560,
+      "number": "2468X",
+      "team_name": "GOGO BOBA",
+      "robot_name": "X",
+      "organization": " Irvine Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Irvine",
+        "region": "California",
+        "postcode": "92604",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.7,
+          "lon": -117.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 198338,
+      "number": "2468Y",
+      "team_name": "ARTEMIS",
+      "robot_name": "Y",
+      "organization": " Irvine Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Irvine",
+        "region": "California",
+        "postcode": "92604",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.7,
+          "lon": -117.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 197437,
+      "number": "2476S",
+      "team_name": "Starfire",
+      "robot_name": "Starfire",
+      "organization": "Starfire Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Laguna Hills",
+        "region": "California",
+        "postcode": "92653",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.6,
+          "lon": -117.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 186599,
+      "number": "2499V",
+      "team_name": "Vortex",
+      "robot_name": "2499V ",
+      "organization": "Irvine Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Irvine",
+        "region": "California",
+        "postcode": "92604",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.7,
+          "lon": -117.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 199158,
+      "number": "2862A",
+      "team_name": "2862A",
+      "robot_name": "",
+      "organization": "OC AI Innovation Center",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Tustin",
+        "region": "California",
+        "postcode": "92780",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.8,
+          "lon": -117.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 198071,
+      "number": "2862B",
+      "team_name": "2862B",
+      "robot_name": "",
+      "organization": "OC AI Innovation Center",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Tustin",
+        "region": "California",
+        "postcode": "92780",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.8,
+          "lon": -117.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 186296,
+      "number": "2883A",
+      "team_name": "Torque Overload",
+      "robot_name": "Torque Overload",
+      "organization": "Torque Overload",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Fremont",
+        "region": "California",
+        "postcode": "94539",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.5,
+          "lon": -121.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 197109,
+      "number": "3373X",
+      "team_name": "TBD",
+      "robot_name": "",
+      "organization": "Shores Robotics ",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Redwood City",
+        "region": "California",
+        "postcode": "94065",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.5,
+          "lon": -122.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 197193,
+      "number": "3397X",
+      "team_name": "Deluxe",
+      "robot_name": "Deluxe",
+      "organization": "Vista Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Dublin",
+        "region": "California",
+        "postcode": "94568",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.7,
+          "lon": -121.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 142585,
+      "number": "7700H",
+      "team_name": "Rolling Robots Humuhumunukunukuapua",
+      "robot_name": "Hoomy",
+      "organization": "Rolling Robots",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Rolling Hills Estates",
+        "region": "California",
+        "postcode": "90274",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.8,
+          "lon": -118.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 173232,
+      "number": "7899K",
+      "team_name": "Rolling Robots Ka-Chow",
+      "robot_name": "",
+      "organization": "Rolling Robots",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Irvine",
+        "region": "California",
+        "postcode": "92620",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.7,
+          "lon": -117.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 141204,
+      "number": "9537X",
+      "team_name": "Cyber Cowboys",
+      "robot_name": "",
+      "organization": "WILLMA CAVITT JUNIOR HIGH",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Granite Bay",
+        "region": "California",
+        "postcode": "95746",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.7,
+          "lon": -121.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 149260,
+      "number": "10102V",
+      "team_name": "[Vinci] CS2",
+      "robot_name": "Chungus",
+      "organization": "Vinci Robotics Academy",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Burlington",
+        "region": "Massachusetts",
+        "postcode": "01803",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.5,
+          "lon": -71.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 184927,
+      "number": "10606A",
+      "team_name": "10th Gear",
+      "robot_name": "",
+      "organization": "10th Gear",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "San Jose",
+        "region": "California",
+        "postcode": "95128",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.3,
+          "lon": -121.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 184925,
+      "number": "10688V",
+      "team_name": "Gravity Defiers",
+      "robot_name": "",
+      "organization": "Private",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Saratoga",
+        "region": "California",
+        "postcode": "95070",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.3,
+          "lon": -122
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 199403,
+      "number": "10829V",
+      "team_name": "Canned Tuna",
+      "robot_name": "",
+      "organization": "ARGUSBOT",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Campbell",
+        "region": "California",
+        "postcode": "95008",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.3,
+          "lon": -122
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 198936,
+      "number": "11588X",
+      "team_name": "STARX",
+      "robot_name": "",
+      "organization": "IGNITEX",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Palo Alto",
+        "region": "California",
+        "postcode": "94303",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.4,
+          "lon": -122.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 197438,
+      "number": "16558A",
+      "team_name": "SCrEW",
+      "robot_name": "",
+      "organization": "Folsom Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Folsom",
+        "region": "California",
+        "postcode": "95630-8581",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.7,
+          "lon": -121.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 197686,
+      "number": "16609X",
+      "team_name": "16609X",
+      "robot_name": "",
+      "organization": "Private",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Campbell",
+        "region": "California",
+        "postcode": "CA",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.3,
+          "lon": -122
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 198486,
+      "number": "18886X",
+      "team_name": "GuGuGaGa",
+      "robot_name": "",
+      "organization": "STEM Cupertino",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Cupertino",
+        "region": "California",
+        "postcode": "95014",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.3,
+          "lon": -122
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 199230,
+      "number": "21183X",
+      "team_name": "Paradox",
+      "robot_name": "",
+      "organization": "Palo Alto Robotics LLC",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Los Altos",
+        "region": "California",
+        "postcode": "94022",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.4,
+          "lon": -122.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 199554,
+      "number": "22050Y",
+      "team_name": "Team Y",
+      "robot_name": "",
+      "organization": "Robospark",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Redmond",
+        "region": "Washington",
+        "postcode": "98052",
+        "country": "United States",
+        "coordinates": {
+          "lat": 47.7,
+          "lon": -122.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 196725,
+      "number": "30222V",
+      "team_name": "Vexagon",
+      "robot_name": "Vexagon V2",
+      "organization": "Vexagon",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Saratoga",
+        "region": "California",
+        "postcode": "95070",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.3,
+          "lon": -122
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 190400,
+      "number": "40280X",
+      "team_name": "Extreme Axolotls",
+      "robot_name": "",
+      "organization": "Axolotls Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Redwood Shores",
+        "region": "California",
+        "postcode": "94065",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.5,
+          "lon": -122.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 196996,
+      "number": "54080A",
+      "team_name": "ツ",
+      "robot_name": "that one",
+      "organization": "Private",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Redwood City",
+        "region": "California",
+        "postcode": "94065-1111",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.5,
+          "lon": -122.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 185801,
+      "number": "55252G",
+      "team_name": "Team Cassini",
+      "robot_name": "",
+      "organization": "Local club",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Pleasanton",
+        "region": "California",
+        "postcode": "94566",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.7,
+          "lon": -121.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 190109,
+      "number": "61572A",
+      "team_name": "Spirit & Opportunity",
+      "robot_name": "Spirit & Opportunity",
+      "organization": "Local club ",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Pleasanton",
+        "region": "California",
+        "postcode": "94566",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.7,
+          "lon": -121.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 174365,
+      "number": "68699A",
+      "team_name": "Driving Nuggets",
+      "robot_name": "",
+      "organization": "Ustar STEM Lab",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "San Jose",
+        "region": "California",
+        "postcode": "95129",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.3,
+          "lon": -122
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 198537,
+      "number": "68699D",
+      "team_name": "TBD",
+      "robot_name": "",
+      "organization": "Ustar STEM Lab",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "San Jose",
+        "region": "California",
+        "postcode": "95129",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.3,
+          "lon": -122
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 190844,
+      "number": "82777C",
+      "team_name": "TBD",
+      "robot_name": "",
+      "organization": "Magikid Cupertino Robotics Lab",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "San Jose",
+        "region": "California",
+        "postcode": "95129",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.3,
+          "lon": -122
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 199468,
+      "number": "82777G",
+      "team_name": "SheBots",
+      "robot_name": "",
+      "organization": "Magikid Cupertino Robotics Lab",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "San Jose",
+        "region": "California",
+        "postcode": "95129",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.3,
+          "lon": -122
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 198659,
+      "number": "82777Z",
+      "team_name": "TBD",
+      "robot_name": "",
+      "organization": "Magikid Cupertino Robotics Lab",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "San Jose",
+        "region": "California",
+        "postcode": "95129",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.3,
+          "lon": -122
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 186756,
+      "number": "85869A",
+      "team_name": "Frictionless A",
+      "robot_name": "",
+      "organization": "Garage Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Folsom",
+        "region": "California",
+        "postcode": "95630",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.6,
+          "lon": -121.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 104716,
+      "number": "87867B",
+      "team_name": "Mechabyte",
+      "robot_name": "",
+      "organization": "AI Robotics Academy LLC",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Plano",
+        "region": "Texas",
+        "postcode": "75093",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.1,
+          "lon": -96.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 95827,
+      "number": "94022A",
+      "team_name": "Kinetic",
+      "robot_name": "Turbo Twin Boosters",
+      "organization": "Kinetic",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Los Altos",
+        "region": "California",
+        "postcode": "94024",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.3,
+          "lon": -122.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 180849,
+      "number": "95120A",
+      "team_name": "REEVAAN",
+      "robot_name": "REEVAAN ROBOTICS A",
+      "organization": "REEVAAN ROBOTICS",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "San Jose",
+        "region": "California",
+        "postcode": "95120",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.2,
+          "lon": -121.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    }
+  ]
+}

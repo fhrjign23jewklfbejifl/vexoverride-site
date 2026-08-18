@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64219/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64219/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64219/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 10,
+    "total": 10,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 280211,
+      "event": {
+        "id": 64219,
+        "name": "Bruin in the Den | VEX V5 Robotics Competition: Forest Park Blended Tournament",
+        "code": "RE-V5RC-26-4219"
+      },
+      "order": 60,
+      "title": "Excellence Award - High School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280212,
+      "event": {
+        "id": 64219,
+        "name": "Bruin in the Den | VEX V5 Robotics Competition: Forest Park Blended Tournament",
+        "code": "RE-V5RC-26-4219"
+      },
+      "order": 61,
+      "title": "Excellence Award - Middle School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280213,
+      "event": {
+        "id": 64219,
+        "name": "Bruin in the Den | VEX V5 Robotics Competition: Forest Park Blended Tournament",
+        "code": "RE-V5RC-26-4219"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280214,
+      "event": {
+        "id": 64219,
+        "name": "Bruin in the Den | VEX V5 Robotics Competition: Forest Park Blended Tournament",
+        "code": "RE-V5RC-26-4219"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280215,
+      "event": {
+        "id": 64219,
+        "name": "Bruin in the Den | VEX V5 Robotics Competition: Forest Park Blended Tournament",
+        "code": "RE-V5RC-26-4219"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280216,
+      "event": {
+        "id": 64219,
+        "name": "Bruin in the Den | VEX V5 Robotics Competition: Forest Park Blended Tournament",
+        "code": "RE-V5RC-26-4219"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280217,
+      "event": {
+        "id": 64219,
+        "name": "Bruin in the Den | VEX V5 Robotics Competition: Forest Park Blended Tournament",
+        "code": "RE-V5RC-26-4219"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280218,
+      "event": {
+        "id": 64219,
+        "name": "Bruin in the Den | VEX V5 Robotics Competition: Forest Park Blended Tournament",
+        "code": "RE-V5RC-26-4219"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280219,
+      "event": {
+        "id": 64219,
+        "name": "Bruin in the Den | VEX V5 Robotics Competition: Forest Park Blended Tournament",
+        "code": "RE-V5RC-26-4219"
+      },
+      "order": 80,
+      "title": "Energy Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280220,
+      "event": {
+        "id": 64219,
+        "name": "Bruin in the Den | VEX V5 Robotics Competition: Forest Park Blended Tournament",
+        "code": "RE-V5RC-26-4219"
+      },
+      "order": 83,
+      "title": "Mentor of the Year Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

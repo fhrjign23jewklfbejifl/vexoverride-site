@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64362,
+    "sku": "RE-V5RC-26-4362",
+    "name": "Macau Mecha Monster Mash VEX V5 Robotics Competition™: VEX V5 (MS/HS) Blended",
+    "start": "2026-10-30T00:00:00-04:00",
+    "end": "2026-10-31T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Macau University of Science and Technology",
+      "address_1": "Block R",
+      "address_2": null,
+      "city": "Macau",
+      "region": null,
+      "postcode": "999078",
+      "country": "Macau",
+      "coordinates": {
+        "lat": 22.198745,
+        "lon": 113.543873
+      }
+    },
+    "locations": {
+      "2026-10-30": {
+        "venue": "Macau University of Science and Technology",
+        "address_1": "Block R",
+        "address_2": null,
+        "city": "Macau",
+        "region": null,
+        "postcode": "999078",
+        "country": "Macau",
+        "coordinates": {
+          "lat": 22.198745,
+          "lon": 113.543873
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

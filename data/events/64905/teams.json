@@ -1,0 +1,180 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64905/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64905/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64905/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 6,
+    "total": 6,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 61235,
+      "number": "2822A",
+      "team_name": "Spartan Design Leonidas",
+      "robot_name": "",
+      "organization": "Stauffer (Mary. R.) Middle School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Downey",
+        "region": "California",
+        "postcode": "90242",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.9,
+          "lon": -118.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 65339,
+      "number": "2822C",
+      "team_name": "Spartan Design Capabaras",
+      "robot_name": "",
+      "organization": "STAUFFER (MARY R.) MIDDLE",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Downey",
+        "region": "California",
+        "postcode": "90242",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.9,
+          "lon": -118.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 69406,
+      "number": "2822D",
+      "team_name": "Spartan Design Deep Space",
+      "robot_name": "",
+      "organization": "STAUFFER (MARY R.) MIDDLE",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Downey",
+        "region": "California",
+        "postcode": "90242",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.9,
+          "lon": -118.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 70351,
+      "number": "2822E",
+      "team_name": "Spartan Design Electrons",
+      "robot_name": "",
+      "organization": "STAUFFER (MARY R.) MIDDLE",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Downey",
+        "region": "California",
+        "postcode": "90242",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.9,
+          "lon": -118.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 70352,
+      "number": "2822F",
+      "team_name": "Spartan Design Fusion",
+      "robot_name": "",
+      "organization": "STAUFFER (MARY R.) MIDDLE",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Downey",
+        "region": "California",
+        "postcode": "90242",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.9,
+          "lon": -118.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 198420,
+      "number": "2822M",
+      "team_name": "Spartan Design Misfits",
+      "robot_name": "",
+      "organization": "STAUFFER (MARY R.) MIDDLE",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Downey",
+        "region": "California",
+        "postcode": "90242",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.9,
+          "lon": -118.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    }
+  ]
+}

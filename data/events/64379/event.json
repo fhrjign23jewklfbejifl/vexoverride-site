@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64379,
+    "sku": "RE-V5RC-26-4379",
+    "name": "TAI-VEX VEX V5 Robotics Competition™ (MS): VEX V5 Middle School",
+    "start": "2026-10-24T00:00:00-04:00",
+    "end": "2026-10-24T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "American School in Taichung",
+      "address_1": "21 Ningyuan Lane",
+      "address_2": null,
+      "city": "Taichung",
+      "region": null,
+      "postcode": "406",
+      "country": "Taiwan",
+      "coordinates": {
+        "lat": 24.169749,
+        "lon": 120.743782
+      }
+    },
+    "locations": {
+      "2026-10-24": {
+        "venue": "American School in Taichung",
+        "address_1": "21 Ningyuan Lane",
+        "address_2": null,
+        "city": "Taichung",
+        "region": null,
+        "postcode": "406",
+        "country": "Taiwan",
+        "coordinates": {
+          "lat": 24.169749,
+          "lon": 120.743782
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

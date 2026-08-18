@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64335/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64335/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64335/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 7,
+    "total": 7,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 281096,
+      "event": {
+        "id": 64335,
+        "name": "Middle School | Thailand VEX V5 Central Regional Qualifier 26-27: VEX V5 Robotics Competition™ - Hosted by PIM",
+        "code": "RE-V5RC-26-4335"
+      },
+      "order": 61,
+      "title": "Excellence Award - Middle School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281097,
+      "event": {
+        "id": 64335,
+        "name": "Middle School | Thailand VEX V5 Central Regional Qualifier 26-27: VEX V5 Robotics Competition™ - Hosted by PIM",
+        "code": "RE-V5RC-26-4335"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281098,
+      "event": {
+        "id": 64335,
+        "name": "Middle School | Thailand VEX V5 Central Regional Qualifier 26-27: VEX V5 Robotics Competition™ - Hosted by PIM",
+        "code": "RE-V5RC-26-4335"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281099,
+      "event": {
+        "id": 64335,
+        "name": "Middle School | Thailand VEX V5 Central Regional Qualifier 26-27: VEX V5 Robotics Competition™ - Hosted by PIM",
+        "code": "RE-V5RC-26-4335"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281100,
+      "event": {
+        "id": 64335,
+        "name": "Middle School | Thailand VEX V5 Central Regional Qualifier 26-27: VEX V5 Robotics Competition™ - Hosted by PIM",
+        "code": "RE-V5RC-26-4335"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281101,
+      "event": {
+        "id": 64335,
+        "name": "Middle School | Thailand VEX V5 Central Regional Qualifier 26-27: VEX V5 Robotics Competition™ - Hosted by PIM",
+        "code": "RE-V5RC-26-4335"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281102,
+      "event": {
+        "id": 64335,
+        "name": "Middle School | Thailand VEX V5 Central Regional Qualifier 26-27: VEX V5 Robotics Competition™ - Hosted by PIM",
+        "code": "RE-V5RC-26-4335"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

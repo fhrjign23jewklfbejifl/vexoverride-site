@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65293,
+    "sku": "RE-V5RC-26-5293",
+    "name": "PICKTOWN THROWDOWN VEX V5 Robotics Competition™: Override™ High School Teams",
+    "start": "2027-01-09T00:00:00-05:00",
+    "end": "2027-01-09T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Pickerington Central High School",
+      "address_1": "300 Opportunity Way",
+      "address_2": null,
+      "city": "Pickerington",
+      "region": "Ohio",
+      "postcode": "43147",
+      "country": "United States",
+      "coordinates": {
+        "lat": 39.876333,
+        "lon": -82.755299
+      }
+    },
+    "locations": {
+      "2027-01-09": {
+        "venue": "Pickerington Central High School",
+        "address_1": "300 Opportunity Way",
+        "address_2": null,
+        "city": "Pickerington",
+        "region": "Ohio",
+        "postcode": "43147",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39.876333,
+          "lon": -82.755299
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

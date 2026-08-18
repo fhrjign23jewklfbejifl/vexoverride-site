@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64486/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64486/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64486/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 2,
+    "total": 2,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 175717,
+      "number": "2996B",
+      "team_name": "Untitled Document",
+      "robot_name": "",
+      "organization": "BestCoder Education",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Auckland",
+        "region": "Auckland",
+        "postcode": "0632",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -36.7,
+          "lon": 174.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 197949,
+      "number": "2996V",
+      "team_name": "2996V",
+      "robot_name": "2996V",
+      "organization": "BestCoder Education",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Auckland",
+        "region": "Auckland",
+        "postcode": "0632",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -36.7,
+          "lon": 174.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    }
+  ]
+}

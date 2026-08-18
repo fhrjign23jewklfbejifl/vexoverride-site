@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64354/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64354/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64354/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 5,
+    "total": 5,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 186893,
+      "number": "77788W",
+      "team_name": "Cyber Eagles",
+      "robot_name": "W",
+      "organization": "Calvary Christian Academy",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Ft Lauderdale",
+        "region": "Florida",
+        "postcode": "33309",
+        "country": "United States",
+        "coordinates": {
+          "lat": 26.2,
+          "lon": -80.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 130641,
+      "number": "77788X",
+      "team_name": "Cyber Eagles",
+      "robot_name": "X",
+      "organization": "CALVARY CHRISTIAN ACADEMY & PRESCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Fort Lauderdale",
+        "region": "Florida",
+        "postcode": "33309",
+        "country": "United States",
+        "coordinates": {
+          "lat": 26.2,
+          "lon": -80.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 187393,
+      "number": "89250K",
+      "team_name": "Katastrophe",
+      "robot_name": "Krotech",
+      "organization": "PINECREST NORTH PREPARATORY (FONTAINEBLEAU CAMPUS)",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Miami",
+        "region": "Florida",
+        "postcode": "33172",
+        "country": "United States",
+        "coordinates": {
+          "lat": 25.8,
+          "lon": -80.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 172379,
+      "number": "89250X",
+      "team_name": "Xerneas",
+      "robot_name": "Pikachu",
+      "organization": "PINECREST NORTH PREPARATORY (FONTAINEBLEAU CAMPUS)",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Miami",
+        "region": "Florida",
+        "postcode": "33172",
+        "country": "United States",
+        "coordinates": {
+          "lat": 25.8,
+          "lon": -80.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 159233,
+      "number": "89250Z",
+      "team_name": "Zipties",
+      "robot_name": "Barbatos",
+      "organization": "PINECREST NORTH PREPARATORY (FONTAINEBLEAU CAMPUS)",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Miami",
+        "region": "Florida",
+        "postcode": "33172",
+        "country": "United States",
+        "coordinates": {
+          "lat": 25.8,
+          "lon": -80.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
+}

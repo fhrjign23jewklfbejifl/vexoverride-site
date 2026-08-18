@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65206/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65206/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65206/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 10,
+    "total": 10,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 287509,
+      "event": {
+        "id": 65206,
+        "name": "SA | VEX V5 Robotics Competition™ (HS): Override™ Tournament @ Pedare",
+        "code": "RE-V5RC-26-5206"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287510,
+      "event": {
+        "id": 65206,
+        "name": "SA | VEX V5 Robotics Competition™ (HS): Override™ Tournament @ Pedare",
+        "code": "RE-V5RC-26-5206"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287511,
+      "event": {
+        "id": 65206,
+        "name": "SA | VEX V5 Robotics Competition™ (HS): Override™ Tournament @ Pedare",
+        "code": "RE-V5RC-26-5206"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287512,
+      "event": {
+        "id": 65206,
+        "name": "SA | VEX V5 Robotics Competition™ (HS): Override™ Tournament @ Pedare",
+        "code": "RE-V5RC-26-5206"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287513,
+      "event": {
+        "id": 65206,
+        "name": "SA | VEX V5 Robotics Competition™ (HS): Override™ Tournament @ Pedare",
+        "code": "RE-V5RC-26-5206"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287514,
+      "event": {
+        "id": 65206,
+        "name": "SA | VEX V5 Robotics Competition™ (HS): Override™ Tournament @ Pedare",
+        "code": "RE-V5RC-26-5206"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287515,
+      "event": {
+        "id": 65206,
+        "name": "SA | VEX V5 Robotics Competition™ (HS): Override™ Tournament @ Pedare",
+        "code": "RE-V5RC-26-5206"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287516,
+      "event": {
+        "id": 65206,
+        "name": "SA | VEX V5 Robotics Competition™ (HS): Override™ Tournament @ Pedare",
+        "code": "RE-V5RC-26-5206"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287517,
+      "event": {
+        "id": 65206,
+        "name": "SA | VEX V5 Robotics Competition™ (HS): Override™ Tournament @ Pedare",
+        "code": "RE-V5RC-26-5206"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287518,
+      "event": {
+        "id": 65206,
+        "name": "SA | VEX V5 Robotics Competition™ (HS): Override™ Tournament @ Pedare",
+        "code": "RE-V5RC-26-5206"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

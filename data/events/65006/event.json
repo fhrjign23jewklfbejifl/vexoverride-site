@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65006,
+    "sku": "RE-V5RC-26-5006",
+    "name": "STAR Warriors - JROTC Drill Meet With Robotics and Drone Skills: During the annual SGP Drill Meet, teams will have the opportunity to participate in Robotics and Drone Skills Runs and competition events.",
+    "start": "2026-12-04T00:00:00-05:00",
+    "end": "2026-12-05T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "South Grand Prairie High School",
+      "address_1": "301 West Warrior Trail",
+      "address_2": null,
+      "city": "Grand Prairie",
+      "region": "Texas",
+      "postcode": "75052",
+      "country": "United States",
+      "coordinates": {
+        "lat": 32.695666,
+        "lon": -97.00455
+      }
+    },
+    "locations": {
+      "2026-12-04": {
+        "venue": "South Grand Prairie High School",
+        "address_1": "301 West Warrior Trail",
+        "address_2": null,
+        "city": "Grand Prairie",
+        "region": "Texas",
+        "postcode": "75052",
+        "country": "United States",
+        "coordinates": {
+          "lat": 32.695666,
+          "lon": -97.00455
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

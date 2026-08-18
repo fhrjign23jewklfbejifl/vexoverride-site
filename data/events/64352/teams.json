@@ -1,0 +1,288 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64352/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64352/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64352/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 10,
+    "total": 10,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 76579,
+      "number": "23880A",
+      "team_name": "LT Robotics A",
+      "robot_name": "",
+      "organization": "LYONS TWP HIGH SCH",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Lagrange",
+        "region": "Illinois",
+        "postcode": "60525",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.8,
+          "lon": -87.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 76580,
+      "number": "23880B",
+      "team_name": "LT Robotics B",
+      "robot_name": "",
+      "organization": "LYONS TWP HIGH SCH",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Lagrange",
+        "region": "Illinois",
+        "postcode": "60525",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.8,
+          "lon": -87.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 83864,
+      "number": "23880D",
+      "team_name": "LT Robotics D",
+      "robot_name": "",
+      "organization": "LYONS TWP HIGH SCH",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Lagrange",
+        "region": "Illinois",
+        "postcode": "60525",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.8,
+          "lon": -87.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 130165,
+      "number": "23880F",
+      "team_name": "LT Robotics F",
+      "robot_name": "",
+      "organization": "LYONS TWP HIGH SCH",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Lagrange",
+        "region": "Illinois",
+        "postcode": "60525",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.8,
+          "lon": -87.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 185132,
+      "number": "23880G",
+      "team_name": "LT Robotics G",
+      "robot_name": "",
+      "organization": "LYONS TWP HIGH SCH",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Lagrange",
+        "region": "Illinois",
+        "postcode": "60525",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.8,
+          "lon": -87.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 187130,
+      "number": "38535X",
+      "team_name": "nox",
+      "robot_name": "Lil' Nitrous",
+      "organization": "Glenbrook South High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Glenview",
+        "region": "Illinois",
+        "postcode": "60026",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.1,
+          "lon": -87.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 139629,
+      "number": "60441B",
+      "team_name": "Team B",
+      "robot_name": "",
+      "organization": "Lockport Township High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Lockport",
+        "region": "Illinois",
+        "postcode": "60441",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.6,
+          "lon": -88.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 143348,
+      "number": "60441D",
+      "team_name": "Team D",
+      "robot_name": "",
+      "organization": "Lockport Township High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Lockport",
+        "region": "Illinois",
+        "postcode": "60441",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.6,
+          "lon": -88
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 157060,
+      "number": "60441X",
+      "team_name": "Teqnifii Nova",
+      "robot_name": "",
+      "organization": "Lockport Township High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Lockport",
+        "region": "Illinois",
+        "postcode": "60441",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.6,
+          "lon": -88
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 158809,
+      "number": "60441Z",
+      "team_name": "Livewire",
+      "robot_name": "",
+      "organization": "Lockport Township High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Lockport",
+        "region": "Illinois",
+        "postcode": "60441",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.6,
+          "lon": -88
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
+}

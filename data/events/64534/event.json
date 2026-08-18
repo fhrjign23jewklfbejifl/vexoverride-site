@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64534,
+    "sku": "RE-V5RC-26-4534",
+    "name": "Hub City Robo Rumble VEX V5 Override: VEX V5 Robotics Competition Presented by Jackson State Community College- (HS/MS)",
+    "start": "2026-10-02T00:00:00-04:00",
+    "end": "2026-10-03T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Jackson State Community College - Gymnasium",
+      "address_1": "2046 North Parkway",
+      "address_2": null,
+      "city": "Jackson",
+      "region": "Tennessee",
+      "postcode": "38301",
+      "country": "United States",
+      "coordinates": {
+        "lat": 35.645096,
+        "lon": -88.781259
+      }
+    },
+    "locations": {
+      "2026-10-02": {
+        "venue": "Jackson State Community College - Gymnasium",
+        "address_1": "2046 North Parkway",
+        "address_2": null,
+        "city": "Jackson",
+        "region": "Tennessee",
+        "postcode": "38301",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.645096,
+          "lon": -88.781259
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

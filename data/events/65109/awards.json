@@ -1,0 +1,162 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65109/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65109/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65109/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 3,
+    "total": 3,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 286907,
+      "event": {
+        "id": 65109,
+        "name": "VEX V5 Robotics Competitionᵀᴹ Guangzhou City Event",
+        "code": "RE-V5RC-26-5109"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 123383,
+            "name": "71030X",
+            "code": null
+          }
+        },
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 123199,
+            "name": "56789S",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 286908,
+      "event": {
+        "id": 65109,
+        "name": "VEX V5 Robotics Competitionᵀᴹ Guangzhou City Event",
+        "code": "RE-V5RC-26-5109"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 199207,
+            "name": "89889X",
+            "code": null
+          }
+        },
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 186285,
+            "name": "28111Z",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 286909,
+      "event": {
+        "id": 65109,
+        "name": "VEX V5 Robotics Competitionᵀᴹ Guangzhou City Event",
+        "code": "RE-V5RC-26-5109"
+      },
+      "order": 65,
+      "title": "Tournament Semifinalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 197559,
+            "name": "10666A",
+            "code": null
+          }
+        },
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 153670,
+            "name": "18190X",
+            "code": null
+          }
+        },
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 198806,
+            "name": "12388T",
+            "code": null
+          }
+        },
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 155345,
+            "name": "71113X",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    }
+  ]
+}

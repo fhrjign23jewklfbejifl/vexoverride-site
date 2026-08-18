@@ -1,0 +1,261 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64349/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64349/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64349/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 9,
+    "total": 9,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 128532,
+      "number": "4139A",
+      "team_name": "Space Viking Hellfire",
+      "robot_name": "",
+      "organization": "Steam Labs Technology and Robotics Studio",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bangkok",
+        "region": null,
+        "postcode": "10110",
+        "country": "Thailand",
+        "coordinates": {
+          "lat": 13.7,
+          "lon": 100.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 142502,
+      "number": "4139B",
+      "team_name": "Febreeze",
+      "robot_name": "",
+      "organization": "Steam Labs Technology and Robotics Studio",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bangkok",
+        "region": null,
+        "postcode": "10110",
+        "country": "Thailand",
+        "coordinates": {
+          "lat": 13.7,
+          "lon": 100.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 158332,
+      "number": "4139C",
+      "team_name": "Super VEX Bros",
+      "robot_name": "",
+      "organization": "Steam Labs Technology and Robotics Studio",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bangkok",
+        "region": null,
+        "postcode": "10110",
+        "country": "Thailand",
+        "coordinates": {
+          "lat": 13.7,
+          "lon": 100.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 170567,
+      "number": "4139D",
+      "team_name": "Pokebot",
+      "robot_name": "",
+      "organization": "Steam Labs Technology and Robotics Studio",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bangkok",
+        "region": null,
+        "postcode": "10110",
+        "country": "Thailand",
+        "coordinates": {
+          "lat": 13.7,
+          "lon": 100.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 171095,
+      "number": "4139E",
+      "team_name": "Ctrl + Win",
+      "robot_name": "",
+      "organization": "Steam Labs Technology and Robotics Studio",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bangkok",
+        "region": null,
+        "postcode": "10110",
+        "country": "Thailand",
+        "coordinates": {
+          "lat": 13.7,
+          "lon": 100.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 171900,
+      "number": "4139F",
+      "team_name": "Team Nut",
+      "robot_name": "",
+      "organization": "Steam Labs Technology and Robotics Studio",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bangkok",
+        "region": null,
+        "postcode": "10110",
+        "country": "Thailand",
+        "coordinates": {
+          "lat": 13.7,
+          "lon": 100.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 188359,
+      "number": "4139T",
+      "team_name": "Tool Lateralus",
+      "robot_name": "",
+      "organization": "Steam Labs Technology and Robotics Studio",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bangkok",
+        "region": null,
+        "postcode": "10110",
+        "country": "Thailand",
+        "coordinates": {
+          "lat": 13.7,
+          "lon": 100.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 198355,
+      "number": "4139X",
+      "team_name": "Xtroverts",
+      "robot_name": "",
+      "organization": "Steam Labs Technology and Robotics Studio",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bangkok",
+        "region": null,
+        "postcode": "10110",
+        "country": "Thailand",
+        "coordinates": {
+          "lat": 13.7,
+          "lon": 100.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 176389,
+      "number": "61208A",
+      "team_name": "sugarFree",
+      "robot_name": "zippy",
+      "organization": "Mahidol University International Demonstration School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Salaya, Phuttamonthon",
+        "region": null,
+        "postcode": "73170",
+        "country": "Thailand",
+        "coordinates": {
+          "lat": 13.8,
+          "lon": 100.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
+}

@@ -1,0 +1,288 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65466/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65466/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65466/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 18,
+    "total": 18,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 289222,
+      "event": {
+        "id": 65466,
+        "name": "VEX V5 - VEX Robotics Vietnam National Championship 2027 (HS): Vòng chung kết Giải vô địch Quốc gia Việt Nam VEX Robotics 2027 (bảng đấu THPT VEX V5)",
+        "code": "RE-V5RC-26-5466"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289223,
+      "event": {
+        "id": 65466,
+        "name": "VEX V5 - VEX Robotics Vietnam National Championship 2027 (HS): Vòng chung kết Giải vô địch Quốc gia Việt Nam VEX Robotics 2027 (bảng đấu THPT VEX V5)",
+        "code": "RE-V5RC-26-5466"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289224,
+      "event": {
+        "id": 65466,
+        "name": "VEX V5 - VEX Robotics Vietnam National Championship 2027 (HS): Vòng chung kết Giải vô địch Quốc gia Việt Nam VEX Robotics 2027 (bảng đấu THPT VEX V5)",
+        "code": "RE-V5RC-26-5466"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289225,
+      "event": {
+        "id": 65466,
+        "name": "VEX V5 - VEX Robotics Vietnam National Championship 2027 (HS): Vòng chung kết Giải vô địch Quốc gia Việt Nam VEX Robotics 2027 (bảng đấu THPT VEX V5)",
+        "code": "RE-V5RC-26-5466"
+      },
+      "order": 71,
+      "title": "Robot Skills 2nd Place (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289226,
+      "event": {
+        "id": 65466,
+        "name": "VEX V5 - VEX Robotics Vietnam National Championship 2027 (HS): Vòng chung kết Giải vô địch Quốc gia Việt Nam VEX Robotics 2027 (bảng đấu THPT VEX V5)",
+        "code": "RE-V5RC-26-5466"
+      },
+      "order": 72,
+      "title": "Robot Skills 3rd Place (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289227,
+      "event": {
+        "id": 65466,
+        "name": "VEX V5 - VEX Robotics Vietnam National Championship 2027 (HS): Vòng chung kết Giải vô địch Quốc gia Việt Nam VEX Robotics 2027 (bảng đấu THPT VEX V5)",
+        "code": "RE-V5RC-26-5466"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289228,
+      "event": {
+        "id": 65466,
+        "name": "VEX V5 - VEX Robotics Vietnam National Championship 2027 (HS): Vòng chung kết Giải vô địch Quốc gia Việt Nam VEX Robotics 2027 (bảng đấu THPT VEX V5)",
+        "code": "RE-V5RC-26-5466"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289229,
+      "event": {
+        "id": 65466,
+        "name": "VEX V5 - VEX Robotics Vietnam National Championship 2027 (HS): Vòng chung kết Giải vô địch Quốc gia Việt Nam VEX Robotics 2027 (bảng đấu THPT VEX V5)",
+        "code": "RE-V5RC-26-5466"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289230,
+      "event": {
+        "id": 65466,
+        "name": "VEX V5 - VEX Robotics Vietnam National Championship 2027 (HS): Vòng chung kết Giải vô địch Quốc gia Việt Nam VEX Robotics 2027 (bảng đấu THPT VEX V5)",
+        "code": "RE-V5RC-26-5466"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289231,
+      "event": {
+        "id": 65466,
+        "name": "VEX V5 - VEX Robotics Vietnam National Championship 2027 (HS): Vòng chung kết Giải vô địch Quốc gia Việt Nam VEX Robotics 2027 (bảng đấu THPT VEX V5)",
+        "code": "RE-V5RC-26-5466"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289232,
+      "event": {
+        "id": 65466,
+        "name": "VEX V5 - VEX Robotics Vietnam National Championship 2027 (HS): Vòng chung kết Giải vô địch Quốc gia Việt Nam VEX Robotics 2027 (bảng đấu THPT VEX V5)",
+        "code": "RE-V5RC-26-5466"
+      },
+      "order": 78,
+      "title": "Create Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289233,
+      "event": {
+        "id": 65466,
+        "name": "VEX V5 - VEX Robotics Vietnam National Championship 2027 (HS): Vòng chung kết Giải vô địch Quốc gia Việt Nam VEX Robotics 2027 (bảng đấu THPT VEX V5)",
+        "code": "RE-V5RC-26-5466"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289234,
+      "event": {
+        "id": 65466,
+        "name": "VEX V5 - VEX Robotics Vietnam National Championship 2027 (HS): Vòng chung kết Giải vô địch Quốc gia Việt Nam VEX Robotics 2027 (bảng đấu THPT VEX V5)",
+        "code": "RE-V5RC-26-5466"
+      },
+      "order": 80,
+      "title": "Energy Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289235,
+      "event": {
+        "id": 65466,
+        "name": "VEX V5 - VEX Robotics Vietnam National Championship 2027 (HS): Vòng chung kết Giải vô địch Quốc gia Việt Nam VEX Robotics 2027 (bảng đấu THPT VEX V5)",
+        "code": "RE-V5RC-26-5466"
+      },
+      "order": 81,
+      "title": "Inspire Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289236,
+      "event": {
+        "id": 65466,
+        "name": "VEX V5 - VEX Robotics Vietnam National Championship 2027 (HS): Vòng chung kết Giải vô địch Quốc gia Việt Nam VEX Robotics 2027 (bảng đấu THPT VEX V5)",
+        "code": "RE-V5RC-26-5466"
+      },
+      "order": 82,
+      "title": "Volunteer of the Year Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289237,
+      "event": {
+        "id": 65466,
+        "name": "VEX V5 - VEX Robotics Vietnam National Championship 2027 (HS): Vòng chung kết Giải vô địch Quốc gia Việt Nam VEX Robotics 2027 (bảng đấu THPT VEX V5)",
+        "code": "RE-V5RC-26-5466"
+      },
+      "order": 83,
+      "title": "Mentor of the Year Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289238,
+      "event": {
+        "id": 65466,
+        "name": "VEX V5 - VEX Robotics Vietnam National Championship 2027 (HS): Vòng chung kết Giải vô địch Quốc gia Việt Nam VEX Robotics 2027 (bảng đấu THPT VEX V5)",
+        "code": "RE-V5RC-26-5466"
+      },
+      "order": 84,
+      "title": "Teacher of the Year Award  (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289612,
+      "event": {
+        "id": 65466,
+        "name": "VEX V5 - VEX Robotics Vietnam National Championship 2027 (HS): Vòng chung kết Giải vô địch Quốc gia Việt Nam VEX Robotics 2027 (bảng đấu THPT VEX V5)",
+        "code": "RE-V5RC-26-5466"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

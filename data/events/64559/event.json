@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64559,
+    "sku": "RE-V5RC-26-4559",
+    "name": "Placer Robotics/Cyber Cowboys V5RC Override Tournament (MS): VEX V5 Robotics Competition MS Only, In-Person, Digital Engineering Notebooks",
+    "start": "2026-11-07T00:00:00-05:00",
+    "end": "2026-11-07T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Cavitt Junior High School",
+      "address_1": "7200 Fuller Drive",
+      "address_2": null,
+      "city": "Granite Bay",
+      "region": "California",
+      "postcode": "95746",
+      "country": "United States",
+      "coordinates": {
+        "lat": 38.738486,
+        "lon": -121.16666
+      }
+    },
+    "locations": {
+      "2026-11-07": {
+        "venue": "Cavitt Junior High School",
+        "address_1": "7200 Fuller Drive",
+        "address_2": null,
+        "city": "Granite Bay",
+        "region": "California",
+        "postcode": "95746",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.738486,
+          "lon": -121.16666
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

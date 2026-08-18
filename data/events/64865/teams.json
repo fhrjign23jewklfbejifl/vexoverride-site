@@ -1,0 +1,207 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64865/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64865/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64865/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 7,
+    "total": 7,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 189961,
+      "number": "1515A",
+      "team_name": "未来领导力机器人A队",
+      "robot_name": "",
+      "organization": "海南陵水蓝湾未来领导力学校",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "海南",
+        "region": "Hainan",
+        "postcode": "572400",
+        "country": "China",
+        "coordinates": {
+          "lat": 18.4,
+          "lon": 109.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 198213,
+      "number": "1515X",
+      "team_name": "未来领导力机器人X队",
+      "robot_name": "",
+      "organization": "海南陵水蓝湾未来领导力学校",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "海南",
+        "region": "Hainan",
+        "postcode": "572400",
+        "country": "China",
+        "coordinates": {
+          "lat": 18.4,
+          "lon": 109.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 172686,
+      "number": "11112W",
+      "team_name": "The Commitments",
+      "robot_name": "",
+      "organization": "夸克科学",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Haikou",
+        "region": "Hainan",
+        "postcode": "570125",
+        "country": "China",
+        "coordinates": {
+          "lat": 20,
+          "lon": 110.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 198520,
+      "number": "11112X",
+      "team_name": "Extreme",
+      "robot_name": "67Bot",
+      "organization": "夸克科学",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Haikou",
+        "region": "Hainan",
+        "postcode": "570125",
+        "country": "China",
+        "coordinates": {
+          "lat": 20,
+          "lon": 110.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 170661,
+      "number": "13755G",
+      "team_name": "Xiamen Saichuang Workshop VEX Robotics Team HS",
+      "robot_name": "",
+      "organization": "Xiamen Saichuang Workshop VEX Robotics Team",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Xiamen",
+        "region": "Fujian",
+        "postcode": "987891425@qq.com",
+        "country": "China",
+        "coordinates": {
+          "lat": 24.5,
+          "lon": 118.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 170662,
+      "number": "13755X",
+      "team_name": "Xiamen Saichuang Workshop VEX Robotics Team",
+      "robot_name": "",
+      "organization": "Xiamen Saichuang Workshop VEX Robotics Team",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Xiamen",
+        "region": "Fujian",
+        "postcode": "NIL",
+        "country": "China",
+        "coordinates": {
+          "lat": 24.5,
+          "lon": 118.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 197508,
+      "number": "21133W",
+      "team_name": "logic",
+      "robot_name": "",
+      "organization": "上海点加机器人科技有限公司",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "厦门",
+        "region": "Fujian",
+        "postcode": "361021",
+        "country": "China",
+        "coordinates": {
+          "lat": 24.5,
+          "lon": 118.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
+}

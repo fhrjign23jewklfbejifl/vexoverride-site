@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64639,
+    "sku": "RE-V5RC-26-4639",
+    "name": "Moody Mania - VEX V5 Robotics Competition Blended: Held in the Ground floor of the Mansion",
+    "start": "2027-01-02T00:00:00-05:00",
+    "end": "2027-01-02T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Moody Mansion",
+      "address_1": "2618 Broadway Avenue J",
+      "address_2": null,
+      "city": "Galveston",
+      "region": "Texas",
+      "postcode": "77550",
+      "country": "United States",
+      "coordinates": {
+        "lat": 29.299414,
+        "lon": -94.796265
+      }
+    },
+    "locations": {
+      "2027-01-02": {
+        "venue": "Moody Mansion",
+        "address_1": "2618 Broadway Avenue J",
+        "address_2": null,
+        "city": "Galveston",
+        "region": "Texas",
+        "postcode": "77550",
+        "country": "United States",
+        "coordinates": {
+          "lat": 29.299414,
+          "lon": -94.796265
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

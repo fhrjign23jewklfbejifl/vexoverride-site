@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64392,
+    "sku": "RE-V5RC-26-4392",
+    "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (HS)",
+    "start": "2026-08-03T00:00:00-04:00",
+    "end": "2026-08-06T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Changji Gymnasium",
+      "address_1": "No.129 Nangongyuan W Rd",
+      "address_2": null,
+      "city": "changji",
+      "region": "Xinjiang",
+      "postcode": "",
+      "country": "China",
+      "coordinates": {
+        "lat": 44.00827,
+        "lon": 87.25405
+      }
+    },
+    "locations": {
+      "2026-08-03": {
+        "venue": "Changji Gymnasium",
+        "address_1": "No.129 Nangongyuan W Rd",
+        "address_2": null,
+        "city": "changji",
+        "region": "Xinjiang",
+        "postcode": "",
+        "country": "China",
+        "coordinates": {
+          "lat": 44.00827,
+          "lon": 87.25405
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Division A",
+        "order": 1
+      }
+    ],
+    "level": "Signature",
+    "ongoing": false,
+    "awards_finalized": true,
+    "event_type": null
+  }
+}

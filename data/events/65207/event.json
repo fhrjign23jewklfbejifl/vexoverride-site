@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65207,
+    "sku": "RE-V5RC-26-5207",
+    "name": "Allendale Robotics VEX V5 Robotics Competition™: Override™ Middle School Teams",
+    "start": "2026-12-12T00:00:00-05:00",
+    "end": "2026-12-12T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Allendale Middle School",
+      "address_1": "7161 Pleasant View Court",
+      "address_2": null,
+      "city": "Allendale",
+      "region": "Michigan",
+      "postcode": "49401",
+      "country": "United States",
+      "coordinates": {
+        "lat": 42.962614,
+        "lon": -85.962376
+      }
+    },
+    "locations": {
+      "2026-12-12": {
+        "venue": "Allendale Middle School",
+        "address_1": "7161 Pleasant View Court",
+        "address_2": null,
+        "city": "Allendale",
+        "region": "Michigan",
+        "postcode": "49401",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.962614,
+          "lon": -85.962376
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64634/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64634/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64634/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 4,
+    "total": 4,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 283432,
+      "event": {
+        "id": 64634,
+        "name": "VEX V5 Robotics Competition - Aiglon Robot Rumble 2026: @ Aiglon College",
+        "code": "RE-V5RC-26-4634"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283433,
+      "event": {
+        "id": 64634,
+        "name": "VEX V5 Robotics Competition - Aiglon Robot Rumble 2026: @ Aiglon College",
+        "code": "RE-V5RC-26-4634"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283434,
+      "event": {
+        "id": 64634,
+        "name": "VEX V5 Robotics Competition - Aiglon Robot Rumble 2026: @ Aiglon College",
+        "code": "RE-V5RC-26-4634"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283436,
+      "event": {
+        "id": 64634,
+        "name": "VEX V5 Robotics Competition - Aiglon Robot Rumble 2026: @ Aiglon College",
+        "code": "RE-V5RC-26-4634"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

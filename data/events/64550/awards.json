@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64550/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64550/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64550/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 3,
+    "total": 3,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 282830,
+      "event": {
+        "id": 64550,
+        "name": "2026-2027赛季VEX机器人公开赛北京城市赛 V5RC（混组）",
+        "code": "RE-V5RC-26-4550"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 118396,
+            "name": "88613A",
+            "code": null
+          }
+        },
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 198131,
+            "name": "70000Z",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 282831,
+      "event": {
+        "id": 64550,
+        "name": "2026-2027赛季VEX机器人公开赛北京城市赛 V5RC（混组）",
+        "code": "RE-V5RC-26-4550"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 186170,
+            "name": "11059K",
+            "code": null
+          }
+        },
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 180719,
+            "name": "4560Z",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 282832,
+      "event": {
+        "id": 64550,
+        "name": "2026-2027赛季VEX机器人公开赛北京城市赛 V5RC（混组）",
+        "code": "RE-V5RC-26-4550"
+      },
+      "order": 65,
+      "title": "Tournament Semifinalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 197749,
+            "name": "52222X",
+            "code": null
+          }
+        },
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 198133,
+            "name": "13880A",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    }
+  ]
+}

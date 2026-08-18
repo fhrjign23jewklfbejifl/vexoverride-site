@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64581,
+    "sku": "RE-V5RC-26-4581",
+    "name": "9185 Showdown at the Peak - V5RC HS Competition: VEX V5 Robotics Competition Override",
+    "start": "2027-02-13T00:00:00-05:00",
+    "end": "2027-02-13T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Bellefontaine Middle School",
+      "address_1": "1201 Ludlow Road",
+      "address_2": null,
+      "city": "Bellefontaine",
+      "region": "Ohio",
+      "postcode": "43311",
+      "country": "United States",
+      "coordinates": {
+        "lat": 40.343734,
+        "lon": -83.745366
+      }
+    },
+    "locations": {
+      "2027-02-13": {
+        "venue": "Bellefontaine Middle School",
+        "address_1": "1201 Ludlow Road",
+        "address_2": null,
+        "city": "Bellefontaine",
+        "region": "Ohio",
+        "postcode": "43311",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40.343734,
+          "lon": -83.745366
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65289,
+    "sku": "RE-V5RC-26-5289",
+    "name": "Granite City Override Middle School Tournament: VEX V5 Robotics Competition Middle School",
+    "start": "2026-12-05T00:00:00-05:00",
+    "end": "2026-12-05T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Apollo High School",
+      "address_1": "1000 44th Ave North",
+      "address_2": null,
+      "city": "Saint Cloud",
+      "region": "Minnesota",
+      "postcode": "56303",
+      "country": "United States",
+      "coordinates": {
+        "lat": 45.570326,
+        "lon": -94.210559
+      }
+    },
+    "locations": {
+      "2026-12-05": {
+        "venue": "Apollo High School",
+        "address_1": "1000 44th Ave North",
+        "address_2": null,
+        "city": "Saint Cloud",
+        "region": "Minnesota",
+        "postcode": "56303",
+        "country": "United States",
+        "coordinates": {
+          "lat": 45.570326,
+          "lon": -94.210559
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

@@ -1,0 +1,273 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64435/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64435/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64435/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 17,
+    "total": 17,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 281995,
+      "event": {
+        "id": 64435,
+        "name": "2026-2027 VEX Robotics iSTEMn Signature Event: VEX V5 Robotics Competition High School",
+        "code": "RE-V5RC-26-4435"
+      },
+      "order": 61,
+      "title": "Excellence Award - Middle School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281996,
+      "event": {
+        "id": 64435,
+        "name": "2026-2027 VEX Robotics iSTEMn Signature Event: VEX V5 Robotics Competition High School",
+        "code": "RE-V5RC-26-4435"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281997,
+      "event": {
+        "id": 64435,
+        "name": "2026-2027 VEX Robotics iSTEMn Signature Event: VEX V5 Robotics Competition High School",
+        "code": "RE-V5RC-26-4435"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281998,
+      "event": {
+        "id": 64435,
+        "name": "2026-2027 VEX Robotics iSTEMn Signature Event: VEX V5 Robotics Competition High School",
+        "code": "RE-V5RC-26-4435"
+      },
+      "order": 65,
+      "title": "Tournament Semifinalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281999,
+      "event": {
+        "id": 64435,
+        "name": "2026-2027 VEX Robotics iSTEMn Signature Event: VEX V5 Robotics Competition High School",
+        "code": "RE-V5RC-26-4435"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282000,
+      "event": {
+        "id": 64435,
+        "name": "2026-2027 VEX Robotics iSTEMn Signature Event: VEX V5 Robotics Competition High School",
+        "code": "RE-V5RC-26-4435"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282001,
+      "event": {
+        "id": 64435,
+        "name": "2026-2027 VEX Robotics iSTEMn Signature Event: VEX V5 Robotics Competition High School",
+        "code": "RE-V5RC-26-4435"
+      },
+      "order": 71,
+      "title": "Robot Skills 2nd Place (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282002,
+      "event": {
+        "id": 64435,
+        "name": "2026-2027 VEX Robotics iSTEMn Signature Event: VEX V5 Robotics Competition High School",
+        "code": "RE-V5RC-26-4435"
+      },
+      "order": 72,
+      "title": "Robot Skills 3rd Place (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282003,
+      "event": {
+        "id": 64435,
+        "name": "2026-2027 VEX Robotics iSTEMn Signature Event: VEX V5 Robotics Competition High School",
+        "code": "RE-V5RC-26-4435"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282004,
+      "event": {
+        "id": 64435,
+        "name": "2026-2027 VEX Robotics iSTEMn Signature Event: VEX V5 Robotics Competition High School",
+        "code": "RE-V5RC-26-4435"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282005,
+      "event": {
+        "id": 64435,
+        "name": "2026-2027 VEX Robotics iSTEMn Signature Event: VEX V5 Robotics Competition High School",
+        "code": "RE-V5RC-26-4435"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282006,
+      "event": {
+        "id": 64435,
+        "name": "2026-2027 VEX Robotics iSTEMn Signature Event: VEX V5 Robotics Competition High School",
+        "code": "RE-V5RC-26-4435"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282007,
+      "event": {
+        "id": 64435,
+        "name": "2026-2027 VEX Robotics iSTEMn Signature Event: VEX V5 Robotics Competition High School",
+        "code": "RE-V5RC-26-4435"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282008,
+      "event": {
+        "id": 64435,
+        "name": "2026-2027 VEX Robotics iSTEMn Signature Event: VEX V5 Robotics Competition High School",
+        "code": "RE-V5RC-26-4435"
+      },
+      "order": 78,
+      "title": "Create Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282009,
+      "event": {
+        "id": 64435,
+        "name": "2026-2027 VEX Robotics iSTEMn Signature Event: VEX V5 Robotics Competition High School",
+        "code": "RE-V5RC-26-4435"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282010,
+      "event": {
+        "id": 64435,
+        "name": "2026-2027 VEX Robotics iSTEMn Signature Event: VEX V5 Robotics Competition High School",
+        "code": "RE-V5RC-26-4435"
+      },
+      "order": 80,
+      "title": "Energy Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282011,
+      "event": {
+        "id": 64435,
+        "name": "2026-2027 VEX Robotics iSTEMn Signature Event: VEX V5 Robotics Competition High School",
+        "code": "RE-V5RC-26-4435"
+      },
+      "order": 81,
+      "title": "Inspire Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

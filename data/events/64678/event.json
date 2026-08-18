@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64678,
+    "sku": "RE-V5RC-26-4678",
+    "name": "2026-2027赛季VEX机器人公开赛青岛城市赛 V5RC",
+    "start": "2026-08-20T00:00:00-04:00",
+    "end": "2026-08-21T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "山东省青岛市快通国际酒店B8 会议厅",
+      "address_1": "山东省青岛市快通国际酒店B8 会议厅",
+      "address_2": null,
+      "city": "青岛",
+      "region": "Shandong",
+      "postcode": "266000",
+      "country": "China",
+      "coordinates": {
+        "lat": 36.270068,
+        "lon": 120.390169
+      }
+    },
+    "locations": {
+      "2026-08-20": {
+        "venue": "山东省青岛市快通国际酒店B8 会议厅",
+        "address_1": "山东省青岛市快通国际酒店B8 会议厅",
+        "address_2": null,
+        "city": "青岛",
+        "region": "Shandong",
+        "postcode": "266000",
+        "country": "China",
+        "coordinates": {
+          "lat": 36.270068,
+          "lon": 120.390169
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

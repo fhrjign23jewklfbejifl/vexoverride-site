@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64701,
+    "sku": "RE-V5RC-26-4701",
+    "name": "Lanier Middle School Override Tournament 1",
+    "start": "2026-11-07T00:00:00-05:00",
+    "end": "2026-11-07T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Lanier Middle School",
+      "address_1": "6482 Suwanee Dam Road",
+      "address_2": null,
+      "city": "Sugar Hill",
+      "region": "Georgia",
+      "postcode": "30518",
+      "country": "United States",
+      "coordinates": {
+        "lat": 34.147941,
+        "lon": -84.065303
+      }
+    },
+    "locations": {
+      "2026-11-07": {
+        "venue": "Lanier Middle School",
+        "address_1": "6482 Suwanee Dam Road",
+        "address_2": null,
+        "city": "Sugar Hill",
+        "region": "Georgia",
+        "postcode": "30518",
+        "country": "United States",
+        "coordinates": {
+          "lat": 34.147941,
+          "lon": -84.065303
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

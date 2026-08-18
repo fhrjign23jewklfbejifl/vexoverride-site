@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65129/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65129/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65129/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 11,
+    "total": 11,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 287022,
+      "event": {
+        "id": 65129,
+        "name": "New Palestine High School Tournament: VEX V5 Robotics Competition™ Middle School and High School Teams",
+        "code": "RE-V5RC-26-5129"
+      },
+      "order": 60,
+      "title": "Excellence Award - High School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287023,
+      "event": {
+        "id": 65129,
+        "name": "New Palestine High School Tournament: VEX V5 Robotics Competition™ Middle School and High School Teams",
+        "code": "RE-V5RC-26-5129"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287024,
+      "event": {
+        "id": 65129,
+        "name": "New Palestine High School Tournament: VEX V5 Robotics Competition™ Middle School and High School Teams",
+        "code": "RE-V5RC-26-5129"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287025,
+      "event": {
+        "id": 65129,
+        "name": "New Palestine High School Tournament: VEX V5 Robotics Competition™ Middle School and High School Teams",
+        "code": "RE-V5RC-26-5129"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287026,
+      "event": {
+        "id": 65129,
+        "name": "New Palestine High School Tournament: VEX V5 Robotics Competition™ Middle School and High School Teams",
+        "code": "RE-V5RC-26-5129"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287027,
+      "event": {
+        "id": 65129,
+        "name": "New Palestine High School Tournament: VEX V5 Robotics Competition™ Middle School and High School Teams",
+        "code": "RE-V5RC-26-5129"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287028,
+      "event": {
+        "id": 65129,
+        "name": "New Palestine High School Tournament: VEX V5 Robotics Competition™ Middle School and High School Teams",
+        "code": "RE-V5RC-26-5129"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287029,
+      "event": {
+        "id": 65129,
+        "name": "New Palestine High School Tournament: VEX V5 Robotics Competition™ Middle School and High School Teams",
+        "code": "RE-V5RC-26-5129"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287030,
+      "event": {
+        "id": 65129,
+        "name": "New Palestine High School Tournament: VEX V5 Robotics Competition™ Middle School and High School Teams",
+        "code": "RE-V5RC-26-5129"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287031,
+      "event": {
+        "id": 65129,
+        "name": "New Palestine High School Tournament: VEX V5 Robotics Competition™ Middle School and High School Teams",
+        "code": "RE-V5RC-26-5129"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287032,
+      "event": {
+        "id": 65129,
+        "name": "New Palestine High School Tournament: VEX V5 Robotics Competition™ Middle School and High School Teams",
+        "code": "RE-V5RC-26-5129"
+      },
+      "order": 81,
+      "title": "Inspire Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64270/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64270/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64270/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 4,
+    "total": 4,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 197569,
+      "number": "2415X",
+      "team_name": "Refract Prime",
+      "robot_name": "",
+      "organization": "1x Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Manassas",
+        "region": "Virginia",
+        "postcode": "20110-6940",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.7,
+          "lon": -77.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 102975,
+      "number": "99157B",
+      "team_name": "IronMechs 2.0",
+      "robot_name": "",
+      "organization": "Abacus Robotics Corp",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Haymarket",
+        "region": "Virginia",
+        "postcode": "20169",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.8,
+          "lon": -77.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 155514,
+      "number": "99157C",
+      "team_name": "IronMechs 3.0",
+      "robot_name": "",
+      "organization": "Abacus Robotics Corp",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Haymarket",
+        "region": "Virginia",
+        "postcode": "20169",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.8,
+          "lon": -77.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 189629,
+      "number": "99209X",
+      "team_name": "Refract",
+      "robot_name": "",
+      "organization": "1x Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Manassas",
+        "region": "Virginia",
+        "postcode": "20110",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.7,
+          "lon": -77.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
+}

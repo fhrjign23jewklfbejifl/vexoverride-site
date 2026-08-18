@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64511,
+    "sku": "RE-V5RC-26-4511",
+    "name": "White Knights a Holiday Affair, V5RC at NeoCity Academy: VEX V5 Robotics Competition Built to Compete. Inspired to Innovate.",
+    "start": "2026-12-12T00:00:00-05:00",
+    "end": "2026-12-12T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "NeoCity Academy",
+      "address_1": "195 NeoCity Way",
+      "address_2": null,
+      "city": "Kissimmee",
+      "region": "Florida",
+      "postcode": "34744",
+      "country": "United States",
+      "coordinates": {
+        "lat": 28.290701,
+        "lon": -81.371702
+      }
+    },
+    "locations": {
+      "2026-12-12": {
+        "venue": "NeoCity Academy",
+        "address_1": "195 NeoCity Way",
+        "address_2": null,
+        "city": "Kissimmee",
+        "region": "Florida",
+        "postcode": "34744",
+        "country": "United States",
+        "coordinates": {
+          "lat": 28.290701,
+          "lon": -81.371702
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

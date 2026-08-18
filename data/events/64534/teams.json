@@ -1,0 +1,261 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64534/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64534/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64534/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 9,
+    "total": 9,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 122820,
+      "number": "663A",
+      "team_name": "&",
+      "robot_name": "/or",
+      "organization": "CHATTANOOGA CHRISTIAN SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Chattanooga",
+        "region": "Tennessee",
+        "postcode": "37409",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35,
+          "lon": -85.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199231,
+      "number": "2701B",
+      "team_name": "Franklin Christian Academy",
+      "robot_name": "Z",
+      "organization": "Franklin Christian Academy",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Franklin",
+        "region": "Tennessee",
+        "postcode": "37064",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.9,
+          "lon": -86.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199232,
+      "number": "2701C",
+      "team_name": "Franklin Christian Academy",
+      "robot_name": "Z",
+      "organization": "Franklin Christian Academy",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Franklin",
+        "region": "Tennessee",
+        "postcode": "37064",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.9,
+          "lon": -86.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 186664,
+      "number": "2701Y",
+      "team_name": "Franklin Christian Academy",
+      "robot_name": "Z",
+      "organization": "Franklin Christian Academy",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Franklin",
+        "region": "Tennessee",
+        "postcode": "37064",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.9,
+          "lon": -86.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 186663,
+      "number": "2701Z",
+      "team_name": "Franklin Christian Academy",
+      "robot_name": "Z",
+      "organization": "Franklin Christian Academy",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Franklin",
+        "region": "Tennessee",
+        "postcode": "37064",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.9,
+          "lon": -86.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 189212,
+      "number": "2775S",
+      "team_name": "Jackson Area Robotics EELS",
+      "robot_name": "Jackson Area Robotics",
+      "organization": "Jackson Area Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Jackson",
+        "region": "Tennessee",
+        "postcode": "38305",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.7,
+          "lon": -88.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 187591,
+      "number": "2775U",
+      "team_name": "Jackson Area Robotics",
+      "robot_name": "Jackson Area Robotics",
+      "organization": "Jackson Area Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Jackson",
+        "region": "Tennessee",
+        "postcode": "38305",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.7,
+          "lon": -88.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 186292,
+      "number": "21010V",
+      "team_name": "The V5 Vipers",
+      "robot_name": "Viper MK1",
+      "organization": "Equanimity Labs, LLC",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Nolensville",
+        "region": "Tennessee",
+        "postcode": "37135",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.9,
+          "lon": -86.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 135305,
+      "number": "34001A",
+      "team_name": "IOROBOT",
+      "robot_name": "",
+      "organization": "İbrahim Özaydın Mesleki ve Teknik Anadolu Lisesi",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "İstanbul",
+        "region": null,
+        "postcode": "34555",
+        "country": "Türkiye",
+        "coordinates": {
+          "lat": 41.2,
+          "lon": 28.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
+}

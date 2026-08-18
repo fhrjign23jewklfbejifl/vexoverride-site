@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65444/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65444/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65444/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 2,
+    "total": 2,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 289091,
+      "event": {
+        "id": 65444,
+        "name": "Auckland | VEX V5 Robotics Competition™ (Blended): Override™ Tournament #6 @ Onehunga High School",
+        "code": "RE-V5RC-26-5444"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289092,
+      "event": {
+        "id": 65444,
+        "name": "Auckland | VEX V5 Robotics Competition™ (Blended): Override™ Tournament #6 @ Onehunga High School",
+        "code": "RE-V5RC-26-5444"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

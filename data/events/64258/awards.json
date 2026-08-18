@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64258/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64258/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64258/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 6,
+    "total": 6,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 280470,
+      "event": {
+        "id": 64258,
+        "name": "Heart of Ohio VEX Robotics League - MIDDLE SCHOOL: VEX V5 Robotics Competition, hosted by Highland MS (Marengo)",
+        "code": "RE-V5RC-26-4258"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280471,
+      "event": {
+        "id": 64258,
+        "name": "Heart of Ohio VEX Robotics League - MIDDLE SCHOOL: VEX V5 Robotics Competition, hosted by Highland MS (Marengo)",
+        "code": "RE-V5RC-26-4258"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280472,
+      "event": {
+        "id": 64258,
+        "name": "Heart of Ohio VEX Robotics League - MIDDLE SCHOOL: VEX V5 Robotics Competition, hosted by Highland MS (Marengo)",
+        "code": "RE-V5RC-26-4258"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280473,
+      "event": {
+        "id": 64258,
+        "name": "Heart of Ohio VEX Robotics League - MIDDLE SCHOOL: VEX V5 Robotics Competition, hosted by Highland MS (Marengo)",
+        "code": "RE-V5RC-26-4258"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280474,
+      "event": {
+        "id": 64258,
+        "name": "Heart of Ohio VEX Robotics League - MIDDLE SCHOOL: VEX V5 Robotics Competition, hosted by Highland MS (Marengo)",
+        "code": "RE-V5RC-26-4258"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280475,
+      "event": {
+        "id": 64258,
+        "name": "Heart of Ohio VEX Robotics League - MIDDLE SCHOOL: VEX V5 Robotics Competition, hosted by Highland MS (Marengo)",
+        "code": "RE-V5RC-26-4258"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

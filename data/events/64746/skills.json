@@ -1,0 +1,432 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64746/skills?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64746/skills?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64746/skills",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 18,
+    "total": 18,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 79061836,
+      "event": {
+        "id": 64746,
+        "name": "2026-2027赛季VEX机器人公开赛全国邀请赛V5RC",
+        "code": "RE-V5RC-26-4746"
+      },
+      "team": {
+        "id": 171037,
+        "name": "3012A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 1,
+      "score": 30,
+      "attempts": 2
+    },
+    {
+      "id": 79061837,
+      "event": {
+        "id": 64746,
+        "name": "2026-2027赛季VEX机器人公开赛全国邀请赛V5RC",
+        "code": "RE-V5RC-26-4746"
+      },
+      "team": {
+        "id": 171037,
+        "name": "3012A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 1,
+      "score": 68,
+      "attempts": 2
+    },
+    {
+      "id": 79061838,
+      "event": {
+        "id": 64746,
+        "name": "2026-2027赛季VEX机器人公开赛全国邀请赛V5RC",
+        "code": "RE-V5RC-26-4746"
+      },
+      "team": {
+        "id": 197907,
+        "name": "3771A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 2,
+      "score": 68,
+      "attempts": 2
+    },
+    {
+      "id": 79061839,
+      "event": {
+        "id": 64746,
+        "name": "2026-2027赛季VEX机器人公开赛全国邀请赛V5RC",
+        "code": "RE-V5RC-26-4746"
+      },
+      "team": {
+        "id": 197907,
+        "name": "3771A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 2,
+      "score": 10,
+      "attempts": 3
+    },
+    {
+      "id": 79061840,
+      "event": {
+        "id": 64746,
+        "name": "2026-2027赛季VEX机器人公开赛全国邀请赛V5RC",
+        "code": "RE-V5RC-26-4746"
+      },
+      "team": {
+        "id": 155409,
+        "name": "12466A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 3,
+      "score": 40,
+      "attempts": 1
+    },
+    {
+      "id": 79061841,
+      "event": {
+        "id": 64746,
+        "name": "2026-2027赛季VEX机器人公开赛全国邀请赛V5RC",
+        "code": "RE-V5RC-26-4746"
+      },
+      "team": {
+        "id": 155409,
+        "name": "12466A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 3,
+      "score": 28,
+      "attempts": 3
+    },
+    {
+      "id": 79061842,
+      "event": {
+        "id": 64746,
+        "name": "2026-2027赛季VEX机器人公开赛全国邀请赛V5RC",
+        "code": "RE-V5RC-26-4746"
+      },
+      "team": {
+        "id": 197663,
+        "name": "3023A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 4,
+      "score": 58,
+      "attempts": 3
+    },
+    {
+      "id": 79061843,
+      "event": {
+        "id": 64746,
+        "name": "2026-2027赛季VEX机器人公开赛全国邀请赛V5RC",
+        "code": "RE-V5RC-26-4746"
+      },
+      "team": {
+        "id": 197663,
+        "name": "3023A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 4,
+      "score": 8,
+      "attempts": 3
+    },
+    {
+      "id": 79061844,
+      "event": {
+        "id": 64746,
+        "name": "2026-2027赛季VEX机器人公开赛全国邀请赛V5RC",
+        "code": "RE-V5RC-26-4746"
+      },
+      "team": {
+        "id": 129263,
+        "name": "12366A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 5,
+      "score": 28,
+      "attempts": 2
+    },
+    {
+      "id": 79061845,
+      "event": {
+        "id": 64746,
+        "name": "2026-2027赛季VEX机器人公开赛全国邀请赛V5RC",
+        "code": "RE-V5RC-26-4746"
+      },
+      "team": {
+        "id": 129263,
+        "name": "12366A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 5,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79061846,
+      "event": {
+        "id": 64746,
+        "name": "2026-2027赛季VEX机器人公开赛全国邀请赛V5RC",
+        "code": "RE-V5RC-26-4746"
+      },
+      "team": {
+        "id": 198739,
+        "name": "3258C",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 6,
+      "score": 28,
+      "attempts": 1
+    },
+    {
+      "id": 79061847,
+      "event": {
+        "id": 64746,
+        "name": "2026-2027赛季VEX机器人公开赛全国邀请赛V5RC",
+        "code": "RE-V5RC-26-4746"
+      },
+      "team": {
+        "id": 198739,
+        "name": "3258C",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 6,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79061848,
+      "event": {
+        "id": 64746,
+        "name": "2026-2027赛季VEX机器人公开赛全国邀请赛V5RC",
+        "code": "RE-V5RC-26-4746"
+      },
+      "team": {
+        "id": 192353,
+        "name": "3036A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 7,
+      "score": 8,
+      "attempts": 1
+    },
+    {
+      "id": 79061849,
+      "event": {
+        "id": 64746,
+        "name": "2026-2027赛季VEX机器人公开赛全国邀请赛V5RC",
+        "code": "RE-V5RC-26-4746"
+      },
+      "team": {
+        "id": 192353,
+        "name": "3036A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 7,
+      "score": 8,
+      "attempts": 1
+    },
+    {
+      "id": 79061850,
+      "event": {
+        "id": 64746,
+        "name": "2026-2027赛季VEX机器人公开赛全国邀请赛V5RC",
+        "code": "RE-V5RC-26-4746"
+      },
+      "team": {
+        "id": 170984,
+        "name": "2676A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 8,
+      "score": 10,
+      "attempts": 1
+    },
+    {
+      "id": 79061851,
+      "event": {
+        "id": 64746,
+        "name": "2026-2027赛季VEX机器人公开赛全国邀请赛V5RC",
+        "code": "RE-V5RC-26-4746"
+      },
+      "team": {
+        "id": 170984,
+        "name": "2676A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 8,
+      "score": 5,
+      "attempts": 1
+    },
+    {
+      "id": 79061852,
+      "event": {
+        "id": 64746,
+        "name": "2026-2027赛季VEX机器人公开赛全国邀请赛V5RC",
+        "code": "RE-V5RC-26-4746"
+      },
+      "team": {
+        "id": 198701,
+        "name": "3929A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 9,
+      "score": 8,
+      "attempts": 1
+    },
+    {
+      "id": 79061853,
+      "event": {
+        "id": 64746,
+        "name": "2026-2027赛季VEX机器人公开赛全国邀请赛V5RC",
+        "code": "RE-V5RC-26-4746"
+      },
+      "team": {
+        "id": 198701,
+        "name": "3929A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 9,
+      "score": 0,
+      "attempts": 1
+    }
+  ]
+}

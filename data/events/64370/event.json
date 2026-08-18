@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64370,
+    "sku": "RE-V5RC-26-4370",
+    "name": "VEX V5 Robotics Competition - Santa Robot Clash 2026: @ International School Basel",
+    "start": "2026-12-04T00:00:00-05:00",
+    "end": "2026-12-04T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "International School Basel",
+      "address_1": "2 Fleischbachstrasse",
+      "address_2": null,
+      "city": "Reinach",
+      "region": "Basel-Landschaft",
+      "postcode": "4153",
+      "country": "Switzerland",
+      "coordinates": {
+        "lat": 47.510325,
+        "lon": 7.601734
+      }
+    },
+    "locations": {
+      "2026-12-04": {
+        "venue": "International School Basel",
+        "address_1": "2 Fleischbachstrasse",
+        "address_2": null,
+        "city": "Reinach",
+        "region": "Basel-Landschaft",
+        "postcode": "4153",
+        "country": "Switzerland",
+        "coordinates": {
+          "lat": 47.510325,
+          "lon": 7.601734
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

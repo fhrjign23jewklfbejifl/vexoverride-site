@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64503,
+    "sku": "RE-V5RC-26-4503",
+    "name": "2027 ASIJ VEX V5 Robotics Competition™ Tournament: VEX V5 High School",
+    "start": "2027-01-08T00:00:00-05:00",
+    "end": "2027-01-09T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "The American School in Japan",
+      "address_1": "1-1-1 Nomizu",
+      "address_2": null,
+      "city": "Chofu, Tokyo",
+      "region": null,
+      "postcode": "182-0031",
+      "country": "Japan",
+      "coordinates": {
+        "lat": 35.682295,
+        "lon": 139.524818
+      }
+    },
+    "locations": {
+      "2027-01-08": {
+        "venue": "The American School in Japan",
+        "address_1": "1-1-1 Nomizu",
+        "address_2": null,
+        "city": "Chofu, Tokyo",
+        "region": null,
+        "postcode": "182-0031",
+        "country": "Japan",
+        "coordinates": {
+          "lat": 35.682295,
+          "lon": 139.524818
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

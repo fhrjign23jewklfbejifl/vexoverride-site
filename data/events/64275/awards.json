@@ -1,0 +1,228 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64275/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64275/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64275/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 14,
+    "total": 14,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 280650,
+      "event": {
+        "id": 64275,
+        "name": "2011 Robotics Swagelok Middle School VEX Tournament #2: VEX V5 Robotics Competition, Meaden & Moore",
+        "code": "RE-V5RC-26-4275"
+      },
+      "order": 61,
+      "title": "Excellence Award - Middle School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280651,
+      "event": {
+        "id": 64275,
+        "name": "2011 Robotics Swagelok Middle School VEX Tournament #2: VEX V5 Robotics Competition, Meaden & Moore",
+        "code": "RE-V5RC-26-4275"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280652,
+      "event": {
+        "id": 64275,
+        "name": "2011 Robotics Swagelok Middle School VEX Tournament #2: VEX V5 Robotics Competition, Meaden & Moore",
+        "code": "RE-V5RC-26-4275"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280653,
+      "event": {
+        "id": 64275,
+        "name": "2011 Robotics Swagelok Middle School VEX Tournament #2: VEX V5 Robotics Competition, Meaden & Moore",
+        "code": "RE-V5RC-26-4275"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280654,
+      "event": {
+        "id": 64275,
+        "name": "2011 Robotics Swagelok Middle School VEX Tournament #2: VEX V5 Robotics Competition, Meaden & Moore",
+        "code": "RE-V5RC-26-4275"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280655,
+      "event": {
+        "id": 64275,
+        "name": "2011 Robotics Swagelok Middle School VEX Tournament #2: VEX V5 Robotics Competition, Meaden & Moore",
+        "code": "RE-V5RC-26-4275"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280656,
+      "event": {
+        "id": 64275,
+        "name": "2011 Robotics Swagelok Middle School VEX Tournament #2: VEX V5 Robotics Competition, Meaden & Moore",
+        "code": "RE-V5RC-26-4275"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280657,
+      "event": {
+        "id": 64275,
+        "name": "2011 Robotics Swagelok Middle School VEX Tournament #2: VEX V5 Robotics Competition, Meaden & Moore",
+        "code": "RE-V5RC-26-4275"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280658,
+      "event": {
+        "id": 64275,
+        "name": "2011 Robotics Swagelok Middle School VEX Tournament #2: VEX V5 Robotics Competition, Meaden & Moore",
+        "code": "RE-V5RC-26-4275"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280659,
+      "event": {
+        "id": 64275,
+        "name": "2011 Robotics Swagelok Middle School VEX Tournament #2: VEX V5 Robotics Competition, Meaden & Moore",
+        "code": "RE-V5RC-26-4275"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280660,
+      "event": {
+        "id": 64275,
+        "name": "2011 Robotics Swagelok Middle School VEX Tournament #2: VEX V5 Robotics Competition, Meaden & Moore",
+        "code": "RE-V5RC-26-4275"
+      },
+      "order": 78,
+      "title": "Create Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280661,
+      "event": {
+        "id": 64275,
+        "name": "2011 Robotics Swagelok Middle School VEX Tournament #2: VEX V5 Robotics Competition, Meaden & Moore",
+        "code": "RE-V5RC-26-4275"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280662,
+      "event": {
+        "id": 64275,
+        "name": "2011 Robotics Swagelok Middle School VEX Tournament #2: VEX V5 Robotics Competition, Meaden & Moore",
+        "code": "RE-V5RC-26-4275"
+      },
+      "order": 80,
+      "title": "Energy Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280663,
+      "event": {
+        "id": 64275,
+        "name": "2011 Robotics Swagelok Middle School VEX Tournament #2: VEX V5 Robotics Competition, Meaden & Moore",
+        "code": "RE-V5RC-26-4275"
+      },
+      "order": 81,
+      "title": "Inspire Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65466,
+    "sku": "RE-V5RC-26-5466",
+    "name": "VEX V5 - VEX Robotics Vietnam National Championship 2027 (HS): Vòng chung kết Giải vô địch Quốc gia Việt Nam VEX Robotics 2027 (bảng đấu THPT VEX V5)",
+    "start": "2027-01-09T00:00:00-05:00",
+    "end": "2027-01-10T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Hà Nội",
+      "address_1": "",
+      "address_2": null,
+      "city": "Hà Nội",
+      "region": null,
+      "postcode": "",
+      "country": "Vietnam",
+      "coordinates": {
+        "lat": 21.027764,
+        "lon": 105.83416
+      }
+    },
+    "locations": {
+      "2027-01-09": {
+        "venue": "Hà Nội",
+        "address_1": "",
+        "address_2": null,
+        "city": "Hà Nội",
+        "region": null,
+        "postcode": "",
+        "country": "Vietnam",
+        "coordinates": {
+          "lat": 21.027764,
+          "lon": 105.83416
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "National",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

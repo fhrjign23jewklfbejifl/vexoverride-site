@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65345/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65345/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65345/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 3,
+    "total": 3,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 288503,
+      "event": {
+        "id": 65345,
+        "name": "爱因斯坦联盟2026-2027 VEX机器人西安城市赛 V5RC（二）: VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-5345"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288504,
+      "event": {
+        "id": 65345,
+        "name": "爱因斯坦联盟2026-2027 VEX机器人西安城市赛 V5RC（二）: VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-5345"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288505,
+      "event": {
+        "id": 65345,
+        "name": "爱因斯坦联盟2026-2027 VEX机器人西安城市赛 V5RC（二）: VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-5345"
+      },
+      "order": 65,
+      "title": "Tournament Semifinalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

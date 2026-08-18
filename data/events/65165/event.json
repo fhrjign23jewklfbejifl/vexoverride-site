@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65165,
+    "sku": "RE-V5RC-26-5165",
+    "name": "Best in Southwest★FL ~ VEX V5 Robotics Over Ride Skills Only: High School & Middle School",
+    "start": "2027-01-15T00:00:00-05:00",
+    "end": "2027-01-15T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Community School of Naples",
+      "address_1": "13275 Livingston Road",
+      "address_2": null,
+      "city": "Naples",
+      "region": "Florida",
+      "postcode": "34109",
+      "country": "United States",
+      "coordinates": {
+        "lat": 26.217412,
+        "lon": -81.753193
+      }
+    },
+    "locations": {
+      "2027-01-15": {
+        "venue": "Community School of Naples",
+        "address_1": "13275 Livingston Road",
+        "address_2": null,
+        "city": "Naples",
+        "region": "Florida",
+        "postcode": "34109",
+        "country": "United States",
+        "coordinates": {
+          "lat": 26.217412,
+          "lon": -81.753193
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

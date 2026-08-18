@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64718,
+    "sku": "RE-V5RC-26-4718",
+    "name": "Late Shift - VEX V5RC - High School - Elyria, Ohio: VEX V5 Robotics Competition",
+    "start": "2027-01-08T00:00:00-05:00",
+    "end": "2027-01-08T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Elyria Performing Arts Center",
+      "address_1": "600 West Avenue",
+      "address_2": null,
+      "city": "Elyria",
+      "region": "Ohio",
+      "postcode": "44035",
+      "country": "United States",
+      "coordinates": {
+        "lat": 41.361542,
+        "lon": -82.109292
+      }
+    },
+    "locations": {
+      "2027-01-08": {
+        "venue": "Elyria Performing Arts Center",
+        "address_1": "600 West Avenue",
+        "address_2": null,
+        "city": "Elyria",
+        "region": "Ohio",
+        "postcode": "44035",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.361542,
+          "lon": -82.109292
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

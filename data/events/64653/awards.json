@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64653/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64653/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64653/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 12,
+    "total": 12,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 283566,
+      "event": {
+        "id": 64653,
+        "name": "AOE Robotics V5RC Challenge: VEX V5 Robotics Competition, HS and MS combined In Person Judging",
+        "code": "RE-V5RC-26-4653"
+      },
+      "order": 60,
+      "title": "Excellence Award - High School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283567,
+      "event": {
+        "id": 64653,
+        "name": "AOE Robotics V5RC Challenge: VEX V5 Robotics Competition, HS and MS combined In Person Judging",
+        "code": "RE-V5RC-26-4653"
+      },
+      "order": 61,
+      "title": "Excellence Award - Middle School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283568,
+      "event": {
+        "id": 64653,
+        "name": "AOE Robotics V5RC Challenge: VEX V5 Robotics Competition, HS and MS combined In Person Judging",
+        "code": "RE-V5RC-26-4653"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283569,
+      "event": {
+        "id": 64653,
+        "name": "AOE Robotics V5RC Challenge: VEX V5 Robotics Competition, HS and MS combined In Person Judging",
+        "code": "RE-V5RC-26-4653"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283570,
+      "event": {
+        "id": 64653,
+        "name": "AOE Robotics V5RC Challenge: VEX V5 Robotics Competition, HS and MS combined In Person Judging",
+        "code": "RE-V5RC-26-4653"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283571,
+      "event": {
+        "id": 64653,
+        "name": "AOE Robotics V5RC Challenge: VEX V5 Robotics Competition, HS and MS combined In Person Judging",
+        "code": "RE-V5RC-26-4653"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283572,
+      "event": {
+        "id": 64653,
+        "name": "AOE Robotics V5RC Challenge: VEX V5 Robotics Competition, HS and MS combined In Person Judging",
+        "code": "RE-V5RC-26-4653"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283573,
+      "event": {
+        "id": 64653,
+        "name": "AOE Robotics V5RC Challenge: VEX V5 Robotics Competition, HS and MS combined In Person Judging",
+        "code": "RE-V5RC-26-4653"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283574,
+      "event": {
+        "id": 64653,
+        "name": "AOE Robotics V5RC Challenge: VEX V5 Robotics Competition, HS and MS combined In Person Judging",
+        "code": "RE-V5RC-26-4653"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283575,
+      "event": {
+        "id": 64653,
+        "name": "AOE Robotics V5RC Challenge: VEX V5 Robotics Competition, HS and MS combined In Person Judging",
+        "code": "RE-V5RC-26-4653"
+      },
+      "order": 82,
+      "title": "Volunteer of the Year Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283588,
+      "event": {
+        "id": 64653,
+        "name": "AOE Robotics V5RC Challenge: VEX V5 Robotics Competition, HS and MS combined In Person Judging",
+        "code": "RE-V5RC-26-4653"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283589,
+      "event": {
+        "id": 64653,
+        "name": "AOE Robotics V5RC Challenge: VEX V5 Robotics Competition, HS and MS combined In Person Judging",
+        "code": "RE-V5RC-26-4653"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

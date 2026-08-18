@@ -1,0 +1,213 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64360/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64360/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64360/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 13,
+    "total": 13,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 281308,
+      "event": {
+        "id": 64360,
+        "name": "VEX V5 Robotics Competition™ Macau Championship 2026-2027: VEX V5 (MS/HS)",
+        "code": "RE-V5RC-26-4360"
+      },
+      "order": 61,
+      "title": "Excellence Award - Middle School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281309,
+      "event": {
+        "id": 64360,
+        "name": "VEX V5 Robotics Competition™ Macau Championship 2026-2027: VEX V5 (MS/HS)",
+        "code": "RE-V5RC-26-4360"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281310,
+      "event": {
+        "id": 64360,
+        "name": "VEX V5 Robotics Competition™ Macau Championship 2026-2027: VEX V5 (MS/HS)",
+        "code": "RE-V5RC-26-4360"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281311,
+      "event": {
+        "id": 64360,
+        "name": "VEX V5 Robotics Competition™ Macau Championship 2026-2027: VEX V5 (MS/HS)",
+        "code": "RE-V5RC-26-4360"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281312,
+      "event": {
+        "id": 64360,
+        "name": "VEX V5 Robotics Competition™ Macau Championship 2026-2027: VEX V5 (MS/HS)",
+        "code": "RE-V5RC-26-4360"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281313,
+      "event": {
+        "id": 64360,
+        "name": "VEX V5 Robotics Competition™ Macau Championship 2026-2027: VEX V5 (MS/HS)",
+        "code": "RE-V5RC-26-4360"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281314,
+      "event": {
+        "id": 64360,
+        "name": "VEX V5 Robotics Competition™ Macau Championship 2026-2027: VEX V5 (MS/HS)",
+        "code": "RE-V5RC-26-4360"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281315,
+      "event": {
+        "id": 64360,
+        "name": "VEX V5 Robotics Competition™ Macau Championship 2026-2027: VEX V5 (MS/HS)",
+        "code": "RE-V5RC-26-4360"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281316,
+      "event": {
+        "id": 64360,
+        "name": "VEX V5 Robotics Competition™ Macau Championship 2026-2027: VEX V5 (MS/HS)",
+        "code": "RE-V5RC-26-4360"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281317,
+      "event": {
+        "id": 64360,
+        "name": "VEX V5 Robotics Competition™ Macau Championship 2026-2027: VEX V5 (MS/HS)",
+        "code": "RE-V5RC-26-4360"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281318,
+      "event": {
+        "id": 64360,
+        "name": "VEX V5 Robotics Competition™ Macau Championship 2026-2027: VEX V5 (MS/HS)",
+        "code": "RE-V5RC-26-4360"
+      },
+      "order": 78,
+      "title": "Create Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281319,
+      "event": {
+        "id": 64360,
+        "name": "VEX V5 Robotics Competition™ Macau Championship 2026-2027: VEX V5 (MS/HS)",
+        "code": "RE-V5RC-26-4360"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284867,
+      "event": {
+        "id": 64360,
+        "name": "VEX V5 Robotics Competition™ Macau Championship 2026-2027: VEX V5 (MS/HS)",
+        "code": "RE-V5RC-26-4360"
+      },
+      "order": 60,
+      "title": "Excellence Award - High School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64987,
+    "sku": "RE-V5RC-26-4987",
+    "name": "Saratoga VEX V5 Robotics Competition™ #1: Override™ HS & MS Teams",
+    "start": "2026-09-20T00:00:00-04:00",
+    "end": "2026-09-20T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Saratoga High School",
+      "address_1": "20300 Herriman Avenue",
+      "address_2": null,
+      "city": "Saratoga",
+      "region": "California",
+      "postcode": "95070",
+      "country": "United States",
+      "coordinates": {
+        "lat": 37.266323,
+        "lon": -122.029607
+      }
+    },
+    "locations": {
+      "2026-09-20": {
+        "venue": "Saratoga High School",
+        "address_1": "20300 Herriman Avenue",
+        "address_2": null,
+        "city": "Saratoga",
+        "region": "California",
+        "postcode": "95070",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.266323,
+          "lon": -122.029607
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

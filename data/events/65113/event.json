@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65113,
+    "sku": "RE-V5RC-26-5113",
+    "name": "Torneo Nacional ROBOTICA EXTREMA VEX ROBOTICS Competition",
+    "start": "2027-02-15T00:00:00-05:00",
+    "end": "2027-02-16T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "EIA University",
+      "address_1": "Universidad EIA",
+      "address_2": null,
+      "city": "Vereda El Penasco",
+      "region": null,
+      "postcode": "055428",
+      "country": "Colombia",
+      "coordinates": {
+        "lat": 6.157042,
+        "lon": -75.516863
+      }
+    },
+    "locations": {
+      "2027-02-15": {
+        "venue": "EIA University",
+        "address_1": "Universidad EIA",
+        "address_2": null,
+        "city": "Vereda El Penasco",
+        "region": null,
+        "postcode": "055428",
+        "country": "Colombia",
+        "coordinates": {
+          "lat": 6.157042,
+          "lon": -75.516863
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "National",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

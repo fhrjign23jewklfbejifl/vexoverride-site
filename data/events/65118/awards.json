@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65118/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65118/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65118/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 8,
+    "total": 8,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 286969,
+      "event": {
+        "id": 65118,
+        "name": "2026 Bear River Ice Cream Social: VEX V5 Robotics Competition, Blended HS/MS, Remote Engineering Notebooks",
+        "code": "RE-V5RC-26-5118"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286970,
+      "event": {
+        "id": 65118,
+        "name": "2026 Bear River Ice Cream Social: VEX V5 Robotics Competition, Blended HS/MS, Remote Engineering Notebooks",
+        "code": "RE-V5RC-26-5118"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286971,
+      "event": {
+        "id": 65118,
+        "name": "2026 Bear River Ice Cream Social: VEX V5 Robotics Competition, Blended HS/MS, Remote Engineering Notebooks",
+        "code": "RE-V5RC-26-5118"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286972,
+      "event": {
+        "id": 65118,
+        "name": "2026 Bear River Ice Cream Social: VEX V5 Robotics Competition, Blended HS/MS, Remote Engineering Notebooks",
+        "code": "RE-V5RC-26-5118"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286973,
+      "event": {
+        "id": 65118,
+        "name": "2026 Bear River Ice Cream Social: VEX V5 Robotics Competition, Blended HS/MS, Remote Engineering Notebooks",
+        "code": "RE-V5RC-26-5118"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286974,
+      "event": {
+        "id": 65118,
+        "name": "2026 Bear River Ice Cream Social: VEX V5 Robotics Competition, Blended HS/MS, Remote Engineering Notebooks",
+        "code": "RE-V5RC-26-5118"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286975,
+      "event": {
+        "id": 65118,
+        "name": "2026 Bear River Ice Cream Social: VEX V5 Robotics Competition, Blended HS/MS, Remote Engineering Notebooks",
+        "code": "RE-V5RC-26-5118"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286976,
+      "event": {
+        "id": 65118,
+        "name": "2026 Bear River Ice Cream Social: VEX V5 Robotics Competition, Blended HS/MS, Remote Engineering Notebooks",
+        "code": "RE-V5RC-26-5118"
+      },
+      "order": 82,
+      "title": "Volunteer of the Year Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

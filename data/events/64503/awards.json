@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64503/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64503/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64503/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 9,
+    "total": 9,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 282567,
+      "event": {
+        "id": 64503,
+        "name": "2027 ASIJ VEX V5 Robotics Competition™ Tournament: VEX V5 High School",
+        "code": "RE-V5RC-26-4503"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282568,
+      "event": {
+        "id": 64503,
+        "name": "2027 ASIJ VEX V5 Robotics Competition™ Tournament: VEX V5 High School",
+        "code": "RE-V5RC-26-4503"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282569,
+      "event": {
+        "id": 64503,
+        "name": "2027 ASIJ VEX V5 Robotics Competition™ Tournament: VEX V5 High School",
+        "code": "RE-V5RC-26-4503"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282570,
+      "event": {
+        "id": 64503,
+        "name": "2027 ASIJ VEX V5 Robotics Competition™ Tournament: VEX V5 High School",
+        "code": "RE-V5RC-26-4503"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282571,
+      "event": {
+        "id": 64503,
+        "name": "2027 ASIJ VEX V5 Robotics Competition™ Tournament: VEX V5 High School",
+        "code": "RE-V5RC-26-4503"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282572,
+      "event": {
+        "id": 64503,
+        "name": "2027 ASIJ VEX V5 Robotics Competition™ Tournament: VEX V5 High School",
+        "code": "RE-V5RC-26-4503"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282573,
+      "event": {
+        "id": 64503,
+        "name": "2027 ASIJ VEX V5 Robotics Competition™ Tournament: VEX V5 High School",
+        "code": "RE-V5RC-26-4503"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282574,
+      "event": {
+        "id": 64503,
+        "name": "2027 ASIJ VEX V5 Robotics Competition™ Tournament: VEX V5 High School",
+        "code": "RE-V5RC-26-4503"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283056,
+      "event": {
+        "id": 64503,
+        "name": "2027 ASIJ VEX V5 Robotics Competition™ Tournament: VEX V5 High School",
+        "code": "RE-V5RC-26-4503"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

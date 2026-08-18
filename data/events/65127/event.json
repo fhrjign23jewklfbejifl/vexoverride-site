@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65127,
+    "sku": "RE-V5RC-26-5127",
+    "name": "AZ Skills at Knight MS: VEX V5 Robotics Competition",
+    "start": "2026-12-11T00:00:00-05:00",
+    "end": "2026-12-11T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "1150 W Erie St",
+      "address_1": "1150 West Erie Street",
+      "address_2": null,
+      "city": "Chandler",
+      "region": "Arizona",
+      "postcode": "85224",
+      "country": "United States",
+      "coordinates": {
+        "lat": 33.310434,
+        "lon": -111.862346
+      }
+    },
+    "locations": {
+      "2026-12-11": {
+        "venue": "1150 W Erie St",
+        "address_1": "1150 West Erie Street",
+        "address_2": null,
+        "city": "Chandler",
+        "region": "Arizona",
+        "postcode": "85224",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.310434,
+          "lon": -111.862346
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

@@ -1,0 +1,315 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64234/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64234/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64234/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 11,
+    "total": 11,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 196966,
+      "number": "37S",
+      "team_name": "Supa Hot Chilli Peppers",
+      "robot_name": "Supa Hot",
+      "organization": "Chilli Pepper Robotics ",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Riverside South",
+        "region": "Ontario",
+        "postcode": "K1X 0C8",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 45.3,
+          "lon": -75.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 186789,
+      "number": "252A",
+      "team_name": "And I Wonder",
+      "robot_name": "",
+      "organization": "I Wonder Nexus",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Richmond Hill",
+        "region": "Ontario",
+        "postcode": "L4B3R3",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 43.9,
+          "lon": -79.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 143545,
+      "number": "252H",
+      "team_name": "Holy Cow",
+      "robot_name": "",
+      "organization": "I Wonder Nexus",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Richmond Hill",
+        "region": "Ontario",
+        "postcode": "L4B3R3",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 43.9,
+          "lon": -79.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 197091,
+      "number": "252W",
+      "team_name": "Wonder Why…?",
+      "robot_name": "",
+      "organization": "I Wonder Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Richmond Hill",
+        "region": "Ontario",
+        "postcode": "L4B3R3",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 43.9,
+          "lon": -79.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 107158,
+      "number": "839A",
+      "team_name": "// Caution Tape Amplified //",
+      "robot_name": "",
+      "organization": "Caution Tape Robotics ////",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Markham",
+        "region": "Ontario",
+        "postcode": "L3R 5J8",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 43.8,
+          "lon": -79.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 199602,
+      "number": "839W",
+      "team_name": "// Caution Tape Watermelon //",
+      "robot_name": "",
+      "organization": "Caution Tape Robotics ////",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Markham",
+        "region": "Ontario",
+        "postcode": "L3R 5J8",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 43.8,
+          "lon": -79.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 178328,
+      "number": "839X",
+      "team_name": "// Caution Tape //",
+      "robot_name": "",
+      "organization": "Caution Tape Robotics ////",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Markham",
+        "region": "Ontario",
+        "postcode": "L3R 5J8",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 43.8,
+          "lon": -79.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 108761,
+      "number": "839Z",
+      "team_name": "// Caution Tape ZOOM! //",
+      "robot_name": "",
+      "organization": "Caution Tape Robotics ////",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Markham",
+        "region": "Ontario",
+        "postcode": "L3R 5J8",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 43.8,
+          "lon": -79.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 198825,
+      "number": "2020V",
+      "team_name": "Vision",
+      "robot_name": "Vi-z-ion",
+      "organization": "Chilli Pepper Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Markham",
+        "region": "Ontario",
+        "postcode": "L3R 3C1",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 43.8,
+          "lon": -79.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 197018,
+      "number": "2020Z",
+      "team_name": "Double Take",
+      "robot_name": "Vi-z-ion",
+      "organization": "Chilli Pepper Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Markham",
+        "region": "Ontario",
+        "postcode": "L3R 3C1",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 43.8,
+          "lon": -79.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 185375,
+      "number": "10094Z",
+      "team_name": "KillSwitch",
+      "robot_name": "",
+      "organization": "Zebra Robotics Brampton East",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Brampton",
+        "region": "Ontario",
+        "postcode": "L6S 0E7",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 43.7,
+          "lon": -79.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
+}

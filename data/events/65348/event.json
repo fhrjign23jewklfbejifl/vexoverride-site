@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65348,
+    "sku": "RE-V5RC-26-5348",
+    "name": "VEX V5 Robotics Competition | Newcastle Regional | (MS/HS): Supported by Newcastle University & The Reece Foundation",
+    "start": "2027-02-04T00:00:00-05:00",
+    "end": "2027-02-04T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Newcastle University",
+      "address_1": "Hadrian Building, King's Road",
+      "address_2": null,
+      "city": "Newcastle",
+      "region": null,
+      "postcode": "NE1 7RU",
+      "country": "United Kingdom",
+      "coordinates": {
+        "lat": 54.978853,
+        "lon": -1.615431
+      }
+    },
+    "locations": {
+      "2027-02-04": {
+        "venue": "Newcastle University",
+        "address_1": "Hadrian Building, King's Road",
+        "address_2": null,
+        "city": "Newcastle",
+        "region": null,
+        "postcode": "NE1 7RU",
+        "country": "United Kingdom",
+        "coordinates": {
+          "lat": 54.978853,
+          "lon": -1.615431
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

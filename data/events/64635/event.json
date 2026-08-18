@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64635,
+    "sku": "RE-V5RC-26-4635",
+    "name": "Hereford Zone Robotics Override Stampede: VEX V5 Robotics Competition - Blended, School-Based",
+    "start": "2026-12-05T00:00:00-05:00",
+    "end": "2026-12-05T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Hereford Middle School",
+      "address_1": "712 Corbett Road",
+      "address_2": null,
+      "city": "Monkton",
+      "region": "Maryland",
+      "postcode": "21111",
+      "country": "United States",
+      "coordinates": {
+        "lat": 39.572723,
+        "lon": -76.653319
+      }
+    },
+    "locations": {
+      "2026-12-05": {
+        "venue": "Hereford Middle School",
+        "address_1": "712 Corbett Road",
+        "address_2": null,
+        "city": "Monkton",
+        "region": "Maryland",
+        "postcode": "21111",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39.572723,
+          "lon": -76.653319
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

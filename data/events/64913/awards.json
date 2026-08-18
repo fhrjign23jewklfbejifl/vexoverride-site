@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64913/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64913/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64913/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 6,
+    "total": 6,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 285266,
+      "event": {
+        "id": 64913,
+        "name": "Morris RoboRodeo VEX V5 Robotics Competition: Gears, Guts, and Glory.",
+        "code": "RE-V5RC-26-4913"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [
+        "Event Region Championship"
+      ],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285267,
+      "event": {
+        "id": 64913,
+        "name": "Morris RoboRodeo VEX V5 Robotics Competition: Gears, Guts, and Glory.",
+        "code": "RE-V5RC-26-4913"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [
+        "Event Region Championship"
+      ],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285268,
+      "event": {
+        "id": 64913,
+        "name": "Morris RoboRodeo VEX V5 Robotics Competition: Gears, Guts, and Glory.",
+        "code": "RE-V5RC-26-4913"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285269,
+      "event": {
+        "id": 64913,
+        "name": "Morris RoboRodeo VEX V5 Robotics Competition: Gears, Guts, and Glory.",
+        "code": "RE-V5RC-26-4913"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285391,
+      "event": {
+        "id": 64913,
+        "name": "Morris RoboRodeo VEX V5 Robotics Competition: Gears, Guts, and Glory.",
+        "code": "RE-V5RC-26-4913"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285565,
+      "event": {
+        "id": 64913,
+        "name": "Morris RoboRodeo VEX V5 Robotics Competition: Gears, Guts, and Glory.",
+        "code": "RE-V5RC-26-4913"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

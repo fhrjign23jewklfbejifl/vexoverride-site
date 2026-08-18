@@ -1,0 +1,491 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64244/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64244/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64244/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 16,
+    "total": 16,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 280355,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "UND",
+            "code": null
+          },
+          "team": {
+            "id": 93662,
+            "name": "2131N",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 280356,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "UND",
+            "code": null
+          },
+          "team": {
+            "id": 101140,
+            "name": "10102A",
+            "code": null
+          }
+        },
+        {
+          "division": {
+            "id": 1,
+            "name": "UND",
+            "code": null
+          },
+          "team": {
+            "id": 40093,
+            "name": "1028A",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 280357,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "UND",
+            "code": null
+          },
+          "team": {
+            "id": 196990,
+            "name": "8694V",
+            "code": null
+          }
+        },
+        {
+          "division": {
+            "id": 1,
+            "name": "UND",
+            "code": null
+          },
+          "team": {
+            "id": 197326,
+            "name": "1698Z",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 280358,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "UND",
+            "code": null
+          },
+          "team": {
+            "id": 144268,
+            "name": "355Z",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 280359,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "UND",
+            "code": null
+          },
+          "team": {
+            "id": 189332,
+            "name": "96Z",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 280360,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "order": 71,
+      "title": "Robot Skills 2nd Place (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "UND",
+            "code": null
+          },
+          "team": {
+            "id": 188744,
+            "name": "98601Y",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 280361,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "UND",
+            "code": null
+          },
+          "team": {
+            "id": 185151,
+            "name": "2982A",
+            "code": null
+          }
+        },
+        {
+          "division": {
+            "id": 1,
+            "name": "UND",
+            "code": null
+          },
+          "team": {
+            "id": 171308,
+            "name": "66996X",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 280362,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "UND",
+            "code": null
+          },
+          "team": {
+            "id": 170152,
+            "name": "11811A",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 280363,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "UND",
+            "code": null
+          },
+          "team": {
+            "id": 198072,
+            "name": "1584V",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 280364,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "UND",
+            "code": null
+          },
+          "team": {
+            "id": 189332,
+            "name": "96Z",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 280365,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "UND",
+            "code": null
+          },
+          "team": {
+            "id": 188744,
+            "name": "98601Y",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 280366,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "order": 78,
+      "title": "Create Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "UND",
+            "code": null
+          },
+          "team": {
+            "id": 107445,
+            "name": "16610A",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 280367,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "UND",
+            "code": null
+          },
+          "team": {
+            "id": 196961,
+            "name": "227R",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 280368,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "order": 80,
+      "title": "Energy Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "UND",
+            "code": null
+          },
+          "team": {
+            "id": 93662,
+            "name": "2131N",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 280369,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "order": 81,
+      "title": "Inspire Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "UND",
+            "code": null
+          },
+          "team": {
+            "id": 197440,
+            "name": "99319S",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 280370,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "order": 82,
+      "title": "Volunteer of the Year Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": [
+        "Kara Peters"
+      ]
+    }
+  ]
+}

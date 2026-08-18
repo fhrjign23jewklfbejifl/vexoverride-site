@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65327,
+    "sku": "RE-V5RC-26-5327",
+    "name": "Reboot Robotics Potato Mashup - VEX V5 Tournament: 1st Annual VEX V5 Robotics Competition Qualifier - Blended Event",
+    "start": "2027-01-16T00:00:00-05:00",
+    "end": "2027-01-16T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Southwest Baptist University / Jane and Ken Meyer Wellness and Sports Center",
+      "address_1": "1260 S Pike Ave",
+      "address_2": null,
+      "city": "Bolivar",
+      "region": "Missouri",
+      "postcode": "65613",
+      "country": "United States",
+      "coordinates": {
+        "lat": 37.602725,
+        "lon": -93.411135
+      }
+    },
+    "locations": {
+      "2027-01-16": {
+        "venue": "Southwest Baptist University / Jane and Ken Meyer Wellness and Sports Center",
+        "address_1": "1260 S Pike Ave",
+        "address_2": null,
+        "city": "Bolivar",
+        "region": "Missouri",
+        "postcode": "65613",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.602725,
+          "lon": -93.411135
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

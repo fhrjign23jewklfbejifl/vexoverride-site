@@ -1,0 +1,450 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64820/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64820/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64820/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 16,
+    "total": 16,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 185808,
+      "number": "3866F",
+      "team_name": "▰ 1 ▰",
+      "robot_name": "",
+      "organization": "Curious X-Lab",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Hsinchu City",
+        "region": null,
+        "postcode": "300197",
+        "country": "Taiwan",
+        "coordinates": {
+          "lat": 24.8,
+          "lon": 121
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199153,
+      "number": "3952A",
+      "team_name": "Albatross",
+      "robot_name": "Albatross",
+      "organization": "Curious Robotics Hsinchu",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Hsinchu City",
+        "region": null,
+        "postcode": "300",
+        "country": "Chinese Taipei",
+        "coordinates": {
+          "lat": 24.8,
+          "lon": 121
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 198524,
+      "number": "3952B",
+      "team_name": "Barougan",
+      "robot_name": "Barougan",
+      "organization": "Curious Robotics Hsinchu",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Hsinchu City",
+        "region": null,
+        "postcode": "300",
+        "country": "Chinese Taipei",
+        "coordinates": {
+          "lat": 24.8,
+          "lon": 121
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199154,
+      "number": "3952X",
+      "team_name": "Exit 8",
+      "robot_name": "Exit 8",
+      "organization": "Curious Robotics Hsinchu",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Hsinchu City",
+        "region": null,
+        "postcode": "300",
+        "country": "Chinese Taipei",
+        "coordinates": {
+          "lat": 24.8,
+          "lon": 121
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 88843,
+      "number": "17022A",
+      "team_name": "Pangolin",
+      "robot_name": "",
+      "organization": "Happy Robot",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Taipei City",
+        "region": null,
+        "postcode": "110",
+        "country": "Chinese Taipei",
+        "coordinates": {
+          "lat": 25,
+          "lon": 121.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 139816,
+      "number": "17022J",
+      "team_name": "Otter",
+      "robot_name": "",
+      "organization": "Happy Robot",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Taipei City",
+        "region": null,
+        "postcode": "110",
+        "country": "Chinese Taipei",
+        "coordinates": {
+          "lat": 25,
+          "lon": 121.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 185694,
+      "number": "17022X",
+      "team_name": "XXX",
+      "robot_name": "",
+      "organization": "Happy Robot",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Taipei City",
+        "region": null,
+        "postcode": "110",
+        "country": "Chinese Taipei",
+        "coordinates": {
+          "lat": 25,
+          "lon": 121.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 155552,
+      "number": "23083Y",
+      "team_name": "Phantom",
+      "robot_name": "",
+      "organization": "臺北市私立薇閣高級中學",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Taipei",
+        "region": null,
+        "postcode": "112",
+        "country": "Chinese Taipei",
+        "coordinates": {
+          "lat": 25.1,
+          "lon": 121.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 155525,
+      "number": "23083Z",
+      "team_name": "Reaper",
+      "robot_name": "",
+      "organization": "臺北市私立薇閣高級中學",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Taipei",
+        "region": null,
+        "postcode": "112",
+        "country": "Chinese Taipei",
+        "coordinates": {
+          "lat": 25.1,
+          "lon": 121.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 187032,
+      "number": "44404E",
+      "team_name": "No Brain No Pain.GC",
+      "robot_name": "",
+      "organization": "喬智創意機器人研究室",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "斗六市",
+        "region": null,
+        "postcode": "64050",
+        "country": "Chinese Taipei",
+        "coordinates": {
+          "lat": 23.7,
+          "lon": 120.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199106,
+      "number": "44404X",
+      "team_name": "Brain Not Found.GC",
+      "robot_name": "",
+      "organization": "喬智創意機器人研究室",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "斗六市",
+        "region": null,
+        "postcode": "64050",
+        "country": "Chinese Taipei",
+        "coordinates": {
+          "lat": 23.7,
+          "lon": 120.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 153982,
+      "number": "89089Y",
+      "team_name": "Muffin",
+      "robot_name": "",
+      "organization": "Pacific American School - Middle School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Zhubei, Hsinchu County",
+        "region": null,
+        "postcode": "30272",
+        "country": "Chinese Taipei",
+        "coordinates": {
+          "lat": 24.8,
+          "lon": 121
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 128497,
+      "number": "89089Z",
+      "team_name": "Pancakes",
+      "robot_name": "",
+      "organization": "Pacific American School - Middle School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Zhubei, Hsinchu County",
+        "region": null,
+        "postcode": "30272",
+        "country": "Chinese Taipei",
+        "coordinates": {
+          "lat": 24.8,
+          "lon": 121
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 124050,
+      "number": "96969W",
+      "team_name": "Smooth Operator",
+      "robot_name": "",
+      "organization": "Pacific American School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Zhubei City, Hsinchu County",
+        "region": null,
+        "postcode": "30272",
+        "country": "Chinese Taipei",
+        "coordinates": {
+          "lat": 24.8,
+          "lon": 121
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 111390,
+      "number": "96969Y",
+      "team_name": "PAS1",
+      "robot_name": "",
+      "organization": "Pacific American School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Zhubei, Hsinchu County",
+        "region": null,
+        "postcode": "30272",
+        "country": "Chinese Taipei",
+        "coordinates": {
+          "lat": 24.8,
+          "lon": 121
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 111391,
+      "number": "96969Z",
+      "team_name": "Piston",
+      "robot_name": "",
+      "organization": "Pacific American School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Zhubei, Hsinchu County",
+        "region": null,
+        "postcode": "30272",
+        "country": "Chinese Taipei",
+        "coordinates": {
+          "lat": 24.8,
+          "lon": 121
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
+}

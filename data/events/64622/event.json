@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64622,
+    "sku": "RE-V5RC-26-4622",
+    "name": "Palmerston North V5RC Regional Championship: Override™  @ St Peter's College (Kiwibots Event in Central Robotics Region)",
+    "start": "2026-12-05T00:00:00-05:00",
+    "end": "2026-12-05T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "St Peter's College",
+      "address_1": "1 Holdsworth Avenue",
+      "address_2": null,
+      "city": "Palmerston North",
+      "region": null,
+      "postcode": "4414",
+      "country": "New Zealand",
+      "coordinates": {
+        "lat": -40.334167,
+        "lon": 175.60518
+      }
+    },
+    "locations": {
+      "2026-12-05": {
+        "venue": "St Peter's College",
+        "address_1": "1 Holdsworth Avenue",
+        "address_2": null,
+        "city": "Palmerston North",
+        "region": null,
+        "postcode": "4414",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -40.334167,
+          "lon": 175.60518
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

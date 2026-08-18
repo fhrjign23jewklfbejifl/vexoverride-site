@@ -1,0 +1,490 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64392/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64392/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64392/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 16,
+    "total": 16,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 281675,
+      "event": {
+        "id": 64392,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (HS)",
+        "code": "RE-V5RC-26-4392"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division A",
+            "code": null
+          },
+          "team": {
+            "id": 153670,
+            "name": "18190X",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 281676,
+      "event": {
+        "id": 64392,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (HS)",
+        "code": "RE-V5RC-26-4392"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division A",
+            "code": null
+          },
+          "team": {
+            "id": 128971,
+            "name": "2731K",
+            "code": null
+          }
+        },
+        {
+          "division": {
+            "id": 1,
+            "name": "Division A",
+            "code": null
+          },
+          "team": {
+            "id": 115241,
+            "name": "9123S",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 281677,
+      "event": {
+        "id": 64392,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (HS)",
+        "code": "RE-V5RC-26-4392"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division A",
+            "code": null
+          },
+          "team": {
+            "id": 102421,
+            "name": "54001A",
+            "code": null
+          }
+        },
+        {
+          "division": {
+            "id": 1,
+            "name": "Division A",
+            "code": null
+          },
+          "team": {
+            "id": 153670,
+            "name": "18190X",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 281678,
+      "event": {
+        "id": 64392,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (HS)",
+        "code": "RE-V5RC-26-4392"
+      },
+      "order": 65,
+      "title": "Tournament Semifinalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division A",
+            "code": null
+          },
+          "team": {
+            "id": 197862,
+            "name": "12993S",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 281680,
+      "event": {
+        "id": 64392,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (HS)",
+        "code": "RE-V5RC-26-4392"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division A",
+            "code": null
+          },
+          "team": {
+            "id": 187882,
+            "name": "68678M",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 281681,
+      "event": {
+        "id": 64392,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (HS)",
+        "code": "RE-V5RC-26-4392"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division A",
+            "code": null
+          },
+          "team": {
+            "id": 196943,
+            "name": "11111Y",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 281682,
+      "event": {
+        "id": 64392,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (HS)",
+        "code": "RE-V5RC-26-4392"
+      },
+      "order": 71,
+      "title": "Robot Skills 2nd Place (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division A",
+            "code": null
+          },
+          "team": {
+            "id": 187882,
+            "name": "68678M",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 281683,
+      "event": {
+        "id": 64392,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (HS)",
+        "code": "RE-V5RC-26-4392"
+      },
+      "order": 72,
+      "title": "Robot Skills 3rd Place (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division A",
+            "code": null
+          },
+          "team": {
+            "id": 153670,
+            "name": "18190X",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 281684,
+      "event": {
+        "id": 64392,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (HS)",
+        "code": "RE-V5RC-26-4392"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division A",
+            "code": null
+          },
+          "team": {
+            "id": 198925,
+            "name": "98353Y",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 281685,
+      "event": {
+        "id": 64392,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (HS)",
+        "code": "RE-V5RC-26-4392"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division A",
+            "code": null
+          },
+          "team": {
+            "id": 198107,
+            "name": "10188S",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 281686,
+      "event": {
+        "id": 64392,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (HS)",
+        "code": "RE-V5RC-26-4392"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division A",
+            "code": null
+          },
+          "team": {
+            "id": 196943,
+            "name": "11111Y",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 281687,
+      "event": {
+        "id": 64392,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (HS)",
+        "code": "RE-V5RC-26-4392"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division A",
+            "code": null
+          },
+          "team": {
+            "id": 198331,
+            "name": "19600Z",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 281688,
+      "event": {
+        "id": 64392,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (HS)",
+        "code": "RE-V5RC-26-4392"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division A",
+            "code": null
+          },
+          "team": {
+            "id": 197749,
+            "name": "52222X",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 281689,
+      "event": {
+        "id": 64392,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (HS)",
+        "code": "RE-V5RC-26-4392"
+      },
+      "order": 78,
+      "title": "Create Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division A",
+            "code": null
+          },
+          "team": {
+            "id": 197993,
+            "name": "59888X",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 281690,
+      "event": {
+        "id": 64392,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (HS)",
+        "code": "RE-V5RC-26-4392"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division A",
+            "code": null
+          },
+          "team": {
+            "id": 187873,
+            "name": "11107X",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 281691,
+      "event": {
+        "id": 64392,
+        "name": "The Silk Road Link: VEX V5 Robotics Competition Override™ (HS)",
+        "code": "RE-V5RC-26-4392"
+      },
+      "order": 80,
+      "title": "Energy Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division A",
+            "code": null
+          },
+          "team": {
+            "id": 198990,
+            "name": "2572A",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    }
+  ]
+}

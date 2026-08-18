@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65327/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65327/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65327/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 7,
+    "total": 7,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 289605,
+      "event": {
+        "id": 65327,
+        "name": "Reboot Robotics Potato Mashup - VEX V5 Tournament: 1st Annual VEX V5 Robotics Competition Qualifier - Blended Event",
+        "code": "RE-V5RC-26-5327"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289606,
+      "event": {
+        "id": 65327,
+        "name": "Reboot Robotics Potato Mashup - VEX V5 Tournament: 1st Annual VEX V5 Robotics Competition Qualifier - Blended Event",
+        "code": "RE-V5RC-26-5327"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289607,
+      "event": {
+        "id": 65327,
+        "name": "Reboot Robotics Potato Mashup - VEX V5 Tournament: 1st Annual VEX V5 Robotics Competition Qualifier - Blended Event",
+        "code": "RE-V5RC-26-5327"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289608,
+      "event": {
+        "id": 65327,
+        "name": "Reboot Robotics Potato Mashup - VEX V5 Tournament: 1st Annual VEX V5 Robotics Competition Qualifier - Blended Event",
+        "code": "RE-V5RC-26-5327"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289609,
+      "event": {
+        "id": 65327,
+        "name": "Reboot Robotics Potato Mashup - VEX V5 Tournament: 1st Annual VEX V5 Robotics Competition Qualifier - Blended Event",
+        "code": "RE-V5RC-26-5327"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289610,
+      "event": {
+        "id": 65327,
+        "name": "Reboot Robotics Potato Mashup - VEX V5 Tournament: 1st Annual VEX V5 Robotics Competition Qualifier - Blended Event",
+        "code": "RE-V5RC-26-5327"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289611,
+      "event": {
+        "id": 65327,
+        "name": "Reboot Robotics Potato Mashup - VEX V5 Tournament: 1st Annual VEX V5 Robotics Competition Qualifier - Blended Event",
+        "code": "RE-V5RC-26-5327"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

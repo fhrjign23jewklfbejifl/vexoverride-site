@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64839/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64839/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64839/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 8,
+    "total": 8,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 284965,
+      "event": {
+        "id": 64839,
+        "name": "Star Warriors - Battle of Hoth: VEX V5 Robotics Competition, Traditional blended tournament format with skills",
+        "code": "RE-V5RC-26-4839"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284966,
+      "event": {
+        "id": 64839,
+        "name": "Star Warriors - Battle of Hoth: VEX V5 Robotics Competition, Traditional blended tournament format with skills",
+        "code": "RE-V5RC-26-4839"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284967,
+      "event": {
+        "id": 64839,
+        "name": "Star Warriors - Battle of Hoth: VEX V5 Robotics Competition, Traditional blended tournament format with skills",
+        "code": "RE-V5RC-26-4839"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284968,
+      "event": {
+        "id": 64839,
+        "name": "Star Warriors - Battle of Hoth: VEX V5 Robotics Competition, Traditional blended tournament format with skills",
+        "code": "RE-V5RC-26-4839"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284969,
+      "event": {
+        "id": 64839,
+        "name": "Star Warriors - Battle of Hoth: VEX V5 Robotics Competition, Traditional blended tournament format with skills",
+        "code": "RE-V5RC-26-4839"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284970,
+      "event": {
+        "id": 64839,
+        "name": "Star Warriors - Battle of Hoth: VEX V5 Robotics Competition, Traditional blended tournament format with skills",
+        "code": "RE-V5RC-26-4839"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284971,
+      "event": {
+        "id": 64839,
+        "name": "Star Warriors - Battle of Hoth: VEX V5 Robotics Competition, Traditional blended tournament format with skills",
+        "code": "RE-V5RC-26-4839"
+      },
+      "order": 80,
+      "title": "Energy Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285182,
+      "event": {
+        "id": 64839,
+        "name": "Star Warriors - Battle of Hoth: VEX V5 Robotics Competition, Traditional blended tournament format with skills",
+        "code": "RE-V5RC-26-4839"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64272,
+    "sku": "RE-V5RC-26-4272",
+    "name": "2011 Robotics Lincoln Electric High School Tournament: VEX V5 Robotics Competition, Meaden & Moore",
+    "start": "2026-12-12T00:00:00-05:00",
+    "end": "2026-12-12T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Brecksville-Broadview Heights High School",
+      "address_1": "6380 Mill Road",
+      "address_2": null,
+      "city": "Broadview Heights",
+      "region": "Ohio",
+      "postcode": "44147",
+      "country": "United States",
+      "coordinates": {
+        "lat": 41.32715,
+        "lon": -81.64529
+      }
+    },
+    "locations": {
+      "2026-12-12": {
+        "venue": "Brecksville-Broadview Heights High School",
+        "address_1": "6380 Mill Road",
+        "address_2": null,
+        "city": "Broadview Heights",
+        "region": "Ohio",
+        "postcode": "44147",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.32715,
+          "lon": -81.64529
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

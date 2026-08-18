@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64565,
+    "sku": "RE-V5RC-26-4565",
+    "name": "2026-2027赛季VEX机器人公开赛保定城市赛 V5RC",
+    "start": "2026-07-25T00:00:00-04:00",
+    "end": "2026-07-26T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "北京市八一学校保定分校",
+      "address_1": "保定市高新区火炬路 108 号",
+      "address_2": null,
+      "city": "Baoding",
+      "region": "Hebei",
+      "postcode": "071000",
+      "country": "China",
+      "coordinates": {
+        "lat": 38.8198,
+        "lon": 115.45041
+      }
+    },
+    "locations": {
+      "2026-07-25": {
+        "venue": "北京市八一学校保定分校",
+        "address_1": "保定市高新区火炬路 108 号",
+        "address_2": null,
+        "city": "Baoding",
+        "region": "Hebei",
+        "postcode": "071000",
+        "country": "China",
+        "coordinates": {
+          "lat": 38.8198,
+          "lon": 115.45041
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Division 1",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": true,
+    "event_type": null
+  }
+}

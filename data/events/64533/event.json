@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64533,
+    "sku": "RE-V5RC-26-4533",
+    "name": "NSW | UNSW RCC | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ UNSW Robotics Competition Club",
+    "start": "2026-09-20T00:00:00-04:00",
+    "end": "2026-09-20T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "UNSW Roundhouse",
+      "address_1": "International Road",
+      "address_2": null,
+      "city": "Kensington",
+      "region": "New South Wales",
+      "postcode": "2052",
+      "country": "Australia",
+      "coordinates": {
+        "lat": -33.915853,
+        "lon": 151.227477
+      }
+    },
+    "locations": {
+      "2026-09-20": {
+        "venue": "UNSW Roundhouse",
+        "address_1": "International Road",
+        "address_2": null,
+        "city": "Kensington",
+        "region": "New South Wales",
+        "postcode": "2052",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -33.915853,
+          "lon": 151.227477
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

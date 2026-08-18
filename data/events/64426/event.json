@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64426,
+    "sku": "RE-V5RC-26-4426",
+    "name": "Formosa VEX V5 Robotics Competition™ Override™ 2026: International Event - VEX V5 (MS/HS)",
+    "start": "2026-12-04T00:00:00-05:00",
+    "end": "2026-12-05T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Joie US Gym @ Taipei American School",
+      "address_1": "800 Chung Shan North Road, Section 6",
+      "address_2": null,
+      "city": "Taipei",
+      "region": null,
+      "postcode": "11152",
+      "country": "Taiwan",
+      "coordinates": {
+        "lat": 25.032969,
+        "lon": 121.565418
+      }
+    },
+    "locations": {
+      "2026-12-04": {
+        "venue": "Joie US Gym @ Taipei American School",
+        "address_1": "800 Chung Shan North Road, Section 6",
+        "address_2": null,
+        "city": "Taipei",
+        "region": null,
+        "postcode": "11152",
+        "country": "Taiwan",
+        "coordinates": {
+          "lat": 25.032969,
+          "lon": 121.565418
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

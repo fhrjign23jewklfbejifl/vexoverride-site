@@ -1,0 +1,315 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64408/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64408/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64408/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 11,
+    "total": 11,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 107975,
+      "number": "1002D",
+      "team_name": "Templestowe college",
+      "robot_name": "",
+      "organization": "Templestowe College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Templestowe Lower",
+        "region": "Victoria",
+        "postcode": "3107",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.8,
+          "lon": 145.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 185488,
+      "number": "1002V",
+      "team_name": "Templestowe college",
+      "robot_name": "Templestowe college",
+      "organization": "Templestowe College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Templestowe Lower",
+        "region": "Victoria",
+        "postcode": "3107",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.8,
+          "lon": 145.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 170597,
+      "number": "3477B",
+      "team_name": "The Tax Evaders",
+      "robot_name": "Tellurium",
+      "organization": "St Andrews Christian College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Wantirna South",
+        "region": "Victoria",
+        "postcode": "3152",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.9,
+          "lon": 145.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 154792,
+      "number": "3477C",
+      "team_name": "MSND",
+      "robot_name": "Theseus",
+      "organization": "St Andrews Christian College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Wantirna South",
+        "region": "Victoria",
+        "postcode": "3152",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.9,
+          "lon": 145.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 170598,
+      "number": "3477D",
+      "team_name": "The Tax Collecters",
+      "robot_name": "Thorium",
+      "organization": "St Andrews Christian College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Wantirna South",
+        "region": "Victoria",
+        "postcode": "3152",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.9,
+          "lon": 145.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 197376,
+      "number": "3477E",
+      "team_name": "-Synt4x 3rr0r-",
+      "robot_name": "Clanker",
+      "organization": "St Andrews Christian College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Wantirna South",
+        "region": "Victoria",
+        "postcode": "3152",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.9,
+          "lon": 145.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 197071,
+      "number": "31280J",
+      "team_name": "Wyvern Robotics",
+      "robot_name": "",
+      "organization": "Kingswood College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Box Hill",
+        "region": "Victoria",
+        "postcode": "3128",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.8,
+          "lon": 145.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 97178,
+      "number": "52050A",
+      "team_name": "Layla",
+      "robot_name": "Layla",
+      "organization": "Aquinas College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Ringwood",
+        "region": "Victoria",
+        "postcode": "3134",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.8,
+          "lon": 145.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 70312,
+      "number": "97230A",
+      "team_name": "97230A",
+      "robot_name": "",
+      "organization": "Highvale Secondary College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Glen Waverley",
+        "region": "Victoria",
+        "postcode": "3150",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.9,
+          "lon": 145.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 70315,
+      "number": "97230D",
+      "team_name": "97230D",
+      "robot_name": "",
+      "organization": "Highvale Secondary College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Glen Waverley",
+        "region": "Victoria",
+        "postcode": "3150",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.9,
+          "lon": 145.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 170337,
+      "number": "97230G",
+      "team_name": "97230G",
+      "robot_name": "",
+      "organization": "Highvale Secondary College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Glen Waverley",
+        "region": "Victoria",
+        "postcode": "3150",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.9,
+          "lon": 145.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    }
+  ]
+}

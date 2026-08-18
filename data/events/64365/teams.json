@@ -1,0 +1,207 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64365/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64365/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64365/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 7,
+    "total": 7,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 198334,
+      "number": "15820A",
+      "team_name": "Oxley The A Team",
+      "robot_name": "Spark-Plug",
+      "organization": "Oxley High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Tamworth",
+        "region": "New South Wales",
+        "postcode": "2340",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -31.1,
+          "lon": 150.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 198335,
+      "number": "15820C",
+      "team_name": "Oxley Hakuna Matata",
+      "robot_name": "Hellcat",
+      "organization": "Oxley High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Tamworth",
+        "region": "New South Wales",
+        "postcode": "2340",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -31.1,
+          "lon": 150.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 185602,
+      "number": "23401A",
+      "team_name": "Farrer A",
+      "robot_name": "",
+      "organization": "FMAHS",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Calala",
+        "region": "New South Wales",
+        "postcode": "2340",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -31.1,
+          "lon": 151
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 185603,
+      "number": "23401B",
+      "team_name": "Farrer B",
+      "robot_name": "",
+      "organization": "FMAHS",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Calala",
+        "region": "New South Wales",
+        "postcode": "2340",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -31.1,
+          "lon": 151
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 185604,
+      "number": "23401C",
+      "team_name": "Farrer C",
+      "robot_name": "",
+      "organization": "FMAHS",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Calala",
+        "region": "New South Wales",
+        "postcode": "2340",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -31.1,
+          "lon": 151
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 198329,
+      "number": "23401D",
+      "team_name": "Farrer C",
+      "robot_name": "",
+      "organization": "FMAHS",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Calala",
+        "region": "New South Wales",
+        "postcode": "2340",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -31.1,
+          "lon": 151
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 198330,
+      "number": "23401E",
+      "team_name": "Farrer E",
+      "robot_name": "",
+      "organization": "FMAHS",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Calala",
+        "region": "New South Wales",
+        "postcode": "2340",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -31.1,
+          "lon": 151
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
+}

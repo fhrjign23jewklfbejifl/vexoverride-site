@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65024,
+    "sku": "RE-V5RC-26-5024",
+    "name": "West Holmes Robotics VEX V5 Robotics Competition™: Override™ Middle School Teams",
+    "start": "2026-11-13T00:00:00-05:00",
+    "end": "2026-11-13T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "West Holmes High School",
+      "address_1": "10909 Ohio 39",
+      "address_2": null,
+      "city": "Millersburg",
+      "region": "Ohio",
+      "postcode": "44654",
+      "country": "United States",
+      "coordinates": {
+        "lat": 40.577833,
+        "lon": -82.014828
+      }
+    },
+    "locations": {
+      "2026-11-13": {
+        "venue": "West Holmes High School",
+        "address_1": "10909 Ohio 39",
+        "address_2": null,
+        "city": "Millersburg",
+        "region": "Ohio",
+        "postcode": "44654",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40.577833,
+          "lon": -82.014828
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65144,
+    "sku": "RE-V5RC-26-5144",
+    "name": "VEX V5 - Northern Region Qualification (Middle School): Cuộc thi VEX V5 - Vòng loại khu vực miền Bắc (Bảng đấu THCS)",
+    "start": "2026-10-10T00:00:00-04:00",
+    "end": "2026-10-11T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Hà Nội",
+      "address_1": "",
+      "address_2": null,
+      "city": "Thành phố Hà Nội",
+      "region": null,
+      "postcode": "",
+      "country": "Vietnam",
+      "coordinates": {
+        "lat": 21.027764,
+        "lon": 105.83416
+      }
+    },
+    "locations": {
+      "2026-10-10": {
+        "venue": "Hà Nội",
+        "address_1": "",
+        "address_2": null,
+        "city": "Thành phố Hà Nội",
+        "region": null,
+        "postcode": "",
+        "country": "Vietnam",
+        "coordinates": {
+          "lat": 21.027764,
+          "lon": 105.83416
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

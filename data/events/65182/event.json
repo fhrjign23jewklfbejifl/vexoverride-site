@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65182,
+    "sku": "RE-V5RC-26-5182",
+    "name": "Canterbury | VEX V5 Robotics Competition™ (Blended): Override | Scrimmage # 1 | St Andrew's College",
+    "start": "2026-08-23T00:00:00-04:00",
+    "end": "2026-08-23T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "St Andrew's College",
+      "address_1": "347 Papanui Road",
+      "address_2": null,
+      "city": "Christchurch",
+      "region": "Canterbury",
+      "postcode": "8052",
+      "country": "New Zealand",
+      "coordinates": {
+        "lat": -43.507796,
+        "lon": 172.614146
+      }
+    },
+    "locations": {
+      "2026-08-23": {
+        "venue": "St Andrew's College",
+        "address_1": "347 Papanui Road",
+        "address_2": null,
+        "city": "Christchurch",
+        "region": "Canterbury",
+        "postcode": "8052",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -43.507796,
+          "lon": 172.614146
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64962,
+    "sku": "RE-V5RC-26-4962",
+    "name": "Silver Owl Fall Qualifier - September Edition",
+    "start": "2026-09-12T00:00:00-04:00",
+    "end": "2026-09-12T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Metro International Secondary Academy",
+      "address_1": "2 Simonston Blvd",
+      "address_2": null,
+      "city": "Thornhil",
+      "region": "Ontario",
+      "postcode": "L3T 4L1",
+      "country": "Canada",
+      "coordinates": {
+        "lat": 43.813601,
+        "lon": -79.362484
+      }
+    },
+    "locations": {
+      "2026-09-12": {
+        "venue": "Metro International Secondary Academy",
+        "address_1": "2 Simonston Blvd",
+        "address_2": null,
+        "city": "Thornhil",
+        "region": "Ontario",
+        "postcode": "L3T 4L1",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 43.813601,
+          "lon": -79.362484
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

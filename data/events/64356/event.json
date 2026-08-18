@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64356,
+    "sku": "RE-V5RC-26-4356",
+    "name": "Mecha Mayhem 2027 Signature Event: VEX V5 Robotics Competition Middle School Override™ Division",
+    "start": "2027-02-12T00:00:00-05:00",
+    "end": "2027-02-14T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "BMO Centre",
+      "address_1": "1912 Flores Ladue Parade Southeast",
+      "address_2": null,
+      "city": "Calgary",
+      "region": "Alberta",
+      "postcode": "T2G 2W1",
+      "country": "Canada",
+      "coordinates": {
+        "lat": 51.038121,
+        "lon": -114.056134
+      }
+    },
+    "locations": {
+      "2027-02-12": {
+        "venue": "BMO Centre",
+        "address_1": "1912 Flores Ladue Parade Southeast",
+        "address_2": null,
+        "city": "Calgary",
+        "region": "Alberta",
+        "postcode": "T2G 2W1",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 51.038121,
+          "lon": -114.056134
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Signature",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

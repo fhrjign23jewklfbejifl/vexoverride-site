@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65244,
+    "sku": "RE-V5RC-26-5244",
+    "name": "NSW | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Knox Grammar School",
+    "start": "2026-09-27T00:00:00-04:00",
+    "end": "2026-09-27T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Knox Grammar School",
+      "address_1": "2 Borambil Street",
+      "address_2": null,
+      "city": "Wahroonga",
+      "region": "New South Wales",
+      "postcode": "2076",
+      "country": "Australia",
+      "coordinates": {
+        "lat": -33.723435,
+        "lon": 151.119567
+      }
+    },
+    "locations": {
+      "2026-09-27": {
+        "venue": "Knox Grammar School",
+        "address_1": "2 Borambil Street",
+        "address_2": null,
+        "city": "Wahroonga",
+        "region": "New South Wales",
+        "postcode": "2076",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -33.723435,
+          "lon": 151.119567
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

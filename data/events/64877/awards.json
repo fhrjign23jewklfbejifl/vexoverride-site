@@ -1,0 +1,273 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64877/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64877/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64877/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 17,
+    "total": 17,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 285320,
+      "event": {
+        "id": 64877,
+        "name": "2026“第四届AI未来之星”智渝杯VEX机器人全国邀请赛-VEX V5初中组",
+        "code": "RE-V5RC-26-4877"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285321,
+      "event": {
+        "id": 64877,
+        "name": "2026“第四届AI未来之星”智渝杯VEX机器人全国邀请赛-VEX V5初中组",
+        "code": "RE-V5RC-26-4877"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285322,
+      "event": {
+        "id": 64877,
+        "name": "2026“第四届AI未来之星”智渝杯VEX机器人全国邀请赛-VEX V5初中组",
+        "code": "RE-V5RC-26-4877"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285323,
+      "event": {
+        "id": 64877,
+        "name": "2026“第四届AI未来之星”智渝杯VEX机器人全国邀请赛-VEX V5初中组",
+        "code": "RE-V5RC-26-4877"
+      },
+      "order": 65,
+      "title": "Tournament Semifinalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285324,
+      "event": {
+        "id": 64877,
+        "name": "2026“第四届AI未来之星”智渝杯VEX机器人全国邀请赛-VEX V5初中组",
+        "code": "RE-V5RC-26-4877"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285325,
+      "event": {
+        "id": 64877,
+        "name": "2026“第四届AI未来之星”智渝杯VEX机器人全国邀请赛-VEX V5初中组",
+        "code": "RE-V5RC-26-4877"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285326,
+      "event": {
+        "id": 64877,
+        "name": "2026“第四届AI未来之星”智渝杯VEX机器人全国邀请赛-VEX V5初中组",
+        "code": "RE-V5RC-26-4877"
+      },
+      "order": 71,
+      "title": "Robot Skills 2nd Place (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285327,
+      "event": {
+        "id": 64877,
+        "name": "2026“第四届AI未来之星”智渝杯VEX机器人全国邀请赛-VEX V5初中组",
+        "code": "RE-V5RC-26-4877"
+      },
+      "order": 72,
+      "title": "Robot Skills 3rd Place (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285328,
+      "event": {
+        "id": 64877,
+        "name": "2026“第四届AI未来之星”智渝杯VEX机器人全国邀请赛-VEX V5初中组",
+        "code": "RE-V5RC-26-4877"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285329,
+      "event": {
+        "id": 64877,
+        "name": "2026“第四届AI未来之星”智渝杯VEX机器人全国邀请赛-VEX V5初中组",
+        "code": "RE-V5RC-26-4877"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285330,
+      "event": {
+        "id": 64877,
+        "name": "2026“第四届AI未来之星”智渝杯VEX机器人全国邀请赛-VEX V5初中组",
+        "code": "RE-V5RC-26-4877"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285331,
+      "event": {
+        "id": 64877,
+        "name": "2026“第四届AI未来之星”智渝杯VEX机器人全国邀请赛-VEX V5初中组",
+        "code": "RE-V5RC-26-4877"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285332,
+      "event": {
+        "id": 64877,
+        "name": "2026“第四届AI未来之星”智渝杯VEX机器人全国邀请赛-VEX V5初中组",
+        "code": "RE-V5RC-26-4877"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285333,
+      "event": {
+        "id": 64877,
+        "name": "2026“第四届AI未来之星”智渝杯VEX机器人全国邀请赛-VEX V5初中组",
+        "code": "RE-V5RC-26-4877"
+      },
+      "order": 78,
+      "title": "Create Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285334,
+      "event": {
+        "id": 64877,
+        "name": "2026“第四届AI未来之星”智渝杯VEX机器人全国邀请赛-VEX V5初中组",
+        "code": "RE-V5RC-26-4877"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285335,
+      "event": {
+        "id": 64877,
+        "name": "2026“第四届AI未来之星”智渝杯VEX机器人全国邀请赛-VEX V5初中组",
+        "code": "RE-V5RC-26-4877"
+      },
+      "order": 80,
+      "title": "Energy Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285336,
+      "event": {
+        "id": 64877,
+        "name": "2026“第四届AI未来之星”智渝杯VEX机器人全国邀请赛-VEX V5初中组",
+        "code": "RE-V5RC-26-4877"
+      },
+      "order": 81,
+      "title": "Inspire Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

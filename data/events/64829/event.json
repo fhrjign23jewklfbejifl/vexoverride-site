@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64829,
+    "sku": "RE-V5RC-26-4829",
+    "name": "VEX V5 Robotics Competition | Stanmore Standoff | (MS/HS): Organised by North London Collegiate School",
+    "start": "2026-10-04T00:00:00-04:00",
+    "end": "2026-10-04T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "North London Collegiate School",
+      "address_1": "North London Collegiate School",
+      "address_2": null,
+      "city": "London",
+      "region": "Harrow",
+      "postcode": "HA8 7RJ",
+      "country": "United Kingdom",
+      "coordinates": {
+        "lat": 51.614727,
+        "lon": -0.296678
+      }
+    },
+    "locations": {
+      "2026-10-04": {
+        "venue": "North London Collegiate School",
+        "address_1": "North London Collegiate School",
+        "address_2": null,
+        "city": "London",
+        "region": "Harrow",
+        "postcode": "HA8 7RJ",
+        "country": "United Kingdom",
+        "coordinates": {
+          "lat": 51.614727,
+          "lon": -0.296678
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65140,
+    "sku": "RE-V5RC-26-5140",
+    "name": "第二届北京校际活动第二场暨2026年第10届胜炫VEX北京城市赛 VRC_HS",
+    "start": "2026-08-25T00:00:00-04:00",
+    "end": "2026-08-26T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "怡海花园129号",
+      "address_1": "",
+      "address_2": null,
+      "city": "丰台",
+      "region": "Beijing",
+      "postcode": "",
+      "country": "China",
+      "coordinates": {
+        "lat": 39.80074,
+        "lon": 116.1442
+      }
+    },
+    "locations": {
+      "2026-08-25": {
+        "venue": "怡海花园129号",
+        "address_1": "",
+        "address_2": null,
+        "city": "丰台",
+        "region": "Beijing",
+        "postcode": "",
+        "country": "China",
+        "coordinates": {
+          "lat": 39.80074,
+          "lon": 116.1442
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

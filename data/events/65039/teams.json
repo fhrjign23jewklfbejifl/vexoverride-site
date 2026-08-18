@@ -1,0 +1,234 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65039/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65039/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65039/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 8,
+    "total": 8,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 129637,
+      "number": "19901A",
+      "team_name": "Janitell Jagwires - TEAM A",
+      "robot_name": "",
+      "organization": "JANITELL JUNIOR HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Colorado Springs",
+        "region": "Colorado",
+        "postcode": "80817",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.7,
+          "lon": -104.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 130762,
+      "number": "19901B",
+      "team_name": "Janitell Jagwires 2",
+      "robot_name": "",
+      "organization": "JANITELL JUNIOR HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Colorado Springs",
+        "region": "Colorado",
+        "postcode": "80817",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.7,
+          "lon": -104.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 130763,
+      "number": "19901C",
+      "team_name": "Janitell Jagwires 3",
+      "robot_name": "",
+      "organization": "JANITELL JUNIOR HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Colorado Springs",
+        "region": "Colorado",
+        "postcode": "80817",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.7,
+          "lon": -104.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 129638,
+      "number": "48643A",
+      "team_name": "Team A",
+      "robot_name": "",
+      "organization": "SPROUL JUNIOR HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Colorado Springs",
+        "region": "Colorado",
+        "postcode": "80911",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.8,
+          "lon": -104.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 131076,
+      "number": "48643B",
+      "team_name": "Team B",
+      "robot_name": "",
+      "organization": "SPROUL JUNIOR HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Colorado Springs",
+        "region": "Colorado",
+        "postcode": "80911",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.8,
+          "lon": -104.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 129639,
+      "number": "67282A",
+      "team_name": "The Mediocre Mechanics",
+      "robot_name": "No Clue What We're Doing",
+      "organization": "WATSON JUNIOR HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Colorado Springs",
+        "region": "Colorado",
+        "postcode": "80911",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.7,
+          "lon": -104.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 130696,
+      "number": "67282B",
+      "team_name": "Justin Beanber and the Cool Beans",
+      "robot_name": "Perry the Platypus",
+      "organization": "WATSON JUNIOR HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Colorado Springs",
+        "region": "Colorado",
+        "postcode": "80911",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.7,
+          "lon": -104.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 130697,
+      "number": "67282C",
+      "team_name": "Vertical Armor",
+      "robot_name": "The Hammer",
+      "organization": "WATSON JUNIOR HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Colorado Springs",
+        "region": "Colorado",
+        "postcode": "80911",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.7,
+          "lon": -104.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    }
+  ]
+}

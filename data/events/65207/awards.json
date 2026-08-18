@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65207/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65207/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65207/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 12,
+    "total": 12,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 287519,
+      "event": {
+        "id": 65207,
+        "name": "Allendale Robotics VEX V5 Robotics Competition™: Override™ Middle School Teams",
+        "code": "RE-V5RC-26-5207"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287520,
+      "event": {
+        "id": 65207,
+        "name": "Allendale Robotics VEX V5 Robotics Competition™: Override™ Middle School Teams",
+        "code": "RE-V5RC-26-5207"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287521,
+      "event": {
+        "id": 65207,
+        "name": "Allendale Robotics VEX V5 Robotics Competition™: Override™ Middle School Teams",
+        "code": "RE-V5RC-26-5207"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287522,
+      "event": {
+        "id": 65207,
+        "name": "Allendale Robotics VEX V5 Robotics Competition™: Override™ Middle School Teams",
+        "code": "RE-V5RC-26-5207"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287523,
+      "event": {
+        "id": 65207,
+        "name": "Allendale Robotics VEX V5 Robotics Competition™: Override™ Middle School Teams",
+        "code": "RE-V5RC-26-5207"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287524,
+      "event": {
+        "id": 65207,
+        "name": "Allendale Robotics VEX V5 Robotics Competition™: Override™ Middle School Teams",
+        "code": "RE-V5RC-26-5207"
+      },
+      "order": 71,
+      "title": "Robot Skills 2nd Place (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287525,
+      "event": {
+        "id": 65207,
+        "name": "Allendale Robotics VEX V5 Robotics Competition™: Override™ Middle School Teams",
+        "code": "RE-V5RC-26-5207"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287526,
+      "event": {
+        "id": 65207,
+        "name": "Allendale Robotics VEX V5 Robotics Competition™: Override™ Middle School Teams",
+        "code": "RE-V5RC-26-5207"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287527,
+      "event": {
+        "id": 65207,
+        "name": "Allendale Robotics VEX V5 Robotics Competition™: Override™ Middle School Teams",
+        "code": "RE-V5RC-26-5207"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287528,
+      "event": {
+        "id": 65207,
+        "name": "Allendale Robotics VEX V5 Robotics Competition™: Override™ Middle School Teams",
+        "code": "RE-V5RC-26-5207"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287529,
+      "event": {
+        "id": 65207,
+        "name": "Allendale Robotics VEX V5 Robotics Competition™: Override™ Middle School Teams",
+        "code": "RE-V5RC-26-5207"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287530,
+      "event": {
+        "id": 65207,
+        "name": "Allendale Robotics VEX V5 Robotics Competition™: Override™ Middle School Teams",
+        "code": "RE-V5RC-26-5207"
+      },
+      "order": 78,
+      "title": "Create Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

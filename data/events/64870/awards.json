@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64870/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64870/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64870/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 12,
+    "total": 12,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 285132,
+      "event": {
+        "id": 64870,
+        "name": "Smoky Mountain Forge: Middle School Signature Event",
+        "code": "RE-V5RC-26-4870"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285133,
+      "event": {
+        "id": 64870,
+        "name": "Smoky Mountain Forge: Middle School Signature Event",
+        "code": "RE-V5RC-26-4870"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285134,
+      "event": {
+        "id": 64870,
+        "name": "Smoky Mountain Forge: Middle School Signature Event",
+        "code": "RE-V5RC-26-4870"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285135,
+      "event": {
+        "id": 64870,
+        "name": "Smoky Mountain Forge: Middle School Signature Event",
+        "code": "RE-V5RC-26-4870"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285136,
+      "event": {
+        "id": 64870,
+        "name": "Smoky Mountain Forge: Middle School Signature Event",
+        "code": "RE-V5RC-26-4870"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285137,
+      "event": {
+        "id": 64870,
+        "name": "Smoky Mountain Forge: Middle School Signature Event",
+        "code": "RE-V5RC-26-4870"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285138,
+      "event": {
+        "id": 64870,
+        "name": "Smoky Mountain Forge: Middle School Signature Event",
+        "code": "RE-V5RC-26-4870"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285139,
+      "event": {
+        "id": 64870,
+        "name": "Smoky Mountain Forge: Middle School Signature Event",
+        "code": "RE-V5RC-26-4870"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285140,
+      "event": {
+        "id": 64870,
+        "name": "Smoky Mountain Forge: Middle School Signature Event",
+        "code": "RE-V5RC-26-4870"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285141,
+      "event": {
+        "id": 64870,
+        "name": "Smoky Mountain Forge: Middle School Signature Event",
+        "code": "RE-V5RC-26-4870"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285142,
+      "event": {
+        "id": 64870,
+        "name": "Smoky Mountain Forge: Middle School Signature Event",
+        "code": "RE-V5RC-26-4870"
+      },
+      "order": 78,
+      "title": "Create Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 285143,
+      "event": {
+        "id": 64870,
+        "name": "Smoky Mountain Forge: Middle School Signature Event",
+        "code": "RE-V5RC-26-4870"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

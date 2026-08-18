@@ -1,0 +1,517 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64431/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64431/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64431/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 17,
+    "total": 17,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 281919,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 189282,
+            "name": "2815Z",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 281920,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 125350,
+            "name": "54001Z",
+            "code": null
+          }
+        },
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 198133,
+            "name": "13880A",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 281921,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 112041,
+            "name": "691A",
+            "code": null
+          }
+        },
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 153670,
+            "name": "18190X",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 281922,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "order": 65,
+      "title": "Tournament Semifinalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 189282,
+            "name": "2815Z",
+            "code": null
+          }
+        },
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 189332,
+            "name": "96Z",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 281923,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 189614,
+            "name": "99236M",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 281924,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 189282,
+            "name": "2815Z",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 281925,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "order": 71,
+      "title": "Robot Skills 2nd Place (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 102421,
+            "name": "54001A",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 281926,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "order": 72,
+      "title": "Robot Skills 3rd Place (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 125350,
+            "name": "54001Z",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 281927,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 198317,
+            "name": "91200Y",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 281928,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 153670,
+            "name": "18190X",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 281929,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281930,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 197743,
+            "name": "8632X",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 281931,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 198135,
+            "name": "4511P",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 281932,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "order": 78,
+      "title": "Create Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 181661,
+            "name": "20360A",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 281933,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 188023,
+            "name": "88941C",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 281934,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "order": 80,
+      "title": "Energy Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 197624,
+            "name": "20910T",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 281935,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "order": 81,
+      "title": "Inspire Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 185635,
+            "name": "5138M",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    }
+  ]
+}

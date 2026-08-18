@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64271,
+    "sku": "RE-V5RC-26-4271",
+    "name": "Brownell Talbot VEX V5 HS Robotics Override: VEX V5 Robotics Competition",
+    "start": "2026-11-07T00:00:00-05:00",
+    "end": "2026-11-07T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Brownell Talbot College Preparatory School",
+      "address_1": "400 Happy Hollow Boulevard",
+      "address_2": null,
+      "city": "Omaha",
+      "region": "Nebraska",
+      "postcode": "68132",
+      "country": "United States",
+      "coordinates": {
+        "lat": 41.264355,
+        "lon": -95.999164
+      }
+    },
+    "locations": {
+      "2026-11-07": {
+        "venue": "Brownell Talbot College Preparatory School",
+        "address_1": "400 Happy Hollow Boulevard",
+        "address_2": null,
+        "city": "Omaha",
+        "region": "Nebraska",
+        "postcode": "68132",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.264355,
+          "lon": -95.999164
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

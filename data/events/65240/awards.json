@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65240/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65240/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65240/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 6,
+    "total": 6,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 287704,
+      "event": {
+        "id": 65240,
+        "name": "Supernova Spectacular High School Tournament: VEX V5 Robotics Competition™ : Override™ : High School Only",
+        "code": "RE-V5RC-26-5240"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287705,
+      "event": {
+        "id": 65240,
+        "name": "Supernova Spectacular High School Tournament: VEX V5 Robotics Competition™ : Override™ : High School Only",
+        "code": "RE-V5RC-26-5240"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287706,
+      "event": {
+        "id": 65240,
+        "name": "Supernova Spectacular High School Tournament: VEX V5 Robotics Competition™ : Override™ : High School Only",
+        "code": "RE-V5RC-26-5240"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287707,
+      "event": {
+        "id": 65240,
+        "name": "Supernova Spectacular High School Tournament: VEX V5 Robotics Competition™ : Override™ : High School Only",
+        "code": "RE-V5RC-26-5240"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287708,
+      "event": {
+        "id": 65240,
+        "name": "Supernova Spectacular High School Tournament: VEX V5 Robotics Competition™ : Override™ : High School Only",
+        "code": "RE-V5RC-26-5240"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287709,
+      "event": {
+        "id": 65240,
+        "name": "Supernova Spectacular High School Tournament: VEX V5 Robotics Competition™ : Override™ : High School Only",
+        "code": "RE-V5RC-26-5240"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

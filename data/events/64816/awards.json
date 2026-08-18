@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64816/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64816/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64816/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 3,
+    "total": 3,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 287318,
+      "event": {
+        "id": 64816,
+        "name": "Parkway Central Robot Rodeo - Override - VEX V5: VEX V5 Robotics Competition -Skills Only Event - No Judging - Middle School / High School",
+        "code": "RE-V5RC-26-4816"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287319,
+      "event": {
+        "id": 64816,
+        "name": "Parkway Central Robot Rodeo - Override - VEX V5: VEX V5 Robotics Competition -Skills Only Event - No Judging - Middle School / High School",
+        "code": "RE-V5RC-26-4816"
+      },
+      "order": 71,
+      "title": "Robot Skills 2nd Place (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287320,
+      "event": {
+        "id": 64816,
+        "name": "Parkway Central Robot Rodeo - Override - VEX V5: VEX V5 Robotics Competition -Skills Only Event - No Judging - Middle School / High School",
+        "code": "RE-V5RC-26-4816"
+      },
+      "order": 72,
+      "title": "Robot Skills 3rd Place (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

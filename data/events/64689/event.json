@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64689,
+    "sku": "RE-V5RC-26-4689",
+    "name": "VEX V5 Robotics Competition- Jingle Bots! Winter Brawl: Middle School Only",
+    "start": "2026-12-12T00:00:00-05:00",
+    "end": "2026-12-12T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "4500 Weaver Pike",
+      "address_1": "4500 Weaver Pike",
+      "address_2": null,
+      "city": "Bluff City",
+      "region": "Tennessee",
+      "postcode": "37618",
+      "country": "United States",
+      "coordinates": {
+        "lat": 36.493082,
+        "lon": -82.205839
+      }
+    },
+    "locations": {
+      "2026-12-12": {
+        "venue": "4500 Weaver Pike",
+        "address_1": "4500 Weaver Pike",
+        "address_2": null,
+        "city": "Bluff City",
+        "region": "Tennessee",
+        "postcode": "37618",
+        "country": "United States",
+        "coordinates": {
+          "lat": 36.493082,
+          "lon": -82.205839
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

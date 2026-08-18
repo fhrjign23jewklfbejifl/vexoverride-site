@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64346,
+    "sku": "RE-V5RC-26-4346",
+    "name": "VIC | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Rivercrest Christian College",
+    "start": "2026-10-24T00:00:00-04:00",
+    "end": "2026-10-24T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Rivercrest Christian College",
+      "address_1": "81 Ferdinand Drive",
+      "address_2": null,
+      "city": "Clyde North",
+      "region": "Victoria",
+      "postcode": "3978",
+      "country": "Australia",
+      "coordinates": {
+        "lat": -38.085271,
+        "lon": 145.373066
+      }
+    },
+    "locations": {
+      "2026-10-24": {
+        "venue": "Rivercrest Christian College",
+        "address_1": "81 Ferdinand Drive",
+        "address_2": null,
+        "city": "Clyde North",
+        "region": "Victoria",
+        "postcode": "3978",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -38.085271,
+          "lon": 145.373066
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64530/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64530/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64530/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 10,
+    "total": 10,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 282723,
+      "event": {
+        "id": 64530,
+        "name": "Maker Faire OC - MS/HS - Day 1 - robotics is ez: VEX V5 Robotics Competition - Override",
+        "code": "RE-V5RC-26-4530"
+      },
+      "order": 60,
+      "title": "Excellence Award - High School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282724,
+      "event": {
+        "id": 64530,
+        "name": "Maker Faire OC - MS/HS - Day 1 - robotics is ez: VEX V5 Robotics Competition - Override",
+        "code": "RE-V5RC-26-4530"
+      },
+      "order": 61,
+      "title": "Excellence Award - Middle School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282725,
+      "event": {
+        "id": 64530,
+        "name": "Maker Faire OC - MS/HS - Day 1 - robotics is ez: VEX V5 Robotics Competition - Override",
+        "code": "RE-V5RC-26-4530"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282726,
+      "event": {
+        "id": 64530,
+        "name": "Maker Faire OC - MS/HS - Day 1 - robotics is ez: VEX V5 Robotics Competition - Override",
+        "code": "RE-V5RC-26-4530"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282727,
+      "event": {
+        "id": 64530,
+        "name": "Maker Faire OC - MS/HS - Day 1 - robotics is ez: VEX V5 Robotics Competition - Override",
+        "code": "RE-V5RC-26-4530"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282728,
+      "event": {
+        "id": 64530,
+        "name": "Maker Faire OC - MS/HS - Day 1 - robotics is ez: VEX V5 Robotics Competition - Override",
+        "code": "RE-V5RC-26-4530"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282729,
+      "event": {
+        "id": 64530,
+        "name": "Maker Faire OC - MS/HS - Day 1 - robotics is ez: VEX V5 Robotics Competition - Override",
+        "code": "RE-V5RC-26-4530"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282730,
+      "event": {
+        "id": 64530,
+        "name": "Maker Faire OC - MS/HS - Day 1 - robotics is ez: VEX V5 Robotics Competition - Override",
+        "code": "RE-V5RC-26-4530"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282731,
+      "event": {
+        "id": 64530,
+        "name": "Maker Faire OC - MS/HS - Day 1 - robotics is ez: VEX V5 Robotics Competition - Override",
+        "code": "RE-V5RC-26-4530"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282732,
+      "event": {
+        "id": 64530,
+        "name": "Maker Faire OC - MS/HS - Day 1 - robotics is ez: VEX V5 Robotics Competition - Override",
+        "code": "RE-V5RC-26-4530"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

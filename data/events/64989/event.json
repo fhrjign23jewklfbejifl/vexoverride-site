@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64989,
+    "sku": "RE-V5RC-26-4989",
+    "name": "VIC | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Trinity (NE VIC & Sth'ern Rverina)",
+    "start": "2026-09-01T00:00:00-04:00",
+    "end": "2026-09-01T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Trinity Anglican College",
+      "address_1": "421 Elizabeth Mitchell Drive",
+      "address_2": null,
+      "city": "Thurgoona",
+      "region": "New South Wales",
+      "postcode": "2640",
+      "country": "Australia",
+      "coordinates": {
+        "lat": -36.030699,
+        "lon": 146.98412
+      }
+    },
+    "locations": {
+      "2026-09-01": {
+        "venue": "Trinity Anglican College",
+        "address_1": "421 Elizabeth Mitchell Drive",
+        "address_2": null,
+        "city": "Thurgoona",
+        "region": "New South Wales",
+        "postcode": "2640",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -36.030699,
+          "lon": 146.98412
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

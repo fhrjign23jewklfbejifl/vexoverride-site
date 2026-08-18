@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65000,
+    "sku": "RE-V5RC-26-5000",
+    "name": "Stamford Robotics Open VEX V5 Robotics Competition™ (MS/HS): VEX V5 Middle School and High School - ACAMIS Event",
+    "start": "2026-11-06T00:00:00-05:00",
+    "end": "2026-11-06T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Stamford American School Hong Kong (West Kowloon)",
+      "address_1": "10 Hoi Fai Road",
+      "address_2": null,
+      "city": "Hong Kong",
+      "region": null,
+      "postcode": "",
+      "country": "Hong Kong",
+      "coordinates": {
+        "lat": 22.318276,
+        "lon": 114.156012
+      }
+    },
+    "locations": {
+      "2026-11-06": {
+        "venue": "Stamford American School Hong Kong (West Kowloon)",
+        "address_1": "10 Hoi Fai Road",
+        "address_2": null,
+        "city": "Hong Kong",
+        "region": null,
+        "postcode": "",
+        "country": "Hong Kong",
+        "coordinates": {
+          "lat": 22.318276,
+          "lon": 114.156012
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

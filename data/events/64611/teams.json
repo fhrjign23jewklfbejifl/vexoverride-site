@@ -1,0 +1,585 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64611/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64611/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64611/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 21,
+    "total": 21,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 9397,
+      "number": "2903S",
+      "team_name": "Palmy Robotics",
+      "robot_name": "Steel",
+      "organization": "Palmerston North Boys High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Palmerston North",
+        "region": "Manawatu-Wanganui",
+        "postcode": "4410",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -40.3,
+          "lon": 175.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 11038,
+      "number": "2903T",
+      "team_name": "Palmy Robotics",
+      "robot_name": "Palmy Destiny",
+      "organization": "Palmerston North Boys High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Palmerston North",
+        "region": "Manawatu-Wanganui",
+        "postcode": "4410",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -40.3,
+          "lon": 175.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 166310,
+      "number": "2903V",
+      "team_name": "Palmy Robotics",
+      "robot_name": "The friends we made along the way",
+      "organization": "Palmerston North Boys High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Palmerston North",
+        "region": "Manawatu-Wanganui",
+        "postcode": "4410",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -40.3,
+          "lon": 175.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 110936,
+      "number": "2933X",
+      "team_name": "BIO Hazard",
+      "robot_name": "BIO Hazard",
+      "organization": "Freyberg High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Palmerston North",
+        "region": "Manawatu-Wanganui",
+        "postcode": "4410",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -40.3,
+          "lon": 175.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 108183,
+      "number": "2933Y",
+      "team_name": "Vex Freyberg Gamma",
+      "robot_name": "",
+      "organization": "Freyberg High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Palmerston North",
+        "region": "Manawatu-Wanganui",
+        "postcode": "4410",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -40.3,
+          "lon": 175.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 155281,
+      "number": "2933Z",
+      "team_name": "Jerry Jerry",
+      "robot_name": "Jerry Jerry",
+      "organization": "Freyberg High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Palmerston North",
+        "region": "Manawatu-Wanganui",
+        "postcode": "4410",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -40.3,
+          "lon": 175.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 81536,
+      "number": "2985A",
+      "team_name": "Octavia",
+      "robot_name": "Octavia",
+      "organization": "Palmerston North Girls' High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Palmerston North",
+        "region": "Manawatu-Wanganui",
+        "postcode": "4410",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -40.4,
+          "lon": 175.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 140544,
+      "number": "2985B",
+      "team_name": "PNGHS Minions",
+      "robot_name": "Kevin",
+      "organization": "Palmerston North Girls' High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Palmerston North",
+        "region": "Manawatu-Wanganui",
+        "postcode": "4410",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -40.4,
+          "lon": 175.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 106964,
+      "number": "3204A",
+      "team_name": "SPC Bots Alexander",
+      "robot_name": "SPC Bots Alexander",
+      "organization": "St Peter's College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Palmerston North",
+        "region": "Manawatu-Wanganui",
+        "postcode": "4414",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -40.3,
+          "lon": 175.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 155234,
+      "number": "3204S",
+      "team_name": "SPC Bots St Louis",
+      "robot_name": "SPC Bots St Louis",
+      "organization": "St Peter's College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Palmerston North",
+        "region": "Manawatu-Wanganui",
+        "postcode": "4414",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -40.3,
+          "lon": 175.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 152930,
+      "number": "3204X",
+      "team_name": "SPC Bots Xystus",
+      "robot_name": "SPC Bots Xystus",
+      "organization": "St Peter's College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Palmerston North",
+        "region": "Manawatu-Wanganui",
+        "postcode": "4414",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -40.3,
+          "lon": 175.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 36304,
+      "number": "5606A",
+      "team_name": "FAHS Robotics - Huia",
+      "robot_name": "FAHS Robotics - Huia",
+      "organization": "Feilding High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Feilding",
+        "region": "Manawatu-Wanganui",
+        "postcode": "4702",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -40.2,
+          "lon": 175.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 36307,
+      "number": "5606B",
+      "team_name": "FAHS Robotics - Kākā",
+      "robot_name": "FAHS Robotics - Kākā",
+      "organization": "Feilding High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Feilding",
+        "region": "Manawatu-Wanganui",
+        "postcode": "4702",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -40.2,
+          "lon": 175.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 50026,
+      "number": "5606C",
+      "team_name": "FAHS Robotics - Tūī",
+      "robot_name": "FAHS Robotics - Tūī",
+      "organization": "Feilding High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Feilding",
+        "region": "Manawatu-Wanganui",
+        "postcode": "4702",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -40.2,
+          "lon": 175.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199855,
+      "number": "12020Z",
+      "team_name": "Yellow Core",
+      "robot_name": "",
+      "organization": "Wellington College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Wellington",
+        "region": "Wellington",
+        "postcode": "6011",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -41.3,
+          "lon": 174.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 176633,
+      "number": "35866A",
+      "team_name": "New Plymouth Nano Ninjas",
+      "robot_name": "",
+      "organization": "New Plymouth Boys' High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "New Plymouth",
+        "region": "Taranaki",
+        "postcode": "4310",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -39.1,
+          "lon": 174.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 185264,
+      "number": "35866B",
+      "team_name": "Taranaki Tech Titans",
+      "robot_name": "",
+      "organization": "New Plymouth Boys' High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "New Plymouth",
+        "region": "Taranaki",
+        "postcode": "4310",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -39.1,
+          "lon": 174.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 184683,
+      "number": "35866N",
+      "team_name": "The whizz kids",
+      "robot_name": "",
+      "organization": "New Plymouth Boys' High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "New Plymouth",
+        "region": "Taranaki",
+        "postcode": "4310",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -39.1,
+          "lon": 174.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 192717,
+      "number": "35866S",
+      "team_name": "AI Warriors",
+      "robot_name": "",
+      "organization": "New Plymouth Boys' High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "New Plymouth",
+        "region": "Taranaki",
+        "postcode": "4310",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -39.1,
+          "lon": 174.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 155070,
+      "number": "44120A",
+      "team_name": "Awatapu A",
+      "robot_name": "",
+      "organization": "Awatapu College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Palmerston North",
+        "region": "Manawatu-Wanganui",
+        "postcode": "4412",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -40.4,
+          "lon": 175.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 156013,
+      "number": "44120B",
+      "team_name": "Awatapu B",
+      "robot_name": "",
+      "organization": "Awatapu College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Palmerston North",
+        "region": "Manawatu-Wanganui",
+        "postcode": "4412",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -40.4,
+          "lon": 175.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
+}

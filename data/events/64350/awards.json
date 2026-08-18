@@ -1,0 +1,243 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64350/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64350/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64350/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 15,
+    "total": 15,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 281213,
+      "event": {
+        "id": 64350,
+        "name": "St. Andrews Bangkok: The Signature Event Experience: Middle School - VEX V5 Robotics Competition™",
+        "code": "RE-V5RC-26-4350"
+      },
+      "order": 61,
+      "title": "Excellence Award - Middle School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281214,
+      "event": {
+        "id": 64350,
+        "name": "St. Andrews Bangkok: The Signature Event Experience: Middle School - VEX V5 Robotics Competition™",
+        "code": "RE-V5RC-26-4350"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281215,
+      "event": {
+        "id": 64350,
+        "name": "St. Andrews Bangkok: The Signature Event Experience: Middle School - VEX V5 Robotics Competition™",
+        "code": "RE-V5RC-26-4350"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281216,
+      "event": {
+        "id": 64350,
+        "name": "St. Andrews Bangkok: The Signature Event Experience: Middle School - VEX V5 Robotics Competition™",
+        "code": "RE-V5RC-26-4350"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281217,
+      "event": {
+        "id": 64350,
+        "name": "St. Andrews Bangkok: The Signature Event Experience: Middle School - VEX V5 Robotics Competition™",
+        "code": "RE-V5RC-26-4350"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281218,
+      "event": {
+        "id": 64350,
+        "name": "St. Andrews Bangkok: The Signature Event Experience: Middle School - VEX V5 Robotics Competition™",
+        "code": "RE-V5RC-26-4350"
+      },
+      "order": 71,
+      "title": "Robot Skills 2nd Place (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281219,
+      "event": {
+        "id": 64350,
+        "name": "St. Andrews Bangkok: The Signature Event Experience: Middle School - VEX V5 Robotics Competition™",
+        "code": "RE-V5RC-26-4350"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281220,
+      "event": {
+        "id": 64350,
+        "name": "St. Andrews Bangkok: The Signature Event Experience: Middle School - VEX V5 Robotics Competition™",
+        "code": "RE-V5RC-26-4350"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281221,
+      "event": {
+        "id": 64350,
+        "name": "St. Andrews Bangkok: The Signature Event Experience: Middle School - VEX V5 Robotics Competition™",
+        "code": "RE-V5RC-26-4350"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281222,
+      "event": {
+        "id": 64350,
+        "name": "St. Andrews Bangkok: The Signature Event Experience: Middle School - VEX V5 Robotics Competition™",
+        "code": "RE-V5RC-26-4350"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281223,
+      "event": {
+        "id": 64350,
+        "name": "St. Andrews Bangkok: The Signature Event Experience: Middle School - VEX V5 Robotics Competition™",
+        "code": "RE-V5RC-26-4350"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281224,
+      "event": {
+        "id": 64350,
+        "name": "St. Andrews Bangkok: The Signature Event Experience: Middle School - VEX V5 Robotics Competition™",
+        "code": "RE-V5RC-26-4350"
+      },
+      "order": 78,
+      "title": "Create Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281225,
+      "event": {
+        "id": 64350,
+        "name": "St. Andrews Bangkok: The Signature Event Experience: Middle School - VEX V5 Robotics Competition™",
+        "code": "RE-V5RC-26-4350"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281226,
+      "event": {
+        "id": 64350,
+        "name": "St. Andrews Bangkok: The Signature Event Experience: Middle School - VEX V5 Robotics Competition™",
+        "code": "RE-V5RC-26-4350"
+      },
+      "order": 80,
+      "title": "Energy Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281227,
+      "event": {
+        "id": 64350,
+        "name": "St. Andrews Bangkok: The Signature Event Experience: Middle School - VEX V5 Robotics Competition™",
+        "code": "RE-V5RC-26-4350"
+      },
+      "order": 81,
+      "title": "Inspire Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

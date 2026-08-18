@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64409,
+    "sku": "RE-V5RC-26-4409",
+    "name": "SA | VEX V5 Robotics Competition™ (Blended) Flinders NVI Open: Override™ Tournament @  Flinders University, Tonsley Innovation Precinct",
+    "start": "2026-07-23T00:00:00-04:00",
+    "end": "2026-07-23T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Flinders",
+      "address_1": "",
+      "address_2": null,
+      "city": "Tonsley Innovation Precinct",
+      "region": "South Australia",
+      "postcode": "5052",
+      "country": "Australia",
+      "coordinates": {
+        "lat": -35.009347,
+        "lon": 138.571183
+      }
+    },
+    "locations": {
+      "2026-07-23": {
+        "venue": "Flinders",
+        "address_1": "",
+        "address_2": null,
+        "city": "Tonsley Innovation Precinct",
+        "region": "South Australia",
+        "postcode": "5052",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -35.009347,
+          "lon": 138.571183
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Division 1",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": true,
+    "event_type": null
+  }
+}

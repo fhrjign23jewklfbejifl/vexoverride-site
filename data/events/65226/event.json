@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65226,
+    "sku": "RE-V5RC-26-5226",
+    "name": "iSTEMn VEX V5 Robotics Competition - Beijing(2): 爱因斯坦联盟2026-2027 VEX机器人北京城市赛（二）",
+    "start": "2026-08-13T00:00:00-04:00",
+    "end": "2026-08-14T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "北京教育学院附属丰台实验学校本部",
+      "address_1": "北京市丰台区大成南里四区24号往东200米",
+      "address_2": null,
+      "city": "Beijing",
+      "region": "Beijing",
+      "postcode": "100000",
+      "country": "China",
+      "coordinates": {
+        "lat": 39.863425,
+        "lon": 116.388899
+      }
+    },
+    "locations": {
+      "2026-08-13": {
+        "venue": "北京教育学院附属丰台实验学校本部",
+        "address_1": "北京市丰台区大成南里四区24号往东200米",
+        "address_2": null,
+        "city": "Beijing",
+        "region": "Beijing",
+        "postcode": "100000",
+        "country": "China",
+        "coordinates": {
+          "lat": 39.863425,
+          "lon": 116.388899
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

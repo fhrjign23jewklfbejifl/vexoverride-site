@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64342,
+    "sku": "RE-V5RC-26-4342",
+    "name": "VIC | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ St Andrew's Christian College",
+    "start": "2026-08-27T00:00:00-04:00",
+    "end": "2026-08-27T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "St Andrews Christian College",
+      "address_1": "130 Tyner Road",
+      "address_2": null,
+      "city": "Wantirna South",
+      "region": "Victoria",
+      "postcode": "3152",
+      "country": "Australia",
+      "coordinates": {
+        "lat": -37.874309,
+        "lon": 145.244739
+      }
+    },
+    "locations": {
+      "2026-08-27": {
+        "venue": "St Andrews Christian College",
+        "address_1": "130 Tyner Road",
+        "address_2": null,
+        "city": "Wantirna South",
+        "region": "Victoria",
+        "postcode": "3152",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.874309,
+          "lon": 145.244739
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

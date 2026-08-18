@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64905,
+    "sku": "RE-V5RC-26-4905",
+    "name": "Griffiths Gauntlet – December Invitational MS Only: VEX V5 Robotics Competition™ Override™",
+    "start": "2026-12-05T00:00:00-05:00",
+    "end": "2026-12-05T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Griffiths Middle School",
+      "address_1": "9633 Tweedy Lane",
+      "address_2": null,
+      "city": "Downey",
+      "region": "California",
+      "postcode": "90240",
+      "country": "United States",
+      "coordinates": {
+        "lat": 33.959135,
+        "lon": -118.130921
+      }
+    },
+    "locations": {
+      "2026-12-05": {
+        "venue": "Griffiths Middle School",
+        "address_1": "9633 Tweedy Lane",
+        "address_2": null,
+        "city": "Downey",
+        "region": "California",
+        "postcode": "90240",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.959135,
+          "lon": -118.130921
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

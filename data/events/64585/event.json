@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64585,
+    "sku": "RE-V5RC-26-4585",
+    "name": "LMSD VEX V5: Override State Qualifier (HS): VEX V5 Robotics Competition Hosted by Black Rock",
+    "start": "2026-11-14T00:00:00-05:00",
+    "end": "2026-11-14T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Black Rock Middle School",
+      "address_1": "1860 Montgomery Avenue",
+      "address_2": null,
+      "city": "Villanova",
+      "region": "Pennsylvania",
+      "postcode": "19085",
+      "country": "United States",
+      "coordinates": {
+        "lat": 40.048428,
+        "lon": -75.339719
+      }
+    },
+    "locations": {
+      "2026-11-14": {
+        "venue": "Black Rock Middle School",
+        "address_1": "1860 Montgomery Avenue",
+        "address_2": null,
+        "city": "Villanova",
+        "region": "Pennsylvania",
+        "postcode": "19085",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40.048428,
+          "lon": -75.339719
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

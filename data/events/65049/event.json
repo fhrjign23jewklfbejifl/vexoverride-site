@@ -1,0 +1,97 @@
+{
+  "data": {
+    "id": 65049,
+    "sku": "RE-V5RC-26-5049",
+    "name": "Northwest PA League - Fairview HS: VEX V5 Robotics Override",
+    "start": "2026-12-16T00:00:00-05:00",
+    "end": "2027-02-15T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Fairview High School",
+      "address_1": "7460 Mc Cray Road",
+      "address_2": null,
+      "city": "Fairview",
+      "region": "Pennsylvania",
+      "postcode": "16415",
+      "country": "United States",
+      "coordinates": {
+        "lat": 42.021654,
+        "lon": -80.246404
+      }
+    },
+    "locations": {
+      "2026-12-16": {
+        "venue": "Fairview High School",
+        "address_1": "7460 Mc Cray Rd",
+        "address_2": null,
+        "city": "Fairview",
+        "region": "Pennsylvania",
+        "postcode": "16415",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.021654,
+          "lon": -80.246404
+        }
+      },
+      "2027-01-05": {
+        "venue": "Fairview High School",
+        "address_1": "7460 Mc Cray Road",
+        "address_2": null,
+        "city": "Fairview",
+        "region": "Pennsylvania",
+        "postcode": "16415",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.021654,
+          "lon": -80.246404
+        }
+      },
+      "2027-01-21": {
+        "venue": "Fairview High School",
+        "address_1": "7460 Mc Cray Rd",
+        "address_2": null,
+        "city": "Fairview",
+        "region": "Pennsylvania",
+        "postcode": "16415",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.021654,
+          "lon": -80.246404
+        }
+      },
+      "2027-02-15": {
+        "venue": "Fairview High School",
+        "address_1": "7460 Mc Cray Rd",
+        "address_2": null,
+        "city": "Fairview",
+        "region": "Pennsylvania",
+        "postcode": "16415",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.021654,
+          "lon": -80.246404
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

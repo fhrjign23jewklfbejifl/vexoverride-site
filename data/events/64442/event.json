@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64442,
+    "sku": "RE-V5RC-26-4442",
+    "name": "VM Edu VEX V5 Robotics Competition™ Override™ Tournament: VEX V5 (MS/HS)",
+    "start": "2026-11-18T00:00:00-05:00",
+    "end": "2026-11-18T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Canberra Secondary School",
+      "address_1": "51 Sembawang Drive",
+      "address_2": null,
+      "city": "Singapore",
+      "region": null,
+      "postcode": "757699",
+      "country": "Singapore",
+      "coordinates": {
+        "lat": 1.453743,
+        "lon": 103.814472
+      }
+    },
+    "locations": {
+      "2026-11-18": {
+        "venue": "Canberra Secondary School",
+        "address_1": "51 Sembawang Drive",
+        "address_2": null,
+        "city": "Singapore",
+        "region": null,
+        "postcode": "757699",
+        "country": "Singapore",
+        "coordinates": {
+          "lat": 1.453743,
+          "lon": 103.814472
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

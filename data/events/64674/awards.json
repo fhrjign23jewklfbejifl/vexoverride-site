@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64674/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64674/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64674/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 12,
+    "total": 12,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 283732,
+      "event": {
+        "id": 64674,
+        "name": "Indonesia VEX V5 High School National Championship 26-27: Hosted by Sinarmas World Academy & ProVisi Mandiri Pratama",
+        "code": "RE-V5RC-26-4674"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283733,
+      "event": {
+        "id": 64674,
+        "name": "Indonesia VEX V5 High School National Championship 26-27: Hosted by Sinarmas World Academy & ProVisi Mandiri Pratama",
+        "code": "RE-V5RC-26-4674"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283734,
+      "event": {
+        "id": 64674,
+        "name": "Indonesia VEX V5 High School National Championship 26-27: Hosted by Sinarmas World Academy & ProVisi Mandiri Pratama",
+        "code": "RE-V5RC-26-4674"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283735,
+      "event": {
+        "id": 64674,
+        "name": "Indonesia VEX V5 High School National Championship 26-27: Hosted by Sinarmas World Academy & ProVisi Mandiri Pratama",
+        "code": "RE-V5RC-26-4674"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283736,
+      "event": {
+        "id": 64674,
+        "name": "Indonesia VEX V5 High School National Championship 26-27: Hosted by Sinarmas World Academy & ProVisi Mandiri Pratama",
+        "code": "RE-V5RC-26-4674"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283737,
+      "event": {
+        "id": 64674,
+        "name": "Indonesia VEX V5 High School National Championship 26-27: Hosted by Sinarmas World Academy & ProVisi Mandiri Pratama",
+        "code": "RE-V5RC-26-4674"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283738,
+      "event": {
+        "id": 64674,
+        "name": "Indonesia VEX V5 High School National Championship 26-27: Hosted by Sinarmas World Academy & ProVisi Mandiri Pratama",
+        "code": "RE-V5RC-26-4674"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283739,
+      "event": {
+        "id": 64674,
+        "name": "Indonesia VEX V5 High School National Championship 26-27: Hosted by Sinarmas World Academy & ProVisi Mandiri Pratama",
+        "code": "RE-V5RC-26-4674"
+      },
+      "order": 78,
+      "title": "Create Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283740,
+      "event": {
+        "id": 64674,
+        "name": "Indonesia VEX V5 High School National Championship 26-27: Hosted by Sinarmas World Academy & ProVisi Mandiri Pratama",
+        "code": "RE-V5RC-26-4674"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283741,
+      "event": {
+        "id": 64674,
+        "name": "Indonesia VEX V5 High School National Championship 26-27: Hosted by Sinarmas World Academy & ProVisi Mandiri Pratama",
+        "code": "RE-V5RC-26-4674"
+      },
+      "order": 80,
+      "title": "Energy Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283742,
+      "event": {
+        "id": 64674,
+        "name": "Indonesia VEX V5 High School National Championship 26-27: Hosted by Sinarmas World Academy & ProVisi Mandiri Pratama",
+        "code": "RE-V5RC-26-4674"
+      },
+      "order": 81,
+      "title": "Inspire Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283743,
+      "event": {
+        "id": 64674,
+        "name": "Indonesia VEX V5 High School National Championship 26-27: Hosted by Sinarmas World Academy & ProVisi Mandiri Pratama",
+        "code": "RE-V5RC-26-4674"
+      },
+      "order": 82,
+      "title": "Volunteer of the Year Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

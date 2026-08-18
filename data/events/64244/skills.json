@@ -1,0 +1,4250 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64244/skills?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64244/skills?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64244/skills",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 184,
+    "total": 184,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 79138446,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 189332,
+        "name": "96Z",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 1,
+      "score": 110,
+      "attempts": 3
+    },
+    {
+      "id": 79138447,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 189332,
+        "name": "96Z",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 1,
+      "score": 98,
+      "attempts": 1
+    },
+    {
+      "id": 79138448,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 188744,
+        "name": "98601Y",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 2,
+      "score": 118,
+      "attempts": 3
+    },
+    {
+      "id": 79138449,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 188744,
+        "name": "98601Y",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 2,
+      "score": 78,
+      "attempts": 3
+    },
+    {
+      "id": 79138450,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 185262,
+        "name": "20850Z",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 3,
+      "score": 108,
+      "attempts": 3
+    },
+    {
+      "id": 79138451,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 185262,
+        "name": "20850Z",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 3,
+      "score": 60,
+      "attempts": 2
+    },
+    {
+      "id": 79138452,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 169767,
+        "name": "1698V",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 4,
+      "score": 108,
+      "attempts": 3
+    },
+    {
+      "id": 79138453,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 169767,
+        "name": "1698V",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 4,
+      "score": 58,
+      "attempts": 3
+    },
+    {
+      "id": 79138454,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 185151,
+        "name": "2982A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 5,
+      "score": 80,
+      "attempts": 2
+    },
+    {
+      "id": 79138455,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 185151,
+        "name": "2982A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 5,
+      "score": 68,
+      "attempts": 1
+    },
+    {
+      "id": 79138456,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 171410,
+        "name": "29712C",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 6,
+      "score": 98,
+      "attempts": 3
+    },
+    {
+      "id": 79138457,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 171410,
+        "name": "29712C",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 6,
+      "score": 38,
+      "attempts": 3
+    },
+    {
+      "id": 79138458,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 186180,
+        "name": "471B",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 7,
+      "score": 108,
+      "attempts": 1
+    },
+    {
+      "id": 79138459,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 186180,
+        "name": "471B",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 7,
+      "score": 28,
+      "attempts": 3
+    },
+    {
+      "id": 79138460,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 107445,
+        "name": "16610A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 8,
+      "score": 103,
+      "attempts": 2
+    },
+    {
+      "id": 79138461,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 107445,
+        "name": "16610A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 8,
+      "score": 30,
+      "attempts": 3
+    },
+    {
+      "id": 79138462,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 62575,
+        "name": "3946E",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 9,
+      "score": 68,
+      "attempts": 3
+    },
+    {
+      "id": 79138463,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 62575,
+        "name": "3946E",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 9,
+      "score": 48,
+      "attempts": 3
+    },
+    {
+      "id": 79138464,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 93662,
+        "name": "2131N",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 10,
+      "score": 68,
+      "attempts": 3
+    },
+    {
+      "id": 79138465,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 93662,
+        "name": "2131N",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 10,
+      "score": 48,
+      "attempts": 3
+    },
+    {
+      "id": 79138466,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 143646,
+        "name": "10K",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 11,
+      "score": 73,
+      "attempts": 3
+    },
+    {
+      "id": 79138467,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 143646,
+        "name": "10K",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 11,
+      "score": 43,
+      "attempts": 3
+    },
+    {
+      "id": 79138468,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 5226,
+        "name": "10B",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 12,
+      "score": 103,
+      "attempts": 3
+    },
+    {
+      "id": 79138469,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 5226,
+        "name": "10B",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 12,
+      "score": 8,
+      "attempts": 3
+    },
+    {
+      "id": 79138470,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 131101,
+        "name": "17924A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 13,
+      "score": 58,
+      "attempts": 3
+    },
+    {
+      "id": 79138471,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 131101,
+        "name": "17924A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 13,
+      "score": 48,
+      "attempts": 1
+    },
+    {
+      "id": 79138472,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 170026,
+        "name": "66799T",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 14,
+      "score": 53,
+      "attempts": 3
+    },
+    {
+      "id": 79138473,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 170026,
+        "name": "66799T",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 14,
+      "score": 48,
+      "attempts": 3
+    },
+    {
+      "id": 79138474,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 186740,
+        "name": "4265X",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 15,
+      "score": 78,
+      "attempts": 2
+    },
+    {
+      "id": 79138475,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 186740,
+        "name": "4265X",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 15,
+      "score": 20,
+      "attempts": 3
+    },
+    {
+      "id": 79138476,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 197326,
+        "name": "1698Z",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 16,
+      "score": 58,
+      "attempts": 3
+    },
+    {
+      "id": 79138477,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 197326,
+        "name": "1698Z",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 16,
+      "score": 38,
+      "attempts": 3
+    },
+    {
+      "id": 79138478,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 53443,
+        "name": "8110Z",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 17,
+      "score": 78,
+      "attempts": 2
+    },
+    {
+      "id": 79138479,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 53443,
+        "name": "8110Z",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 17,
+      "score": 18,
+      "attempts": 3
+    },
+    {
+      "id": 79138480,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 196961,
+        "name": "227R",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 18,
+      "score": 88,
+      "attempts": 1
+    },
+    {
+      "id": 79138481,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 196961,
+        "name": "227R",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 18,
+      "score": 8,
+      "attempts": 3
+    },
+    {
+      "id": 79138482,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 191485,
+        "name": "22050A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 19,
+      "score": 78,
+      "attempts": 3
+    },
+    {
+      "id": 79138483,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 191485,
+        "name": "22050A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 19,
+      "score": 13,
+      "attempts": 3
+    },
+    {
+      "id": 79138484,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 170152,
+        "name": "11811A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 20,
+      "score": 38,
+      "attempts": 3
+    },
+    {
+      "id": 79138485,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 170152,
+        "name": "11811A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 20,
+      "score": 48,
+      "attempts": 3
+    },
+    {
+      "id": 79138486,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 64630,
+        "name": "8110C",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 21,
+      "score": 58,
+      "attempts": 3
+    },
+    {
+      "id": 79138487,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 64630,
+        "name": "8110C",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 21,
+      "score": 28,
+      "attempts": 3
+    },
+    {
+      "id": 79138488,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 186794,
+        "name": "9185K",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 22,
+      "score": 68,
+      "attempts": 3
+    },
+    {
+      "id": 79138489,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 186794,
+        "name": "9185K",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 22,
+      "score": 18,
+      "attempts": 3
+    },
+    {
+      "id": 79138490,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 185000,
+        "name": "8110S",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 23,
+      "score": 68,
+      "attempts": 2
+    },
+    {
+      "id": 79138491,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 185000,
+        "name": "8110S",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 23,
+      "score": 18,
+      "attempts": 3
+    },
+    {
+      "id": 79138492,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 153523,
+        "name": "2899A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 24,
+      "score": 68,
+      "attempts": 3
+    },
+    {
+      "id": 79138493,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 153523,
+        "name": "2899A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 24,
+      "score": 18,
+      "attempts": 3
+    },
+    {
+      "id": 79138494,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 196990,
+        "name": "8694V",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 25,
+      "score": 73,
+      "attempts": 2
+    },
+    {
+      "id": 79138495,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 196990,
+        "name": "8694V",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 25,
+      "score": 8,
+      "attempts": 3
+    },
+    {
+      "id": 79138496,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 184612,
+        "name": "2429A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 26,
+      "score": 58,
+      "attempts": 3
+    },
+    {
+      "id": 79138497,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 184612,
+        "name": "2429A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 26,
+      "score": 20,
+      "attempts": 3
+    },
+    {
+      "id": 79138498,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 189484,
+        "name": "2982B",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 27,
+      "score": 78,
+      "attempts": 2
+    },
+    {
+      "id": 79138499,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 189484,
+        "name": "2982B",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 27,
+      "score": 0,
+      "attempts": 1
+    },
+    {
+      "id": 79138500,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 26,
+        "name": "1069A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 28,
+      "score": 58,
+      "attempts": 2
+    },
+    {
+      "id": 79138501,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 26,
+        "name": "1069A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 28,
+      "score": 18,
+      "attempts": 2
+    },
+    {
+      "id": 79138502,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 86268,
+        "name": "4610W",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 29,
+      "score": 58,
+      "attempts": 3
+    },
+    {
+      "id": 79138503,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 86268,
+        "name": "4610W",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 29,
+      "score": 18,
+      "attempts": 2
+    },
+    {
+      "id": 79138504,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 107446,
+        "name": "16610B",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 30,
+      "score": 68,
+      "attempts": 2
+    },
+    {
+      "id": 79138505,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 107446,
+        "name": "16610B",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 30,
+      "score": 8,
+      "attempts": 3
+    },
+    {
+      "id": 79138506,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 196953,
+        "name": "98601S",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 31,
+      "score": 53,
+      "attempts": 2
+    },
+    {
+      "id": 79138507,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 196953,
+        "name": "98601S",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 31,
+      "score": 20,
+      "attempts": 3
+    },
+    {
+      "id": 79138508,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 187026,
+        "name": "72202Z",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 32,
+      "score": 63,
+      "attempts": 2
+    },
+    {
+      "id": 79138509,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 187026,
+        "name": "72202Z",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 32,
+      "score": 8,
+      "attempts": 1
+    },
+    {
+      "id": 79138510,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 122820,
+        "name": "663A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 33,
+      "score": 50,
+      "attempts": 3
+    },
+    {
+      "id": 79138511,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 122820,
+        "name": "663A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 33,
+      "score": 20,
+      "attempts": 2
+    },
+    {
+      "id": 79138512,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 196954,
+        "name": "71111S",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 34,
+      "score": 50,
+      "attempts": 3
+    },
+    {
+      "id": 79138513,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 196954,
+        "name": "71111S",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 34,
+      "score": 18,
+      "attempts": 3
+    },
+    {
+      "id": 79138514,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 141677,
+        "name": "7225T",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 35,
+      "score": 68,
+      "attempts": 3
+    },
+    {
+      "id": 79138515,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 141677,
+        "name": "7225T",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 35,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79138516,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 198072,
+        "name": "1584V",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 36,
+      "score": 28,
+      "attempts": 3
+    },
+    {
+      "id": 79138517,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 198072,
+        "name": "1584V",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 36,
+      "score": 38,
+      "attempts": 3
+    },
+    {
+      "id": 79138518,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 184675,
+        "name": "2982X",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 37,
+      "score": 48,
+      "attempts": 2
+    },
+    {
+      "id": 79138519,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 184675,
+        "name": "2982X",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 37,
+      "score": 18,
+      "attempts": 1
+    },
+    {
+      "id": 79138520,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 153129,
+        "name": "10702X",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 38,
+      "score": 48,
+      "attempts": 2
+    },
+    {
+      "id": 79138521,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 153129,
+        "name": "10702X",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 38,
+      "score": 18,
+      "attempts": 1
+    },
+    {
+      "id": 79138522,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 141745,
+        "name": "663J",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 39,
+      "score": 58,
+      "attempts": 3
+    },
+    {
+      "id": 79138523,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 141745,
+        "name": "663J",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 39,
+      "score": 8,
+      "attempts": 2
+    },
+    {
+      "id": 79138524,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 185160,
+        "name": "2145V",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 40,
+      "score": 58,
+      "attempts": 2
+    },
+    {
+      "id": 79138525,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 185160,
+        "name": "2145V",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 40,
+      "score": 8,
+      "attempts": 2
+    },
+    {
+      "id": 79138526,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 184998,
+        "name": "2577X",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 41,
+      "score": 58,
+      "attempts": 1
+    },
+    {
+      "id": 79138527,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 184998,
+        "name": "2577X",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 41,
+      "score": 8,
+      "attempts": 2
+    },
+    {
+      "id": 79138528,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 197440,
+        "name": "99319S",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 42,
+      "score": 58,
+      "attempts": 3
+    },
+    {
+      "id": 79138529,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 197440,
+        "name": "99319S",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 42,
+      "score": 8,
+      "attempts": 1
+    },
+    {
+      "id": 79138530,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 145986,
+        "name": "13056C",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 43,
+      "score": 48,
+      "attempts": 3
+    },
+    {
+      "id": 79138531,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 145986,
+        "name": "13056C",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 43,
+      "score": 13,
+      "attempts": 2
+    },
+    {
+      "id": 79138532,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 86313,
+        "name": "11101B",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 44,
+      "score": 48,
+      "attempts": 2
+    },
+    {
+      "id": 79138533,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 86313,
+        "name": "11101B",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 44,
+      "score": 10,
+      "attempts": 3
+    },
+    {
+      "id": 79138534,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 139503,
+        "name": "4691R",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 45,
+      "score": 50,
+      "attempts": 3
+    },
+    {
+      "id": 79138535,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 139503,
+        "name": "4691R",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 45,
+      "score": 8,
+      "attempts": 1
+    },
+    {
+      "id": 79138536,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 83333,
+        "name": "72527A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 46,
+      "score": 58,
+      "attempts": 2
+    },
+    {
+      "id": 79138537,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 83333,
+        "name": "72527A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 46,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79138538,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 8554,
+        "name": "169C",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 47,
+      "score": 8,
+      "attempts": 3
+    },
+    {
+      "id": 79138539,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 8554,
+        "name": "169C",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 47,
+      "score": 48,
+      "attempts": 3
+    },
+    {
+      "id": 79138540,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 169891,
+        "name": "2145X",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 48,
+      "score": 48,
+      "attempts": 3
+    },
+    {
+      "id": 79138541,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 169891,
+        "name": "2145X",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 48,
+      "score": 8,
+      "attempts": 1
+    },
+    {
+      "id": 79138542,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 109693,
+        "name": "2145Z",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 49,
+      "score": 48,
+      "attempts": 2
+    },
+    {
+      "id": 79138543,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 109693,
+        "name": "2145Z",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 49,
+      "score": 8,
+      "attempts": 1
+    },
+    {
+      "id": 79138544,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 153722,
+        "name": "2142S",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 50,
+      "score": 48,
+      "attempts": 1
+    },
+    {
+      "id": 79138545,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 153722,
+        "name": "2142S",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 50,
+      "score": 5,
+      "attempts": 3
+    },
+    {
+      "id": 79138546,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 145984,
+        "name": "13056A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 51,
+      "score": 43,
+      "attempts": 3
+    },
+    {
+      "id": 79138547,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 145984,
+        "name": "13056A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 51,
+      "score": 8,
+      "attempts": 1
+    },
+    {
+      "id": 79138548,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 143954,
+        "name": "1412J",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 52,
+      "score": 20,
+      "attempts": 1
+    },
+    {
+      "id": 79138549,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 143954,
+        "name": "1412J",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 52,
+      "score": 28,
+      "attempts": 3
+    },
+    {
+      "id": 79138550,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 144268,
+        "name": "355Z",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 53,
+      "score": 30,
+      "attempts": 3
+    },
+    {
+      "id": 79138551,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 144268,
+        "name": "355Z",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 53,
+      "score": 18,
+      "attempts": 1
+    },
+    {
+      "id": 79138552,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 184707,
+        "name": "98377R",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 54,
+      "score": 48,
+      "attempts": 3
+    },
+    {
+      "id": 79138553,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 184707,
+        "name": "98377R",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 54,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79138554,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 56849,
+        "name": "9364E",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 55,
+      "score": 48,
+      "attempts": 1
+    },
+    {
+      "id": 79138555,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 56849,
+        "name": "9364E",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 55,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79138556,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 196608,
+        "name": "81215W",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 56,
+      "score": 38,
+      "attempts": 3
+    },
+    {
+      "id": 79138557,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 196608,
+        "name": "81215W",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 56,
+      "score": 8,
+      "attempts": 2
+    },
+    {
+      "id": 79138558,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 171308,
+        "name": "66996X",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 57,
+      "score": 38,
+      "attempts": 2
+    },
+    {
+      "id": 79138559,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 171308,
+        "name": "66996X",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 57,
+      "score": 8,
+      "attempts": 3
+    },
+    {
+      "id": 79138560,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 84366,
+        "name": "7225Z",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 58,
+      "score": 43,
+      "attempts": 2
+    },
+    {
+      "id": 79138561,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 84366,
+        "name": "7225Z",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 58,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79138562,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 140100,
+        "name": "2055A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 59,
+      "score": 23,
+      "attempts": 3
+    },
+    {
+      "id": 79138563,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 140100,
+        "name": "2055A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 59,
+      "score": 18,
+      "attempts": 2
+    },
+    {
+      "id": 79138564,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 189629,
+        "name": "99209X",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 60,
+      "score": 28,
+      "attempts": 3
+    },
+    {
+      "id": 79138565,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 189629,
+        "name": "99209X",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 60,
+      "score": 13,
+      "attempts": 1
+    },
+    {
+      "id": 79138566,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 36031,
+        "name": "1064G",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 61,
+      "score": 40,
+      "attempts": 3
+    },
+    {
+      "id": 79138567,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 36031,
+        "name": "1064G",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 61,
+      "score": 0,
+      "attempts": 3
+    },
+    {
+      "id": 79138568,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 101140,
+        "name": "10102A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 62,
+      "score": 40,
+      "attempts": 3
+    },
+    {
+      "id": 79138569,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 101140,
+        "name": "10102A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 62,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79138570,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 155337,
+        "name": "56549A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 63,
+      "score": 20,
+      "attempts": 3
+    },
+    {
+      "id": 79138571,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 155337,
+        "name": "56549A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 63,
+      "score": 18,
+      "attempts": 3
+    },
+    {
+      "id": 79138572,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 197442,
+        "name": "66994V",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 64,
+      "score": 28,
+      "attempts": 1
+    },
+    {
+      "id": 79138573,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 197442,
+        "name": "66994V",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 64,
+      "score": 10,
+      "attempts": 1
+    },
+    {
+      "id": 79138574,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 187270,
+        "name": "7447X",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 65,
+      "score": 33,
+      "attempts": 3
+    },
+    {
+      "id": 79138575,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 187270,
+        "name": "7447X",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 65,
+      "score": 5,
+      "attempts": 3
+    },
+    {
+      "id": 79138576,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 197433,
+        "name": "31860A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 66,
+      "score": 38,
+      "attempts": 3
+    },
+    {
+      "id": 79138577,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 197433,
+        "name": "31860A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 66,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79138578,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 124145,
+        "name": "7225G",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 67,
+      "score": 38,
+      "attempts": 2
+    },
+    {
+      "id": 79138579,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 124145,
+        "name": "7225G",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 67,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79138580,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 128468,
+        "name": "80001C",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 68,
+      "score": 38,
+      "attempts": 1
+    },
+    {
+      "id": 79138581,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 128468,
+        "name": "80001C",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 68,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79138582,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 179010,
+        "name": "2551A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 69,
+      "score": 28,
+      "attempts": 3
+    },
+    {
+      "id": 79138583,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 179010,
+        "name": "2551A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 69,
+      "score": 8,
+      "attempts": 3
+    },
+    {
+      "id": 79138584,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 143647,
+        "name": "10G",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 70,
+      "score": 33,
+      "attempts": 3
+    },
+    {
+      "id": 79138585,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 143647,
+        "name": "10G",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 70,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79138586,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 155341,
+        "name": "56549E",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 71,
+      "score": 28,
+      "attempts": 3
+    },
+    {
+      "id": 79138587,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 155341,
+        "name": "56549E",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 71,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79138588,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 6596,
+        "name": "355B",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 72,
+      "score": 28,
+      "attempts": 3
+    },
+    {
+      "id": 79138589,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 6596,
+        "name": "355B",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 72,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79138590,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 164250,
+        "name": "22579E",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 73,
+      "score": 28,
+      "attempts": 2
+    },
+    {
+      "id": 79138591,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 164250,
+        "name": "22579E",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 73,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79138592,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 169898,
+        "name": "886S",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 74,
+      "score": 28,
+      "attempts": 1
+    },
+    {
+      "id": 79138593,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 169898,
+        "name": "886S",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 74,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79138594,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 197460,
+        "name": "34840Z",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 75,
+      "score": 18,
+      "attempts": 2
+    },
+    {
+      "id": 79138595,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 197460,
+        "name": "34840Z",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 75,
+      "score": 8,
+      "attempts": 2
+    },
+    {
+      "id": 79138596,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 111779,
+        "name": "355T",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 76,
+      "score": 18,
+      "attempts": 3
+    },
+    {
+      "id": 79138597,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 111779,
+        "name": "355T",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 76,
+      "score": 5,
+      "attempts": 1
+    },
+    {
+      "id": 79138598,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 46843,
+        "name": "6079B",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 77,
+      "score": 20,
+      "attempts": 2
+    },
+    {
+      "id": 79138599,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 46843,
+        "name": "6079B",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 77,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79138600,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 147847,
+        "name": "19109A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 78,
+      "score": 20,
+      "attempts": 3
+    },
+    {
+      "id": 79138601,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 147847,
+        "name": "19109A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 78,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79138602,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 185181,
+        "name": "99319W",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 79,
+      "score": 8,
+      "attempts": 3
+    },
+    {
+      "id": 79138603,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 185181,
+        "name": "99319W",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 79,
+      "score": 8,
+      "attempts": 3
+    },
+    {
+      "id": 79138604,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 65901,
+        "name": "99319B",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 80,
+      "score": 10,
+      "attempts": 2
+    },
+    {
+      "id": 79138605,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 65901,
+        "name": "99319B",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 80,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79138606,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 176955,
+        "name": "56160A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 80,
+      "score": 10,
+      "attempts": 2
+    },
+    {
+      "id": 79138607,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 176955,
+        "name": "56160A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 80,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79138608,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 197410,
+        "name": "3300Z",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 82,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79138609,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 197410,
+        "name": "3300Z",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 82,
+      "score": 8,
+      "attempts": 2
+    },
+    {
+      "id": 79138610,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 8548,
+        "name": "169A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 83,
+      "score": 8,
+      "attempts": 3
+    },
+    {
+      "id": 79138611,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 8548,
+        "name": "169A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 83,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79138612,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 97901,
+        "name": "8385C",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 84,
+      "score": 8,
+      "attempts": 3
+    },
+    {
+      "id": 79138613,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 97901,
+        "name": "8385C",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 84,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79138614,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 197476,
+        "name": "90110X",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 85,
+      "score": 8,
+      "attempts": 2
+    },
+    {
+      "id": 79138615,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 197476,
+        "name": "90110X",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 85,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79138616,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 74980,
+        "name": "355V",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 86,
+      "score": 8,
+      "attempts": 2
+    },
+    {
+      "id": 79138617,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 74980,
+        "name": "355V",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 86,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79138618,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 153944,
+        "name": "8110V",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 87,
+      "score": 5,
+      "attempts": 2
+    },
+    {
+      "id": 79138619,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 153944,
+        "name": "8110V",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 87,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79138620,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 184706,
+        "name": "98377T",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 88,
+      "score": 0,
+      "attempts": 1
+    },
+    {
+      "id": 79138621,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 184706,
+        "name": "98377T",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 88,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79138622,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 197186,
+        "name": "8737M",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 88,
+      "score": 0,
+      "attempts": 1
+    },
+    {
+      "id": 79138623,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 197186,
+        "name": "8737M",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 88,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79138624,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 103034,
+        "name": "169R",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 88,
+      "score": 0,
+      "attempts": 1
+    },
+    {
+      "id": 79138625,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 103034,
+        "name": "169R",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 88,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79138626,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 170716,
+        "name": "88S",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 88,
+      "score": 0,
+      "attempts": 1
+    },
+    {
+      "id": 79138627,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 170716,
+        "name": "88S",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 88,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79138644,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 162290,
+        "name": "DEVIL5",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 0,
+      "score": 16,
+      "attempts": null
+    },
+    {
+      "id": 79138645,
+      "event": {
+        "id": 64244,
+        "name": "University of North Dakota Signature at the Mall of America: VEX V5 Robotics Competition, High School Presented by the College of Engineering and Mines",
+        "code": "RE-V5RC-26-4244"
+      },
+      "team": {
+        "id": 162290,
+        "name": "DEVIL5",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 0,
+      "score": 76,
+      "attempts": null
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65348/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65348/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65348/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 2,
+    "total": 2,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 288512,
+      "event": {
+        "id": 65348,
+        "name": "VEX V5 Robotics Competition | Newcastle Regional | (MS/HS): Supported by Newcastle University & The Reece Foundation",
+        "code": "RE-V5RC-26-5348"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [
+        "Event Region Championship",
+        "RE-V5RC-26-5020",
+        "RE-V5RC-26-5022"
+      ],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288513,
+      "event": {
+        "id": 65348,
+        "name": "VEX V5 Robotics Competition | Newcastle Regional | (MS/HS): Supported by Newcastle University & The Reece Foundation",
+        "code": "RE-V5RC-26-5348"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

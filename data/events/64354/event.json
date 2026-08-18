@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64354,
+    "sku": "RE-V5RC-26-4354",
+    "name": "Sagemont Prep School VEX V5 Robotics® : Override™: VEX V5 Robotics Competition™ High School Teams",
+    "start": "2026-11-14T00:00:00-05:00",
+    "end": "2026-11-14T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Sagemont Preparatory School (Upper Campus) - Goldman Athletic Center",
+      "address_1": "2585 Glades Circle",
+      "address_2": null,
+      "city": "Weston",
+      "region": "Florida",
+      "postcode": "33327",
+      "country": "United States",
+      "coordinates": {
+        "lat": 26.138048,
+        "lon": -80.423965
+      }
+    },
+    "locations": {
+      "2026-11-14": {
+        "venue": "Sagemont Preparatory School (Upper Campus) - Goldman Athletic Center",
+        "address_1": "2585 Glades Circle",
+        "address_2": null,
+        "city": "Weston",
+        "region": "Florida",
+        "postcode": "33327",
+        "country": "United States",
+        "coordinates": {
+          "lat": 26.138048,
+          "lon": -80.423965
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

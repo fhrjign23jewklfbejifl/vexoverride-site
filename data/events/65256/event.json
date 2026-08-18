@@ -1,0 +1,97 @@
+{
+  "data": {
+    "id": 65256,
+    "sku": "RE-V5RC-26-5256",
+    "name": "Solano County VEX Robotics® V5 Robotics League Invitational: Override™",
+    "start": "2026-10-23T00:00:00-04:00",
+    "end": "2027-01-16T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Solano Community College",
+      "address_1": "4000 Suisun Valley Road",
+      "address_2": null,
+      "city": "Fairfield",
+      "region": "California",
+      "postcode": "94534",
+      "country": "United States",
+      "coordinates": {
+        "lat": 38.236092,
+        "lon": -122.119246
+      }
+    },
+    "locations": {
+      "2026-10-23": {
+        "venue": "Solano Community College",
+        "address_1": "4000 Suisun Valley Road",
+        "address_2": null,
+        "city": "Fairfield",
+        "region": "California",
+        "postcode": "94534",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.236092,
+          "lon": -122.119246
+        }
+      },
+      "2026-11-13": {
+        "venue": "Solano Community College",
+        "address_1": "4000 Suisun Valley Road",
+        "address_2": null,
+        "city": "Fairfield",
+        "region": "California",
+        "postcode": "94534",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.236092,
+          "lon": -122.119246
+        }
+      },
+      "2026-12-11": {
+        "venue": "Solano Community College",
+        "address_1": "4000 Suisun Valley Road",
+        "address_2": null,
+        "city": "Fairfield",
+        "region": "California",
+        "postcode": "94534",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.236092,
+          "lon": -122.119246
+        }
+      },
+      "2027-01-16": {
+        "venue": "Solano Community College",
+        "address_1": "4000 Suisun Valley Road",
+        "address_2": null,
+        "city": "Fairfield",
+        "region": "California",
+        "postcode": "94534",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.236092,
+          "lon": -122.119246
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

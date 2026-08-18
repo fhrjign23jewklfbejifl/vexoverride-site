@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65056,
+    "sku": "RE-V5RC-26-5056",
+    "name": "Grand Forks Frosty Gears Tournament: Blended VEX V5 Robotics Competition ND/MN State Qualifier",
+    "start": "2026-12-12T00:00:00-05:00",
+    "end": "2026-12-12T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Red River High School",
+      "address_1": "2211 17th Avenue South",
+      "address_2": null,
+      "city": "Grand Forks",
+      "region": "North Dakota",
+      "postcode": "58201",
+      "country": "United States",
+      "coordinates": {
+        "lat": 47.902694,
+        "lon": -97.058565
+      }
+    },
+    "locations": {
+      "2026-12-12": {
+        "venue": "Red River High School",
+        "address_1": "2211 17th Avenue South",
+        "address_2": null,
+        "city": "Grand Forks",
+        "region": "North Dakota",
+        "postcode": "58201",
+        "country": "United States",
+        "coordinates": {
+          "lat": 47.902694,
+          "lon": -97.058565
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

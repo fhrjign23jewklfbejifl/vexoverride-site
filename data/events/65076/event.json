@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65076,
+    "sku": "RE-V5RC-26-5076",
+    "name": "Halloween Showdown @ Swope: VEX Robotics® Override™ Hosted By Swope MS & UNR Robotics Team",
+    "start": "2026-10-31T00:00:00-04:00",
+    "end": "2026-10-31T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Swope Middle School",
+      "address_1": "901 Keele Drive",
+      "address_2": null,
+      "city": "Reno",
+      "region": "Nevada",
+      "postcode": "89509",
+      "country": "United States",
+      "coordinates": {
+        "lat": 39.509932,
+        "lon": -119.847336
+      }
+    },
+    "locations": {
+      "2026-10-31": {
+        "venue": "Swope Middle School",
+        "address_1": "901 Keele Drive",
+        "address_2": null,
+        "city": "Reno",
+        "region": "Nevada",
+        "postcode": "89509",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39.509932,
+          "lon": -119.847336
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

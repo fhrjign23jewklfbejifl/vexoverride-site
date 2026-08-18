@@ -1,0 +1,340 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64408/skills?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64408/skills?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64408/skills",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 14,
+    "total": 14,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 79051084,
+      "event": {
+        "id": 64408,
+        "name": "VIC | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Highvale College",
+        "code": "RE-V5RC-26-4408"
+      },
+      "team": {
+        "id": 170598,
+        "name": "3477D",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 1,
+      "score": 28,
+      "attempts": 3
+    },
+    {
+      "id": 79051085,
+      "event": {
+        "id": 64408,
+        "name": "VIC | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Highvale College",
+        "code": "RE-V5RC-26-4408"
+      },
+      "team": {
+        "id": 170598,
+        "name": "3477D",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 1,
+      "score": 18,
+      "attempts": 2
+    },
+    {
+      "id": 79051086,
+      "event": {
+        "id": 64408,
+        "name": "VIC | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Highvale College",
+        "code": "RE-V5RC-26-4408"
+      },
+      "team": {
+        "id": 97178,
+        "name": "52050A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 2,
+      "score": 28,
+      "attempts": 3
+    },
+    {
+      "id": 79051087,
+      "event": {
+        "id": 64408,
+        "name": "VIC | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Highvale College",
+        "code": "RE-V5RC-26-4408"
+      },
+      "team": {
+        "id": 97178,
+        "name": "52050A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 2,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79051088,
+      "event": {
+        "id": 64408,
+        "name": "VIC | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Highvale College",
+        "code": "RE-V5RC-26-4408"
+      },
+      "team": {
+        "id": 197376,
+        "name": "3477E",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 3,
+      "score": 28,
+      "attempts": 1
+    },
+    {
+      "id": 79051089,
+      "event": {
+        "id": 64408,
+        "name": "VIC | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Highvale College",
+        "code": "RE-V5RC-26-4408"
+      },
+      "team": {
+        "id": 197376,
+        "name": "3477E",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 3,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79051090,
+      "event": {
+        "id": 64408,
+        "name": "VIC | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Highvale College",
+        "code": "RE-V5RC-26-4408"
+      },
+      "team": {
+        "id": 170597,
+        "name": "3477B",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 4,
+      "score": 18,
+      "attempts": 3
+    },
+    {
+      "id": 79051091,
+      "event": {
+        "id": 64408,
+        "name": "VIC | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Highvale College",
+        "code": "RE-V5RC-26-4408"
+      },
+      "team": {
+        "id": 170597,
+        "name": "3477B",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 4,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79051092,
+      "event": {
+        "id": 64408,
+        "name": "VIC | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Highvale College",
+        "code": "RE-V5RC-26-4408"
+      },
+      "team": {
+        "id": 107975,
+        "name": "1002D",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 5,
+      "score": 13,
+      "attempts": 3
+    },
+    {
+      "id": 79051093,
+      "event": {
+        "id": 64408,
+        "name": "VIC | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Highvale College",
+        "code": "RE-V5RC-26-4408"
+      },
+      "team": {
+        "id": 107975,
+        "name": "1002D",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 5,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79051094,
+      "event": {
+        "id": 64408,
+        "name": "VIC | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Highvale College",
+        "code": "RE-V5RC-26-4408"
+      },
+      "team": {
+        "id": 70312,
+        "name": "97230A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 6,
+      "score": 0,
+      "attempts": 2
+    },
+    {
+      "id": 79051095,
+      "event": {
+        "id": 64408,
+        "name": "VIC | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Highvale College",
+        "code": "RE-V5RC-26-4408"
+      },
+      "team": {
+        "id": 70312,
+        "name": "97230A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 6,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79051096,
+      "event": {
+        "id": 64408,
+        "name": "VIC | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Highvale College",
+        "code": "RE-V5RC-26-4408"
+      },
+      "team": {
+        "id": 197071,
+        "name": "31280J",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 7,
+      "score": 0,
+      "attempts": 1
+    },
+    {
+      "id": 79051097,
+      "event": {
+        "id": 64408,
+        "name": "VIC | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Highvale College",
+        "code": "RE-V5RC-26-4408"
+      },
+      "team": {
+        "id": 197071,
+        "name": "31280J",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 7,
+      "score": 0,
+      "attempts": 0
+    }
+  ]
+}

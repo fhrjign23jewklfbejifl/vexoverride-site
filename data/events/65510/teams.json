@@ -1,0 +1,234 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65510/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65510/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65510/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 8,
+    "total": 8,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 185160,
+      "number": "2145V",
+      "team_name": "Pink Swirlee Unicorns",
+      "robot_name": "Cinnamon",
+      "organization": "Pink Unicorns",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Manassas",
+        "region": "Virginia",
+        "postcode": "20112",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.7,
+          "lon": -77.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 169891,
+      "number": "2145X",
+      "team_name": "Pink Shimmeree Unicorns",
+      "robot_name": "Shimmer",
+      "organization": "Pink Unicorns",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Manassas",
+        "region": "Virginia",
+        "postcode": "20112",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.7,
+          "lon": -77.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 169892,
+      "number": "2145Y",
+      "team_name": "Pink Spanglee Unicorns",
+      "robot_name": "Stripes",
+      "organization": "Pink Unicorns",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Manassas",
+        "region": "Virginia",
+        "postcode": "20112",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.7,
+          "lon": -77.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 109693,
+      "number": "2145Z",
+      "team_name": "Pink Shinee Unicorns",
+      "robot_name": "The Shining",
+      "organization": "Pink Unicorns",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Manassas",
+        "region": "Virginia",
+        "postcode": "20112",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.7,
+          "lon": -77.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 197569,
+      "number": "2415X",
+      "team_name": "Refract Prime",
+      "robot_name": "",
+      "organization": "1x Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Manassas",
+        "region": "Virginia",
+        "postcode": "20110-6940",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.7,
+          "lon": -77.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 198070,
+      "number": "56767A",
+      "team_name": "Apex",
+      "robot_name": "Apex",
+      "organization": "Apex",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Ashburn",
+        "region": "Virginia",
+        "postcode": "20148",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39,
+          "lon": -77.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 197648,
+      "number": "78861X",
+      "team_name": "The Scouts",
+      "robot_name": "The honored one",
+      "organization": "FutureForge",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Sterling",
+        "region": "Virginia",
+        "postcode": "20166",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39,
+          "lon": -77.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 189629,
+      "number": "99209X",
+      "team_name": "Refract",
+      "robot_name": "",
+      "organization": "1x Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Manassas",
+        "region": "Virginia",
+        "postcode": "20110",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.7,
+          "lon": -77.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
+}

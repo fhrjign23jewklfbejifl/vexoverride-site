@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64468,
+    "sku": "RE-V5RC-26-4468",
+    "name": "Anchors Aweigh VEX V5 Robotics Competition: Open Sea: Spotlight Event: Middle and High School Teams",
+    "start": "2026-12-21T00:00:00-05:00",
+    "end": "2026-12-24T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Royal Caribbean Wonder of the Seas",
+      "address_1": "PortMiami 1015 North America Way",
+      "address_2": null,
+      "city": "Miami",
+      "region": "Florida",
+      "postcode": "33132",
+      "country": "United States",
+      "coordinates": {
+        "lat": 25.778763,
+        "lon": -80.177898
+      }
+    },
+    "locations": {
+      "2026-12-21": {
+        "venue": "Royal Caribbean Wonder of the Seas",
+        "address_1": "PortMiami 1015 North America Way",
+        "address_2": null,
+        "city": "Miami",
+        "region": "Florida",
+        "postcode": "33132",
+        "country": "United States",
+        "coordinates": {
+          "lat": 25.778763,
+          "lon": -80.177898
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "World",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64574,
+    "sku": "RE-V5RC-26-4574",
+    "name": "VEX V5 Robotics Competition – SEMS Spooktacular: Middle School Teams Only",
+    "start": "2026-10-24T00:00:00-04:00",
+    "end": "2026-10-24T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "4500 Weaver Pike",
+      "address_1": "4500 Weaver Pike",
+      "address_2": null,
+      "city": "Bluff City",
+      "region": "Tennessee",
+      "postcode": "37618",
+      "country": "United States",
+      "coordinates": {
+        "lat": 36.493082,
+        "lon": -82.205839
+      }
+    },
+    "locations": {
+      "2026-10-24": {
+        "venue": "4500 Weaver Pike",
+        "address_1": "4500 Weaver Pike",
+        "address_2": null,
+        "city": "Bluff City",
+        "region": "Tennessee",
+        "postcode": "37618",
+        "country": "United States",
+        "coordinates": {
+          "lat": 36.493082,
+          "lon": -82.205839
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

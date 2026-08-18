@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64296,
+    "sku": "RE-V5RC-26-4296",
+    "name": "Viking Holmgang V5RC Blended: VEX V5 Robotics Competition Fight to the Finish",
+    "start": "2027-01-16T00:00:00-05:00",
+    "end": "2027-01-16T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "North Salem High School",
+      "address_1": "765 14th Street Northeast",
+      "address_2": null,
+      "city": "Salem",
+      "region": "Oregon",
+      "postcode": "97301",
+      "country": "United States",
+      "coordinates": {
+        "lat": 44.944181,
+        "lon": -123.022
+      }
+    },
+    "locations": {
+      "2027-01-16": {
+        "venue": "North Salem High School",
+        "address_1": "765 14th Street Northeast",
+        "address_2": null,
+        "city": "Salem",
+        "region": "Oregon",
+        "postcode": "97301",
+        "country": "United States",
+        "coordinates": {
+          "lat": 44.944181,
+          "lon": -123.022
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

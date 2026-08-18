@@ -1,0 +1,234 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64215/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64215/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64215/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 8,
+    "total": 8,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 49988,
+      "number": "7983C",
+      "team_name": "Centennial CyberHawks C",
+      "robot_name": "",
+      "organization": "Centennial High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bakersfield",
+        "region": "California",
+        "postcode": "93312",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.4,
+          "lon": -119.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 70333,
+      "number": "7983F",
+      "team_name": "Centennial CyberHawks F",
+      "robot_name": "",
+      "organization": "Centennial High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bakersfield",
+        "region": "California",
+        "postcode": "93312",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.4,
+          "lon": -119.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 121821,
+      "number": "7983P",
+      "team_name": "Centennial CyberHawks P",
+      "robot_name": "",
+      "organization": "Centennial High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bakersfield",
+        "region": "California",
+        "postcode": "93312",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.4,
+          "lon": -119.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 81141,
+      "number": "7983T",
+      "team_name": "Centennial CyberHawks T",
+      "robot_name": "",
+      "organization": "Centennial High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bakersfield",
+        "region": "California",
+        "postcode": "93312",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.4,
+          "lon": -119.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 98648,
+      "number": "49637B",
+      "team_name": "McFarland Team Bravo",
+      "robot_name": "Big Back",
+      "organization": "Mcfarland High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Mcfarland",
+        "region": "California",
+        "postcode": "93250",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.7,
+          "lon": -119.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 98649,
+      "number": "49637C",
+      "team_name": "McFarland C-Team",
+      "robot_name": "C-Team",
+      "organization": "Mcfarland High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Mcfarland",
+        "region": "California",
+        "postcode": "93250",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.7,
+          "lon": -119.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 98651,
+      "number": "49637D",
+      "team_name": "McFarland DOOM-Botics",
+      "robot_name": "Vex Von Doom",
+      "organization": "Mcfarland High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Mcfarland",
+        "region": "California",
+        "postcode": "93250",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.7,
+          "lon": -119.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 98652,
+      "number": "49637E",
+      "team_name": "McFarland E-Team ",
+      "robot_name": "E-Tronics",
+      "organization": "Mcfarland High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Mcfarland",
+        "region": "California",
+        "postcode": "93250",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.7,
+          "lon": -119.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
+}

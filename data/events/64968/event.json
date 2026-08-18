@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64968,
+    "sku": "RE-V5RC-26-4968",
+    "name": "2026-2027 Hillsboro HS V5RC Override (All In-person Judging): VEX V5 Robotics Competition",
+    "start": "2027-02-13T00:00:00-05:00",
+    "end": "2027-02-13T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Hillsboro Middle/High School",
+      "address_1": "400 East Grand Avenue",
+      "address_2": null,
+      "city": "Hillsboro",
+      "region": "Kansas",
+      "postcode": "67063",
+      "country": "United States",
+      "coordinates": {
+        "lat": 38.352595,
+        "lon": -97.199402
+      }
+    },
+    "locations": {
+      "2027-02-13": {
+        "venue": "Hillsboro Middle/High School",
+        "address_1": "400 East Grand Avenue",
+        "address_2": null,
+        "city": "Hillsboro",
+        "region": "Kansas",
+        "postcode": "67063",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.352595,
+          "lon": -97.199402
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65035,
+    "sku": "RE-V5RC-26-5035",
+    "name": "Vex Override @ Immokalee High School",
+    "start": "2027-02-20T00:00:00-05:00",
+    "end": "2027-02-20T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Immokalee High School",
+      "address_1": "701 Immokalee Drive",
+      "address_2": null,
+      "city": "Immokalee",
+      "region": "Florida",
+      "postcode": "34142",
+      "country": "United States",
+      "coordinates": {
+        "lat": 26.424929,
+        "lon": -81.423091
+      }
+    },
+    "locations": {
+      "2027-02-20": {
+        "venue": "Immokalee High School",
+        "address_1": "701 Immokalee Drive",
+        "address_2": null,
+        "city": "Immokalee",
+        "region": "Florida",
+        "postcode": "34142",
+        "country": "United States",
+        "coordinates": {
+          "lat": 26.424929,
+          "lon": -81.423091
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

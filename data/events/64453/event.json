@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64453,
+    "sku": "RE-V5RC-26-4453",
+    "name": "CANCELED: Ride on Over to LEEP (Summer) V5RC HS/MS, Lawtrence, KS: VEX V5 Robotics Competition, HS/MS Blended",
+    "start": "2026-08-01T00:00:00-04:00",
+    "end": "2026-08-01T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "1536 W 15th St",
+      "address_1": "1536 West 15th Street",
+      "address_2": null,
+      "city": "Lawrence",
+      "region": "Kansas",
+      "postcode": "66045",
+      "country": "United States",
+      "coordinates": {
+        "lat": 38.95742,
+        "lon": -95.253958
+      }
+    },
+    "locations": {
+      "2026-08-01": {
+        "venue": "1536 W 15th St",
+        "address_1": "1536 West 15th Street",
+        "address_2": null,
+        "city": "Lawrence",
+        "region": "Kansas",
+        "postcode": "66045",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.95742,
+          "lon": -95.253958
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

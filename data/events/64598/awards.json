@@ -1,0 +1,282 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64598/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64598/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64598/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 9,
+    "total": 9,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 283241,
+      "event": {
+        "id": 64598,
+        "name": "Robolabs Foundation VEX V5 Robotics Competition #1: VEX V5 Robotics Competition™ Blended MS&HS, Remote Engineering Notebooks & Interviews",
+        "code": "RE-V5RC-26-4598"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 184927,
+            "name": "10606A",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 283242,
+      "event": {
+        "id": 64598,
+        "name": "Robolabs Foundation VEX V5 Robotics Competition #1: VEX V5 Robotics Competition™ Blended MS&HS, Remote Engineering Notebooks & Interviews",
+        "code": "RE-V5RC-26-4598"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 571,
+            "name": "1000A",
+            "code": null
+          }
+        },
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 169767,
+            "name": "1698V",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 283243,
+      "event": {
+        "id": 64598,
+        "name": "Robolabs Foundation VEX V5 Robotics Competition #1: VEX V5 Robotics Competition™ Blended MS&HS, Remote Engineering Notebooks & Interviews",
+        "code": "RE-V5RC-26-4598"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 153957,
+            "name": "3134G",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 283244,
+      "event": {
+        "id": 64598,
+        "name": "Robolabs Foundation VEX V5 Robotics Competition #1: VEX V5 Robotics Competition™ Blended MS&HS, Remote Engineering Notebooks & Interviews",
+        "code": "RE-V5RC-26-4598"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 174365,
+            "name": "68699A",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 283245,
+      "event": {
+        "id": 64598,
+        "name": "Robolabs Foundation VEX V5 Robotics Competition #1: VEX V5 Robotics Competition™ Blended MS&HS, Remote Engineering Notebooks & Interviews",
+        "code": "RE-V5RC-26-4598"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 199707,
+            "name": "3340F",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 283246,
+      "event": {
+        "id": 64598,
+        "name": "Robolabs Foundation VEX V5 Robotics Competition #1: VEX V5 Robotics Competition™ Blended MS&HS, Remote Engineering Notebooks & Interviews",
+        "code": "RE-V5RC-26-4598"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 128468,
+            "name": "80001C",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 283247,
+      "event": {
+        "id": 64598,
+        "name": "Robolabs Foundation VEX V5 Robotics Competition #1: VEX V5 Robotics Competition™ Blended MS&HS, Remote Engineering Notebooks & Interviews",
+        "code": "RE-V5RC-26-4598"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 177139,
+            "name": "3134P",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 283248,
+      "event": {
+        "id": 64598,
+        "name": "Robolabs Foundation VEX V5 Robotics Competition #1: VEX V5 Robotics Competition™ Blended MS&HS, Remote Engineering Notebooks & Interviews",
+        "code": "RE-V5RC-26-4598"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 199202,
+            "name": "3457B",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 283249,
+      "event": {
+        "id": 64598,
+        "name": "Robolabs Foundation VEX V5 Robotics Competition #1: VEX V5 Robotics Competition™ Blended MS&HS, Remote Engineering Notebooks & Interviews",
+        "code": "RE-V5RC-26-4598"
+      },
+      "order": 78,
+      "title": "Create Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 176638,
+            "name": "1468A",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    }
+  ]
+}

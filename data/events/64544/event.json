@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64544,
+    "sku": "RE-V5RC-26-4544",
+    "name": "VEX V5 Robotics Competition™ (HS) Taiwan Championship: VEX V5 High School - Presented by Pacific American School",
+    "start": "2027-01-15T00:00:00-05:00",
+    "end": "2027-01-16T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Pacific American School, Hsinchu County",
+      "address_1": "No. 307, Section 1, Xinglong Road",
+      "address_2": null,
+      "city": "Zhubei, Hsinchu County",
+      "region": null,
+      "postcode": "30272",
+      "country": "Taiwan",
+      "coordinates": {
+        "lat": 24.822807,
+        "lon": 121.004029
+      }
+    },
+    "locations": {
+      "2027-01-15": {
+        "venue": "Pacific American School, Hsinchu County",
+        "address_1": "No. 307, Section 1, Xinglong Road",
+        "address_2": null,
+        "city": "Zhubei, Hsinchu County",
+        "region": null,
+        "postcode": "30272",
+        "country": "Taiwan",
+        "coordinates": {
+          "lat": 24.822807,
+          "lon": 121.004029
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Regional",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

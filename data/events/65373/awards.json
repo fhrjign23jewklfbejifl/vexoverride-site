@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65373/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65373/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65373/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 9,
+    "total": 9,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 288668,
+      "event": {
+        "id": 65373,
+        "name": "NorCal Silicon Valley Golden State Override™ Tournament # 2: VEX V5 Robotics Competition™, Blended MS & HS, In-Person with Digital Engineering Notebooks",
+        "code": "RE-V5RC-26-5373"
+      },
+      "order": 60,
+      "title": "Excellence Award - High School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288669,
+      "event": {
+        "id": 65373,
+        "name": "NorCal Silicon Valley Golden State Override™ Tournament # 2: VEX V5 Robotics Competition™, Blended MS & HS, In-Person with Digital Engineering Notebooks",
+        "code": "RE-V5RC-26-5373"
+      },
+      "order": 61,
+      "title": "Excellence Award - Middle School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288670,
+      "event": {
+        "id": 65373,
+        "name": "NorCal Silicon Valley Golden State Override™ Tournament # 2: VEX V5 Robotics Competition™, Blended MS & HS, In-Person with Digital Engineering Notebooks",
+        "code": "RE-V5RC-26-5373"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288671,
+      "event": {
+        "id": 65373,
+        "name": "NorCal Silicon Valley Golden State Override™ Tournament # 2: VEX V5 Robotics Competition™, Blended MS & HS, In-Person with Digital Engineering Notebooks",
+        "code": "RE-V5RC-26-5373"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288672,
+      "event": {
+        "id": 65373,
+        "name": "NorCal Silicon Valley Golden State Override™ Tournament # 2: VEX V5 Robotics Competition™, Blended MS & HS, In-Person with Digital Engineering Notebooks",
+        "code": "RE-V5RC-26-5373"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288673,
+      "event": {
+        "id": 65373,
+        "name": "NorCal Silicon Valley Golden State Override™ Tournament # 2: VEX V5 Robotics Competition™, Blended MS & HS, In-Person with Digital Engineering Notebooks",
+        "code": "RE-V5RC-26-5373"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288674,
+      "event": {
+        "id": 65373,
+        "name": "NorCal Silicon Valley Golden State Override™ Tournament # 2: VEX V5 Robotics Competition™, Blended MS & HS, In-Person with Digital Engineering Notebooks",
+        "code": "RE-V5RC-26-5373"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288675,
+      "event": {
+        "id": 65373,
+        "name": "NorCal Silicon Valley Golden State Override™ Tournament # 2: VEX V5 Robotics Competition™, Blended MS & HS, In-Person with Digital Engineering Notebooks",
+        "code": "RE-V5RC-26-5373"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288676,
+      "event": {
+        "id": 65373,
+        "name": "NorCal Silicon Valley Golden State Override™ Tournament # 2: VEX V5 Robotics Competition™, Blended MS & HS, In-Person with Digital Engineering Notebooks",
+        "code": "RE-V5RC-26-5373"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

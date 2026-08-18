@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64615/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64615/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64615/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 3,
+    "total": 3,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 106964,
+      "number": "3204A",
+      "team_name": "SPC Bots Alexander",
+      "robot_name": "SPC Bots Alexander",
+      "organization": "St Peter's College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Palmerston North",
+        "region": "Manawatu-Wanganui",
+        "postcode": "4414",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -40.3,
+          "lon": 175.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 155234,
+      "number": "3204S",
+      "team_name": "SPC Bots St Louis",
+      "robot_name": "SPC Bots St Louis",
+      "organization": "St Peter's College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Palmerston North",
+        "region": "Manawatu-Wanganui",
+        "postcode": "4414",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -40.3,
+          "lon": 175.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 152930,
+      "number": "3204X",
+      "team_name": "SPC Bots Xystus",
+      "robot_name": "SPC Bots Xystus",
+      "organization": "St Peter's College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Palmerston North",
+        "region": "Manawatu-Wanganui",
+        "postcode": "4414",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -40.3,
+          "lon": 175.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
+}

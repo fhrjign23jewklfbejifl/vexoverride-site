@@ -1,0 +1,180 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64961/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64961/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64961/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 6,
+    "total": 6,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 62734,
+      "number": "4863A",
+      "team_name": "ARKATYPE",
+      "robot_name": "",
+      "organization": "Irving STEAM Magnet",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Los Angeles",
+        "region": "California",
+        "postcode": "90065",
+        "country": "United States",
+        "coordinates": {
+          "lat": 34.1,
+          "lon": -118.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 63429,
+      "number": "4863B",
+      "team_name": "THE BLUEPRINT",
+      "robot_name": "",
+      "organization": "Irving STEAM Magnet",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Los Angeles",
+        "region": "California",
+        "postcode": "90065",
+        "country": "United States",
+        "coordinates": {
+          "lat": 34.1,
+          "lon": -118.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 70650,
+      "number": "4863F",
+      "team_name": "Fabrikatorz",
+      "robot_name": "",
+      "organization": "Irving STEAM Magnet",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Los Angeles",
+        "region": "California",
+        "postcode": "90065",
+        "country": "United States",
+        "coordinates": {
+          "lat": 34.1,
+          "lon": -118.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 70652,
+      "number": "4863H",
+      "team_name": "HEPHAESTUS",
+      "robot_name": "",
+      "organization": "Irving STEAM Magnet",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Los Angeles",
+        "region": "California",
+        "postcode": "90065",
+        "country": "United States",
+        "coordinates": {
+          "lat": 34.1,
+          "lon": -118.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 169812,
+      "number": "4863J",
+      "team_name": "JUGGERNAUTZ",
+      "robot_name": "",
+      "organization": "WASHINGTON IRVING MID SCH MATH MUSIC AND ENGR MAGNET",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Los Angeles",
+        "region": "California",
+        "postcode": "90065",
+        "country": "United States",
+        "coordinates": {
+          "lat": 34.1,
+          "lon": -118.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 191256,
+      "number": "92821A",
+      "team_name": "Titan A",
+      "robot_name": "",
+      "organization": "WEL Education Group",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Brea",
+        "region": "California",
+        "postcode": "92821",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.9,
+          "lon": -117.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    }
+  ]
+}

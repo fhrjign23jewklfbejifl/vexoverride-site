@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64857,
+    "sku": "RE-V5RC-26-4857",
+    "name": "亚洲机器人联盟2026-2027赛季VEX机器人深圳城市选拔赛(二)-VEX V5 Robotics Competitionᵀᴹ",
+    "start": "2026-08-01T00:00:00-04:00",
+    "end": "2026-08-03T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "深圳市龙岗区香港中文大学（深圳）",
+      "address_1": "广东省深圳市龙岗区龙翔大道 2001号",
+      "address_2": null,
+      "city": "深圳市",
+      "region": "Guangdong",
+      "postcode": "",
+      "country": "China",
+      "coordinates": {
+        "lat": 22.68541,
+        "lon": 114.2122
+      }
+    },
+    "locations": {
+      "2026-08-01": {
+        "venue": "深圳市龙岗区香港中文大学（深圳）",
+        "address_1": "广东省深圳市龙岗区龙翔大道 2001号",
+        "address_2": null,
+        "city": "深圳市",
+        "region": "Guangdong",
+        "postcode": "",
+        "country": "China",
+        "coordinates": {
+          "lat": 22.68541,
+          "lon": 114.2122
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

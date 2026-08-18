@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64960,
+    "sku": "RE-V5RC-26-4960",
+    "name": "VEX the Halls - East Allegheny V5RC State Qualifier: V5RC State Qualifier Override",
+    "start": "2026-12-18T00:00:00-05:00",
+    "end": "2026-12-18T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "East Allegheny Junior/Senior High School",
+      "address_1": "1150 Jacks Run Road",
+      "address_2": null,
+      "city": "North Versailles",
+      "region": "Pennsylvania",
+      "postcode": "15137",
+      "country": "United States",
+      "coordinates": {
+        "lat": 40.364008,
+        "lon": -79.788604
+      }
+    },
+    "locations": {
+      "2026-12-18": {
+        "venue": "East Allegheny Junior/Senior High School",
+        "address_1": "1150 Jacks Run Road",
+        "address_2": null,
+        "city": "North Versailles",
+        "region": "Pennsylvania",
+        "postcode": "15137",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40.364008,
+          "lon": -79.788604
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

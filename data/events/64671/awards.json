@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64671/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64671/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64671/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 12,
+    "total": 12,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 283688,
+      "event": {
+        "id": 64671,
+        "name": "Sugar Rush VEX V5 Robotics Competition Signature Event: High School",
+        "code": "RE-V5RC-26-4671"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283689,
+      "event": {
+        "id": 64671,
+        "name": "Sugar Rush VEX V5 Robotics Competition Signature Event: High School",
+        "code": "RE-V5RC-26-4671"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283690,
+      "event": {
+        "id": 64671,
+        "name": "Sugar Rush VEX V5 Robotics Competition Signature Event: High School",
+        "code": "RE-V5RC-26-4671"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283691,
+      "event": {
+        "id": 64671,
+        "name": "Sugar Rush VEX V5 Robotics Competition Signature Event: High School",
+        "code": "RE-V5RC-26-4671"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283692,
+      "event": {
+        "id": 64671,
+        "name": "Sugar Rush VEX V5 Robotics Competition Signature Event: High School",
+        "code": "RE-V5RC-26-4671"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283693,
+      "event": {
+        "id": 64671,
+        "name": "Sugar Rush VEX V5 Robotics Competition Signature Event: High School",
+        "code": "RE-V5RC-26-4671"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283694,
+      "event": {
+        "id": 64671,
+        "name": "Sugar Rush VEX V5 Robotics Competition Signature Event: High School",
+        "code": "RE-V5RC-26-4671"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283695,
+      "event": {
+        "id": 64671,
+        "name": "Sugar Rush VEX V5 Robotics Competition Signature Event: High School",
+        "code": "RE-V5RC-26-4671"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283696,
+      "event": {
+        "id": 64671,
+        "name": "Sugar Rush VEX V5 Robotics Competition Signature Event: High School",
+        "code": "RE-V5RC-26-4671"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283697,
+      "event": {
+        "id": 64671,
+        "name": "Sugar Rush VEX V5 Robotics Competition Signature Event: High School",
+        "code": "RE-V5RC-26-4671"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283698,
+      "event": {
+        "id": 64671,
+        "name": "Sugar Rush VEX V5 Robotics Competition Signature Event: High School",
+        "code": "RE-V5RC-26-4671"
+      },
+      "order": 78,
+      "title": "Create Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283699,
+      "event": {
+        "id": 64671,
+        "name": "Sugar Rush VEX V5 Robotics Competition Signature Event: High School",
+        "code": "RE-V5RC-26-4671"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

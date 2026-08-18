@@ -1,0 +1,84 @@
+{
+  "data": {
+    "id": 65237,
+    "sku": "RE-V5RC-26-5237",
+    "name": "VEX V5 Robotics Competition - TN Valley Robotics League (TNVR): HS/MS Teams only",
+    "start": "2026-10-13T00:00:00-04:00",
+    "end": "2026-12-01T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Chattanooga Christian School",
+      "address_1": "3354 Charger Drive",
+      "address_2": null,
+      "city": "Chattanooga",
+      "region": "Tennessee",
+      "postcode": "37409",
+      "country": "United States",
+      "coordinates": {
+        "lat": 35.013903,
+        "lon": -85.322887
+      }
+    },
+    "locations": {
+      "2026-10-13": {
+        "venue": "Chattanooga Christian School",
+        "address_1": "3354 Charger Drive",
+        "address_2": null,
+        "city": "Chattanooga",
+        "region": "Tennessee",
+        "postcode": "37409",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.013903,
+          "lon": -85.322887
+        }
+      },
+      "2026-11-03": {
+        "venue": "Chattanooga Christian School",
+        "address_1": "3354 Charger Drive",
+        "address_2": null,
+        "city": "Chattanooga",
+        "region": "Tennessee",
+        "postcode": "37409",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.013903,
+          "lon": -85.322887
+        }
+      },
+      "2026-12-01": {
+        "venue": "Chattanooga Christian School",
+        "address_1": "3354 Charger Drive",
+        "address_2": null,
+        "city": "Chattanooga",
+        "region": "Tennessee",
+        "postcode": "37409",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.013903,
+          "lon": -85.322887
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

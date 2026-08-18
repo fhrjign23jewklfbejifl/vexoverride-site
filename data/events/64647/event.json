@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64647,
+    "sku": "RE-V5RC-26-4647",
+    "name": "CANCELED: STAR Warriors Showdown (TSA Event) CANCELED and moved to RECF: Event Canceled and moved to RECF for TSA",
+    "start": "2027-01-28T00:00:00-05:00",
+    "end": "2027-01-29T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "South Grand Prairie High School",
+      "address_1": "301 West Warrior Trail",
+      "address_2": null,
+      "city": "Grand Prairie",
+      "region": "Texas",
+      "postcode": "75052",
+      "country": "United States",
+      "coordinates": {
+        "lat": 32.695666,
+        "lon": -97.00455
+      }
+    },
+    "locations": {
+      "2027-01-28": {
+        "venue": "South Grand Prairie High School",
+        "address_1": "301 West Warrior Trail",
+        "address_2": null,
+        "city": "Grand Prairie",
+        "region": "Texas",
+        "postcode": "75052",
+        "country": "United States",
+        "coordinates": {
+          "lat": 32.695666,
+          "lon": -97.00455
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

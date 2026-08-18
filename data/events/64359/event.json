@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64359,
+    "sku": "RE-V5RC-26-4359",
+    "name": "Speedway: Override™ V5RC Blended Signature Event: VEX V5 Robotics Competition, Presented by the Chrysalis Global Foundation",
+    "start": "2026-09-18T00:00:00-04:00",
+    "end": "2026-09-20T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Indianapolis Motor Speedway",
+      "address_1": "4790 W. 16th St.",
+      "address_2": null,
+      "city": "Indianapolis",
+      "region": "Indiana",
+      "postcode": "46222",
+      "country": "United States",
+      "coordinates": {
+        "lat": 39.787406,
+        "lon": -86.238405
+      }
+    },
+    "locations": {
+      "2026-09-18": {
+        "venue": "Indianapolis Motor Speedway",
+        "address_1": "4790 W. 16th St.",
+        "address_2": null,
+        "city": "Indianapolis",
+        "region": "Indiana",
+        "postcode": "46222",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39.787406,
+          "lon": -86.238405
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Signature",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

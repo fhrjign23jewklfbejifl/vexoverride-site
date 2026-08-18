@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65323/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65323/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65323/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 7,
+    "total": 7,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 288344,
+      "event": {
+        "id": 65323,
+        "name": "V5RC Override CaratLab Kickoff (MS/HS)",
+        "code": "RE-V5RC-26-5323"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [
+        "Event Region Championship"
+      ],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288345,
+      "event": {
+        "id": 65323,
+        "name": "V5RC Override CaratLab Kickoff (MS/HS)",
+        "code": "RE-V5RC-26-5323"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288346,
+      "event": {
+        "id": 65323,
+        "name": "V5RC Override CaratLab Kickoff (MS/HS)",
+        "code": "RE-V5RC-26-5323"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288347,
+      "event": {
+        "id": 65323,
+        "name": "V5RC Override CaratLab Kickoff (MS/HS)",
+        "code": "RE-V5RC-26-5323"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288348,
+      "event": {
+        "id": 65323,
+        "name": "V5RC Override CaratLab Kickoff (MS/HS)",
+        "code": "RE-V5RC-26-5323"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288349,
+      "event": {
+        "id": 65323,
+        "name": "V5RC Override CaratLab Kickoff (MS/HS)",
+        "code": "RE-V5RC-26-5323"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288667,
+      "event": {
+        "id": 65323,
+        "name": "V5RC Override CaratLab Kickoff (MS/HS)",
+        "code": "RE-V5RC-26-5323"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [
+        "Event Region Championship"
+      ],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64453/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64453/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64453/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 8,
+    "total": 8,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 282193,
+      "event": {
+        "id": 64453,
+        "name": "CANCELED: Ride on Over to LEEP (Summer) V5RC HS/MS, Lawtrence, KS: VEX V5 Robotics Competition, HS/MS Blended",
+        "code": "RE-V5RC-26-4453"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282194,
+      "event": {
+        "id": 64453,
+        "name": "CANCELED: Ride on Over to LEEP (Summer) V5RC HS/MS, Lawtrence, KS: VEX V5 Robotics Competition, HS/MS Blended",
+        "code": "RE-V5RC-26-4453"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282195,
+      "event": {
+        "id": 64453,
+        "name": "CANCELED: Ride on Over to LEEP (Summer) V5RC HS/MS, Lawtrence, KS: VEX V5 Robotics Competition, HS/MS Blended",
+        "code": "RE-V5RC-26-4453"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282196,
+      "event": {
+        "id": 64453,
+        "name": "CANCELED: Ride on Over to LEEP (Summer) V5RC HS/MS, Lawtrence, KS: VEX V5 Robotics Competition, HS/MS Blended",
+        "code": "RE-V5RC-26-4453"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282197,
+      "event": {
+        "id": 64453,
+        "name": "CANCELED: Ride on Over to LEEP (Summer) V5RC HS/MS, Lawtrence, KS: VEX V5 Robotics Competition, HS/MS Blended",
+        "code": "RE-V5RC-26-4453"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282198,
+      "event": {
+        "id": 64453,
+        "name": "CANCELED: Ride on Over to LEEP (Summer) V5RC HS/MS, Lawtrence, KS: VEX V5 Robotics Competition, HS/MS Blended",
+        "code": "RE-V5RC-26-4453"
+      },
+      "order": 71,
+      "title": "Robot Skills 2nd Place (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282199,
+      "event": {
+        "id": 64453,
+        "name": "CANCELED: Ride on Over to LEEP (Summer) V5RC HS/MS, Lawtrence, KS: VEX V5 Robotics Competition, HS/MS Blended",
+        "code": "RE-V5RC-26-4453"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 282200,
+      "event": {
+        "id": 64453,
+        "name": "CANCELED: Ride on Over to LEEP (Summer) V5RC HS/MS, Lawtrence, KS: VEX V5 Robotics Competition, HS/MS Blended",
+        "code": "RE-V5RC-26-4453"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

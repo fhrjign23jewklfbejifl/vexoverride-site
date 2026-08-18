@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64213/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64213/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64213/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 11,
+    "total": 11,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 280188,
+      "event": {
+        "id": 64213,
+        "name": "Kern Robotics High School League '26-'27 - AM: VEX V5 Robotics Competition \"Override\" - HS Only",
+        "code": "RE-V5RC-26-4213"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280189,
+      "event": {
+        "id": 64213,
+        "name": "Kern Robotics High School League '26-'27 - AM: VEX V5 Robotics Competition \"Override\" - HS Only",
+        "code": "RE-V5RC-26-4213"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280190,
+      "event": {
+        "id": 64213,
+        "name": "Kern Robotics High School League '26-'27 - AM: VEX V5 Robotics Competition \"Override\" - HS Only",
+        "code": "RE-V5RC-26-4213"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280191,
+      "event": {
+        "id": 64213,
+        "name": "Kern Robotics High School League '26-'27 - AM: VEX V5 Robotics Competition \"Override\" - HS Only",
+        "code": "RE-V5RC-26-4213"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280192,
+      "event": {
+        "id": 64213,
+        "name": "Kern Robotics High School League '26-'27 - AM: VEX V5 Robotics Competition \"Override\" - HS Only",
+        "code": "RE-V5RC-26-4213"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280193,
+      "event": {
+        "id": 64213,
+        "name": "Kern Robotics High School League '26-'27 - AM: VEX V5 Robotics Competition \"Override\" - HS Only",
+        "code": "RE-V5RC-26-4213"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280194,
+      "event": {
+        "id": 64213,
+        "name": "Kern Robotics High School League '26-'27 - AM: VEX V5 Robotics Competition \"Override\" - HS Only",
+        "code": "RE-V5RC-26-4213"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280195,
+      "event": {
+        "id": 64213,
+        "name": "Kern Robotics High School League '26-'27 - AM: VEX V5 Robotics Competition \"Override\" - HS Only",
+        "code": "RE-V5RC-26-4213"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280196,
+      "event": {
+        "id": 64213,
+        "name": "Kern Robotics High School League '26-'27 - AM: VEX V5 Robotics Competition \"Override\" - HS Only",
+        "code": "RE-V5RC-26-4213"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280197,
+      "event": {
+        "id": 64213,
+        "name": "Kern Robotics High School League '26-'27 - AM: VEX V5 Robotics Competition \"Override\" - HS Only",
+        "code": "RE-V5RC-26-4213"
+      },
+      "order": 82,
+      "title": "Volunteer of the Year Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280198,
+      "event": {
+        "id": 64213,
+        "name": "Kern Robotics High School League '26-'27 - AM: VEX V5 Robotics Competition \"Override\" - HS Only",
+        "code": "RE-V5RC-26-4213"
+      },
+      "order": 84,
+      "title": "Teacher of the Year Award  (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

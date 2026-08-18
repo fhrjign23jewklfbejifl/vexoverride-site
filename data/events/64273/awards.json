@@ -1,0 +1,228 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64273/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64273/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64273/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 14,
+    "total": 14,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 280622,
+      "event": {
+        "id": 64273,
+        "name": "2011 Robotics Lincoln Electric Middle School VEX Tournament: VEX V5 Robotics Competition, Meaden & Moore",
+        "code": "RE-V5RC-26-4273"
+      },
+      "order": 61,
+      "title": "Excellence Award - Middle School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280623,
+      "event": {
+        "id": 64273,
+        "name": "2011 Robotics Lincoln Electric Middle School VEX Tournament: VEX V5 Robotics Competition, Meaden & Moore",
+        "code": "RE-V5RC-26-4273"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280624,
+      "event": {
+        "id": 64273,
+        "name": "2011 Robotics Lincoln Electric Middle School VEX Tournament: VEX V5 Robotics Competition, Meaden & Moore",
+        "code": "RE-V5RC-26-4273"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280625,
+      "event": {
+        "id": 64273,
+        "name": "2011 Robotics Lincoln Electric Middle School VEX Tournament: VEX V5 Robotics Competition, Meaden & Moore",
+        "code": "RE-V5RC-26-4273"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280626,
+      "event": {
+        "id": 64273,
+        "name": "2011 Robotics Lincoln Electric Middle School VEX Tournament: VEX V5 Robotics Competition, Meaden & Moore",
+        "code": "RE-V5RC-26-4273"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280627,
+      "event": {
+        "id": 64273,
+        "name": "2011 Robotics Lincoln Electric Middle School VEX Tournament: VEX V5 Robotics Competition, Meaden & Moore",
+        "code": "RE-V5RC-26-4273"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280628,
+      "event": {
+        "id": 64273,
+        "name": "2011 Robotics Lincoln Electric Middle School VEX Tournament: VEX V5 Robotics Competition, Meaden & Moore",
+        "code": "RE-V5RC-26-4273"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280629,
+      "event": {
+        "id": 64273,
+        "name": "2011 Robotics Lincoln Electric Middle School VEX Tournament: VEX V5 Robotics Competition, Meaden & Moore",
+        "code": "RE-V5RC-26-4273"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280630,
+      "event": {
+        "id": 64273,
+        "name": "2011 Robotics Lincoln Electric Middle School VEX Tournament: VEX V5 Robotics Competition, Meaden & Moore",
+        "code": "RE-V5RC-26-4273"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280631,
+      "event": {
+        "id": 64273,
+        "name": "2011 Robotics Lincoln Electric Middle School VEX Tournament: VEX V5 Robotics Competition, Meaden & Moore",
+        "code": "RE-V5RC-26-4273"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280632,
+      "event": {
+        "id": 64273,
+        "name": "2011 Robotics Lincoln Electric Middle School VEX Tournament: VEX V5 Robotics Competition, Meaden & Moore",
+        "code": "RE-V5RC-26-4273"
+      },
+      "order": 78,
+      "title": "Create Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280633,
+      "event": {
+        "id": 64273,
+        "name": "2011 Robotics Lincoln Electric Middle School VEX Tournament: VEX V5 Robotics Competition, Meaden & Moore",
+        "code": "RE-V5RC-26-4273"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280634,
+      "event": {
+        "id": 64273,
+        "name": "2011 Robotics Lincoln Electric Middle School VEX Tournament: VEX V5 Robotics Competition, Meaden & Moore",
+        "code": "RE-V5RC-26-4273"
+      },
+      "order": 80,
+      "title": "Energy Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280635,
+      "event": {
+        "id": 64273,
+        "name": "2011 Robotics Lincoln Electric Middle School VEX Tournament: VEX V5 Robotics Competition, Meaden & Moore",
+        "code": "RE-V5RC-26-4273"
+      },
+      "order": 81,
+      "title": "Inspire Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

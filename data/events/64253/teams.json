@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64253/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64253/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64253/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 3,
+    "total": 3,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 198820,
+      "number": "45434B",
+      "team_name": "Blackout",
+      "robot_name": "",
+      "organization": "Beavercreek Robotics Club",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Beavercreek",
+        "region": "Ohio",
+        "postcode": "45432",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39.7,
+          "lon": -84.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 155326,
+      "number": "45434H",
+      "team_name": "Aftershock",
+      "robot_name": "",
+      "organization": "Beavercreek Robotics Club",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Beavercreek",
+        "region": "Ohio",
+        "postcode": "45432",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39.7,
+          "lon": -84.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 198821,
+      "number": "45434K",
+      "team_name": "Kamikaze",
+      "robot_name": "",
+      "organization": "Beavercreek Robotics Club",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Beavercreek",
+        "region": "Ohio",
+        "postcode": "45432",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39.7,
+          "lon": -84.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
+}

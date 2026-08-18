@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64596,
+    "sku": "RE-V5RC-26-4596",
+    "name": "The Lobstah Bowl VEX V5 Robotics Competition Spotlight Event: VEX V5 Robotics Competition™ High School",
+    "start": "2026-10-30T00:00:00-04:00",
+    "end": "2026-11-01T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Memorial Gym",
+      "address_1": "Memorial Gym, Bennett, 18 Gym Dr, Orono, ME 04473",
+      "address_2": null,
+      "city": "Orono",
+      "region": "Maine",
+      "postcode": "04473",
+      "country": "United States",
+      "coordinates": {
+        "lat": 44.903584,
+        "lon": -68.670045
+      }
+    },
+    "locations": {
+      "2026-10-30": {
+        "venue": "Memorial Gym",
+        "address_1": "Memorial Gym, Bennett, 18 Gym Dr, Orono, ME 04473",
+        "address_2": null,
+        "city": "Orono",
+        "region": "Maine",
+        "postcode": "04473",
+        "country": "United States",
+        "coordinates": {
+          "lat": 44.903584,
+          "lon": -68.670045
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "World",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

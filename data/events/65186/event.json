@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65186,
+    "sku": "RE-V5RC-26-5186",
+    "name": "Greenfield-Central VEX V5 Robotics Competition™: Override™ Middle and High School Teams",
+    "start": "2027-01-09T00:00:00-05:00",
+    "end": "2027-01-09T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Greenfield-Central High School",
+      "address_1": "810 North Broadway Street",
+      "address_2": null,
+      "city": "Greenfield",
+      "region": "Indiana",
+      "postcode": "46140",
+      "country": "United States",
+      "coordinates": {
+        "lat": 39.792334,
+        "lon": -85.781257
+      }
+    },
+    "locations": {
+      "2027-01-09": {
+        "venue": "Greenfield-Central High School",
+        "address_1": "810 North Broadway Street",
+        "address_2": null,
+        "city": "Greenfield",
+        "region": "Indiana",
+        "postcode": "46140",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39.792334,
+          "lon": -85.781257
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

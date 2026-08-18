@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64966,
+    "sku": "RE-V5RC-26-4966",
+    "name": "PYRS Southridge School VEX Robotics Winter Qualifier",
+    "start": "2027-01-16T00:00:00-05:00",
+    "end": "2027-01-16T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Southridge School",
+      "address_1": "2656 160 Street",
+      "address_2": null,
+      "city": "Surrey",
+      "region": "British Columbia",
+      "postcode": "V3Z 0T6",
+      "country": "Canada",
+      "coordinates": {
+        "lat": 49.050308,
+        "lon": -122.776599
+      }
+    },
+    "locations": {
+      "2027-01-16": {
+        "venue": "Southridge School",
+        "address_1": "2656 160 Street",
+        "address_2": null,
+        "city": "Surrey",
+        "region": "British Columbia",
+        "postcode": "V3Z 0T6",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 49.050308,
+          "lon": -122.776599
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64461/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64461/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64461/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 4,
+    "total": 4,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 138955,
+      "number": "2142Z",
+      "team_name": "Guppies",
+      "robot_name": "Guppies",
+      "organization": "John Bapst Memorial High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bangor",
+        "region": "Maine",
+        "postcode": "04401",
+        "country": "United States",
+        "coordinates": {
+          "lat": 44.8,
+          "lon": -68.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 170350,
+      "number": "10440C",
+      "team_name": "Mechanical Masterminds",
+      "robot_name": "",
+      "organization": "Bangor Homeschool",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bangor",
+        "region": "Maine",
+        "postcode": "04401",
+        "country": "United States",
+        "coordinates": {
+          "lat": 44.8,
+          "lon": -68.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 197946,
+      "number": "10440E",
+      "team_name": "Team Eevee",
+      "robot_name": "",
+      "organization": "Bangor Homeschool",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bangor",
+        "region": "Maine",
+        "postcode": "04401",
+        "country": "United States",
+        "coordinates": {
+          "lat": 44.8,
+          "lon": -68.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 197947,
+      "number": "10440F",
+      "team_name": "Team Banana Cats",
+      "robot_name": "",
+      "organization": "Bangor Homeschool",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bangor",
+        "region": "Maine",
+        "postcode": "04401",
+        "country": "United States",
+        "coordinates": {
+          "lat": 44.8,
+          "lon": -68.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    }
+  ]
+}

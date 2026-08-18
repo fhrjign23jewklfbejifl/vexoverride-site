@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65015/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65015/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65015/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 4,
+    "total": 4,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 286125,
+      "event": {
+        "id": 65015,
+        "name": "Great Lakes VEX V5 Robotics Competition™ #2: Override™ Middle and High School Teams",
+        "code": "RE-V5RC-26-5015"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286126,
+      "event": {
+        "id": 65015,
+        "name": "Great Lakes VEX V5 Robotics Competition™ #2: Override™ Middle and High School Teams",
+        "code": "RE-V5RC-26-5015"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286127,
+      "event": {
+        "id": 65015,
+        "name": "Great Lakes VEX V5 Robotics Competition™ #2: Override™ Middle and High School Teams",
+        "code": "RE-V5RC-26-5015"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287292,
+      "event": {
+        "id": 65015,
+        "name": "Great Lakes VEX V5 Robotics Competition™ #2: Override™ Middle and High School Teams",
+        "code": "RE-V5RC-26-5015"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

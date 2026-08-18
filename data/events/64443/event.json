@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64443,
+    "sku": "RE-V5RC-26-4443",
+    "name": "VEX V5RC Terrebonne 2027",
+    "start": "2027-01-23T00:00:00-05:00",
+    "end": "2027-01-23T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "École secondaire des Trois-Saisons",
+      "address_1": "1658 Boulevard des Seigneurs",
+      "address_2": null,
+      "city": "Terrebonne",
+      "region": "Quebec",
+      "postcode": "J6X 4T1",
+      "country": "Canada",
+      "coordinates": {
+        "lat": 45.71404,
+        "lon": -73.671768
+      }
+    },
+    "locations": {
+      "2027-01-23": {
+        "venue": "École secondaire des Trois-Saisons",
+        "address_1": "1658 Boulevard des Seigneurs",
+        "address_2": null,
+        "city": "Terrebonne",
+        "region": "Quebec",
+        "postcode": "J6X 4T1",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 45.71404,
+          "lon": -73.671768
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

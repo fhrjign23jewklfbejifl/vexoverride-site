@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65073/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65073/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65073/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 8,
+    "total": 8,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 286673,
+      "event": {
+        "id": 65073,
+        "name": "The Steel Stampede VEX V5RC Override Tournament",
+        "code": "RE-V5RC-26-5073"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286674,
+      "event": {
+        "id": 65073,
+        "name": "The Steel Stampede VEX V5RC Override Tournament",
+        "code": "RE-V5RC-26-5073"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286675,
+      "event": {
+        "id": 65073,
+        "name": "The Steel Stampede VEX V5RC Override Tournament",
+        "code": "RE-V5RC-26-5073"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286676,
+      "event": {
+        "id": 65073,
+        "name": "The Steel Stampede VEX V5RC Override Tournament",
+        "code": "RE-V5RC-26-5073"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286677,
+      "event": {
+        "id": 65073,
+        "name": "The Steel Stampede VEX V5RC Override Tournament",
+        "code": "RE-V5RC-26-5073"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286678,
+      "event": {
+        "id": 65073,
+        "name": "The Steel Stampede VEX V5RC Override Tournament",
+        "code": "RE-V5RC-26-5073"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286679,
+      "event": {
+        "id": 65073,
+        "name": "The Steel Stampede VEX V5RC Override Tournament",
+        "code": "RE-V5RC-26-5073"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286680,
+      "event": {
+        "id": 65073,
+        "name": "The Steel Stampede VEX V5RC Override Tournament",
+        "code": "RE-V5RC-26-5073"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

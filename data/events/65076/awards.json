@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65076/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65076/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65076/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 7,
+    "total": 7,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 286681,
+      "event": {
+        "id": 65076,
+        "name": "Halloween Showdown @ Swope: VEX Robotics® Override™ Hosted By Swope MS & UNR Robotics Team",
+        "code": "RE-V5RC-26-5076"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286682,
+      "event": {
+        "id": 65076,
+        "name": "Halloween Showdown @ Swope: VEX Robotics® Override™ Hosted By Swope MS & UNR Robotics Team",
+        "code": "RE-V5RC-26-5076"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286683,
+      "event": {
+        "id": 65076,
+        "name": "Halloween Showdown @ Swope: VEX Robotics® Override™ Hosted By Swope MS & UNR Robotics Team",
+        "code": "RE-V5RC-26-5076"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286684,
+      "event": {
+        "id": 65076,
+        "name": "Halloween Showdown @ Swope: VEX Robotics® Override™ Hosted By Swope MS & UNR Robotics Team",
+        "code": "RE-V5RC-26-5076"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286685,
+      "event": {
+        "id": 65076,
+        "name": "Halloween Showdown @ Swope: VEX Robotics® Override™ Hosted By Swope MS & UNR Robotics Team",
+        "code": "RE-V5RC-26-5076"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286686,
+      "event": {
+        "id": 65076,
+        "name": "Halloween Showdown @ Swope: VEX Robotics® Override™ Hosted By Swope MS & UNR Robotics Team",
+        "code": "RE-V5RC-26-5076"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286687,
+      "event": {
+        "id": 65076,
+        "name": "Halloween Showdown @ Swope: VEX Robotics® Override™ Hosted By Swope MS & UNR Robotics Team",
+        "code": "RE-V5RC-26-5076"
+      },
+      "order": 80,
+      "title": "Energy Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

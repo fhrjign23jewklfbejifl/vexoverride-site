@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64410/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64410/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64410/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 2,
+    "total": 2,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 281762,
+      "event": {
+        "id": 64410,
+        "name": "SSIS VEX V5 Override Scrimmage: VEX V5 Blended",
+        "code": "RE-V5RC-26-4410"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281763,
+      "event": {
+        "id": 64410,
+        "name": "SSIS VEX V5 Override Scrimmage: VEX V5 Blended",
+        "code": "RE-V5RC-26-4410"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

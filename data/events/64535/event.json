@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64535,
+    "sku": "RE-V5RC-26-4535",
+    "name": "VEX V5 Robotics Competition | GCA Regional (MS/HS): Organised by Greig City Academy",
+    "start": "2026-10-17T00:00:00-04:00",
+    "end": "2026-10-17T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Greig City Academy",
+      "address_1": "High Street",
+      "address_2": null,
+      "city": "London",
+      "region": "United Kingdom",
+      "postcode": "N8 7NU",
+      "country": "United Kingdom",
+      "coordinates": {
+        "lat": 51.587735,
+        "lon": -0.11751
+      }
+    },
+    "locations": {
+      "2026-10-17": {
+        "venue": "Greig City Academy",
+        "address_1": "High Street",
+        "address_2": null,
+        "city": "London",
+        "region": "United Kingdom",
+        "postcode": "N8 7NU",
+        "country": "United Kingdom",
+        "coordinates": {
+          "lat": 51.587735,
+          "lon": -0.11751
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64276,
+    "sku": "RE-V5RC-26-4276",
+    "name": "1x Robotics Presents: Meta Evolved at PWC Fairgrounds: VEX V5 Robotics Competition, Blended HS/MS Qualifier",
+    "start": "2026-12-04T00:00:00-05:00",
+    "end": "2026-12-05T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Prince William County Fairgrounds",
+      "address_1": "10624 Dumfries Rd",
+      "address_2": null,
+      "city": "Manassas",
+      "region": "Virginia",
+      "postcode": "20112",
+      "country": "United States",
+      "coordinates": {
+        "lat": 38.7262,
+        "lon": -77.471807
+      }
+    },
+    "locations": {
+      "2026-12-04": {
+        "venue": "Prince William County Fairgrounds",
+        "address_1": "10624 Dumfries Rd",
+        "address_2": null,
+        "city": "Manassas",
+        "region": "Virginia",
+        "postcode": "20112",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.7262,
+          "lon": -77.471807
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

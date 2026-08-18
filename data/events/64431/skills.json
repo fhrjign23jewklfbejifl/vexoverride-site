@@ -1,0 +1,846 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64431/skills?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64431/skills?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64431/skills",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 36,
+    "total": 36,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 79056132,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "team": {
+        "id": 189282,
+        "name": "2815Z",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 1,
+      "score": 78,
+      "attempts": 2
+    },
+    {
+      "id": 79056133,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "team": {
+        "id": 189282,
+        "name": "2815Z",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 1,
+      "score": 78,
+      "attempts": 3
+    },
+    {
+      "id": 79056134,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "team": {
+        "id": 102421,
+        "name": "54001A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 2,
+      "score": 98,
+      "attempts": 3
+    },
+    {
+      "id": 79056135,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "team": {
+        "id": 102421,
+        "name": "54001A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 2,
+      "score": 18,
+      "attempts": 3
+    },
+    {
+      "id": 79056136,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "team": {
+        "id": 125350,
+        "name": "54001Z",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 3,
+      "score": 108,
+      "attempts": 2
+    },
+    {
+      "id": 79056137,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "team": {
+        "id": 125350,
+        "name": "54001Z",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 3,
+      "score": 5,
+      "attempts": 1
+    },
+    {
+      "id": 79056138,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "team": {
+        "id": 189332,
+        "name": "96Z",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 4,
+      "score": 98,
+      "attempts": 3
+    },
+    {
+      "id": 79056139,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "team": {
+        "id": 189332,
+        "name": "96Z",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 4,
+      "score": 8,
+      "attempts": 2
+    },
+    {
+      "id": 79056140,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "team": {
+        "id": 153670,
+        "name": "18190X",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 5,
+      "score": 85,
+      "attempts": 3
+    },
+    {
+      "id": 79056141,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "team": {
+        "id": 153670,
+        "name": "18190X",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 5,
+      "score": 20,
+      "attempts": 3
+    },
+    {
+      "id": 79056142,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "team": {
+        "id": 189614,
+        "name": "99236M",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 6,
+      "score": 58,
+      "attempts": 1
+    },
+    {
+      "id": 79056143,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "team": {
+        "id": 189614,
+        "name": "99236M",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 6,
+      "score": 18,
+      "attempts": 3
+    },
+    {
+      "id": 79056144,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "team": {
+        "id": 198135,
+        "name": "4511P",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 7,
+      "score": 68,
+      "attempts": 2
+    },
+    {
+      "id": 79056145,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "team": {
+        "id": 198135,
+        "name": "4511P",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 7,
+      "score": 8,
+      "attempts": 1
+    },
+    {
+      "id": 79056146,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "team": {
+        "id": 186183,
+        "name": "2766A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 8,
+      "score": 60,
+      "attempts": 2
+    },
+    {
+      "id": 79056147,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "team": {
+        "id": 186183,
+        "name": "2766A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 8,
+      "score": 10,
+      "attempts": 3
+    },
+    {
+      "id": 79056148,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "team": {
+        "id": 188023,
+        "name": "88941C",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 9,
+      "score": 60,
+      "attempts": 3
+    },
+    {
+      "id": 79056149,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "team": {
+        "id": 188023,
+        "name": "88941C",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 9,
+      "score": 10,
+      "attempts": 1
+    },
+    {
+      "id": 79056150,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "team": {
+        "id": 191054,
+        "name": "24067Z",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 10,
+      "score": 50,
+      "attempts": 1
+    },
+    {
+      "id": 79056151,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "team": {
+        "id": 191054,
+        "name": "24067Z",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 10,
+      "score": 18,
+      "attempts": 2
+    },
+    {
+      "id": 79056152,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "team": {
+        "id": 198501,
+        "name": "88518Z",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 11,
+      "score": 30,
+      "attempts": 2
+    },
+    {
+      "id": 79056153,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "team": {
+        "id": 198501,
+        "name": "88518Z",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 11,
+      "score": 18,
+      "attempts": 3
+    },
+    {
+      "id": 79056154,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "team": {
+        "id": 185944,
+        "name": "3283A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 12,
+      "score": 13,
+      "attempts": 1
+    },
+    {
+      "id": 79056155,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "team": {
+        "id": 185944,
+        "name": "3283A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 12,
+      "score": 8,
+      "attempts": 1
+    },
+    {
+      "id": 79056156,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "team": {
+        "id": 198133,
+        "name": "13880A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 13,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79056157,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "team": {
+        "id": 198133,
+        "name": "13880A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 13,
+      "score": 20,
+      "attempts": 2
+    },
+    {
+      "id": 79056158,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "team": {
+        "id": 197743,
+        "name": "8632X",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 14,
+      "score": 10,
+      "attempts": 1
+    },
+    {
+      "id": 79056159,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "team": {
+        "id": 197743,
+        "name": "8632X",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 14,
+      "score": 10,
+      "attempts": 1
+    },
+    {
+      "id": 79056160,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "team": {
+        "id": 197745,
+        "name": "2966X",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 15,
+      "score": 20,
+      "attempts": 2
+    },
+    {
+      "id": 79056161,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "team": {
+        "id": 197745,
+        "name": "2966X",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 15,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79056162,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "team": {
+        "id": 198317,
+        "name": "91200Y",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 16,
+      "score": 18,
+      "attempts": 3
+    },
+    {
+      "id": 79056163,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "team": {
+        "id": 198317,
+        "name": "91200Y",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 16,
+      "score": 0,
+      "attempts": 1
+    },
+    {
+      "id": 79056164,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "team": {
+        "id": 112041,
+        "name": "691A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 17,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79056165,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "team": {
+        "id": 112041,
+        "name": "691A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 17,
+      "score": 10,
+      "attempts": 3
+    },
+    {
+      "id": 79056166,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "team": {
+        "id": 179249,
+        "name": "71639K",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 18,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79056167,
+      "event": {
+        "id": 64431,
+        "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 高中组",
+        "code": "RE-V5RC-26-4431"
+      },
+      "team": {
+        "id": 179249,
+        "name": "71639K",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 18,
+      "score": 0,
+      "attempts": 1
+    }
+  ]
+}

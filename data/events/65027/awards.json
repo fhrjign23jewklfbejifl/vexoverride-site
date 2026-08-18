@@ -1,0 +1,243 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65027/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65027/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65027/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 15,
+    "total": 15,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 286275,
+      "event": {
+        "id": 65027,
+        "name": "Rubber City Rumble - Presented by Akron Roobotics: VEX V5 Robotics Competition™ Override™ Middle School",
+        "code": "RE-V5RC-26-5027"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286276,
+      "event": {
+        "id": 65027,
+        "name": "Rubber City Rumble - Presented by Akron Roobotics: VEX V5 Robotics Competition™ Override™ Middle School",
+        "code": "RE-V5RC-26-5027"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286277,
+      "event": {
+        "id": 65027,
+        "name": "Rubber City Rumble - Presented by Akron Roobotics: VEX V5 Robotics Competition™ Override™ Middle School",
+        "code": "RE-V5RC-26-5027"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286278,
+      "event": {
+        "id": 65027,
+        "name": "Rubber City Rumble - Presented by Akron Roobotics: VEX V5 Robotics Competition™ Override™ Middle School",
+        "code": "RE-V5RC-26-5027"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286279,
+      "event": {
+        "id": 65027,
+        "name": "Rubber City Rumble - Presented by Akron Roobotics: VEX V5 Robotics Competition™ Override™ Middle School",
+        "code": "RE-V5RC-26-5027"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286280,
+      "event": {
+        "id": 65027,
+        "name": "Rubber City Rumble - Presented by Akron Roobotics: VEX V5 Robotics Competition™ Override™ Middle School",
+        "code": "RE-V5RC-26-5027"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286281,
+      "event": {
+        "id": 65027,
+        "name": "Rubber City Rumble - Presented by Akron Roobotics: VEX V5 Robotics Competition™ Override™ Middle School",
+        "code": "RE-V5RC-26-5027"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286282,
+      "event": {
+        "id": 65027,
+        "name": "Rubber City Rumble - Presented by Akron Roobotics: VEX V5 Robotics Competition™ Override™ Middle School",
+        "code": "RE-V5RC-26-5027"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286283,
+      "event": {
+        "id": 65027,
+        "name": "Rubber City Rumble - Presented by Akron Roobotics: VEX V5 Robotics Competition™ Override™ Middle School",
+        "code": "RE-V5RC-26-5027"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286284,
+      "event": {
+        "id": 65027,
+        "name": "Rubber City Rumble - Presented by Akron Roobotics: VEX V5 Robotics Competition™ Override™ Middle School",
+        "code": "RE-V5RC-26-5027"
+      },
+      "order": 78,
+      "title": "Create Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286285,
+      "event": {
+        "id": 65027,
+        "name": "Rubber City Rumble - Presented by Akron Roobotics: VEX V5 Robotics Competition™ Override™ Middle School",
+        "code": "RE-V5RC-26-5027"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286286,
+      "event": {
+        "id": 65027,
+        "name": "Rubber City Rumble - Presented by Akron Roobotics: VEX V5 Robotics Competition™ Override™ Middle School",
+        "code": "RE-V5RC-26-5027"
+      },
+      "order": 80,
+      "title": "Energy Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286287,
+      "event": {
+        "id": 65027,
+        "name": "Rubber City Rumble - Presented by Akron Roobotics: VEX V5 Robotics Competition™ Override™ Middle School",
+        "code": "RE-V5RC-26-5027"
+      },
+      "order": 81,
+      "title": "Inspire Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286288,
+      "event": {
+        "id": 65027,
+        "name": "Rubber City Rumble - Presented by Akron Roobotics: VEX V5 Robotics Competition™ Override™ Middle School",
+        "code": "RE-V5RC-26-5027"
+      },
+      "order": 82,
+      "title": "Volunteer of the Year Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286715,
+      "event": {
+        "id": 65027,
+        "name": "Rubber City Rumble - Presented by Akron Roobotics: VEX V5 Robotics Competition™ Override™ Middle School",
+        "code": "RE-V5RC-26-5027"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

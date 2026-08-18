@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65187,
+    "sku": "RE-V5RC-26-5187",
+    "name": "2026 Idaho Override Season Opener: Sponsored by Grand Canyon University",
+    "start": "2026-10-24T00:00:00-04:00",
+    "end": "2026-10-24T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Nampa Christian Schools",
+      "address_1": "11920 West Flamingo Avenue",
+      "address_2": null,
+      "city": "Nampa",
+      "region": "Idaho",
+      "postcode": "83651",
+      "country": "United States",
+      "coordinates": {
+        "lat": 43.59876,
+        "lon": -116.631628
+      }
+    },
+    "locations": {
+      "2026-10-24": {
+        "venue": "Nampa Christian Schools",
+        "address_1": "11920 West Flamingo Avenue",
+        "address_2": null,
+        "city": "Nampa",
+        "region": "Idaho",
+        "postcode": "83651",
+        "country": "United States",
+        "coordinates": {
+          "lat": 43.59876,
+          "lon": -116.631628
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

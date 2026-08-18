@@ -1,0 +1,258 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64349/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64349/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64349/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 16,
+    "total": 16,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 281197,
+      "event": {
+        "id": 64349,
+        "name": "VEX V5RC Override™ Qualification Tournament: St Andrews International School Bangkok",
+        "code": "RE-V5RC-26-4349"
+      },
+      "order": 60,
+      "title": "Excellence Award - High School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281198,
+      "event": {
+        "id": 64349,
+        "name": "VEX V5RC Override™ Qualification Tournament: St Andrews International School Bangkok",
+        "code": "RE-V5RC-26-4349"
+      },
+      "order": 61,
+      "title": "Excellence Award - Middle School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281199,
+      "event": {
+        "id": 64349,
+        "name": "VEX V5RC Override™ Qualification Tournament: St Andrews International School Bangkok",
+        "code": "RE-V5RC-26-4349"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281200,
+      "event": {
+        "id": 64349,
+        "name": "VEX V5RC Override™ Qualification Tournament: St Andrews International School Bangkok",
+        "code": "RE-V5RC-26-4349"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281201,
+      "event": {
+        "id": 64349,
+        "name": "VEX V5RC Override™ Qualification Tournament: St Andrews International School Bangkok",
+        "code": "RE-V5RC-26-4349"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281202,
+      "event": {
+        "id": 64349,
+        "name": "VEX V5RC Override™ Qualification Tournament: St Andrews International School Bangkok",
+        "code": "RE-V5RC-26-4349"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281203,
+      "event": {
+        "id": 64349,
+        "name": "VEX V5RC Override™ Qualification Tournament: St Andrews International School Bangkok",
+        "code": "RE-V5RC-26-4349"
+      },
+      "order": 71,
+      "title": "Robot Skills 2nd Place (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281204,
+      "event": {
+        "id": 64349,
+        "name": "VEX V5RC Override™ Qualification Tournament: St Andrews International School Bangkok",
+        "code": "RE-V5RC-26-4349"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281205,
+      "event": {
+        "id": 64349,
+        "name": "VEX V5RC Override™ Qualification Tournament: St Andrews International School Bangkok",
+        "code": "RE-V5RC-26-4349"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281206,
+      "event": {
+        "id": 64349,
+        "name": "VEX V5RC Override™ Qualification Tournament: St Andrews International School Bangkok",
+        "code": "RE-V5RC-26-4349"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281207,
+      "event": {
+        "id": 64349,
+        "name": "VEX V5RC Override™ Qualification Tournament: St Andrews International School Bangkok",
+        "code": "RE-V5RC-26-4349"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281208,
+      "event": {
+        "id": 64349,
+        "name": "VEX V5RC Override™ Qualification Tournament: St Andrews International School Bangkok",
+        "code": "RE-V5RC-26-4349"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281209,
+      "event": {
+        "id": 64349,
+        "name": "VEX V5RC Override™ Qualification Tournament: St Andrews International School Bangkok",
+        "code": "RE-V5RC-26-4349"
+      },
+      "order": 78,
+      "title": "Create Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281210,
+      "event": {
+        "id": 64349,
+        "name": "VEX V5RC Override™ Qualification Tournament: St Andrews International School Bangkok",
+        "code": "RE-V5RC-26-4349"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281211,
+      "event": {
+        "id": 64349,
+        "name": "VEX V5RC Override™ Qualification Tournament: St Andrews International School Bangkok",
+        "code": "RE-V5RC-26-4349"
+      },
+      "order": 80,
+      "title": "Energy Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 281212,
+      "event": {
+        "id": 64349,
+        "name": "VEX V5RC Override™ Qualification Tournament: St Andrews International School Bangkok",
+        "code": "RE-V5RC-26-4349"
+      },
+      "order": 81,
+      "title": "Inspire Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

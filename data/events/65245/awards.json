@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65245/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65245/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65245/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 6,
+    "total": 6,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 287732,
+      "event": {
+        "id": 65245,
+        "name": "NSW | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Knox Grammar School",
+        "code": "RE-V5RC-26-5245"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287733,
+      "event": {
+        "id": 65245,
+        "name": "NSW | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Knox Grammar School",
+        "code": "RE-V5RC-26-5245"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287734,
+      "event": {
+        "id": 65245,
+        "name": "NSW | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Knox Grammar School",
+        "code": "RE-V5RC-26-5245"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287735,
+      "event": {
+        "id": 65245,
+        "name": "NSW | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Knox Grammar School",
+        "code": "RE-V5RC-26-5245"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287736,
+      "event": {
+        "id": 65245,
+        "name": "NSW | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Knox Grammar School",
+        "code": "RE-V5RC-26-5245"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287737,
+      "event": {
+        "id": 65245,
+        "name": "NSW | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Knox Grammar School",
+        "code": "RE-V5RC-26-5245"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

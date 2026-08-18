@@ -1,0 +1,396 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64442/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64442/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64442/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 14,
+    "total": 14,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 198553,
+      "number": "10060A",
+      "team_name": "AK Robotics Singapore - A Team",
+      "robot_name": "",
+      "organization": "AK Robotics Singapore",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Singapore",
+        "region": null,
+        "postcode": "238855",
+        "country": "Singapore",
+        "coordinates": {
+          "lat": 1.3,
+          "lon": 103.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 199640,
+      "number": "10060B",
+      "team_name": "AK Robotics Singapore - B Team",
+      "robot_name": "",
+      "organization": "AK Robotics Singapore",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Singapore",
+        "region": null,
+        "postcode": "238855",
+        "country": "Singapore",
+        "coordinates": {
+          "lat": 1.3,
+          "lon": 103.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 199641,
+      "number": "10060C",
+      "team_name": "AK Robotics Singapore - C Team",
+      "robot_name": "",
+      "organization": "AK Robotics Singapore",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Singapore",
+        "region": null,
+        "postcode": "238855",
+        "country": "Singapore",
+        "coordinates": {
+          "lat": 1.3,
+          "lon": 103.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 199642,
+      "number": "10060D",
+      "team_name": "AK Robotics Singapore - D Team",
+      "robot_name": "",
+      "organization": "AK Robotics Singapore",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Singapore",
+        "region": null,
+        "postcode": "238855",
+        "country": "Singapore",
+        "coordinates": {
+          "lat": 1.3,
+          "lon": 103.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 198554,
+      "number": "33699W",
+      "team_name": "AK Robotics Singapore - W Team",
+      "robot_name": "",
+      "organization": "AK Robotics Singapore",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Singapore",
+        "region": null,
+        "postcode": "238855",
+        "country": "Singapore",
+        "coordinates": {
+          "lat": 1.3,
+          "lon": 103.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 197687,
+      "number": "33699X",
+      "team_name": "AK2",
+      "robot_name": "",
+      "organization": "AK Robotics Singapore",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Singapore",
+        "region": null,
+        "postcode": "238855",
+        "country": "Singapore",
+        "coordinates": {
+          "lat": 1.3,
+          "lon": 103.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 191385,
+      "number": "81819A",
+      "team_name": "BLOAF",
+      "robot_name": "",
+      "organization": "Innovac Makerspace",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Singapore",
+        "region": null,
+        "postcode": "229233",
+        "country": "Singapore",
+        "coordinates": {
+          "lat": 1.3,
+          "lon": 103.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 191386,
+      "number": "81819C",
+      "team_name": "The Mechanical Oratrice",
+      "robot_name": "",
+      "organization": "Innovac Makerspace",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Singapore",
+        "region": null,
+        "postcode": "229233",
+        "country": "Singapore",
+        "coordinates": {
+          "lat": 1.3,
+          "lon": 103.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 192465,
+      "number": "81819E",
+      "team_name": "Lore",
+      "robot_name": "",
+      "organization": "Innovac Makerspace",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Singapore",
+        "region": null,
+        "postcode": "229233",
+        "country": "Singapore",
+        "coordinates": {
+          "lat": 1.3,
+          "lon": 103.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 192466,
+      "number": "81819H",
+      "team_name": "404 TNNF",
+      "robot_name": "",
+      "organization": "Innovac Makerspace",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Singapore",
+        "region": null,
+        "postcode": "229233",
+        "country": "Singapore",
+        "coordinates": {
+          "lat": 1.3,
+          "lon": 103.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 199345,
+      "number": "81819K",
+      "team_name": "Metrix",
+      "robot_name": "",
+      "organization": "Innovac Makerspace",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Singapore",
+        "region": null,
+        "postcode": "229233",
+        "country": "Singapore",
+        "coordinates": {
+          "lat": 1.3,
+          "lon": 103.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 198480,
+      "number": "81819M",
+      "team_name": "Metrix",
+      "robot_name": "",
+      "organization": "Innovac Makerspace",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Singapore",
+        "region": null,
+        "postcode": "229233",
+        "country": "Singapore",
+        "coordinates": {
+          "lat": 1.3,
+          "lon": 103.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 198479,
+      "number": "81819S",
+      "team_name": "Unknown",
+      "robot_name": "",
+      "organization": "Innovac Makerspace",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Singapore",
+        "region": null,
+        "postcode": "229233",
+        "country": "Singapore",
+        "coordinates": {
+          "lat": 1.3,
+          "lon": 103.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199342,
+      "number": "81819X",
+      "team_name": "Metrix",
+      "robot_name": "",
+      "organization": "Innovac Makerspace",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Singapore",
+        "region": null,
+        "postcode": "229233",
+        "country": "Singapore",
+        "coordinates": {
+          "lat": 1.3,
+          "lon": 103.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65485,
+    "sku": "RE-V5RC-26-5485",
+    "name": "V5RC Override Richmond MS Last Chance",
+    "start": "2027-01-31T00:00:00-05:00",
+    "end": "2027-01-31T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "RoboPlanet",
+      "address_1": "241-7080 River Road",
+      "address_2": null,
+      "city": "Richmond",
+      "region": "British Columbia",
+      "postcode": "V6X1X5",
+      "country": "Canada",
+      "coordinates": {
+        "lat": 49.178719,
+        "lon": -123.144037
+      }
+    },
+    "locations": {
+      "2027-01-31": {
+        "venue": "RoboPlanet",
+        "address_1": "241-7080 River Road",
+        "address_2": null,
+        "city": "Richmond",
+        "region": "British Columbia",
+        "postcode": "V6X1X5",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 49.178719,
+          "lon": -123.144037
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

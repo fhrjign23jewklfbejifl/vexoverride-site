@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64212,
+    "sku": "RE-V5RC-26-4212",
+    "name": "Centennial roBOOtics SPOOKtacular 2026: VEX V5 Robotics Competition™ Override™ - HS/MS Tournament - CA Region 3",
+    "start": "2026-10-31T00:00:00-04:00",
+    "end": "2026-10-31T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Centennial High School",
+      "address_1": "8601 Hageman Road",
+      "address_2": null,
+      "city": "Bakersfield",
+      "region": "California",
+      "postcode": "93312",
+      "country": "United States",
+      "coordinates": {
+        "lat": 35.397816,
+        "lon": -119.09908
+      }
+    },
+    "locations": {
+      "2026-10-31": {
+        "venue": "Centennial High School",
+        "address_1": "8601 Hageman Road",
+        "address_2": null,
+        "city": "Bakersfield",
+        "region": "California",
+        "postcode": "93312",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.397816,
+          "lon": -119.09908
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

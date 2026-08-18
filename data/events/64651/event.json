@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64651,
+    "sku": "RE-V5RC-26-4651",
+    "name": "DRC VEX V5 Robotics Competition #1: HS & MS, Remote Engineering Notebooks and Interviews",
+    "start": "2026-10-24T00:00:00-04:00",
+    "end": "2026-10-24T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Dublin Robotics Club",
+      "address_1": "6500 Dublin Boulevard",
+      "address_2": null,
+      "city": "Dublin",
+      "region": "California",
+      "postcode": "94568",
+      "country": "United States",
+      "coordinates": {
+        "lat": 37.703403,
+        "lon": -121.909988
+      }
+    },
+    "locations": {
+      "2026-10-24": {
+        "venue": "Dublin Robotics Club",
+        "address_1": "6500 Dublin Boulevard",
+        "address_2": null,
+        "city": "Dublin",
+        "region": "California",
+        "postcode": "94568",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.703403,
+          "lon": -121.909988
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

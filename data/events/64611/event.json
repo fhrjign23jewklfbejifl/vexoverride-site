@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64611,
+    "sku": "RE-V5RC-26-4611",
+    "name": "Palmerston North VEX V5 Robotics Competition™ Tournament 3: Override™  @ Freyberg High School (Kiwibots Event in Central Robotics Region)",
+    "start": "2026-08-22T00:00:00-04:00",
+    "end": "2026-08-22T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Freyberg High School",
+      "address_1": "33 Freyberg Street",
+      "address_2": null,
+      "city": "Palmerston North",
+      "region": null,
+      "postcode": "4414",
+      "country": "New Zealand",
+      "coordinates": {
+        "lat": -40.336809,
+        "lon": 175.626836
+      }
+    },
+    "locations": {
+      "2026-08-22": {
+        "venue": "Freyberg High School",
+        "address_1": "33 Freyberg Street",
+        "address_2": null,
+        "city": "Palmerston North",
+        "region": null,
+        "postcode": "4414",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -40.336809,
+          "lon": 175.626836
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65064/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65064/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65064/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 1,
+    "total": 1,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 286800,
+      "event": {
+        "id": 65064,
+        "name": "SE MI Fall VEX V5 Robotics Competition™ League Sessions: Blended Override™ HS/MS Teams",
+        "code": "RE-V5RC-26-5064"
+      },
+      "order": 82,
+      "title": "Volunteer of the Year Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

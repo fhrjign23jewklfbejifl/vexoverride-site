@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65085,
+    "sku": "RE-V5RC-26-5085",
+    "name": "Bogle Brawl III: VEX V5 Robotics Competition, MS Schools Only,  All In Person Judging",
+    "start": "2027-02-13T00:00:00-05:00",
+    "end": "2027-02-13T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Bogle Junior High School",
+      "address_1": "1600 West Queen Creek Road",
+      "address_2": null,
+      "city": "Chandler",
+      "region": "Arizona",
+      "postcode": "85248",
+      "country": "United States",
+      "coordinates": {
+        "lat": 33.262396,
+        "lon": -111.869879
+      }
+    },
+    "locations": {
+      "2027-02-13": {
+        "venue": "Bogle Junior High School",
+        "address_1": "1600 West Queen Creek Road",
+        "address_2": null,
+        "city": "Chandler",
+        "region": "Arizona",
+        "postcode": "85248",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.262396,
+          "lon": -111.869879
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

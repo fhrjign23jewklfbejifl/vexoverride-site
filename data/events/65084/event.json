@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65084,
+    "sku": "RE-V5RC-26-5084",
+    "name": "PYRS Seaquam Spooktacular Season Opener",
+    "start": "2026-10-31T00:00:00-04:00",
+    "end": "2026-10-31T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Seaquam Secondary School",
+      "address_1": "11584 Lyon Rd",
+      "address_2": null,
+      "city": "Delta",
+      "region": "British Columbia",
+      "postcode": "V4E 2K4",
+      "country": "Canada",
+      "coordinates": {
+        "lat": 49.126623,
+        "lon": -122.902243
+      }
+    },
+    "locations": {
+      "2026-10-31": {
+        "venue": "Seaquam Secondary School",
+        "address_1": "11584 Lyon Rd",
+        "address_2": null,
+        "city": "Delta",
+        "region": "British Columbia",
+        "postcode": "V4E 2K4",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 49.126623,
+          "lon": -122.902243
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

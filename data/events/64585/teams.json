@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64585/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64585/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64585/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 4,
+    "total": 4,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 32038,
+      "number": "169X",
+      "team_name": "The Cavalry",
+      "robot_name": "X-Ray",
+      "organization": "THE HAVERFORD SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Haverford",
+        "region": "Pennsylvania",
+        "postcode": "19041",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40,
+          "lon": -75.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 184936,
+      "number": "66300A",
+      "team_name": "Aurora",
+      "robot_name": "",
+      "organization": "Northstar Robots",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Malvern",
+        "region": "Pennsylvania",
+        "postcode": "19355",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40.1,
+          "lon": -75.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 139607,
+      "number": "70852A",
+      "team_name": "Mechanical Frogs",
+      "robot_name": "Chris Kale",
+      "organization": "Great Valley Community Organization",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Malvern",
+        "region": "Pennsylvania",
+        "postcode": "19355",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40,
+          "lon": -75.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 185365,
+      "number": "77727H",
+      "team_name": "Home-field Advantage",
+      "robot_name": "",
+      "organization": "Magnus Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Harrisburg",
+        "region": "Pennsylvania",
+        "postcode": "17104",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40.3,
+          "lon": -76.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
+}

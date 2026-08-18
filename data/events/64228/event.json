@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64228,
+    "sku": "RE-V5RC-26-4228",
+    "name": "VIC | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Templestowe College - Season Opener",
+    "start": "2026-06-22T00:00:00-04:00",
+    "end": "2026-06-22T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Templestowe College",
+      "address_1": "7 Cypress Avenue",
+      "address_2": null,
+      "city": "Templestowe Lower",
+      "region": "Victoria",
+      "postcode": "3107",
+      "country": "Australia",
+      "coordinates": {
+        "lat": -37.766252,
+        "lon": 145.122387
+      }
+    },
+    "locations": {
+      "2026-06-22": {
+        "venue": "Templestowe College",
+        "address_1": "7 Cypress Avenue",
+        "address_2": null,
+        "city": "Templestowe Lower",
+        "region": "Victoria",
+        "postcode": "3107",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.766252,
+          "lon": 145.122387
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Division Bus",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": true,
+    "event_type": null
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64805,
+    "sku": "RE-V5RC-26-4805",
+    "name": "LCA VEX V5 Override High School Only",
+    "start": "2026-11-14T00:00:00-05:00",
+    "end": "2026-11-14T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Cornerstone Christian Academy",
+      "address_1": "4801 South Davy Crockett Parkway",
+      "address_2": null,
+      "city": "Morristown",
+      "region": "Tennessee",
+      "postcode": "37813",
+      "country": "United States",
+      "coordinates": {
+        "lat": 36.155428,
+        "lon": -83.270326
+      }
+    },
+    "locations": {
+      "2026-11-14": {
+        "venue": "Cornerstone Christian Academy",
+        "address_1": "4801 South Davy Crockett Parkway",
+        "address_2": null,
+        "city": "Morristown",
+        "region": "Tennessee",
+        "postcode": "37813",
+        "country": "United States",
+        "coordinates": {
+          "lat": 36.155428,
+          "lon": -83.270326
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65093,
+    "sku": "RE-V5RC-26-5093",
+    "name": "Norwell Robotics VEX V5 Robotics Competition™: Override™ Middle and High School Teams",
+    "start": "2026-12-05T00:00:00-05:00",
+    "end": "2026-12-05T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Norwell Middle School",
+      "address_1": "1100 U.S. 224",
+      "address_2": null,
+      "city": "Ossian",
+      "region": "Indiana",
+      "postcode": "46777",
+      "country": "United States",
+      "coordinates": {
+        "lat": 40.827563,
+        "lon": -85.201062
+      }
+    },
+    "locations": {
+      "2026-12-05": {
+        "venue": "Norwell Middle School",
+        "address_1": "1100 U.S. 224",
+        "address_2": null,
+        "city": "Ossian",
+        "region": "Indiana",
+        "postcode": "46777",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40.827563,
+          "lon": -85.201062
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

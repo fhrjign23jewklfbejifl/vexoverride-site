@@ -1,0 +1,693 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64480/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64480/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64480/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 25,
+    "total": 25,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 128042,
+      "number": "631A",
+      "team_name": "Agamemnon",
+      "robot_name": "",
+      "organization": "Leo Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Leo",
+        "region": "Indiana",
+        "postcode": "46765",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.2,
+          "lon": -85
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 196967,
+      "number": "631X",
+      "team_name": "Ψ",
+      "robot_name": "",
+      "organization": "Leo Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Leo",
+        "region": "Indiana",
+        "postcode": "46765",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.2,
+          "lon": -85
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 117390,
+      "number": "703A",
+      "team_name": "703A",
+      "robot_name": "",
+      "organization": "NORWELL HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Ossian",
+        "region": "Indiana",
+        "postcode": "46777",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40.8,
+          "lon": -85.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 118347,
+      "number": "703B",
+      "team_name": "703B",
+      "robot_name": "",
+      "organization": "NORWELL HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Ossian",
+        "region": "Indiana",
+        "postcode": "46777",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40.8,
+          "lon": -85.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 118348,
+      "number": "703C",
+      "team_name": "703C",
+      "robot_name": "",
+      "organization": "NORWELL HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Ossian",
+        "region": "Indiana",
+        "postcode": "46777",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40.8,
+          "lon": -85.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 155611,
+      "number": "2567J",
+      "team_name": "Porta-Botz!-Jester",
+      "robot_name": "",
+      "organization": "Portage High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Portage",
+        "region": "Indiana",
+        "postcode": "46368",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.6,
+          "lon": -87.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 102111,
+      "number": "2567M",
+      "team_name": "Porta-Botz!-Maverick",
+      "robot_name": "",
+      "organization": "Portage High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Portage",
+        "region": "Indiana",
+        "postcode": "46368",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.6,
+          "lon": -87.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 83757,
+      "number": "2567R",
+      "team_name": "Porta-Botz!-MCJROTC",
+      "robot_name": "",
+      "organization": "Portage High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Portage",
+        "region": "Indiana",
+        "postcode": "46368",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.6,
+          "lon": -87.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 158369,
+      "number": "2567T",
+      "team_name": "Porta-Botz!-T Flex Rex",
+      "robot_name": "",
+      "organization": "Portage High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Portage",
+        "region": "Indiana",
+        "postcode": "46368",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.6,
+          "lon": -87.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 187011,
+      "number": "2567U",
+      "team_name": "Porta-Botz!-UltraViolet",
+      "robot_name": "",
+      "organization": "Portage High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Portage",
+        "region": "Indiana",
+        "postcode": "46368",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.6,
+          "lon": -87.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 184532,
+      "number": "2568Z",
+      "team_name": "Porta-Botz! Zoinks!",
+      "robot_name": "",
+      "organization": "Portage Middle School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Portage",
+        "region": "Indiana",
+        "postcode": "46368",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.6,
+          "lon": -87.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 49213,
+      "number": "6842A",
+      "team_name": "Apollo",
+      "robot_name": "",
+      "organization": "PARK TUDOR SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Indianapolis",
+        "region": "Indiana",
+        "postcode": "46240",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39.9,
+          "lon": -86.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 84341,
+      "number": "6842V",
+      "team_name": "Vicious Vortex",
+      "robot_name": "",
+      "organization": "PARK TUDOR SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Indianapolis",
+        "region": "Indiana",
+        "postcode": "46240",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39.9,
+          "lon": -86.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 198456,
+      "number": "11258Z",
+      "team_name": "Metis Robotics",
+      "robot_name": "",
+      "organization": "Metis Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Columbia City",
+        "region": "Indiana",
+        "postcode": "46725",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.3,
+          "lon": -85.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 155198,
+      "number": "19379A",
+      "team_name": "Robo Bears",
+      "robot_name": "",
+      "organization": "ST PAUL'S LUTHERAN SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Fort Wayne",
+        "region": "Indiana",
+        "postcode": "46802",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.1,
+          "lon": -85.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 169491,
+      "number": "19379B",
+      "team_name": "RoboBears",
+      "robot_name": "",
+      "organization": "ST PAUL'S LUTHERAN SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Fort Wayne",
+        "region": "Indiana",
+        "postcode": "46802",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.1,
+          "lon": -85.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 102675,
+      "number": "21973A",
+      "team_name": "21973A",
+      "robot_name": "",
+      "organization": "Norwell Middle School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Ossian",
+        "region": "Indiana",
+        "postcode": "46777",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40.8,
+          "lon": -85.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 103862,
+      "number": "21973B",
+      "team_name": "21973B",
+      "robot_name": "",
+      "organization": "Norwell Middle School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Ossian",
+        "region": "Indiana",
+        "postcode": "46777",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40.8,
+          "lon": -85.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 103863,
+      "number": "21973C",
+      "team_name": "21973C",
+      "robot_name": "",
+      "organization": "Norwell Middle School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Ossian",
+        "region": "Indiana",
+        "postcode": "46777",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40.8,
+          "lon": -85.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 119339,
+      "number": "33112A",
+      "team_name": "The Real Robo Rangers - Disco Inferno",
+      "robot_name": "Disco Inferno",
+      "organization": "CONCORDIA LUTHERAN HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Ft Wayne",
+        "region": "Indiana",
+        "postcode": "46805",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.1,
+          "lon": -85.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 119341,
+      "number": "33112B",
+      "team_name": "The Real Robo Rangers - Atari Maniac",
+      "robot_name": "Atari Maniac",
+      "organization": "CONCORDIA LUTHERAN HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Ft Wayne",
+        "region": "Indiana",
+        "postcode": "46805",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.1,
+          "lon": -85.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 154488,
+      "number": "33112G",
+      "team_name": "The Real Robo Rangers - Malibu Barbies",
+      "robot_name": "Malibu Barbies",
+      "organization": "CONCORDIA LUTHERAN HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Ft Wayne",
+        "region": "Indiana",
+        "postcode": "46805",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.1,
+          "lon": -85.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 187501,
+      "number": "33112J",
+      "team_name": "The Real Robo Rangers - Judgement Day",
+      "robot_name": "Judgement Day",
+      "organization": "CONCORDIA LUTHERAN HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Ft Wayne",
+        "region": "Indiana",
+        "postcode": "46805",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.1,
+          "lon": -85.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 181283,
+      "number": "33112W",
+      "team_name": "The Real Robo Rangers - Bratz Attack",
+      "robot_name": "Bratz Attack",
+      "organization": "CONCORDIA LUTHERAN HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Ft Wayne",
+        "region": "Indiana",
+        "postcode": "46805",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.1,
+          "lon": -85.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 170745,
+      "number": "76316J",
+      "team_name": "QC Robotics",
+      "robot_name": "",
+      "organization": "QC Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Carmel",
+        "region": "Indiana",
+        "postcode": "46032",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39.9,
+          "lon": -86.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
+}

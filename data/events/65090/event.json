@@ -1,0 +1,110 @@
+{
+  "data": {
+    "id": 65090,
+    "sku": "RE-V5RC-26-5090",
+    "name": "NSW | VEX V5 Robotics Competition™ (Blended): Override™ League @ The King's School",
+    "start": "2026-08-28T00:00:00-04:00",
+    "end": "2026-10-25T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "The King's School",
+      "address_1": "87-129 Pennant Hills Road",
+      "address_2": null,
+      "city": "North Parramatta",
+      "region": "New South Wales",
+      "postcode": "2151",
+      "country": "Australia",
+      "coordinates": {
+        "lat": -33.785844,
+        "lon": 151.024752
+      }
+    },
+    "locations": {
+      "2026-08-28": {
+        "venue": "The King's School",
+        "address_1": "87-129 Pennant Hills Road",
+        "address_2": null,
+        "city": "North Parramatta",
+        "region": "New South Wales",
+        "postcode": "2151",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -33.785844,
+          "lon": 151.024752
+        }
+      },
+      "2026-09-11": {
+        "venue": "The King's School",
+        "address_1": "87-129 Pennant Hills Road",
+        "address_2": null,
+        "city": "North Parramatta",
+        "region": "New South Wales",
+        "postcode": "2151",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -33.785844,
+          "lon": 151.024752
+        }
+      },
+      "2026-09-25": {
+        "venue": "The King's School",
+        "address_1": "87-129 Pennant Hills Road",
+        "address_2": null,
+        "city": "North Parramatta",
+        "region": "New South Wales",
+        "postcode": "2151",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -33.785844,
+          "lon": 151.024752
+        }
+      },
+      "2026-10-09": {
+        "venue": "The King's School",
+        "address_1": "87-129 Pennant Hills Road",
+        "address_2": null,
+        "city": "North Parramatta",
+        "region": "New South Wales",
+        "postcode": "2151",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -33.785844,
+          "lon": 151.024752
+        }
+      },
+      "2026-10-25": {
+        "venue": "The King's School",
+        "address_1": "87-129 Pennant Hills Road",
+        "address_2": null,
+        "city": "North Parramatta",
+        "region": "New South Wales",
+        "postcode": "2151",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -33.785844,
+          "lon": 151.024752
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64615/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64615/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64615/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 3,
+    "total": 3,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 283323,
+      "event": {
+        "id": 64615,
+        "name": "New Plymouth VEX V5 Robotics Competition™ Tournament 5: Override™  @  New Plymouth Boys' High School (Kiwibots Event in Central Robotics Region)",
+        "code": "RE-V5RC-26-4615"
+      },
+      "order": 60,
+      "title": "Excellence Award - High School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283324,
+      "event": {
+        "id": 64615,
+        "name": "New Plymouth VEX V5 Robotics Competition™ Tournament 5: Override™  @  New Plymouth Boys' High School (Kiwibots Event in Central Robotics Region)",
+        "code": "RE-V5RC-26-4615"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283325,
+      "event": {
+        "id": 64615,
+        "name": "New Plymouth VEX V5 Robotics Competition™ Tournament 5: Override™  @  New Plymouth Boys' High School (Kiwibots Event in Central Robotics Region)",
+        "code": "RE-V5RC-26-4615"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

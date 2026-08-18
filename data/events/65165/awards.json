@@ -1,0 +1,63 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65165/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65165/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65165/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 3,
+    "total": 3,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 287321,
+      "event": {
+        "id": 65165,
+        "name": "Best in Southwest★FL ~ VEX V5 Robotics Over Ride Skills Only: High School & Middle School",
+        "code": "RE-V5RC-26-5165"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287322,
+      "event": {
+        "id": 65165,
+        "name": "Best in Southwest★FL ~ VEX V5 Robotics Over Ride Skills Only: High School & Middle School",
+        "code": "RE-V5RC-26-5165"
+      },
+      "order": 71,
+      "title": "Robot Skills 2nd Place (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287323,
+      "event": {
+        "id": 65165,
+        "name": "Best in Southwest★FL ~ VEX V5 Robotics Over Ride Skills Only: High School & Middle School",
+        "code": "RE-V5RC-26-5165"
+      },
+      "order": 72,
+      "title": "Robot Skills 3rd Place (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

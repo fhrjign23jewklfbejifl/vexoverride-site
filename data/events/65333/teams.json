@@ -1,0 +1,423 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65333/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65333/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65333/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 15,
+    "total": 15,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 169697,
+      "number": "2393S",
+      "team_name": "Valor",
+      "robot_name": "",
+      "organization": "Valor Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Carmel",
+        "region": "Indiana",
+        "postcode": "46033",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40,
+          "lon": -86.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 197542,
+      "number": "5690G",
+      "team_name": "Glitch",
+      "robot_name": "",
+      "organization": "Bishop Chatard",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Indianapolis",
+        "region": "Indiana",
+        "postcode": "46220",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39.9,
+          "lon": -86.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 140080,
+      "number": "6210B",
+      "team_name": "Built Different",
+      "robot_name": "",
+      "organization": "Heritage Christian School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Indianapolis",
+        "region": "Indiana",
+        "postcode": "46250",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39.9,
+          "lon": -86.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 180093,
+      "number": "6210H",
+      "team_name": "Halapeños",
+      "robot_name": "",
+      "organization": "HERITAGE CHRISTIAN SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Indianapolis",
+        "region": "Indiana",
+        "postcode": "46250",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39.9,
+          "lon": -86.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 141601,
+      "number": "6210M",
+      "team_name": "Meta Mafia",
+      "robot_name": "",
+      "organization": "Heritage Christian School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Indianapolis",
+        "region": "Indiana",
+        "postcode": "46250",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39.9,
+          "lon": -86.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 186955,
+      "number": "6210P",
+      "team_name": "Please Work",
+      "robot_name": "",
+      "organization": "HERITAGE CHRISTIAN SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Indianapolis",
+        "region": "Indiana",
+        "postcode": "46250",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39.9,
+          "lon": -86.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 169694,
+      "number": "30013A",
+      "team_name": "Seymour Middle School - Crescendo",
+      "robot_name": "",
+      "organization": "SEYMOUR MIDDLE SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Seymour",
+        "region": "Indiana",
+        "postcode": "47274",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39,
+          "lon": -85.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 197497,
+      "number": "30013B",
+      "team_name": "Seymour Middle School V5",
+      "robot_name": "",
+      "organization": "SEYMOUR MIDDLE SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Seymour",
+        "region": "Indiana",
+        "postcode": "47274",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39,
+          "lon": -85.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 114956,
+      "number": "31330A",
+      "team_name": "Midwest Princesses",
+      "robot_name": "",
+      "organization": "SEYMOUR SENIOR HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Seymour",
+        "region": "Indiana",
+        "postcode": "47274",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39,
+          "lon": -85.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 158465,
+      "number": "31330C",
+      "team_name": "Cooked-Chat?",
+      "robot_name": "",
+      "organization": "SEYMOUR SENIOR HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Seymour",
+        "region": "Indiana",
+        "postcode": "47274",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39,
+          "lon": -85.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 167704,
+      "number": "31330D",
+      "team_name": "Dynasty",
+      "robot_name": "",
+      "organization": "SEYMOUR SENIOR HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Seymour",
+        "region": "Indiana",
+        "postcode": "47274",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39,
+          "lon": -85.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 66343,
+      "number": "99904A",
+      "team_name": "Dragons",
+      "robot_name": "",
+      "organization": "NEW PALESTINE HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "New Palestine",
+        "region": "Indiana",
+        "postcode": "46163",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39.7,
+          "lon": -85.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 66345,
+      "number": "99904C",
+      "team_name": "Catastrophic",
+      "robot_name": "",
+      "organization": "NEW PALESTINE HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "New Palestine",
+        "region": "Indiana",
+        "postcode": "46163",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39.7,
+          "lon": -85.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 66346,
+      "number": "99904D",
+      "team_name": "OverByte",
+      "robot_name": "Dragon 4",
+      "organization": "NEW PALESTINE HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "New Palestine",
+        "region": "Indiana",
+        "postcode": "46163",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39.7,
+          "lon": -85.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 110526,
+      "number": "99904E",
+      "team_name": "I'm a Banana",
+      "robot_name": "",
+      "organization": "NEW PALESTINE HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "New Palestine",
+        "region": "Indiana",
+        "postcode": "46163",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39.7,
+          "lon": -85.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
+}

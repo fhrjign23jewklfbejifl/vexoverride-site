@@ -1,0 +1,666 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64399/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64399/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64399/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 24,
+    "total": 24,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 1426,
+      "number": "1233A",
+      "team_name": "1233A",
+      "robot_name": "",
+      "organization": "CROWN POINT HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Crown Point",
+        "region": "Indiana",
+        "postcode": "46307",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.4,
+          "lon": -87.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 14662,
+      "number": "1233B",
+      "team_name": "Blazers",
+      "robot_name": "",
+      "organization": "Crown Point High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Crown Point",
+        "region": "Indiana",
+        "postcode": "46307",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.4,
+          "lon": -87.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 14665,
+      "number": "1233C",
+      "team_name": "CPHS Cookie Monsters",
+      "robot_name": "",
+      "organization": "CROWN POINT HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Crown Point",
+        "region": "Indiana",
+        "postcode": "46307",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.4,
+          "lon": -87.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 188940,
+      "number": "1233N",
+      "team_name": "CPHS Nacho Typical Team",
+      "robot_name": "",
+      "organization": "CROWN POINT HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Crown Point",
+        "region": "Indiana",
+        "postcode": "46307",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.4,
+          "lon": -87.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 189111,
+      "number": "1233V",
+      "team_name": "Vortex",
+      "robot_name": "",
+      "organization": "CROWN POINT HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Crown Point",
+        "region": "Indiana",
+        "postcode": "46307",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.4,
+          "lon": -87.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 94378,
+      "number": "1233X",
+      "team_name": "1233 X-Men",
+      "robot_name": "",
+      "organization": "CROWN POINT HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Crown Point",
+        "region": "Indiana",
+        "postcode": "46307",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.4,
+          "lon": -87.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 196918,
+      "number": "1323C",
+      "team_name": "Crashies",
+      "robot_name": "Pancake",
+      "organization": "Crashies",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Saint John",
+        "region": "Indiana",
+        "postcode": "46373",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.5,
+          "lon": -87.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 124237,
+      "number": "2567G",
+      "team_name": "Porta-Botz! Goon Squad",
+      "robot_name": "",
+      "organization": "Portage High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Portage",
+        "region": "Indiana",
+        "postcode": "46368",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.6,
+          "lon": -87.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 155611,
+      "number": "2567J",
+      "team_name": "Porta-Botz!-Jester",
+      "robot_name": "",
+      "organization": "Portage High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Portage",
+        "region": "Indiana",
+        "postcode": "46368",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.6,
+          "lon": -87.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 102111,
+      "number": "2567M",
+      "team_name": "Porta-Botz!-Maverick",
+      "robot_name": "",
+      "organization": "Portage High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Portage",
+        "region": "Indiana",
+        "postcode": "46368",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.6,
+          "lon": -87.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 83757,
+      "number": "2567R",
+      "team_name": "Porta-Botz!-MCJROTC",
+      "robot_name": "",
+      "organization": "Portage High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Portage",
+        "region": "Indiana",
+        "postcode": "46368",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.6,
+          "lon": -87.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 158369,
+      "number": "2567T",
+      "team_name": "Porta-Botz!-T Flex Rex",
+      "robot_name": "",
+      "organization": "Portage High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Portage",
+        "region": "Indiana",
+        "postcode": "46368",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.6,
+          "lon": -87.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 187011,
+      "number": "2567U",
+      "team_name": "Porta-Botz!-UltraViolet",
+      "robot_name": "",
+      "organization": "Portage High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Portage",
+        "region": "Indiana",
+        "postcode": "46368",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.6,
+          "lon": -87.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 140259,
+      "number": "21619A",
+      "team_name": "Aluminum Vengeance",
+      "robot_name": "21619A",
+      "organization": "LA LUMIERE SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "La Porte",
+        "region": "Indiana",
+        "postcode": "46350",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.7,
+          "lon": -86.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 119339,
+      "number": "33112A",
+      "team_name": "The Real Robo Rangers - Disco Inferno",
+      "robot_name": "Disco Inferno",
+      "organization": "CONCORDIA LUTHERAN HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Ft Wayne",
+        "region": "Indiana",
+        "postcode": "46805",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.1,
+          "lon": -85.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 119341,
+      "number": "33112B",
+      "team_name": "The Real Robo Rangers - Atari Maniac",
+      "robot_name": "Atari Maniac",
+      "organization": "CONCORDIA LUTHERAN HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Ft Wayne",
+        "region": "Indiana",
+        "postcode": "46805",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.1,
+          "lon": -85.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 154488,
+      "number": "33112G",
+      "team_name": "The Real Robo Rangers - Malibu Barbies",
+      "robot_name": "Malibu Barbies",
+      "organization": "CONCORDIA LUTHERAN HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Ft Wayne",
+        "region": "Indiana",
+        "postcode": "46805",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.1,
+          "lon": -85.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 187501,
+      "number": "33112J",
+      "team_name": "The Real Robo Rangers - Judgement Day",
+      "robot_name": "Judgement Day",
+      "organization": "CONCORDIA LUTHERAN HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Ft Wayne",
+        "region": "Indiana",
+        "postcode": "46805",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.1,
+          "lon": -85.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 181283,
+      "number": "33112W",
+      "team_name": "The Real Robo Rangers - Bratz Attack",
+      "robot_name": "Bratz Attack",
+      "organization": "CONCORDIA LUTHERAN HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Ft Wayne",
+        "region": "Indiana",
+        "postcode": "46805",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.1,
+          "lon": -85.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 173763,
+      "number": "34543M",
+      "team_name": "Mechannibalism",
+      "robot_name": "Robot de la Muerte",
+      "organization": "Top Tier Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Plymouth",
+        "region": "Indiana",
+        "postcode": "46563",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.3,
+          "lon": -86.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 197480,
+      "number": "34543Z",
+      "team_name": "ZingBotz",
+      "robot_name": "Zing",
+      "organization": "Top Tier Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Plymouth",
+        "region": "Indiana",
+        "postcode": "46563",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.3,
+          "lon": -86.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 198984,
+      "number": "46637H",
+      "team_name": "The C-Channel of Monsters",
+      "robot_name": "",
+      "organization": "Odysseus Robotics ",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Valparaiso",
+        "region": "Indiana",
+        "postcode": "46383",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.6,
+          "lon": -87.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 172049,
+      "number": "55760R",
+      "team_name": "Rubber Duckies",
+      "robot_name": "",
+      "organization": "NORTHRIDGE HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Middlebury",
+        "region": "Indiana",
+        "postcode": "46540",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.7,
+          "lon": -85.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 185982,
+      "number": "55760V",
+      "team_name": "Vulcan's Flame",
+      "robot_name": "",
+      "organization": "NORTHRIDGE HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Middlebury",
+        "region": "Indiana",
+        "postcode": "46540",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.7,
+          "lon": -85.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
+}

@@ -1,0 +1,258 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65085/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65085/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65085/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 16,
+    "total": 16,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 286735,
+      "event": {
+        "id": 65085,
+        "name": "Bogle Brawl III: VEX V5 Robotics Competition, MS Schools Only,  All In Person Judging",
+        "code": "RE-V5RC-26-5085"
+      },
+      "order": 61,
+      "title": "Excellence Award - Middle School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286736,
+      "event": {
+        "id": 65085,
+        "name": "Bogle Brawl III: VEX V5 Robotics Competition, MS Schools Only,  All In Person Judging",
+        "code": "RE-V5RC-26-5085"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286737,
+      "event": {
+        "id": 65085,
+        "name": "Bogle Brawl III: VEX V5 Robotics Competition, MS Schools Only,  All In Person Judging",
+        "code": "RE-V5RC-26-5085"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286738,
+      "event": {
+        "id": 65085,
+        "name": "Bogle Brawl III: VEX V5 Robotics Competition, MS Schools Only,  All In Person Judging",
+        "code": "RE-V5RC-26-5085"
+      },
+      "order": 65,
+      "title": "Tournament Semifinalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286739,
+      "event": {
+        "id": 65085,
+        "name": "Bogle Brawl III: VEX V5 Robotics Competition, MS Schools Only,  All In Person Judging",
+        "code": "RE-V5RC-26-5085"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286740,
+      "event": {
+        "id": 65085,
+        "name": "Bogle Brawl III: VEX V5 Robotics Competition, MS Schools Only,  All In Person Judging",
+        "code": "RE-V5RC-26-5085"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286741,
+      "event": {
+        "id": 65085,
+        "name": "Bogle Brawl III: VEX V5 Robotics Competition, MS Schools Only,  All In Person Judging",
+        "code": "RE-V5RC-26-5085"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286742,
+      "event": {
+        "id": 65085,
+        "name": "Bogle Brawl III: VEX V5 Robotics Competition, MS Schools Only,  All In Person Judging",
+        "code": "RE-V5RC-26-5085"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286743,
+      "event": {
+        "id": 65085,
+        "name": "Bogle Brawl III: VEX V5 Robotics Competition, MS Schools Only,  All In Person Judging",
+        "code": "RE-V5RC-26-5085"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286744,
+      "event": {
+        "id": 65085,
+        "name": "Bogle Brawl III: VEX V5 Robotics Competition, MS Schools Only,  All In Person Judging",
+        "code": "RE-V5RC-26-5085"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286745,
+      "event": {
+        "id": 65085,
+        "name": "Bogle Brawl III: VEX V5 Robotics Competition, MS Schools Only,  All In Person Judging",
+        "code": "RE-V5RC-26-5085"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286746,
+      "event": {
+        "id": 65085,
+        "name": "Bogle Brawl III: VEX V5 Robotics Competition, MS Schools Only,  All In Person Judging",
+        "code": "RE-V5RC-26-5085"
+      },
+      "order": 78,
+      "title": "Create Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286747,
+      "event": {
+        "id": 65085,
+        "name": "Bogle Brawl III: VEX V5 Robotics Competition, MS Schools Only,  All In Person Judging",
+        "code": "RE-V5RC-26-5085"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286748,
+      "event": {
+        "id": 65085,
+        "name": "Bogle Brawl III: VEX V5 Robotics Competition, MS Schools Only,  All In Person Judging",
+        "code": "RE-V5RC-26-5085"
+      },
+      "order": 80,
+      "title": "Energy Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286749,
+      "event": {
+        "id": 65085,
+        "name": "Bogle Brawl III: VEX V5 Robotics Competition, MS Schools Only,  All In Person Judging",
+        "code": "RE-V5RC-26-5085"
+      },
+      "order": 81,
+      "title": "Inspire Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286750,
+      "event": {
+        "id": 65085,
+        "name": "Bogle Brawl III: VEX V5 Robotics Competition, MS Schools Only,  All In Person Judging",
+        "code": "RE-V5RC-26-5085"
+      },
+      "order": 82,
+      "title": "Volunteer of the Year Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

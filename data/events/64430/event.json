@@ -1,0 +1,68 @@
+{
+  "data": {
+    "id": 64430,
+    "sku": "RE-V5RC-26-4430",
+    "name": "明德启智杯2026-2027 VEX机器人邀请赛: V5RC 全域接管 初中组",
+    "start": "2026-07-24T00:00:00-04:00",
+    "end": "2026-07-26T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "湖北省武汉市洪山区珞喻路1037号",
+      "address_1": "",
+      "address_2": null,
+      "city": "WUHAN",
+      "region": "Hubei",
+      "postcode": "",
+      "country": "China",
+      "coordinates": {
+        "lat": 30.59276,
+        "lon": 114.30525
+      }
+    },
+    "locations": {
+      "2026-07-24": {
+        "venue": "湖北省武汉市洪山区珞喻路1037号",
+        "address_1": "",
+        "address_2": null,
+        "city": "WUHAN",
+        "region": "Hubei",
+        "postcode": "",
+        "country": "China",
+        "coordinates": {
+          "lat": 30.59276,
+          "lon": 114.30525
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Division A",
+        "order": 1
+      },
+      {
+        "id": 2,
+        "name": "Division B",
+        "order": 2
+      },
+      {
+        "id": 100,
+        "name": "FINAL",
+        "order": 100
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64214/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64214/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64214/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 4,
+    "total": 4,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 107433,
+      "number": "99196A",
+      "team_name": "South High",
+      "robot_name": "99196A",
+      "organization": "SOUTH HIGH",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bakersfield",
+        "region": "California",
+        "postcode": "93304",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.3,
+          "lon": -119
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 107432,
+      "number": "99196H",
+      "team_name": "South High",
+      "robot_name": "99196H",
+      "organization": "SOUTH HIGH",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bakersfield",
+        "region": "California",
+        "postcode": "93304",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.3,
+          "lon": -119
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 73626,
+      "number": "99196R",
+      "team_name": "South High",
+      "robot_name": "99196R",
+      "organization": "SOUTH HIGH",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bakersfield",
+        "region": "California",
+        "postcode": "93304",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.3,
+          "lon": -119
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 69839,
+      "number": "99196S",
+      "team_name": "South High",
+      "robot_name": "99196S",
+      "organization": "SOUTH HIGH",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bakersfield",
+        "region": "California",
+        "postcode": "93304",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.3,
+          "lon": -119
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
+}

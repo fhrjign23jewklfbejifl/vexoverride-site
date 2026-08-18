@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65247,
+    "sku": "RE-V5RC-26-5247",
+    "name": "2026 MBIS VEX V5 Robotics Competition™ Tournament: Override™ - VEX V5 Middle School & High School Blended Division",
+    "start": "2026-11-28T00:00:00-05:00",
+    "end": "2026-11-28T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Marist Brothers International School / マリスト国際学校",
+      "address_1": "1-2-1 Chimoricho, Suma-ku, Kobe / 神戸市須磨区千守町1-2-1",
+      "address_2": null,
+      "city": "Hyogo / 兵庫県",
+      "region": null,
+      "postcode": "654-0072",
+      "country": "Japan",
+      "coordinates": {
+        "lat": 34.64495,
+        "lon": 135.113691
+      }
+    },
+    "locations": {
+      "2026-11-28": {
+        "venue": "Marist Brothers International School / マリスト国際学校",
+        "address_1": "1-2-1 Chimoricho, Suma-ku, Kobe / 神戸市須磨区千守町1-2-1",
+        "address_2": null,
+        "city": "Hyogo / 兵庫県",
+        "region": null,
+        "postcode": "654-0072",
+        "country": "Japan",
+        "coordinates": {
+          "lat": 34.64495,
+          "lon": 135.113691
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

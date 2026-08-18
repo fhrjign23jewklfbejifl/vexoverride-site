@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64730/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64730/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64730/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 9,
+    "total": 9,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 284183,
+      "event": {
+        "id": 64730,
+        "name": "QLD | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Clayfield College - State Finals",
+        "code": "RE-V5RC-26-4730"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284184,
+      "event": {
+        "id": 64730,
+        "name": "QLD | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Clayfield College - State Finals",
+        "code": "RE-V5RC-26-4730"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284185,
+      "event": {
+        "id": 64730,
+        "name": "QLD | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Clayfield College - State Finals",
+        "code": "RE-V5RC-26-4730"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284186,
+      "event": {
+        "id": 64730,
+        "name": "QLD | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Clayfield College - State Finals",
+        "code": "RE-V5RC-26-4730"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284187,
+      "event": {
+        "id": 64730,
+        "name": "QLD | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Clayfield College - State Finals",
+        "code": "RE-V5RC-26-4730"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284188,
+      "event": {
+        "id": 64730,
+        "name": "QLD | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Clayfield College - State Finals",
+        "code": "RE-V5RC-26-4730"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284189,
+      "event": {
+        "id": 64730,
+        "name": "QLD | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Clayfield College - State Finals",
+        "code": "RE-V5RC-26-4730"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284190,
+      "event": {
+        "id": 64730,
+        "name": "QLD | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Clayfield College - State Finals",
+        "code": "RE-V5RC-26-4730"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284191,
+      "event": {
+        "id": 64730,
+        "name": "QLD | VEX V5 Robotics Competition™ (Blended): Override™ Tournament @ Clayfield College - State Finals",
+        "code": "RE-V5RC-26-4730"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

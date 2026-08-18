@@ -1,0 +1,97 @@
+{
+  "data": {
+    "id": 65168,
+    "sku": "RE-V5RC-26-5168",
+    "name": "Yeti Elevate Robotics League BLENDED: Hosted by The Campus Robotics",
+    "start": "2026-10-28T00:00:00-04:00",
+    "end": "2027-01-20T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "The Campus (SSAE/PPEC)",
+      "address_1": "6113",
+      "address_2": null,
+      "city": "Colorado Springs",
+      "region": "Colorado",
+      "postcode": "80915",
+      "country": "United States",
+      "coordinates": {
+        "lat": 38.856358,
+        "lon": -104.699599
+      }
+    },
+    "locations": {
+      "2026-10-28": {
+        "venue": "The Campus (SSAE/PPEC)",
+        "address_1": "6113",
+        "address_2": null,
+        "city": "Colorado Springs",
+        "region": "Colorado",
+        "postcode": "80915",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.856358,
+          "lon": -104.699599
+        }
+      },
+      "2026-11-11": {
+        "venue": "The Campus (SSAE/PPEC)",
+        "address_1": "6113 Constitution Ave",
+        "address_2": null,
+        "city": "Colorado Springs",
+        "region": "Colorado",
+        "postcode": "80915",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.869226,
+          "lon": -104.713616
+        }
+      },
+      "2026-12-09": {
+        "venue": "The Campus (SSAE/PPEC)",
+        "address_1": "6113 Constitution Ave",
+        "address_2": null,
+        "city": "Colorado Springs",
+        "region": "Colorado",
+        "postcode": "80915",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.869226,
+          "lon": -104.713616
+        }
+      },
+      "2027-01-20": {
+        "venue": "The Campus (SSAE/PPEC)",
+        "address_1": "6113 Constitution Ave",
+        "address_2": null,
+        "city": "Colorado Springs",
+        "region": "Colorado",
+        "postcode": "80915",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.869226,
+          "lon": -104.713616
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

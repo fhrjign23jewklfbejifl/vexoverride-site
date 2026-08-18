@@ -1,0 +1,180 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64477/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64477/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64477/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 6,
+    "total": 6,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 171732,
+      "number": "3102A",
+      "team_name": "SpaceY",
+      "robot_name": "FALCON 9",
+      "organization": "ONEDPRO",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Kwai Chung, Nt",
+        "region": null,
+        "postcode": "999077",
+        "country": "Hong Kong",
+        "coordinates": {
+          "lat": 22.4,
+          "lon": 114.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 148977,
+      "number": "12305A",
+      "team_name": "TCCS stem teAm",
+      "robot_name": "",
+      "organization": "Tung Chung Catholic School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Island District",
+        "region": null,
+        "postcode": "000000",
+        "country": "Hong Kong, China",
+        "coordinates": {
+          "lat": 22.3,
+          "lon": 113.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 153558,
+      "number": "12305B",
+      "team_name": "TCCS roBotics team",
+      "robot_name": "",
+      "organization": "Tung Chung Catholic School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Island District",
+        "region": null,
+        "postcode": "000000",
+        "country": "Hong Kong, China",
+        "coordinates": {
+          "lat": 22.3,
+          "lon": 113.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 162410,
+      "number": "12305C",
+      "team_name": "TCCS Conqueror team",
+      "robot_name": "",
+      "organization": "Tung Chung Catholic School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Island District",
+        "region": null,
+        "postcode": "000000",
+        "country": "Hong Kong, China",
+        "coordinates": {
+          "lat": 22.3,
+          "lon": 113.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 198250,
+      "number": "44066H",
+      "team_name": "ZWSS",
+      "robot_name": "ZWSS",
+      "organization": "佛山中黄星瑜港澳子弟学校",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "佛山",
+        "region": "Guangdong",
+        "postcode": "528200",
+        "country": "China",
+        "coordinates": {
+          "lat": 23,
+          "lon": 113.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199208,
+      "number": "91252A",
+      "team_name": "The Zoomers",
+      "robot_name": "DIDI",
+      "organization": "IC",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Hong Kong",
+        "region": null,
+        "postcode": "00000",
+        "country": "Hong Kong, China",
+        "coordinates": {
+          "lat": 22.3,
+          "lon": 114.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    }
+  ]
+}

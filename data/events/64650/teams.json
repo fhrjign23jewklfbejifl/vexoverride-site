@@ -1,0 +1,531 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64650/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64650/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64650/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 19,
+    "total": 19,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 74982,
+      "number": "38C",
+      "team_name": "Elmer's Glue",
+      "robot_name": "",
+      "organization": "Cranbrook Schools",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bloomfield Hills",
+        "region": "Michigan",
+        "postcode": "48304",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.6,
+          "lon": -83.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 199425,
+      "number": "38R",
+      "team_name": "No",
+      "robot_name": "",
+      "organization": "CRANBROOK SCHOOLS",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bloomfield Hills",
+        "region": "Michigan",
+        "postcode": "48304",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.6,
+          "lon": -83.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 155679,
+      "number": "38T",
+      "team_name": "The Frogs",
+      "robot_name": "",
+      "organization": "CRANBROOK SCHOOLS",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bloomfield Hills",
+        "region": "Michigan",
+        "postcode": "48304",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.6,
+          "lon": -83.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 199426,
+      "number": "38W",
+      "team_name": "Dead Link",
+      "robot_name": "",
+      "organization": "CRANBROOK SCHOOLS",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bloomfield Hills",
+        "region": "Michigan",
+        "postcode": "48304",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.6,
+          "lon": -83.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 109524,
+      "number": "38Z",
+      "team_name": "Dumpster Fire",
+      "robot_name": "",
+      "organization": "CRANBROOK SCHOOLS",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bloomfield Hills",
+        "region": "Michigan",
+        "postcode": "48304",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.6,
+          "lon": -83.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 71922,
+      "number": "39B",
+      "team_name": "Endothermic",
+      "robot_name": "",
+      "organization": "CRANBROOK SCHOOLS",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bloomfield Hills",
+        "region": "Michigan",
+        "postcode": "48303",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.6,
+          "lon": -83.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 82510,
+      "number": "39K",
+      "team_name": "Kool Aid",
+      "robot_name": "",
+      "organization": "CRANBROOK SCHOOLS",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bloomfield Hills",
+        "region": "Michigan",
+        "postcode": "48304",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.6,
+          "lon": -83.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 113241,
+      "number": "39P",
+      "team_name": "Pxlarity",
+      "robot_name": "",
+      "organization": "CRANBROOK SCHOOLS",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bloomfield Hills",
+        "region": "Michigan",
+        "postcode": "48304",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.6,
+          "lon": -83.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 113238,
+      "number": "39R",
+      "team_name": "Serenity",
+      "robot_name": "",
+      "organization": "CRANBROOK SCHOOLS",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bloomfield Hills",
+        "region": "Michigan",
+        "postcode": "48304",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.6,
+          "lon": -83.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 3456,
+      "number": "3333B",
+      "team_name": "Bromance",
+      "robot_name": "Brochacho",
+      "organization": "Notre Dame Prep",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Pontiac",
+        "region": "Michigan",
+        "postcode": "48340",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.7,
+          "lon": -83.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 140646,
+      "number": "3333D",
+      "team_name": "Despicable",
+      "robot_name": "Gru",
+      "organization": "Notre Dame Prep",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Pontiac",
+        "region": "Michigan",
+        "postcode": "48340",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.7,
+          "lon": -83.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 85197,
+      "number": "3333N",
+      "team_name": "SnakeByterrs",
+      "robot_name": "",
+      "organization": "Notre Dame Prep",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Pontiac",
+        "region": "Michigan",
+        "postcode": "48340",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.7,
+          "lon": -83.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 85196,
+      "number": "3333X",
+      "team_name": "X-treme Bot",
+      "robot_name": "",
+      "organization": "Notre Dame Prep",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Pontiac",
+        "region": "Michigan",
+        "postcode": "48340",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.7,
+          "lon": -83.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 85064,
+      "number": "3333Y",
+      "team_name": "Trumpet Ladies",
+      "robot_name": "",
+      "organization": "Notre Dame Prep",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Pontiac",
+        "region": "Michigan",
+        "postcode": "48340",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.7,
+          "lon": -83.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 85195,
+      "number": "3333Z",
+      "team_name": "The Z Men",
+      "robot_name": "",
+      "organization": "Notre Dame Prep",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Pontiac",
+        "region": "Michigan",
+        "postcode": "48340",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.7,
+          "lon": -83.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 65201,
+      "number": "3547F",
+      "team_name": "VIRUS: Circuit Breakers",
+      "robot_name": "",
+      "organization": "Technology First",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Monroe",
+        "region": "Michigan",
+        "postcode": "48161",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.9,
+          "lon": -83.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 62909,
+      "number": "3547X",
+      "team_name": "VIRUS:  Robotic Radiation",
+      "robot_name": "",
+      "organization": "Technolgy First",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Monroe",
+        "region": "Michigan",
+        "postcode": "48161",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.9,
+          "lon": -83.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 185726,
+      "number": "16610G",
+      "team_name": "Good Gravy",
+      "robot_name": "Bender Bending Rodriguez",
+      "organization": "Techblazers",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Toronto",
+        "region": "Ontario",
+        "postcode": "M2P 1T7",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 43.8,
+          "lon": -79.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 198447,
+      "number": "16610M",
+      "team_name": "flaming marshmallows ",
+      "robot_name": "Raw Marshmallow ",
+      "organization": "Techblazers",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Toronto",
+        "region": "Ontario",
+        "postcode": "M2P1T7",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 43.8,
+          "lon": -79.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
+}

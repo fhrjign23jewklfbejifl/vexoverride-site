@@ -1,0 +1,180 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65043/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65043/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65043/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 6,
+    "total": 6,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 131481,
+      "number": "48643C",
+      "team_name": "Team C",
+      "robot_name": "",
+      "organization": "SPROUL JUNIOR HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Colorado Springs",
+        "region": "Colorado",
+        "postcode": "80911",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.8,
+          "lon": -104.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 144295,
+      "number": "48643D",
+      "team_name": "Team D",
+      "robot_name": "",
+      "organization": "SPROUL JUNIOR HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Colorado Springs",
+        "region": "Colorado",
+        "postcode": "80911",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.8,
+          "lon": -104.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 144296,
+      "number": "48643E",
+      "team_name": "Team E",
+      "robot_name": "",
+      "organization": "SPROUL JUNIOR HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Colorado Springs",
+        "region": "Colorado",
+        "postcode": "80911",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.8,
+          "lon": -104.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 158806,
+      "number": "67282D",
+      "team_name": "Zero Brain Cells",
+      "robot_name": "Tyrone",
+      "organization": "WATSON JUNIOR HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Colorado Springs",
+        "region": "Colorado",
+        "postcode": "80911",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.7,
+          "lon": -104.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 160857,
+      "number": "67282E",
+      "team_name": "Mr. Bean",
+      "robot_name": "Window Breaker 9000",
+      "organization": "WATSON JUNIOR HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Colorado Springs",
+        "region": "Colorado",
+        "postcode": "80911",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.7,
+          "lon": -104.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 160858,
+      "number": "67282F",
+      "team_name": "Klanker",
+      "robot_name": "Lil Rider",
+      "organization": "WATSON JUNIOR HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Colorado Springs",
+        "region": "Colorado",
+        "postcode": "80911",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.7,
+          "lon": -104.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    }
+  ]
+}

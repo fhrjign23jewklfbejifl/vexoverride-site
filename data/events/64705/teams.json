@@ -1,0 +1,288 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64705/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64705/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64705/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 10,
+    "total": 10,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 172908,
+      "number": "1229M",
+      "team_name": "Mangled Metal",
+      "robot_name": "",
+      "organization": "Twelve Twenty Nine Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Alexandria",
+        "region": "Kentucky",
+        "postcode": "41001",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.9,
+          "lon": -84.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 154771,
+      "number": "1229W",
+      "team_name": "The Wet Sprockets",
+      "robot_name": "",
+      "organization": "Twelve Twenty Nine Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Alexandria",
+        "region": "Kentucky",
+        "postcode": "41001",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.9,
+          "lon": -84.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 186517,
+      "number": "1255S",
+      "team_name": "Spicy Bread",
+      "robot_name": "",
+      "organization": "GREAT CROSSING HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Georgetown",
+        "region": "Kentucky",
+        "postcode": "40324",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.2,
+          "lon": -84.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199231,
+      "number": "2701B",
+      "team_name": "Franklin Christian Academy",
+      "robot_name": "Z",
+      "organization": "Franklin Christian Academy",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Franklin",
+        "region": "Tennessee",
+        "postcode": "37064",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.9,
+          "lon": -86.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199232,
+      "number": "2701C",
+      "team_name": "Franklin Christian Academy",
+      "robot_name": "Z",
+      "organization": "Franklin Christian Academy",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Franklin",
+        "region": "Tennessee",
+        "postcode": "37064",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.9,
+          "lon": -86.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 186664,
+      "number": "2701Y",
+      "team_name": "Franklin Christian Academy",
+      "robot_name": "Z",
+      "organization": "Franklin Christian Academy",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Franklin",
+        "region": "Tennessee",
+        "postcode": "37064",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.9,
+          "lon": -86.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 186663,
+      "number": "2701Z",
+      "team_name": "Franklin Christian Academy",
+      "robot_name": "Z",
+      "organization": "Franklin Christian Academy",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Franklin",
+        "region": "Tennessee",
+        "postcode": "37064",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.9,
+          "lon": -86.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 186718,
+      "number": "3440M",
+      "team_name": "Monarch",
+      "robot_name": "Zilla",
+      "organization": "REACT ",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Elizabethtown",
+        "region": "Kentucky",
+        "postcode": "42701",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.7,
+          "lon": -85.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 198628,
+      "number": "3440S",
+      "team_name": "REACT - Starlore",
+      "robot_name": "R32",
+      "organization": "REACT ",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Elizabethtown",
+        "region": "Kentucky",
+        "postcode": "42701",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.7,
+          "lon": -85.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 198629,
+      "number": "3440X",
+      "team_name": "REACT - Starlore",
+      "robot_name": "R32",
+      "organization": "REACT ",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Elizabethtown",
+        "region": "Kentucky",
+        "postcode": "42701",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.7,
+          "lon": -85.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64219,
+    "sku": "RE-V5RC-26-4219",
+    "name": "Bruin in the Den | VEX V5 Robotics Competition: Forest Park Blended Tournament",
+    "start": "2026-10-24T00:00:00-04:00",
+    "end": "2026-10-24T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Forest Park High School",
+      "address_1": "15721 Forest Park Drive",
+      "address_2": null,
+      "city": "Woodbridge",
+      "region": "Virginia",
+      "postcode": "22193",
+      "country": "United States",
+      "coordinates": {
+        "lat": 38.612485,
+        "lon": -77.364743
+      }
+    },
+    "locations": {
+      "2026-10-24": {
+        "venue": "Forest Park High School",
+        "address_1": "15721 Forest Park Drive",
+        "address_2": null,
+        "city": "Woodbridge",
+        "region": "Virginia",
+        "postcode": "22193",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.612485,
+          "lon": -77.364743
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

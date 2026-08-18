@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65236,
+    "sku": "RE-V5RC-26-5236",
+    "name": "VEX V5 Robotics Competition – Bolt Up Chattanooga Show Down: MS/HS Teams Only",
+    "start": "2027-01-15T00:00:00-05:00",
+    "end": "2027-01-16T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Chattanooga Christian School",
+      "address_1": "3354 Charger Drive",
+      "address_2": null,
+      "city": "Chattanooga",
+      "region": "Tennessee",
+      "postcode": "37409",
+      "country": "United States",
+      "coordinates": {
+        "lat": 35.013903,
+        "lon": -85.322887
+      }
+    },
+    "locations": {
+      "2027-01-15": {
+        "venue": "Chattanooga Christian School",
+        "address_1": "3354 Charger Drive",
+        "address_2": null,
+        "city": "Chattanooga",
+        "region": "Tennessee",
+        "postcode": "37409",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.013903,
+          "lon": -85.322887
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

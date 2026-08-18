@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64765/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64765/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64765/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 10,
+    "total": 10,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 284506,
+      "event": {
+        "id": 64765,
+        "name": "VEX V5 Robotics Competition™ (HS) Japan National Championship: Override™ - VEX V5 High School Division",
+        "code": "RE-V5RC-26-4765"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284508,
+      "event": {
+        "id": 64765,
+        "name": "VEX V5 Robotics Competition™ (HS) Japan National Championship: Override™ - VEX V5 High School Division",
+        "code": "RE-V5RC-26-4765"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284509,
+      "event": {
+        "id": 64765,
+        "name": "VEX V5 Robotics Competition™ (HS) Japan National Championship: Override™ - VEX V5 High School Division",
+        "code": "RE-V5RC-26-4765"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284510,
+      "event": {
+        "id": 64765,
+        "name": "VEX V5 Robotics Competition™ (HS) Japan National Championship: Override™ - VEX V5 High School Division",
+        "code": "RE-V5RC-26-4765"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284511,
+      "event": {
+        "id": 64765,
+        "name": "VEX V5 Robotics Competition™ (HS) Japan National Championship: Override™ - VEX V5 High School Division",
+        "code": "RE-V5RC-26-4765"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284512,
+      "event": {
+        "id": 64765,
+        "name": "VEX V5 Robotics Competition™ (HS) Japan National Championship: Override™ - VEX V5 High School Division",
+        "code": "RE-V5RC-26-4765"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284513,
+      "event": {
+        "id": 64765,
+        "name": "VEX V5 Robotics Competition™ (HS) Japan National Championship: Override™ - VEX V5 High School Division",
+        "code": "RE-V5RC-26-4765"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284514,
+      "event": {
+        "id": 64765,
+        "name": "VEX V5 Robotics Competition™ (HS) Japan National Championship: Override™ - VEX V5 High School Division",
+        "code": "RE-V5RC-26-4765"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284515,
+      "event": {
+        "id": 64765,
+        "name": "VEX V5 Robotics Competition™ (HS) Japan National Championship: Override™ - VEX V5 High School Division",
+        "code": "RE-V5RC-26-4765"
+      },
+      "order": 78,
+      "title": "Create Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 284656,
+      "event": {
+        "id": 64765,
+        "name": "VEX V5 Robotics Competition™ (HS) Japan National Championship: Override™ - VEX V5 High School Division",
+        "code": "RE-V5RC-26-4765"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

@@ -1,0 +1,396 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64356/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64356/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64356/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 14,
+    "total": 14,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 123984,
+      "number": "938M",
+      "team_name": "Blaze MegaByte",
+      "robot_name": "",
+      "organization": "Blaze Robotics Academy",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bellevue",
+        "region": "Washington",
+        "postcode": "98005",
+        "country": "United States",
+        "coordinates": {
+          "lat": 47.6,
+          "lon": -122.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 198384,
+      "number": "1688H",
+      "team_name": "Team H",
+      "robot_name": "",
+      "organization": "Jedi Order",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Burnaby",
+        "region": "British Columbia",
+        "postcode": "V5H 4B1",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 49.2,
+          "lon": -123
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 198385,
+      "number": "1688N",
+      "team_name": "CRTL NOVA",
+      "robot_name": "",
+      "organization": "Jedi Order",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Burnaby",
+        "region": "British Columbia",
+        "postcode": "V5H 4B1",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 49.2,
+          "lon": -123
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 189369,
+      "number": "1688X",
+      "team_name": "Team X",
+      "robot_name": "",
+      "organization": "Jedi Order",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Burnaby",
+        "region": "British Columbia",
+        "postcode": "V5H 4B1",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 49.2,
+          "lon": -123
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 196970,
+      "number": "2539Y",
+      "team_name": "A+",
+      "robot_name": "",
+      "organization": "Independent Team",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "White Rock",
+        "region": "British Columbia",
+        "postcode": "V4B1A4",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 49,
+          "lon": -122.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 198352,
+      "number": "3173E",
+      "team_name": "MechSpace Robotics",
+      "robot_name": "",
+      "organization": "MechSpace",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Vancouver",
+        "region": "British Columbia",
+        "postcode": "V6M 1Z1",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 49.2,
+          "lon": -123.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 170237,
+      "number": "9568A",
+      "team_name": "RoboPlanet",
+      "robot_name": "",
+      "organization": "RoboPlanet Education and Community Society",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Richmond",
+        "region": "British Columbia",
+        "postcode": "v6x 1x5",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 49.2,
+          "lon": -123.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 194262,
+      "number": "9568G",
+      "team_name": "GForGood",
+      "robot_name": "",
+      "organization": "RoboPlanet Education and Community Society",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Richmond",
+        "region": "British Columbia",
+        "postcode": "v6x 1x5",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 49.2,
+          "lon": -123.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 198353,
+      "number": "9568S",
+      "team_name": "RoboPlanet",
+      "robot_name": "",
+      "organization": "RoboPlanet Education and Community Society",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Richmond",
+        "region": "British Columbia",
+        "postcode": "v6x 1x5",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 49.2,
+          "lon": -123.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 173597,
+      "number": "9568W",
+      "team_name": "Alt-W",
+      "robot_name": "",
+      "organization": "RoboPlanet Education and Community Society",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Richmond",
+        "region": "British Columbia",
+        "postcode": "v6x 1x5",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 49.2,
+          "lon": -123.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 187004,
+      "number": "9568Y",
+      "team_name": "→Mischief←",
+      "robot_name": "",
+      "organization": "RoboPlanet Education and Community Society",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Richmond",
+        "region": "British Columbia",
+        "postcode": "v6x 1x5",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 49.2,
+          "lon": -123.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 198951,
+      "number": "10068A",
+      "team_name": "10068A",
+      "robot_name": "",
+      "organization": "Richmond Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Richmond",
+        "region": "British Columbia",
+        "postcode": "V6X 1C3",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 49.2,
+          "lon": -123.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 197559,
+      "number": "10666A",
+      "team_name": "Ctrl S",
+      "robot_name": "",
+      "organization": "Richmond Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Richmond",
+        "region": "British Columbia",
+        "postcode": "V7C 5R3",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 49.2,
+          "lon": -123.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 197156,
+      "number": "10666S",
+      "team_name": "Ctrl S",
+      "robot_name": "",
+      "organization": "Richmond Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Richmond",
+        "region": "British Columbia",
+        "postcode": "V7C 5R3",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 49.2,
+          "lon": -123.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    }
+  ]
+}

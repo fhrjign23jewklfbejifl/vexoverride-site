@@ -1,0 +1,154 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64297/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64297/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64297/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 4,
+    "total": 4,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 289504,
+      "event": {
+        "id": 64297,
+        "name": "Tennessee State Fair Robot Rodeo VEX V5 Override™ (HS/MS): VEX V5 Robotics Competition, Presented by Volunteer State Robotics Foundation",
+        "code": "RE-V5RC-26-4297"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 198387,
+            "name": "13205X",
+            "code": null
+          }
+        },
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 87283,
+            "name": "94S",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 289505,
+      "event": {
+        "id": 64297,
+        "name": "Tennessee State Fair Robot Rodeo VEX V5 Override™ (HS/MS): VEX V5 Robotics Competition, Presented by Volunteer State Robotics Foundation",
+        "code": "RE-V5RC-26-4297"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 185129,
+            "name": "26163X",
+            "code": null
+          }
+        },
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 56849,
+            "name": "9364E",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 289506,
+      "event": {
+        "id": 64297,
+        "name": "Tennessee State Fair Robot Rodeo VEX V5 Override™ (HS/MS): VEX V5 Robotics Competition, Presented by Volunteer State Robotics Foundation",
+        "code": "RE-V5RC-26-4297"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 56849,
+            "name": "9364E",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    },
+    {
+      "id": 289507,
+      "event": {
+        "id": 64297,
+        "name": "Tennessee State Fair Robot Rodeo VEX V5 Override™ (HS/MS): VEX V5 Robotics Competition, Presented by Volunteer State Robotics Foundation",
+        "code": "RE-V5RC-26-4297"
+      },
+      "order": 71,
+      "title": "Robot Skills 2nd Place (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 122820,
+            "name": "663A",
+            "code": null
+          }
+        }
+      ],
+      "individualWinners": []
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64813,
+    "sku": "RE-V5RC-26-4813",
+    "name": "Great Planes Signature Event: High School VEX V5 Robotics Competition",
+    "start": "2026-10-01T00:00:00-04:00",
+    "end": "2026-10-03T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Strategic Air Command & Aerospace Museum",
+      "address_1": "28210 West Park Highway",
+      "address_2": null,
+      "city": "Ashland",
+      "region": "Nebraska",
+      "postcode": "68003",
+      "country": "United States",
+      "coordinates": {
+        "lat": 41.018123,
+        "lon": -96.320149
+      }
+    },
+    "locations": {
+      "2026-10-01": {
+        "venue": "Strategic Air Command & Aerospace Museum",
+        "address_1": "28210 West Park Highway",
+        "address_2": null,
+        "city": "Ashland",
+        "region": "Nebraska",
+        "postcode": "68003",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.018123,
+          "lon": -96.320149
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Signature",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

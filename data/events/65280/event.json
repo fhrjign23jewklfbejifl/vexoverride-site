@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65280,
+    "sku": "RE-V5RC-26-5280",
+    "name": "WAVE at WPI  Signature Event: VEX V5 Robotics Competition - Override",
+    "start": "2026-12-03T00:00:00-05:00",
+    "end": "2026-12-05T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Worcester Polytechnic Institute",
+      "address_1": "100 Institute Road",
+      "address_2": null,
+      "city": "Worcester",
+      "region": "Massachusetts",
+      "postcode": "01609",
+      "country": "United States",
+      "coordinates": {
+        "lat": 42.272828,
+        "lon": -71.812894
+      }
+    },
+    "locations": {
+      "2026-12-03": {
+        "venue": "Worcester Polytechnic Institute",
+        "address_1": "100 Institute Road",
+        "address_2": null,
+        "city": "Worcester",
+        "region": "Massachusetts",
+        "postcode": "01609",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.272828,
+          "lon": -71.812894
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Signature",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

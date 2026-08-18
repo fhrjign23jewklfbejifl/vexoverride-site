@@ -1,0 +1,228 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64296/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64296/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64296/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 14,
+    "total": 14,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 280788,
+      "event": {
+        "id": 64296,
+        "name": "Viking Holmgang V5RC Blended: VEX V5 Robotics Competition Fight to the Finish",
+        "code": "RE-V5RC-26-4296"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280789,
+      "event": {
+        "id": 64296,
+        "name": "Viking Holmgang V5RC Blended: VEX V5 Robotics Competition Fight to the Finish",
+        "code": "RE-V5RC-26-4296"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280790,
+      "event": {
+        "id": 64296,
+        "name": "Viking Holmgang V5RC Blended: VEX V5 Robotics Competition Fight to the Finish",
+        "code": "RE-V5RC-26-4296"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280791,
+      "event": {
+        "id": 64296,
+        "name": "Viking Holmgang V5RC Blended: VEX V5 Robotics Competition Fight to the Finish",
+        "code": "RE-V5RC-26-4296"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280792,
+      "event": {
+        "id": 64296,
+        "name": "Viking Holmgang V5RC Blended: VEX V5 Robotics Competition Fight to the Finish",
+        "code": "RE-V5RC-26-4296"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280793,
+      "event": {
+        "id": 64296,
+        "name": "Viking Holmgang V5RC Blended: VEX V5 Robotics Competition Fight to the Finish",
+        "code": "RE-V5RC-26-4296"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280794,
+      "event": {
+        "id": 64296,
+        "name": "Viking Holmgang V5RC Blended: VEX V5 Robotics Competition Fight to the Finish",
+        "code": "RE-V5RC-26-4296"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280795,
+      "event": {
+        "id": 64296,
+        "name": "Viking Holmgang V5RC Blended: VEX V5 Robotics Competition Fight to the Finish",
+        "code": "RE-V5RC-26-4296"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280796,
+      "event": {
+        "id": 64296,
+        "name": "Viking Holmgang V5RC Blended: VEX V5 Robotics Competition Fight to the Finish",
+        "code": "RE-V5RC-26-4296"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280797,
+      "event": {
+        "id": 64296,
+        "name": "Viking Holmgang V5RC Blended: VEX V5 Robotics Competition Fight to the Finish",
+        "code": "RE-V5RC-26-4296"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280798,
+      "event": {
+        "id": 64296,
+        "name": "Viking Holmgang V5RC Blended: VEX V5 Robotics Competition Fight to the Finish",
+        "code": "RE-V5RC-26-4296"
+      },
+      "order": 78,
+      "title": "Create Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280799,
+      "event": {
+        "id": 64296,
+        "name": "Viking Holmgang V5RC Blended: VEX V5 Robotics Competition Fight to the Finish",
+        "code": "RE-V5RC-26-4296"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280800,
+      "event": {
+        "id": 64296,
+        "name": "Viking Holmgang V5RC Blended: VEX V5 Robotics Competition Fight to the Finish",
+        "code": "RE-V5RC-26-4296"
+      },
+      "order": 80,
+      "title": "Energy Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 280801,
+      "event": {
+        "id": 64296,
+        "name": "Viking Holmgang V5RC Blended: VEX V5 Robotics Competition Fight to the Finish",
+        "code": "RE-V5RC-26-4296"
+      },
+      "order": 81,
+      "title": "Inspire Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

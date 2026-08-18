@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64606/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64606/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64606/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 5,
+    "total": 5,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 283297,
+      "event": {
+        "id": 64606,
+        "name": "Palmerston North VEX V5 Robotics Competition™ Tournament 1: Override™  @ Palmerston North Boys' High School (Kiwibots Event in Central Robotics Region)",
+        "code": "RE-V5RC-26-4606"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283298,
+      "event": {
+        "id": 64606,
+        "name": "Palmerston North VEX V5 Robotics Competition™ Tournament 1: Override™  @ Palmerston North Boys' High School (Kiwibots Event in Central Robotics Region)",
+        "code": "RE-V5RC-26-4606"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283299,
+      "event": {
+        "id": 64606,
+        "name": "Palmerston North VEX V5 Robotics Competition™ Tournament 1: Override™  @ Palmerston North Boys' High School (Kiwibots Event in Central Robotics Region)",
+        "code": "RE-V5RC-26-4606"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283300,
+      "event": {
+        "id": 64606,
+        "name": "Palmerston North VEX V5 Robotics Competition™ Tournament 1: Override™  @ Palmerston North Boys' High School (Kiwibots Event in Central Robotics Region)",
+        "code": "RE-V5RC-26-4606"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283301,
+      "event": {
+        "id": 64606,
+        "name": "Palmerston North VEX V5 Robotics Competition™ Tournament 1: Override™  @ Palmerston North Boys' High School (Kiwibots Event in Central Robotics Region)",
+        "code": "RE-V5RC-26-4606"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

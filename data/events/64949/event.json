@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64949,
+    "sku": "RE-V5RC-26-4949",
+    "name": "New Year's Mayhem Signature Event: VEX V5 HS Override Hosted by SSIS in Vietnam",
+    "start": "2027-02-26T00:00:00-05:00",
+    "end": "2027-02-28T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Saigon South International School",
+      "address_1": "78 Nguyễn Đức Cảnh",
+      "address_2": null,
+      "city": "Thành phố Hồ Chí Minh",
+      "region": null,
+      "postcode": "700000",
+      "country": "Vietnam",
+      "coordinates": {
+        "lat": 10.722312,
+        "lon": 106.70909
+      }
+    },
+    "locations": {
+      "2027-02-26": {
+        "venue": "Saigon South International School",
+        "address_1": "78 Nguyễn Đức Cảnh",
+        "address_2": null,
+        "city": "Thành phố Hồ Chí Minh",
+        "region": null,
+        "postcode": "700000",
+        "country": "Vietnam",
+        "coordinates": {
+          "lat": 10.722312,
+          "lon": 106.70909
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Signature",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

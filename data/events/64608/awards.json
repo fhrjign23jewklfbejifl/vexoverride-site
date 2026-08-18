@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64608/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64608/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64608/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 2,
+    "total": 2,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 283308,
+      "event": {
+        "id": 64608,
+        "name": "Feilding VEX V5 Robotics Competition™ Tournament 2: Override™  @ Feilding High School (Kiwibots Event in Central Robotics Region)",
+        "code": "RE-V5RC-26-4608"
+      },
+      "order": 60,
+      "title": "Excellence Award - High School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 283309,
+      "event": {
+        "id": 64608,
+        "name": "Feilding VEX V5 Robotics Competition™ Tournament 2: Override™  @ Feilding High School (Kiwibots Event in Central Robotics Region)",
+        "code": "RE-V5RC-26-4608"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

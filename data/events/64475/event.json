@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64475,
+    "sku": "RE-V5RC-27-4475",
+    "name": "VEX V5 Robotics Competition™ (MS) Hong Kong Championship 2027: Hong Kong Tech Challenge 2027 - VEX V5 Middle School",
+    "start": "2027-02-19T00:00:00-05:00",
+    "end": "2027-02-20T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Hong Kong Science and Technology Park (HKSTP)",
+      "address_1": "Science Park Road",
+      "address_2": null,
+      "city": "New Territories",
+      "region": null,
+      "postcode": "",
+      "country": "Hong Kong",
+      "coordinates": {
+        "lat": 22.418666,
+        "lon": 114.214055
+      }
+    },
+    "locations": {
+      "2027-02-19": {
+        "venue": "Hong Kong Science and Technology Park (HKSTP)",
+        "address_1": "Science Park Road",
+        "address_2": null,
+        "city": "New Territories",
+        "region": null,
+        "postcode": "",
+        "country": "Hong Kong",
+        "coordinates": {
+          "lat": 22.418666,
+          "lon": 114.214055
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Regional",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

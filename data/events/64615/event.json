@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64615,
+    "sku": "RE-V5RC-26-4615",
+    "name": "New Plymouth VEX V5 Robotics Competition™ Tournament 5: Override™  @  New Plymouth Boys' High School (Kiwibots Event in Central Robotics Region)",
+    "start": "2026-09-19T00:00:00-04:00",
+    "end": "2026-09-19T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "New Plymouth Boys' High School",
+      "address_1": "107 Coronation Avenue",
+      "address_2": null,
+      "city": "New Plymouth",
+      "region": null,
+      "postcode": "4310",
+      "country": "New Zealand",
+      "coordinates": {
+        "lat": -39.061256,
+        "lon": 174.086124
+      }
+    },
+    "locations": {
+      "2026-09-19": {
+        "venue": "New Plymouth Boys' High School",
+        "address_1": "107 Coronation Avenue",
+        "address_2": null,
+        "city": "New Plymouth",
+        "region": null,
+        "postcode": "4310",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -39.061256,
+          "lon": 174.086124
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

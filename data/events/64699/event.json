@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64699,
+    "sku": "RE-V5RC-26-4699",
+    "name": "VEX V5 Robotics Competition @ Bryan College: High School Teams Only",
+    "start": "2026-11-21T00:00:00-05:00",
+    "end": "2026-11-21T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Bryan College",
+      "address_1": "721 Bryan Drive",
+      "address_2": null,
+      "city": "Dayton",
+      "region": "Tennessee",
+      "postcode": "37321",
+      "country": "United States",
+      "coordinates": {
+        "lat": 35.498612,
+        "lon": -84.998005
+      }
+    },
+    "locations": {
+      "2026-11-21": {
+        "venue": "Bryan College",
+        "address_1": "721 Bryan Drive",
+        "address_2": null,
+        "city": "Dayton",
+        "region": "Tennessee",
+        "postcode": "37321",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.498612,
+          "lon": -84.998005
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

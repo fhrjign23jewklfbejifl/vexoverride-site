@@ -1,0 +1,754 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64297/skills?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64297/skills?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64297/skills",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 32,
+    "total": 32,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 79140884,
+      "event": {
+        "id": 64297,
+        "name": "Tennessee State Fair Robot Rodeo VEX V5 Override™ (HS/MS): VEX V5 Robotics Competition, Presented by Volunteer State Robotics Foundation",
+        "code": "RE-V5RC-26-4297"
+      },
+      "team": {
+        "id": 56849,
+        "name": "9364E",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 1,
+      "score": 98,
+      "attempts": 2
+    },
+    {
+      "id": 79140885,
+      "event": {
+        "id": 64297,
+        "name": "Tennessee State Fair Robot Rodeo VEX V5 Override™ (HS/MS): VEX V5 Robotics Competition, Presented by Volunteer State Robotics Foundation",
+        "code": "RE-V5RC-26-4297"
+      },
+      "team": {
+        "id": 56849,
+        "name": "9364E",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 1,
+      "score": 28,
+      "attempts": 2
+    },
+    {
+      "id": 79140886,
+      "event": {
+        "id": 64297,
+        "name": "Tennessee State Fair Robot Rodeo VEX V5 Override™ (HS/MS): VEX V5 Robotics Competition, Presented by Volunteer State Robotics Foundation",
+        "code": "RE-V5RC-26-4297"
+      },
+      "team": {
+        "id": 122820,
+        "name": "663A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 2,
+      "score": 68,
+      "attempts": 3
+    },
+    {
+      "id": 79140887,
+      "event": {
+        "id": 64297,
+        "name": "Tennessee State Fair Robot Rodeo VEX V5 Override™ (HS/MS): VEX V5 Robotics Competition, Presented by Volunteer State Robotics Foundation",
+        "code": "RE-V5RC-26-4297"
+      },
+      "team": {
+        "id": 122820,
+        "name": "663A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 2,
+      "score": 48,
+      "attempts": 3
+    },
+    {
+      "id": 79140888,
+      "event": {
+        "id": 64297,
+        "name": "Tennessee State Fair Robot Rodeo VEX V5 Override™ (HS/MS): VEX V5 Robotics Competition, Presented by Volunteer State Robotics Foundation",
+        "code": "RE-V5RC-26-4297"
+      },
+      "team": {
+        "id": 186190,
+        "name": "11227S",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 3,
+      "score": 48,
+      "attempts": 2
+    },
+    {
+      "id": 79140889,
+      "event": {
+        "id": 64297,
+        "name": "Tennessee State Fair Robot Rodeo VEX V5 Override™ (HS/MS): VEX V5 Robotics Competition, Presented by Volunteer State Robotics Foundation",
+        "code": "RE-V5RC-26-4297"
+      },
+      "team": {
+        "id": 186190,
+        "name": "11227S",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 3,
+      "score": 18,
+      "attempts": 1
+    },
+    {
+      "id": 79140890,
+      "event": {
+        "id": 64297,
+        "name": "Tennessee State Fair Robot Rodeo VEX V5 Override™ (HS/MS): VEX V5 Robotics Competition, Presented by Volunteer State Robotics Foundation",
+        "code": "RE-V5RC-26-4297"
+      },
+      "team": {
+        "id": 185129,
+        "name": "26163X",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 4,
+      "score": 58,
+      "attempts": 2
+    },
+    {
+      "id": 79140891,
+      "event": {
+        "id": 64297,
+        "name": "Tennessee State Fair Robot Rodeo VEX V5 Override™ (HS/MS): VEX V5 Robotics Competition, Presented by Volunteer State Robotics Foundation",
+        "code": "RE-V5RC-26-4297"
+      },
+      "team": {
+        "id": 185129,
+        "name": "26163X",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 4,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79140892,
+      "event": {
+        "id": 64297,
+        "name": "Tennessee State Fair Robot Rodeo VEX V5 Override™ (HS/MS): VEX V5 Robotics Competition, Presented by Volunteer State Robotics Foundation",
+        "code": "RE-V5RC-26-4297"
+      },
+      "team": {
+        "id": 172015,
+        "name": "663H",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 5,
+      "score": 40,
+      "attempts": 1
+    },
+    {
+      "id": 79140893,
+      "event": {
+        "id": 64297,
+        "name": "Tennessee State Fair Robot Rodeo VEX V5 Override™ (HS/MS): VEX V5 Robotics Competition, Presented by Volunteer State Robotics Foundation",
+        "code": "RE-V5RC-26-4297"
+      },
+      "team": {
+        "id": 172015,
+        "name": "663H",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 5,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79140894,
+      "event": {
+        "id": 64297,
+        "name": "Tennessee State Fair Robot Rodeo VEX V5 Override™ (HS/MS): VEX V5 Robotics Competition, Presented by Volunteer State Robotics Foundation",
+        "code": "RE-V5RC-26-4297"
+      },
+      "team": {
+        "id": 198855,
+        "name": "2578U",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 6,
+      "score": 38,
+      "attempts": 1
+    },
+    {
+      "id": 79140895,
+      "event": {
+        "id": 64297,
+        "name": "Tennessee State Fair Robot Rodeo VEX V5 Override™ (HS/MS): VEX V5 Robotics Competition, Presented by Volunteer State Robotics Foundation",
+        "code": "RE-V5RC-26-4297"
+      },
+      "team": {
+        "id": 198855,
+        "name": "2578U",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 6,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79140896,
+      "event": {
+        "id": 64297,
+        "name": "Tennessee State Fair Robot Rodeo VEX V5 Override™ (HS/MS): VEX V5 Robotics Competition, Presented by Volunteer State Robotics Foundation",
+        "code": "RE-V5RC-26-4297"
+      },
+      "team": {
+        "id": 83884,
+        "name": "94W",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 7,
+      "score": 28,
+      "attempts": 2
+    },
+    {
+      "id": 79140897,
+      "event": {
+        "id": 64297,
+        "name": "Tennessee State Fair Robot Rodeo VEX V5 Override™ (HS/MS): VEX V5 Robotics Competition, Presented by Volunteer State Robotics Foundation",
+        "code": "RE-V5RC-26-4297"
+      },
+      "team": {
+        "id": 83884,
+        "name": "94W",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 7,
+      "score": 8,
+      "attempts": 2
+    },
+    {
+      "id": 79140898,
+      "event": {
+        "id": 64297,
+        "name": "Tennessee State Fair Robot Rodeo VEX V5 Override™ (HS/MS): VEX V5 Robotics Competition, Presented by Volunteer State Robotics Foundation",
+        "code": "RE-V5RC-26-4297"
+      },
+      "team": {
+        "id": 87283,
+        "name": "94S",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 8,
+      "score": 28,
+      "attempts": 2
+    },
+    {
+      "id": 79140899,
+      "event": {
+        "id": 64297,
+        "name": "Tennessee State Fair Robot Rodeo VEX V5 Override™ (HS/MS): VEX V5 Robotics Competition, Presented by Volunteer State Robotics Foundation",
+        "code": "RE-V5RC-26-4297"
+      },
+      "team": {
+        "id": 87283,
+        "name": "94S",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 8,
+      "score": 8,
+      "attempts": 2
+    },
+    {
+      "id": 79140900,
+      "event": {
+        "id": 64297,
+        "name": "Tennessee State Fair Robot Rodeo VEX V5 Override™ (HS/MS): VEX V5 Robotics Competition, Presented by Volunteer State Robotics Foundation",
+        "code": "RE-V5RC-26-4297"
+      },
+      "team": {
+        "id": 198387,
+        "name": "13205X",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 9,
+      "score": 18,
+      "attempts": 1
+    },
+    {
+      "id": 79140901,
+      "event": {
+        "id": 64297,
+        "name": "Tennessee State Fair Robot Rodeo VEX V5 Override™ (HS/MS): VEX V5 Robotics Competition, Presented by Volunteer State Robotics Foundation",
+        "code": "RE-V5RC-26-4297"
+      },
+      "team": {
+        "id": 198387,
+        "name": "13205X",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 9,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79140902,
+      "event": {
+        "id": 64297,
+        "name": "Tennessee State Fair Robot Rodeo VEX V5 Override™ (HS/MS): VEX V5 Robotics Competition, Presented by Volunteer State Robotics Foundation",
+        "code": "RE-V5RC-26-4297"
+      },
+      "team": {
+        "id": 83883,
+        "name": "94X",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 10,
+      "score": 8,
+      "attempts": 1
+    },
+    {
+      "id": 79140903,
+      "event": {
+        "id": 64297,
+        "name": "Tennessee State Fair Robot Rodeo VEX V5 Override™ (HS/MS): VEX V5 Robotics Competition, Presented by Volunteer State Robotics Foundation",
+        "code": "RE-V5RC-26-4297"
+      },
+      "team": {
+        "id": 83883,
+        "name": "94X",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 10,
+      "score": 8,
+      "attempts": 1
+    },
+    {
+      "id": 79140904,
+      "event": {
+        "id": 64297,
+        "name": "Tennessee State Fair Robot Rodeo VEX V5 Override™ (HS/MS): VEX V5 Robotics Competition, Presented by Volunteer State Robotics Foundation",
+        "code": "RE-V5RC-26-4297"
+      },
+      "team": {
+        "id": 87282,
+        "name": "94T",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 11,
+      "score": 8,
+      "attempts": 1
+    },
+    {
+      "id": 79140905,
+      "event": {
+        "id": 64297,
+        "name": "Tennessee State Fair Robot Rodeo VEX V5 Override™ (HS/MS): VEX V5 Robotics Competition, Presented by Volunteer State Robotics Foundation",
+        "code": "RE-V5RC-26-4297"
+      },
+      "team": {
+        "id": 87282,
+        "name": "94T",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 11,
+      "score": 8,
+      "attempts": 1
+    },
+    {
+      "id": 79140906,
+      "event": {
+        "id": 64297,
+        "name": "Tennessee State Fair Robot Rodeo VEX V5 Override™ (HS/MS): VEX V5 Robotics Competition, Presented by Volunteer State Robotics Foundation",
+        "code": "RE-V5RC-26-4297"
+      },
+      "team": {
+        "id": 176627,
+        "name": "57711A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 12,
+      "score": 8,
+      "attempts": 2
+    },
+    {
+      "id": 79140907,
+      "event": {
+        "id": 64297,
+        "name": "Tennessee State Fair Robot Rodeo VEX V5 Override™ (HS/MS): VEX V5 Robotics Competition, Presented by Volunteer State Robotics Foundation",
+        "code": "RE-V5RC-26-4297"
+      },
+      "team": {
+        "id": 176627,
+        "name": "57711A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 12,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79140908,
+      "event": {
+        "id": 64297,
+        "name": "Tennessee State Fair Robot Rodeo VEX V5 Override™ (HS/MS): VEX V5 Robotics Competition, Presented by Volunteer State Robotics Foundation",
+        "code": "RE-V5RC-26-4297"
+      },
+      "team": {
+        "id": 189212,
+        "name": "2775S",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 13,
+      "score": 8,
+      "attempts": 3
+    },
+    {
+      "id": 79140909,
+      "event": {
+        "id": 64297,
+        "name": "Tennessee State Fair Robot Rodeo VEX V5 Override™ (HS/MS): VEX V5 Robotics Competition, Presented by Volunteer State Robotics Foundation",
+        "code": "RE-V5RC-26-4297"
+      },
+      "team": {
+        "id": 189212,
+        "name": "2775S",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 13,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79140910,
+      "event": {
+        "id": 64297,
+        "name": "Tennessee State Fair Robot Rodeo VEX V5 Override™ (HS/MS): VEX V5 Robotics Competition, Presented by Volunteer State Robotics Foundation",
+        "code": "RE-V5RC-26-4297"
+      },
+      "team": {
+        "id": 87453,
+        "name": "94M",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 14,
+      "score": 8,
+      "attempts": 1
+    },
+    {
+      "id": 79140911,
+      "event": {
+        "id": 64297,
+        "name": "Tennessee State Fair Robot Rodeo VEX V5 Override™ (HS/MS): VEX V5 Robotics Competition, Presented by Volunteer State Robotics Foundation",
+        "code": "RE-V5RC-26-4297"
+      },
+      "team": {
+        "id": 87453,
+        "name": "94M",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 14,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79140912,
+      "event": {
+        "id": 64297,
+        "name": "Tennessee State Fair Robot Rodeo VEX V5 Override™ (HS/MS): VEX V5 Robotics Competition, Presented by Volunteer State Robotics Foundation",
+        "code": "RE-V5RC-26-4297"
+      },
+      "team": {
+        "id": 157200,
+        "name": "57711E",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 15,
+      "score": 0,
+      "attempts": 1
+    },
+    {
+      "id": 79140913,
+      "event": {
+        "id": 64297,
+        "name": "Tennessee State Fair Robot Rodeo VEX V5 Override™ (HS/MS): VEX V5 Robotics Competition, Presented by Volunteer State Robotics Foundation",
+        "code": "RE-V5RC-26-4297"
+      },
+      "team": {
+        "id": 157200,
+        "name": "57711E",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 15,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79140914,
+      "event": {
+        "id": 64297,
+        "name": "Tennessee State Fair Robot Rodeo VEX V5 Override™ (HS/MS): VEX V5 Robotics Competition, Presented by Volunteer State Robotics Foundation",
+        "code": "RE-V5RC-26-4297"
+      },
+      "team": {
+        "id": 122823,
+        "name": "663D",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 15,
+      "score": 0,
+      "attempts": 1
+    },
+    {
+      "id": 79140915,
+      "event": {
+        "id": 64297,
+        "name": "Tennessee State Fair Robot Rodeo VEX V5 Override™ (HS/MS): VEX V5 Robotics Competition, Presented by Volunteer State Robotics Foundation",
+        "code": "RE-V5RC-26-4297"
+      },
+      "team": {
+        "id": 122823,
+        "name": "663D",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 15,
+      "score": 0,
+      "attempts": 0
+    }
+  ]
+}

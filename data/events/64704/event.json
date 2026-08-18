@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64704,
+    "sku": "RE-V5RC-26-4704",
+    "name": "Great Valley Robotics February 2027 PA State Qualifier: VEX V5 Robotics Competition High School only. Venue: Great Valley MS",
+    "start": "2027-02-07T00:00:00-05:00",
+    "end": "2027-02-07T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Great Valley Middle School",
+      "address_1": "255 Phoenixville Pike",
+      "address_2": null,
+      "city": "Malvern",
+      "region": "Pennsylvania",
+      "postcode": "19355",
+      "country": "United States",
+      "coordinates": {
+        "lat": 40.059093,
+        "lon": -75.564646
+      }
+    },
+    "locations": {
+      "2027-02-07": {
+        "venue": "Great Valley Middle School",
+        "address_1": "255 Phoenixville Pike",
+        "address_2": null,
+        "city": "Malvern",
+        "region": "Pennsylvania",
+        "postcode": "19355",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40.059093,
+          "lon": -75.564646
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

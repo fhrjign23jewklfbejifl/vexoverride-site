@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64401/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64401/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64401/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 5,
+    "total": 5,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 95912,
+      "number": "2568A",
+      "team_name": "Porta-Botz! Atomic",
+      "robot_name": "",
+      "organization": "Portage Middle School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Portage",
+        "region": "Indiana",
+        "postcode": "46368",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.6,
+          "lon": -87.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 95822,
+      "number": "2568S",
+      "team_name": "Porta-Botz! Silly String",
+      "robot_name": "",
+      "organization": "Portage Middle School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Portage",
+        "region": "Indiana",
+        "postcode": "46368",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.6,
+          "lon": -87.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 197443,
+      "number": "2568W",
+      "team_name": "Porta-Botz! Whirlwind",
+      "robot_name": "",
+      "organization": "Portage Middle School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Portage",
+        "region": "Indiana",
+        "postcode": "46368",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.6,
+          "lon": -87.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 184532,
+      "number": "2568Z",
+      "team_name": "Porta-Botz! Zoinks!",
+      "robot_name": "",
+      "organization": "Portage Middle School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Portage",
+        "region": "Indiana",
+        "postcode": "46368",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.6,
+          "lon": -87.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 186625,
+      "number": "34543R",
+      "team_name": "RoboPhish",
+      "robot_name": "Barrycuda",
+      "organization": "Top Tier Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Plymouth",
+        "region": "Indiana",
+        "postcode": "46563",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.3,
+          "lon": -86.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    }
+  ]
+}

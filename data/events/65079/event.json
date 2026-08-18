@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65079,
+    "sku": "RE-V5RC-26-5079",
+    "name": "New Mexico Central Region V5 Skills Only 2026-2027: Override",
+    "start": "2027-01-30T00:00:00-05:00",
+    "end": "2027-01-30T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Cibola High School",
+      "address_1": "1510 Ellison Drive Northwest",
+      "address_2": null,
+      "city": "Albuquerque",
+      "region": "New Mexico",
+      "postcode": "87114",
+      "country": "United States",
+      "coordinates": {
+        "lat": 35.204585,
+        "lon": -106.663128
+      }
+    },
+    "locations": {
+      "2027-01-30": {
+        "venue": "Cibola High School",
+        "address_1": "1510 Ellison Drive Northwest",
+        "address_2": null,
+        "city": "Albuquerque",
+        "region": "New Mexico",
+        "postcode": "87114",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.204585,
+          "lon": -106.663128
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

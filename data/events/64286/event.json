@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64286,
+    "sku": "RE-V5RC-26-4286",
+    "name": "Keystone Oaks VEX V5 HS State Qualifier: VEX V5 Robotics Competition OVERRIDE",
+    "start": "2027-01-22T00:00:00-05:00",
+    "end": "2027-01-22T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Keystone Oaks HS",
+      "address_1": "1000 Kelton Avenue",
+      "address_2": null,
+      "city": "Pittsburgh",
+      "region": "Pennsylvania",
+      "postcode": "15216",
+      "country": "United States",
+      "coordinates": {
+        "lat": 40.387095,
+        "lon": -80.030081
+      }
+    },
+    "locations": {
+      "2027-01-22": {
+        "venue": "Keystone Oaks HS",
+        "address_1": "1000 Kelton Avenue",
+        "address_2": null,
+        "city": "Pittsburgh",
+        "region": "Pennsylvania",
+        "postcode": "15216",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40.387095,
+          "lon": -80.030081
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

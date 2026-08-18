@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64324,
+    "sku": "RE-V5RC-26-4324",
+    "name": "VEX V5 Robotics Competition - Bots on Warrior Hill: V5RC Blended",
+    "start": "2026-09-12T00:00:00-04:00",
+    "end": "2026-09-12T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Happy Valley High School",
+      "address_1": "121 Warpath Lane",
+      "address_2": null,
+      "city": "Elizabethton",
+      "region": "Tennessee",
+      "postcode": "37643",
+      "country": "United States",
+      "coordinates": {
+        "lat": 36.315135,
+        "lon": -82.27883
+      }
+    },
+    "locations": {
+      "2026-09-12": {
+        "venue": "Happy Valley High School",
+        "address_1": "121 Warpath Lane",
+        "address_2": null,
+        "city": "Elizabethton",
+        "region": "Tennessee",
+        "postcode": "37643",
+        "country": "United States",
+        "coordinates": {
+          "lat": 36.315135,
+          "lon": -82.27883
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

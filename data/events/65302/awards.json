@@ -1,0 +1,243 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65302/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65302/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65302/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 15,
+    "total": 15,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 288185,
+      "event": {
+        "id": 65302,
+        "name": "2026-27 Kern Middle School V5 Robotics League: VEX V5 Robotics Competition: Override: MS Only",
+        "code": "RE-V5RC-26-5302"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288186,
+      "event": {
+        "id": 65302,
+        "name": "2026-27 Kern Middle School V5 Robotics League: VEX V5 Robotics Competition: Override: MS Only",
+        "code": "RE-V5RC-26-5302"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288187,
+      "event": {
+        "id": 65302,
+        "name": "2026-27 Kern Middle School V5 Robotics League: VEX V5 Robotics Competition: Override: MS Only",
+        "code": "RE-V5RC-26-5302"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288188,
+      "event": {
+        "id": 65302,
+        "name": "2026-27 Kern Middle School V5 Robotics League: VEX V5 Robotics Competition: Override: MS Only",
+        "code": "RE-V5RC-26-5302"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288189,
+      "event": {
+        "id": 65302,
+        "name": "2026-27 Kern Middle School V5 Robotics League: VEX V5 Robotics Competition: Override: MS Only",
+        "code": "RE-V5RC-26-5302"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288190,
+      "event": {
+        "id": 65302,
+        "name": "2026-27 Kern Middle School V5 Robotics League: VEX V5 Robotics Competition: Override: MS Only",
+        "code": "RE-V5RC-26-5302"
+      },
+      "order": 71,
+      "title": "Robot Skills 2nd Place (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288191,
+      "event": {
+        "id": 65302,
+        "name": "2026-27 Kern Middle School V5 Robotics League: VEX V5 Robotics Competition: Override: MS Only",
+        "code": "RE-V5RC-26-5302"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288192,
+      "event": {
+        "id": 65302,
+        "name": "2026-27 Kern Middle School V5 Robotics League: VEX V5 Robotics Competition: Override: MS Only",
+        "code": "RE-V5RC-26-5302"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288193,
+      "event": {
+        "id": 65302,
+        "name": "2026-27 Kern Middle School V5 Robotics League: VEX V5 Robotics Competition: Override: MS Only",
+        "code": "RE-V5RC-26-5302"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288194,
+      "event": {
+        "id": 65302,
+        "name": "2026-27 Kern Middle School V5 Robotics League: VEX V5 Robotics Competition: Override: MS Only",
+        "code": "RE-V5RC-26-5302"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288195,
+      "event": {
+        "id": 65302,
+        "name": "2026-27 Kern Middle School V5 Robotics League: VEX V5 Robotics Competition: Override: MS Only",
+        "code": "RE-V5RC-26-5302"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288196,
+      "event": {
+        "id": 65302,
+        "name": "2026-27 Kern Middle School V5 Robotics League: VEX V5 Robotics Competition: Override: MS Only",
+        "code": "RE-V5RC-26-5302"
+      },
+      "order": 78,
+      "title": "Create Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288197,
+      "event": {
+        "id": 65302,
+        "name": "2026-27 Kern Middle School V5 Robotics League: VEX V5 Robotics Competition: Override: MS Only",
+        "code": "RE-V5RC-26-5302"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288198,
+      "event": {
+        "id": 65302,
+        "name": "2026-27 Kern Middle School V5 Robotics League: VEX V5 Robotics Competition: Override: MS Only",
+        "code": "RE-V5RC-26-5302"
+      },
+      "order": 82,
+      "title": "Volunteer of the Year Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288199,
+      "event": {
+        "id": 65302,
+        "name": "2026-27 Kern Middle School V5 Robotics League: VEX V5 Robotics Competition: Override: MS Only",
+        "code": "RE-V5RC-26-5302"
+      },
+      "order": 85,
+      "title": "Partner of the Year Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

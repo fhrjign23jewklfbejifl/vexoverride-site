@@ -1,0 +1,288 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64577/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64577/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64577/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 10,
+    "total": 10,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 85331,
+      "number": "8823E",
+      "team_name": "Erudite",
+      "robot_name": "",
+      "organization": "Milford Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Milford",
+        "region": "Ohio",
+        "postcode": "45150",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39.2,
+          "lon": -84.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 186794,
+      "number": "9185K",
+      "team_name": "Kratos",
+      "robot_name": "",
+      "organization": "BELLEFONTAINE HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bellefontaine",
+        "region": "Ohio",
+        "postcode": "43311",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40.3,
+          "lon": -83.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 186083,
+      "number": "43230A",
+      "team_name": "Classy Chassis",
+      "robot_name": "43230A",
+      "organization": "Gahanna Robotics Squad",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Gahanna",
+        "region": "Ohio",
+        "postcode": "43230",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40,
+          "lon": -82.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199096,
+      "number": "43230B",
+      "team_name": "43230B",
+      "robot_name": "43230B",
+      "organization": "Gahanna Robotics Squad",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Gahanna",
+        "region": "Ohio",
+        "postcode": "43230",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40,
+          "lon": -82.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 155320,
+      "number": "45434A",
+      "team_name": "Atomic",
+      "robot_name": "",
+      "organization": "Beavercreek Robotics Club",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Beavercreek",
+        "region": "Ohio",
+        "postcode": "45432",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39.7,
+          "lon": -84.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 198820,
+      "number": "45434B",
+      "team_name": "Blackout",
+      "robot_name": "",
+      "organization": "Beavercreek Robotics Club",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Beavercreek",
+        "region": "Ohio",
+        "postcode": "45432",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39.7,
+          "lon": -84.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 155323,
+      "number": "45434E",
+      "team_name": "Udder Chaos",
+      "robot_name": "",
+      "organization": "Beavercreek Robotics Club",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Beavercreek",
+        "region": "Ohio",
+        "postcode": "45432",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39.7,
+          "lon": -84.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 155326,
+      "number": "45434H",
+      "team_name": "Aftershock",
+      "robot_name": "",
+      "organization": "Beavercreek Robotics Club",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Beavercreek",
+        "region": "Ohio",
+        "postcode": "45432",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39.7,
+          "lon": -84.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 198821,
+      "number": "45434K",
+      "team_name": "Kamikaze",
+      "robot_name": "",
+      "organization": "Beavercreek Robotics Club",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Beavercreek",
+        "region": "Ohio",
+        "postcode": "45432",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39.7,
+          "lon": -84.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 155322,
+      "number": "45434M",
+      "team_name": "Meltdown",
+      "robot_name": "Bomber",
+      "organization": "Beavercreek Robotics Club",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Beavercreek",
+        "region": "Ohio",
+        "postcode": "45432",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39.7,
+          "lon": -84.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
+}

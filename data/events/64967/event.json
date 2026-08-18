@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 64967,
+    "sku": "RE-V5RC-26-4967",
+    "name": "PYRS VEX Robotics Richmond Christian School Qualifier",
+    "start": "2027-01-30T00:00:00-05:00",
+    "end": "2027-01-30T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Richmond Christian School",
+      "address_1": "10260 No 5 Rd, Richmond, BC V7A 4E5",
+      "address_2": null,
+      "city": "Richmond",
+      "region": "British Columbia",
+      "postcode": "V7A 4E5",
+      "country": "Canada",
+      "coordinates": {
+        "lat": 49.137269,
+        "lon": -123.091032
+      }
+    },
+    "locations": {
+      "2027-01-30": {
+        "venue": "Richmond Christian School",
+        "address_1": "10260 No 5 Rd, Richmond, BC V7A 4E5",
+        "address_2": null,
+        "city": "Richmond",
+        "region": "British Columbia",
+        "postcode": "V7A 4E5",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 49.137269,
+          "lon": -123.091032
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

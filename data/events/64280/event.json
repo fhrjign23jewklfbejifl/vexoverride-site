@@ -1,0 +1,110 @@
+{
+  "data": {
+    "id": 64280,
+    "sku": "RE-V5RC-26-4280",
+    "name": "2026 Sweetwater UHSD VEX V5 HS League (Invitational Event): VEX V5 Robotics Competition™ : Override™",
+    "start": "2026-09-12T00:00:00-04:00",
+    "end": "2027-01-16T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Otay Ranch High School",
+      "address_1": "1250 Olympic Parkway",
+      "address_2": null,
+      "city": "Chula Vista",
+      "region": "California",
+      "postcode": "91313",
+      "country": "United States",
+      "coordinates": {
+        "lat": 32.62037,
+        "lon": -116.990393
+      }
+    },
+    "locations": {
+      "2026-09-12": {
+        "venue": "Otay Ranch High School",
+        "address_1": "1250 Olympic Parkway",
+        "address_2": null,
+        "city": "Chula Vista",
+        "region": "California",
+        "postcode": "91313",
+        "country": "United States",
+        "coordinates": {
+          "lat": 32.62037,
+          "lon": -116.990393
+        }
+      },
+      "2026-10-03": {
+        "venue": "Olympian High School",
+        "address_1": "1925 Magdalena",
+        "address_2": null,
+        "city": "Chula Vista",
+        "region": "California",
+        "postcode": "91913",
+        "country": "United States",
+        "coordinates": {
+          "lat": 32.608358,
+          "lon": -116.974378
+        }
+      },
+      "2026-11-14": {
+        "venue": "Hilltop High School",
+        "address_1": "555 Claire Avenue",
+        "address_2": null,
+        "city": "Chula Vista",
+        "region": "California",
+        "postcode": "91910",
+        "country": "United States",
+        "coordinates": {
+          "lat": 32.637405,
+          "lon": -117.058077
+        }
+      },
+      "2026-12-05": {
+        "venue": "San Ysidro High School",
+        "address_1": "5353 Airway Drive",
+        "address_2": null,
+        "city": "San Diego",
+        "region": "California",
+        "postcode": "92154",
+        "country": "United States",
+        "coordinates": {
+          "lat": 32.564168,
+          "lon": -117.01599
+        }
+      },
+      "2027-01-16": {
+        "venue": "Montgomery High School",
+        "address_1": "3250 Palm Avenue",
+        "address_2": null,
+        "city": "San Diego",
+        "region": "California",
+        "postcode": "92154",
+        "country": "United States",
+        "coordinates": {
+          "lat": 32.586322,
+          "lon": -117.063962
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}
