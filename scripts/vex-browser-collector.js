@@ -3,7 +3,7 @@
 
 (async () => {
   const targetSeasonId = 204;
-  const defaultRange = "60000-70000";
+  const defaultRange = "64205-70000";
   const allPresets = new Set(["all", "season204", "2026-2027", "2026", "override"]);
   const input = prompt(
     [
@@ -27,7 +27,7 @@
   const checkpointPauseMs = 2 * 60 * 1000;
   const discoveryBatchSize = 300;
   const blankRecheckBatchSize = 300;
-  const memoryKey = `vexEventCollectorMemory:season:${targetSeasonId}`;
+  const memoryKey = `vexEventCollectorMemory:v2:season:${targetSeasonId}`;
 
   const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
   const jitter = ms => Math.round(ms + Math.random() * Math.min(ms * 0.35, 1200));
