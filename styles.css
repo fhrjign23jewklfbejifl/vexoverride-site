@@ -270,7 +270,7 @@ button {
 }
 
 .competition-search.event-browser {
-  grid-template-columns: minmax(140px, .62fr) minmax(260px, 1.25fr) minmax(180px, .85fr) 140px;
+  grid-template-columns: minmax(0, 1fr) minmax(170px, 240px) 140px;
 }
 
 .competition-search label {
@@ -307,6 +307,33 @@ button {
 .competition-search select:focus {
   border-color: rgba(102, 217, 208, .76);
   background: rgba(255, 255, 255, .095);
+}
+
+.competition-quick-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.competition-quick-filters button {
+  min-height: 34px;
+  border: 1px solid rgba(255, 255, 255, .13);
+  border-radius: 999px;
+  padding: 0 12px;
+  color: #c8d7dc;
+  background: rgba(255, 255, 255, .045);
+  font: inherit;
+  font-size: 11px;
+  font-weight: 1000;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.competition-quick-filters button[aria-pressed="true"] {
+  border-color: rgba(102, 217, 208, .36);
+  color: #07110f;
+  background: linear-gradient(135deg, #84f15e, #66d9d0);
+  box-shadow: 0 10px 26px rgba(102, 217, 208, .18);
 }
 
 .competition-status {
@@ -350,6 +377,44 @@ button {
   gap: 8px;
 }
 
+.my-competitions {
+  display: grid;
+  gap: 10px;
+  border: 1px solid rgba(102, 217, 208, .15);
+  border-radius: var(--radius-sm);
+  padding: 11px;
+  background:
+    linear-gradient(135deg, rgba(102, 217, 208, .075), rgba(132, 241, 94, .035)),
+    rgba(255, 255, 255, .025);
+}
+
+.my-competitions[hidden] {
+  display: none;
+}
+
+.my-competitions-head {
+  display: grid;
+  gap: 3px;
+}
+
+.my-competitions-head strong {
+  color: var(--white);
+  font-size: 17px;
+  line-height: 1.1;
+  font-weight: 1000;
+}
+
+.my-competitions-head span {
+  color: #9fb0b7;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.my-competition-list {
+  display: grid;
+  gap: 8px;
+}
+
 .competition-result,
 .team-skill-card {
   display: grid;
@@ -363,7 +428,14 @@ button {
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
   gap: 12px;
-  padding: 10px;
+  padding: 12px;
+}
+
+.competition-result-mine {
+  border-color: rgba(132, 241, 94, .24);
+  background:
+    linear-gradient(135deg, rgba(132, 241, 94, .075), rgba(102, 217, 208, .035)),
+    rgba(255, 255, 255, .035);
 }
 
 .competition-result span,
@@ -377,8 +449,9 @@ button {
 .competition-result h3 {
   margin: 2px 0 0;
   color: var(--white);
-  font-size: 16px;
-  line-height: 1.2;
+  font-size: 17px;
+  line-height: 1.22;
+  overflow-wrap: anywhere;
 }
 
 .competition-result p {
@@ -403,6 +476,10 @@ button {
   font-size: 10px;
   font-weight: 1000;
   text-transform: uppercase;
+}
+
+.competition-result .modal-button {
+  min-width: 118px;
 }
 
 .team-skill-summary {
@@ -1958,6 +2035,41 @@ body.modal-open {
   gap: 7px;
 }
 
+.setup-confirm {
+  display: grid;
+  gap: 10px;
+  margin: 0 22px 22px;
+  border: 1px solid rgba(102, 217, 208, .20);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  background:
+    linear-gradient(135deg, rgba(102, 217, 208, .10), rgba(132, 241, 94, .050)),
+    rgba(255, 255, 255, .035);
+}
+
+.setup-confirm[hidden] {
+  display: none;
+}
+
+.setup-confirm span {
+  color: #9fb0b7;
+  font-size: 11px;
+  font-weight: 1000;
+  text-transform: uppercase;
+}
+
+.setup-confirm strong {
+  color: var(--white);
+  font-size: 21px;
+  line-height: 1.08;
+}
+
+.setup-confirm-actions {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 9px;
+}
+
 .modal-head {
   display: grid;
   grid-template-columns: 1fr 38px;
@@ -2156,6 +2268,10 @@ body.modal-open {
     grid-template-columns: 1fr;
   }
 
+  .competition-quick-filters {
+    gap: 6px;
+  }
+
   .team-skill-stats {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2339,6 +2455,14 @@ body.modal-open {
 
   .competition-result,
   .team-skill-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .competition-result .modal-button {
+    width: 100%;
+  }
+
+  .setup-confirm-actions {
     grid-template-columns: 1fr;
   }
 

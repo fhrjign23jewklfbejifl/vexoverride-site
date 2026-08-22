@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Override Scoring Prototype</title>
   <meta name="description" content="Interactive VEX V5 Override scoring prototype." />
-  <link rel="stylesheet" href="./styles.css?v=scouting-event-picker-20260817-2" />
+  <link rel="stylesheet" href="./styles.css?v=scouting-finder-team-confirm-20260818-1" />
 </head>
 <body>
   <main class="score-app">
@@ -73,25 +73,30 @@
           <span class="competition-source" data-competition-source>Proxy not connected</span>
         </div>
 
+        <div class="my-competitions" data-my-competitions hidden></div>
+
         <form class="competition-search event-browser" data-competition-search-form>
+          <label>
+            <span>Find competition</span>
+            <input name="competitionSearch" type="search" autocomplete="off" placeholder="Ransom, Miami, 65030, Florida, 4330P..." />
+          </label>
           <label>
             <span>Region</span>
             <select name="competitionRegion" data-competition-region>
               <option value="">All synced regions</option>
             </select>
           </label>
-          <label>
-            <span>Competition</span>
-            <select name="competitionEvent" data-competition-event>
-              <option value="">Choose a synced competition</option>
-            </select>
-          </label>
-          <label>
-            <span>Quick filter</span>
-            <input name="competitionSearch" type="search" autocomplete="off" placeholder="Ransom, Miami, 65030, RE-V5RC..." />
-          </label>
           <button class="save-trigger" type="submit">Show Events</button>
         </form>
+
+        <div class="competition-quick-filters" data-competition-quick-filters aria-label="Competition quick filters">
+          <button type="button" data-competition-filter="all" aria-pressed="true">All</button>
+          <button type="button" data-competition-filter="mine" aria-pressed="false">My competitions</button>
+          <button type="button" data-competition-filter="florida" aria-pressed="false">Florida</button>
+          <button type="button" data-competition-filter="usa" aria-pressed="false">United States</button>
+          <button type="button" data-competition-filter="upcoming" aria-pressed="false">Upcoming</button>
+          <button type="button" data-competition-filter="past" aria-pressed="false">Past</button>
+        </div>
 
         <div class="competition-status" data-competition-status>
           Loading synced competitions...
@@ -331,8 +336,16 @@
           <span>Your team number</span>
           <input name="teamNumber" type="text" inputmode="numeric" autocomplete="off" placeholder="4330P" required />
         </label>
-        <button class="modal-button primary" type="submit">Enter Scorer</button>
+        <button class="modal-button primary" type="submit" data-setup-submit>Check Team</button>
       </form>
+      <div class="setup-confirm" data-setup-confirm hidden>
+        <span>Team found</span>
+        <strong data-setup-confirm-name></strong>
+        <div class="setup-confirm-actions">
+          <button class="modal-button primary" type="button" data-setup-confirm-yes>Yes, continue</button>
+          <button class="modal-button secondary" type="button" data-setup-confirm-no>No, edit team number</button>
+        </div>
+      </div>
     </section>
   </div>
 
@@ -427,6 +440,6 @@
   </div>
 
   <div class="toast" data-toast role="status" aria-live="polite"></div>
-  <script src="./app.js?v=scouting-event-picker-20260817-2"></script>
+  <script src="./app.js?v=scouting-finder-team-confirm-20260818-1"></script>
 </body>
 </html>

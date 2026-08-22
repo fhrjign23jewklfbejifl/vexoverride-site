@@ -65,6 +65,10 @@ let importedCompetition = loadCompetitionData();
 let syncedEvents = [];
 let syncedEventsLoaded = false;
 let syncedEventsError = null;
+let syncedTeamIndexPromise = null;
+let syncedTeamIndex = null;
+let competitionQuickFilter = "all";
+let pendingProfileMatch = null;
 let teamSkillsResults = [];
 let expandedTeamSkillId = null;
 let lastModalFocus = null;
@@ -255,7 +259,7 @@ function renderBanner() {
 
   const matches = savedMatches().filter(isHeadMatch);
   const summary = matchRecordSummary(matches);
-  team.textContent = profile?.teamNumber || "4330P";
+  team.textContent = profile?.teamName ? `${profile.teamNumber} ${profile.teamName}` : (profile?.teamNumber || "4330P");
   count.textContent = String(matches.length);
   record.textContent = `${summary.wins}-${summary.losses}-${summary.ties}`;
 }
@@ -286,12 +290,44 @@ function localEventId(event) {
   return String(event.eventId || event.id || "");
 }
 
+function normalizeSearchText(value) {
+  return String(value ?? "")
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[™®©★]/g, " ")
+    .replace(/[^a-zA-Z0-9]+/g, " ")
+    .trim()
+    .toLowerCase();
+}
+
+function compactSearchText(value) {
+  return normalizeSearchText(value).replace(/\s+/g, "");
+}
+
 function eventRegionKey(event) {
   return [event.region, event.country].filter(Boolean).join("|");
 }
 
 function eventRegionLabel(event) {
   return [event.region, event.country].filter(Boolean).join(", ") || "Region not listed";
+}
+
+function eventDateTime(event) {
+  const time = new Date(event.start || event.date || 0).getTime();
+  return Number.isNaN(time) ? 0 : time;
+}
+
+function isUpcomingEvent(event) {
+  const time = eventDateTime(event);
+  if (!time) return false;
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  return time >= today.getTime();
+}
+
+function eventTeamIndexText(event) {
+  if (!syncedTeamIndex) return "";
+  return syncedTeamIndex.eventText.get(localEventId(event)) || "";
 }
 
 function localEventMatches(event, query, region = "") {
@@ -307,13 +343,48 @@ function localEventMatches(event, query, region = "") {
     event.end,
     event.city,
     event.region,
-    event.country
-  ].filter(Boolean).join(" ").toLowerCase();
-  return haystack.includes(query.toLowerCase());
+    event.country,
+    eventTeamIndexText(event)
+  ].filter(Boolean).join(" ");
+  const normalizedHaystack = normalizeSearchText(haystack);
+  const normalizedQuery = normalizeSearchText(query);
+  return normalizedHaystack.includes(normalizedQuery) || compactSearchText(haystack).includes(compactSearchText(query));
 }
 
-function sortedSyncedEvents(events = []) {
+function eventMatchesQuickFilter(event) {
+  if (competitionQuickFilter === "mine") return myCompetitionEvents().some(item => localEventId(item) === localEventId(event));
+  if (competitionQuickFilter === "florida") return normalizeSearchText(event.region) === "florida";
+  if (competitionQuickFilter === "usa") return normalizeSearchText(event.country) === "united states";
+  if (competitionQuickFilter === "upcoming") return isUpcomingEvent(event);
+  if (competitionQuickFilter === "past") return eventDateTime(event) > 0 && !isUpcomingEvent(event);
+  return true;
+}
+
+function eventSearchRank(event, query) {
+  const normalizedQuery = normalizeSearchText(query);
+  if (!normalizedQuery) return eventDateTime(event);
+  const compactQuery = compactSearchText(query);
+  const id = normalizeSearchText(localEventId(event));
+  const sku = normalizeSearchText(event.sku || event.code || "");
+  const teams = eventTeamIndexText(event);
+  const city = normalizeSearchText(event.city);
+  const region = normalizeSearchText(event.region);
+  const country = normalizeSearchText(event.country);
+  const name = normalizeSearchText(event.name);
+  let score = 0;
+  if (id === normalizedQuery || sku === normalizedQuery || compactSearchText(event.sku || event.code || "") === compactQuery) score += 100000;
+  if (teams.split(" ").includes(normalizedQuery) || compactSearchText(teams).includes(compactQuery)) score += 80000;
+  if (city.includes(normalizedQuery)) score += 40000;
+  if (region.includes(normalizedQuery)) score += 30000;
+  if (country.includes(normalizedQuery)) score += 20000;
+  if (name.includes(normalizedQuery)) score += 10000;
+  score -= eventDateTime(event) / 10000000000000;
+  return -score;
+}
+
+function sortedSyncedEvents(events = [], query = "") {
   return [...events].sort((a, b) => {
+    if (query) return eventSearchRank(a, query) - eventSearchRank(b, query);
     const aTime = new Date(a.start || a.date || 0).getTime();
     const bTime = new Date(b.start || b.date || 0).getTime();
     if (!Number.isNaN(aTime) && !Number.isNaN(bTime) && aTime !== bTime) return aTime - bTime;
@@ -333,16 +404,14 @@ function competitionFilterValues() {
 
 function filteredSyncedEvents() {
   const { query, region } = competitionFilterValues();
-  return sortedSyncedEvents(syncedEvents.filter(event => localEventMatches(event, query, region)));
+  return sortedSyncedEvents(syncedEvents.filter(event => eventMatchesQuickFilter(event) && localEventMatches(event, query, region)), query);
 }
 
 function renderCompetitionPickers(events = syncedEvents) {
   const regionSelect = $("[data-competition-region]");
-  const eventSelect = $("[data-competition-event]");
-  if (!regionSelect || !eventSelect) return;
+  if (!regionSelect) return;
 
   const selectedRegion = regionSelect.value;
-  const selectedEvent = eventSelect.value;
   const regions = Array.from(new Map(sortedSyncedEvents(events)
     .map(event => [eventRegionKey(event), eventRegionLabel(event)])
     .filter(([key]) => key)
@@ -354,23 +423,6 @@ function renderCompetitionPickers(events = syncedEvents) {
   ].join("");
   if ([...regionSelect.options].some(option => option.value === selectedRegion)) {
     regionSelect.value = selectedRegion;
-  }
-
-  const availableEvents = filteredSyncedEvents();
-  eventSelect.innerHTML = [
-    `<option value="">Choose a synced competition</option>`,
-    ...availableEvents.map(event => {
-      const id = localEventId(event);
-      const label = [
-        event.name || `Event ${id}`,
-        competitionDateLabel(event),
-        competitionLocation(event)
-      ].filter(Boolean).join(" - ");
-      return `<option value="${escapeHtml(id)}">${escapeHtml(label)}</option>`;
-    })
-  ].join("");
-  if ([...eventSelect.options].some(option => option.value === selectedEvent)) {
-    eventSelect.value = selectedEvent;
   }
 }
 
@@ -504,6 +556,125 @@ async function searchTeamSkills(query) {
   );
 }
 
+async function ensureSyncedTeamIndex() {
+  await ensureSyncedEventsLoaded();
+  if (syncedTeamIndex) return syncedTeamIndex;
+  if (syncedTeamIndexPromise) return syncedTeamIndexPromise;
+
+  syncedTeamIndexPromise = (async () => {
+    const byTeam = new Map();
+    const eventText = new Map();
+    const eventsById = new Map(syncedEvents.map(event => [localEventId(event), event]));
+
+    await mapWithConcurrency(syncedEvents, 12, async (event) => {
+      const id = localEventId(event);
+      const teamsPath = event.paths?.teams || `data/events/${id}/teams.json`;
+      const payload = await readLocalJson(teamsPath).catch(() => ({ data: [] }));
+      const teams = Array.isArray(payload.data) ? payload.data.map(normalizeLocalTeam) : [];
+      const terms = [];
+      teams.forEach((team) => {
+        const number = String(team.teamNumber || "").trim();
+        if (!number) return;
+        const key = number.toUpperCase();
+        const entry = { event: eventsById.get(id) || event, team };
+        if (!byTeam.has(key)) byTeam.set(key, []);
+        byTeam.get(key).push(entry);
+        terms.push(number, team.teamName, team.organization, team.robotName);
+      });
+      eventText.set(id, normalizeSearchText(terms.filter(Boolean).join(" ")));
+    });
+
+    syncedTeamIndex = { byTeam, eventText };
+    return syncedTeamIndex;
+  })();
+
+  return syncedTeamIndexPromise;
+}
+
+function myCompetitionEntries() {
+  const teamNumber = String(profile?.teamNumber || "").trim().toUpperCase();
+  if (!teamNumber || !syncedTeamIndex) return [];
+  return syncedTeamIndex.byTeam.get(teamNumber) || [];
+}
+
+function myCompetitionEvents() {
+  const seen = new Set();
+  return myCompetitionEntries()
+    .map(entry => entry.event)
+    .filter((event) => {
+      const id = localEventId(event);
+      if (!id || seen.has(id)) return false;
+      seen.add(id);
+      return true;
+    });
+}
+
+function renderMyCompetitions() {
+  const wrap = $("[data-my-competitions]");
+  if (!wrap) return;
+  wrap.hidden = false;
+
+  const teamLabel = profile?.teamName
+    ? `${profile.teamNumber} ${profile.teamName}`
+    : (profile?.teamNumber || "your team");
+  const events = sortedSyncedEvents(myCompetitionEvents());
+  if (!profile?.teamNumber) {
+    wrap.innerHTML = `
+      <div class="my-competitions-head">
+        <span class="brand-kicker">My competitions</span>
+        <strong>Enter a team number during setup to auto-detect your events.</strong>
+      </div>
+    `;
+    return;
+  }
+
+  if (!events.length) {
+    wrap.innerHTML = `
+      <div class="my-competitions-head">
+        <span class="brand-kicker">My competitions</span>
+        <strong>No synced competitions found for ${escapeHtml(teamLabel)}.</strong>
+        <p>Try searching all synced events below.</p>
+      </div>
+    `;
+    return;
+  }
+
+  wrap.innerHTML = `
+    <div class="my-competitions-head">
+      <span class="brand-kicker">My competitions</span>
+      <strong>${escapeHtml(events.length)} synced event${events.length === 1 ? "" : "s"} found for ${escapeHtml(teamLabel)}</strong>
+    </div>
+    <div class="my-competition-list">
+      ${events.map(event => eventCardMarkup(event, "mine")).join("")}
+    </div>
+  `;
+}
+
+function eventCardMarkup(event, variant = "") {
+  const id = localEventId(event);
+  return `
+    <article class="competition-result ${variant ? `competition-result-${variant}` : ""}">
+      <div>
+        <span>${escapeHtml(event.sku || event.code || `Event ${id}`)} • Event ${escapeHtml(id)}</span>
+        <h3>${escapeHtml(event.name || "Unnamed event")}</h3>
+        <p>${escapeHtml(competitionDateLabel(event))}${competitionLocation(event) ? ` • ${escapeHtml(competitionLocation(event))}` : ""}</p>
+        <div class="competition-counts" aria-label="Synced data counts">
+          <strong>${escapeHtml(event.teamCount ?? 0)} teams</strong>
+          <strong>${escapeHtml(event.skillCount ?? 0)} skills</strong>
+          <strong>${escapeHtml(event.awardCount ?? 0)} awards</strong>
+        </div>
+      </div>
+      <button class="modal-button secondary" type="button" data-import-event="${escapeHtml(id)}">View / Import</button>
+    </article>
+  `;
+}
+
+function renderCompetitionFilters() {
+  $$("[data-competition-filter]").forEach((button) => {
+    button.setAttribute("aria-pressed", String(button.dataset.competitionFilter === competitionQuickFilter));
+  });
+}
+
 function renderCompetitionResults(events = []) {
   const results = $("[data-competition-results]");
   if (!results) return;
@@ -513,21 +684,7 @@ function renderCompetitionResults(events = []) {
     return;
   }
 
-  results.innerHTML = events.map(event => `
-    <article class="competition-result">
-      <div>
-        <span>${escapeHtml(event.sku || event.code || `Event ${localEventId(event)}`)}</span>
-        <h3>${escapeHtml(event.name || "Unnamed event")}</h3>
-        <p>${escapeHtml(competitionDateLabel(event))}${competitionLocation(event) ? ` • ${escapeHtml(competitionLocation(event))}` : ""}</p>
-        <div class="competition-counts" aria-label="Synced data counts">
-          <strong>${escapeHtml(event.teamCount ?? 0)} teams</strong>
-          <strong>${escapeHtml(event.skillCount ?? 0)} skills</strong>
-          <strong>${escapeHtml(event.awardCount ?? 0)} awards</strong>
-        </div>
-      </div>
-      <button class="modal-button secondary" type="button" data-import-event="${escapeHtml(localEventId(event))}">Import</button>
-    </article>
-  `).join("");
+  results.innerHTML = events.map(event => eventCardMarkup(event)).join("");
 }
 
 function renderImportedCompetition() {
@@ -576,15 +733,20 @@ async function searchCompetitions(query) {
     competitionSearchResults = [];
     renderCompetitionResults(competitionSearchResults);
     renderCompetitionPickers();
+    renderMyCompetitions();
     setCompetitionStatus(syncedEventsError || "No synced competitions found yet. Run the VEX collector and import a bundle.", "warn");
     return;
   }
+  setCompetitionStatus("Searching synced competitions...", "loading");
+  await ensureSyncedTeamIndex();
   const regionSelect = $("[data-competition-region]");
   const region = regionSelect?.value || "";
   const searchInput = $("[data-competition-search-form] input[name='competitionSearch']");
   if (searchInput && searchInput.value.trim() !== query) searchInput.value = query;
-  competitionSearchResults = sortedSyncedEvents(syncedEvents.filter(event => localEventMatches(event, query, region)));
+  competitionSearchResults = sortedSyncedEvents(syncedEvents.filter(event => eventMatchesQuickFilter(event) && localEventMatches(event, query, region)), query);
   renderCompetitionPickers();
+  renderCompetitionFilters();
+  renderMyCompetitions();
   renderCompetitionResults(competitionSearchResults);
   setCompetitionStatus(competitionSearchResults.length
     ? `Found ${competitionSearchResults.length} synced competition${competitionSearchResults.length === 1 ? "" : "s"}.`
@@ -603,11 +765,18 @@ async function ensureSyncedEventsLoaded() {
     syncedEventsLoaded = true;
     renderCompetitionSource();
     if (syncedEvents.length) {
-      setCompetitionStatus(`${syncedEvents.length} synced competition${syncedEvents.length === 1 ? "" : "s"} available.`, "ready");
+      const updated = payload.updatedAt ? ` Last updated ${new Date(payload.updatedAt).toLocaleString()}.` : "";
+      setCompetitionStatus(`${syncedEvents.length} synced competition${syncedEvents.length === 1 ? "" : "s"} loaded.${updated}`, "ready");
       renderCompetitionPickers();
-      renderCompetitionResults(sortedSyncedEvents(syncedEvents).slice(0, 6));
+      renderCompetitionFilters();
+      renderCompetitionResults(sortedSyncedEvents(syncedEvents).slice(0, 12));
+      ensureSyncedTeamIndex().then(() => {
+        renderMyCompetitions();
+        if (competitionQuickFilter === "mine") searchCompetitions(competitionFilterValues().query);
+      }).catch(() => renderMyCompetitions());
     } else {
       renderCompetitionPickers();
+      renderMyCompetitions();
       setCompetitionStatus("No synced competitions found yet. Run the VEX collector and import a bundle.", "warn");
     }
   } catch (error) {
@@ -615,6 +784,7 @@ async function ensureSyncedEventsLoaded() {
     syncedEventsError = error.message || "No synced competitions found yet. Run the VEX collector and import a bundle.";
     renderCompetitionSource();
     renderCompetitionPickers();
+    renderMyCompetitions();
     setCompetitionStatus(syncedEventsError, "warn");
   }
 }
@@ -759,6 +929,8 @@ function loadProfile() {
     if (saved && typeof saved.teamNumber === "string" && saved.teamNumber.trim()) {
       return {
         teamNumber: saved.teamNumber.trim(),
+        teamName: typeof saved.teamName === "string" ? saved.teamName.trim() : "",
+        teamSource: typeof saved.teamSource === "string" ? saved.teamSource : "",
         createdAt: saved.createdAt || new Date().toISOString()
       };
     }
@@ -768,14 +940,81 @@ function loadProfile() {
   return null;
 }
 
-function saveProfile(teamNumber) {
+function saveProfile(teamNumber, teamName = "", teamSource = "") {
   const nextProfile = {
     teamNumber: teamNumber.trim(),
+    teamName: teamName.trim(),
+    teamSource,
     createdAt: new Date().toISOString()
   };
   localStorage.setItem(PROFILE_STORE_KEY, JSON.stringify(nextProfile));
   profile = nextProfile;
   return nextProfile;
+}
+
+async function findTeamInSyncedEvents(teamNumber) {
+  await ensureSyncedTeamIndex();
+  const entries = syncedTeamIndex?.byTeam.get(teamNumber.trim().toUpperCase()) || [];
+  const namedEntry = entries.find(entry => entry.team?.teamName);
+  if (!namedEntry) return null;
+  return {
+    teamNumber: namedEntry.team.teamNumber,
+    teamName: namedEntry.team.teamName,
+    teamSource: "synced-events"
+  };
+}
+
+async function findTeamInSkills(teamNumber) {
+  if (!vexProxyUrl()) return null;
+  try {
+    const payload = await vexProxyFetch(`/api/skills/search?q=${encodeURIComponent(teamNumber.trim())}`);
+    const rows = Array.isArray(payload.skills) ? payload.skills : [];
+    const match = rows.find(row => String(row.team?.teamNumber || "").toUpperCase() === teamNumber.trim().toUpperCase());
+    if (!match?.team?.teamName) return null;
+    return {
+      teamNumber: match.team.teamNumber,
+      teamName: match.team.teamName,
+      teamSource: "skills"
+    };
+  } catch {
+    return null;
+  }
+}
+
+async function findTeamIdentity(teamNumber) {
+  const localMatch = await findTeamInSyncedEvents(teamNumber).catch(() => null);
+  if (localMatch) return localMatch;
+  return findTeamInSkills(teamNumber).catch(() => null);
+}
+
+function renderSetupConfirmation(match) {
+  const confirm = $("[data-setup-confirm]");
+  const name = $("[data-setup-confirm-name]");
+  const submit = $("[data-setup-submit]");
+  if (!confirm || !name) return;
+  pendingProfileMatch = match;
+  name.textContent = `Are you ${match.teamNumber} ${match.teamName}?`;
+  confirm.hidden = false;
+  if (submit) submit.textContent = "Check Another Team";
+}
+
+function clearSetupConfirmation() {
+  const confirm = $("[data-setup-confirm]");
+  const submit = $("[data-setup-submit]");
+  pendingProfileMatch = null;
+  if (confirm) confirm.hidden = true;
+  if (submit) submit.textContent = "Check Team";
+}
+
+function finishProfileSetup(nextProfile) {
+  renderBanner();
+  renderMyCompetitions();
+  renderCompetitionResults(filteredSyncedEvents().slice(0, 12));
+  closeSetupModal();
+  showToast(nextProfile.teamName
+    ? `${nextProfile.teamNumber} ${nextProfile.teamName} saved on this device.`
+    : `Team ${nextProfile.teamNumber} saved on this device.`
+  );
 }
 
 function cloneScorerState() {
@@ -1657,17 +1896,44 @@ $("[data-skills-save-form]")?.addEventListener("submit", (event) => {
   saveCurrentSkillsRun(notes);
 });
 
-$("[data-setup-form]")?.addEventListener("submit", (event) => {
+$("[data-setup-form]")?.addEventListener("submit", async (event) => {
   event.preventDefault();
   const value = String(new FormData(event.currentTarget).get("teamNumber") || "").trim();
   if (!value) {
     showToast("Enter your team number first.");
     return;
   }
-  saveProfile(value);
-  renderBanner();
-  closeSetupModal();
-  showToast(`Team ${value} saved on this device.`);
+  clearSetupConfirmation();
+  const submit = $("[data-setup-submit]");
+  if (submit) {
+    submit.disabled = true;
+    submit.textContent = "Checking...";
+  }
+  const match = await findTeamIdentity(value);
+  if (submit) submit.disabled = false;
+  if (match?.teamName) {
+    renderSetupConfirmation(match);
+    return;
+  }
+  finishProfileSetup(saveProfile(value));
+});
+
+$("[data-setup-form] input[name='teamNumber']")?.addEventListener("input", clearSetupConfirmation);
+
+$("[data-setup-confirm-yes]")?.addEventListener("click", () => {
+  if (!pendingProfileMatch) return;
+  finishProfileSetup(saveProfile(
+    pendingProfileMatch.teamNumber,
+    pendingProfileMatch.teamName,
+    pendingProfileMatch.teamSource
+  ));
+});
+
+$("[data-setup-confirm-no]")?.addEventListener("click", () => {
+  clearSetupConfirmation();
+  const input = $("[data-setup-form] input[name='teamNumber']");
+  input?.focus();
+  input?.select();
 });
 
 $("[data-dev-edit-form]")?.addEventListener("submit", (event) => {
@@ -1685,19 +1951,8 @@ $("[data-competition-search-form]")?.addEventListener("submit", (event) => {
 });
 
 $("[data-competition-region]")?.addEventListener("change", () => {
-  const eventSelect = $("[data-competition-event]");
-  if (eventSelect) eventSelect.value = "";
   searchCompetitions(competitionFilterValues().query).catch((error) => {
     setCompetitionStatus(error.message || "Competition data could not load. Try again later.", "warn");
-  });
-});
-
-$("[data-competition-event]")?.addEventListener("change", (event) => {
-  const eventId = event.currentTarget.value;
-  if (!eventId) return;
-  importCompetition(eventId).catch((error) => {
-    setCompetitionStatus(error.message || "Competition data could not load. Try again later.", "warn");
-    showToast("Competition data could not load. Try again later.");
   });
 });
 
@@ -1705,6 +1960,16 @@ $("[data-competition-search-form] input[name='competitionSearch']")?.addEventLis
   const value = String(event.currentTarget.value || "").trim();
   searchCompetitions(value).catch((error) => {
     setCompetitionStatus(error.message || "Competition data could not load. Try again later.", "warn");
+  });
+});
+
+$$("[data-competition-filter]").forEach((button) => {
+  button.addEventListener("click", () => {
+    competitionQuickFilter = button.dataset.competitionFilter || "all";
+    renderCompetitionFilters();
+    searchCompetitions(competitionFilterValues().query).catch((error) => {
+      setCompetitionStatus(error.message || "Competition data could not load. Try again later.", "warn");
+    });
   });
 });
 
