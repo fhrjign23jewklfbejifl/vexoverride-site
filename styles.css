@@ -460,6 +460,20 @@ button {
   font-size: 13px;
 }
 
+.competition-result .competition-official-region {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 8px;
+  padding: 5px 10px;
+  border: 1px solid rgba(88, 226, 205, .35);
+  border-radius: 999px;
+  background: rgba(88, 226, 205, .10);
+  color: #d7fbff;
+  font-size: 11px;
+  font-weight: 1000;
+  text-transform: uppercase;
+}
+
 .competition-counts {
   display: flex;
   flex-wrap: wrap;

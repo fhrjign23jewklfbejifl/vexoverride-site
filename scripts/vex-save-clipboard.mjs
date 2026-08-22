@@ -76,6 +76,8 @@ function assertSeason(event, config) {
 function summary(eventId, event, teams, skills, awards) {
   const data = eventData(event);
   const location = data.location || {};
+  const meta = event?.meta || {};
+  const eventRegion = meta.eventRegion || {};
   return {
     eventId,
     sku: data.sku || data.code || "",
@@ -85,6 +87,8 @@ function summary(eventId, event, teams, skills, awards) {
     city: location.city || data.city || "",
     region: location.region || data.region || "",
     country: location.country || data.country || "",
+    eventRegionId: eventRegion.id || null,
+    eventRegionName: eventRegion.name || "",
     teamCount: teams?.data?.length || 0,
     skillCount: skills?.data?.length || 0,
     awardCount: awards?.data?.length || 0,
@@ -111,7 +115,8 @@ async function rebuildIndex() {
     const teams = await readJson(path.join(folder, "teams.json"), {});
     const skills = await readJson(path.join(folder, "skills.json"), {});
     const awards = await readJson(path.join(folder, "awards.json"), {});
-    entries.push(summary(eventId, event, teams, skills, awards));
+    const meta = await readJson(path.join(folder, "meta.json"), {});
+    entries.push(summary(eventId, { ...event, meta }, teams, skills, awards));
   }
 
   await writeJson(INDEX_PATH, {
@@ -125,6 +130,8 @@ async function rebuildIndex() {
 async function saveEventBundle(bundle) {
   const config = await readJson(CONFIG_PATH, {});
   const records = Array.isArray(bundle.events) ? bundle.events : [];
+  const eventRegionsById = bundle.officialRegions?.eventRegionsById || {};
+  const regionMap = bundle.officialRegions?.regionMap || {};
   let saved = 0;
 
   for (const record of records) {
@@ -137,10 +144,13 @@ async function saveEventBundle(bundle) {
     if (record.teams) await writeJson(path.join(folder, "teams.json"), record.teams);
     if (record.skills) await writeJson(path.join(folder, "skills.json"), record.skills);
     if (record.awards) await writeJson(path.join(folder, "awards.json"), record.awards);
+    const eventRegion = record.eventRegion || eventRegionsById[String(eventId)] || null;
     await writeJson(path.join(folder, "meta.json"), {
       eventId,
       updatedAt: new Date().toISOString(),
       source: record.meta?.source || "browser-side events.vex.com collector",
+      eventRegion,
+      officialRegionMapVersion: Object.keys(regionMap).length ? bundle.generatedAt || null : null,
       status: "ok"
     });
     saved += 1;

@@ -268,6 +268,14 @@ function competitionLocation(event) {
   return [event.city, event.region, event.country].filter(Boolean).join(", ");
 }
 
+function officialEventRegionName(event) {
+  return event?.eventRegionName || event?.meta?.eventRegion?.name || "";
+}
+
+function officialEventRegionId(event) {
+  return event?.eventRegionId || event?.meta?.eventRegion?.id || "";
+}
+
 function competitionDateLabel(event) {
   const value = event.date || event.start;
   if (!value) return "Date not listed";
@@ -305,10 +313,14 @@ function compactSearchText(value) {
 }
 
 function eventRegionKey(event) {
+  const officialId = officialEventRegionId(event);
+  if (officialId) return `official|${officialId}`;
   return [event.region, event.country].filter(Boolean).join("|");
 }
 
 function eventRegionLabel(event) {
+  const officialName = officialEventRegionName(event);
+  if (officialName) return officialName;
   return [event.region, event.country].filter(Boolean).join(", ") || "Region not listed";
 }
 
@@ -343,6 +355,7 @@ function localEventMatches(event, query, region = "") {
     event.end,
     event.city,
     event.region,
+    officialEventRegionName(event),
     event.country,
     eventTeamIndexText(event)
   ].filter(Boolean).join(" ");
@@ -353,7 +366,7 @@ function localEventMatches(event, query, region = "") {
 
 function eventMatchesQuickFilter(event) {
   if (competitionQuickFilter === "mine") return myCompetitionEvents().some(item => localEventId(item) === localEventId(event));
-  if (competitionQuickFilter === "florida") return normalizeSearchText(event.region) === "florida";
+  if (competitionQuickFilter === "florida") return normalizeSearchText(event.region) === "florida" || normalizeSearchText(officialEventRegionName(event)).includes("florida");
   if (competitionQuickFilter === "usa") return normalizeSearchText(event.country) === "united states";
   if (competitionQuickFilter === "upcoming") return isUpcomingEvent(event);
   if (competitionQuickFilter === "past") return eventDateTime(event) > 0 && !isUpcomingEvent(event);
@@ -369,12 +382,14 @@ function eventSearchRank(event, query) {
   const teams = eventTeamIndexText(event);
   const city = normalizeSearchText(event.city);
   const region = normalizeSearchText(event.region);
+  const officialRegion = normalizeSearchText(officialEventRegionName(event));
   const country = normalizeSearchText(event.country);
   const name = normalizeSearchText(event.name);
   let score = 0;
   if (id === normalizedQuery || sku === normalizedQuery || compactSearchText(event.sku || event.code || "") === compactQuery) score += 100000;
   if (teams.split(" ").includes(normalizedQuery) || compactSearchText(teams).includes(compactQuery)) score += 80000;
   if (city.includes(normalizedQuery)) score += 40000;
+  if (officialRegion.includes(normalizedQuery)) score += 35000;
   if (region.includes(normalizedQuery)) score += 30000;
   if (country.includes(normalizedQuery)) score += 20000;
   if (name.includes(normalizedQuery)) score += 10000;
@@ -652,12 +667,14 @@ function renderMyCompetitions() {
 
 function eventCardMarkup(event, variant = "") {
   const id = localEventId(event);
+  const officialRegion = officialEventRegionName(event);
   return `
     <article class="competition-result ${variant ? `competition-result-${variant}` : ""}">
       <div>
         <span>${escapeHtml(event.sku || event.code || `Event ${id}`)} • Event ${escapeHtml(id)}</span>
         <h3>${escapeHtml(event.name || "Unnamed event")}</h3>
         <p>${escapeHtml(competitionDateLabel(event))}${competitionLocation(event) ? ` • ${escapeHtml(competitionLocation(event))}` : ""}</p>
+        ${officialRegion ? `<p class="competition-official-region">${escapeHtml(officialRegion)}</p>` : ""}
         <div class="competition-counts" aria-label="Synced data counts">
           <strong>${escapeHtml(event.teamCount ?? 0)} teams</strong>
           <strong>${escapeHtml(event.skillCount ?? 0)} skills</strong>
@@ -702,6 +719,7 @@ function renderImportedCompetition() {
   $("[data-competition-meta]").textContent = [
     importedCompetition.eventCode,
     importedCompetition.date,
+    importedCompetition.eventRegionName,
     importedCompetition.location
   ].filter(Boolean).join(" • ");
   const teams = Array.isArray(importedCompetition.teams) ? importedCompetition.teams : [];
@@ -863,6 +881,8 @@ async function importLocalCompetition(eventId) {
     name: event.name || eventData.name || "Imported competition",
     date: competitionDateLabel(event),
     location: competitionLocation(event) || eventLocationFromData(eventPayload),
+    eventRegionId: officialEventRegionId(event) || metaPayload?.eventRegion?.id || null,
+    eventRegionName: officialEventRegionName(event) || metaPayload?.eventRegion?.name || "",
     loadedAt: new Date().toISOString(),
     teamCount: teams.length,
     skillCount: skills.length,
@@ -905,6 +925,8 @@ async function importCompetitionFromProxy(eventId) {
     name: event.name || "Imported competition",
     date: competitionDateLabel(event),
     location: competitionLocation(event),
+    eventRegionId: event.eventRegionId || null,
+    eventRegionName: event.eventRegionName || "",
     loadedAt: new Date().toISOString(),
     teams: teamsWithHistory
   });

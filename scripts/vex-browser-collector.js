@@ -232,6 +232,136 @@
     return { ...first, data, meta: { ...first.meta, merged_pages: lastPage } };
   }
 
+  async function getText(path, label = path) {
+    for (let attempt = 0; attempt <= maxRetries; attempt += 1) {
+      const response = await fetch(path, {
+        credentials: "include",
+        headers: { accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" }
+      });
+      if (response.status === 429) {
+        const fallbackMs = minRateLimitWaitMs * Math.max(1, attempt + 1);
+        const waitMs = jitter(retryAfterMs(response, fallbackMs));
+        console.warn(
+          `Rate limited on ${label}. Waiting ${Math.round(waitMs / 60000)} minute(s) before retry ${attempt + 1}/${maxRetries}.`
+        );
+        await sleep(waitMs);
+        continue;
+      }
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      return response.text();
+    }
+    throw new Error("HTTP 429 after retries; stop the scan and wait before trying again");
+  }
+
+  function cleanText(value) {
+    const holder = document.createElement("textarea");
+    holder.innerHTML = String(value || "");
+    return holder.value.replace(/\s+/g, " ").trim();
+  }
+
+  function regionOptionsFromDom() {
+    return [...document.querySelectorAll('select[name="event_region"] option, [data-event-region] option')]
+      .map(option => ({
+        id: Number(option.value),
+        name: cleanText(option.textContent)
+      }))
+      .filter(region => Number.isFinite(region.id) && region.id > 0 && region.name && !/^show all$/i.test(region.name));
+  }
+
+  function regionOptionsFromHtml(html) {
+    const eventRegionSelect = String(html || "").match(/<select[^>]+name=["']event_region["'][\s\S]*?<\/select>/i)?.[0] || "";
+    return [...eventRegionSelect.matchAll(/<option[^>]+value=["'](\d+)["'][^>]*>([\s\S]*?)<\/option>/gi)]
+      .map(match => ({
+        id: Number(match[1]),
+        name: cleanText(match[2].replace(/<[^>]+>/g, " "))
+      }))
+      .filter(region => Number.isFinite(region.id) && region.id > 0 && region.name && !/^show all$/i.test(region.name));
+  }
+
+  async function getOfficialRegionOptions() {
+    const domRegions = regionOptionsFromDom();
+    if (domRegions.length) return domRegions;
+    try {
+      const html = await getText("/robot-competitions/vex-robotics-competition", "competition region options");
+      return regionOptionsFromHtml(html);
+    } catch (error) {
+      console.warn(`Could not load official event-region options: ${error.message}`);
+      return [];
+    }
+  }
+
+  function eventIdsFromListingHtml(html) {
+    const ids = new Set();
+    for (const match of String(html || "").matchAll(/\/api\/v2\/events\/(\d+)|\beventId["']?\s*[:=]\s*["']?(\d+)|\bid["']?\s*:\s*(\d+)/gi)) {
+      const id = Number(match[1] || match[2] || match[3]);
+      if (Number.isFinite(id) && id > 0) ids.add(id);
+    }
+    for (const match of String(html || "").matchAll(/RE-V5RC-26-(\d{4,5})/gi)) {
+      const id = 60000 + Number(match[1]);
+      if (Number.isFinite(id) && id > 0) ids.add(id);
+    }
+    return [...ids];
+  }
+
+  function maxListingPage(html) {
+    const pages = [...String(html || "").matchAll(/[?&]page=(\d+)/gi)]
+      .map(match => Number(match[1]))
+      .filter(page => Number.isFinite(page) && page > 0);
+    return pages.length ? Math.min(Math.max(...pages), 25) : 1;
+  }
+
+  function regionListingPath(regionId, page = 1) {
+    const params = new URLSearchParams({
+      country_id: "244",
+      country_region_id: "*",
+      seasonId: "",
+      eventType: "",
+      name: "",
+      grade_level_id: "",
+      level_class_id: "",
+      from_date: "2026-08-14",
+      to_date: "",
+      event_region: String(regionId),
+      city: "",
+      distance: "30"
+    });
+    if (page > 1) params.set("page", String(page));
+    return `/robot-competitions/vex-robotics-competition?${params}`;
+  }
+
+  async function collectOfficialEventRegions() {
+    const regions = await getOfficialRegionOptions();
+    const regionMap = Object.fromEntries(regions.map(region => [String(region.id), region.name]));
+    const eventRegionsById = {};
+    if (!regions.length) return { regionMap, eventRegionsById };
+
+    console.log(`Found ${regions.length} official event-region filter option(s). Scanning region listing pages for event associations.`);
+    for (const [index, region] of regions.entries()) {
+      try {
+        console.log(`[region ${index + 1}/${regions.length}] ${region.name} (${region.id})`);
+        const firstHtml = await getText(regionListingPath(region.id), `event region ${region.name}`);
+        const pages = maxListingPage(firstHtml);
+        const ids = new Set(eventIdsFromListingHtml(firstHtml));
+        for (let page = 2; page <= pages; page += 1) {
+          await sleep(jitter(detailDelayMs));
+          const html = await getText(regionListingPath(region.id, page), `event region ${region.name} page ${page}`);
+          eventIdsFromListingHtml(html).forEach(id => ids.add(id));
+        }
+        for (const eventId of ids) {
+          eventRegionsById[String(eventId)] = {
+            id: region.id,
+            name: region.name
+          };
+        }
+        console.log(`Mapped ${ids.size} event id(s) to ${region.name}.`);
+      } catch (error) {
+        console.warn(`Skipped official region scan for ${region.name}: ${error.message}`);
+      }
+      await sleep(jitter(detailDelayMs));
+    }
+    return { regionMap, eventRegionsById };
+  }
+
   function seasonIdOf(event) {
     const data = event?.data || event || {};
     return Number(data.season_id || data.seasonId || data.season?.id || data.season?.season_id);
@@ -268,6 +398,10 @@
     generatedAt: new Date().toISOString(),
     source: location.origin,
     targetSeasonId,
+    officialRegions: {
+      regionMap: {},
+      eventRegionsById: {}
+    },
     events: [],
     skipped: []
   };
@@ -277,6 +411,7 @@
   if (isAllSearch) {
     indexedEvents = await getSeasonEventsFromIndex();
     for (const event of indexedEvents) rememberKnown(memory, Number(event.id));
+    bundle.officialRegions = await collectOfficialEventRegions();
   }
 
   const indexedEventById = new Map(indexedEvents.map(event => [Number(event.id), event]));
@@ -336,6 +471,7 @@
         teams,
         skills,
         awards,
+        eventRegion: bundle.officialRegions.eventRegionsById[String(eventId)] || null,
         meta: {
           source: "browser-side events.vex.com collector",
           collectedAt: new Date().toISOString()
