@@ -80,6 +80,7 @@ let seasonSkillsIndex = null;
 let seasonSkillsPromise = null;
 let lastModalFocus = null;
 let toastTimer = null;
+const REGION_MATCH_KEY = "__matching_regions__";
 const initialProxyParam = new URLSearchParams(window.location.search).get("proxy");
 if (initialProxyParam) {
   localStorage.setItem(PROXY_URL_STORE_KEY, initialProxyParam.trim().replace(/\/$/, ""));
@@ -351,6 +352,8 @@ function regionAliases(label) {
     aliases.add("Central Florida");
     aliases.add("Florida North");
     aliases.add("Florida Central");
+    aliases.add("Florida North Central");
+    aliases.add("North/Central Florida");
     aliases.add("North Central Florida");
     aliases.add("FL North Central");
     aliases.add("FNC");
@@ -374,6 +377,8 @@ function regionSearchText(label) {
 function eventRegionKey(event) {
   const officialId = officialEventRegionId(event);
   if (officialId) return `official|${officialId}`;
+  const officialName = officialEventRegionName(event);
+  if (officialName) return `official-name|${normalizeSearchText(officialName)}`;
   return [event.region, event.country].filter(Boolean).join("|");
 }
 
@@ -466,17 +471,23 @@ function sortedSyncedEvents(events = [], query = "") {
 
 function competitionFilterValues() {
   const form = $("[data-competition-search-form]");
-  if (!form) return { query: "", region: "" };
+  if (!form) return { query: "", region: "", regionQuery: "" };
   const formData = new FormData(form);
+  const typedRegion = currentRegionInputValue();
   return {
     query: String(formData.get("competitionSearch") || "").trim(),
-    region: selectedCompetitionRegion || String(formData.get("competitionRegion") || "")
+    region: selectedCompetitionRegion,
+    regionQuery: selectedCompetitionRegion ? "" : typedRegion
   };
 }
 
 function filteredSyncedEvents() {
-  const { query, region } = competitionFilterValues();
-  return sortedSyncedEvents(syncedEvents.filter(event => eventMatchesQuickFilter(event) && localEventMatches(event, query, region)), query);
+  const { query, region, regionQuery } = competitionFilterValues();
+  return sortedSyncedEvents(syncedEvents.filter(event =>
+    eventMatchesQuickFilter(event) &&
+    localEventMatches(event, query, region) &&
+    eventMatchesRegionQuery(event, regionQuery)
+  ), query);
 }
 
 function regionMatchRank(option, query) {
@@ -517,9 +528,30 @@ function matchingRegionOptions(query = currentRegionInputValue()) {
     .map(item => item.option);
 }
 
+function eventMatchesRegionQuery(event, query = "") {
+  const value = String(query || "").trim();
+  if (!value) return true;
+  const matches = matchingRegionOptions(value);
+  if (!matches.length) return false;
+  return matches.some(option => option.key === eventRegionKey(event));
+}
+
 function visibleRegionRows(query = currentRegionInputValue()) {
   const matches = matchingRegionOptions(query);
-  if (query) return matches;
+  if (query) {
+    if (matches.length > 1) {
+      const count = syncedEvents.filter(event => eventMatchesRegionQuery(event, query)).length;
+      return [
+        {
+          key: REGION_MATCH_KEY,
+          label: `All matching regions for "${query}"`,
+          meta: `${matches.length} synced regions • ${count} events`
+        },
+        ...matches
+      ];
+    }
+    return matches;
+  }
   return [
     { key: "", label: "All synced regions", meta: "Show every imported event" },
     ...matches
@@ -565,6 +597,14 @@ function renderRegionOptions(open = false) {
 }
 
 function selectCompetitionRegion(key, label = "") {
+  if (key === REGION_MATCH_KEY) {
+    selectedCompetitionRegion = "";
+    const hidden = $("[data-competition-region]");
+    if (hidden) hidden.value = "";
+    highlightedRegionIndex = -1;
+    renderRegionOptions(false);
+    return;
+  }
   selectedCompetitionRegion = key || "";
   const input = $("[data-competition-region-input]");
   const hidden = $("[data-competition-region]");
@@ -1116,19 +1156,28 @@ async function searchCompetitions(query) {
   }
   setCompetitionStatus("Searching synced competitions...", "loading");
   await ensureSyncedTeamIndex();
-  const region = competitionFilterValues().region;
+  const { region, regionQuery } = competitionFilterValues();
   const searchInput = $("[data-competition-search-form] input[name='competitionSearch']");
   if (searchInput && searchInput.value.trim() !== query) searchInput.value = query;
-  competitionSearchResults = sortedSyncedEvents(syncedEvents.filter(event => eventMatchesQuickFilter(event) && localEventMatches(event, query, region)), query);
+  const matchingRegions = regionQuery ? matchingRegionOptions(regionQuery) : [];
+  competitionSearchResults = sortedSyncedEvents(syncedEvents.filter(event =>
+    eventMatchesQuickFilter(event) &&
+    localEventMatches(event, query, region) &&
+    eventMatchesRegionQuery(event, regionQuery)
+  ), query);
   renderCompetitionPickers();
   renderCompetitionFilters();
   renderMyCompetitions();
   renderCompetitionResults(competitionSearchResults);
-  setCompetitionStatus(competitionSearchResults.length
+  let statusMessage = competitionSearchResults.length
     ? `Found ${competitionSearchResults.length} synced competition${competitionSearchResults.length === 1 ? "" : "s"}.`
-    : "No matching competitions found.",
-    competitionSearchResults.length ? "ready" : "warn"
-  );
+    : "No matching competitions found.";
+  if (regionQuery) {
+    statusMessage = matchingRegions.length
+      ? `Found ${competitionSearchResults.length} synced competition${competitionSearchResults.length === 1 ? "" : "s"} across ${matchingRegions.length} matching region${matchingRegions.length === 1 ? "" : "s"}.`
+      : `No synced regions match "${regionQuery}".`;
+  }
+  setCompetitionStatus(statusMessage, competitionSearchResults.length ? "ready" : "warn");
 }
 
 async function ensureSyncedEventsLoaded() {
@@ -2344,7 +2393,6 @@ $("[data-dev-edit-form]")?.addEventListener("submit", (event) => {
 
 $("[data-competition-search-form]")?.addEventListener("submit", (event) => {
   event.preventDefault();
-  commitRegionInput();
   const query = String(new FormData(event.currentTarget).get("competitionSearch") || "").trim();
   searchCompetitions(query).catch((error) => {
     setCompetitionStatus(error.message || "Competition data could not load. Try again later.", "warn");
@@ -2354,6 +2402,8 @@ $("[data-competition-search-form]")?.addEventListener("submit", (event) => {
 
 $("[data-competition-region-input]")?.addEventListener("input", () => {
   selectedCompetitionRegion = "";
+  const hidden = $("[data-competition-region]");
+  if (hidden) hidden.value = "";
   highlightedRegionIndex = 0;
   renderRegionOptions(true);
 });
