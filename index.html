@@ -82,9 +82,20 @@
           </label>
           <label>
             <span>Region</span>
-            <select name="competitionRegion" data-competition-region>
-              <option value="">All synced regions</option>
-            </select>
+            <div class="region-combobox" data-region-combobox>
+              <input
+                name="competitionRegionSearch"
+                type="search"
+                autocomplete="off"
+                placeholder="All synced regions"
+                role="combobox"
+                aria-expanded="false"
+                aria-controls="competitionRegionOptions"
+                data-competition-region-input
+              />
+              <input name="competitionRegion" type="hidden" data-competition-region />
+              <div class="region-options" id="competitionRegionOptions" role="listbox" data-competition-region-options hidden></div>
+            </div>
           </label>
           <button class="save-trigger" type="submit">Show Events</button>
         </form>
@@ -115,6 +126,7 @@
           </div>
           <div class="competition-progress" data-competition-progress></div>
           <div class="competition-team-list" data-competition-team-list></div>
+          <div class="competition-awards-list" data-competition-awards-list></div>
         </article>
       </section>
     </section>

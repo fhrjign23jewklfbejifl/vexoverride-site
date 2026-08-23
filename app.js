@@ -12,6 +12,7 @@ const MATCH_STORE_KEY = "vexOverrideMatches:v1";
 const PROFILE_STORE_KEY = "vexOverrideProfile:v1";
 const COMPETITION_STORE_KEY = "vexOverrideCompetitionData:v1";
 const PROXY_URL_STORE_KEY = "vexOverrideDataProxyUrl:v1";
+const SEASON_SKILLS_STORE_KEY = "vexOverrideSeasonSkills:v1";
 const HISTORY_INITIAL_LIMIT = 3;
 const DEFAULT_VEX_PROXY_URL = "https://vexoverride-data-proxy.nnovate--26.workers.dev";
 const quadrants = ["top", "right", "bottom", "left", "center"];
@@ -68,9 +69,15 @@ let syncedEventsError = null;
 let syncedTeamIndexPromise = null;
 let syncedTeamIndex = null;
 let competitionQuickFilter = "all";
+let competitionRegionOptions = [];
+let selectedCompetitionRegion = "";
+let highlightedRegionIndex = -1;
 let pendingProfileMatch = null;
 let teamSkillsResults = [];
 let expandedTeamSkillId = null;
+let expandedCompetitionTeam = null;
+let seasonSkillsIndex = null;
+let seasonSkillsPromise = null;
 let lastModalFocus = null;
 let toastTimer = null;
 const initialProxyParam = new URLSearchParams(window.location.search).get("proxy");
@@ -312,6 +319,47 @@ function compactSearchText(value) {
   return normalizeSearchText(value).replace(/\s+/g, "");
 }
 
+function searchTokens(value) {
+  return normalizeSearchText(value).split(/\s+/).filter(Boolean);
+}
+
+function searchTextMatches(haystack, query) {
+  const normalizedHaystack = normalizeSearchText(haystack);
+  const normalizedQuery = normalizeSearchText(query);
+  if (!normalizedQuery) return true;
+  if (normalizedHaystack.includes(normalizedQuery) || compactSearchText(haystack).includes(compactSearchText(query))) return true;
+  const tokens = searchTokens(query);
+  return tokens.length > 0 && tokens.every(token => normalizedHaystack.includes(token));
+}
+
+function regionAliases(label) {
+  const normalized = normalizeSearchText(label);
+  const aliases = new Set([label]);
+  const regionMatch = normalized.match(/^([a-z ]+?) region ([0-9]+)$/);
+  if (regionMatch) {
+    aliases.add(`${regionMatch[1]} ${regionMatch[2]}`);
+    aliases.add(`${regionMatch[1]} r${regionMatch[2]}`);
+  }
+  if (normalized === "florida south") {
+    aliases.add("South Florida");
+    aliases.add("FL South");
+    aliases.add("SFL");
+  }
+  if (normalized === "florida north central") {
+    aliases.add("North Florida");
+    aliases.add("Central Florida");
+    aliases.add("North Central Florida");
+    aliases.add("FL North Central");
+  }
+  if (normalized === "new york south") aliases.add("South New York");
+  if (normalized === "new york north") aliases.add("North New York");
+  return [...aliases];
+}
+
+function regionSearchText(label) {
+  return regionAliases(label).join(" ");
+}
+
 function eventRegionKey(event) {
   const officialId = officialEventRegionId(event);
   if (officialId) return `official|${officialId}`;
@@ -359,9 +407,7 @@ function localEventMatches(event, query, region = "") {
     event.country,
     eventTeamIndexText(event)
   ].filter(Boolean).join(" ");
-  const normalizedHaystack = normalizeSearchText(haystack);
-  const normalizedQuery = normalizeSearchText(query);
-  return normalizedHaystack.includes(normalizedQuery) || compactSearchText(haystack).includes(compactSearchText(query));
+  return searchTextMatches(`${haystack} ${regionSearchText(officialEventRegionName(event))}`, query);
 }
 
 function eventMatchesQuickFilter(event) {
@@ -389,7 +435,7 @@ function eventSearchRank(event, query) {
   if (id === normalizedQuery || sku === normalizedQuery || compactSearchText(event.sku || event.code || "") === compactQuery) score += 100000;
   if (teams.split(" ").includes(normalizedQuery) || compactSearchText(teams).includes(compactQuery)) score += 80000;
   if (city.includes(normalizedQuery)) score += 40000;
-  if (officialRegion.includes(normalizedQuery)) score += 35000;
+  if (searchTextMatches(regionSearchText(officialEventRegionName(event)), query)) score += 35000;
   if (region.includes(normalizedQuery)) score += 30000;
   if (country.includes(normalizedQuery)) score += 20000;
   if (name.includes(normalizedQuery)) score += 10000;
@@ -413,7 +459,7 @@ function competitionFilterValues() {
   const formData = new FormData(form);
   return {
     query: String(formData.get("competitionSearch") || "").trim(),
-    region: String(formData.get("competitionRegion") || "")
+    region: selectedCompetitionRegion || String(formData.get("competitionRegion") || "")
   };
 }
 
@@ -422,23 +468,99 @@ function filteredSyncedEvents() {
   return sortedSyncedEvents(syncedEvents.filter(event => eventMatchesQuickFilter(event) && localEventMatches(event, query, region)), query);
 }
 
-function renderCompetitionPickers(events = syncedEvents) {
-  const regionSelect = $("[data-competition-region]");
-  if (!regionSelect) return;
+function regionOptionMatches(option, query) {
+  return searchTextMatches(regionSearchText(option.label), query);
+}
 
-  const selectedRegion = regionSelect.value;
+function currentRegionInputValue() {
+  return String($("[data-competition-region-input]")?.value || "").trim();
+}
+
+function matchingRegionOptions(query = currentRegionInputValue()) {
+  if (!query) return competitionRegionOptions;
+  return competitionRegionOptions.filter(option => regionOptionMatches(option, query));
+}
+
+function renderRegionOptions(open = false) {
+  const input = $("[data-competition-region-input]");
+  const hidden = $("[data-competition-region]");
+  const list = $("[data-competition-region-options]");
+  if (!input || !hidden || !list) return;
+
+  hidden.value = selectedCompetitionRegion;
+  const matches = matchingRegionOptions();
+  highlightedRegionIndex = Math.min(Math.max(highlightedRegionIndex, -1), matches.length - 1);
+  input.setAttribute("aria-expanded", String(open));
+  list.hidden = !open;
+  if (!open) return;
+
+  const rows = [
+    { key: "", label: "All synced regions", meta: "Show every imported event" },
+    ...matches
+  ];
+  list.innerHTML = rows.map((option, index) => `
+    <button
+      class="region-option ${index - 1 === highlightedRegionIndex ? "active" : ""}"
+      type="button"
+      role="option"
+      data-region-option="${escapeHtml(option.key)}"
+      aria-selected="${String(option.key === selectedCompetitionRegion)}"
+    >
+      <strong>${escapeHtml(option.label)}</strong>
+      ${option.meta ? `<small>${escapeHtml(option.meta)}</small>` : ""}
+    </button>
+  `).join("");
+}
+
+function selectCompetitionRegion(key, label = "") {
+  selectedCompetitionRegion = key || "";
+  const input = $("[data-competition-region-input]");
+  const hidden = $("[data-competition-region]");
+  if (input) input.value = selectedCompetitionRegion ? label : "";
+  if (hidden) hidden.value = selectedCompetitionRegion;
+  highlightedRegionIndex = -1;
+  renderRegionOptions(false);
+}
+
+function commitRegionInput() {
+  const input = $("[data-competition-region-input]");
+  if (!input) return;
+  const value = String(input.value || "").trim();
+  if (!value) {
+    selectCompetitionRegion("", "");
+    return;
+  }
+  const matches = matchingRegionOptions(value);
+  const option = highlightedRegionIndex >= 0 ? matches[highlightedRegionIndex] : matches[0];
+  if (option) selectCompetitionRegion(option.key, option.label);
+}
+
+function renderCompetitionPickers(events = syncedEvents) {
+  const input = $("[data-competition-region-input]");
+  if (!input) return;
+
+  const selectedRegion = selectedCompetitionRegion;
   const regions = Array.from(new Map(sortedSyncedEvents(events)
     .map(event => [eventRegionKey(event), eventRegionLabel(event)])
     .filter(([key]) => key)
   ).entries());
 
-  regionSelect.innerHTML = [
-    `<option value="">All synced regions</option>`,
-    ...regions.map(([key, label]) => `<option value="${escapeHtml(key)}">${escapeHtml(label)}</option>`)
-  ].join("");
-  if ([...regionSelect.options].some(option => option.value === selectedRegion)) {
-    regionSelect.value = selectedRegion;
+  competitionRegionOptions = regions.map(([key, label]) => {
+    const count = syncedEvents.filter(event => eventRegionKey(event) === key).length;
+    return {
+      key,
+      label,
+      meta: `${count} synced event${count === 1 ? "" : "s"}`
+    };
+  });
+
+  const selected = competitionRegionOptions.find(option => option.key === selectedRegion);
+  if (selected) {
+    selectCompetitionRegion(selected.key, selected.label);
+  } else if (selectedRegion) {
+    selectCompetitionRegion("", "");
   }
+  renderRegionOptions(false);
 }
 
 function setCompetitionStatus(message, tone = "") {
@@ -498,6 +620,10 @@ function officialSkillsId(row) {
   return String(row.team?.id || row.team?.teamRegId || row.team?.teamNumber || `rank-${row.rank || "unknown"}`);
 }
 
+function teamNumberKey(value) {
+  return String(value || "").trim().toUpperCase();
+}
+
 function officialDateLabel(value) {
   if (!value) return "Date not listed";
   const date = new Date(value);
@@ -528,6 +654,7 @@ function renderTeamSkillsResults(rows = []) {
     const team = row.team || {};
     const scores = row.scores || {};
     const event = row.event || {};
+    const total = seasonSkillTotal(row);
     return `
       <article class="team-skill-card ${open ? "open" : ""}">
         <button class="team-skill-summary" type="button" data-team-skill-toggle="${escapeHtml(id)}" aria-expanded="${open}">
@@ -536,13 +663,13 @@ function renderTeamSkillsResults(rows = []) {
             <small>${escapeHtml(team.teamName || team.organization || "Official Skills result")}</small>
           </span>
           <span class="team-skill-chip">Rank #${escapeHtml(row.rank ?? "-")}</span>
-          <span class="team-skill-score">${escapeHtml(scores.score ?? 0)}</span>
+          <span class="team-skill-score">${escapeHtml(total)}</span>
         </button>
         <div class="team-skill-detail">
           ${open ? `
             <div class="team-skill-stats">
-              <span><small>Driver</small><strong>${escapeHtml(scores.driver ?? 0)}</strong></span>
-              <span><small>Autonomous</small><strong>${escapeHtml(scores.programming ?? 0)}</strong></span>
+              <span><small>Driver</small><strong>${escapeHtml(scores.maxDriver ?? scores.driver ?? 0)}</strong></span>
+              <span><small>Autonomous</small><strong>${escapeHtml(scores.maxProgramming ?? scores.programming ?? 0)}</strong></span>
               <span><small>Event</small><strong>${escapeHtml(event.sku || "Not listed")}</strong></span>
               <span><small>Date</small><strong>${escapeHtml(officialDateLabel(event.startDate))}</strong></span>
             </div>
@@ -558,10 +685,84 @@ function renderTeamSkillsResults(rows = []) {
   }).join("");
 }
 
+function loadCachedSeasonSkills() {
+  try {
+    const cached = JSON.parse(localStorage.getItem(SEASON_SKILLS_STORE_KEY));
+    if (cached && Array.isArray(cached.skills)) return cached.skills;
+  } catch {
+    return null;
+  }
+  return null;
+}
+
+function buildSeasonSkillsIndex(rows = []) {
+  const byTeam = new Map();
+  rows.forEach((row) => {
+    const key = teamNumberKey(row.team?.teamNumber);
+    if (!key) return;
+    if (!byTeam.has(key) || seasonSkillTotal(row) > seasonSkillTotal(byTeam.get(key))) {
+      byTeam.set(key, row);
+    }
+  });
+  return { rows, byTeam };
+}
+
+function seasonSkillTotal(row) {
+  const scores = row?.scores || {};
+  const driver = Number(scores.maxDriver ?? scores.driver ?? 0);
+  const programming = Number(scores.maxProgramming ?? scores.programming ?? 0);
+  const combined = driver + programming;
+  return combined || Number(scores.score || 0);
+}
+
+async function ensureSeasonSkillsIndex() {
+  if (seasonSkillsIndex) return seasonSkillsIndex;
+  if (seasonSkillsPromise) return seasonSkillsPromise;
+
+  seasonSkillsPromise = (async () => {
+    const cached = loadCachedSeasonSkills();
+    if (cached) {
+      seasonSkillsIndex = buildSeasonSkillsIndex(cached);
+      return seasonSkillsIndex;
+    }
+    const payload = await vexProxyFetch("/api/skills/standings");
+    const rows = Array.isArray(payload.skills) ? payload.skills : [];
+    try {
+      localStorage.setItem(SEASON_SKILLS_STORE_KEY, JSON.stringify({
+        cachedAt: new Date().toISOString(),
+        skills: rows
+      }));
+    } catch {
+      // The standings can be large; keep the in-memory index even if browser storage is full.
+    }
+    seasonSkillsIndex = buildSeasonSkillsIndex(rows);
+    return seasonSkillsIndex;
+  })();
+
+  return seasonSkillsPromise;
+}
+
+function skillsRowMatches(row, query) {
+  const team = row.team || {};
+  const event = row.event || {};
+  const haystack = [
+    team.teamNumber,
+    team.teamName,
+    team.organization,
+    team.city,
+    team.region,
+    team.country,
+    team.eventRegion,
+    regionSearchText(team.eventRegion),
+    event.sku
+  ].filter(Boolean).join(" ");
+  return searchTextMatches(haystack, query);
+}
+
 async function searchTeamSkills(query) {
   setTeamSkillsStatus("Searching public VEX Skills standings...", "loading");
-  const payload = await vexProxyFetch(`/api/skills/search?q=${encodeURIComponent(query)}`);
-  teamSkillsResults = Array.isArray(payload.skills) ? payload.skills : [];
+  const index = await ensureSeasonSkillsIndex();
+  teamSkillsResults = index.rows.filter(row => skillsRowMatches(row, query)).slice(0, 50);
   expandedTeamSkillId = null;
   renderTeamSkillsResults(teamSkillsResults);
   setTeamSkillsStatus(teamSkillsResults.length
@@ -704,6 +905,95 @@ function renderCompetitionResults(events = []) {
   results.innerHTML = events.map(event => eventCardMarkup(event)).join("");
 }
 
+function eventSkillRowsForTeam(team) {
+  const skills = Array.isArray(importedCompetition?.skills) ? importedCompetition.skills : [];
+  const number = teamNumberKey(team.teamNumber || team.number);
+  const id = String(team.id || "");
+  return skills.filter((row) => {
+    const rowNumber = teamNumberKey(row.team?.name || row.team?.teamNumber || row.team?.team);
+    const rowId = String(row.team?.id || row.teamId || "");
+    return (number && rowNumber === number) || (id && rowId === id);
+  });
+}
+
+function seasonSkillForTeam(team) {
+  const key = teamNumberKey(team.teamNumber || team.number);
+  return key && seasonSkillsIndex?.byTeam ? seasonSkillsIndex.byTeam.get(key) : null;
+}
+
+function teamLocationLine(team) {
+  return [team.location, team.city, team.region, team.country].filter(Boolean).join(" • ");
+}
+
+function competitionTeamMarkup(team) {
+  const number = team.teamNumber || team.number || "Team";
+  const id = teamNumberKey(number);
+  const open = expandedCompetitionTeam === id;
+  const seasonSkill = seasonSkillForTeam(team);
+  const eventSkills = eventSkillRowsForTeam(team);
+  const total = seasonSkill ? seasonSkillTotal(seasonSkill) : null;
+  const scores = seasonSkill?.scores || {};
+  return `
+    <article class="competition-team-row ${open ? "open" : ""}">
+      <button class="competition-team-summary" type="button" data-competition-team-toggle="${escapeHtml(id)}" aria-expanded="${open}">
+        <span class="team-main">
+          <strong>${escapeHtml(number)}</strong>
+          <small>${escapeHtml(team.teamName || team.name || team.organization || "Team details")}</small>
+        </span>
+        <span class="team-location">${escapeHtml(teamLocationLine(team) || "Location not listed")}</span>
+        <span class="team-season-score">${seasonSkill ? escapeHtml(total) : "-"}</span>
+      </button>
+      <div class="competition-team-detail">
+        ${open ? `
+          <div class="team-skill-stats">
+            <span><small>Season Skills</small><strong>${escapeHtml(total ?? "Not loaded")}</strong></span>
+            <span><small>Driver</small><strong>${escapeHtml(scores.maxDriver ?? scores.driver ?? 0)}</strong></span>
+            <span><small>Autonomous</small><strong>${escapeHtml(scores.maxProgramming ?? scores.programming ?? 0)}</strong></span>
+            <span><small>Event Skills</small><strong>${escapeHtml(eventSkills.length)}</strong></span>
+          </div>
+          <p>${escapeHtml([
+            team.robotName ? `Robot: ${team.robotName}` : "",
+            team.organization,
+            teamLocationLine(team)
+          ].filter(Boolean).join(" • ") || "No additional team details listed.")}</p>
+          ${eventSkills.length ? `
+            <div class="event-skill-list">
+              ${eventSkills.map(row => `
+                <span>
+                  <small>${escapeHtml(row.type || "skills")}${row.rank ? ` • Rank #${escapeHtml(row.rank)}` : ""}</small>
+                  <strong>${escapeHtml(row.score ?? 0)}</strong>
+                  ${row.attempts ? `<small>${escapeHtml(row.attempts)} attempts</small>` : ""}
+                </span>
+              `).join("")}
+            </div>
+          ` : ""}
+        ` : ""}
+      </div>
+    </article>
+  `;
+}
+
+function awardWinnerLabel(winner) {
+  const team = winner?.team || winner;
+  return [team?.name || team?.number || team?.teamNumber, winner?.division?.name].filter(Boolean).join(" • ");
+}
+
+function competitionAwardsMarkup(awards = []) {
+  if (!awards.length) return `<p class="competition-empty">No awards posted yet.</p>`;
+  return awards.map(award => `
+    <article class="competition-award-row">
+      <div>
+        <strong>${escapeHtml(award.title || "Award")}</strong>
+        <small>${escapeHtml([
+          award.classification,
+          award.designation
+        ].filter(Boolean).join(" • "))}</small>
+      </div>
+      <p>${escapeHtml((award.teamWinners || []).map(awardWinnerLabel).filter(Boolean).join(", ") || "Winner not listed")}</p>
+    </article>
+  `).join("");
+}
+
 function renderImportedCompetition() {
   renderCompetitionSource();
   const panel = $("[data-competition-current]");
@@ -723,6 +1013,7 @@ function renderImportedCompetition() {
     importedCompetition.location
   ].filter(Boolean).join(" • ");
   const teams = Array.isArray(importedCompetition.teams) ? importedCompetition.teams : [];
+  const awards = Array.isArray(importedCompetition.awards) ? importedCompetition.awards : [];
   const teamCount = importedCompetition.teamCount ?? teams.length;
   const skillCount = importedCompetition.skillCount ?? 0;
   const awardCount = importedCompetition.awardCount ?? 0;
@@ -730,19 +1021,32 @@ function renderImportedCompetition() {
   $("[data-competition-progress]").textContent = importedCompetition.loadedAt
     ? `Loaded ${new Date(importedCompetition.loadedAt).toLocaleString()}. ${skillCount} skills rows • ${awardCount} awards.`
     : "";
-  const visibleTeams = teams.slice(0, 36);
-  $("[data-competition-team-list]").innerHTML = visibleTeams.map(team => `
-    <span class="competition-team">
-      <strong>${escapeHtml(team.teamNumber || team.number || "Team")}</strong>
-      <small>${escapeHtml([
-        team.teamName || team.name,
-        team.organization,
-        team.location
-      ].filter(Boolean).join(" • ") || "Official event data cached")}</small>
-    </span>
-  `).join("") + (teams.length > visibleTeams.length
-    ? `<p class="competition-extra">+${teams.length - visibleTeams.length} more teams cached for analysis.</p>`
-    : "");
+  const teamList = $("[data-competition-team-list]");
+  if (teamList) {
+    teamList.innerHTML = `
+      <div class="competition-section-title">
+        <strong>Teams</strong>
+        <span>Click a team for season Skills and event details.</span>
+      </div>
+      ${teams.length ? teams.map(competitionTeamMarkup).join("") : `<p class="competition-empty">No registered teams are listed yet.</p>`}
+    `;
+  }
+  const awardsList = $("[data-competition-awards-list]");
+  if (awardsList) {
+    awardsList.innerHTML = `
+      <div class="competition-section-title">
+        <strong>Awards</strong>
+        <span>${awardCount} award${awardCount === 1 ? "" : "s"} synced for this event.</span>
+      </div>
+      ${competitionAwardsMarkup(awards)}
+    `;
+  }
+  if (!seasonSkillsIndex && !seasonSkillsPromise) {
+    ensureSeasonSkillsIndex().then(() => renderImportedCompetition()).catch(() => {
+      seasonSkillsIndex = buildSeasonSkillsIndex([]);
+      renderImportedCompetition();
+    });
+  }
 }
 
 async function searchCompetitions(query) {
@@ -757,8 +1061,7 @@ async function searchCompetitions(query) {
   }
   setCompetitionStatus("Searching synced competitions...", "loading");
   await ensureSyncedTeamIndex();
-  const regionSelect = $("[data-competition-region]");
-  const region = regionSelect?.value || "";
+  const region = competitionFilterValues().region;
   const searchInput = $("[data-competition-search-form] input[name='competitionSearch']");
   if (searchInput && searchInput.value.trim() !== query) searchInput.value = query;
   competitionSearchResults = sortedSyncedEvents(syncedEvents.filter(event => eventMatchesQuickFilter(event) && localEventMatches(event, query, region)), query);
@@ -1865,6 +2168,27 @@ document.addEventListener("click", (event) => {
     renderSkillsHistory();
   }
 
+  const regionOption = event.target.closest("[data-region-option]");
+  if (regionOption) {
+    selectCompetitionRegion(regionOption.dataset.regionOption, regionOption.querySelector("strong")?.textContent || "");
+    searchCompetitions(competitionFilterValues().query).catch((error) => {
+      setCompetitionStatus(error.message || "Competition data could not load. Try again later.", "warn");
+    });
+    return;
+  }
+
+  if (!event.target.closest("[data-region-combobox]")) {
+    renderRegionOptions(false);
+  }
+
+  const competitionTeamToggle = event.target.closest("[data-competition-team-toggle]");
+  if (competitionTeamToggle) {
+    const id = competitionTeamToggle.dataset.competitionTeamToggle;
+    expandedCompetitionTeam = expandedCompetitionTeam === id ? null : id;
+    renderImportedCompetition();
+    return;
+  }
+
   const teamSkillToggle = event.target.closest("[data-team-skill-toggle]");
   if (teamSkillToggle) {
     const id = teamSkillToggle.dataset.teamSkillToggle;
@@ -1965,6 +2289,7 @@ $("[data-dev-edit-form]")?.addEventListener("submit", (event) => {
 
 $("[data-competition-search-form]")?.addEventListener("submit", (event) => {
   event.preventDefault();
+  commitRegionInput();
   const query = String(new FormData(event.currentTarget).get("competitionSearch") || "").trim();
   searchCompetitions(query).catch((error) => {
     setCompetitionStatus(error.message || "Competition data could not load. Try again later.", "warn");
@@ -1972,10 +2297,35 @@ $("[data-competition-search-form]")?.addEventListener("submit", (event) => {
   });
 });
 
-$("[data-competition-region]")?.addEventListener("change", () => {
-  searchCompetitions(competitionFilterValues().query).catch((error) => {
-    setCompetitionStatus(error.message || "Competition data could not load. Try again later.", "warn");
-  });
+$("[data-competition-region-input]")?.addEventListener("input", () => {
+  selectedCompetitionRegion = "";
+  highlightedRegionIndex = 0;
+  renderRegionOptions(true);
+});
+
+$("[data-competition-region-input]")?.addEventListener("focus", () => {
+  renderRegionOptions(true);
+});
+
+$("[data-competition-region-input]")?.addEventListener("keydown", (event) => {
+  const matches = matchingRegionOptions();
+  if (event.key === "ArrowDown") {
+    event.preventDefault();
+    highlightedRegionIndex = Math.min(highlightedRegionIndex + 1, Math.max(matches.length - 1, 0));
+    renderRegionOptions(true);
+  } else if (event.key === "ArrowUp") {
+    event.preventDefault();
+    highlightedRegionIndex = Math.max(highlightedRegionIndex - 1, 0);
+    renderRegionOptions(true);
+  } else if (event.key === "Enter") {
+    event.preventDefault();
+    commitRegionInput();
+    searchCompetitions(competitionFilterValues().query).catch((error) => {
+      setCompetitionStatus(error.message || "Competition data could not load. Try again later.", "warn");
+    });
+  } else if (event.key === "Escape") {
+    renderRegionOptions(false);
+  }
 });
 
 $("[data-competition-search-form] input[name='competitionSearch']")?.addEventListener("input", (event) => {

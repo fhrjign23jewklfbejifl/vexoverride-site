@@ -309,6 +309,72 @@ button {
   background: rgba(255, 255, 255, .095);
 }
 
+.region-combobox {
+  position: relative;
+  min-width: 0;
+}
+
+.region-options {
+  position: absolute;
+  z-index: 30;
+  top: calc(100% + 7px);
+  left: 0;
+  right: 0;
+  max-height: 280px;
+  overflow: auto;
+  display: grid;
+  gap: 4px;
+  border: 1px solid rgba(102, 217, 208, .24);
+  border-radius: 12px;
+  padding: 6px;
+  background:
+    linear-gradient(135deg, rgba(24, 39, 48, .98), rgba(16, 27, 32, .98)),
+    #101b20;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, .42);
+}
+
+.region-options[hidden] {
+  display: none;
+}
+
+.region-option {
+  width: 100%;
+  display: grid;
+  gap: 3px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  padding: 9px 10px;
+  color: #dff5f1;
+  background: transparent;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.region-option strong {
+  color: var(--white);
+  font-size: 13px;
+  line-height: 1.15;
+}
+
+.region-option small {
+  color: #91aab2;
+  font-size: 11px;
+  line-height: 1.2;
+  font-weight: 850;
+}
+
+.region-option:hover,
+.region-option.active {
+  border-color: rgba(102, 217, 208, .25);
+  background: rgba(102, 217, 208, .10);
+}
+
+.region-option[aria-selected="true"] {
+  border-color: rgba(132, 241, 94, .34);
+  background: linear-gradient(135deg, rgba(132, 241, 94, .16), rgba(102, 217, 208, .11));
+}
+
 .competition-quick-filters {
   display: flex;
   flex-wrap: wrap;
@@ -644,33 +710,162 @@ button {
   font-weight: 850;
 }
 
-.competition-team-list {
+.competition-team-list,
+.competition-awards-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 8px;
 }
 
-.competition-team {
-  display: grid;
-  gap: 2px;
-  min-height: 48px;
-  align-content: center;
-  border: 1px solid rgba(255, 255, 255, .10);
-  border-radius: var(--radius-sm);
-  padding: 8px 9px;
-  background: rgba(255, 255, 255, .040);
+.competition-section-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: end;
+  margin-top: 2px;
 }
 
-.competition-team strong {
+.competition-section-title strong {
   color: var(--white);
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1;
 }
 
-.competition-team small {
-  color: #8ca0a8;
-  font-size: 11px;
+.competition-section-title span {
+  color: #91aab2;
+  font-size: 12px;
+  font-weight: 850;
+  text-transform: none;
+}
+
+.competition-team-row,
+.competition-award-row {
+  display: grid;
+  border: 1px solid rgba(255, 255, 255, .10);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, .040);
+  overflow: hidden;
+}
+
+.competition-team-summary {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(92px, .42fr) minmax(0, 1fr) 72px;
+  align-items: center;
+  gap: 12px;
+  border: 0;
+  padding: 10px 12px;
+  color: inherit;
+  background: transparent;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.competition-team-summary:hover {
+  background: rgba(255, 255, 255, .045);
+}
+
+.team-main {
+  min-width: 0;
+  display: grid;
+  gap: 3px;
+}
+
+.team-main strong {
+  color: var(--white);
+  font-size: 19px;
+  line-height: 1;
+}
+
+.team-main small,
+.team-location {
+  color: #9fb0b7;
+  font-size: 12px;
   line-height: 1.25;
+  font-weight: 850;
+}
+
+.team-location {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.team-season-score {
+  justify-self: end;
+  min-width: 52px;
+  border: 1px solid rgba(102, 217, 208, .18);
+  border-radius: 999px;
+  padding: 7px 10px;
+  color: var(--white);
+  background: rgba(102, 217, 208, .08);
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 1000;
+  text-align: center;
+}
+
+.competition-team-detail {
+  display: grid;
+  gap: 10px;
+  padding: 0 12px 12px;
+}
+
+.competition-team-detail:empty {
+  display: none;
+}
+
+.event-skill-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 8px;
+}
+
+.event-skill-list span {
+  display: grid;
+  gap: 4px;
+  border: 1px solid rgba(255, 255, 255, .10);
+  border-radius: var(--radius-sm);
+  padding: 8px 9px;
+  background: rgba(255, 255, 255, .035);
+}
+
+.event-skill-list small {
+  color: #8ca0a8;
+  font-size: 10px;
+  font-weight: 1000;
+  text-transform: uppercase;
+}
+
+.event-skill-list strong {
+  color: var(--white);
+  font-size: 17px;
+}
+
+.competition-award-row {
+  grid-template-columns: minmax(180px, .45fr) minmax(0, 1fr);
+  gap: 12px;
+  padding: 10px 12px;
+}
+
+.competition-award-row strong {
+  color: var(--white);
+  font-size: 15px;
+}
+
+.competition-award-row small {
+  display: block;
+  margin-top: 3px;
+  color: #8ca0a8;
+  font-size: 10px;
+  font-weight: 1000;
+  text-transform: uppercase;
+}
+
+.competition-award-row p {
+  margin: 0;
+  color: #c7d6da;
+  font-size: 13px;
+  line-height: 1.35;
 }
 
 .skills-panel {
@@ -2468,7 +2663,9 @@ body.modal-open {
   }
 
   .competition-result,
-  .team-skill-summary {
+  .team-skill-summary,
+  .competition-team-summary,
+  .competition-award-row {
     grid-template-columns: 1fr;
   }
 
@@ -2487,6 +2684,16 @@ body.modal-open {
 
   .team-skill-chip {
     justify-self: start;
+  }
+
+  .team-season-score {
+    justify-self: start;
+  }
+
+  .competition-section-title {
+    align-items: start;
+    flex-direction: column;
+    gap: 4px;
   }
 
   .team-skill-stats {
