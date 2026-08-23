@@ -9,123 +9,15 @@
     "path": "https://events.vex.com/api/v2/events/64843/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": 31,
-    "total": 31,
+    "to": 27,
+    "total": 27,
     "merged_pages": 1
   },
   "data": [
     {
-      "id": 41,
-      "number": "10A",
-      "team_name": "Exothermic Alpha",
-      "robot_name": "",
-      "organization": "Exothermic Robotics",
-      "location": {
-        "venue": null,
-        "address_1": "",
-        "address_2": null,
-        "city": "Bellevue",
-        "region": "Washington",
-        "postcode": "98005",
-        "country": "United States",
-        "coordinates": {
-          "lat": 47.6,
-          "lon": -122.2
-        }
-      },
-      "registered": true,
-      "program": {
-        "id": 1,
-        "name": "VEX V5 Robotics Competition",
-        "code": "V5RC"
-      },
-      "grade": "High School"
-    },
-    {
-      "id": 5226,
-      "number": "10B",
-      "team_name": "Exothermic Burnout",
-      "robot_name": "Exothermic Burnout",
-      "organization": "Exothermic Robotics",
-      "location": {
-        "venue": null,
-        "address_1": "",
-        "address_2": null,
-        "city": "Bellevue",
-        "region": "Washington",
-        "postcode": "98005",
-        "country": "United States",
-        "coordinates": {
-          "lat": 47.6,
-          "lon": -122.2
-        }
-      },
-      "registered": true,
-      "program": {
-        "id": 1,
-        "name": "VEX V5 Robotics Competition",
-        "code": "V5RC"
-      },
-      "grade": "High School"
-    },
-    {
-      "id": 3506,
-      "number": "10E",
-      "team_name": "Exothermic Equinox",
-      "robot_name": "Bob",
-      "organization": "Exothermic Robotics",
-      "location": {
-        "venue": null,
-        "address_1": "",
-        "address_2": null,
-        "city": "Bellevue",
-        "region": "Washington",
-        "postcode": "98005",
-        "country": "United States",
-        "coordinates": {
-          "lat": 47.6,
-          "lon": -122.2
-        }
-      },
-      "registered": true,
-      "program": {
-        "id": 1,
-        "name": "VEX V5 Robotics Competition",
-        "code": "V5RC"
-      },
-      "grade": "High School"
-    },
-    {
       "id": 143647,
       "number": "10G",
       "team_name": "Exothermic Greenish-Yellow Highlighter",
-      "robot_name": "",
-      "organization": "Exothermic Robotics",
-      "location": {
-        "venue": null,
-        "address_1": "",
-        "address_2": null,
-        "city": "Redmond",
-        "region": "Washington",
-        "postcode": "98005",
-        "country": "United States",
-        "coordinates": {
-          "lat": 47.6,
-          "lon": -122.2
-        }
-      },
-      "registered": true,
-      "program": {
-        "id": 1,
-        "name": "VEX V5 Robotics Competition",
-        "code": "V5RC"
-      },
-      "grade": "High School"
-    },
-    {
-      "id": 135369,
-      "number": "10T",
-      "team_name": "Exothermic Triple T (Tung Tung Tung Sahur)",
       "robot_name": "",
       "organization": "Exothermic Robotics",
       "location": {
@@ -663,6 +555,33 @@
       "grade": "Middle School"
     },
     {
+      "id": 74092,
+      "number": "1010Y",
+      "team_name": "TenTon Robotics",
+      "robot_name": "",
+      "organization": "West Vancouver School District #45",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "West Vancouver",
+        "region": "British Columbia",
+        "postcode": "V7V 2G7",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 49.3,
+          "lon": -123.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
       "id": 197576,
       "number": "1523A",
       "team_name": "Avarice",
@@ -742,33 +661,6 @@
         "code": "V5RC"
       },
       "grade": "Middle School"
-    },
-    {
-      "id": 195630,
-      "number": "8894X",
-      "team_name": "XERØ",
-      "robot_name": "",
-      "organization": "MRZ Robotics",
-      "location": {
-        "venue": null,
-        "address_1": "",
-        "address_2": null,
-        "city": "Burnaby",
-        "region": "British Columbia",
-        "postcode": "V5A 3M5",
-        "country": "Canada",
-        "coordinates": {
-          "lat": 49.3,
-          "lon": -122.9
-        }
-      },
-      "registered": true,
-      "program": {
-        "id": 1,
-        "name": "VEX V5 Robotics Competition",
-        "code": "V5RC"
-      },
-      "grade": "High School"
     },
     {
       "id": 185771,

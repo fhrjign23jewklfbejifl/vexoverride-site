@@ -9,11 +9,146 @@
     "path": "https://events.vex.com/api/v2/events/65030/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": 23,
-    "total": 23,
+    "to": 28,
+    "total": 28,
     "merged_pages": 1
   },
   "data": [
+    {
+      "id": 58808,
+      "number": "4154D",
+      "team_name": "U.S.S. ROBOTICS",
+      "robot_name": "S.K.R.A.M.",
+      "organization": "NSU University School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Fort Lauderdale",
+        "region": "Florida",
+        "postcode": "33314",
+        "country": "United States",
+        "coordinates": {
+          "lat": 26.1,
+          "lon": -80.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 163715,
+      "number": "4154E",
+      "team_name": "USS ROBOTICS",
+      "robot_name": "кобальт",
+      "organization": "NSU UNIVERSITY SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Fort Lauderdale",
+        "region": "Florida",
+        "postcode": "33314",
+        "country": "United States",
+        "coordinates": {
+          "lat": 26.1,
+          "lon": -80.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 169652,
+      "number": "4154R",
+      "team_name": "U.S.S. ROBOTICS",
+      "robot_name": "REVENGE",
+      "organization": "NSU UNIVERSITY SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Fort Lauderdale",
+        "region": "Florida",
+        "postcode": "33314",
+        "country": "United States",
+        "coordinates": {
+          "lat": 26.1,
+          "lon": -80.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 169650,
+      "number": "4154S",
+      "team_name": "U.S.S. ROBOTICS",
+      "robot_name": "Krankenwagen",
+      "organization": "NSU UNIVERSITY SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Fort Lauderdale",
+        "region": "Florida",
+        "postcode": "33314",
+        "country": "United States",
+        "coordinates": {
+          "lat": 26.1,
+          "lon": -80.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 155222,
+      "number": "4154Y",
+      "team_name": "U.S.S. ROBOTICS",
+      "robot_name": "Y",
+      "organization": "NSU UNIVERSITY SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Fort Lauderdale",
+        "region": "Florida",
+        "postcode": "33314",
+        "country": "United States",
+        "coordinates": {
+          "lat": 26.1,
+          "lon": -80.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
     {
       "id": 17050,
       "number": "4330P",

@@ -9,8 +9,8 @@
     "path": "https://events.vex.com/api/v2/events/64410/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": 1,
-    "total": 1,
+    "to": 2,
+    "total": 2,
     "merged_pages": 1
   },
   "data": [
@@ -40,6 +40,33 @@
         "code": "V5RC"
       },
       "grade": "High School"
+    },
+    {
+      "id": 193719,
+      "number": "97519A",
+      "team_name": "SIS@VUNGTAU",
+      "robot_name": "Robbie the Robot",
+      "organization": "Singapore International School Vung Tau",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Vung Tau",
+        "region": null,
+        "postcode": "78000",
+        "country": "Vietnam",
+        "coordinates": {
+          "lat": 10.4,
+          "lon": 107.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
     }
   ]
 }

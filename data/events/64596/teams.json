@@ -9,8 +9,8 @@
     "path": "https://events.vex.com/api/v2/events/64596/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": 2,
-    "total": 2,
+    "to": 18,
+    "total": 18,
     "merged_pages": 1
   },
   "data": [
@@ -42,6 +42,33 @@
       "grade": "High School"
     },
     {
+      "id": 185494,
+      "number": "11N",
+      "team_name": "IRVINE RUIGUAN",
+      "robot_name": "",
+      "organization": "IRVINE RUIGUAN",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Irvine",
+        "region": "California",
+        "postcode": "92604",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.7,
+          "lon": -117.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
       "id": 192411,
       "number": "11P",
       "team_name": "Ruiguan Irvine",
@@ -58,6 +85,411 @@
         "coordinates": {
           "lat": 33.7,
           "lon": -117.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 196936,
+      "number": "1678C",
+      "team_name": "lime",
+      "robot_name": "",
+      "organization": "MA Private Team",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Worcester",
+        "region": "Massachusetts",
+        "postcode": "01609",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.3,
+          "lon": -71.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 153722,
+      "number": "2142S",
+      "team_name": "The SnuggleMuffins",
+      "robot_name": "Gremlin",
+      "organization": "John Bapst Memorial High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bangor",
+        "region": "Maine",
+        "postcode": "04401",
+        "country": "United States",
+        "coordinates": {
+          "lat": 44.8,
+          "lon": -68.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 161338,
+      "number": "2142X",
+      "team_name": "Mechanica",
+      "robot_name": "Mechanica",
+      "organization": "John Bapst Memorial High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bangor",
+        "region": "Maine",
+        "postcode": "04401",
+        "country": "United States",
+        "coordinates": {
+          "lat": 44.8,
+          "lon": -68.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 138955,
+      "number": "2142Z",
+      "team_name": "Guppies",
+      "robot_name": "Guppies",
+      "organization": "John Bapst Memorial High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bangor",
+        "region": "Maine",
+        "postcode": "04401",
+        "country": "United States",
+        "coordinates": {
+          "lat": 44.8,
+          "lon": -68.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 93519,
+      "number": "15376B",
+      "team_name": "Vortex 3S-Barracuda",
+      "robot_name": "",
+      "organization": "École secondaire des Trois-Saisons",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Terrebonne",
+        "region": "Quebec",
+        "postcode": "J6X4T1",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 45.7,
+          "lon": -73.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 139421,
+      "number": "15376E",
+      "team_name": "Vortex 3S-E",
+      "robot_name": "",
+      "organization": "École secondaire des Trois-Saisons",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Terrebonne",
+        "region": "Quebec",
+        "postcode": "J6X4T1",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 45.7,
+          "lon": -73.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 153108,
+      "number": "15376F",
+      "team_name": "Vortex 3S-F",
+      "robot_name": "",
+      "organization": "École secondaire des Trois-Saisons",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Terrebonne",
+        "region": "Quebec",
+        "postcode": "J6X4T1",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 45.7,
+          "lon": -73.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 169972,
+      "number": "15376G",
+      "team_name": "Vortex 3S-Gelato",
+      "robot_name": "",
+      "organization": "École secondaire des Trois-Saisons",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Terrebonne",
+        "region": "Quebec",
+        "postcode": "J6X4T1",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 45.7,
+          "lon": -73.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 169973,
+      "number": "15376H",
+      "team_name": "Vortex 3S-HÉLIO",
+      "robot_name": "",
+      "organization": "École secondaire des Trois-Saisons",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Terrebonne",
+        "region": "Quebec",
+        "postcode": "J6X4T1",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 45.7,
+          "lon": -73.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 175429,
+      "number": "15376J",
+      "team_name": "Vortex 3S-JURASSIQUE",
+      "robot_name": "",
+      "organization": "École secondaire des Trois-Saisons",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Terrebonne",
+        "region": "Quebec",
+        "postcode": "J6X4T1",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 45.7,
+          "lon": -73.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199546,
+      "number": "59939A",
+      "team_name": "Qwerty",
+      "robot_name": "Qbot",
+      "organization": "Lexington QWERTY Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Lexington",
+        "region": "Massachusetts",
+        "postcode": "02420",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.5,
+          "lon": -71.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 133669,
+      "number": "64762F",
+      "team_name": "Gadget Gang 2.0",
+      "robot_name": "Gizmo",
+      "organization": "BANGOR HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bangor",
+        "region": "Maine",
+        "postcode": "04401",
+        "country": "United States",
+        "coordinates": {
+          "lat": 44.8,
+          "lon": -68.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 162717,
+      "number": "64762G",
+      "team_name": "Loose Screws",
+      "robot_name": "Vincent",
+      "organization": "BANGOR HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bangor",
+        "region": "Maine",
+        "postcode": "04401",
+        "country": "United States",
+        "coordinates": {
+          "lat": 44.8,
+          "lon": -68.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 162718,
+      "number": "64762H",
+      "team_name": "Robotic Potatoes",
+      "robot_name": "",
+      "organization": "BANGOR HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bangor",
+        "region": "Maine",
+        "postcode": "04401",
+        "country": "United States",
+        "coordinates": {
+          "lat": 44.8,
+          "lon": -68.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 181186,
+      "number": "81580T",
+      "team_name": "TealTeam6",
+      "robot_name": "",
+      "organization": "BRITISH INTERNATIONAL SCHOOL OF BOSTON",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Boston",
+        "region": "Massachusetts",
+        "postcode": "02130",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.3,
+          "lon": -71.1
         }
       },
       "registered": true,

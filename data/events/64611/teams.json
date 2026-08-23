@@ -9,8 +9,8 @@
     "path": "https://events.vex.com/api/v2/events/64611/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": 21,
-    "total": 21,
+    "to": 23,
+    "total": 23,
     "merged_pages": 1
   },
   "data": [
@@ -571,6 +571,60 @@
         "coordinates": {
           "lat": -40.4,
           "lon": 175.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 187552,
+      "number": "85829A",
+      "team_name": "Rovers",
+      "robot_name": "",
+      "organization": "Rovers Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Palmerston North",
+        "region": "Manawatu-Wanganui",
+        "postcode": "4410",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -40.4,
+          "lon": 175.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 128537,
+      "number": "93241A",
+      "team_name": "Broomsticks",
+      "robot_name": "",
+      "organization": "Spotswood College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "New Plymouth",
+        "region": "Taranaki",
+        "postcode": "4310",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -39.1,
+          "lon": 174
         }
       },
       "registered": true,

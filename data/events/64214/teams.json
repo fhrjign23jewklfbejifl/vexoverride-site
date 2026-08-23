@@ -9,11 +9,200 @@
     "path": "https://events.vex.com/api/v2/events/64214/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": 4,
-    "total": 4,
+    "to": 11,
+    "total": 11,
     "merged_pages": 1
   },
   "data": [
+    {
+      "id": 56008,
+      "number": "7619H",
+      "team_name": "Hex Vex: The Redemption",
+      "robot_name": "The Redeemer",
+      "organization": "HIGHLAND HIGH",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bakersfield",
+        "region": "California",
+        "postcode": "93306",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.4,
+          "lon": -118.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 62587,
+      "number": "7619R",
+      "team_name": "Minion Mafia",
+      "robot_name": "Minion Massacre",
+      "organization": "HIGHLAND HIGH",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bakersfield",
+        "region": "California",
+        "postcode": "93306",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.4,
+          "lon": -118.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199881,
+      "number": "11819Z",
+      "team_name": "Ark Robotics HSV5",
+      "robot_name": "",
+      "organization": "Ark Robotics LLC",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bakersfield",
+        "region": "California",
+        "postcode": "93312",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.4,
+          "lon": -119.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 197191,
+      "number": "28002A",
+      "team_name": "Garces Rams Alpha",
+      "robot_name": "6-7",
+      "organization": "Garces Memorial High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bakersfield",
+        "region": "California",
+        "postcode": "93305",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.4,
+          "lon": -119
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 197192,
+      "number": "28002B",
+      "team_name": "Garces Rams Bravo",
+      "robot_name": "",
+      "organization": "Garces Memorial High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bakersfield",
+        "region": "California",
+        "postcode": "93305",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.4,
+          "lon": -119
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199890,
+      "number": "28002C",
+      "team_name": "Garces Rams Charlie",
+      "robot_name": "",
+      "organization": "Garces Memorial High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bakersfield",
+        "region": "California",
+        "postcode": "93305",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.4,
+          "lon": -119
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199891,
+      "number": "28002D",
+      "team_name": "Garces Rams Delta",
+      "robot_name": "",
+      "organization": "Garces Memorial High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bakersfield",
+        "region": "California",
+        "postcode": "93305",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.4,
+          "lon": -119
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
     {
       "id": 107433,
       "number": "99196A",

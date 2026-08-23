@@ -9,8 +9,8 @@
     "path": "https://events.vex.com/api/v2/events/64362/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": 20,
-    "total": 20,
+    "to": 23,
+    "total": 23,
     "merged_pages": 1
   },
   "data": [
@@ -553,6 +553,87 @@
         "code": "V5RC"
       },
       "grade": "High School"
+    },
+    {
+      "id": 167235,
+      "number": "89944A",
+      "team_name": "CISA",
+      "robot_name": "",
+      "organization": "The Canadian International School Guangzhou",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Guangzhou",
+        "region": "Guangdong",
+        "postcode": "511492",
+        "country": "China",
+        "coordinates": {
+          "lat": 23,
+          "lon": 113.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 177056,
+      "number": "89944C",
+      "team_name": "CISC",
+      "robot_name": "",
+      "organization": "The Canadian International School Guangzhou",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Guangzhou",
+        "region": "Guangdong",
+        "postcode": "511492",
+        "country": "China",
+        "coordinates": {
+          "lat": 23,
+          "lon": 113.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199324,
+      "number": "89944W",
+      "team_name": "CISW",
+      "robot_name": "",
+      "organization": "The Canadian International School Guangzhou",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Guangzhou",
+        "region": "Guangdong",
+        "postcode": "511492",
+        "country": "China",
+        "coordinates": {
+          "lat": 23,
+          "lon": 113.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
     }
   ]
 }

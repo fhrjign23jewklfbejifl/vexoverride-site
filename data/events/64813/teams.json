@@ -9,8 +9,8 @@
     "path": "https://events.vex.com/api/v2/events/64813/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": 39,
-    "total": 39,
+    "to": 42,
+    "total": 42,
     "merged_pages": 1
   },
   "data": [
@@ -99,7 +99,7 @@
       "id": 186180,
       "number": "471B",
       "team_name": "Moonshot",
-      "robot_name": "",
+      "robot_name": "BB-8",
       "organization": "robotics is ez",
       "location": {
         "venue": null,
@@ -328,6 +328,33 @@
         "coordinates": {
           "lat": 35.4,
           "lon": -97.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 96794,
+      "number": "1669X",
+      "team_name": "Milpitas Xtreme Robotics",
+      "robot_name": "",
+      "organization": "Milpitas High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Milpitas",
+        "region": "California",
+        "postcode": "95035",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.5,
+          "lon": -121.9
         }
       },
       "registered": true,
@@ -798,6 +825,33 @@
       "grade": "High School"
     },
     {
+      "id": 185987,
+      "number": "40000A",
+      "team_name": "Apogee",
+      "robot_name": "",
+      "organization": "Brentwood Community Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Brentwood",
+        "region": "Tennessee",
+        "postcode": "37027",
+        "country": "United States",
+        "coordinates": {
+          "lat": 36,
+          "lon": -86.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
       "id": 174068,
       "number": "50130A",
       "team_name": "Trobots",
@@ -922,6 +976,33 @@
         "coordinates": {
           "lat": 43.5,
           "lon": -96.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 124355,
+      "number": "71414A",
+      "team_name": "Smooth Operators",
+      "robot_name": "Robert",
+      "organization": "PIERCE JR/SR HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Pierce",
+        "region": "Nebraska",
+        "postcode": "68767",
+        "country": "United States",
+        "coordinates": {
+          "lat": 42.2,
+          "lon": -97.5
         }
       },
       "registered": true,

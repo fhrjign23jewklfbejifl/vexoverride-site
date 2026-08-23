@@ -9,31 +9,16 @@
     "path": "https://events.vex.com/api/v2/events/64596/awards",
     "per_page": 250,
     "prev_page_url": null,
-    "to": 13,
-    "total": 13,
+    "to": 14,
+    "total": 14,
     "merged_pages": 1
   },
   "data": [
     {
-      "id": 283222,
-      "event": {
-        "id": 64596,
-        "name": "The Lobstah Bowl VEX V5 Robotics Competition Spotlight Event: VEX V5 Robotics Competition™ High School",
-        "code": "RE-V5RC-26-4596"
-      },
-      "order": 59,
-      "title": "Excellence Award (V5)",
-      "qualifications": [],
-      "designation": null,
-      "classification": null,
-      "teamWinners": [],
-      "individualWinners": []
-    },
-    {
       "id": 283223,
       "event": {
         "id": 64596,
-        "name": "The Lobstah Bowl VEX V5 Robotics Competition Spotlight Event: VEX V5 Robotics Competition™ High School",
+        "name": "The Lobstah Bowl VEX V5 Robotics Competition Spotlight Event: VEX V5 Robotics Competition Blended (HS/MS)",
         "code": "RE-V5RC-26-4596"
       },
       "order": 63,
@@ -48,7 +33,7 @@
       "id": 283224,
       "event": {
         "id": 64596,
-        "name": "The Lobstah Bowl VEX V5 Robotics Competition Spotlight Event: VEX V5 Robotics Competition™ High School",
+        "name": "The Lobstah Bowl VEX V5 Robotics Competition Spotlight Event: VEX V5 Robotics Competition Blended (HS/MS)",
         "code": "RE-V5RC-26-4596"
       },
       "order": 64,
@@ -63,7 +48,7 @@
       "id": 283225,
       "event": {
         "id": 64596,
-        "name": "The Lobstah Bowl VEX V5 Robotics Competition Spotlight Event: VEX V5 Robotics Competition™ High School",
+        "name": "The Lobstah Bowl VEX V5 Robotics Competition Spotlight Event: VEX V5 Robotics Competition Blended (HS/MS)",
         "code": "RE-V5RC-26-4596"
       },
       "order": 69,
@@ -78,7 +63,7 @@
       "id": 283226,
       "event": {
         "id": 64596,
-        "name": "The Lobstah Bowl VEX V5 Robotics Competition Spotlight Event: VEX V5 Robotics Competition™ High School",
+        "name": "The Lobstah Bowl VEX V5 Robotics Competition Spotlight Event: VEX V5 Robotics Competition Blended (HS/MS)",
         "code": "RE-V5RC-26-4596"
       },
       "order": 70,
@@ -93,7 +78,7 @@
       "id": 283227,
       "event": {
         "id": 64596,
-        "name": "The Lobstah Bowl VEX V5 Robotics Competition Spotlight Event: VEX V5 Robotics Competition™ High School",
+        "name": "The Lobstah Bowl VEX V5 Robotics Competition Spotlight Event: VEX V5 Robotics Competition Blended (HS/MS)",
         "code": "RE-V5RC-26-4596"
       },
       "order": 71,
@@ -108,7 +93,7 @@
       "id": 283228,
       "event": {
         "id": 64596,
-        "name": "The Lobstah Bowl VEX V5 Robotics Competition Spotlight Event: VEX V5 Robotics Competition™ High School",
+        "name": "The Lobstah Bowl VEX V5 Robotics Competition Spotlight Event: VEX V5 Robotics Competition Blended (HS/MS)",
         "code": "RE-V5RC-26-4596"
       },
       "order": 73,
@@ -123,7 +108,7 @@
       "id": 283229,
       "event": {
         "id": 64596,
-        "name": "The Lobstah Bowl VEX V5 Robotics Competition Spotlight Event: VEX V5 Robotics Competition™ High School",
+        "name": "The Lobstah Bowl VEX V5 Robotics Competition Spotlight Event: VEX V5 Robotics Competition Blended (HS/MS)",
         "code": "RE-V5RC-26-4596"
       },
       "order": 74,
@@ -138,7 +123,7 @@
       "id": 283230,
       "event": {
         "id": 64596,
-        "name": "The Lobstah Bowl VEX V5 Robotics Competition Spotlight Event: VEX V5 Robotics Competition™ High School",
+        "name": "The Lobstah Bowl VEX V5 Robotics Competition Spotlight Event: VEX V5 Robotics Competition Blended (HS/MS)",
         "code": "RE-V5RC-26-4596"
       },
       "order": 75,
@@ -153,7 +138,7 @@
       "id": 283231,
       "event": {
         "id": 64596,
-        "name": "The Lobstah Bowl VEX V5 Robotics Competition Spotlight Event: VEX V5 Robotics Competition™ High School",
+        "name": "The Lobstah Bowl VEX V5 Robotics Competition Spotlight Event: VEX V5 Robotics Competition Blended (HS/MS)",
         "code": "RE-V5RC-26-4596"
       },
       "order": 76,
@@ -168,7 +153,7 @@
       "id": 283232,
       "event": {
         "id": 64596,
-        "name": "The Lobstah Bowl VEX V5 Robotics Competition Spotlight Event: VEX V5 Robotics Competition™ High School",
+        "name": "The Lobstah Bowl VEX V5 Robotics Competition Spotlight Event: VEX V5 Robotics Competition Blended (HS/MS)",
         "code": "RE-V5RC-26-4596"
       },
       "order": 77,
@@ -183,7 +168,7 @@
       "id": 283233,
       "event": {
         "id": 64596,
-        "name": "The Lobstah Bowl VEX V5 Robotics Competition Spotlight Event: VEX V5 Robotics Competition™ High School",
+        "name": "The Lobstah Bowl VEX V5 Robotics Competition Spotlight Event: VEX V5 Robotics Competition Blended (HS/MS)",
         "code": "RE-V5RC-26-4596"
       },
       "order": 78,
@@ -198,11 +183,41 @@
       "id": 283234,
       "event": {
         "id": 64596,
-        "name": "The Lobstah Bowl VEX V5 Robotics Competition Spotlight Event: VEX V5 Robotics Competition™ High School",
+        "name": "The Lobstah Bowl VEX V5 Robotics Competition Spotlight Event: VEX V5 Robotics Competition Blended (HS/MS)",
         "code": "RE-V5RC-26-4596"
       },
       "order": 79,
       "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 290455,
+      "event": {
+        "id": 64596,
+        "name": "The Lobstah Bowl VEX V5 Robotics Competition Spotlight Event: VEX V5 Robotics Competition Blended (HS/MS)",
+        "code": "RE-V5RC-26-4596"
+      },
+      "order": 60,
+      "title": "Excellence Award - High School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 290456,
+      "event": {
+        "id": 64596,
+        "name": "The Lobstah Bowl VEX V5 Robotics Competition Spotlight Event: VEX V5 Robotics Competition Blended (HS/MS)",
+        "code": "RE-V5RC-26-4596"
+      },
+      "order": 61,
+      "title": "Excellence Award - Middle School (V5)",
       "qualifications": [],
       "designation": null,
       "classification": null,

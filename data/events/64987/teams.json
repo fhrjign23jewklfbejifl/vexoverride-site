@@ -9,8 +9,8 @@
     "path": "https://events.vex.com/api/v2/events/64987/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": 13,
-    "total": 13,
+    "to": 16,
+    "total": 16,
     "merged_pages": 1
   },
   "data": [
@@ -285,6 +285,33 @@
       "grade": "Middle School"
     },
     {
+      "id": 199813,
+      "number": "13691A",
+      "team_name": "Don't Care",
+      "robot_name": "",
+      "organization": "13691",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Saratoga",
+        "region": "California",
+        "postcode": "95070",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.3,
+          "lon": -122
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
       "id": 198486,
       "number": "18886X",
       "team_name": "GuGuGaGa",
@@ -297,6 +324,60 @@
         "city": "Cupertino",
         "region": "California",
         "postcode": "95014",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.3,
+          "lon": -122
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 196996,
+      "number": "54080A",
+      "team_name": "ツ",
+      "robot_name": "that one",
+      "organization": "Private",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Redwood City",
+        "region": "California",
+        "postcode": "94065-1111",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.5,
+          "lon": -122.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 174365,
+      "number": "68699A",
+      "team_name": "Driving Nuggets",
+      "robot_name": "",
+      "organization": "Ustar STEM Lab",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "San Jose",
+        "region": "California",
+        "postcode": "95129",
         "country": "United States",
         "coordinates": {
           "lat": 37.3,

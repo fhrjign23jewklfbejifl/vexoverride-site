@@ -1,0 +1,138 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65418/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65418/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65418/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 8,
+    "total": 8,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 288966,
+      "event": {
+        "id": 65418,
+        "name": "Matt Holcombe Talon Tussle: VEX V5 Robotics Competition Override",
+        "code": "RE-V5RC-26-5418"
+      },
+      "order": 61,
+      "title": "Excellence Award - Middle School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288967,
+      "event": {
+        "id": 65418,
+        "name": "Matt Holcombe Talon Tussle: VEX V5 Robotics Competition Override",
+        "code": "RE-V5RC-26-5418"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288968,
+      "event": {
+        "id": 65418,
+        "name": "Matt Holcombe Talon Tussle: VEX V5 Robotics Competition Override",
+        "code": "RE-V5RC-26-5418"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288969,
+      "event": {
+        "id": 65418,
+        "name": "Matt Holcombe Talon Tussle: VEX V5 Robotics Competition Override",
+        "code": "RE-V5RC-26-5418"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288970,
+      "event": {
+        "id": 65418,
+        "name": "Matt Holcombe Talon Tussle: VEX V5 Robotics Competition Override",
+        "code": "RE-V5RC-26-5418"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288971,
+      "event": {
+        "id": 65418,
+        "name": "Matt Holcombe Talon Tussle: VEX V5 Robotics Competition Override",
+        "code": "RE-V5RC-26-5418"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288972,
+      "event": {
+        "id": 65418,
+        "name": "Matt Holcombe Talon Tussle: VEX V5 Robotics Competition Override",
+        "code": "RE-V5RC-26-5418"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288973,
+      "event": {
+        "id": 65418,
+        "name": "Matt Holcombe Talon Tussle: VEX V5 Robotics Competition Override",
+        "code": "RE-V5RC-26-5418"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

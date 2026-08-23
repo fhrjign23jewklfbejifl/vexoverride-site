@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65426,
+    "sku": "RE-V5RC-26-5426",
+    "name": "Torneo Estatal de Michoacan",
+    "start": "2026-12-03T00:00:00-05:00",
+    "end": "2026-12-04T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Centro de Convenciones y Exposiciones de Morelia",
+      "address_1": "Calzada Ventura Puente esq, Perif. Paseo de la República s/n, Félix Ireta",
+      "address_2": null,
+      "city": "Morelia",
+      "region": "Michoacán",
+      "postcode": "58070",
+      "country": "Mexico",
+      "coordinates": {
+        "lat": 19.681519,
+        "lon": -101.181427
+      }
+    },
+    "locations": {
+      "2026-12-03": {
+        "venue": "Centro de Convenciones y Exposiciones de Morelia",
+        "address_1": "Calzada Ventura Puente esq, Perif. Paseo de la República s/n, Félix Ireta",
+        "address_2": null,
+        "city": "Morelia",
+        "region": "Michoacán",
+        "postcode": "58070",
+        "country": "Mexico",
+        "coordinates": {
+          "lat": 19.681519,
+          "lon": -101.181427
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

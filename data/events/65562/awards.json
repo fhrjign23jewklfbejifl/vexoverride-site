@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65562/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65562/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65562/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 9,
+    "total": 9,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 289950,
+      "event": {
+        "id": 65562,
+        "name": "Melee at the Mount: V5 Blended Mount Michael Benedictine HS: VEX V5 Robotics Competition BLENDED",
+        "code": "VE-V5-26-65562"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289951,
+      "event": {
+        "id": 65562,
+        "name": "Melee at the Mount: V5 Blended Mount Michael Benedictine HS: VEX V5 Robotics Competition BLENDED",
+        "code": "VE-V5-26-65562"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289952,
+      "event": {
+        "id": 65562,
+        "name": "Melee at the Mount: V5 Blended Mount Michael Benedictine HS: VEX V5 Robotics Competition BLENDED",
+        "code": "VE-V5-26-65562"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289953,
+      "event": {
+        "id": 65562,
+        "name": "Melee at the Mount: V5 Blended Mount Michael Benedictine HS: VEX V5 Robotics Competition BLENDED",
+        "code": "VE-V5-26-65562"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289954,
+      "event": {
+        "id": 65562,
+        "name": "Melee at the Mount: V5 Blended Mount Michael Benedictine HS: VEX V5 Robotics Competition BLENDED",
+        "code": "VE-V5-26-65562"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289955,
+      "event": {
+        "id": 65562,
+        "name": "Melee at the Mount: V5 Blended Mount Michael Benedictine HS: VEX V5 Robotics Competition BLENDED",
+        "code": "VE-V5-26-65562"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289956,
+      "event": {
+        "id": 65562,
+        "name": "Melee at the Mount: V5 Blended Mount Michael Benedictine HS: VEX V5 Robotics Competition BLENDED",
+        "code": "VE-V5-26-65562"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289957,
+      "event": {
+        "id": 65562,
+        "name": "Melee at the Mount: V5 Blended Mount Michael Benedictine HS: VEX V5 Robotics Competition BLENDED",
+        "code": "VE-V5-26-65562"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289958,
+      "event": {
+        "id": 65562,
+        "name": "Melee at the Mount: V5 Blended Mount Michael Benedictine HS: VEX V5 Robotics Competition BLENDED",
+        "code": "VE-V5-26-65562"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

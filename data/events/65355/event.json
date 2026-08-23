@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65355,
+    "sku": "RE-V5RC-26-5355",
+    "name": "City of Oxford VEX V5 Robotics Competition: MS/HS Teams",
+    "start": "2026-11-20T00:00:00-05:00",
+    "end": "2026-11-20T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "CREATE",
+      "address_1": "1 Cliff Garrett Drive",
+      "address_2": null,
+      "city": "Oxford",
+      "region": "Alabama",
+      "postcode": "36203",
+      "country": "United States",
+      "coordinates": {
+        "lat": 33.587534,
+        "lon": -85.852814
+      }
+    },
+    "locations": {
+      "2026-11-20": {
+        "venue": "CREATE",
+        "address_1": "1 Cliff Garrett Drive",
+        "address_2": null,
+        "city": "Oxford",
+        "region": "Alabama",
+        "postcode": "36203",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.587534,
+          "lon": -85.852814
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

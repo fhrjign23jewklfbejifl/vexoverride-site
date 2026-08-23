@@ -9,11 +9,92 @@
     "path": "https://events.vex.com/api/v2/events/64442/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": 14,
-    "total": 14,
+    "to": 18,
+    "total": 18,
     "merged_pages": 1
   },
   "data": [
+    {
+      "id": 187150,
+      "number": "2769A",
+      "team_name": "2769A",
+      "robot_name": "",
+      "organization": "Canberra Secondary School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Singapore",
+        "region": null,
+        "postcode": "757699",
+        "country": "Singapore",
+        "coordinates": {
+          "lat": 1.5,
+          "lon": 103.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 178511,
+      "number": "2769B",
+      "team_name": "Hundred Peace Wings",
+      "robot_name": "Chimmy",
+      "organization": "Canberra Secondary School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Singapore",
+        "region": null,
+        "postcode": "757699",
+        "country": "Singapore",
+        "coordinates": {
+          "lat": 1.5,
+          "lon": 103.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 178512,
+      "number": "2769C",
+      "team_name": "2769C",
+      "robot_name": "",
+      "organization": "Canberra Secondary School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Singapore",
+        "region": null,
+        "postcode": "757699",
+        "country": "Singapore",
+        "coordinates": {
+          "lat": 1.5,
+          "lon": 103.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
     {
       "id": 198553,
       "number": "10060A",
@@ -391,6 +472,33 @@
         "code": "V5RC"
       },
       "grade": "High School"
+    },
+    {
+      "id": 199950,
+      "number": "91818W",
+      "team_name": "Hexacore",
+      "robot_name": "CoreX",
+      "organization": "Seth Workplace and Workshop",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Singapore",
+        "region": null,
+        "postcode": "768019",
+        "country": "Singapore",
+        "coordinates": {
+          "lat": 1.4,
+          "lon": 103.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
     }
   ]
 }

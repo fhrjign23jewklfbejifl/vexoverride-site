@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65258/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65258/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65258/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 5,
+    "total": 5,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 287817,
+      "event": {
+        "id": 65258,
+        "name": "1ra Fecha de la LNR 2026-2027 Vex V5",
+        "code": "RE-V5RC-26-5258"
+      },
+      "order": 60,
+      "title": "Excellence Award - High School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287818,
+      "event": {
+        "id": 65258,
+        "name": "1ra Fecha de la LNR 2026-2027 Vex V5",
+        "code": "RE-V5RC-26-5258"
+      },
+      "order": 61,
+      "title": "Excellence Award - Middle School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287819,
+      "event": {
+        "id": 65258,
+        "name": "1ra Fecha de la LNR 2026-2027 Vex V5",
+        "code": "RE-V5RC-26-5258"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287820,
+      "event": {
+        "id": 65258,
+        "name": "1ra Fecha de la LNR 2026-2027 Vex V5",
+        "code": "RE-V5RC-26-5258"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 287821,
+      "event": {
+        "id": 65258,
+        "name": "1ra Fecha de la LNR 2026-2027 Vex V5",
+        "code": "RE-V5RC-26-5258"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

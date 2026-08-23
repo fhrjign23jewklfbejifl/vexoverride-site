@@ -1,0 +1,97 @@
+{
+  "data": {
+    "id": 64518,
+    "sku": "RE-V5RC-26-4518",
+    "name": "JCR Invitational VEX V5 Robotics Competition League: Override Middle School and High School Teams",
+    "start": "2026-12-10T00:00:00-05:00",
+    "end": "2027-01-21T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Jay County Jr-Sr High School",
+      "address_1": "2072 Indiana 67",
+      "address_2": null,
+      "city": "Portland",
+      "region": "Indiana",
+      "postcode": "47371",
+      "country": "United States",
+      "coordinates": {
+        "lat": 40.42935,
+        "lon": -85.022696
+      }
+    },
+    "locations": {
+      "2026-12-10": {
+        "venue": "Jay County Jr-Sr High School",
+        "address_1": "2072 Indiana 67",
+        "address_2": null,
+        "city": "Portland",
+        "region": "Indiana",
+        "postcode": "47371",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40.42935,
+          "lon": -85.022696
+        }
+      },
+      "2026-12-17": {
+        "venue": "Jay County Jr-Sr High School",
+        "address_1": "2072 Indiana 67",
+        "address_2": null,
+        "city": "Portland",
+        "region": "Indiana",
+        "postcode": "47371",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40.42935,
+          "lon": -85.022696
+        }
+      },
+      "2027-01-07": {
+        "venue": "Jay County Jr-Sr High School",
+        "address_1": "2072 Indiana 67",
+        "address_2": null,
+        "city": "Portland",
+        "region": "Indiana",
+        "postcode": "47371",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40.42935,
+          "lon": -85.022696
+        }
+      },
+      "2027-01-21": {
+        "venue": "Jay County Jr-Sr High School",
+        "address_1": "2072 Indiana 67",
+        "address_2": null,
+        "city": "Portland",
+        "region": "Indiana",
+        "postcode": "47371",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40.42935,
+          "lon": -85.022696
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

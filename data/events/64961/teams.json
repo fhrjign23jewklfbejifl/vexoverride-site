@@ -9,11 +9,308 @@
     "path": "https://events.vex.com/api/v2/events/64961/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": 6,
-    "total": 6,
+    "to": 17,
+    "total": 17,
     "merged_pages": 1
   },
   "data": [
+    {
+      "id": 197347,
+      "number": "11C",
+      "team_name": "IRVINE RUIGUAN",
+      "robot_name": "",
+      "organization": "IRVINE RUIGUAN",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Irvine",
+        "region": "California",
+        "postcode": "92604",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.7,
+          "lon": -117.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 155223,
+      "number": "11S",
+      "team_name": "IRVINE RUIGUAN",
+      "robot_name": "IRVINE RUIGUAN",
+      "organization": "IRVINE RUIGUAN",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Irvine",
+        "region": "California",
+        "postcode": "92604",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.7,
+          "lon": -117.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 129018,
+      "number": "11X",
+      "team_name": "Irvine Ruiguan",
+      "robot_name": "",
+      "organization": "IRVINE RUIGUAN",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Irvine",
+        "region": "California",
+        "postcode": "92604",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.7,
+          "lon": -117.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 197344,
+      "number": "11Z",
+      "team_name": "IRVINE RUIGUAN",
+      "robot_name": "",
+      "organization": "IRVINE RUIGUAN",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Irvine",
+        "region": "California",
+        "postcode": "92604",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.7,
+          "lon": -117.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 35605,
+      "number": "83A",
+      "team_name": "Eagle Engineering MS Alpha",
+      "robot_name": "",
+      "organization": "CHAMINADE COLLEGE PREPARATORY MIDDLE SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Chatsworth",
+        "region": "California",
+        "postcode": "91311",
+        "country": "United States",
+        "coordinates": {
+          "lat": 34.3,
+          "lon": -118.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 161973,
+      "number": "83B",
+      "team_name": "Eagle Engineering MS Bravo",
+      "robot_name": "",
+      "organization": "CHAMINADE COLLEGE PREPARATORY MIDDLE SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Chatsworth",
+        "region": "California",
+        "postcode": "91311",
+        "country": "United States",
+        "coordinates": {
+          "lat": 34.3,
+          "lon": -118.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 199895,
+      "number": "83S",
+      "team_name": "Eagle Engineering MS - Super Eagles",
+      "robot_name": "TBD",
+      "organization": "CHAMINADE COLLEGE PREPARATORY MIDDLE SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Chatsworth",
+        "region": "California",
+        "postcode": "91311",
+        "country": "United States",
+        "coordinates": {
+          "lat": 34.3,
+          "lon": -118.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 195185,
+      "number": "83Z",
+      "team_name": "Eagle Engineering MS - Zigzag",
+      "robot_name": "TBD",
+      "organization": "CHAMINADE COLLEGE PREPARATORY MIDDLE SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Chatsworth",
+        "region": "California",
+        "postcode": "91311",
+        "country": "United States",
+        "coordinates": {
+          "lat": 34.3,
+          "lon": -118.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 199158,
+      "number": "2862A",
+      "team_name": "2862A",
+      "robot_name": "",
+      "organization": "OC AI Innovation Center",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Tustin",
+        "region": "California",
+        "postcode": "92780",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.8,
+          "lon": -117.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 198071,
+      "number": "2862B",
+      "team_name": "2862B",
+      "robot_name": "",
+      "organization": "OC AI Innovation Center",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Tustin",
+        "region": "California",
+        "postcode": "92780",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.8,
+          "lon": -117.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 199999,
+      "number": "3221H",
+      "team_name": "DBR VRC TEAM H",
+      "robot_name": "",
+      "organization": "Diamond Bar Robotics Lab",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Diamond Bar",
+        "region": "California",
+        "postcode": "91765",
+        "country": "United States",
+        "coordinates": {
+          "lat": 34,
+          "lon": -117.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
     {
       "id": 62734,
       "number": "4863A",

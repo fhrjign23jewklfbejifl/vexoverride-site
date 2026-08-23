@@ -9,8 +9,8 @@
     "path": "https://events.vex.com/api/v2/events/64498/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": 34,
-    "total": 34,
+    "to": 38,
+    "total": 38,
     "merged_pages": 1
   },
   "data": [
@@ -274,6 +274,33 @@
         "coordinates": {
           "lat": 13.7,
           "lon": 100.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 196943,
+      "number": "11111Y",
+      "team_name": "Astraea",
+      "robot_name": "？Extropy",
+      "organization": "上海虹口机器人社团（上海七丘机器人科技工作室）",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Shanghai",
+        "region": "Shanghai",
+        "postcode": "200083",
+        "country": "China",
+        "coordinates": {
+          "lat": 31.3,
+          "lon": 121.5
         }
       },
       "registered": true,
@@ -625,6 +652,87 @@
         "coordinates": {
           "lat": 23.7,
           "lon": 120.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199555,
+      "number": "44448X",
+      "team_name": "X",
+      "robot_name": "",
+      "organization": "St Andrews International School Bangkok",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Phra Khanong, Bangkok",
+        "region": null,
+        "postcode": "10110",
+        "country": "Thailand",
+        "coordinates": {
+          "lat": 13.7,
+          "lon": 100.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199557,
+      "number": "44448Y",
+      "team_name": "X",
+      "robot_name": "",
+      "organization": "St Andrews International School Bangkok",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Phra Khanong, Bangkok",
+        "region": null,
+        "postcode": "10110",
+        "country": "Thailand",
+        "coordinates": {
+          "lat": 13.7,
+          "lon": 100.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199558,
+      "number": "44448Z",
+      "team_name": "X",
+      "robot_name": "",
+      "organization": "St Andrews International School Bangkok",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Phra Khanong, Bangkok",
+        "region": null,
+        "postcode": "10110",
+        "country": "Thailand",
+        "coordinates": {
+          "lat": 13.7,
+          "lon": 100.6
         }
       },
       "registered": true,

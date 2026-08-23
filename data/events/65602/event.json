@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65602,
+    "sku": "VE-V5-26-65602",
+    "name": "Cathedral Robotics Tournament: VEX V5 Robotics Competition Blended",
+    "start": "2026-12-12T00:00:00-05:00",
+    "end": "2026-12-12T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Cathedral High School",
+      "address_1": "600 N Washington St",
+      "address_2": null,
+      "city": "New Ulm",
+      "region": "Minnesota",
+      "postcode": "56073",
+      "country": "United States",
+      "coordinates": {
+        "lat": 44.317839,
+        "lon": -94.468872
+      }
+    },
+    "locations": {
+      "2026-12-12": {
+        "venue": "Cathedral High School",
+        "address_1": "600 N Washington St",
+        "address_2": null,
+        "city": "New Ulm",
+        "region": "Minnesota",
+        "postcode": "56073",
+        "country": "United States",
+        "coordinates": {
+          "lat": 44.317839,
+          "lon": -94.468872
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

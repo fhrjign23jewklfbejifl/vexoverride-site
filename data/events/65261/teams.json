@@ -9,11 +9,200 @@
     "path": "https://events.vex.com/api/v2/events/65261/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": 5,
-    "total": 5,
+    "to": 25,
+    "total": 25,
     "merged_pages": 1
   },
   "data": [
+    {
+      "id": 63864,
+      "number": "2900C",
+      "team_name": "SymbiOHSis",
+      "robot_name": "",
+      "organization": "Onehunga High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Auckland",
+        "region": "Auckland",
+        "postcode": "1061",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -36.9,
+          "lon": 174.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199864,
+      "number": "2900W",
+      "team_name": "SymbiOHSis",
+      "robot_name": "",
+      "organization": "Onehunga High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Auckland",
+        "region": "Auckland",
+        "postcode": "1061",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -36.9,
+          "lon": 174.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 72760,
+      "number": "2915D",
+      "team_name": "Lynfield D",
+      "robot_name": "",
+      "organization": "Lynfield College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Auckland",
+        "region": "Auckland",
+        "postcode": "1041",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -36.9,
+          "lon": 174.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 72762,
+      "number": "2915F",
+      "team_name": "Lynfield College F",
+      "robot_name": "LCRF",
+      "organization": "Lynfield College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Auckland",
+        "region": "Auckland",
+        "postcode": "1041",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -36.9,
+          "lon": 174.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 94682,
+      "number": "2915H",
+      "team_name": "Lynfield College H",
+      "robot_name": "LCRH",
+      "organization": "Lynfield College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Auckland",
+        "region": "Auckland",
+        "postcode": "1041",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -36.9,
+          "lon": 174.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 172994,
+      "number": "2915K",
+      "team_name": "Lynfield K",
+      "robot_name": "LCRK",
+      "organization": "Lynfield College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Auckland",
+        "region": "Auckland",
+        "postcode": "1041",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -36.9,
+          "lon": 174.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 187556,
+      "number": "2915N",
+      "team_name": "Lynfield N",
+      "robot_name": "LCRN",
+      "organization": "Lynfield College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Auckland",
+        "region": "Auckland",
+        "postcode": "1041",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -36.9,
+          "lon": 174.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
     {
       "id": 986,
       "number": "2918C",
@@ -25,6 +214,33 @@
         "address_1": "",
         "address_2": null,
         "city": "Glenfield",
+        "region": "Auckland",
+        "postcode": "0629",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -36.8,
+          "lon": 174.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 22528,
+      "number": "2918E",
+      "team_name": "GCEC",
+      "robot_name": "GCEC",
+      "organization": "Glenfield College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Auckland",
         "region": "Auckland",
         "postcode": "0629",
         "country": "New Zealand",
@@ -96,6 +312,33 @@
       "grade": "High School"
     },
     {
+      "id": 94596,
+      "number": "2921F",
+      "team_name": "Free Range Robotics-F",
+      "robot_name": "2921-F",
+      "organization": "Free Range Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Albany",
+        "region": "Auckland",
+        "postcode": "0632",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -36.7,
+          "lon": 174.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
       "id": 153970,
       "number": "2923A",
       "team_name": "King's A",
@@ -107,6 +350,276 @@
         "address_2": null,
         "city": "Auckland",
         "region": "Auckland",
+        "postcode": "1062",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -37,
+          "lon": 174.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 175717,
+      "number": "2996B",
+      "team_name": "Untitled Document",
+      "robot_name": "",
+      "organization": "BestCoder Education",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Auckland",
+        "region": "Auckland",
+        "postcode": "0632",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -36.7,
+          "lon": 174.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 107138,
+      "number": "11044A",
+      "team_name": "Sacred Heart A",
+      "robot_name": "Little Blue Penguin",
+      "organization": "Sacred Heart College, Auckland",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Auckland",
+        "region": "Auckland",
+        "postcode": "1071",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -36.9,
+          "lon": 174.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 186629,
+      "number": "11044X",
+      "team_name": "The Doritos",
+      "robot_name": "Ye Jun",
+      "organization": "Sacred Heart College, Auckland",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Auckland",
+        "region": "Auckland",
+        "postcode": "1071",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -36.9,
+          "lon": 174.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 187488,
+      "number": "22020C",
+      "team_name": "Pixel",
+      "robot_name": "",
+      "organization": "Kidwe Lab",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Auckland",
+        "region": "Auckland",
+        "postcode": "0632",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -36.7,
+          "lon": 174.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 200000,
+      "number": "22020K",
+      "team_name": "Kidwe Lab K",
+      "robot_name": "",
+      "organization": "Kidwe Lab",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Auckland",
+        "region": "Auckland",
+        "postcode": "0632",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -36.7,
+          "lon": 174.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199312,
+      "number": "22020V",
+      "team_name": "Henry Huang Robotics",
+      "robot_name": "",
+      "organization": "Kidwe Lab",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Auckland",
+        "region": "Auckland",
+        "postcode": "0632",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -36.7,
+          "lon": 174.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 172748,
+      "number": "22020Z",
+      "team_name": "Kidwe Lab Z",
+      "robot_name": "",
+      "organization": "Kidwe Lab",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Auckland",
+        "region": "Auckland",
+        "postcode": "0632",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -36.7,
+          "lon": 174.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 153977,
+      "number": "52392A",
+      "team_name": "Ps InAPod",
+      "robot_name": "Fork",
+      "organization": "Otahuhu College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Auckland",
+        "region": "Auckland",
+        "postcode": "1062",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -37,
+          "lon": 174.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 154313,
+      "number": "52392B",
+      "team_name": "Peripatetic",
+      "robot_name": "Notorious Nihilists",
+      "organization": "Otahuhu College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Auckland",
+        "region": "Auckland",
+        "postcode": "1062",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -37,
+          "lon": 174.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 153978,
+      "number": "52392C",
+      "team_name": "NarMa",
+      "robot_name": "NarMa",
+      "organization": "Otahuhu College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Auckland",
+        "region": "Manawatu-Wanganui",
         "postcode": "1062",
         "country": "New Zealand",
         "coordinates": {
@@ -135,6 +648,33 @@
         "city": "Kohimarama",
         "region": "Auckland",
         "postcode": "1071",
+        "country": "New Zealand",
+        "coordinates": {
+          "lat": -36.9,
+          "lon": 174.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 185736,
+      "number": "58303A",
+      "team_name": "WCSC Team 1",
+      "robot_name": "",
+      "organization": "Wentworth Computer Science College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Auckland",
+        "region": "Auckland",
+        "postcode": "1023",
         "country": "New Zealand",
         "coordinates": {
           "lat": -36.9,

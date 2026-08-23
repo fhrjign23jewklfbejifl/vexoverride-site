@@ -1,6 +1,8 @@
 {
   "eventId": 65251,
-  "updatedAt": "2026-08-18T17:14:02.913Z",
+  "updatedAt": "2026-08-23T14:03:42.013Z",
   "source": "browser-side events.vex.com collector",
+  "eventRegion": null,
+  "officialRegionMapVersion": "2026-08-22T13:25:26.679Z",
   "status": "ok"
 }

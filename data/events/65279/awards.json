@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65279/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65279/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65279/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 10,
+    "total": 10,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 288002,
+      "event": {
+        "id": 65279,
+        "name": "Lorain Titans VEX V5 Robotics Competition Qualifier: Override High School Teams",
+        "code": "RE-V5RC-26-5279"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288003,
+      "event": {
+        "id": 65279,
+        "name": "Lorain Titans VEX V5 Robotics Competition Qualifier: Override High School Teams",
+        "code": "RE-V5RC-26-5279"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288004,
+      "event": {
+        "id": 65279,
+        "name": "Lorain Titans VEX V5 Robotics Competition Qualifier: Override High School Teams",
+        "code": "RE-V5RC-26-5279"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288005,
+      "event": {
+        "id": 65279,
+        "name": "Lorain Titans VEX V5 Robotics Competition Qualifier: Override High School Teams",
+        "code": "RE-V5RC-26-5279"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288006,
+      "event": {
+        "id": 65279,
+        "name": "Lorain Titans VEX V5 Robotics Competition Qualifier: Override High School Teams",
+        "code": "RE-V5RC-26-5279"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288007,
+      "event": {
+        "id": 65279,
+        "name": "Lorain Titans VEX V5 Robotics Competition Qualifier: Override High School Teams",
+        "code": "RE-V5RC-26-5279"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288008,
+      "event": {
+        "id": 65279,
+        "name": "Lorain Titans VEX V5 Robotics Competition Qualifier: Override High School Teams",
+        "code": "RE-V5RC-26-5279"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288009,
+      "event": {
+        "id": 65279,
+        "name": "Lorain Titans VEX V5 Robotics Competition Qualifier: Override High School Teams",
+        "code": "RE-V5RC-26-5279"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288010,
+      "event": {
+        "id": 65279,
+        "name": "Lorain Titans VEX V5 Robotics Competition Qualifier: Override High School Teams",
+        "code": "RE-V5RC-26-5279"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288011,
+      "event": {
+        "id": 65279,
+        "name": "Lorain Titans VEX V5 Robotics Competition Qualifier: Override High School Teams",
+        "code": "RE-V5RC-26-5279"
+      },
+      "order": 78,
+      "title": "Create Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

@@ -1,6 +1,13 @@
 {
   "eventId": 64281,
-  "updatedAt": "2026-08-18T17:14:10.025Z",
+  "updatedAt": "2026-08-23T14:03:48.355Z",
   "source": "browser-side events.vex.com collector",
+  "eventRegion": {
+    "id": null,
+    "name": "Missouri",
+    "source": "listing",
+    "eventCode": "RE-V5RC-26-4281"
+  },
+  "officialRegionMapVersion": "2026-08-22T13:25:26.679Z",
   "status": "ok"
 }

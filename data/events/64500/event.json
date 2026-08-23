@@ -3,7 +3,7 @@
     "id": 64500,
     "sku": "RE-V5RC-26-4500",
     "name": "2026 Beijing Invitational Competition(V5-HS Override)",
-    "start": "2026-08-19T00:00:00-04:00",
+    "start": "2026-08-22T00:00:00-04:00",
     "end": "2026-08-23T00:00:00-04:00",
     "season": {
       "id": 204,
@@ -29,7 +29,7 @@
       }
     },
     "locations": {
-      "2026-08-19": {
+      "2026-08-22": {
         "venue": "Beiren Etrong International Exhibition&Convention Center",
         "address_1": "No.6 Rongchang East Street, Yizhuang, Daxing District, Beijing, China.",
         "address_2": null,
@@ -51,7 +51,7 @@
       }
     ],
     "level": "Other",
-    "ongoing": false,
+    "ongoing": true,
     "awards_finalized": false,
     "event_type": null
   }

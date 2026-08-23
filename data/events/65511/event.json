@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65511,
+    "sku": "RE-V5RC-26-5511",
+    "name": "XVIII Campeonato Nacional de Robótica y STEM",
+    "start": "2027-03-03T00:00:00-05:00",
+    "end": "2027-03-05T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Centro de Convenciones Puebla",
+      "address_1": "Blvd. Héroes del 5 de Mayo 402, Centro histórico de Puebla",
+      "address_2": null,
+      "city": "Heroica Puebla de Zaragoza, Pue",
+      "region": "Puebla",
+      "postcode": "72000",
+      "country": "Mexico",
+      "coordinates": {
+        "lat": 19.043133,
+        "lon": -98.191961
+      }
+    },
+    "locations": {
+      "2027-03-03": {
+        "venue": "Centro de Convenciones Puebla",
+        "address_1": "Blvd. Héroes del 5 de Mayo 402, Centro histórico de Puebla",
+        "address_2": null,
+        "city": "Heroica Puebla de Zaragoza, Pue",
+        "region": "Puebla",
+        "postcode": "72000",
+        "country": "Mexico",
+        "coordinates": {
+          "lat": 19.043133,
+          "lon": -98.191961
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "National",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

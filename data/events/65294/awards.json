@@ -1,0 +1,93 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65294/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65294/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65294/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 5,
+    "total": 5,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 288130,
+      "event": {
+        "id": 65294,
+        "name": "Crown Point Fall VEX V5 Robotics Competition: Override Middle School and High School Teams",
+        "code": "RE-V5RC-26-5294"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288131,
+      "event": {
+        "id": 65294,
+        "name": "Crown Point Fall VEX V5 Robotics Competition: Override Middle School and High School Teams",
+        "code": "RE-V5RC-26-5294"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288132,
+      "event": {
+        "id": 65294,
+        "name": "Crown Point Fall VEX V5 Robotics Competition: Override Middle School and High School Teams",
+        "code": "RE-V5RC-26-5294"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288133,
+      "event": {
+        "id": 65294,
+        "name": "Crown Point Fall VEX V5 Robotics Competition: Override Middle School and High School Teams",
+        "code": "RE-V5RC-26-5294"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288134,
+      "event": {
+        "id": 65294,
+        "name": "Crown Point Fall VEX V5 Robotics Competition: Override Middle School and High School Teams",
+        "code": "RE-V5RC-26-5294"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "data": {
+    "id": 65529,
+    "sku": "RE-V5RC-26-5529",
+    "name": "Pikes Peak Robotics V5 HS League: PPR HS League - SY 26-27",
+    "start": "2026-09-12T00:00:00-04:00",
+    "end": "2026-12-05T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Mesa Ridge High School",
+      "address_1": "6070 Mesa Ridge Parkway",
+      "address_2": null,
+      "city": "Colorado Springs",
+      "region": "Colorado",
+      "postcode": "80911",
+      "country": "United States",
+      "coordinates": {
+        "lat": 38.721765,
+        "lon": -104.710283
+      }
+    },
+    "locations": {
+      "2026-09-12": {
+        "venue": "Mesa Ridge High School",
+        "address_1": "6070 Mesa Ridge Parkway",
+        "address_2": null,
+        "city": "Colorado Springs",
+        "region": "Colorado",
+        "postcode": "80911",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.721765,
+          "lon": -104.710283
+        }
+      },
+      "2026-10-17": {
+        "venue": "Mesa Ridge High School",
+        "address_1": "6070 Mesa Ridge Parkway",
+        "address_2": null,
+        "city": "Colorado Springs",
+        "region": "Colorado",
+        "postcode": "80911",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.721765,
+          "lon": -104.710283
+        }
+      },
+      "2026-11-14": {
+        "venue": "Mesa Ridge High School",
+        "address_1": "6070 Mesa Ridge Parkway",
+        "address_2": null,
+        "city": "Colorado Springs",
+        "region": "Colorado",
+        "postcode": "80911",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.721765,
+          "lon": -104.710283
+        }
+      },
+      "2026-12-05": {
+        "venue": "Mesa Ridge High School",
+        "address_1": "6070 Mesa Ridge Parkway",
+        "address_2": null,
+        "city": "Colorado Springs",
+        "region": "Colorado",
+        "postcode": "80911",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.721765,
+          "lon": -104.710283
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

@@ -1,6 +1,13 @@
 {
   "eventId": 64692,
-  "updatedAt": "2026-08-18T17:14:08.801Z",
+  "updatedAt": "2026-08-23T14:03:47.317Z",
   "source": "browser-side events.vex.com collector",
+  "eventRegion": {
+    "id": null,
+    "name": "Ohio",
+    "source": "listing",
+    "eventCode": "RE-V5RC-26-4692"
+  },
+  "officialRegionMapVersion": "2026-08-22T13:25:26.679Z",
   "status": "ok"
 }

@@ -1,6 +1,13 @@
 {
   "eventId": 65079,
-  "updatedAt": "2026-08-18T17:14:09.591Z",
+  "updatedAt": "2026-08-23T14:03:48.048Z",
   "source": "browser-side events.vex.com collector",
+  "eventRegion": {
+    "id": null,
+    "name": "New Mexico",
+    "source": "listing",
+    "eventCode": "RE-V5RC-26-5079"
+  },
+  "officialRegionMapVersion": "2026-08-22T13:25:26.679Z",
   "status": "ok"
 }

@@ -9,11 +9,65 @@
     "path": "https://events.vex.com/api/v2/events/64632/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": 4,
-    "total": 4,
+    "to": 6,
+    "total": 6,
     "merged_pages": 1
   },
   "data": [
+    {
+      "id": 108678,
+      "number": "5327V",
+      "team_name": "Gael Force Voltage",
+      "robot_name": "",
+      "organization": "DUBLIN HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Dublin",
+        "region": "California",
+        "postcode": "94568",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.7,
+          "lon": -121.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 66706,
+      "number": "11551A",
+      "team_name": "Our Danger Name",
+      "robot_name": "",
+      "organization": "BASIS Independent Silicon Valley",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "San Jose",
+        "region": "California",
+        "postcode": "95126",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.3,
+          "lon": -121.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
     {
       "id": 186868,
       "number": "25809A",

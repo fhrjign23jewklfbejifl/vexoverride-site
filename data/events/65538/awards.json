@@ -1,0 +1,213 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65538/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65538/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65538/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 13,
+    "total": 13,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 289761,
+      "event": {
+        "id": 65538,
+        "name": "Louisville Slugger Signature Event (Middle School): Downtown Louisville Kentucky",
+        "code": "VE-V5-26-65538"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289762,
+      "event": {
+        "id": 65538,
+        "name": "Louisville Slugger Signature Event (Middle School): Downtown Louisville Kentucky",
+        "code": "VE-V5-26-65538"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289763,
+      "event": {
+        "id": 65538,
+        "name": "Louisville Slugger Signature Event (Middle School): Downtown Louisville Kentucky",
+        "code": "VE-V5-26-65538"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289764,
+      "event": {
+        "id": 65538,
+        "name": "Louisville Slugger Signature Event (Middle School): Downtown Louisville Kentucky",
+        "code": "VE-V5-26-65538"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289765,
+      "event": {
+        "id": 65538,
+        "name": "Louisville Slugger Signature Event (Middle School): Downtown Louisville Kentucky",
+        "code": "VE-V5-26-65538"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289766,
+      "event": {
+        "id": 65538,
+        "name": "Louisville Slugger Signature Event (Middle School): Downtown Louisville Kentucky",
+        "code": "VE-V5-26-65538"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289767,
+      "event": {
+        "id": 65538,
+        "name": "Louisville Slugger Signature Event (Middle School): Downtown Louisville Kentucky",
+        "code": "VE-V5-26-65538"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289768,
+      "event": {
+        "id": 65538,
+        "name": "Louisville Slugger Signature Event (Middle School): Downtown Louisville Kentucky",
+        "code": "VE-V5-26-65538"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289769,
+      "event": {
+        "id": 65538,
+        "name": "Louisville Slugger Signature Event (Middle School): Downtown Louisville Kentucky",
+        "code": "VE-V5-26-65538"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289770,
+      "event": {
+        "id": 65538,
+        "name": "Louisville Slugger Signature Event (Middle School): Downtown Louisville Kentucky",
+        "code": "VE-V5-26-65538"
+      },
+      "order": 78,
+      "title": "Create Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289771,
+      "event": {
+        "id": 65538,
+        "name": "Louisville Slugger Signature Event (Middle School): Downtown Louisville Kentucky",
+        "code": "VE-V5-26-65538"
+      },
+      "order": 79,
+      "title": "Sportsmanship Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289772,
+      "event": {
+        "id": 65538,
+        "name": "Louisville Slugger Signature Event (Middle School): Downtown Louisville Kentucky",
+        "code": "VE-V5-26-65538"
+      },
+      "order": 80,
+      "title": "Energy Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289773,
+      "event": {
+        "id": 65538,
+        "name": "Louisville Slugger Signature Event (Middle School): Downtown Louisville Kentucky",
+        "code": "VE-V5-26-65538"
+      },
+      "order": 81,
+      "title": "Inspire Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

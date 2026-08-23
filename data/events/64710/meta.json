@@ -1,6 +1,13 @@
 {
   "eventId": 64710,
-  "updatedAt": "2026-08-18T17:14:12.138Z",
+  "updatedAt": "2026-08-23T14:03:49.397Z",
   "source": "browser-side events.vex.com collector",
+  "eventRegion": {
+    "id": null,
+    "name": "Pennsylvania - East",
+    "source": "listing",
+    "eventCode": "RE-V5RC-26-4710"
+  },
+  "officialRegionMapVersion": "2026-08-22T13:25:26.679Z",
   "status": "ok"
 }

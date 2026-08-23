@@ -1,6 +1,13 @@
 {
   "eventId": 65035,
-  "updatedAt": "2026-08-18T17:14:12.286Z",
+  "updatedAt": "2026-08-23T14:03:49.436Z",
   "source": "browser-side events.vex.com collector",
+  "eventRegion": {
+    "id": null,
+    "name": "Florida - South",
+    "source": "listing",
+    "eventCode": "RE-V5RC-26-5035"
+  },
+  "officialRegionMapVersion": "2026-08-22T13:25:26.679Z",
   "status": "ok"
 }

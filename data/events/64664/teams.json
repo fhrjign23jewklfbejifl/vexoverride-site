@@ -9,8 +9,8 @@
     "path": "https://events.vex.com/api/v2/events/64664/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": 28,
-    "total": 28,
+    "to": 27,
+    "total": 27,
     "merged_pages": 1
   },
   "data": [
@@ -558,33 +558,6 @@
       "id": 198920,
       "number": "62345E",
       "team_name": "KrillBots",
-      "robot_name": "",
-      "organization": "Cranbrook School",
-      "location": {
-        "venue": null,
-        "address_1": "",
-        "address_2": null,
-        "city": "Sydney",
-        "region": "New South Wales",
-        "postcode": "2023",
-        "country": "Australia",
-        "coordinates": {
-          "lat": -33.9,
-          "lon": 151.3
-        }
-      },
-      "registered": true,
-      "program": {
-        "id": 1,
-        "name": "VEX V5 Robotics Competition",
-        "code": "V5RC"
-      },
-      "grade": "Middle School"
-    },
-    {
-      "id": 198921,
-      "number": "62345F",
-      "team_name": "LePhilly",
       "robot_name": "",
       "organization": "Cranbrook School",
       "location": {

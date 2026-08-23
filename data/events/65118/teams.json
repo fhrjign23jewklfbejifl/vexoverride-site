@@ -2,16 +2,179 @@
   "meta": {
     "current_page": 1,
     "first_page_url": "https://events.vex.com/api/v2/events/65118/teams?page=1",
-    "from": null,
+    "from": 1,
     "last_page": 1,
     "last_page_url": "https://events.vex.com/api/v2/events/65118/teams?page=1",
     "next_page_url": null,
     "path": "https://events.vex.com/api/v2/events/65118/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": null,
-    "total": 0,
+    "to": 6,
+    "total": 6,
     "merged_pages": 1
   },
-  "data": []
+  "data": [
+    {
+      "id": 108674,
+      "number": "11777A",
+      "team_name": "???",
+      "robot_name": "",
+      "organization": "NAMPA CHRISTIAN SCHOOLS",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Nampa",
+        "region": "Idaho",
+        "postcode": "83651",
+        "country": "United States",
+        "coordinates": {
+          "lat": 43.6,
+          "lon": -116.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199702,
+      "number": "11777K",
+      "team_name": "Solo-Queue",
+      "robot_name": "",
+      "organization": "NAMPA CHRISTIAN SCHOOLS",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Nampa",
+        "region": "Idaho",
+        "postcode": "83651",
+        "country": "United States",
+        "coordinates": {
+          "lat": 43.6,
+          "lon": -116.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199934,
+      "number": "11777U",
+      "team_name": "Scary Marry",
+      "robot_name": "",
+      "organization": "NAMPA CHRISTIAN SCHOOLS",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Nampa",
+        "region": "Idaho",
+        "postcode": "83651",
+        "country": "United States",
+        "coordinates": {
+          "lat": 43.6,
+          "lon": -116.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199704,
+      "number": "11777V",
+      "team_name": "Velocity",
+      "robot_name": "",
+      "organization": "NAMPA CHRISTIAN SCHOOLS",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Nampa",
+        "region": "Idaho",
+        "postcode": "83651",
+        "country": "United States",
+        "coordinates": {
+          "lat": 43.6,
+          "lon": -116.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199705,
+      "number": "11777W",
+      "team_name": "W's in the Chat",
+      "robot_name": "",
+      "organization": "NAMPA CHRISTIAN SCHOOLS",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Nampa",
+        "region": "Idaho",
+        "postcode": "83651",
+        "country": "United States",
+        "coordinates": {
+          "lat": 43.6,
+          "lon": -116.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199706,
+      "number": "11777Z",
+      "team_name": "ZZZZZ",
+      "robot_name": "",
+      "organization": "NAMPA CHRISTIAN SCHOOLS",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Nampa",
+        "region": "Idaho",
+        "postcode": "83651",
+        "country": "United States",
+        "coordinates": {
+          "lat": 43.6,
+          "lon": -116.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
 }

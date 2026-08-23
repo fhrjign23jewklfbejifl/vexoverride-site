@@ -2,16 +2,395 @@
   "meta": {
     "current_page": 1,
     "first_page_url": "https://events.vex.com/api/v2/events/65240/teams?page=1",
-    "from": null,
+    "from": 1,
     "last_page": 1,
     "last_page_url": "https://events.vex.com/api/v2/events/65240/teams?page=1",
     "next_page_url": null,
     "path": "https://events.vex.com/api/v2/events/65240/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": null,
-    "total": 0,
+    "to": 14,
+    "total": 14,
     "merged_pages": 1
   },
-  "data": []
+  "data": [
+    {
+      "id": 197342,
+      "number": "11A",
+      "team_name": "Irvine Ruiguan",
+      "robot_name": "RG",
+      "organization": "IRVINE RUIGUAN",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Irvine",
+        "region": "California",
+        "postcode": "92604",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.7,
+          "lon": -117.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 197345,
+      "number": "11V",
+      "team_name": "IRVINE RUIGUAN",
+      "robot_name": "",
+      "organization": "IRVINE RUIGUAN",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Irvine",
+        "region": "California",
+        "postcode": "92604",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.7,
+          "lon": -117.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 122798,
+      "number": "884A",
+      "team_name": "Space Pandas",
+      "robot_name": "",
+      "organization": "Bamboo Lab",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Manhattan Beach",
+        "region": "California",
+        "postcode": "90266",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.9,
+          "lon": -118.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 50480,
+      "number": "6627A",
+      "team_name": "Knight Time Bots - Ace",
+      "robot_name": "ACE",
+      "organization": "FOOTHILL HIGH",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Santa Ana",
+        "region": "California",
+        "postcode": "92705",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.8,
+          "lon": -117.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 64291,
+      "number": "6627C",
+      "team_name": "Knight Time Bots - Cyberstorm",
+      "robot_name": "",
+      "organization": "FOOTHILL HIGH",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Santa Ana",
+        "region": "California",
+        "postcode": "92705",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.8,
+          "lon": -117.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 64292,
+      "number": "6627D",
+      "team_name": "Knight Time Bots - Dragons",
+      "robot_name": "",
+      "organization": "FOOTHILL HIGH",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Santa Ana",
+        "region": "California",
+        "postcode": "92705",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.8,
+          "lon": -117.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 139680,
+      "number": "6627S",
+      "team_name": "Knight Time Bots - Spades",
+      "robot_name": "Spades",
+      "organization": "FOOTHILL HIGH",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Santa Ana",
+        "region": "California",
+        "postcode": "92705",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.8,
+          "lon": -117.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 93708,
+      "number": "6627X",
+      "team_name": "Knight Time Bots - Xenoceratops",
+      "robot_name": "Xenoceratops",
+      "organization": "FOOTHILL HIGH",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Santa Ana",
+        "region": "California",
+        "postcode": "92705",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.8,
+          "lon": -117.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 139679,
+      "number": "6627Y",
+      "team_name": "Knight Time Bots Y",
+      "robot_name": "",
+      "organization": "FOOTHILL HIGH",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Santa Ana",
+        "region": "California",
+        "postcode": "92705",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.8,
+          "lon": -117.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 184679,
+      "number": "98601D",
+      "team_name": "Nyx (Troy)",
+      "robot_name": "",
+      "organization": "TROY HIGH NJROTC",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Fullerton",
+        "region": "California",
+        "postcode": "92831",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.9,
+          "lon": -117.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 184680,
+      "number": "98601E",
+      "team_name": "Eclipse (Troy)",
+      "robot_name": "",
+      "organization": "TROY HIGH NJROTC",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Fullerton",
+        "region": "California",
+        "postcode": "92831",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.9,
+          "lon": -117.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 198020,
+      "number": "98601M",
+      "team_name": "Matrix (Troy)",
+      "robot_name": "",
+      "organization": "TROY HIGH NJROTC",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Fullerton",
+        "region": "California",
+        "postcode": "92831",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.9,
+          "lon": -117.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 196953,
+      "number": "98601S",
+      "team_name": "Elixir (Troy)",
+      "robot_name": "",
+      "organization": "TROY HIGH NJROTC",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Fullerton",
+        "region": "California",
+        "postcode": "92831",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.9,
+          "lon": -117.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 188744,
+      "number": "98601Y",
+      "team_name": "Atlantis (Troy)",
+      "robot_name": "",
+      "organization": "TROY HIGH NJROTC",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Fullerton",
+        "region": "California",
+        "postcode": "92831",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.9,
+          "lon": -117.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
 }

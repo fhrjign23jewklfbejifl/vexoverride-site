@@ -2,16 +2,98 @@
   "meta": {
     "current_page": 1,
     "first_page_url": "https://events.vex.com/api/v2/events/65385/teams?page=1",
-    "from": null,
+    "from": 1,
     "last_page": 1,
     "last_page_url": "https://events.vex.com/api/v2/events/65385/teams?page=1",
     "next_page_url": null,
     "path": "https://events.vex.com/api/v2/events/65385/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": null,
-    "total": 0,
+    "to": 3,
+    "total": 3,
     "merged_pages": 1
   },
-  "data": []
+  "data": [
+    {
+      "id": 156089,
+      "number": "24931A",
+      "team_name": "Bazinga STEMBots",
+      "robot_name": "",
+      "organization": "LANIER MIDDLE SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Sugar Hill",
+        "region": "Georgia",
+        "postcode": "30518",
+        "country": "United States",
+        "coordinates": {
+          "lat": 34.1,
+          "lon": -84.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 173966,
+      "number": "24931B",
+      "team_name": "Quantum STEMBots",
+      "robot_name": "",
+      "organization": "LANIER MIDDLE SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Sugar Hill",
+        "region": "Georgia",
+        "postcode": "30518",
+        "country": "United States",
+        "coordinates": {
+          "lat": 34.1,
+          "lon": -84.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 187176,
+      "number": "24931C",
+      "team_name": "STEMBots",
+      "robot_name": "",
+      "organization": "LANIER MIDDLE SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Sugar Hill",
+        "region": "Georgia",
+        "postcode": "30518",
+        "country": "United States",
+        "coordinates": {
+          "lat": 34.1,
+          "lon": -84.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    }
+  ]
 }

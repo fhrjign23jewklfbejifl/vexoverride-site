@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65418,
+    "sku": "RE-V5RC-26-5418",
+    "name": "Matt Holcombe Talon Tussle: VEX V5 Robotics Competition Override",
+    "start": "2026-11-21T00:00:00-05:00",
+    "end": "2026-11-21T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Walter Johnson JHS Academy of International Studies",
+      "address_1": "7701 Ducharme Avenue",
+      "address_2": null,
+      "city": "Las Vegas",
+      "region": "Nevada",
+      "postcode": "89145",
+      "country": "United States",
+      "coordinates": {
+        "lat": 36.169242,
+        "lon": -115.262788
+      }
+    },
+    "locations": {
+      "2026-11-21": {
+        "venue": "Walter Johnson JHS Academy of International Studies",
+        "address_1": "7701 Ducharme Avenue",
+        "address_2": null,
+        "city": "Las Vegas",
+        "region": "Nevada",
+        "postcode": "89145",
+        "country": "United States",
+        "coordinates": {
+          "lat": 36.169242,
+          "lon": -115.262788
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

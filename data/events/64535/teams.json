@@ -2,16 +2,44 @@
   "meta": {
     "current_page": 1,
     "first_page_url": "https://events.vex.com/api/v2/events/64535/teams?page=1",
-    "from": null,
+    "from": 1,
     "last_page": 1,
     "last_page_url": "https://events.vex.com/api/v2/events/64535/teams?page=1",
     "next_page_url": null,
     "path": "https://events.vex.com/api/v2/events/64535/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": null,
-    "total": 0,
+    "to": 1,
+    "total": 1,
     "merged_pages": 1
   },
-  "data": []
+  "data": [
+    {
+      "id": 199986,
+      "number": "33377X",
+      "team_name": "Kidnetic",
+      "robot_name": "Alevana",
+      "organization": "Kidnetic",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "London",
+        "region": "Great Britain",
+        "postcode": "sw18 5bu",
+        "country": "United Kingdom",
+        "coordinates": {
+          "lat": 51.4,
+          "lon": -0.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
 }

@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65208,
+    "sku": "RE-V5RC-26-5208",
+    "name": "Salem Early Bird Tournament: VEX V5 Robotics Competition Override",
+    "start": "2026-10-24T00:00:00-04:00",
+    "end": "2026-10-24T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "West Salem High School",
+      "address_1": "1776 Titan Drive Northwest",
+      "address_2": null,
+      "city": "Salem",
+      "region": "Oregon",
+      "postcode": "97304",
+      "country": "United States",
+      "coordinates": {
+        "lat": 44.959048,
+        "lon": -123.084339
+      }
+    },
+    "locations": {
+      "2026-10-24": {
+        "venue": "West Salem High School",
+        "address_1": "1776 Titan Drive Northwest",
+        "address_2": null,
+        "city": "Salem",
+        "region": "Oregon",
+        "postcode": "97304",
+        "country": "United States",
+        "coordinates": {
+          "lat": 44.959048,
+          "lon": -123.084339
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

@@ -1,6 +1,13 @@
 {
   "eventId": 65340,
-  "updatedAt": "2026-08-18T17:14:08.559Z",
+  "updatedAt": "2026-08-23T14:03:47.175Z",
   "source": "browser-side events.vex.com collector",
+  "eventRegion": {
+    "id": null,
+    "name": "California - Region 2",
+    "source": "listing",
+    "eventCode": "RE-V5RC-26-5340"
+  },
+  "officialRegionMapVersion": "2026-08-22T13:25:26.679Z",
   "status": "ok"
 }

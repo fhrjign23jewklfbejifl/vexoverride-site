@@ -2,16 +2,98 @@
   "meta": {
     "current_page": 1,
     "first_page_url": "https://events.vex.com/api/v2/events/64219/teams?page=1",
-    "from": null,
+    "from": 1,
     "last_page": 1,
     "last_page_url": "https://events.vex.com/api/v2/events/64219/teams?page=1",
     "next_page_url": null,
     "path": "https://events.vex.com/api/v2/events/64219/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": null,
-    "total": 0,
+    "to": 3,
+    "total": 3,
     "merged_pages": 1
   },
-  "data": []
+  "data": [
+    {
+      "id": 196993,
+      "number": "3760X",
+      "team_name": "White Lotus",
+      "robot_name": "Nymphaea Lotus",
+      "organization": "Lotus Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Woodbridge ",
+        "region": "Virginia",
+        "postcode": "22192",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.7,
+          "lon": -77.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 121876,
+      "number": "12914X",
+      "team_name": "OmegaBotz",
+      "robot_name": "Omega^5",
+      "organization": "Omega Robotics Corp.",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Gainesville",
+        "region": "Virginia",
+        "postcode": "20155",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.9,
+          "lon": -77.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 197502,
+      "number": "12914Y",
+      "team_name": "OmegaBlitz",
+      "robot_name": "Omega.0.1",
+      "organization": "Omega Robotics Corp.",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Gainesville",
+        "region": "Virginia",
+        "postcode": "20155",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.9,
+          "lon": -77.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
 }

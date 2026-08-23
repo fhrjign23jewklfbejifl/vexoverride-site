@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65367/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65367/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65367/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 10,
+    "total": 10,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 288606,
+      "event": {
+        "id": 65367,
+        "name": "Grandville Last Chance VEX V5 Robotics Competition: Invitational Override Middle School and High School Teams",
+        "code": "RE-V5RC-26-5367"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288607,
+      "event": {
+        "id": 65367,
+        "name": "Grandville Last Chance VEX V5 Robotics Competition: Invitational Override Middle School and High School Teams",
+        "code": "RE-V5RC-26-5367"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288608,
+      "event": {
+        "id": 65367,
+        "name": "Grandville Last Chance VEX V5 Robotics Competition: Invitational Override Middle School and High School Teams",
+        "code": "RE-V5RC-26-5367"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288609,
+      "event": {
+        "id": 65367,
+        "name": "Grandville Last Chance VEX V5 Robotics Competition: Invitational Override Middle School and High School Teams",
+        "code": "RE-V5RC-26-5367"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288610,
+      "event": {
+        "id": 65367,
+        "name": "Grandville Last Chance VEX V5 Robotics Competition: Invitational Override Middle School and High School Teams",
+        "code": "RE-V5RC-26-5367"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288611,
+      "event": {
+        "id": 65367,
+        "name": "Grandville Last Chance VEX V5 Robotics Competition: Invitational Override Middle School and High School Teams",
+        "code": "RE-V5RC-26-5367"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288612,
+      "event": {
+        "id": 65367,
+        "name": "Grandville Last Chance VEX V5 Robotics Competition: Invitational Override Middle School and High School Teams",
+        "code": "RE-V5RC-26-5367"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288613,
+      "event": {
+        "id": 65367,
+        "name": "Grandville Last Chance VEX V5 Robotics Competition: Invitational Override Middle School and High School Teams",
+        "code": "RE-V5RC-26-5367"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288614,
+      "event": {
+        "id": 65367,
+        "name": "Grandville Last Chance VEX V5 Robotics Competition: Invitational Override Middle School and High School Teams",
+        "code": "RE-V5RC-26-5367"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288615,
+      "event": {
+        "id": 65367,
+        "name": "Grandville Last Chance VEX V5 Robotics Competition: Invitational Override Middle School and High School Teams",
+        "code": "RE-V5RC-26-5367"
+      },
+      "order": 78,
+      "title": "Create Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

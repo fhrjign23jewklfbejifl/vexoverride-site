@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65365/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65365/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65365/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 6,
+    "total": 6,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 288587,
+      "event": {
+        "id": 65365,
+        "name": "Battle at the Bolt 2026 (MS/HS): VEX V5 Robotics Competition Override",
+        "code": "RE-V5RC-26-5365"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288588,
+      "event": {
+        "id": 65365,
+        "name": "Battle at the Bolt 2026 (MS/HS): VEX V5 Robotics Competition Override",
+        "code": "RE-V5RC-26-5365"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288589,
+      "event": {
+        "id": 65365,
+        "name": "Battle at the Bolt 2026 (MS/HS): VEX V5 Robotics Competition Override",
+        "code": "RE-V5RC-26-5365"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288590,
+      "event": {
+        "id": 65365,
+        "name": "Battle at the Bolt 2026 (MS/HS): VEX V5 Robotics Competition Override",
+        "code": "RE-V5RC-26-5365"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288591,
+      "event": {
+        "id": 65365,
+        "name": "Battle at the Bolt 2026 (MS/HS): VEX V5 Robotics Competition Override",
+        "code": "RE-V5RC-26-5365"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288592,
+      "event": {
+        "id": 65365,
+        "name": "Battle at the Bolt 2026 (MS/HS): VEX V5 Robotics Competition Override",
+        "code": "RE-V5RC-26-5365"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

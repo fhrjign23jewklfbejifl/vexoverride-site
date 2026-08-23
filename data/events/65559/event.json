@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65559,
+    "sku": "VE-V5-26-65559",
+    "name": "Wolverine Override: WFHS Override",
+    "start": "2026-12-12T00:00:00-05:00",
+    "end": "2026-12-12T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "West Forsyth High School",
+      "address_1": "4155 Drew Road",
+      "address_2": null,
+      "city": "Cumming",
+      "region": "Georgia",
+      "postcode": "30040",
+      "country": "United States",
+      "coordinates": {
+        "lat": 34.210355,
+        "lon": -84.21388
+      }
+    },
+    "locations": {
+      "2026-12-12": {
+        "venue": "West Forsyth High School",
+        "address_1": "4155 Drew Road",
+        "address_2": null,
+        "city": "Cumming",
+        "region": "Georgia",
+        "postcode": "30040",
+        "country": "United States",
+        "coordinates": {
+          "lat": 34.210355,
+          "lon": -84.21388
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

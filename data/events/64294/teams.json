@@ -9,11 +9,38 @@
     "path": "https://events.vex.com/api/v2/events/64294/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": 1,
-    "total": 1,
+    "to": 2,
+    "total": 2,
     "merged_pages": 1
   },
   "data": [
+    {
+      "id": 194237,
+      "number": "1769A",
+      "team_name": "EXtreme",
+      "robot_name": "EXtreme1234",
+      "organization": "Lakeridge Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Lake Oswego",
+        "region": "Oregon",
+        "postcode": "97035",
+        "country": "United States",
+        "coordinates": {
+          "lat": 45.4,
+          "lon": -122.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
     {
       "id": 193134,
       "number": "2646A",

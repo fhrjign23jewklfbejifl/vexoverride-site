@@ -9,8 +9,8 @@
     "path": "https://events.vex.com/api/v2/events/64926/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": 55,
-    "total": 55,
+    "to": 64,
+    "total": 64,
     "merged_pages": 1
   },
   "data": [
@@ -447,6 +447,60 @@
       "grade": "High School"
     },
     {
+      "id": 153722,
+      "number": "2142S",
+      "team_name": "The SnuggleMuffins",
+      "robot_name": "Gremlin",
+      "organization": "John Bapst Memorial High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bangor",
+        "region": "Maine",
+        "postcode": "04401",
+        "country": "United States",
+        "coordinates": {
+          "lat": 44.8,
+          "lon": -68.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 161338,
+      "number": "2142X",
+      "team_name": "Mechanica",
+      "robot_name": "Mechanica",
+      "organization": "John Bapst Memorial High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bangor",
+        "region": "Maine",
+        "postcode": "04401",
+        "country": "United States",
+        "coordinates": {
+          "lat": 44.8,
+          "lon": -68.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
       "id": 185160,
       "number": "2145V",
       "team_name": "Pink Swirlee Unicorns",
@@ -636,33 +690,6 @@
       "grade": "High School"
     },
     {
-      "id": 174251,
-      "number": "2872R",
-      "team_name": "Overcharge",
-      "robot_name": "",
-      "organization": "Bridge the Gap Foundation",
-      "location": {
-        "venue": null,
-        "address_1": "",
-        "address_2": null,
-        "city": "Aldie",
-        "region": "Virginia",
-        "postcode": "20105",
-        "country": "United States",
-        "coordinates": {
-          "lat": 39,
-          "lon": -77.6
-        }
-      },
-      "registered": true,
-      "program": {
-        "id": 1,
-        "name": "VEX V5 Robotics Competition",
-        "code": "V5RC"
-      },
-      "grade": "High School"
-    },
-    {
       "id": 185151,
       "number": "2982A",
       "team_name": "AVERAGE INTELLIGENCE",
@@ -840,6 +867,33 @@
         "country": "United States",
         "coordinates": {
           "lat": 37.7,
+          "lon": -121.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199897,
+      "number": "4051V",
+      "team_name": "Vantage",
+      "robot_name": "",
+      "organization": "Void Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "San Ramon",
+        "region": "California",
+        "postcode": "94582",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.8,
           "lon": -121.9
         }
       },
@@ -1125,7 +1179,7 @@
       "id": 121876,
       "number": "12914X",
       "team_name": "OmegaBotz",
-      "robot_name": "Omega.5",
+      "robot_name": "Omega^5",
       "organization": "Omega Robotics Corp.",
       "location": {
         "venue": null,
@@ -1138,6 +1192,195 @@
         "coordinates": {
           "lat": 38.9,
           "lon": -77.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 93519,
+      "number": "15376B",
+      "team_name": "Vortex 3S-Barracuda",
+      "robot_name": "",
+      "organization": "École secondaire des Trois-Saisons",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Terrebonne",
+        "region": "Quebec",
+        "postcode": "J6X4T1",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 45.7,
+          "lon": -73.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 139421,
+      "number": "15376E",
+      "team_name": "Vortex 3S-E",
+      "robot_name": "",
+      "organization": "École secondaire des Trois-Saisons",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Terrebonne",
+        "region": "Quebec",
+        "postcode": "J6X4T1",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 45.7,
+          "lon": -73.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 169972,
+      "number": "15376G",
+      "team_name": "Vortex 3S-Gelato",
+      "robot_name": "",
+      "organization": "École secondaire des Trois-Saisons",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Terrebonne",
+        "region": "Quebec",
+        "postcode": "J6X4T1",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 45.7,
+          "lon": -73.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 169973,
+      "number": "15376H",
+      "team_name": "Vortex 3S-HÉLIO",
+      "robot_name": "",
+      "organization": "École secondaire des Trois-Saisons",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Terrebonne",
+        "region": "Quebec",
+        "postcode": "J6X4T1",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 45.7,
+          "lon": -73.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 175429,
+      "number": "15376J",
+      "team_name": "Vortex 3S-JURASSIQUE",
+      "robot_name": "",
+      "organization": "École secondaire des Trois-Saisons",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Terrebonne",
+        "region": "Quebec",
+        "postcode": "J6X4T1",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 45.7,
+          "lon": -73.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 185080,
+      "number": "15376K",
+      "team_name": "Vortex 3S-Kraken",
+      "robot_name": "",
+      "organization": "École secondaire des Trois-Saisons",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Terrebonne",
+        "region": "Quebec",
+        "postcode": "J6X4T1",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 45.7,
+          "lon": -73.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 197546,
+      "number": "20004N",
+      "team_name": "Nightmare",
+      "robot_name": "Nightmare",
+      "organization": "Isaac Bouchard ",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Sutton",
+        "region": "Quebec",
+        "postcode": "J0E 2K0",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 45,
+          "lon": -72.6
         }
       },
       "registered": true,
@@ -1394,7 +1637,7 @@
     {
       "id": 197453,
       "number": "77678A",
-      "team_name": "Ignite",
+      "team_name": "Bulldogs",
       "robot_name": "Triple-Double",
       "organization": "Space",
       "location": {

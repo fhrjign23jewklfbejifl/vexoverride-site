@@ -2,16 +2,201 @@
   "meta": {
     "current_page": 1,
     "first_page_url": "https://events.vex.com/api/v2/events/64611/skills?page=1",
-    "from": null,
+    "from": 1,
     "last_page": 1,
     "last_page_url": "https://events.vex.com/api/v2/events/64611/skills?page=1",
     "next_page_url": null,
     "path": "https://events.vex.com/api/v2/events/64611/skills",
     "per_page": 250,
     "prev_page_url": null,
-    "to": null,
-    "total": 0,
+    "to": 8,
+    "total": 8,
     "merged_pages": 1
   },
-  "data": []
+  "data": [
+    {
+      "id": 79146200,
+      "event": {
+        "id": 64611,
+        "name": "Palmerston North VEX V5 Robotics Competition™ Tournament 3: Override™  @ Freyberg High School (Kiwibots Event in Central Robotics Region)",
+        "code": "RE-V5RC-26-4611"
+      },
+      "team": {
+        "id": 187552,
+        "name": "85829A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 1,
+      "score": 48,
+      "attempts": 3
+    },
+    {
+      "id": 79146201,
+      "event": {
+        "id": 64611,
+        "name": "Palmerston North VEX V5 Robotics Competition™ Tournament 3: Override™  @ Freyberg High School (Kiwibots Event in Central Robotics Region)",
+        "code": "RE-V5RC-26-4611"
+      },
+      "team": {
+        "id": 187552,
+        "name": "85829A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 1,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79146202,
+      "event": {
+        "id": 64611,
+        "name": "Palmerston North VEX V5 Robotics Competition™ Tournament 3: Override™  @ Freyberg High School (Kiwibots Event in Central Robotics Region)",
+        "code": "RE-V5RC-26-4611"
+      },
+      "team": {
+        "id": 199855,
+        "name": "12020Z",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 2,
+      "score": 20,
+      "attempts": 3
+    },
+    {
+      "id": 79146203,
+      "event": {
+        "id": 64611,
+        "name": "Palmerston North VEX V5 Robotics Competition™ Tournament 3: Override™  @ Freyberg High School (Kiwibots Event in Central Robotics Region)",
+        "code": "RE-V5RC-26-4611"
+      },
+      "team": {
+        "id": 199855,
+        "name": "12020Z",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 2,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79146204,
+      "event": {
+        "id": 64611,
+        "name": "Palmerston North VEX V5 Robotics Competition™ Tournament 3: Override™  @ Freyberg High School (Kiwibots Event in Central Robotics Region)",
+        "code": "RE-V5RC-26-4611"
+      },
+      "team": {
+        "id": 81536,
+        "name": "2985A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 3,
+      "score": 10,
+      "attempts": 3
+    },
+    {
+      "id": 79146205,
+      "event": {
+        "id": 64611,
+        "name": "Palmerston North VEX V5 Robotics Competition™ Tournament 3: Override™  @ Freyberg High School (Kiwibots Event in Central Robotics Region)",
+        "code": "RE-V5RC-26-4611"
+      },
+      "team": {
+        "id": 81536,
+        "name": "2985A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 3,
+      "score": 0,
+      "attempts": 0
+    },
+    {
+      "id": 79146206,
+      "event": {
+        "id": 64611,
+        "name": "Palmerston North VEX V5 Robotics Competition™ Tournament 3: Override™  @ Freyberg High School (Kiwibots Event in Central Robotics Region)",
+        "code": "RE-V5RC-26-4611"
+      },
+      "team": {
+        "id": 106964,
+        "name": "3204A",
+        "code": null
+      },
+      "type": "driver",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 4,
+      "score": 0,
+      "attempts": 2
+    },
+    {
+      "id": 79146207,
+      "event": {
+        "id": 64611,
+        "name": "Palmerston North VEX V5 Robotics Competition™ Tournament 3: Override™  @ Freyberg High School (Kiwibots Event in Central Robotics Region)",
+        "code": "RE-V5RC-26-4611"
+      },
+      "team": {
+        "id": 106964,
+        "name": "3204A",
+        "code": null
+      },
+      "type": "programming",
+      "season": {
+        "id": 204,
+        "name": "VEX V5 Robotics Competition 2026-2027: Override",
+        "code": null
+      },
+      "division": null,
+      "rank": 4,
+      "score": 0,
+      "attempts": 0
+    }
+  ]
 }

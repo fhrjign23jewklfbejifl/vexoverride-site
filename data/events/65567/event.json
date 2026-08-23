@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65567,
+    "sku": "VE-V5-26-65567",
+    "name": "Triway Robotics High School December Classic Tournament: VEX V5 Robotics Competition Override High School Teams",
+    "start": "2026-12-05T00:00:00-05:00",
+    "end": "2026-12-05T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Triway High School",
+      "address_1": "3205 Shreve Road",
+      "address_2": null,
+      "city": "Wooster",
+      "region": "Ohio",
+      "postcode": "44691",
+      "country": "United States",
+      "coordinates": {
+        "lat": 40.760747,
+        "lon": -81.977353
+      }
+    },
+    "locations": {
+      "2026-12-05": {
+        "venue": "Triway High School",
+        "address_1": "3205 Shreve Road",
+        "address_2": null,
+        "city": "Wooster",
+        "region": "Ohio",
+        "postcode": "44691",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40.760747,
+          "lon": -81.977353
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

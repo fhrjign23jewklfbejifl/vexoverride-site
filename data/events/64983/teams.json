@@ -9,11 +9,38 @@
     "path": "https://events.vex.com/api/v2/events/64983/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": 2,
-    "total": 2,
+    "to": 7,
+    "total": 7,
     "merged_pages": 1
   },
   "data": [
+    {
+      "id": 58563,
+      "number": "8934A",
+      "team_name": "Fenrir",
+      "robot_name": ";",
+      "organization": "Samueli Academy",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Santa Ana",
+        "region": "California",
+        "postcode": "92706",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.8,
+          "lon": -117.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
     {
       "id": 131388,
       "number": "34690A",
@@ -58,6 +85,114 @@
         "coordinates": {
           "lat": 34.2,
           "lon": -118.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 175339,
+      "number": "59240A",
+      "team_name": "JSerra Lions",
+      "robot_name": "",
+      "organization": "JSERRA CATHOLIC HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "San Juan Capistrano",
+        "region": "California",
+        "postcode": "92675",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.5,
+          "lon": -117.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 195183,
+      "number": "59240B",
+      "team_name": "JSerra Lions 2",
+      "robot_name": "",
+      "organization": "JSERRA CATHOLIC HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "San Juan Capistrano",
+        "region": "California",
+        "postcode": "92675",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.5,
+          "lon": -117.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199868,
+      "number": "59240C",
+      "team_name": "JSerra Lions 3",
+      "robot_name": "",
+      "organization": "JSERRA CATHOLIC HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "San Juan Capistrano",
+        "region": "California",
+        "postcode": "92675",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.5,
+          "lon": -117.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199869,
+      "number": "59240D",
+      "team_name": "JSerra Lions 4",
+      "robot_name": "",
+      "organization": "JSERRA CATHOLIC HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "San Juan Capistrano",
+        "region": "California",
+        "postcode": "92675",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.5,
+          "lon": -117.7
         }
       },
       "registered": true,

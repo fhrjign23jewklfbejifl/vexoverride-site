@@ -2,16 +2,260 @@
   "meta": {
     "current_page": 1,
     "first_page_url": "https://events.vex.com/api/v2/events/64701/teams?page=1",
-    "from": null,
+    "from": 1,
     "last_page": 1,
     "last_page_url": "https://events.vex.com/api/v2/events/64701/teams?page=1",
     "next_page_url": null,
     "path": "https://events.vex.com/api/v2/events/64701/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": null,
-    "total": 0,
+    "to": 9,
+    "total": 9,
     "merged_pages": 1
   },
-  "data": []
+  "data": [
+    {
+      "id": 26242,
+      "number": "3887A",
+      "team_name": "FCS Paladins 3887A",
+      "robot_name": "",
+      "organization": "FELLOWSHIP CHRISTIAN SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Roswell",
+        "region": "Georgia",
+        "postcode": "30075",
+        "country": "United States",
+        "coordinates": {
+          "lat": 34,
+          "lon": -84.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 26245,
+      "number": "3887B",
+      "team_name": "FCS Paladins B",
+      "robot_name": "",
+      "organization": "Fellowship Christian School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Roswell",
+        "region": "Georgia",
+        "postcode": "30075",
+        "country": "United States",
+        "coordinates": {
+          "lat": 34,
+          "lon": -84.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 26248,
+      "number": "3887C",
+      "team_name": "FCS Paladins 3887C",
+      "robot_name": "",
+      "organization": "FELLOWSHIP CHRISTIAN SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Roswell",
+        "region": "Georgia",
+        "postcode": "30075",
+        "country": "United States",
+        "coordinates": {
+          "lat": 34,
+          "lon": -84.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 156089,
+      "number": "24931A",
+      "team_name": "Bazinga STEMBots",
+      "robot_name": "",
+      "organization": "LANIER MIDDLE SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Sugar Hill",
+        "region": "Georgia",
+        "postcode": "30518",
+        "country": "United States",
+        "coordinates": {
+          "lat": 34.1,
+          "lon": -84.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 173966,
+      "number": "24931B",
+      "team_name": "Quantum STEMBots",
+      "robot_name": "",
+      "organization": "LANIER MIDDLE SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Sugar Hill",
+        "region": "Georgia",
+        "postcode": "30518",
+        "country": "United States",
+        "coordinates": {
+          "lat": 34.1,
+          "lon": -84.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 187176,
+      "number": "24931C",
+      "team_name": "STEMBots",
+      "robot_name": "",
+      "organization": "LANIER MIDDLE SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Sugar Hill",
+        "region": "Georgia",
+        "postcode": "30518",
+        "country": "United States",
+        "coordinates": {
+          "lat": 34.1,
+          "lon": -84.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 197574,
+      "number": "31408P",
+      "team_name": "3.141592653589793238462643383279502884197169399375",
+      "robot_name": "π",
+      "organization": "PiBots",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Suwanee",
+        "region": "Georgia",
+        "postcode": "30024-6760",
+        "country": "United States",
+        "coordinates": {
+          "lat": 34.1,
+          "lon": -84.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 155226,
+      "number": "93000A",
+      "team_name": "Sweetwater Patriots A",
+      "robot_name": "",
+      "organization": "SWEETWATER MIDDLE SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Lawrenceville",
+        "region": "Georgia",
+        "postcode": "30044",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.9,
+          "lon": -84.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 162568,
+      "number": "93000B",
+      "team_name": "Sweetwater Patriots B",
+      "robot_name": "",
+      "organization": "SWEETWATER MIDDLE SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Lawrenceville",
+        "region": "Georgia",
+        "postcode": "30044",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.9,
+          "lon": -84.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    }
+  ]
 }

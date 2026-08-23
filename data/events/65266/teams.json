@@ -2,16 +2,206 @@
   "meta": {
     "current_page": 1,
     "first_page_url": "https://events.vex.com/api/v2/events/65266/teams?page=1",
-    "from": null,
+    "from": 1,
     "last_page": 1,
     "last_page_url": "https://events.vex.com/api/v2/events/65266/teams?page=1",
     "next_page_url": null,
     "path": "https://events.vex.com/api/v2/events/65266/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": null,
-    "total": 0,
+    "to": 7,
+    "total": 7,
     "merged_pages": 1
   },
-  "data": []
+  "data": [
+    {
+      "id": 26242,
+      "number": "3887A",
+      "team_name": "FCS Paladins 3887A",
+      "robot_name": "",
+      "organization": "FELLOWSHIP CHRISTIAN SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Roswell",
+        "region": "Georgia",
+        "postcode": "30075",
+        "country": "United States",
+        "coordinates": {
+          "lat": 34,
+          "lon": -84.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 26245,
+      "number": "3887B",
+      "team_name": "FCS Paladins B",
+      "robot_name": "",
+      "organization": "Fellowship Christian School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Roswell",
+        "region": "Georgia",
+        "postcode": "30075",
+        "country": "United States",
+        "coordinates": {
+          "lat": 34,
+          "lon": -84.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 26248,
+      "number": "3887C",
+      "team_name": "FCS Paladins 3887C",
+      "robot_name": "",
+      "organization": "FELLOWSHIP CHRISTIAN SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Roswell",
+        "region": "Georgia",
+        "postcode": "30075",
+        "country": "United States",
+        "coordinates": {
+          "lat": 34,
+          "lon": -84.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 197574,
+      "number": "31408P",
+      "team_name": "3.141592653589793238462643383279502884197169399375",
+      "robot_name": "π",
+      "organization": "PiBots",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Suwanee",
+        "region": "Georgia",
+        "postcode": "30024-6760",
+        "country": "United States",
+        "coordinates": {
+          "lat": 34.1,
+          "lon": -84.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 130674,
+      "number": "89227B",
+      "team_name": "Ramen Riders",
+      "robot_name": "",
+      "organization": "RIDGELAND HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Rossville",
+        "region": "Georgia",
+        "postcode": "30741",
+        "country": "United States",
+        "coordinates": {
+          "lat": 34.9,
+          "lon": -85.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 155120,
+      "number": "89227D",
+      "team_name": "1979",
+      "robot_name": "",
+      "organization": "RIDGELAND HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Rossville",
+        "region": "Georgia",
+        "postcode": "30741",
+        "country": "United States",
+        "coordinates": {
+          "lat": 34.9,
+          "lon": -85.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 185044,
+      "number": "89227X",
+      "team_name": "RemiX",
+      "robot_name": "",
+      "organization": "RIDGELAND HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Rossville",
+        "region": "Georgia",
+        "postcode": "30741",
+        "country": "United States",
+        "coordinates": {
+          "lat": 34.9,
+          "lon": -85.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
 }

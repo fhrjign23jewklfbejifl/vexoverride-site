@@ -9,8 +9,8 @@
     "path": "https://events.vex.com/api/v2/events/64359/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": 104,
-    "total": 104,
+    "to": 105,
+    "total": 105,
     "merged_pages": 1
   },
   "data": [
@@ -288,7 +288,7 @@
       "id": 186180,
       "number": "471B",
       "team_name": "Moonshot",
-      "robot_name": "",
+      "robot_name": "BB-8",
       "organization": "robotics is ez",
       "location": {
         "venue": null,
@@ -1853,7 +1853,7 @@
     {
       "id": 186165,
       "number": "7410A",
-      "team_name": "֍Donut Steel֍",
+      "team_name": "Donut Steel",
       "robot_name": "Bob",
       "organization": " Arsenal Technical High School",
       "location": {
@@ -1880,7 +1880,7 @@
     {
       "id": 51202,
       "number": "7410D",
-      "team_name": "Đł₴₥₳₦₮ⱠɆĐ",
+      "team_name": "Dismantled",
       "robot_name": "",
       "organization": " Arsenal Technical High School",
       "location": {
@@ -1907,7 +1907,7 @@
     {
       "id": 186168,
       "number": "7410K",
-      "team_name": "(ノಠ益ಠ)ノ彡┻━┻",
+      "team_name": "Noble Requiem",
       "robot_name": "",
       "organization": " Arsenal Technical High School",
       "location": {
@@ -2421,7 +2421,7 @@
       "id": 121876,
       "number": "12914X",
       "team_name": "OmegaBotz",
-      "robot_name": "Omega.5",
+      "robot_name": "Omega^5",
       "organization": "Omega Robotics Corp.",
       "location": {
         "venue": null,
@@ -2542,6 +2542,33 @@
         "coordinates": {
           "lat": 39.7,
           "lon": -85.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 186883,
+      "number": "26989Z",
+      "team_name": "RoboKnights",
+      "robot_name": "R.O.B.",
+      "organization": "Traders Point Christian High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Whitestown ",
+        "region": "Indiana",
+        "postcode": "46075",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39.9,
+          "lon": -86.4
         }
       },
       "registered": true,

@@ -9,11 +9,146 @@
     "path": "https://events.vex.com/api/v2/events/64634/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": 5,
-    "total": 5,
+    "to": 10,
+    "total": 10,
     "merged_pages": 1
   },
   "data": [
+    {
+      "id": 165655,
+      "number": "9231A",
+      "team_name": "Aiglon College",
+      "robot_name": "9231A",
+      "organization": "Aiglon College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Chesieres",
+        "region": "Waadt",
+        "postcode": "1885",
+        "country": "Switzerland",
+        "coordinates": {
+          "lat": 46.3,
+          "lon": 7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 177746,
+      "number": "9231W",
+      "team_name": "Aiglon College",
+      "robot_name": "9231W",
+      "organization": "Aiglon College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Chesieres",
+        "region": "Waadt",
+        "postcode": "1885",
+        "country": "Switzerland",
+        "coordinates": {
+          "lat": 46.3,
+          "lon": 7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 165657,
+      "number": "9231X",
+      "team_name": "Aiglon College",
+      "robot_name": "",
+      "organization": "Aiglon College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Chesieres",
+        "region": "Waadt",
+        "postcode": "1885",
+        "country": "Switzerland",
+        "coordinates": {
+          "lat": 46.3,
+          "lon": 7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 177745,
+      "number": "9231Y",
+      "team_name": "Aiglon College",
+      "robot_name": "9231Y",
+      "organization": "Aiglon College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Chesieres",
+        "region": "Waadt",
+        "postcode": "1885",
+        "country": "Switzerland",
+        "coordinates": {
+          "lat": 46.3,
+          "lon": 7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 177744,
+      "number": "9231Z",
+      "team_name": "Aiglon College",
+      "robot_name": "9231Z",
+      "organization": "Aiglon College",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Chesieres",
+        "region": "Waadt",
+        "postcode": "1885",
+        "country": "Switzerland",
+        "coordinates": {
+          "lat": 46.3,
+          "lon": 7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
     {
       "id": 139765,
       "number": "41510C",

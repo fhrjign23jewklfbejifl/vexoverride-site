@@ -9,11 +9,146 @@
     "path": "https://events.vex.com/api/v2/events/64343/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": 4,
-    "total": 4,
+    "to": 9,
+    "total": 9,
     "merged_pages": 1
   },
   "data": [
+    {
+      "id": 197615,
+      "number": "31260C",
+      "team_name": "TBA",
+      "robot_name": "",
+      "organization": "Camberwell Grammar School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Canterbury",
+        "region": "Victoria",
+        "postcode": "3126",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.8,
+          "lon": 145.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 197614,
+      "number": "31260R",
+      "team_name": "Running robbers",
+      "robot_name": "",
+      "organization": "Camberwell Grammar School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Canterbury",
+        "region": "Victoria",
+        "postcode": "3126",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.8,
+          "lon": 145.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 185676,
+      "number": "31260S",
+      "team_name": "Strategy",
+      "robot_name": "",
+      "organization": "Camberwell Grammar School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Canterbury",
+        "region": "Victoria",
+        "postcode": "3126",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.8,
+          "lon": 145.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 185675,
+      "number": "31260X",
+      "team_name": "Yellow Panda Microwave",
+      "robot_name": "",
+      "organization": "Camberwell Grammar School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Canterbury",
+        "region": "Victoria",
+        "postcode": "3126",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.8,
+          "lon": 145.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 185673,
+      "number": "31260Y",
+      "team_name": "Underclocked",
+      "robot_name": "",
+      "organization": "Camberwell Grammar School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Canterbury",
+        "region": "Victoria",
+        "postcode": "3126",
+        "country": "Australia",
+        "coordinates": {
+          "lat": -37.8,
+          "lon": 145.1
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
     {
       "id": 185463,
       "number": "68168A",

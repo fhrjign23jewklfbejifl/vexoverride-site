@@ -9,8 +9,8 @@
     "path": "https://events.vex.com/api/v2/events/64380/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": 23,
-    "total": 23,
+    "to": 24,
+    "total": 24,
     "merged_pages": 1
   },
   "data": [
@@ -436,6 +436,33 @@
         "coordinates": {
           "lat": 25,
           "lon": 121.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199809,
+      "number": "68678C",
+      "team_name": "Crazy Hippo",
+      "robot_name": "",
+      "organization": "Fancy Robotics International",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Taipei",
+        "region": null,
+        "postcode": "104",
+        "country": "Chinese Taipei",
+        "coordinates": {
+          "lat": 25.1,
+          "lon": 121.6
         }
       },
       "registered": true,

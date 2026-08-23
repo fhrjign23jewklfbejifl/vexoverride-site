@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65258/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65258/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65258/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 2,
+    "total": 2,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 156429,
+      "number": "13459A",
+      "team_name": "Spark",
+      "robot_name": "Paraguay",
+      "organization": "Paraguay",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Luque",
+        "region": null,
+        "postcode": "667",
+        "country": "Paraguay",
+        "coordinates": {
+          "lat": -25.3,
+          "lon": -57.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 191145,
+      "number": "13459B",
+      "team_name": "Spark",
+      "robot_name": "Paraguay",
+      "organization": "Paraguay",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Luque",
+        "region": null,
+        "postcode": "667",
+        "country": "Paraguay",
+        "coordinates": {
+          "lat": -25.3,
+          "lon": -57.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    }
+  ]
+}

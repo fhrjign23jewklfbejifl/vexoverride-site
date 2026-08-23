@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65550/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65550/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65550/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 12,
+    "total": 12,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 289873,
+      "event": {
+        "id": 65550,
+        "name": "7° Campeonato Internacional de Robótica y habilidades STEM",
+        "code": "VE-V5-27-65550"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289874,
+      "event": {
+        "id": 65550,
+        "name": "7° Campeonato Internacional de Robótica y habilidades STEM",
+        "code": "VE-V5-27-65550"
+      },
+      "order": 61,
+      "title": "Excellence Award - Middle School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289875,
+      "event": {
+        "id": 65550,
+        "name": "7° Campeonato Internacional de Robótica y habilidades STEM",
+        "code": "VE-V5-27-65550"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289876,
+      "event": {
+        "id": 65550,
+        "name": "7° Campeonato Internacional de Robótica y habilidades STEM",
+        "code": "VE-V5-27-65550"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289877,
+      "event": {
+        "id": 65550,
+        "name": "7° Campeonato Internacional de Robótica y habilidades STEM",
+        "code": "VE-V5-27-65550"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289878,
+      "event": {
+        "id": 65550,
+        "name": "7° Campeonato Internacional de Robótica y habilidades STEM",
+        "code": "VE-V5-27-65550"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289879,
+      "event": {
+        "id": 65550,
+        "name": "7° Campeonato Internacional de Robótica y habilidades STEM",
+        "code": "VE-V5-27-65550"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289880,
+      "event": {
+        "id": 65550,
+        "name": "7° Campeonato Internacional de Robótica y habilidades STEM",
+        "code": "VE-V5-27-65550"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289881,
+      "event": {
+        "id": 65550,
+        "name": "7° Campeonato Internacional de Robótica y habilidades STEM",
+        "code": "VE-V5-27-65550"
+      },
+      "order": 75,
+      "title": "Think Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289882,
+      "event": {
+        "id": 65550,
+        "name": "7° Campeonato Internacional de Robótica y habilidades STEM",
+        "code": "VE-V5-27-65550"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289883,
+      "event": {
+        "id": 65550,
+        "name": "7° Campeonato Internacional de Robótica y habilidades STEM",
+        "code": "VE-V5-27-65550"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289884,
+      "event": {
+        "id": 65550,
+        "name": "7° Campeonato Internacional de Robótica y habilidades STEM",
+        "code": "VE-V5-27-65550"
+      },
+      "order": 78,
+      "title": "Create Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

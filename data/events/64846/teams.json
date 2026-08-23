@@ -9,8 +9,8 @@
     "path": "https://events.vex.com/api/v2/events/64846/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": 51,
-    "total": 51,
+    "to": 56,
+    "total": 56,
     "merged_pages": 1
   },
   "data": [
@@ -382,6 +382,33 @@
         "coordinates": {
           "lat": 30.2,
           "lon": -93.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 184830,
+      "number": "2072V",
+      "team_name": "Vulcan",
+      "robot_name": "",
+      "organization": "Enginotic 6 Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Montclair",
+        "region": "Virginia",
+        "postcode": "22025",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.6,
+          "lon": -77.3
         }
       },
       "registered": true,
@@ -990,7 +1017,7 @@
       "id": 121876,
       "number": "12914X",
       "team_name": "OmegaBotz",
-      "robot_name": "Omega.5",
+      "robot_name": "Omega^5",
       "organization": "Omega Robotics Corp.",
       "location": {
         "venue": null,
@@ -1122,6 +1149,60 @@
       "grade": "High School"
     },
     {
+      "id": 123419,
+      "number": "37215A",
+      "team_name": "CPA - Cobalt",
+      "robot_name": "",
+      "organization": "CHRIST PRESBYTERIAN ACADEMY",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Nashville",
+        "region": "Tennessee",
+        "postcode": "37215",
+        "country": "United States",
+        "coordinates": {
+          "lat": 36,
+          "lon": -86.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 175954,
+      "number": "37215B",
+      "team_name": "CPA - Hooligans",
+      "robot_name": "",
+      "organization": "CHRIST PRESBYTERIAN ACADEMY",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Nashville",
+        "region": "Tennessee",
+        "postcode": "37215",
+        "country": "United States",
+        "coordinates": {
+          "lat": 36,
+          "lon": -86.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
       "id": 102282,
       "number": "56448A",
       "team_name": "Apollo",
@@ -1219,6 +1300,33 @@
         "coordinates": {
           "lat": 33.4,
           "lon": -111.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 187026,
+      "number": "72202Z",
+      "team_name": "QSE Robotics",
+      "robot_name": "Quantum Singularity Enforcer",
+      "organization": "CENTRAL HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Little Rock",
+        "region": "Arkansas",
+        "postcode": "72202",
+        "country": "United States",
+        "coordinates": {
+          "lat": 34.7,
+          "lon": -92.3
         }
       },
       "registered": true,
@@ -1340,7 +1448,7 @@
     {
       "id": 64359,
       "number": "97934U",
-      "team_name": "RoboPanthers - Up the Ante",
+      "team_name": "RoboPanthers - Tachyon",
       "robot_name": "",
       "organization": "FRANKLIN ROAD ACADEMY",
       "location": {
@@ -1381,6 +1489,33 @@
         "coordinates": {
           "lat": 36,
           "lon": -86.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 191243,
+      "number": "99905G",
+      "team_name": "NAT 20 RoboGryphs",
+      "robot_name": "",
+      "organization": "ST GEORGE'S INDEPENDENT SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Collierville",
+        "region": "Tennessee",
+        "postcode": "38017",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.1,
+          "lon": -89.7
         }
       },
       "registered": true,

@@ -9,8 +9,8 @@
     "path": "https://events.vex.com/api/v2/events/64630/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": 19,
-    "total": 19,
+    "to": 20,
+    "total": 20,
     "merged_pages": 1
   },
   "data": [
@@ -391,6 +391,33 @@
         "code": "V5RC"
       },
       "grade": "High School"
+    },
+    {
+      "id": 196996,
+      "number": "54080A",
+      "team_name": "ツ",
+      "robot_name": "that one",
+      "organization": "Private",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Redwood City",
+        "region": "California",
+        "postcode": "94065-1111",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.5,
+          "lon": -122.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
     },
     {
       "id": 190109,

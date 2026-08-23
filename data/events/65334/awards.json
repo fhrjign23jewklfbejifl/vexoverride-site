@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65334/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65334/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65334/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 7,
+    "total": 7,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 288429,
+      "event": {
+        "id": 65334,
+        "name": "Mt. Vernon High School Qualifier @ Energy Fieldhouse!: VEX V5 Robotics Competition Override High School Teams",
+        "code": "RE-V5RC-26-5334"
+      },
+      "order": 60,
+      "title": "Excellence Award - High School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288430,
+      "event": {
+        "id": 65334,
+        "name": "Mt. Vernon High School Qualifier @ Energy Fieldhouse!: VEX V5 Robotics Competition Override High School Teams",
+        "code": "RE-V5RC-26-5334"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288431,
+      "event": {
+        "id": 65334,
+        "name": "Mt. Vernon High School Qualifier @ Energy Fieldhouse!: VEX V5 Robotics Competition Override High School Teams",
+        "code": "RE-V5RC-26-5334"
+      },
+      "order": 64,
+      "title": "Tournament Finalists (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288432,
+      "event": {
+        "id": 65334,
+        "name": "Mt. Vernon High School Qualifier @ Energy Fieldhouse!: VEX V5 Robotics Competition Override High School Teams",
+        "code": "RE-V5RC-26-5334"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288433,
+      "event": {
+        "id": 65334,
+        "name": "Mt. Vernon High School Qualifier @ Energy Fieldhouse!: VEX V5 Robotics Competition Override High School Teams",
+        "code": "RE-V5RC-26-5334"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288434,
+      "event": {
+        "id": 65334,
+        "name": "Mt. Vernon High School Qualifier @ Energy Fieldhouse!: VEX V5 Robotics Competition Override High School Teams",
+        "code": "RE-V5RC-26-5334"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 288435,
+      "event": {
+        "id": 65334,
+        "name": "Mt. Vernon High School Qualifier @ Energy Fieldhouse!: VEX V5 Robotics Competition Override High School Teams",
+        "code": "RE-V5RC-26-5334"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

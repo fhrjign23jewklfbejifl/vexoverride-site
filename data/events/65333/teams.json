@@ -9,11 +9,92 @@
     "path": "https://events.vex.com/api/v2/events/65333/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": 15,
-    "total": 15,
+    "to": 20,
+    "total": 20,
     "merged_pages": 1
   },
   "data": [
+    {
+      "id": 9631,
+      "number": "1483B",
+      "team_name": "B.U.G.",
+      "robot_name": "B.U.G.",
+      "organization": "Trinity Lutheran High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Seymour",
+        "region": "Indiana",
+        "postcode": "47274",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39,
+          "lon": -85.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 19138,
+      "number": "1483C",
+      "team_name": "Carbon Fiber",
+      "robot_name": "Carbon Fiber",
+      "organization": "Trinity Lutheran High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Seymour",
+        "region": "Indiana",
+        "postcode": "47274",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39,
+          "lon": -85.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199935,
+      "number": "1483M",
+      "team_name": "Megazord",
+      "robot_name": "Megazord",
+      "organization": "Trinity Lutheran High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Seymour",
+        "region": "Indiana",
+        "postcode": "47274",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39,
+          "lon": -85.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
     {
       "id": 169697,
       "number": "2393S",
@@ -177,6 +258,33 @@
       "grade": "High School"
     },
     {
+      "id": 58219,
+      "number": "7701S",
+      "team_name": "Sunburn",
+      "robot_name": "",
+      "organization": "Zionsville Community High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Zionsville",
+        "region": "Indiana",
+        "postcode": "46077",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40,
+          "lon": -86.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
       "id": 169694,
       "number": "30013A",
       "team_name": "Seymour Middle School - Crescendo",
@@ -235,6 +343,33 @@
       "number": "31330A",
       "team_name": "Midwest Princesses",
       "robot_name": "",
+      "organization": "SEYMOUR SENIOR HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Seymour",
+        "region": "Indiana",
+        "postcode": "47274",
+        "country": "United States",
+        "coordinates": {
+          "lat": 39,
+          "lon": -85.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 144639,
+      "number": "31330B",
+      "team_name": "Seymour High School - Rhinobots",
+      "robot_name": "Rhino",
       "organization": "SEYMOUR SENIOR HIGH SCHOOL",
       "location": {
         "venue": null,

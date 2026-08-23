@@ -9,11 +9,146 @@
     "path": "https://events.vex.com/api/v2/events/64213/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": 4,
-    "total": 4,
+    "to": 9,
+    "total": 9,
     "merged_pages": 1
   },
   "data": [
+    {
+      "id": 106988,
+      "number": "7619A",
+      "team_name": "HHS A Team",
+      "robot_name": "Robot A",
+      "organization": "HIGHLAND HIGH",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bakersfield",
+        "region": "California",
+        "postcode": "93306",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.4,
+          "lon": -118.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 62584,
+      "number": "7619C",
+      "team_name": "The Leftovers",
+      "robot_name": "The Clanker",
+      "organization": "HIGHLAND HIGH",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bakersfield",
+        "region": "California",
+        "postcode": "93306",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.4,
+          "lon": -118.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 184637,
+      "number": "7619T",
+      "team_name": "In Theory",
+      "robot_name": "Tall Boi",
+      "organization": "HIGHLAND HIGH",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bakersfield",
+        "region": "California",
+        "postcode": "93306",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.4,
+          "lon": -118.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 172822,
+      "number": "7619V",
+      "team_name": "Strata",
+      "robot_name": "Botto Octavius",
+      "organization": "HIGHLAND HIGH",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bakersfield",
+        "region": "California",
+        "postcode": "93306",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.4,
+          "lon": -118.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 153195,
+      "number": "7619W",
+      "team_name": "Steven Incorporated",
+      "robot_name": "Steve-O-Matic Mark II",
+      "organization": "HIGHLAND HIGH",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Bakersfield",
+        "region": "California",
+        "postcode": "93306",
+        "country": "United States",
+        "coordinates": {
+          "lat": 35.4,
+          "lon": -118.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
     {
       "id": 98648,
       "number": "49637B",

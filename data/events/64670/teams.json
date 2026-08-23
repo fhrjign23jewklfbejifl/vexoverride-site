@@ -9,8 +9,8 @@
     "path": "https://events.vex.com/api/v2/events/64670/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": 1,
-    "total": 1,
+    "to": 2,
+    "total": 2,
     "merged_pages": 1
   },
   "data": [
@@ -31,6 +31,33 @@
         "coordinates": {
           "lat": 35.9,
           "lon": -86.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 130559,
+      "number": "89227A",
+      "team_name": "A Team",
+      "robot_name": "",
+      "organization": "RIDGELAND HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Rossville",
+        "region": "Georgia",
+        "postcode": "30741",
+        "country": "United States",
+        "coordinates": {
+          "lat": 34.9,
+          "lon": -85.3
         }
       },
       "registered": true,

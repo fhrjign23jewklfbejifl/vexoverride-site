@@ -3,7 +3,7 @@
     "id": 64279,
     "sku": "RE-V5RC-26-4279",
     "name": "2026 Sweetwater UHSD MS V5 League (Invitational Event): VEX V5 Robotics Competition : Override",
-    "start": "2026-09-12T00:00:00-04:00",
+    "start": "2026-10-10T00:00:00-04:00",
     "end": "2027-01-18T00:00:00-05:00",
     "season": {
       "id": 204,
@@ -16,32 +16,19 @@
       "code": "V5RC"
     },
     "location": {
-      "venue": "Eastlake High School",
-      "address_1": "1250 Olympic Parkway",
+      "venue": "Olympian High School",
+      "address_1": "1925 Magdalena",
       "address_2": null,
       "city": "Chula Vista",
       "region": "California",
-      "postcode": "91313",
+      "postcode": "91913",
       "country": "United States",
       "coordinates": {
-        "lat": 32.62037,
-        "lon": -116.990393
+        "lat": 32.608358,
+        "lon": -116.974378
       }
     },
     "locations": {
-      "2026-09-12": {
-        "venue": "Eastlake High School",
-        "address_1": "1250 Olympic Parkway",
-        "address_2": null,
-        "city": "Chula Vista",
-        "region": "California",
-        "postcode": "91313",
-        "country": "United States",
-        "coordinates": {
-          "lat": 32.62037,
-          "lon": -116.990393
-        }
-      },
       "2026-10-10": {
         "venue": "Olympian High School",
         "address_1": "1925 Magdalena",

@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65538,
+    "sku": "VE-V5-26-65538",
+    "name": "Louisville Slugger Signature Event (Middle School): Downtown Louisville Kentucky",
+    "start": "2026-12-06T00:00:00-05:00",
+    "end": "2026-12-07T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Louisville International Convention Center",
+      "address_1": "221 South 4th Street",
+      "address_2": null,
+      "city": "Louisville",
+      "region": "Kentucky",
+      "postcode": "40202",
+      "country": "United States",
+      "coordinates": {
+        "lat": 38.254226,
+        "lon": -85.756625
+      }
+    },
+    "locations": {
+      "2026-12-06": {
+        "venue": "Louisville International Convention Center",
+        "address_1": "221 South 4th Street",
+        "address_2": null,
+        "city": "Louisville",
+        "region": "Kentucky",
+        "postcode": "40202",
+        "country": "United States",
+        "coordinates": {
+          "lat": 38.254226,
+          "lon": -85.756625
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Signature",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

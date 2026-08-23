@@ -9,8 +9,8 @@
     "path": "https://events.vex.com/api/v2/events/64646/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": 4,
-    "total": 4,
+    "to": 5,
+    "total": 5,
     "merged_pages": 1
   },
   "data": [
@@ -58,6 +58,33 @@
         "coordinates": {
           "lat": 37.5,
           "lon": -122.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 184927,
+      "number": "10606A",
+      "team_name": "10th Gear",
+      "robot_name": "",
+      "organization": "10th Gear",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "San Jose",
+        "region": "California",
+        "postcode": "95128",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.3,
+          "lon": -121.9
         }
       },
       "registered": true,

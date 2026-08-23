@@ -1,6 +1,13 @@
 {
   "eventId": 64653,
-  "updatedAt": "2026-08-18T17:14:04.819Z",
+  "updatedAt": "2026-08-23T14:03:43.896Z",
   "source": "browser-side events.vex.com collector",
+  "eventRegion": {
+    "id": null,
+    "name": "Maryland",
+    "source": "listing",
+    "eventCode": "RE-V5RC-26-4653"
+  },
+  "officialRegionMapVersion": "2026-08-22T13:25:26.679Z",
   "status": "ok"
 }

@@ -2,16 +2,1610 @@
   "meta": {
     "current_page": 1,
     "first_page_url": "https://events.vex.com/api/v2/events/64487/teams?page=1",
-    "from": null,
+    "from": 1,
     "last_page": 1,
     "last_page_url": "https://events.vex.com/api/v2/events/64487/teams?page=1",
     "next_page_url": null,
     "path": "https://events.vex.com/api/v2/events/64487/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": null,
-    "total": 0,
+    "to": 59,
+    "total": 59,
     "merged_pages": 1
   },
-  "data": []
+  "data": [
+    {
+      "id": 186633,
+      "number": "61B",
+      "team_name": "北京市第十九中学",
+      "robot_name": "",
+      "organization": "北京市第十九中学",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Beijing",
+        "region": "Beijing",
+        "postcode": "100089",
+        "country": "China",
+        "coordinates": {
+          "lat": 40,
+          "lon": 116.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 138871,
+      "number": "222A",
+      "team_name": "222A",
+      "robot_name": "",
+      "organization": "北京市海淀区科技活动服务协会",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "北京",
+        "region": "Beijing",
+        "postcode": "123",
+        "country": "China",
+        "coordinates": {
+          "lat": 40,
+          "lon": 116.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 198249,
+      "number": "222B",
+      "team_name": "北京市海淀区科技活动服务协会B队",
+      "robot_name": "",
+      "organization": "北京市海淀区科技活动服务协会",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "北京",
+        "region": "Beijing",
+        "postcode": "123",
+        "country": "China",
+        "coordinates": {
+          "lat": 40,
+          "lon": 116.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 171019,
+      "number": "2566C",
+      "team_name": "STEMSTAR-Big Shaq",
+      "robot_name": "",
+      "organization": "上海立爱教育科技有限公司",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "上海",
+        "region": "Shanghai",
+        "postcode": "20000",
+        "country": "China",
+        "coordinates": {
+          "lat": 31.2,
+          "lon": 121.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 149503,
+      "number": "2731C",
+      "team_name": "Joymate VEX",
+      "robot_name": "",
+      "organization": "Hangzhou Dipont School of Arts and Science",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "杭州市",
+        "region": "Zhejiang",
+        "postcode": "310000",
+        "country": "China",
+        "coordinates": {
+          "lat": 30.3,
+          "lon": 120.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 159933,
+      "number": "4275H",
+      "team_name": "4275 Hero",
+      "robot_name": "",
+      "organization": "CMA Choi Cheung Kok Secondary School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "New Territories",
+        "region": null,
+        "postcode": "000000",
+        "country": "Hong Kong, China",
+        "coordinates": {
+          "lat": 22.4,
+          "lon": 114
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 119774,
+      "number": "4413A",
+      "team_name": "WZ-A",
+      "robot_name": "",
+      "organization": "Guangzhou No.5 Middle School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Guangzhou",
+        "region": "Guangdong",
+        "postcode": "nil",
+        "country": "China",
+        "coordinates": {
+          "lat": 23.1,
+          "lon": 113.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 192412,
+      "number": "5218B",
+      "team_name": "北京市海淀未来学校",
+      "robot_name": "",
+      "organization": "北京市海淀未来学校",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Beijing",
+        "region": "Beijing",
+        "postcode": "123456",
+        "country": "China",
+        "coordinates": {
+          "lat": 39.9,
+          "lon": 116.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 48814,
+      "number": "7671C",
+      "team_name": "NewCenturySchool Team C",
+      "robot_name": "Leopard",
+      "organization": "Quzhou New Century School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Quzhou",
+        "region": "Zhejiang",
+        "postcode": "324000",
+        "country": "China",
+        "coordinates": {
+          "lat": 28.9,
+          "lon": 118.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 163870,
+      "number": "7756Y",
+      "team_name": "7756Y",
+      "robot_name": "",
+      "organization": "北京市陈经纶中学分校",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Beijing",
+        "region": "Beijing",
+        "postcode": "NIL",
+        "country": "China",
+        "coordinates": {
+          "lat": 40,
+          "lon": 116.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 48856,
+      "number": "7995A",
+      "team_name": "Beijing Eleven Quzhou Experimental School",
+      "robot_name": "dog",
+      "organization": "Beijing Eleven Quzhou Experimental School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Quzhou",
+        "region": "Zhejiang",
+        "postcode": "324000",
+        "country": "China",
+        "coordinates": {
+          "lat": 28.9,
+          "lon": 118.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 8788,
+      "number": "8192A",
+      "team_name": "Shanghai Huangpu A",
+      "robot_name": "SHHPTAC-A",
+      "organization": "Shanghai Huangpu Teenagers S&T Activity Center",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Shanghai",
+        "region": "Shanghai",
+        "postcode": "200020",
+        "country": "China",
+        "coordinates": {
+          "lat": 31.2,
+          "lon": 121.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 19621,
+      "number": "8192C",
+      "team_name": "Shanghai Huangpu C",
+      "robot_name": "SHHPTAC-C",
+      "organization": "Shanghai Huangpu Teenagers S&T Activity Center",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Shanghai",
+        "region": "Shanghai",
+        "postcode": "200020",
+        "country": "China",
+        "coordinates": {
+          "lat": 31.2,
+          "lon": 121.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 8800,
+      "number": "8193A",
+      "team_name": "Shanghai Yongchang  A",
+      "robot_name": "Yongchang A",
+      "organization": "Shanghai Yongchang Private School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Shanghai",
+        "region": "Shanghai",
+        "postcode": "200020",
+        "country": "China",
+        "coordinates": {
+          "lat": 31.2,
+          "lon": 121.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 39757,
+      "number": "8193C",
+      "team_name": "Shanghai Yongchang C",
+      "robot_name": "Yongchang C",
+      "organization": "Shanghai Yongchang Private School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Shanghai",
+        "region": "Shanghai",
+        "postcode": "200020",
+        "country": "China",
+        "coordinates": {
+          "lat": 31.2,
+          "lon": 121.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 8860,
+      "number": "8223A",
+      "team_name": "Beijing No.80 Middle School",
+      "robot_name": "",
+      "organization": "Beijing No.80 High School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Beijing",
+        "region": "Beijing",
+        "postcode": "100102",
+        "country": "China",
+        "coordinates": {
+          "lat": 40,
+          "lon": 116.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 198084,
+      "number": "8223W",
+      "team_name": " Beijing No.80 Middle School",
+      "robot_name": "",
+      "organization": "Beijing No.80 Middle school",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Beijing",
+        "region": "Beijing",
+        "postcode": "100102",
+        "country": "China",
+        "coordinates": {
+          "lat": 39.9,
+          "lon": 116.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 185969,
+      "number": "8796S",
+      "team_name": "Powerful Team",
+      "robot_name": "Powerful Robot",
+      "organization": "杭州小手宇宙信息咨询有限公司",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Hangzhou City",
+        "region": "Zhejiang",
+        "postcode": "310000",
+        "country": "China",
+        "coordinates": {
+          "lat": 30.2,
+          "lon": 120.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 56591,
+      "number": "8982A",
+      "team_name": "NewCenturySchool Team A",
+      "robot_name": "boboji",
+      "organization": "New Century School.Quzhou",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Quzhou",
+        "region": "Zhejiang",
+        "postcode": "324000",
+        "country": "China",
+        "coordinates": {
+          "lat": 28.9,
+          "lon": 118.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 56592,
+      "number": "8982B",
+      "team_name": "NewCenturySchool Team B",
+      "robot_name": "labubu",
+      "organization": "New Century School.Quzhou",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Quzhou",
+        "region": "Zhejiang",
+        "postcode": "nil",
+        "country": "China",
+        "coordinates": {
+          "lat": 28.9,
+          "lon": 118.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 161108,
+      "number": "10017A",
+      "team_name": "中国杭州低碳科技馆",
+      "robot_name": "",
+      "organization": "中国杭州低碳科技馆",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "杭州",
+        "region": "Zhejiang",
+        "postcode": "310000",
+        "country": "China",
+        "coordinates": {
+          "lat": 30.2,
+          "lon": 120.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 199215,
+      "number": "10017S",
+      "team_name": "中国杭州低碳科技馆",
+      "robot_name": "",
+      "organization": "中国杭州低碳科技馆",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "杭州",
+        "region": "Zhejiang",
+        "postcode": "310000",
+        "country": "China",
+        "coordinates": {
+          "lat": 30.2,
+          "lon": 120.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 199214,
+      "number": "10017X",
+      "team_name": "中国杭州低碳科技馆",
+      "robot_name": "",
+      "organization": "中国杭州低碳科技馆",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "杭州",
+        "region": "Zhejiang",
+        "postcode": "310000",
+        "country": "China",
+        "coordinates": {
+          "lat": 30.2,
+          "lon": 120.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 197660,
+      "number": "10057D",
+      "team_name": "北京市第五十七中学",
+      "robot_name": "10057D",
+      "organization": "北京市第五十七中学",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "北京市海淀区",
+        "region": "Beijing",
+        "postcode": "100038",
+        "country": "China",
+        "coordinates": {
+          "lat": 39.9,
+          "lon": 116.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 198026,
+      "number": "10080A",
+      "team_name": "HZ.Club",
+      "robot_name": "",
+      "organization": "宁波浩泽科技培训有限公司",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Ningbo",
+        "region": "Zhejiang",
+        "postcode": "315174",
+        "country": "China",
+        "coordinates": {
+          "lat": 29.9,
+          "lon": 121.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 198327,
+      "number": "13191A",
+      "team_name": "北京市海淀区稻香湖学校",
+      "robot_name": "",
+      "organization": "北京市海淀区稻香湖学校",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Beijing",
+        "region": "Beijing",
+        "postcode": "100089",
+        "country": "China",
+        "coordinates": {
+          "lat": 40,
+          "lon": 116.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 196579,
+      "number": "18559A",
+      "team_name": "金地勇往直前战队",
+      "robot_name": "",
+      "organization": "Jiangsu youvector Technology Co., Ltd",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "南京市",
+        "region": "Jiangsu",
+        "postcode": "210000",
+        "country": "China",
+        "coordinates": {
+          "lat": 32.1,
+          "lon": 118.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 140357,
+      "number": "18618A",
+      "team_name": "智程IPC-A",
+      "robot_name": "IPC",
+      "organization": "温州市龙湾斯迈尔教育科技有限公司（ 智程IPC）",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "温州",
+        "region": "Zhejiang",
+        "postcode": "325000",
+        "country": "China",
+        "coordinates": {
+          "lat": 28,
+          "lon": 120.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 171959,
+      "number": "18618B",
+      "team_name": "智程IPC-B",
+      "robot_name": "IPC",
+      "organization": "温州市龙湾斯迈尔教育科技有限公司（ 智程IPC）",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "温州",
+        "region": "Zhejiang",
+        "postcode": "325000",
+        "country": "China",
+        "coordinates": {
+          "lat": 28,
+          "lon": 120.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 171960,
+      "number": "18618Y",
+      "team_name": "智程IPC-Y",
+      "robot_name": "IPC",
+      "organization": "温州市龙湾斯迈尔教育科技有限公司（ 智程IPC）",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "温州",
+        "region": "Zhejiang",
+        "postcode": "325000",
+        "country": "China",
+        "coordinates": {
+          "lat": 28,
+          "lon": 120.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 199134,
+      "number": "20122J",
+      "team_name": "小手宇宙机器人",
+      "robot_name": "",
+      "organization": "杭州小手宇宙信息咨询有限公司",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Hangzhou",
+        "region": "Zhejiang",
+        "postcode": "310000",
+        "country": "China",
+        "coordinates": {
+          "lat": 30.2,
+          "lon": 120.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 152407,
+      "number": "20236A",
+      "team_name": "杭州二中白马湖教育集团",
+      "robot_name": "",
+      "organization": "杭州二中白马湖教育集团",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "杭州",
+        "region": "Zhejiang",
+        "postcode": "310000",
+        "country": "China",
+        "coordinates": {
+          "lat": 30.2,
+          "lon": 120.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 198277,
+      "number": "20236Z",
+      "team_name": "杭州二中白马湖教育集团",
+      "robot_name": "",
+      "organization": "杭州二中白马湖教育集团",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "杭州",
+        "region": "Zhejiang",
+        "postcode": "310000",
+        "country": "China",
+        "coordinates": {
+          "lat": 30.2,
+          "lon": 120.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 193386,
+      "number": "25666A",
+      "team_name": "同泽1队",
+      "robot_name": "",
+      "organization": "深圳市南山区第二外国语学校（集团）同泽学校",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "深圳",
+        "region": "Guangdong",
+        "postcode": "518000",
+        "country": "China",
+        "coordinates": {
+          "lat": 22.6,
+          "lon": 113.9
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 186392,
+      "number": "27925B",
+      "team_name": "杭州二中附属第一学校",
+      "robot_name": "",
+      "organization": "杭州二中第一附属学校",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "杭州",
+        "region": "Zhejiang",
+        "postcode": "310000",
+        "country": "China",
+        "coordinates": {
+          "lat": 30.2,
+          "lon": 120.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 192155,
+      "number": "27925C",
+      "team_name": "杭州二中附属第一学校",
+      "robot_name": "",
+      "organization": "杭州二中附属第一学校",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "杭州",
+        "region": "Zhejiang",
+        "postcode": "310000",
+        "country": "China",
+        "coordinates": {
+          "lat": 30.2,
+          "lon": 120.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 198650,
+      "number": "29588Y",
+      "team_name": "Spanner AI",
+      "robot_name": "",
+      "organization": "Spanner AI 重庆两江新区思扳乐科技培训有限公司",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "重庆市",
+        "region": "Chongqing",
+        "postcode": "400060",
+        "country": "China",
+        "coordinates": {
+          "lat": 29.7,
+          "lon": 106.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 198205,
+      "number": "29592Y",
+      "team_name": "重庆市九龙坡区育才实验学校",
+      "robot_name": "",
+      "organization": "重庆市九龙坡区育才实验学校",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "重庆",
+        "region": "Chongqing",
+        "postcode": "400065",
+        "country": "China",
+        "coordinates": {
+          "lat": 29.5,
+          "lon": 106.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 199716,
+      "number": "32135H",
+      "team_name": "AISG2026_H",
+      "robot_name": "",
+      "organization": "American International School of Guangzhou",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Guangzhou",
+        "region": "Guangdong",
+        "postcode": "510000",
+        "country": "China",
+        "coordinates": {
+          "lat": 23.2,
+          "lon": 113.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 70925,
+      "number": "33333A",
+      "team_name": "HeFei  No.48 MS",
+      "robot_name": "",
+      "organization": "Hefei No.48 MS",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Hefei",
+        "region": "Anhui",
+        "postcode": "23001",
+        "country": "China",
+        "coordinates": {
+          "lat": 31.9,
+          "lon": 117.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 71159,
+      "number": "33333B",
+      "team_name": "X-XinHua",
+      "robot_name": "",
+      "organization": "Hefei Xin Hua School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Hefei",
+        "region": "Anhui",
+        "postcode": "23001",
+        "country": "China",
+        "coordinates": {
+          "lat": 31.9,
+          "lon": 117.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 185908,
+      "number": "33783A",
+      "team_name": "上南建平西联队",
+      "robot_name": "",
+      "organization": "上海市上南中学(东校)",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "上海",
+        "region": "Shanghai",
+        "postcode": "200000",
+        "country": "China",
+        "coordinates": {
+          "lat": 31.2,
+          "lon": 121.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 199217,
+      "number": "36927A",
+      "team_name": "浙江省杭州闻涛中学",
+      "robot_name": "",
+      "organization": "浙江省杭州闻涛中学",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Hangzhou",
+        "region": "Zhejiang",
+        "postcode": "310000",
+        "country": "China",
+        "coordinates": {
+          "lat": 30.2,
+          "lon": 120.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 185915,
+      "number": "37688A",
+      "team_name": "德威卢湾一中心联队",
+      "robot_name": "",
+      "organization": "上海德威外籍人员子女学校",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "上海",
+        "region": "Shanghai",
+        "postcode": "200000",
+        "country": "China",
+        "coordinates": {
+          "lat": 31.2,
+          "lon": 121.5
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 117793,
+      "number": "38000A",
+      "team_name": "Hefei No.38 MS A",
+      "robot_name": "",
+      "organization": "Hefei No.38 middle school",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Hefei",
+        "region": "Anhui",
+        "postcode": "23001",
+        "country": "China",
+        "coordinates": {
+          "lat": 31.8,
+          "lon": 117.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 171840,
+      "number": "45000A",
+      "team_name": "HeFei X-Free A",
+      "robot_name": "",
+      "organization": "合肥市第四十五中学",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "合肥",
+        "region": "Anhui",
+        "postcode": "23001",
+        "country": "China",
+        "coordinates": {
+          "lat": 31.9,
+          "lon": 117.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 192074,
+      "number": "46666A",
+      "team_name": "北京市三帆中学",
+      "robot_name": "Sanfan",
+      "organization": "北京市三帆中学（德外校区）",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "北京市",
+        "region": "Beijing",
+        "postcode": "100000",
+        "country": "China",
+        "coordinates": {
+          "lat": 40,
+          "lon": 116.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 186063,
+      "number": "50550A",
+      "team_name": "Holy Sword VEX Team",
+      "robot_name": "Holy Sword Robot",
+      "organization": "Hangzhou Jianlan Middle School",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Hangzhou City",
+        "region": "Zhejiang",
+        "postcode": "310000",
+        "country": "China",
+        "coordinates": {
+          "lat": 30.2,
+          "lon": 120.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 70926,
+      "number": "55555A",
+      "team_name": "HeFei USTC A",
+      "robot_name": "",
+      "organization": "合肥爱骆卜科技培训学校有限公司",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "合肥",
+        "region": "Anhui",
+        "postcode": "230001",
+        "country": "China",
+        "coordinates": {
+          "lat": 31.9,
+          "lon": 117.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 70923,
+      "number": "66666A",
+      "team_name": "Hefei X-Nanmen A",
+      "robot_name": "",
+      "organization": "HF NanMen Primary",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Hefei",
+        "region": "Anhui",
+        "postcode": "23001",
+        "country": "China",
+        "coordinates": {
+          "lat": 31.9,
+          "lon": 117.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 161106,
+      "number": "66797S",
+      "team_name": "浙江省杭州滨和中学",
+      "robot_name": "",
+      "organization": "浙江省杭州滨和中学",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Hangzhou",
+        "region": "Zhejiang",
+        "postcode": "310000",
+        "country": "China",
+        "coordinates": {
+          "lat": 30.2,
+          "lon": 120.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 199559,
+      "number": "71030C",
+      "team_name": "PNP-C",
+      "robot_name": "",
+      "organization": "VEX 学苑-广州市东湖路校区",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "广州",
+        "region": "Guangdong",
+        "postcode": "510000",
+        "country": "China",
+        "coordinates": {
+          "lat": 23.2,
+          "lon": 113.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 186125,
+      "number": "71114X",
+      "team_name": "Changping No.1 High School. Beijing",
+      "robot_name": "",
+      "organization": "北京市昌平区第一中学",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "昌平区",
+        "region": "Beijing",
+        "postcode": "102200",
+        "country": "China",
+        "coordinates": {
+          "lat": 40.2,
+          "lon": 116.2
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 71612,
+      "number": "71717A",
+      "team_name": "X-Mountain Sunside",
+      "robot_name": "",
+      "organization": "阜阳实验中学",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "阜阳",
+        "region": "Anhui",
+        "postcode": "23001",
+        "country": "China",
+        "coordinates": {
+          "lat": 32.9,
+          "lon": 115.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 71613,
+      "number": "71717B",
+      "team_name": "X-Mountain Sunside B",
+      "robot_name": "",
+      "organization": "fuyang No.1 MS",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "阜阳",
+        "region": "Anhui",
+        "postcode": "230001",
+        "country": "China",
+        "coordinates": {
+          "lat": 32.9,
+          "lon": 115.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 170752,
+      "number": "81266A",
+      "team_name": "Lively Tiny Bell",
+      "robot_name": "",
+      "organization": "VEX Academy",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Beijing",
+        "region": "Beijing",
+        "postcode": "100055",
+        "country": "China",
+        "coordinates": {
+          "lat": 39.9,
+          "lon": 116.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 118396,
+      "number": "88613A",
+      "team_name": "MSch Team of The HSch Aff. BNU",
+      "robot_name": "",
+      "organization": "Middle school affiliated to Beijing Normal University",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Beijing",
+        "region": "Beijing",
+        "postcode": "nill",
+        "country": "China",
+        "coordinates": {
+          "lat": 39.9,
+          "lon": 116.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 198445,
+      "number": "89966A",
+      "team_name": "ACE",
+      "robot_name": "ACE",
+      "organization": "ACE",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Shanghai",
+        "region": "Shanghai",
+        "postcode": "200333",
+        "country": "China",
+        "coordinates": {
+          "lat": 31.3,
+          "lon": 121.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
+    {
+      "id": 197760,
+      "number": "90555X",
+      "team_name": "机械风暴",
+      "robot_name": "",
+      "organization": "上海市闵行区莘松中学",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Shanghai",
+        "region": "Shanghai",
+        "postcode": "201101",
+        "country": "China",
+        "coordinates": {
+          "lat": 31.1,
+          "lon": 121.4
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    }
+  ]
 }

@@ -9,8 +9,8 @@
     "path": "https://events.vex.com/api/v2/events/65097/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": 6,
-    "total": 6,
+    "to": 8,
+    "total": 8,
     "merged_pages": 1
   },
   "data": [
@@ -45,6 +45,33 @@
       "id": 126439,
       "number": "1082M",
       "team_name": "Carbonated Potato",
+      "robot_name": "",
+      "organization": "LOVEJOY HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Lucas",
+        "region": "Texas",
+        "postcode": "75002",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.1,
+          "lon": -96.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 154663,
+      "number": "1082N",
+      "team_name": "N",
       "robot_name": "",
       "organization": "LOVEJOY HIGH SCHOOL",
       "location": {
@@ -126,6 +153,33 @@
       "id": 129855,
       "number": "1082U",
       "team_name": "U",
+      "robot_name": "",
+      "organization": "LOVEJOY HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Lucas",
+        "region": "Texas",
+        "postcode": "75002",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.1,
+          "lon": -96.6
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 129857,
+      "number": "1082V",
+      "team_name": "V",
       "robot_name": "",
       "organization": "LOVEJOY HIGH SCHOOL",
       "location": {

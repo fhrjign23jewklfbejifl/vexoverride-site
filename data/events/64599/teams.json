@@ -9,11 +9,65 @@
     "path": "https://events.vex.com/api/v2/events/64599/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": 13,
-    "total": 13,
+    "to": 15,
+    "total": 15,
     "merged_pages": 1
   },
   "data": [
+    {
+      "id": 192411,
+      "number": "11P",
+      "team_name": "Ruiguan Irvine",
+      "robot_name": "Ruiguan Irvine",
+      "organization": "Ruiguan Irvine",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Irvine",
+        "region": "California",
+        "postcode": "92604",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.7,
+          "lon": -117.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 197348,
+      "number": "11W",
+      "team_name": "IRVINE RUIGUAN",
+      "robot_name": "",
+      "organization": "IRVINE RUIGUAN",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Irvine",
+        "region": "California",
+        "postcode": "92604",
+        "country": "United States",
+        "coordinates": {
+          "lat": 33.7,
+          "lon": -117.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "Middle School"
+    },
     {
       "id": 197728,
       "number": "471A",

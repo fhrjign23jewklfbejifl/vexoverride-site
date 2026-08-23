@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65572,
+    "sku": "VE-V5-26-65572",
+    "name": "4th Annual Shamrock Showdown: HS & MS Blended VEX V5 Robotics Tournament",
+    "start": "2026-11-07T00:00:00-05:00",
+    "end": "2026-11-07T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Houston County High School",
+      "address_1": "2500 Tennessee 149",
+      "address_2": null,
+      "city": "Erin",
+      "region": "Tennessee",
+      "postcode": "37061",
+      "country": "United States",
+      "coordinates": {
+        "lat": 36.352015,
+        "lon": -87.65873
+      }
+    },
+    "locations": {
+      "2026-11-07": {
+        "venue": "Houston County High School",
+        "address_1": "2500 Tennessee 149",
+        "address_2": null,
+        "city": "Erin",
+        "region": "Tennessee",
+        "postcode": "37061",
+        "country": "United States",
+        "coordinates": {
+          "lat": 36.352015,
+          "lon": -87.65873
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

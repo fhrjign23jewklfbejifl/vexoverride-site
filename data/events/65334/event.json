@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65334,
+    "sku": "RE-V5RC-26-5334",
+    "name": "Mt. Vernon High School Qualifier @ Energy Fieldhouse!: VEX V5 Robotics Competition Override High School Teams",
+    "start": "2026-12-30T00:00:00-05:00",
+    "end": "2026-12-30T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Energy Field House",
+      "address_1": "101 Yellow Jacket Drive",
+      "address_2": null,
+      "city": "Mount Vernon",
+      "region": "Ohio",
+      "postcode": "43050",
+      "country": "United States",
+      "coordinates": {
+        "lat": 40.379943,
+        "lon": -82.47517
+      }
+    },
+    "locations": {
+      "2026-12-30": {
+        "venue": "Energy Field House",
+        "address_1": "101 Yellow Jacket Drive",
+        "address_2": null,
+        "city": "Mount Vernon",
+        "region": "Ohio",
+        "postcode": "43050",
+        "country": "United States",
+        "coordinates": {
+          "lat": 40.379943,
+          "lon": -82.47517
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

@@ -9,8 +9,8 @@
     "path": "https://events.vex.com/api/v2/events/64271/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": 11,
-    "total": 11,
+    "to": 13,
+    "total": 13,
     "merged_pages": 1
   },
   "data": [
@@ -301,6 +301,60 @@
         "coordinates": {
           "lat": 39.2,
           "lon": -94.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 165586,
+      "number": "79096A",
+      "team_name": "Cosmic Brownies",
+      "robot_name": "Viper",
+      "organization": "HEIGHTS HIGH AFJROTC",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Wichita",
+        "region": "Kansas",
+        "postcode": "67219",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.8,
+          "lon": -97.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 199615,
+      "number": "79096R",
+      "team_name": "R9",
+      "robot_name": "Cobra",
+      "organization": "HEIGHTS HIGH AFJROTC",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Wichita",
+        "region": "Kansas",
+        "postcode": "67219",
+        "country": "United States",
+        "coordinates": {
+          "lat": 37.8,
+          "lon": -97.3
         }
       },
       "registered": true,

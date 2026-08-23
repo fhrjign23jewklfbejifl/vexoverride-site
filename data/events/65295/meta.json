@@ -1,6 +1,13 @@
 {
   "eventId": 65295,
-  "updatedAt": "2026-08-18T17:14:10.599Z",
+  "updatedAt": "2026-08-23T14:03:48.555Z",
   "source": "browser-side events.vex.com collector",
+  "eventRegion": {
+    "id": null,
+    "name": "Nebraska",
+    "source": "listing",
+    "eventCode": "RE-V5RC-26-5295"
+  },
+  "officialRegionMapVersion": "2026-08-22T13:25:26.679Z",
   "status": "ok"
 }

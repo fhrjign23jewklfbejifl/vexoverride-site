@@ -1,6 +1,13 @@
 {
   "eventId": 64461,
-  "updatedAt": "2026-08-18T17:14:03.268Z",
+  "updatedAt": "2026-08-23T14:03:42.333Z",
   "source": "browser-side events.vex.com collector",
+  "eventRegion": {
+    "id": null,
+    "name": "Maine",
+    "source": "listing",
+    "eventCode": "RE-V5RC-26-4461"
+  },
+  "officialRegionMapVersion": "2026-08-22T13:25:26.679Z",
   "status": "ok"
 }

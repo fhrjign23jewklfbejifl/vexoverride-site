@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65294,
+    "sku": "RE-V5RC-26-5294",
+    "name": "Crown Point Fall VEX V5 Robotics Competition: Override Middle School and High School Teams",
+    "start": "2026-11-21T00:00:00-05:00",
+    "end": "2026-11-21T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Crown Point High School Field House",
+      "address_1": "1500 South Main Street",
+      "address_2": null,
+      "city": "Crown Point",
+      "region": "Indiana",
+      "postcode": "46307",
+      "country": "United States",
+      "coordinates": {
+        "lat": 41.38729,
+        "lon": -87.35998
+      }
+    },
+    "locations": {
+      "2026-11-21": {
+        "venue": "Crown Point High School Field House",
+        "address_1": "1500 South Main Street",
+        "address_2": null,
+        "city": "Crown Point",
+        "region": "Indiana",
+        "postcode": "46307",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.38729,
+          "lon": -87.35998
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

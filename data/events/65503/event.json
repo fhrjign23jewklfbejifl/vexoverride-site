@@ -1,0 +1,97 @@
+{
+  "data": {
+    "id": 65503,
+    "sku": "RE-V5RC-26-5503",
+    "name": "Barron County VEX V5  Robotics Competition League: Middle School and High School Teams",
+    "start": "2026-10-29T00:00:00-04:00",
+    "end": "2027-01-28T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Rice Lake High School",
+      "address_1": "30 South Wisconsin Avenue",
+      "address_2": null,
+      "city": "Rice Lake",
+      "region": "Wisconsin",
+      "postcode": "54868",
+      "country": "United States",
+      "coordinates": {
+        "lat": 45.499511,
+        "lon": -91.746535
+      }
+    },
+    "locations": {
+      "2026-10-29": {
+        "venue": "Rice Lake High School",
+        "address_1": "30 South Wisconsin Avenue",
+        "address_2": null,
+        "city": "Rice Lake",
+        "region": "Wisconsin",
+        "postcode": "54868",
+        "country": "United States",
+        "coordinates": {
+          "lat": 45.499511,
+          "lon": -91.746535
+        }
+      },
+      "2026-11-12": {
+        "venue": "Rice Lake High School",
+        "address_1": "30 South Wisconsin Avenue",
+        "address_2": null,
+        "city": "Rice Lake",
+        "region": "Wisconsin",
+        "postcode": "54868",
+        "country": "United States",
+        "coordinates": {
+          "lat": 45.499511,
+          "lon": -91.746535
+        }
+      },
+      "2026-12-15": {
+        "venue": "Rice Lake High School",
+        "address_1": "30 South Wisconsin Avenue",
+        "address_2": null,
+        "city": "Rice Lake",
+        "region": "Wisconsin",
+        "postcode": "54868",
+        "country": "United States",
+        "coordinates": {
+          "lat": 45.499511,
+          "lon": -91.746535
+        }
+      },
+      "2027-01-28": {
+        "venue": "Rice Lake High School",
+        "address_1": "30 South Wisconsin Avenue",
+        "address_2": null,
+        "city": "Rice Lake",
+        "region": "Wisconsin",
+        "postcode": "54868",
+        "country": "United States",
+        "coordinates": {
+          "lat": 45.499511,
+          "lon": -91.746535
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

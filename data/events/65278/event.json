@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65278,
+    "sku": "RE-V5RC-26-5278",
+    "name": "Lorain Titans VEX V5 Robotics Competition Qualifier: Override Middle School and High School Teams",
+    "start": "2027-01-30T00:00:00-05:00",
+    "end": "2027-01-30T00:00:00-05:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Lorain High School",
+      "address_1": "2600 Ashland Avenue",
+      "address_2": null,
+      "city": "Lorain",
+      "region": "Ohio",
+      "postcode": "44052",
+      "country": "United States",
+      "coordinates": {
+        "lat": 41.446922,
+        "lon": -82.190482
+      }
+    },
+    "locations": {
+      "2027-01-30": {
+        "venue": "Lorain High School",
+        "address_1": "2600 Ashland Avenue",
+        "address_2": null,
+        "city": "Lorain",
+        "region": "Ohio",
+        "postcode": "44052",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.446922,
+          "lon": -82.190482
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

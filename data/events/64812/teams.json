@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/64812/teams?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/64812/teams?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/64812/teams",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 2,
+    "total": 2,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 128042,
+      "number": "631A",
+      "team_name": "Agamemnon",
+      "robot_name": "",
+      "organization": "Leo Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Leo",
+        "region": "Indiana",
+        "postcode": "46765",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.2,
+          "lon": -85
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 196967,
+      "number": "631X",
+      "team_name": "Ψ",
+      "robot_name": "",
+      "organization": "Leo Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Leo",
+        "region": "Indiana",
+        "postcode": "46765",
+        "country": "United States",
+        "coordinates": {
+          "lat": 41.2,
+          "lon": -85
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    }
+  ]
+}

@@ -9,8 +9,8 @@
     "path": "https://events.vex.com/api/v2/events/64699/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": 3,
-    "total": 3,
+    "to": 5,
+    "total": 5,
     "merged_pages": 1
   },
   "data": [
@@ -31,6 +31,60 @@
         "coordinates": {
           "lat": 35.9,
           "lon": -86.7
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 71787,
+      "number": "63303A",
+      "team_name": "JCHS Robotics - 63303A",
+      "robot_name": "",
+      "organization": "JOHNSON CO HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Mountain City",
+        "region": "Tennessee",
+        "postcode": "37683",
+        "country": "United States",
+        "coordinates": {
+          "lat": 36.5,
+          "lon": -81.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 93462,
+      "number": "63303Z",
+      "team_name": "JCHS Robotics",
+      "robot_name": "",
+      "organization": "JOHNSON CO HIGH SCHOOL",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Mountain City",
+        "region": "Tennessee",
+        "postcode": "37683",
+        "country": "United States",
+        "coordinates": {
+          "lat": 36.5,
+          "lon": -81.8
         }
       },
       "registered": true,

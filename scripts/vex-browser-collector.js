@@ -28,6 +28,10 @@
   const discoveryBatchSize = 300;
   const blankRecheckBatchSize = 300;
   const memoryKey = `vexEventCollectorMemory:v2:season:${targetSeasonId}`;
+  const seededOfficialRegions = [
+    { id: 2460, name: "Florida - North/Central", source: "seed" },
+    { id: 2677, name: "Florida - South", source: "seed" }
+  ];
 
   const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
   const jitter = ms => Math.round(ms + Math.random() * Math.min(ms * 0.35, 1200));
@@ -260,47 +264,120 @@
   }
 
   function regionOptionsFromDom() {
-    return [...document.querySelectorAll('select[name="event_region"] option, [data-event-region] option')]
+    const options = [
+      ...document.querySelectorAll('select[name="event_region"] option, select[id*="event_region"] option, select[id*="event-region"] option, [data-event-region] option')
+    ];
+    return options
       .map(option => ({
         id: Number(option.value),
-        name: cleanText(option.textContent)
+        name: cleanText(option.textContent),
+        source: "dom"
       }))
       .filter(region => Number.isFinite(region.id) && region.id > 0 && region.name && !/^show all$/i.test(region.name));
   }
 
   function regionOptionsFromHtml(html) {
-    const eventRegionSelect = String(html || "").match(/<select[^>]+name=["']event_region["'][\s\S]*?<\/select>/i)?.[0] || "";
+    const source = String(html || "");
+    const selectMatches = [
+      ...source.matchAll(/<select[^>]+(?:name|id)=["'][^"']*event[_-]?region[^"']*["'][^>]*>[\s\S]*?<\/select>/gi)
+    ];
+    const eventRegionSelect = selectMatches.map(match => match[0]).join("\n");
     return [...eventRegionSelect.matchAll(/<option[^>]+value=["'](\d+)["'][^>]*>([\s\S]*?)<\/option>/gi)]
       .map(match => ({
         id: Number(match[1]),
-        name: cleanText(match[2].replace(/<[^>]+>/g, " "))
+        name: cleanText(match[2].replace(/<[^>]+>/g, " ")),
+        source: "html"
       }))
       .filter(region => Number.isFinite(region.id) && region.id > 0 && region.name && !/^show all$/i.test(region.name));
   }
 
+  function mergeRegionOptions(...groups) {
+    const regionsById = new Map();
+    for (const group of groups) {
+      for (const region of group || []) {
+        if (!Number.isFinite(region.id) || region.id <= 0 || !region.name) continue;
+        if (!regionsById.has(region.id) || regionsById.get(region.id).source === "seed") {
+          regionsById.set(region.id, region);
+        }
+      }
+    }
+    return [...regionsById.values()].sort((a, b) => a.name.localeCompare(b.name));
+  }
+
   async function getOfficialRegionOptions() {
     const domRegions = regionOptionsFromDom();
-    if (domRegions.length) return domRegions;
+    if (domRegions.length) return mergeRegionOptions(seededOfficialRegions, domRegions);
     try {
       const html = await getText("/robot-competitions/vex-robotics-competition", "competition region options");
-      return regionOptionsFromHtml(html);
+      const htmlRegions = regionOptionsFromHtml(html);
+      if (!htmlRegions.length) {
+        console.warn("Could not auto-read the official event-region dropdown. Using known seeded region IDs only.");
+      }
+      return mergeRegionOptions(seededOfficialRegions, htmlRegions);
     } catch (error) {
       console.warn(`Could not load official event-region options: ${error.message}`);
-      return [];
+      return mergeRegionOptions(seededOfficialRegions);
     }
   }
 
   function eventIdsFromListingHtml(html) {
     const ids = new Set();
-    for (const match of String(html || "").matchAll(/\/api\/v2\/events\/(\d+)|\beventId["']?\s*[:=]\s*["']?(\d+)|\bid["']?\s*:\s*(\d+)/gi)) {
-      const id = Number(match[1] || match[2] || match[3]);
-      if (Number.isFinite(id) && id > 0) ids.add(id);
+    for (const match of String(html || "").matchAll(/\/api\/v2\/events\/(\d+)|\beventId["']?\s*[:=]\s*["']?(\d+)/gi)) {
+      const id = Number(match[1] || match[2]);
+      if (Number.isFinite(id) && id >= 60000 && id <= 70000) ids.add(id);
     }
     for (const match of String(html || "").matchAll(/RE-V5RC-26-(\d{4,5})/gi)) {
       const id = 60000 + Number(match[1]);
-      if (Number.isFinite(id) && id > 0) ids.add(id);
+      if (Number.isFinite(id) && id >= 60000 && id <= 70000) ids.add(id);
     }
     return [...ids];
+  }
+
+  function eventIdFromCode(code) {
+    const match = String(code || "").match(/RE-V5RC-26-(\d{4,5})/i);
+    if (!match) return null;
+    const eventId = 60000 + Number(match[1]);
+    return Number.isFinite(eventId) && eventId >= 60000 && eventId <= 70000 ? eventId : null;
+  }
+
+  function regionListingEventsFromText(text) {
+    const normalized = cleanText(text);
+    const codeMatch = normalized.match(/RE-V5RC-26-\d{4,5}/i);
+    if (!codeMatch) return [];
+    const regionMatch = normalized.match(/Event Region:\s*([^|•]+?)(?=\s*(?:Event Code:|Event Type:|Grade Level:|Level Class:|Date:|Location:|$))/i);
+    const eventId = eventIdFromCode(codeMatch[0]);
+    const regionName = cleanText(regionMatch?.[1] || "");
+    return eventId && regionName ? [{ eventId, code: codeMatch[0], regionName }] : [];
+  }
+
+  function regionListingEventsFromHtml(html) {
+    const source = String(html || "");
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(source, "text/html");
+    const cards = [
+      ...doc.querySelectorAll("article, .card, .event, .event-card, .competition, .competition-card, .result, .search-result, li, tr")
+    ];
+    const events = new Map();
+    for (const card of cards) {
+      for (const item of regionListingEventsFromText(card.textContent || "")) {
+        events.set(String(item.eventId), item);
+      }
+    }
+    if (events.size) return [...events.values()];
+
+    const text = cleanText(doc.body?.textContent || source);
+    const codeRegex = /RE-V5RC-26-\d{4,5}/gi;
+    const matches = [...text.matchAll(codeRegex)];
+    for (const [index, match] of matches.entries()) {
+      const eventId = eventIdFromCode(match[0]);
+      const start = Math.max(0, match.index - 800);
+      const end = index + 1 < matches.length ? matches[index + 1].index : match.index + 1600;
+      const chunk = text.slice(start, end);
+      const regionMatch = chunk.match(/Event Region:\s*([^|•]+?)(?=\s*(?:Event Code:|Event Type:|Grade Level:|Level Class:|Date:|Location:|$))/i);
+      const regionName = cleanText(regionMatch?.[1] || "");
+      if (eventId && regionName) events.set(String(eventId), { eventId, code: match[0], regionName });
+    }
+    return [...events.values()];
   }
 
   function maxListingPage(html) {
@@ -329,13 +406,89 @@
     return `/robot-competitions/vex-robotics-competition?${params}`;
   }
 
+  function seasonListingPath(page = 1) {
+    const params = new URLSearchParams({
+      country_id: "",
+      country_region_id: "*",
+      seasonId: String(targetSeasonId),
+      eventType: "",
+      name: "",
+      grade_level_id: "",
+      level_class_id: "",
+      from_date: "",
+      to_date: "",
+      event_region: "",
+      city: "",
+      distance: "30"
+    });
+    if (page > 1) params.set("page", String(page));
+    return `/robot-competitions/vex-robotics-competition?${params}`;
+  }
+
+  async function collectOfficialEventRegionsFromListings() {
+    const regionMap = {};
+    const eventRegionsById = {};
+    const maxPages = 100;
+    let emptyPages = 0;
+
+    console.log("Scanning public competition listing pages for official Event Region labels.");
+    for (let page = 1; page <= maxPages; page += 1) {
+      try {
+        const html = await getText(seasonListingPath(page), `season ${targetSeasonId} listing page ${page}`);
+        const listings = regionListingEventsFromHtml(html);
+        if (!listings.length) {
+          emptyPages += 1;
+          if (emptyPages >= 2) break;
+        } else {
+          emptyPages = 0;
+        }
+
+        for (const listing of listings) {
+          const key = listing.regionName;
+          regionMap[key] = listing.regionName;
+          eventRegionsById[String(listing.eventId)] = {
+            id: null,
+            name: listing.regionName,
+            source: "listing",
+            eventCode: listing.code
+          };
+        }
+        console.log(`Listing page ${page}: mapped ${listings.length} event-region label(s).`);
+      } catch (error) {
+        console.warn(`Skipped listing page ${page}: ${error.message}`);
+        if (/429/.test(error.message)) break;
+        emptyPages += 1;
+        if (emptyPages >= 2) break;
+      }
+      await sleep(jitter(detailDelayMs));
+    }
+
+    return { regionMap, eventRegionsById };
+  }
+
+  function mergeOfficialRegionMaps(primary, fallback) {
+    return {
+      regionMap: {
+        ...(fallback?.regionMap || {}),
+        ...(primary?.regionMap || {})
+      },
+      eventRegionsById: {
+        ...(fallback?.eventRegionsById || {}),
+        ...(primary?.eventRegionsById || {})
+      }
+    };
+  }
+
   async function collectOfficialEventRegions() {
+    const listingRegions = await collectOfficialEventRegionsFromListings();
+    console.log(`Listing scan mapped ${Object.keys(listingRegions.eventRegionsById).length} event(s) to official regions.`);
+
     const regions = await getOfficialRegionOptions();
     const regionMap = Object.fromEntries(regions.map(region => [String(region.id), region.name]));
     const eventRegionsById = {};
-    if (!regions.length) return { regionMap, eventRegionsById };
+    if (!regions.length) return listingRegions;
 
-    console.log(`Found ${regions.length} official event-region filter option(s). Scanning region listing pages for event associations.`);
+    console.log(`Found ${regions.length} official event-region filter option(s). Scanning region-filter pages as a fallback.`);
     for (const [index, region] of regions.entries()) {
       try {
         console.log(`[region ${index + 1}/${regions.length}] ${region.name} (${region.id})`);
@@ -359,7 +512,7 @@
       }
       await sleep(jitter(detailDelayMs));
     }
-    return { regionMap, eventRegionsById };
+    return mergeOfficialRegionMaps(listingRegions, { regionMap, eventRegionsById });
   }
 
   function seasonIdOf(event) {

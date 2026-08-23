@@ -26,7 +26,32 @@
       "qualifications": [],
       "designation": null,
       "classification": null,
-      "teamWinners": [],
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 198029,
+            "name": "53333S",
+            "code": null
+          }
+        },
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 198399,
+            "name": "66123C",
+            "code": null
+          }
+        }
+      ],
       "individualWinners": []
     },
     {
@@ -41,7 +66,32 @@
       "qualifications": [],
       "designation": null,
       "classification": null,
-      "teamWinners": [],
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 198965,
+            "name": "66616A",
+            "code": null
+          }
+        },
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 198425,
+            "name": "2876A",
+            "code": null
+          }
+        }
+      ],
       "individualWinners": []
     },
     {
@@ -56,7 +106,56 @@
       "qualifications": [],
       "designation": null,
       "classification": null,
-      "teamWinners": [],
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 192074,
+            "name": "46666A",
+            "code": null
+          }
+        },
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 197660,
+            "name": "10057D",
+            "code": null
+          }
+        },
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 198738,
+            "name": "3258A",
+            "code": null
+          }
+        },
+        {
+          "division": {
+            "id": 1,
+            "name": "Division 1",
+            "code": null
+          },
+          "team": {
+            "id": 186173,
+            "name": "16811K",
+            "code": null
+          }
+        }
+      ],
       "individualWinners": []
     }
   ]

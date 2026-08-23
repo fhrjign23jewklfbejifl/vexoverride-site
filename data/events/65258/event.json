@@ -1,0 +1,58 @@
+{
+  "data": {
+    "id": 65258,
+    "sku": "RE-V5RC-26-5258",
+    "name": "1ra Fecha de la LNR 2026-2027 Vex V5",
+    "start": "2026-09-05T00:00:00-04:00",
+    "end": "2026-09-05T00:00:00-04:00",
+    "season": {
+      "id": 204,
+      "name": "VEX V5 Robotics Competition 2026-2027: Override",
+      "code": null
+    },
+    "program": {
+      "id": 1,
+      "name": "VEX V5 Robotics Competition",
+      "code": "V5RC"
+    },
+    "location": {
+      "venue": "Colegio del Sol",
+      "address_1": "",
+      "address_2": null,
+      "city": "Asuncion",
+      "region": null,
+      "postcode": "1405",
+      "country": "Paraguay",
+      "coordinates": {
+        "lat": -25.301976,
+        "lon": -57.554692
+      }
+    },
+    "locations": {
+      "2026-09-05": {
+        "venue": "Colegio del Sol",
+        "address_1": "",
+        "address_2": null,
+        "city": "Asuncion",
+        "region": null,
+        "postcode": "1405",
+        "country": "Paraguay",
+        "coordinates": {
+          "lat": -25.301976,
+          "lon": -57.554692
+        }
+      }
+    },
+    "divisions": [
+      {
+        "id": 1,
+        "name": "Default",
+        "order": 1
+      }
+    ],
+    "level": "Other",
+    "ongoing": false,
+    "awards_finalized": false,
+    "event_type": null
+  }
+}

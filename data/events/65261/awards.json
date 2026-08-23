@@ -26,7 +26,32 @@
       "qualifications": [],
       "designation": null,
       "classification": null,
-      "teamWinners": [],
+      "teamWinners": [
+        {
+          "division": {
+            "id": 1,
+            "name": "Default Division",
+            "code": null
+          },
+          "team": {
+            "id": 199312,
+            "name": "22020V",
+            "code": null
+          }
+        },
+        {
+          "division": {
+            "id": 1,
+            "name": "Default Division",
+            "code": null
+          },
+          "team": {
+            "id": 175717,
+            "name": "2996B",
+            "code": null
+          }
+        }
+      ],
       "individualWinners": []
     },
     {

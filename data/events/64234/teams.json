@@ -9,8 +9,8 @@
     "path": "https://events.vex.com/api/v2/events/64234/teams",
     "per_page": 250,
     "prev_page_url": null,
-    "to": 11,
-    "total": 11,
+    "to": 13,
+    "total": 13,
     "merged_pages": 1
   },
   "data": [
@@ -274,6 +274,60 @@
         "coordinates": {
           "lat": 43.8,
           "lon": -79.3
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 122338,
+      "number": "3505E",
+      "team_name": "Parsec",
+      "robot_name": "",
+      "organization": "Zebra Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Mississauga",
+        "region": "Ontario",
+        "postcode": "L5N 6M5",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 43.6,
+          "lon": -79.8
+        }
+      },
+      "registered": true,
+      "program": {
+        "id": 1,
+        "name": "VEX V5 Robotics Competition",
+        "code": "V5RC"
+      },
+      "grade": "High School"
+    },
+    {
+      "id": 198690,
+      "number": "3505Z",
+      "team_name": "Zenith",
+      "robot_name": "",
+      "organization": "Zebra Robotics",
+      "location": {
+        "venue": null,
+        "address_1": "",
+        "address_2": null,
+        "city": "Mississauga",
+        "region": "Ontario",
+        "postcode": "L5N 6M5",
+        "country": "Canada",
+        "coordinates": {
+          "lat": 43.6,
+          "lon": -79.8
         }
       },
       "registered": true,

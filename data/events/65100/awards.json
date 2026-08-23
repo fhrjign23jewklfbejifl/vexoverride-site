@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65100/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65100/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65100/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 9,
+    "total": 9,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 286801,
+      "event": {
+        "id": 65100,
+        "name": "Jenison Robotics VEX V5 Robotics Competition Tournament: Override Middle School Teams",
+        "code": "RE-V5RC-26-5100"
+      },
+      "order": 59,
+      "title": "Excellence Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286802,
+      "event": {
+        "id": 65100,
+        "name": "Jenison Robotics VEX V5 Robotics Competition Tournament: Override Middle School Teams",
+        "code": "RE-V5RC-26-5100"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286803,
+      "event": {
+        "id": 65100,
+        "name": "Jenison Robotics VEX V5 Robotics Competition Tournament: Override Middle School Teams",
+        "code": "RE-V5RC-26-5100"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286804,
+      "event": {
+        "id": 65100,
+        "name": "Jenison Robotics VEX V5 Robotics Competition Tournament: Override Middle School Teams",
+        "code": "RE-V5RC-26-5100"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286805,
+      "event": {
+        "id": 65100,
+        "name": "Jenison Robotics VEX V5 Robotics Competition Tournament: Override Middle School Teams",
+        "code": "RE-V5RC-26-5100"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286806,
+      "event": {
+        "id": 65100,
+        "name": "Jenison Robotics VEX V5 Robotics Competition Tournament: Override Middle School Teams",
+        "code": "RE-V5RC-26-5100"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286807,
+      "event": {
+        "id": 65100,
+        "name": "Jenison Robotics VEX V5 Robotics Competition Tournament: Override Middle School Teams",
+        "code": "RE-V5RC-26-5100"
+      },
+      "order": 76,
+      "title": "Amaze Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286808,
+      "event": {
+        "id": 65100,
+        "name": "Jenison Robotics VEX V5 Robotics Competition Tournament: Override Middle School Teams",
+        "code": "RE-V5RC-26-5100"
+      },
+      "order": 77,
+      "title": "Build Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 286809,
+      "event": {
+        "id": 65100,
+        "name": "Jenison Robotics VEX V5 Robotics Competition Tournament: Override Middle School Teams",
+        "code": "RE-V5RC-26-5100"
+      },
+      "order": 78,
+      "title": "Create Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

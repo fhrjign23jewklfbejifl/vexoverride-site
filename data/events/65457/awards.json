@@ -1,0 +1,123 @@
+{
+  "meta": {
+    "current_page": 1,
+    "first_page_url": "https://events.vex.com/api/v2/events/65457/awards?page=1",
+    "from": 1,
+    "last_page": 1,
+    "last_page_url": "https://events.vex.com/api/v2/events/65457/awards?page=1",
+    "next_page_url": null,
+    "path": "https://events.vex.com/api/v2/events/65457/awards",
+    "per_page": 250,
+    "prev_page_url": null,
+    "to": 7,
+    "total": 7,
+    "merged_pages": 1
+  },
+  "data": [
+    {
+      "id": 289153,
+      "event": {
+        "id": 65457,
+        "name": "Spearfish Qualifier: Blended MS/HS VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-5457"
+      },
+      "order": 60,
+      "title": "Excellence Award - High School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289154,
+      "event": {
+        "id": 65457,
+        "name": "Spearfish Qualifier: Blended MS/HS VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-5457"
+      },
+      "order": 61,
+      "title": "Excellence Award - Middle School (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289155,
+      "event": {
+        "id": 65457,
+        "name": "Spearfish Qualifier: Blended MS/HS VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-5457"
+      },
+      "order": 63,
+      "title": "Tournament Champions (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289156,
+      "event": {
+        "id": 65457,
+        "name": "Spearfish Qualifier: Blended MS/HS VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-5457"
+      },
+      "order": 69,
+      "title": "Design Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289157,
+      "event": {
+        "id": 65457,
+        "name": "Spearfish Qualifier: Blended MS/HS VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-5457"
+      },
+      "order": 70,
+      "title": "Robot Skills Champion (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289158,
+      "event": {
+        "id": 65457,
+        "name": "Spearfish Qualifier: Blended MS/HS VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-5457"
+      },
+      "order": 73,
+      "title": "Judges Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    },
+    {
+      "id": 289159,
+      "event": {
+        "id": 65457,
+        "name": "Spearfish Qualifier: Blended MS/HS VEX V5 Robotics Competition",
+        "code": "RE-V5RC-26-5457"
+      },
+      "order": 74,
+      "title": "Innovate Award (V5)",
+      "qualifications": [],
+      "designation": null,
+      "classification": null,
+      "teamWinners": [],
+      "individualWinners": []
+    }
+  ]
+}

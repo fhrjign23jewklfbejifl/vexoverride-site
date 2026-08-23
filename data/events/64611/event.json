@@ -46,12 +46,12 @@
     "divisions": [
       {
         "id": 1,
-        "name": "Default",
+        "name": "Default Division",
         "order": 1
       }
     ],
     "level": "Other",
-    "ongoing": false,
+    "ongoing": true,
     "awards_finalized": false,
     "event_type": null
   }
