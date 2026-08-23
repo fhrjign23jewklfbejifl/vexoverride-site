@@ -342,16 +342,27 @@ function regionAliases(label) {
   }
   if (normalized === "florida south") {
     aliases.add("South Florida");
+    aliases.add("Florida South");
     aliases.add("FL South");
     aliases.add("SFL");
   }
   if (normalized === "florida north central") {
     aliases.add("North Florida");
     aliases.add("Central Florida");
+    aliases.add("Florida North");
+    aliases.add("Florida Central");
     aliases.add("North Central Florida");
     aliases.add("FL North Central");
+    aliases.add("FNC");
   }
-  if (normalized === "new york south") aliases.add("South New York");
+  if (normalized === "korea republic of") {
+    aliases.add("South Korea");
+    aliases.add("Korea");
+  }
+  if (normalized === "new york south") {
+    aliases.add("South New York");
+    aliases.add("Southern New York");
+  }
   if (normalized === "new york north") aliases.add("North New York");
   return [...aliases];
 }
@@ -468,8 +479,29 @@ function filteredSyncedEvents() {
   return sortedSyncedEvents(syncedEvents.filter(event => eventMatchesQuickFilter(event) && localEventMatches(event, query, region)), query);
 }
 
+function regionMatchRank(option, query) {
+  const normalizedQuery = normalizeSearchText(query);
+  if (!normalizedQuery) return 0;
+  const compactQuery = compactSearchText(query);
+  const tokens = searchTokens(query);
+  let best = Infinity;
+
+  regionAliases(option.label).forEach((value) => {
+    const normalized = normalizeSearchText(value);
+    const compact = compactSearchText(value);
+    const words = normalized.split(" ").filter(Boolean);
+    if (normalized === normalizedQuery || compact === compactQuery) best = Math.min(best, 0);
+    else if (normalized.startsWith(normalizedQuery) || compact.startsWith(compactQuery)) best = Math.min(best, 1);
+    else if (tokens.length && tokens.every(token => words.some(word => word.startsWith(token)))) best = Math.min(best, 2);
+    else if (normalized.includes(normalizedQuery) || compact.includes(compactQuery)) best = Math.min(best, 3);
+    else if (tokens.length && tokens.every(token => normalized.includes(token))) best = Math.min(best, 4);
+  });
+
+  return best;
+}
+
 function regionOptionMatches(option, query) {
-  return searchTextMatches(regionSearchText(option.label), query);
+  return Number.isFinite(regionMatchRank(option, query));
 }
 
 function currentRegionInputValue() {
@@ -478,7 +510,20 @@ function currentRegionInputValue() {
 
 function matchingRegionOptions(query = currentRegionInputValue()) {
   if (!query) return competitionRegionOptions;
-  return competitionRegionOptions.filter(option => regionOptionMatches(option, query));
+  return competitionRegionOptions
+    .map(option => ({ option, rank: regionMatchRank(option, query) }))
+    .filter(item => Number.isFinite(item.rank))
+    .sort((a, b) => a.rank - b.rank || a.option.label.localeCompare(b.option.label))
+    .map(item => item.option);
+}
+
+function visibleRegionRows(query = currentRegionInputValue()) {
+  const matches = matchingRegionOptions(query);
+  if (query) return matches;
+  return [
+    { key: "", label: "All synced regions", meta: "Show every imported event" },
+    ...matches
+  ];
 }
 
 function renderRegionOptions(open = false) {
@@ -488,19 +533,26 @@ function renderRegionOptions(open = false) {
   if (!input || !hidden || !list) return;
 
   hidden.value = selectedCompetitionRegion;
-  const matches = matchingRegionOptions();
-  highlightedRegionIndex = Math.min(Math.max(highlightedRegionIndex, -1), matches.length - 1);
+  const query = currentRegionInputValue();
+  const rows = visibleRegionRows(query);
+  highlightedRegionIndex = Math.min(Math.max(highlightedRegionIndex, 0), Math.max(rows.length - 1, 0));
   input.setAttribute("aria-expanded", String(open));
   list.hidden = !open;
   if (!open) return;
 
-  const rows = [
-    { key: "", label: "All synced regions", meta: "Show every imported event" },
-    ...matches
-  ];
+  if (!rows.length) {
+    list.innerHTML = `
+      <div class="region-option region-option-empty" role="option" aria-disabled="true">
+        <strong>No synced region matches "${escapeHtml(query)}"</strong>
+        <small>Only imported season-204 regions appear here.</small>
+      </div>
+    `;
+    return;
+  }
+
   list.innerHTML = rows.map((option, index) => `
     <button
-      class="region-option ${index - 1 === highlightedRegionIndex ? "active" : ""}"
+      class="region-option ${index === highlightedRegionIndex ? "active" : ""}"
       type="button"
       role="option"
       data-region-option="${escapeHtml(option.key)}"
@@ -530,8 +582,8 @@ function commitRegionInput() {
     selectCompetitionRegion("", "");
     return;
   }
-  const matches = matchingRegionOptions(value);
-  const option = highlightedRegionIndex >= 0 ? matches[highlightedRegionIndex] : matches[0];
+  const matches = visibleRegionRows(value);
+  const option = matches[highlightedRegionIndex] || matches[0];
   if (option) selectCompetitionRegion(option.key, option.label);
 }
 
@@ -940,8 +992,6 @@ function competitionTeamMarkup(team) {
           <strong>${escapeHtml(number)}</strong>
           <small>${escapeHtml(team.teamName || team.name || team.organization || "Team details")}</small>
         </span>
-        <span class="team-location">${escapeHtml(teamLocationLine(team) || "Location not listed")}</span>
-        <span class="team-season-score">${seasonSkill ? escapeHtml(total) : "-"}</span>
       </button>
       <div class="competition-team-detail">
         ${open ? `
@@ -973,13 +1023,18 @@ function competitionTeamMarkup(team) {
   `;
 }
 
-function awardWinnerLabel(winner) {
+function awardWinnerLabel(winner, teamByNumber = new Map()) {
   const team = winner?.team || winner;
-  return [team?.name || team?.number || team?.teamNumber, winner?.division?.name].filter(Boolean).join(" • ");
+  const number = team?.name || team?.number || team?.teamNumber || "";
+  if (!number) return "";
+  const registeredTeam = teamByNumber.get(teamNumberKey(number));
+  const label = registeredTeam?.teamName || registeredTeam?.name || registeredTeam?.organization || "";
+  return label && teamNumberKey(label) !== teamNumberKey(number) ? `${number} - ${label}` : number;
 }
 
-function competitionAwardsMarkup(awards = []) {
+function competitionAwardsMarkup(awards = [], teams = []) {
   if (!awards.length) return `<p class="competition-empty">No awards posted yet.</p>`;
+  const teamByNumber = new Map(teams.map(team => [teamNumberKey(team.teamNumber || team.number), team]).filter(([number]) => number));
   return awards.map(award => `
     <article class="competition-award-row">
       <div>
@@ -989,7 +1044,7 @@ function competitionAwardsMarkup(awards = []) {
           award.designation
         ].filter(Boolean).join(" • "))}</small>
       </div>
-      <p>${escapeHtml((award.teamWinners || []).map(awardWinnerLabel).filter(Boolean).join(", ") || "Winner not listed")}</p>
+      <p>${escapeHtml((award.teamWinners || []).map(winner => awardWinnerLabel(winner, teamByNumber)).filter(Boolean).join(", ") || "Winner not listed")}</p>
     </article>
   `).join("");
 }
@@ -1038,7 +1093,7 @@ function renderImportedCompetition() {
         <strong>Awards</strong>
         <span>${awardCount} award${awardCount === 1 ? "" : "s"} synced for this event.</span>
       </div>
-      ${competitionAwardsMarkup(awards)}
+      ${competitionAwardsMarkup(awards, teams)}
     `;
   }
   if (!seasonSkillsIndex && !seasonSkillsPromise) {
@@ -2308,10 +2363,10 @@ $("[data-competition-region-input]")?.addEventListener("focus", () => {
 });
 
 $("[data-competition-region-input]")?.addEventListener("keydown", (event) => {
-  const matches = matchingRegionOptions();
+  const rows = visibleRegionRows();
   if (event.key === "ArrowDown") {
     event.preventDefault();
-    highlightedRegionIndex = Math.min(highlightedRegionIndex + 1, Math.max(matches.length - 1, 0));
+    highlightedRegionIndex = Math.min(highlightedRegionIndex + 1, Math.max(rows.length - 1, 0));
     renderRegionOptions(true);
   } else if (event.key === "ArrowUp") {
     event.preventDefault();

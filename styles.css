@@ -375,6 +375,15 @@ button {
   background: linear-gradient(135deg, rgba(132, 241, 94, .16), rgba(102, 217, 208, .11));
 }
 
+.region-option-empty {
+  cursor: default;
+}
+
+.region-option-empty:hover {
+  border-color: transparent;
+  background: transparent;
+}
+
 .competition-quick-filters {
   display: flex;
   flex-wrap: wrap;
@@ -716,6 +725,16 @@ button {
   gap: 8px;
 }
 
+.competition-team-list {
+  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+}
+
+.competition-awards-list,
+.competition-section-title,
+.competition-empty {
+  grid-column: 1 / -1;
+}
+
 .competition-section-title {
   display: flex;
   justify-content: space-between;
@@ -746,14 +765,19 @@ button {
   overflow: hidden;
 }
 
+.competition-team-row.open {
+  grid-column: 1 / -1;
+}
+
 .competition-team-summary {
   width: 100%;
   display: grid;
-  grid-template-columns: minmax(92px, .42fr) minmax(0, 1fr) 72px;
+  grid-template-columns: 1fr;
   align-items: center;
-  gap: 12px;
+  gap: 6px;
   border: 0;
-  padding: 10px 12px;
+  min-height: 64px;
+  padding: 10px 11px;
   color: inherit;
   background: transparent;
   font: inherit;
@@ -780,7 +804,7 @@ button {
 .team-main small,
 .team-location {
   color: #9fb0b7;
-  font-size: 12px;
+  font-size: 11px;
   line-height: 1.25;
   font-weight: 850;
 }
