@@ -54,6 +54,11 @@ const isDevMode = new URLSearchParams(window.location.search).get("dev") === "1"
 let profile = loadProfile();
 let activeMode = "head";
 let analysisRange = "all";
+let analysisMode = "head";
+let headCorrelationX = "alliancePins";
+let headCorrelationY = "ourScore";
+let skillsCorrelationX = "redBluePins";
+let skillsCorrelationY = "score";
 let teamAlliance = "none";
 let skillsRunType = "none";
 let showAllHistory = false;
@@ -1605,6 +1610,11 @@ function daysAgo(days) {
   return date;
 }
 
+function seededRandom(seed) {
+  const x = Math.sin(seed * 999) * 10000;
+  return x - Math.floor(x);
+}
+
 function sampleQuadrants(seed) {
   return {
     top: { toggle: seed.topToggle, yellow: seed.topY, red: seed.topR, blue: seed.topB },
@@ -1612,6 +1622,83 @@ function sampleQuadrants(seed) {
     bottom: { toggle: seed.bottomToggle, yellow: seed.bottomY, red: seed.bottomR, blue: seed.bottomB },
     left: { toggle: seed.leftToggle, yellow: seed.leftY, red: seed.leftR, blue: seed.leftB },
     center: { toggle: "neutral", yellow: seed.centerY, red: seed.centerR, blue: seed.centerB }
+  };
+}
+
+function sampleHeadSeed(index, total) {
+  const progress = total <= 1 ? 1 : index / (total - 1);
+  const daysAgoValue = Math.round((1 - progress) * 74);
+  const teamAlliance = index % 2 === 0 ? "blue" : "red";
+  const roughMatch = index % 7 === 1 || index % 9 === 4;
+  const closeLoss = index % 6 === 2;
+  const strong = roughMatch ? progress * .62 : progress;
+  const ourColor = teamAlliance;
+  const opponentColor = teamAlliance === "red" ? "blue" : "red";
+  const ourBase = 1 + Math.floor(strong * 4);
+  const oppBase = Math.max(0, 4 - Math.floor(strong * 3)) + (closeLoss ? 2 : 0);
+  const ourRobots = progress > .36 ? (index % 5 === 0 ? 1 : 2) : (index % 4 === 0 ? 1 : 0);
+  const oppRobots = closeLoss || roughMatch ? 2 : (progress > .72 ? 0 : 1);
+  const owned = ourColor;
+  const notOwned = opponentColor;
+  const seed = {
+    daysAgo: daysAgoValue,
+    teamAlliance,
+    auton: progress > .7 ? ourColor : (roughMatch ? opponentColor : (index % 5 === 0 ? "tie" : "none")),
+    redRobots: teamAlliance === "red" ? ourRobots : oppRobots,
+    blueRobots: teamAlliance === "blue" ? ourRobots : oppRobots,
+    topToggle: teamAlliance === "blue" ? owned : notOwned,
+    rightToggle: teamAlliance === "blue" ? owned : (closeLoss ? notOwned : "neutral"),
+    bottomToggle: teamAlliance === "red" ? owned : notOwned,
+    leftToggle: teamAlliance === "red" ? owned : (closeLoss ? notOwned : "neutral"),
+    topY: teamAlliance === "blue" ? Math.floor(progress * 3) : Math.floor(seededRandom(index + 1) * 2),
+    topR: teamAlliance === "red" ? ourBase : Math.max(0, oppBase - 1),
+    topB: teamAlliance === "blue" ? ourBase + Math.floor(progress * 2) : oppBase,
+    rightY: teamAlliance === "blue" ? 1 + Math.floor(progress * 2) : Math.floor(seededRandom(index + 2) * 2),
+    rightR: teamAlliance === "red" ? Math.max(0, ourBase - 1) : oppBase,
+    rightB: teamAlliance === "blue" ? ourBase : Math.max(0, oppBase - 1),
+    bottomY: teamAlliance === "red" ? 1 + Math.floor(progress * 3) : Math.floor(seededRandom(index + 3) * 2),
+    bottomR: teamAlliance === "red" ? ourBase + Math.floor(progress * 2) : oppBase,
+    bottomB: teamAlliance === "blue" ? Math.max(0, ourBase - 1) : Math.max(0, oppBase - 1),
+    leftY: teamAlliance === "red" ? Math.floor(progress * 3) : Math.floor(seededRandom(index + 4) * 2),
+    leftR: teamAlliance === "red" ? ourBase : Math.max(0, oppBase - 1),
+    leftB: teamAlliance === "blue" ? Math.max(0, ourBase - 1) : oppBase,
+    centerY: Math.floor(progress * 2),
+    centerR: teamAlliance === "red" ? Math.floor(progress * 2) : Math.max(0, Math.floor((1 - progress) * 2)),
+    centerB: teamAlliance === "blue" ? Math.floor(progress * 2) : Math.max(0, Math.floor((1 - progress) * 2)),
+    partner: ["355V", "2055A", "169C", "1000A", "10K"][index % 5],
+    opponentOne: ["169A", "32C", "96Z", "663A", "1468A"][index % 5],
+    opponentTwo: ["227R", "10B", "471B", "886S", "1069A"][index % 5]
+  };
+  return seed;
+}
+
+function sampleSkillsSeed(index, total, skillsType) {
+  const progress = total <= 1 ? 1 : index / (total - 1);
+  const daysAgoValue = Math.round((1 - progress) * 70 + (skillsType === "autonomous" ? 1 : 0));
+  const earlyMiss = index % 6 === 1;
+  const route = Math.max(0, progress - (earlyMiss ? .22 : 0));
+  return {
+    daysAgo: daysAgoValue,
+    skillsType,
+    centerToggle: route > .28,
+    topToggle: route > .38 ? "blue" : "neutral",
+    rightToggle: route > .58 ? "blue" : (route > .25 ? "neutral" : "red"),
+    bottomToggle: route > .34 ? "red" : "neutral",
+    leftToggle: route > .5 ? "red" : (route > .2 ? "neutral" : "blue"),
+    topY: Math.floor(route * 3),
+    topB: Math.floor(route * (skillsType === "driver" ? 5 : 3)),
+    rightY: Math.floor(route * 3),
+    rightB: Math.floor(route * (skillsType === "driver" ? 4 : 3)),
+    bottomY: Math.floor(route * 3),
+    bottomR: Math.floor(route * (skillsType === "driver" ? 5 : 3)),
+    leftY: Math.floor(route * 3),
+    leftR: Math.floor(route * (skillsType === "driver" ? 4 : 2)),
+    centerY: Math.floor(route * 2),
+    centerR: Math.floor(route * (skillsType === "driver" ? 2 : 1)),
+    centerB: Math.floor(route * (skillsType === "driver" ? 2 : 1)),
+    notes: route > .72
+      ? `${skillsType === "driver" ? "Driver" : "Autonomous"} route is getting cleaner.`
+      : `${skillsType === "driver" ? "Driver" : "Autonomous"} sample while tuning route.`
   };
 }
 
@@ -1686,28 +1773,14 @@ function createSampleSkillsRecord(seed) {
 }
 
 function seedSampleData() {
-  const headSeeds = [
-    { daysAgo: 0, teamAlliance: "blue", auton: "blue", redRobots: 1, blueRobots: 2, topToggle: "blue", rightToggle: "blue", bottomToggle: "red", leftToggle: "red", topY: 2, topR: 0, topB: 4, rightY: 1, rightR: 1, rightB: 3, bottomY: 1, bottomR: 2, bottomB: 0, leftY: 2, leftR: 3, leftB: 0, centerY: 1, centerR: 0, centerB: 2, partner: "355V", opponentOne: "169A", opponentTwo: "227R" },
-    { daysAgo: 1, teamAlliance: "red", auton: "red", redRobots: 2, blueRobots: 1, topToggle: "blue", rightToggle: "neutral", bottomToggle: "red", leftToggle: "red", topY: 0, topR: 1, topB: 2, rightY: 1, rightR: 0, rightB: 2, bottomY: 3, bottomR: 4, bottomB: 0, leftY: 2, leftR: 2, leftB: 1, centerY: 1, centerR: 1, centerB: 0, partner: "2055A", opponentOne: "10B", opponentTwo: "32C" },
-    { daysAgo: 3, teamAlliance: "blue", auton: "red", redRobots: 2, blueRobots: 1, topToggle: "red", rightToggle: "blue", bottomToggle: "red", leftToggle: "neutral", topY: 1, topR: 2, topB: 1, rightY: 2, rightR: 0, rightB: 2, bottomY: 2, bottomR: 3, bottomB: 1, leftY: 1, leftR: 4, leftB: 0, centerY: 0, centerR: 1, centerB: 1, partner: "96Z", opponentOne: "355T", opponentTwo: "471B" },
-    { daysAgo: 5, teamAlliance: "red", auton: "tie", redRobots: 1, blueRobots: 1, topToggle: "blue", rightToggle: "blue", bottomToggle: "red", leftToggle: "blue", topY: 2, topR: 0, topB: 3, rightY: 2, rightR: 1, rightB: 3, bottomY: 1, bottomR: 2, bottomB: 1, leftY: 0, leftR: 2, leftB: 1, centerY: 2, centerR: 1, centerB: 1, partner: "169C", opponentOne: "663A", opponentTwo: "1028A" },
-    { daysAgo: 8, teamAlliance: "blue", auton: "blue", redRobots: 0, blueRobots: 2, topToggle: "blue", rightToggle: "blue", bottomToggle: "neutral", leftToggle: "red", topY: 3, topR: 0, topB: 5, rightY: 2, rightR: 0, rightB: 4, bottomY: 0, bottomR: 1, bottomB: 0, leftY: 1, leftR: 1, leftB: 0, centerY: 1, centerR: 0, centerB: 2, partner: "169R", opponentOne: "88S", opponentTwo: "886S" },
-    { daysAgo: 13, teamAlliance: "red", auton: "blue", redRobots: 1, blueRobots: 2, topToggle: "blue", rightToggle: "red", bottomToggle: "red", leftToggle: "red", topY: 1, topR: 0, topB: 2, rightY: 0, rightR: 2, rightB: 1, bottomY: 2, bottomR: 3, bottomB: 0, leftY: 1, leftR: 2, leftB: 0, centerY: 0, centerR: 1, centerB: 2, partner: "2137A", opponentOne: "355Z", opponentTwo: "1064G" },
-    { daysAgo: 21, teamAlliance: "blue", auton: "none", redRobots: 1, blueRobots: 1, topToggle: "neutral", rightToggle: "blue", bottomToggle: "red", leftToggle: "red", topY: 1, topR: 1, topB: 2, rightY: 1, rightR: 0, rightB: 1, bottomY: 3, bottomR: 2, bottomB: 0, leftY: 2, leftR: 3, leftB: 0, centerY: 1, centerR: 1, centerB: 1, partner: "1000A", opponentOne: "1468A", opponentTwo: "1584V" },
-    { daysAgo: 34, teamAlliance: "red", auton: "red", redRobots: 2, blueRobots: 0, topToggle: "red", rightToggle: "blue", bottomToggle: "red", leftToggle: "red", topY: 0, topR: 2, topB: 2, rightY: 1, rightR: 0, rightB: 2, bottomY: 2, bottomR: 4, bottomB: 0, leftY: 2, leftR: 3, leftB: 0, centerY: 1, centerR: 2, centerB: 0, partner: "10K", opponentOne: "1069A", opponentTwo: "1698V" }
-  ];
-
+  const headSeeds = Array.from({ length: 28 }, (_, index) => sampleHeadSeed(index, 28));
   const skillsSeeds = [
-    { daysAgo: 0, skillsType: "driver", centerToggle: true, topToggle: "blue", rightToggle: "blue", bottomToggle: "red", leftToggle: "red", topY: 2, topB: 4, rightY: 1, rightB: 3, bottomY: 2, bottomR: 3, leftY: 1, leftR: 2, centerY: 2, centerR: 1, centerB: 1, notes: "Clean route, good midfield finish." },
-    { daysAgo: 2, skillsType: "autonomous", centerToggle: true, topToggle: "blue", rightToggle: "neutral", bottomToggle: "red", leftToggle: "red", topY: 1, topB: 2, rightY: 2, rightB: 1, bottomY: 1, bottomR: 2, leftY: 2, leftR: 2, centerY: 1, centerR: 1, centerB: 0, notes: "Auton route got the center robot bonus." },
-    { daysAgo: 4, skillsType: "driver", centerToggle: false, topToggle: "blue", rightToggle: "blue", bottomToggle: "neutral", leftToggle: "red", topY: 1, topB: 3, rightY: 2, rightB: 4, bottomY: 1, bottomR: 2, leftY: 0, leftR: 2, centerY: 2, centerR: 1, centerB: 1, notes: "Missed midfield ownership at end." },
-    { daysAgo: 9, skillsType: "autonomous", centerToggle: false, topToggle: "neutral", rightToggle: "blue", bottomToggle: "red", leftToggle: "neutral", topY: 1, topB: 2, rightY: 1, rightB: 2, bottomY: 1, bottomR: 1, leftY: 1, leftR: 1, centerY: 0, centerR: 1, centerB: 0, notes: "Early auton baseline." },
-    { daysAgo: 16, skillsType: "driver", centerToggle: true, topToggle: "blue", rightToggle: "blue", bottomToggle: "red", leftToggle: "red", topY: 3, topB: 4, rightY: 2, rightB: 3, bottomY: 2, bottomR: 4, leftY: 2, leftR: 3, centerY: 1, centerR: 1, centerB: 2, notes: "Best driver run so far." },
-    { daysAgo: 31, skillsType: "autonomous", centerToggle: true, topToggle: "blue", rightToggle: "blue", bottomToggle: "red", leftToggle: "red", topY: 0, topB: 1, rightY: 1, rightB: 1, bottomY: 1, bottomR: 1, leftY: 1, leftR: 1, centerY: 1, centerR: 0, centerB: 1, notes: "Older auton sample outside 30 days." }
+    ...Array.from({ length: 12 }, (_, index) => sampleSkillsSeed(index, 12, "driver")),
+    ...Array.from({ length: 10 }, (_, index) => sampleSkillsSeed(index, 10, "autonomous"))
   ];
 
   const nextMatches = [
-    ...savedMatches(),
+    ...savedMatches().filter(record => !String(record.id || "").startsWith("dev-")),
     ...headSeeds.map(createSampleHeadRecord),
     ...skillsSeeds.map(createSampleSkillsRecord)
   ];
@@ -1715,7 +1788,7 @@ function seedSampleData() {
   renderHistory();
   renderSkillsHistory();
   renderAnalysis();
-  showToast("Sample dev data added.");
+  showToast("Sample dev data rebuilt.");
 }
 
 function showToast(message) {
@@ -2075,7 +2148,19 @@ function recentFormDetail(stats) {
   if (!Number.isFinite(stats.recentMean) || !Number.isFinite(stats.mean)) return "";
   const delta = stats.recentMean - stats.mean;
   const sign = delta > 0 ? "+" : "";
-  return `${stats.recentCount} recent, ${sign}${formatAnalysisNumber(delta)} vs range avg`;
+  return `last ${stats.recentCount}, ${sign}${formatAnalysisNumber(delta)} vs range avg`;
+}
+
+function renderAnalysisMode() {
+  $$("[data-analysis-mode]").forEach((button) => {
+    button.setAttribute("aria-pressed", String(button.dataset.analysisMode === analysisMode));
+  });
+
+  $$("[data-analysis-section]").forEach((section) => {
+    const isActive = section.dataset.analysisSection === analysisMode;
+    section.hidden = !isActive;
+    section.classList.toggle("is-active-analysis-section", isActive);
+  });
 }
 
 function renderAnalysisRange() {
@@ -2085,6 +2170,168 @@ function renderAnalysisRange() {
 
   const custom = $("[data-analysis-custom]");
   if (custom) custom.hidden = analysisRange !== "custom";
+}
+
+function ourAlliancePins(match) {
+  const alliance = match.teamAlliance;
+  if (alliance !== "red" && alliance !== "blue") return null;
+  const scorer = match.scorer || {};
+  return quadrants.reduce((total, quadrant) => {
+    const q = scorer.quadrants?.[quadrant] || {};
+    return total + numericValue(q[alliance]);
+  }, 0);
+}
+
+function opponentAlliancePins(match) {
+  const alliance = match.teamAlliance === "red" ? "blue" : match.teamAlliance === "blue" ? "red" : null;
+  if (!alliance) return null;
+  const scorer = match.scorer || {};
+  return quadrants.reduce((total, quadrant) => {
+    const q = scorer.quadrants?.[quadrant] || {};
+    return total + numericValue(q[alliance]);
+  }, 0);
+}
+
+function ownedYellowPins(match, alliance = match.teamAlliance) {
+  if (alliance !== "red" && alliance !== "blue") return null;
+  const scorer = match.scorer || {};
+  const centerOwner = midpointOwnerFromRobots(scorer.robots || {});
+  return quadrants.reduce((total, quadrant) => {
+    const q = scorer.quadrants?.[quadrant] || {};
+    const owner = quadrant === "center" ? centerOwner : q.toggle;
+    return owner === alliance ? total + numericValue(q.yellow) : total;
+  }, 0);
+}
+
+function ourMidfieldRobots(match) {
+  const alliance = match.teamAlliance;
+  if (alliance !== "red" && alliance !== "blue") return null;
+  return Object.entries(match.scorer?.robots || {}).reduce((total, [robotId, active]) => {
+    return active && robotId.startsWith(alliance) ? total + 1 : total;
+  }, 0);
+}
+
+function autonPoints(match) {
+  const auton = match.scorer?.auton || match.auton;
+  const alliance = match.teamAlliance;
+  if (auton === "tie") return POINTS.autonTie;
+  if (auton === alliance) return POINTS.auton;
+  return 0;
+}
+
+function skillsRedBluePins(run) {
+  const q = run.skills?.quadrants || {};
+  return skillsQuadrants.reduce((total, quadrant) => {
+    return total + numericValue(q[quadrant]?.red) + numericValue(q[quadrant]?.blue);
+  }, 0);
+}
+
+function skillsYellowPins(run) {
+  const q = run.skills?.quadrants || {};
+  return skillsQuadrants.reduce((total, quadrant) => total + numericValue(q[quadrant]?.yellow), 0);
+}
+
+function skillsScoredYellowPins(run) {
+  const q = run.skills?.quadrants || {};
+  const toggles = run.skills?.toggles || {};
+  let total = 0;
+  if (toggles.left === "red") total += numericValue(q.left?.yellow);
+  if (toggles.bottom === "red") total += numericValue(q.bottom?.yellow);
+  if (toggles.top === "blue") total += numericValue(q.top?.yellow);
+  if (toggles.right === "blue") total += numericValue(q.right?.yellow);
+  if (run.skills?.centerToggle) total += numericValue(q.center?.yellow);
+  return total;
+}
+
+const headCorrelationOptions = [
+  { key: "ourScore", label: "Our score", get: match => numericValue(match.ourScore) },
+  { key: "opponentScore", label: "Opponent score", get: match => numericValue(match.opponentScore) },
+  { key: "margin", label: "Score margin", get: match => numericValue(match.ourScore) - numericValue(match.opponentScore) },
+  { key: "win", label: "Win result", get: match => match.result === "win" ? 1 : match.result === "loss" ? 0 : .5 },
+  { key: "alliancePins", label: "Our red/blue pins", get: ourAlliancePins },
+  { key: "opponentPins", label: "Opponent red/blue pins", get: opponentAlliancePins },
+  { key: "ownedYellow", label: "Our owned yellow pins", get: match => ownedYellowPins(match) },
+  { key: "midfieldRobots", label: "Our midfield robots", get: ourMidfieldRobots },
+  { key: "autonPoints", label: "Auton points", get: autonPoints }
+];
+
+const skillsCorrelationOptions = [
+  { key: "score", label: "Skills score", get: run => numericValue(run.score) },
+  { key: "redBluePins", label: "Red/blue pins", get: skillsRedBluePins },
+  { key: "yellowPins", label: "Yellow pins placed", get: skillsYellowPins },
+  { key: "scoredYellow", label: "Scored yellow pins", get: skillsScoredYellowPins },
+  { key: "midfield", label: "Midfield robot", get: run => run.skills?.centerToggle ? 1 : 0 },
+  { key: "driverRun", label: "Driver run", get: run => run.skillsType === "driver" ? 1 : 0 },
+  { key: "autonRun", label: "Autonomous run", get: run => run.skillsType === "autonomous" ? 1 : 0 }
+];
+
+function correlationOptionsHtml(options, selected) {
+  return options.map(option => `
+    <option value="${escapeHtml(option.key)}" ${option.key === selected ? "selected" : ""}>${escapeHtml(option.label)}</option>
+  `).join("");
+}
+
+function pearsonCorrelation(pairs) {
+  if (pairs.length < 3) return null;
+  const xs = pairs.map(pair => pair.x);
+  const ys = pairs.map(pair => pair.y);
+  const meanX = average(xs);
+  const meanY = average(ys);
+  let numerator = 0;
+  let denomX = 0;
+  let denomY = 0;
+  pairs.forEach(({ x, y }) => {
+    const dx = x - meanX;
+    const dy = y - meanY;
+    numerator += dx * dy;
+    denomX += dx * dx;
+    denomY += dy * dy;
+  });
+  const denominator = Math.sqrt(denomX * denomY);
+  if (!denominator) return null;
+  return numerator / denominator;
+}
+
+function correlationLabel(value) {
+  if (!Number.isFinite(value)) return "Not enough variation yet";
+  const strength = Math.abs(value);
+  const direction = value > 0 ? "positive" : value < 0 ? "negative" : "flat";
+  if (strength >= .75) return `Strong ${direction}`;
+  if (strength >= .45) return `Moderate ${direction}`;
+  if (strength >= .22) return `Weak ${direction}`;
+  return "Little relationship";
+}
+
+function renderCorrelation(records, options, selectedX, selectedY, mode) {
+  const optionX = options.find(option => option.key === selectedX) || options[0];
+  const optionY = options.find(option => option.key === selectedY) || options[1] || options[0];
+  const pairs = records
+    .map(record => ({ x: numericValue(optionX.get(record)), y: numericValue(optionY.get(record)) }))
+    .filter(pair => Number.isFinite(pair.x) && Number.isFinite(pair.y));
+  const r = pearsonCorrelation(pairs);
+  const prettyR = Number.isFinite(r) ? r.toFixed(2) : "--";
+
+  return `
+    <div class="analysis-trend-head">
+      <span>Correlation builder</span>
+      <small>Uses this date range</small>
+    </div>
+    <div class="analysis-correlation-controls">
+      <label>
+        <span>Compare</span>
+        <select data-correlation-axis="${mode}:x">${correlationOptionsHtml(options, optionX.key)}</select>
+      </label>
+      <label>
+        <span>Against</span>
+        <select data-correlation-axis="${mode}:y">${correlationOptionsHtml(options, optionY.key)}</select>
+      </label>
+    </div>
+    <div class="analysis-correlation-result">
+      <strong>${correlationLabel(r)}</strong>
+      <span>r = ${prettyR} from ${pairs.length} saved ${mode === "head" ? "matches" : "runs"}</span>
+      <small>Positive means the two numbers rise together. Negative means one tends to rise when the other falls.</small>
+    </div>
+  `;
 }
 
 function sparklineSvg(records, scoreGetter) {
@@ -2126,30 +2373,13 @@ function sparklineSvg(records, scoreGetter) {
   `;
 }
 
-function trendList(records, scoreGetter) {
-  const rows = records
-    .slice()
-    .sort((a, b) => recordTimestamp(b) - recordTimestamp(a))
-    .slice(0, 5)
-    .map((record) => `
-      <li>
-        <span>${formatMatchDate(record)}</span>
-        <strong>${formatAnalysisNumber(numericValue(scoreGetter(record)))}</strong>
-      </li>
-    `)
-    .join("");
-
-  return rows ? `<ul class="analysis-trend-list">${rows}</ul>` : "";
-}
-
 function renderTrend(records, scoreGetter) {
   return `
     <div class="analysis-trend-head">
-      <span>Trend</span>
-      <small>Newest 5 listed below</small>
+      <span>Score trend</span>
+      <small>Each dot is one saved record, oldest to newest.</small>
     </div>
     ${sparklineSvg(records, scoreGetter)}
-    ${trendList(records, scoreGetter)}
   `;
 }
 
@@ -2158,13 +2388,15 @@ function renderHeadAnalysis(allMatches, matches) {
   const count = $("[data-analysis-head-count]");
   const statsWrap = $("[data-analysis-head-stats]");
   const trendWrap = $("[data-analysis-head-trend]");
-  if (!summary || !count || !statsWrap || !trendWrap) return;
+  const correlationWrap = $("[data-analysis-head-correlation]");
+  if (!summary || !count || !statsWrap || !trendWrap || !correlationWrap) return;
 
   count.textContent = `${matches.length} ${matches.length === 1 ? "match" : "matches"}`;
   if (!allMatches.length) {
-    summary.textContent = "Save matches or Skills runs to unlock analysis.";
+    summary.textContent = "Save matches to unlock head-on-head analysis.";
     statsWrap.innerHTML = `<p class="analysis-empty">Save head-on-head matches to unlock this panel.</p>`;
     trendWrap.innerHTML = "";
+    correlationWrap.innerHTML = "";
     return;
   }
 
@@ -2172,6 +2404,7 @@ function renderHeadAnalysis(allMatches, matches) {
     summary.textContent = "No saved data in this range.";
     statsWrap.innerHTML = `<p class="analysis-empty">No saved data in this range.</p>`;
     trendWrap.innerHTML = "";
+    correlationWrap.innerHTML = "";
     return;
   }
 
@@ -2188,9 +2421,10 @@ function renderHeadAnalysis(allMatches, matches) {
     analysisStat("Best", formatAnalysisNumber(stats.best)),
     analysisStat("Median", formatAnalysisNumber(stats.median)),
     analysisStat("Worst", formatAnalysisNumber(stats.worst)),
-    analysisStat("Recent form", formatAnalysisNumber(stats.recentMean), recentFormDetail(stats))
+    analysisStat("Last 5 average", formatAnalysisNumber(stats.recentMean), recentFormDetail(stats))
   ].join("");
   trendWrap.innerHTML = renderTrend(matches, match => match.ourScore);
+  correlationWrap.innerHTML = renderCorrelation(matches, headCorrelationOptions, headCorrelationX, headCorrelationY, "head");
 }
 
 function renderSkillsAnalysis(allRuns, runs) {
@@ -2199,14 +2433,16 @@ function renderSkillsAnalysis(allRuns, runs) {
   const statsWrap = $("[data-analysis-skills-stats]");
   const splitWrap = $("[data-analysis-skills-split]");
   const trendWrap = $("[data-analysis-skills-trend]");
-  if (!summary || !count || !statsWrap || !splitWrap || !trendWrap) return;
+  const correlationWrap = $("[data-analysis-skills-correlation]");
+  if (!summary || !count || !statsWrap || !splitWrap || !trendWrap || !correlationWrap) return;
 
   count.textContent = `${runs.length} ${runs.length === 1 ? "run" : "runs"}`;
   if (!allRuns.length) {
-    summary.textContent = "Save matches or Skills runs to unlock analysis.";
+    summary.textContent = "Save Skills runs to unlock Skills analysis.";
     statsWrap.innerHTML = `<p class="analysis-empty">Save Skills runs to unlock this panel.</p>`;
     splitWrap.innerHTML = "";
     trendWrap.innerHTML = "";
+    correlationWrap.innerHTML = "";
     return;
   }
 
@@ -2215,6 +2451,7 @@ function renderSkillsAnalysis(allRuns, runs) {
     statsWrap.innerHTML = `<p class="analysis-empty">No saved data in this range.</p>`;
     splitWrap.innerHTML = "";
     trendWrap.innerHTML = "";
+    correlationWrap.innerHTML = "";
     return;
   }
 
@@ -2239,7 +2476,7 @@ function renderSkillsAnalysis(allRuns, runs) {
     analysisStat("Best", formatAnalysisNumber(stats.best)),
     analysisStat("Median", formatAnalysisNumber(stats.median)),
     analysisStat("Worst", formatAnalysisNumber(stats.worst)),
-    analysisStat("Recent form", formatAnalysisNumber(stats.recentMean), recentFormDetail(stats))
+    analysisStat("Last 5 average", formatAnalysisNumber(stats.recentMean), recentFormDetail(stats))
   ].join("");
   splitWrap.innerHTML = `
     <div class="analysis-trend-head">
@@ -2255,9 +2492,11 @@ function renderSkillsAnalysis(allRuns, runs) {
     </div>
   `;
   trendWrap.innerHTML = renderTrend(runs, run => run.score);
+  correlationWrap.innerHTML = renderCorrelation(runs, skillsCorrelationOptions, skillsCorrelationX, skillsCorrelationY, "skills");
 }
 
 function renderAnalysis() {
+  renderAnalysisMode();
   renderAnalysisRange();
   const headMatches = sortedHeadMatches();
   const skillsRuns = sortedSkillsRuns();
@@ -2959,8 +3198,26 @@ $$("[data-analysis-range]").forEach((button) => {
   });
 });
 
+$$("[data-analysis-mode]").forEach((button) => {
+  button.addEventListener("click", () => {
+    analysisMode = button.dataset.analysisMode === "skills" ? "skills" : "head";
+    renderAnalysis();
+  });
+});
+
 $("[data-analysis-start]")?.addEventListener("change", renderAnalysis);
 $("[data-analysis-end]")?.addEventListener("change", renderAnalysis);
+
+document.addEventListener("change", (event) => {
+  const select = event.target.closest("[data-correlation-axis]");
+  if (!select) return;
+  const [mode, axis] = select.dataset.correlationAxis.split(":");
+  if (mode === "head" && axis === "x") headCorrelationX = select.value;
+  if (mode === "head" && axis === "y") headCorrelationY = select.value;
+  if (mode === "skills" && axis === "x") skillsCorrelationX = select.value;
+  if (mode === "skills" && axis === "y") skillsCorrelationY = select.value;
+  renderAnalysis();
+});
 
 $("[data-team-skills-search-form]")?.addEventListener("submit", (event) => {
   event.preventDefault();
