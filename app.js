@@ -1541,6 +1541,183 @@ function createSkillsRunRecord(notes = "") {
   };
 }
 
+function midpointOwnerFromRobots(robots = {}) {
+  const red = Number(Boolean(robots["red-1"])) + Number(Boolean(robots["red-2"]));
+  const blue = Number(Boolean(robots["blue-1"])) + Number(Boolean(robots["blue-2"]));
+  if (red > blue) return "red";
+  if (blue > red) return "blue";
+  return "neutral";
+}
+
+function scoreScorerSnapshot(scorer, alliance) {
+  let score = 0;
+  const centerOwner = midpointOwnerFromRobots(scorer.robots);
+
+  if (scorer.auton === alliance) score += POINTS.auton;
+  if (scorer.auton === "tie") score += POINTS.autonTie;
+
+  quadrants.forEach((quadrant) => {
+    const q = scorer.quadrants?.[quadrant] || { toggle: "neutral", yellow: 0, red: 0, blue: 0 };
+    score += Number(q[alliance] || 0) * POINTS.alliancePin;
+    const owner = quadrant === "center" ? centerOwner : q.toggle;
+    if (owner === alliance) score += Number(q.yellow || 0) * POINTS.yellowPin;
+  });
+
+  Object.entries(scorer.robots || {}).forEach(([robotId, active]) => {
+    if (active && robotId.startsWith(alliance)) score += POINTS.midfieldRobot;
+  });
+
+  return score;
+}
+
+function scoreSkillsSnapshot(snapshot) {
+  const q = snapshot.quadrants;
+  let score = 0;
+
+  score += (q.left.red + q.bottom.red + q.center.red) * POINTS.alliancePin;
+  score += (q.top.blue + q.right.blue + q.center.blue) * POINTS.alliancePin;
+
+  if (snapshot.toggles.left === "red") score += q.left.yellow * POINTS.yellowPin;
+  if (snapshot.toggles.bottom === "red") score += q.bottom.yellow * POINTS.yellowPin;
+  if (snapshot.toggles.top === "blue") score += q.top.yellow * POINTS.yellowPin;
+  if (snapshot.toggles.right === "blue") score += q.right.yellow * POINTS.yellowPin;
+
+  if (snapshot.centerToggle) {
+    score += POINTS.midfieldRobot;
+    score += q.center.yellow * POINTS.yellowPin;
+  }
+
+  return score;
+}
+
+function sampleSavedDate(date) {
+  return date.toLocaleDateString(undefined, {
+    year: "numeric",
+    month: "short",
+    day: "numeric"
+  });
+}
+
+function daysAgo(days) {
+  const date = new Date();
+  date.setDate(date.getDate() - days);
+  date.setHours(16 + (days % 5), (days * 7) % 60, 0, 0);
+  return date;
+}
+
+function sampleQuadrants(seed) {
+  return {
+    top: { toggle: seed.topToggle, yellow: seed.topY, red: seed.topR, blue: seed.topB },
+    right: { toggle: seed.rightToggle, yellow: seed.rightY, red: seed.rightR, blue: seed.rightB },
+    bottom: { toggle: seed.bottomToggle, yellow: seed.bottomY, red: seed.bottomR, blue: seed.bottomB },
+    left: { toggle: seed.leftToggle, yellow: seed.leftY, red: seed.leftR, blue: seed.leftB },
+    center: { toggle: "neutral", yellow: seed.centerY, red: seed.centerR, blue: seed.centerB }
+  };
+}
+
+function createSampleHeadRecord(seed) {
+  const savedAt = daysAgo(seed.daysAgo);
+  const scorer = {
+    auton: seed.auton,
+    robots: {
+      "red-1": seed.redRobots >= 1,
+      "red-2": seed.redRobots >= 2,
+      "blue-1": seed.blueRobots >= 1,
+      "blue-2": seed.blueRobots >= 2
+    },
+    quadrants: sampleQuadrants(seed)
+  };
+  const redScore = scoreScorerSnapshot(scorer, "red");
+  const blueScore = scoreScorerSnapshot(scorer, "blue");
+  const ourScore = seed.teamAlliance === "red" ? redScore : blueScore;
+  const opponentScore = seed.teamAlliance === "red" ? blueScore : redScore;
+
+  return {
+    id: `dev-head-${savedAt.getTime()}-${Math.random().toString(16).slice(2)}`,
+    savedAt: savedAt.toISOString(),
+    savedDate: sampleSavedDate(savedAt),
+    teamNumber: profile?.teamNumber || "4330P",
+    teamAlliance: seed.teamAlliance,
+    redScore,
+    blueScore,
+    ourScore,
+    opponentScore,
+    result: matchResult(ourScore, opponentScore),
+    scorer,
+    details: {
+      ...blankDetails(),
+      partnerTeam: seed.partner || "",
+      opponentOne: seed.opponentOne || "",
+      opponentTwo: seed.opponentTwo || ""
+    }
+  };
+}
+
+function createSampleSkillsRecord(seed) {
+  const savedAt = daysAgo(seed.daysAgo);
+  const skills = {
+    centerToggle: seed.centerToggle,
+    toggles: {
+      top: seed.topToggle,
+      right: seed.rightToggle,
+      bottom: seed.bottomToggle,
+      left: seed.leftToggle
+    },
+    quadrants: {
+      top: { yellow: seed.topY, red: 0, blue: seed.topB },
+      right: { yellow: seed.rightY, red: 0, blue: seed.rightB },
+      bottom: { yellow: seed.bottomY, red: seed.bottomR, blue: 0 },
+      left: { yellow: seed.leftY, red: seed.leftR, blue: 0 },
+      center: { yellow: seed.centerY, red: seed.centerR, blue: seed.centerB }
+    }
+  };
+
+  return {
+    id: `dev-skills-${savedAt.getTime()}-${Math.random().toString(16).slice(2)}`,
+    mode: "skills",
+    savedAt: savedAt.toISOString(),
+    savedDate: sampleSavedDate(savedAt),
+    teamNumber: profile?.teamNumber || "4330P",
+    skillsType: seed.skillsType,
+    score: scoreSkillsSnapshot(skills),
+    skills,
+    notes: seed.notes || ""
+  };
+}
+
+function seedSampleData() {
+  const headSeeds = [
+    { daysAgo: 0, teamAlliance: "blue", auton: "blue", redRobots: 1, blueRobots: 2, topToggle: "blue", rightToggle: "blue", bottomToggle: "red", leftToggle: "red", topY: 2, topR: 0, topB: 4, rightY: 1, rightR: 1, rightB: 3, bottomY: 1, bottomR: 2, bottomB: 0, leftY: 2, leftR: 3, leftB: 0, centerY: 1, centerR: 0, centerB: 2, partner: "355V", opponentOne: "169A", opponentTwo: "227R" },
+    { daysAgo: 1, teamAlliance: "red", auton: "red", redRobots: 2, blueRobots: 1, topToggle: "blue", rightToggle: "neutral", bottomToggle: "red", leftToggle: "red", topY: 0, topR: 1, topB: 2, rightY: 1, rightR: 0, rightB: 2, bottomY: 3, bottomR: 4, bottomB: 0, leftY: 2, leftR: 2, leftB: 1, centerY: 1, centerR: 1, centerB: 0, partner: "2055A", opponentOne: "10B", opponentTwo: "32C" },
+    { daysAgo: 3, teamAlliance: "blue", auton: "red", redRobots: 2, blueRobots: 1, topToggle: "red", rightToggle: "blue", bottomToggle: "red", leftToggle: "neutral", topY: 1, topR: 2, topB: 1, rightY: 2, rightR: 0, rightB: 2, bottomY: 2, bottomR: 3, bottomB: 1, leftY: 1, leftR: 4, leftB: 0, centerY: 0, centerR: 1, centerB: 1, partner: "96Z", opponentOne: "355T", opponentTwo: "471B" },
+    { daysAgo: 5, teamAlliance: "red", auton: "tie", redRobots: 1, blueRobots: 1, topToggle: "blue", rightToggle: "blue", bottomToggle: "red", leftToggle: "blue", topY: 2, topR: 0, topB: 3, rightY: 2, rightR: 1, rightB: 3, bottomY: 1, bottomR: 2, bottomB: 1, leftY: 0, leftR: 2, leftB: 1, centerY: 2, centerR: 1, centerB: 1, partner: "169C", opponentOne: "663A", opponentTwo: "1028A" },
+    { daysAgo: 8, teamAlliance: "blue", auton: "blue", redRobots: 0, blueRobots: 2, topToggle: "blue", rightToggle: "blue", bottomToggle: "neutral", leftToggle: "red", topY: 3, topR: 0, topB: 5, rightY: 2, rightR: 0, rightB: 4, bottomY: 0, bottomR: 1, bottomB: 0, leftY: 1, leftR: 1, leftB: 0, centerY: 1, centerR: 0, centerB: 2, partner: "169R", opponentOne: "88S", opponentTwo: "886S" },
+    { daysAgo: 13, teamAlliance: "red", auton: "blue", redRobots: 1, blueRobots: 2, topToggle: "blue", rightToggle: "red", bottomToggle: "red", leftToggle: "red", topY: 1, topR: 0, topB: 2, rightY: 0, rightR: 2, rightB: 1, bottomY: 2, bottomR: 3, bottomB: 0, leftY: 1, leftR: 2, leftB: 0, centerY: 0, centerR: 1, centerB: 2, partner: "2137A", opponentOne: "355Z", opponentTwo: "1064G" },
+    { daysAgo: 21, teamAlliance: "blue", auton: "none", redRobots: 1, blueRobots: 1, topToggle: "neutral", rightToggle: "blue", bottomToggle: "red", leftToggle: "red", topY: 1, topR: 1, topB: 2, rightY: 1, rightR: 0, rightB: 1, bottomY: 3, bottomR: 2, bottomB: 0, leftY: 2, leftR: 3, leftB: 0, centerY: 1, centerR: 1, centerB: 1, partner: "1000A", opponentOne: "1468A", opponentTwo: "1584V" },
+    { daysAgo: 34, teamAlliance: "red", auton: "red", redRobots: 2, blueRobots: 0, topToggle: "red", rightToggle: "blue", bottomToggle: "red", leftToggle: "red", topY: 0, topR: 2, topB: 2, rightY: 1, rightR: 0, rightB: 2, bottomY: 2, bottomR: 4, bottomB: 0, leftY: 2, leftR: 3, leftB: 0, centerY: 1, centerR: 2, centerB: 0, partner: "10K", opponentOne: "1069A", opponentTwo: "1698V" }
+  ];
+
+  const skillsSeeds = [
+    { daysAgo: 0, skillsType: "driver", centerToggle: true, topToggle: "blue", rightToggle: "blue", bottomToggle: "red", leftToggle: "red", topY: 2, topB: 4, rightY: 1, rightB: 3, bottomY: 2, bottomR: 3, leftY: 1, leftR: 2, centerY: 2, centerR: 1, centerB: 1, notes: "Clean route, good midfield finish." },
+    { daysAgo: 2, skillsType: "autonomous", centerToggle: true, topToggle: "blue", rightToggle: "neutral", bottomToggle: "red", leftToggle: "red", topY: 1, topB: 2, rightY: 2, rightB: 1, bottomY: 1, bottomR: 2, leftY: 2, leftR: 2, centerY: 1, centerR: 1, centerB: 0, notes: "Auton route got the center robot bonus." },
+    { daysAgo: 4, skillsType: "driver", centerToggle: false, topToggle: "blue", rightToggle: "blue", bottomToggle: "neutral", leftToggle: "red", topY: 1, topB: 3, rightY: 2, rightB: 4, bottomY: 1, bottomR: 2, leftY: 0, leftR: 2, centerY: 2, centerR: 1, centerB: 1, notes: "Missed midfield ownership at end." },
+    { daysAgo: 9, skillsType: "autonomous", centerToggle: false, topToggle: "neutral", rightToggle: "blue", bottomToggle: "red", leftToggle: "neutral", topY: 1, topB: 2, rightY: 1, rightB: 2, bottomY: 1, bottomR: 1, leftY: 1, leftR: 1, centerY: 0, centerR: 1, centerB: 0, notes: "Early auton baseline." },
+    { daysAgo: 16, skillsType: "driver", centerToggle: true, topToggle: "blue", rightToggle: "blue", bottomToggle: "red", leftToggle: "red", topY: 3, topB: 4, rightY: 2, rightB: 3, bottomY: 2, bottomR: 4, leftY: 2, leftR: 3, centerY: 1, centerR: 1, centerB: 2, notes: "Best driver run so far." },
+    { daysAgo: 31, skillsType: "autonomous", centerToggle: true, topToggle: "blue", rightToggle: "blue", bottomToggle: "red", leftToggle: "red", topY: 0, topB: 1, rightY: 1, rightB: 1, bottomY: 1, bottomR: 1, leftY: 1, leftR: 1, centerY: 1, centerR: 0, centerB: 1, notes: "Older auton sample outside 30 days." }
+  ];
+
+  const nextMatches = [
+    ...savedMatches(),
+    ...headSeeds.map(createSampleHeadRecord),
+    ...skillsSeeds.map(createSampleSkillsRecord)
+  ];
+  writeSavedMatches(nextMatches);
+  renderHistory();
+  renderSkillsHistory();
+  renderAnalysis();
+  showToast("Sample dev data added.");
+}
+
 function showToast(message) {
   const toast = $("[data-toast]");
   if (!toast) return;
@@ -2564,6 +2741,7 @@ document.addEventListener("click", (event) => {
 
   if (isDevMode && event.target.closest("[data-dev-clear-matches]")) clearMatches();
   if (isDevMode && event.target.closest("[data-dev-clear-all]")) wipeAllData();
+  if (isDevMode && event.target.closest("[data-dev-seed-matches]")) seedSampleData();
 
   const devDelete = event.target.closest("[data-dev-delete-match]");
   if (isDevMode && devDelete) deleteMatch(devDelete.dataset.devDeleteMatch);
