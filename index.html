@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Override Scoring Prototype</title>
   <meta name="description" content="Interactive VEX V5 Override scoring prototype." />
-  <link rel="stylesheet" href="./styles.css?v=scouting-region-detail-cleanup-20260823-1" />
+  <link rel="stylesheet" href="./styles.css?v=analysis-tab-20260824-1" />
 </head>
 <body>
   <main class="score-app">
@@ -35,7 +35,63 @@
       <button class="mode-choice" type="button" data-mode-choice="head" aria-pressed="true">Head-on-head</button>
       <button class="mode-choice" type="button" data-mode-choice="skills" aria-pressed="false">Skills</button>
       <button class="mode-choice" type="button" data-mode-choice="scouting" aria-pressed="false">Scouting</button>
+      <button class="mode-choice" type="button" data-mode-choice="analysis" aria-pressed="false">Analysis</button>
     </nav>
+
+    <section class="analysis-panel" data-mode-section="analysis" aria-labelledby="analysisTitle" hidden>
+      <div class="analysis-head">
+        <div>
+          <span class="brand-kicker">Local performance</span>
+          <h2 id="analysisTitle">My Performance</h2>
+          <p>Score trends from saved matches and Skills runs on this device.</p>
+        </div>
+        <div class="analysis-range" aria-label="Analysis date range">
+          <button type="button" data-analysis-range="today" aria-pressed="false">Today</button>
+          <button type="button" data-analysis-range="7" aria-pressed="false">7 days</button>
+          <button type="button" data-analysis-range="30" aria-pressed="false">30 days</button>
+          <button type="button" data-analysis-range="all" aria-pressed="true">All time</button>
+          <button type="button" data-analysis-range="custom" aria-pressed="false">Custom</button>
+        </div>
+      </div>
+
+      <div class="analysis-custom-range" data-analysis-custom hidden>
+        <label>
+          <span>Start</span>
+          <input type="date" data-analysis-start />
+        </label>
+        <label>
+          <span>End</span>
+          <input type="date" data-analysis-end />
+        </label>
+      </div>
+
+      <div class="analysis-grid">
+        <article class="analysis-card analysis-card-wide">
+          <div class="analysis-card-head">
+            <div>
+              <h3>Head-on-head</h3>
+              <p data-analysis-head-summary>Save matches to unlock head-on-head analysis.</p>
+            </div>
+            <span class="analysis-pill" data-analysis-head-count>0 matches</span>
+          </div>
+          <div class="analysis-stats" data-analysis-head-stats></div>
+          <div class="analysis-trend" data-analysis-head-trend></div>
+        </article>
+
+        <article class="analysis-card analysis-card-wide">
+          <div class="analysis-card-head">
+            <div>
+              <h3>Skills</h3>
+              <p data-analysis-skills-summary>Save Skills runs to unlock Skills analysis.</p>
+            </div>
+            <span class="analysis-pill" data-analysis-skills-count>0 runs</span>
+          </div>
+          <div class="analysis-stats" data-analysis-skills-stats></div>
+          <div class="analysis-split" data-analysis-skills-split></div>
+          <div class="analysis-trend" data-analysis-skills-trend></div>
+        </article>
+      </div>
+    </section>
 
     <section class="scouting-panel" data-mode-section="scouting" aria-label="Scouting and official data" hidden>
       <section class="team-skills-search" aria-labelledby="teamSkillsTitle">
@@ -452,6 +508,6 @@
   </div>
 
   <div class="toast" data-toast role="status" aria-live="polite"></div>
-  <script src="./app.js?v=region-broad-search-20260823-1"></script>
+  <script src="./app.js?v=analysis-tab-20260824-1"></script>
 </body>
 </html>

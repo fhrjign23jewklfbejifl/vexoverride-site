@@ -161,9 +161,9 @@ button {
 
 .mode-switch {
   justify-self: center;
-  width: min(560px, 100%);
+  width: min(720px, 100%);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 4px;
   padding: 5px;
   border: 1px solid rgba(255, 255, 255, .13);
@@ -203,6 +203,263 @@ button {
 .scouting-panel {
   display: grid;
   gap: 14px;
+}
+
+.analysis-panel {
+  display: grid;
+  gap: 14px;
+}
+
+.analysis-head,
+.analysis-card {
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, .060), rgba(255, 255, 255, .026)),
+    rgba(17, 28, 35, .70);
+  box-shadow: var(--soft-shadow);
+}
+
+.analysis-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 16px;
+  padding: 16px;
+}
+
+.analysis-head h2 {
+  margin: 2px 0 4px;
+  color: var(--white);
+  font-size: clamp(28px, 5vw, 48px);
+  line-height: .95;
+  letter-spacing: 0;
+}
+
+.analysis-head p,
+.analysis-card-head p {
+  margin: 0;
+  color: #b8cbd2;
+}
+
+.analysis-range {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(74px, 1fr));
+  gap: 5px;
+  padding: 5px;
+  border: 1px solid rgba(255, 255, 255, .13);
+  border-radius: var(--radius-sm);
+  background: rgba(6, 16, 20, .54);
+}
+
+.analysis-range button {
+  min-height: 38px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: #b8cbd2;
+  background: transparent;
+  font-weight: 1000;
+  cursor: pointer;
+}
+
+.analysis-range button[aria-pressed="true"] {
+  color: #081513;
+  background: linear-gradient(135deg, #84f15e, #66d9d0);
+}
+
+.analysis-custom-range {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(160px, 1fr));
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid rgba(102, 217, 208, .18);
+  border-radius: var(--radius-sm);
+  background: rgba(102, 217, 208, .055);
+}
+
+.analysis-custom-range[hidden] {
+  display: none;
+}
+
+.analysis-custom-range label {
+  display: grid;
+  gap: 6px;
+  color: #a8d4df;
+  font-size: 12px;
+  font-weight: 1000;
+  text-transform: uppercase;
+}
+
+.analysis-custom-range input {
+  min-height: 42px;
+  border: 1px solid rgba(255, 255, 255, .15);
+  border-radius: var(--radius-sm);
+  color: var(--white);
+  background: rgba(255, 255, 255, .07);
+  padding: 0 12px;
+  font: inherit;
+}
+
+.analysis-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.analysis-card {
+  display: grid;
+  gap: 14px;
+  padding: 16px;
+}
+
+.analysis-card-head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 12px;
+}
+
+.analysis-card-head h3 {
+  margin: 0 0 4px;
+  color: var(--white);
+  font-size: 26px;
+  line-height: 1;
+}
+
+.analysis-pill {
+  justify-self: end;
+  padding: 8px 12px;
+  border: 1px solid rgba(102, 217, 208, .32);
+  border-radius: 999px;
+  color: #d4fff8;
+  background: rgba(102, 217, 208, .13);
+  font-size: 12px;
+  font-weight: 1000;
+  text-transform: uppercase;
+}
+
+.analysis-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.analysis-stats-tight {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.analysis-stat {
+  min-height: 84px;
+  display: grid;
+  align-content: center;
+  gap: 4px;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, .10);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, .055);
+}
+
+.analysis-stat span,
+.analysis-trend-head span {
+  color: #9db5c0;
+  font-size: 11px;
+  font-weight: 1000;
+  text-transform: uppercase;
+}
+
+.analysis-stat strong {
+  color: var(--white);
+  font-size: 28px;
+  line-height: 1;
+}
+
+.analysis-stat small,
+.analysis-trend-head small,
+.analysis-empty-mini {
+  color: #9db5c0;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.analysis-trend,
+.analysis-split {
+  display: grid;
+  gap: 8px;
+}
+
+.analysis-trend-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+}
+
+.analysis-sparkline {
+  width: 100%;
+  height: 92px;
+  display: block;
+  overflow: visible;
+  border: 1px solid rgba(255, 255, 255, .08);
+  border-radius: var(--radius-sm);
+  background:
+    linear-gradient(rgba(255, 255, 255, .035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, .025) 1px, transparent 1px),
+    rgba(6, 16, 20, .36);
+  background-size: 24px 24px;
+}
+
+.analysis-sparkline line {
+  stroke: rgba(255, 255, 255, .14);
+  stroke-width: 1;
+}
+
+.analysis-sparkline polyline {
+  fill: none;
+  stroke: #66d9d0;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 4px 10px rgba(102, 217, 208, .18));
+}
+
+.analysis-sparkline circle {
+  fill: #84f15e;
+  stroke: #102028;
+  stroke-width: 2;
+}
+
+.analysis-trend-list {
+  display: grid;
+  gap: 5px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.analysis-trend-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 7px 9px;
+  border-radius: 6px;
+  color: #b8cbd2;
+  background: rgba(255, 255, 255, .045);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.analysis-trend-list strong {
+  color: var(--white);
+}
+
+.analysis-empty {
+  margin: 0;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, .10);
+  border-radius: var(--radius-sm);
+  color: #b8cbd2;
+  background: rgba(255, 255, 255, .045);
+  font-weight: 900;
 }
 
 .competition-data,
@@ -2484,13 +2741,33 @@ body.modal-open {
   }
 
   .competition-head,
-  .competition-current-head {
+  .competition-current-head,
+  .analysis-head,
+  .analysis-card-head {
     grid-template-columns: 1fr;
   }
 
   .competition-source,
-  .competition-current-head strong {
+  .competition-current-head strong,
+  .analysis-pill {
     justify-self: start;
+  }
+
+  .analysis-range {
+    width: 100%;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .analysis-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .analysis-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .analysis-stats-tight {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .competition-search {
@@ -2681,9 +2958,36 @@ body.modal-open {
   }
 
   .competition-data,
-  .team-skills-search {
+  .team-skills-search,
+  .analysis-head,
+  .analysis-card {
     padding: 12px;
     border-radius: 16px;
+  }
+
+  .analysis-head h2 {
+    font-size: 32px;
+  }
+
+  .analysis-range {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .analysis-range button {
+    min-height: 36px;
+  }
+
+  .analysis-custom-range {
+    grid-template-columns: 1fr;
+  }
+
+  .analysis-stats,
+  .analysis-stats-tight {
+    grid-template-columns: 1fr;
+  }
+
+  .analysis-stat {
+    min-height: 68px;
   }
 
   .competition-result,

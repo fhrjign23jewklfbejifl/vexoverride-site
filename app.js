@@ -53,6 +53,7 @@ const $$ = (selector) => [...document.querySelectorAll(selector)];
 const isDevMode = new URLSearchParams(window.location.search).get("dev") === "1" || window.location.hash === "#dev";
 let profile = loadProfile();
 let activeMode = "head";
+let analysisRange = "all";
 let teamAlliance = "none";
 let skillsRunType = "none";
 let showAllHistory = false;
@@ -1623,6 +1624,7 @@ function saveCurrentMatch(details) {
   closeSaveModal();
   resetScorer();
   renderHistory();
+  renderAnalysis();
   showToast("Match saved on this device.");
 }
 
@@ -1646,6 +1648,7 @@ function saveCurrentSkillsRun(notes = "") {
   closeSkillsSaveModal();
   resetSkillsScorer();
   renderSkillsHistory();
+  renderAnalysis();
   showToast("Skills run saved on this device.");
 }
 
@@ -1677,7 +1680,7 @@ function initializeProfileGate() {
 }
 
 function setMode(mode) {
-  activeMode = ["head", "skills", "scouting"].includes(mode) ? mode : "head";
+  activeMode = ["head", "skills", "scouting", "analysis"].includes(mode) ? mode : "head";
   renderMode();
 }
 
@@ -1766,6 +1769,323 @@ function sortedHeadMatches() {
 
 function sortedSkillsRuns() {
   return sortedSavedMatches().filter(isSkillsRun);
+}
+
+function recordTimestamp(record) {
+  const timestamp = new Date(record?.savedAt || 0).getTime();
+  return Number.isFinite(timestamp) ? timestamp : 0;
+}
+
+function numericValue(value) {
+  const number = Number(value);
+  return Number.isFinite(number) ? number : null;
+}
+
+function localDayStart(date = new Date()) {
+  const next = new Date(date);
+  next.setHours(0, 0, 0, 0);
+  return next;
+}
+
+function dateInputStart(value) {
+  if (!value) return null;
+  const [year, month, day] = value.split("-").map(Number);
+  if (!year || !month || !day) return null;
+  return new Date(year, month - 1, day, 0, 0, 0, 0);
+}
+
+function dateInputEnd(value) {
+  const start = dateInputStart(value);
+  if (!start) return null;
+  const end = new Date(start);
+  end.setDate(end.getDate() + 1);
+  return end;
+}
+
+function analysisRangeBounds() {
+  const today = localDayStart();
+  const tomorrow = new Date(today);
+  tomorrow.setDate(tomorrow.getDate() + 1);
+
+  if (analysisRange === "today") {
+    return { start: today, end: tomorrow };
+  }
+
+  if (analysisRange === "7" || analysisRange === "30") {
+    const days = Number(analysisRange);
+    const start = new Date(today);
+    start.setDate(start.getDate() - (days - 1));
+    return { start, end: tomorrow };
+  }
+
+  if (analysisRange === "custom") {
+    return {
+      start: dateInputStart($("[data-analysis-start]")?.value || ""),
+      end: dateInputEnd($("[data-analysis-end]")?.value || "")
+    };
+  }
+
+  return { start: null, end: null };
+}
+
+function filterAnalysisRecords(records) {
+  const { start, end } = analysisRangeBounds();
+  const startTime = start ? start.getTime() : null;
+  const endTime = end ? end.getTime() : null;
+
+  return records.filter((record) => {
+    const timestamp = recordTimestamp(record);
+    if (!timestamp) return false;
+    if (startTime !== null && timestamp < startTime) return false;
+    if (endTime !== null && timestamp >= endTime) return false;
+    return true;
+  });
+}
+
+function average(values) {
+  const numbers = values.filter(value => Number.isFinite(value));
+  if (!numbers.length) return null;
+  return numbers.reduce((total, value) => total + value, 0) / numbers.length;
+}
+
+function median(values) {
+  const numbers = values.filter(value => Number.isFinite(value)).sort((a, b) => a - b);
+  if (!numbers.length) return null;
+  const middle = Math.floor(numbers.length / 2);
+  if (numbers.length % 2) return numbers[middle];
+  return (numbers[middle - 1] + numbers[middle]) / 2;
+}
+
+function formatAnalysisNumber(value, suffix = "") {
+  if (!Number.isFinite(value)) return "--";
+  const formatted = Number.isInteger(value) ? String(value) : value.toFixed(1).replace(/\.0$/, "");
+  return `${formatted}${suffix}`;
+}
+
+function analysisScoreStats(records, scoreGetter) {
+  const scoredRecords = records
+    .map(record => ({ record, score: numericValue(scoreGetter(record)) }))
+    .filter(item => Number.isFinite(item.score));
+  const values = scoredRecords.map(item => item.score);
+  const recentValues = scoredRecords
+    .slice()
+    .sort((a, b) => recordTimestamp(b.record) - recordTimestamp(a.record))
+    .slice(0, 5)
+    .map(item => item.score);
+
+  return {
+    count: values.length,
+    mean: average(values),
+    best: values.length ? Math.max(...values) : null,
+    worst: values.length ? Math.min(...values) : null,
+    median: median(values),
+    recentMean: average(recentValues),
+    recentCount: recentValues.length
+  };
+}
+
+function analysisStat(label, value, detail = "") {
+  return `
+    <div class="analysis-stat">
+      <span>${label}</span>
+      <strong>${value}</strong>
+      ${detail ? `<small>${detail}</small>` : ""}
+    </div>
+  `;
+}
+
+function recentFormDetail(stats) {
+  if (!Number.isFinite(stats.recentMean) || !Number.isFinite(stats.mean)) return "";
+  const delta = stats.recentMean - stats.mean;
+  const sign = delta > 0 ? "+" : "";
+  return `${stats.recentCount} recent, ${sign}${formatAnalysisNumber(delta)} vs range avg`;
+}
+
+function renderAnalysisRange() {
+  $$("[data-analysis-range]").forEach((button) => {
+    button.setAttribute("aria-pressed", String(button.dataset.analysisRange === analysisRange));
+  });
+
+  const custom = $("[data-analysis-custom]");
+  if (custom) custom.hidden = analysisRange !== "custom";
+}
+
+function sparklineSvg(records, scoreGetter) {
+  const points = records
+    .slice()
+    .sort((a, b) => recordTimestamp(a) - recordTimestamp(b))
+    .map(record => numericValue(scoreGetter(record)))
+    .filter(value => Number.isFinite(value));
+
+  if (points.length < 2) {
+    return `<p class="analysis-empty-mini">Need at least 2 records for a trend.</p>`;
+  }
+
+  const width = 360;
+  const height = 92;
+  const pad = 12;
+  const min = Math.min(...points);
+  const max = Math.max(...points);
+  const range = Math.max(max - min, 1);
+  const step = points.length === 1 ? 0 : (width - pad * 2) / (points.length - 1);
+  const coordinates = points.map((score, index) => {
+    const x = pad + index * step;
+    const y = height - pad - ((score - min) / range) * (height - pad * 2);
+    return `${x.toFixed(1)},${y.toFixed(1)}`;
+  }).join(" ");
+
+  const dots = points.map((score, index) => {
+    const x = pad + index * step;
+    const y = height - pad - ((score - min) / range) * (height - pad * 2);
+    return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3" />`;
+  }).join("");
+
+  return `
+    <svg class="analysis-sparkline" viewBox="0 0 ${width} ${height}" role="img" aria-label="Score trend">
+      <line x1="${pad}" y1="${height - pad}" x2="${width - pad}" y2="${height - pad}" />
+      <polyline points="${coordinates}" />
+      ${dots}
+    </svg>
+  `;
+}
+
+function trendList(records, scoreGetter) {
+  const rows = records
+    .slice()
+    .sort((a, b) => recordTimestamp(b) - recordTimestamp(a))
+    .slice(0, 5)
+    .map((record) => `
+      <li>
+        <span>${formatMatchDate(record)}</span>
+        <strong>${formatAnalysisNumber(numericValue(scoreGetter(record)))}</strong>
+      </li>
+    `)
+    .join("");
+
+  return rows ? `<ul class="analysis-trend-list">${rows}</ul>` : "";
+}
+
+function renderTrend(records, scoreGetter) {
+  return `
+    <div class="analysis-trend-head">
+      <span>Trend</span>
+      <small>Newest 5 listed below</small>
+    </div>
+    ${sparklineSvg(records, scoreGetter)}
+    ${trendList(records, scoreGetter)}
+  `;
+}
+
+function renderHeadAnalysis(allMatches, matches) {
+  const summary = $("[data-analysis-head-summary]");
+  const count = $("[data-analysis-head-count]");
+  const statsWrap = $("[data-analysis-head-stats]");
+  const trendWrap = $("[data-analysis-head-trend]");
+  if (!summary || !count || !statsWrap || !trendWrap) return;
+
+  count.textContent = `${matches.length} ${matches.length === 1 ? "match" : "matches"}`;
+  if (!allMatches.length) {
+    summary.textContent = "Save matches or Skills runs to unlock analysis.";
+    statsWrap.innerHTML = `<p class="analysis-empty">Save head-on-head matches to unlock this panel.</p>`;
+    trendWrap.innerHTML = "";
+    return;
+  }
+
+  if (!matches.length) {
+    summary.textContent = "No saved data in this range.";
+    statsWrap.innerHTML = `<p class="analysis-empty">No saved data in this range.</p>`;
+    trendWrap.innerHTML = "";
+    return;
+  }
+
+  const stats = analysisScoreStats(matches, match => match.ourScore);
+  const wins = matches.filter(match => match.result === "win").length;
+  const losses = matches.filter(match => match.result === "loss").length;
+  const ties = matches.filter(match => match.result === "tie").length;
+  const winRate = matches.length ? (wins / matches.length) * 100 : null;
+
+  summary.textContent = `Averaging ${formatAnalysisNumber(stats.mean)} points across this range.`;
+  statsWrap.innerHTML = [
+    analysisStat("Mean score", formatAnalysisNumber(stats.mean)),
+    analysisStat("Win rate", formatAnalysisNumber(winRate, "%"), `${wins}W ${losses}L ${ties}T`),
+    analysisStat("Best", formatAnalysisNumber(stats.best)),
+    analysisStat("Median", formatAnalysisNumber(stats.median)),
+    analysisStat("Worst", formatAnalysisNumber(stats.worst)),
+    analysisStat("Recent form", formatAnalysisNumber(stats.recentMean), recentFormDetail(stats))
+  ].join("");
+  trendWrap.innerHTML = renderTrend(matches, match => match.ourScore);
+}
+
+function renderSkillsAnalysis(allRuns, runs) {
+  const summary = $("[data-analysis-skills-summary]");
+  const count = $("[data-analysis-skills-count]");
+  const statsWrap = $("[data-analysis-skills-stats]");
+  const splitWrap = $("[data-analysis-skills-split]");
+  const trendWrap = $("[data-analysis-skills-trend]");
+  if (!summary || !count || !statsWrap || !splitWrap || !trendWrap) return;
+
+  count.textContent = `${runs.length} ${runs.length === 1 ? "run" : "runs"}`;
+  if (!allRuns.length) {
+    summary.textContent = "Save matches or Skills runs to unlock analysis.";
+    statsWrap.innerHTML = `<p class="analysis-empty">Save Skills runs to unlock this panel.</p>`;
+    splitWrap.innerHTML = "";
+    trendWrap.innerHTML = "";
+    return;
+  }
+
+  if (!runs.length) {
+    summary.textContent = "No saved data in this range.";
+    statsWrap.innerHTML = `<p class="analysis-empty">No saved data in this range.</p>`;
+    splitWrap.innerHTML = "";
+    trendWrap.innerHTML = "";
+    return;
+  }
+
+  const stats = analysisScoreStats(runs, run => run.score);
+  const driverScores = runs
+    .filter(run => run.skillsType === "driver")
+    .map(run => numericValue(run.score))
+    .filter(value => Number.isFinite(value));
+  const autonScores = runs
+    .filter(run => run.skillsType === "autonomous")
+    .map(run => numericValue(run.score))
+    .filter(value => Number.isFinite(value));
+  const bestDriver = driverScores.length ? Math.max(...driverScores) : null;
+  const bestAuton = autonScores.length ? Math.max(...autonScores) : null;
+  const theoretical = Number.isFinite(bestDriver) || Number.isFinite(bestAuton)
+    ? (bestDriver || 0) + (bestAuton || 0)
+    : null;
+
+  summary.textContent = `Averaging ${formatAnalysisNumber(stats.mean)} points across this range.`;
+  statsWrap.innerHTML = [
+    analysisStat("Mean score", formatAnalysisNumber(stats.mean)),
+    analysisStat("Best", formatAnalysisNumber(stats.best)),
+    analysisStat("Median", formatAnalysisNumber(stats.median)),
+    analysisStat("Worst", formatAnalysisNumber(stats.worst)),
+    analysisStat("Recent form", formatAnalysisNumber(stats.recentMean), recentFormDetail(stats))
+  ].join("");
+  splitWrap.innerHTML = `
+    <div class="analysis-trend-head">
+      <span>Skills split</span>
+      <small>Driver plus Autonomous</small>
+    </div>
+    <div class="analysis-stats analysis-stats-tight">
+      ${analysisStat("Driver avg", formatAnalysisNumber(average(driverScores)))}
+      ${analysisStat("Auton avg", formatAnalysisNumber(average(autonScores)))}
+      ${analysisStat("Best Driver", formatAnalysisNumber(bestDriver))}
+      ${analysisStat("Best Auton", formatAnalysisNumber(bestAuton))}
+      ${analysisStat("Best combined", formatAnalysisNumber(theoretical))}
+    </div>
+  `;
+  trendWrap.innerHTML = renderTrend(runs, run => run.score);
+}
+
+function renderAnalysis() {
+  renderAnalysisRange();
+  const headMatches = sortedHeadMatches();
+  const skillsRuns = sortedSkillsRuns();
+  renderHeadAnalysis(headMatches, filterAnalysisRecords(headMatches));
+  renderSkillsAnalysis(skillsRuns, filterAnalysisRecords(skillsRuns));
 }
 
 function formatMatchDate(match) {
@@ -2074,6 +2394,7 @@ function deleteMatch(id) {
   if (pendingDeleteMatchId === id) pendingDeleteMatchId = null;
   renderHistory();
   renderSkillsHistory();
+  renderAnalysis();
   showToast("Match deleted.");
 }
 
@@ -2095,6 +2416,7 @@ function clearMatches() {
   showAllSkillsHistory = false;
   renderHistory();
   renderSkillsHistory();
+  renderAnalysis();
   showToast("Saved matches cleared.");
 }
 
@@ -2110,6 +2432,7 @@ function wipeAllData() {
   showAllSkillsHistory = false;
   renderHistory();
   renderSkillsHistory();
+  renderAnalysis();
   renderImportedCompetition();
   openSetupModal();
   showToast("Local app data wiped.");
@@ -2161,6 +2484,7 @@ function saveDevEdit() {
   closeDevEditor();
   renderHistory();
   renderSkillsHistory();
+  renderAnalysis();
   showToast("Match updated.");
 }
 
@@ -2450,6 +2774,16 @@ $$("[data-competition-filter]").forEach((button) => {
   });
 });
 
+$$("[data-analysis-range]").forEach((button) => {
+  button.addEventListener("click", () => {
+    analysisRange = button.dataset.analysisRange || "all";
+    renderAnalysis();
+  });
+});
+
+$("[data-analysis-start]")?.addEventListener("change", renderAnalysis);
+$("[data-analysis-end]")?.addEventListener("change", renderAnalysis);
+
 $("[data-team-skills-search-form]")?.addEventListener("submit", (event) => {
   event.preventDefault();
   const query = String(new FormData(event.currentTarget).get("teamSkillsSearch") || "").trim();
@@ -2481,6 +2815,7 @@ render();
 renderSkills();
 renderHistory();
 renderSkillsHistory();
+renderAnalysis();
 renderImportedCompetition();
 ensureSyncedEventsLoaded();
 initializeProfileGate();
