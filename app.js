@@ -1358,6 +1358,11 @@ function escapeHtml(value) {
   })[char]);
 }
 
+function capitalize(value) {
+  const text = String(value || "");
+  return text ? text.charAt(0).toUpperCase() + text.slice(1) : "";
+}
+
 function loadProfile() {
   try {
     const saved = JSON.parse(localStorage.getItem(PROFILE_STORE_KEY));
@@ -1627,44 +1632,46 @@ function sampleQuadrants(seed) {
 
 function sampleHeadSeed(index, total) {
   const progress = total <= 1 ? 1 : index / (total - 1);
-  const daysAgoValue = Math.round((1 - progress) * 74);
+  const daysAgoValue = Math.round((1 - progress) * 104);
   const teamAlliance = index % 2 === 0 ? "blue" : "red";
-  const roughMatch = index % 7 === 1 || index % 9 === 4;
-  const closeLoss = index % 6 === 2;
-  const strong = roughMatch ? progress * .62 : progress;
+  const roughMatch = index % 11 === 2 || index % 13 === 5;
+  const closeLoss = index % 7 === 3 || index % 17 === 8;
+  const upsetWin = index % 19 === 11;
+  const strong = Math.min(1, Math.max(0, progress + (upsetWin ? .18 : 0) - (roughMatch ? .24 : 0)));
   const ourColor = teamAlliance;
   const opponentColor = teamAlliance === "red" ? "blue" : "red";
-  const ourBase = 1 + Math.floor(strong * 4);
-  const oppBase = Math.max(0, 4 - Math.floor(strong * 3)) + (closeLoss ? 2 : 0);
-  const ourRobots = progress > .36 ? (index % 5 === 0 ? 1 : 2) : (index % 4 === 0 ? 1 : 0);
-  const oppRobots = closeLoss || roughMatch ? 2 : (progress > .72 ? 0 : 1);
+  const noise = seededRandom(index + 31);
+  const ourBase = 1 + Math.floor(strong * 5) + (noise > .78 ? 1 : 0);
+  const oppBase = Math.max(1, 5 - Math.floor(strong * 3)) + (closeLoss ? 3 : 0) + (roughMatch ? 1 : 0);
+  const ourRobots = strong > .36 ? (index % 8 === 0 ? 1 : 2) : (index % 4 === 0 ? 1 : 0);
+  const oppRobots = closeLoss || roughMatch ? 2 : (strong > .74 ? 0 : 1);
   const owned = ourColor;
   const notOwned = opponentColor;
   const seed = {
     daysAgo: daysAgoValue,
     teamAlliance,
-    auton: progress > .7 ? ourColor : (roughMatch ? opponentColor : (index % 5 === 0 ? "tie" : "none")),
+    auton: strong > .68 ? ourColor : (roughMatch || closeLoss ? opponentColor : (index % 6 === 0 ? "tie" : "none")),
     redRobots: teamAlliance === "red" ? ourRobots : oppRobots,
     blueRobots: teamAlliance === "blue" ? ourRobots : oppRobots,
     topToggle: teamAlliance === "blue" ? owned : notOwned,
     rightToggle: teamAlliance === "blue" ? owned : (closeLoss ? notOwned : "neutral"),
     bottomToggle: teamAlliance === "red" ? owned : notOwned,
     leftToggle: teamAlliance === "red" ? owned : (closeLoss ? notOwned : "neutral"),
-    topY: teamAlliance === "blue" ? Math.floor(progress * 3) : Math.floor(seededRandom(index + 1) * 2),
+    topY: teamAlliance === "blue" ? Math.floor(strong * 4) : Math.floor(seededRandom(index + 1) * 2),
     topR: teamAlliance === "red" ? ourBase : Math.max(0, oppBase - 1),
-    topB: teamAlliance === "blue" ? ourBase + Math.floor(progress * 2) : oppBase,
-    rightY: teamAlliance === "blue" ? 1 + Math.floor(progress * 2) : Math.floor(seededRandom(index + 2) * 2),
+    topB: teamAlliance === "blue" ? ourBase + Math.floor(strong * 2) : oppBase,
+    rightY: teamAlliance === "blue" ? 1 + Math.floor(strong * 3) : Math.floor(seededRandom(index + 2) * 2),
     rightR: teamAlliance === "red" ? Math.max(0, ourBase - 1) : oppBase,
     rightB: teamAlliance === "blue" ? ourBase : Math.max(0, oppBase - 1),
-    bottomY: teamAlliance === "red" ? 1 + Math.floor(progress * 3) : Math.floor(seededRandom(index + 3) * 2),
-    bottomR: teamAlliance === "red" ? ourBase + Math.floor(progress * 2) : oppBase,
+    bottomY: teamAlliance === "red" ? 1 + Math.floor(strong * 3) : Math.floor(seededRandom(index + 3) * 2),
+    bottomR: teamAlliance === "red" ? ourBase + Math.floor(strong * 2) : oppBase,
     bottomB: teamAlliance === "blue" ? Math.max(0, ourBase - 1) : Math.max(0, oppBase - 1),
-    leftY: teamAlliance === "red" ? Math.floor(progress * 3) : Math.floor(seededRandom(index + 4) * 2),
+    leftY: teamAlliance === "red" ? Math.floor(strong * 4) : Math.floor(seededRandom(index + 4) * 2),
     leftR: teamAlliance === "red" ? ourBase : Math.max(0, oppBase - 1),
     leftB: teamAlliance === "blue" ? Math.max(0, ourBase - 1) : oppBase,
-    centerY: Math.floor(progress * 2),
-    centerR: teamAlliance === "red" ? Math.floor(progress * 2) : Math.max(0, Math.floor((1 - progress) * 2)),
-    centerB: teamAlliance === "blue" ? Math.floor(progress * 2) : Math.max(0, Math.floor((1 - progress) * 2)),
+    centerY: Math.floor(strong * 3),
+    centerR: teamAlliance === "red" ? Math.floor(strong * 3) : Math.max(0, Math.floor((1 - strong) * 2)),
+    centerB: teamAlliance === "blue" ? Math.floor(strong * 3) : Math.max(0, Math.floor((1 - strong) * 2)),
     partner: ["355V", "2055A", "169C", "1000A", "10K"][index % 5],
     opponentOne: ["169A", "32C", "96Z", "663A", "1468A"][index % 5],
     opponentTwo: ["227R", "10B", "471B", "886S", "1069A"][index % 5]
@@ -1674,9 +1681,10 @@ function sampleHeadSeed(index, total) {
 
 function sampleSkillsSeed(index, total, skillsType) {
   const progress = total <= 1 ? 1 : index / (total - 1);
-  const daysAgoValue = Math.round((1 - progress) * 70 + (skillsType === "autonomous" ? 1 : 0));
-  const earlyMiss = index % 6 === 1;
-  const route = Math.max(0, progress - (earlyMiss ? .22 : 0));
+  const daysAgoValue = Math.round((1 - progress) * 96 + (skillsType === "autonomous" ? 1 : 0));
+  const earlyMiss = index % 8 === 1 || index % 13 === 6;
+  const lateClean = index > total * .68 && index % 5 !== 2;
+  const route = Math.min(1, Math.max(0, progress + (lateClean ? .12 : 0) - (earlyMiss ? .25 : 0)));
   return {
     daysAgo: daysAgoValue,
     skillsType,
@@ -1773,10 +1781,10 @@ function createSampleSkillsRecord(seed) {
 }
 
 function seedSampleData() {
-  const headSeeds = Array.from({ length: 28 }, (_, index) => sampleHeadSeed(index, 28));
+  const headSeeds = Array.from({ length: 48 }, (_, index) => sampleHeadSeed(index, 48));
   const skillsSeeds = [
-    ...Array.from({ length: 12 }, (_, index) => sampleSkillsSeed(index, 12, "driver")),
-    ...Array.from({ length: 10 }, (_, index) => sampleSkillsSeed(index, 10, "autonomous"))
+    ...Array.from({ length: 24 }, (_, index) => sampleSkillsSeed(index, 24, "driver")),
+    ...Array.from({ length: 20 }, (_, index) => sampleSkillsSeed(index, 20, "autonomous"))
   ];
 
   const nextMatches = [
@@ -2134,6 +2142,16 @@ function analysisScoreStats(records, scoreGetter) {
   };
 }
 
+function percentile(values, amount) {
+  const numbers = values.filter(value => Number.isFinite(value)).sort((a, b) => a - b);
+  if (!numbers.length) return null;
+  const index = (numbers.length - 1) * amount;
+  const lower = Math.floor(index);
+  const upper = Math.ceil(index);
+  if (lower === upper) return numbers[lower];
+  return numbers[lower] + (numbers[upper] - numbers[lower]) * (index - lower);
+}
+
 function analysisStat(label, value, detail = "") {
   return `
     <div class="analysis-stat">
@@ -2149,6 +2167,26 @@ function recentFormDetail(stats) {
   const delta = stats.recentMean - stats.mean;
   const sign = delta > 0 ? "+" : "";
   return `last ${stats.recentCount}, ${sign}${formatAnalysisNumber(delta)} vs range avg`;
+}
+
+function analysisInsightCard(title, body, stat = "") {
+  return `
+    <div class="analysis-insight-card">
+      <span>${escapeHtml(title)}</span>
+      ${stat ? `<strong>${escapeHtml(stat)}</strong>` : ""}
+      <p>${escapeHtml(body)}</p>
+    </div>
+  `;
+}
+
+function analysisMiniRow(label, value, detail = "") {
+  return `
+    <div class="analysis-mini-row">
+      <span>${escapeHtml(label)}</span>
+      <strong>${escapeHtml(value)}</strong>
+      ${detail ? `<small>${escapeHtml(detail)}</small>` : ""}
+    </div>
+  `;
 }
 
 function renderAnalysisMode() {
@@ -2182,14 +2220,64 @@ function ourAlliancePins(match) {
   }, 0);
 }
 
+function opponentAlliance(match) {
+  if (match.teamAlliance === "red") return "blue";
+  if (match.teamAlliance === "blue") return "red";
+  return null;
+}
+
+function quadrantData(record, quadrant) {
+  return record?.scorer?.quadrants?.[quadrant] || {};
+}
+
+function quadrantPins(record, quadrant) {
+  const q = quadrantData(record, quadrant);
+  return colors.reduce((total, color) => total + numericValue(q[color]), 0);
+}
+
+function alliancePinsInQuadrant(match, quadrant, alliance = match.teamAlliance) {
+  if (alliance !== "red" && alliance !== "blue") return null;
+  return numericValue(quadrantData(match, quadrant)[alliance]);
+}
+
+function yellowPinsInQuadrant(match, quadrant) {
+  return numericValue(quadrantData(match, quadrant).yellow);
+}
+
+function ownedYellowPinsInQuadrant(match, quadrant, alliance = match.teamAlliance) {
+  if (alliance !== "red" && alliance !== "blue") return null;
+  const q = quadrantData(match, quadrant);
+  const owner = quadrant === "center" ? midpointOwnerFromRobots(match.scorer?.robots || {}) : q.toggle;
+  return owner === alliance ? numericValue(q.yellow) : 0;
+}
+
+function yellowPins(match) {
+  return quadrants.reduce((total, quadrant) => total + yellowPinsInQuadrant(match, quadrant), 0);
+}
+
+function totalRedBluePins(match) {
+  return quadrants.reduce((total, quadrant) => {
+    const q = quadrantData(match, quadrant);
+    return total + numericValue(q.red) + numericValue(q.blue);
+  }, 0);
+}
+
+function totalPins(match) {
+  return quadrants.reduce((total, quadrant) => total + quadrantPins(match, quadrant), 0);
+}
+
 function opponentAlliancePins(match) {
-  const alliance = match.teamAlliance === "red" ? "blue" : match.teamAlliance === "blue" ? "red" : null;
+  const alliance = opponentAlliance(match);
   if (!alliance) return null;
   const scorer = match.scorer || {};
   return quadrants.reduce((total, quadrant) => {
     const q = scorer.quadrants?.[quadrant] || {};
     return total + numericValue(q[alliance]);
   }, 0);
+}
+
+function opponentOwnedYellowPins(match) {
+  return ownedYellowPins(match, opponentAlliance(match));
 }
 
 function ownedYellowPins(match, alliance = match.teamAlliance) {
@@ -2203,9 +2291,28 @@ function ownedYellowPins(match, alliance = match.teamAlliance) {
   }, 0);
 }
 
+function outerToggleOwnedCount(match, alliance = match.teamAlliance) {
+  if (alliance !== "red" && alliance !== "blue") return null;
+  return ["top", "right", "bottom", "left"].reduce((total, quadrant) => {
+    return total + (match.scorer?.quadrants?.[quadrant]?.toggle === alliance ? 1 : 0);
+  }, 0);
+}
+
+function centerControlledByUs(match) {
+  return midpointOwnerFromRobots(match.scorer?.robots || {}) === match.teamAlliance ? 1 : 0;
+}
+
 function ourMidfieldRobots(match) {
   const alliance = match.teamAlliance;
   if (alliance !== "red" && alliance !== "blue") return null;
+  return Object.entries(match.scorer?.robots || {}).reduce((total, [robotId, active]) => {
+    return active && robotId.startsWith(alliance) ? total + 1 : total;
+  }, 0);
+}
+
+function opponentMidfieldRobots(match) {
+  const alliance = opponentAlliance(match);
+  if (!alliance) return null;
   return Object.entries(match.scorer?.robots || {}).reduce((total, [robotId, active]) => {
     return active && robotId.startsWith(alliance) ? total + 1 : total;
   }, 0);
@@ -2219,11 +2326,33 @@ function autonPoints(match) {
   return 0;
 }
 
+function autonWon(match) {
+  return (match.scorer?.auton || match.auton) === match.teamAlliance ? 1 : 0;
+}
+
+function autonLost(match) {
+  return (match.scorer?.auton || match.auton) === opponentAlliance(match) ? 1 : 0;
+}
+
+function autonTied(match) {
+  return (match.scorer?.auton || match.auton) === "tie" ? 1 : 0;
+}
+
 function skillsRedBluePins(run) {
   const q = run.skills?.quadrants || {};
   return skillsQuadrants.reduce((total, quadrant) => {
     return total + numericValue(q[quadrant]?.red) + numericValue(q[quadrant]?.blue);
   }, 0);
+}
+
+function skillsColorPins(run, color) {
+  const q = run.skills?.quadrants || {};
+  return skillsQuadrants.reduce((total, quadrant) => total + numericValue(q[quadrant]?.[color]), 0);
+}
+
+function skillsPinsInQuadrant(run, quadrant) {
+  const q = run.skills?.quadrants?.[quadrant] || {};
+  return colors.reduce((total, color) => total + numericValue(q[color]), 0);
 }
 
 function skillsYellowPins(run) {
@@ -2243,31 +2372,129 @@ function skillsScoredYellowPins(run) {
   return total;
 }
 
+function skillsTotalPins(run) {
+  return skillsQuadrants.reduce((total, quadrant) => total + skillsPinsInQuadrant(run, quadrant), 0);
+}
+
+function skillsCorrectYellowOwnership(run) {
+  const toggles = run.skills?.toggles || {};
+  let total = 0;
+  if (toggles.left === "red") total += 1;
+  if (toggles.bottom === "red") total += 1;
+  if (toggles.top === "blue") total += 1;
+  if (toggles.right === "blue") total += 1;
+  if (run.skills?.centerToggle) total += 1;
+  return total;
+}
+
+function skillsMissedYellowPins(run) {
+  return skillsYellowPins(run) - skillsScoredYellowPins(run);
+}
+
 const headCorrelationOptions = [
-  { key: "ourScore", label: "Our score", get: match => numericValue(match.ourScore) },
-  { key: "opponentScore", label: "Opponent score", get: match => numericValue(match.opponentScore) },
-  { key: "margin", label: "Score margin", get: match => numericValue(match.ourScore) - numericValue(match.opponentScore) },
-  { key: "win", label: "Win result", get: match => match.result === "win" ? 1 : match.result === "loss" ? 0 : .5 },
-  { key: "alliancePins", label: "Our red/blue pins", get: ourAlliancePins },
-  { key: "opponentPins", label: "Opponent red/blue pins", get: opponentAlliancePins },
-  { key: "ownedYellow", label: "Our owned yellow pins", get: match => ownedYellowPins(match) },
-  { key: "midfieldRobots", label: "Our midfield robots", get: ourMidfieldRobots },
-  { key: "autonPoints", label: "Auton points", get: autonPoints }
+  {
+    group: "Score",
+    options: [
+      { key: "ourScore", label: "Our score", get: match => numericValue(match.ourScore) },
+      { key: "opponentScore", label: "Opponent score", get: match => numericValue(match.opponentScore) },
+      { key: "margin", label: "Score margin", get: match => numericValue(match.ourScore) - numericValue(match.opponentScore) },
+      { key: "totalMatchScore", label: "Total match score", get: match => numericValue(match.redScore) + numericValue(match.blueScore) },
+      { key: "win", label: "Win result", get: match => match.result === "win" ? 1 : match.result === "loss" ? 0 : .5 }
+    ]
+  },
+  {
+    group: "Pins",
+    options: [
+      { key: "alliancePins", label: "Our red/blue pins", get: ourAlliancePins },
+      { key: "opponentPins", label: "Opponent red/blue pins", get: opponentAlliancePins },
+      { key: "totalRedBluePins", label: "Total red + blue pins", get: totalRedBluePins },
+      { key: "totalPins", label: "Total pins placed", get: totalPins },
+      { key: "ownedYellow", label: "Our owned yellow pins", get: match => ownedYellowPins(match) },
+      { key: "opponentOwnedYellow", label: "Opponent owned yellow pins", get: opponentOwnedYellowPins },
+      { key: "yellowPins", label: "Yellow pins placed", get: yellowPins }
+    ]
+  },
+  {
+    group: "Zones",
+    options: [
+      ...["top", "right", "bottom", "left", "center"].flatMap(quadrant => [
+        { key: `${quadrant}TotalPins`, label: `${capitalize(quadrant)} zone total pins`, get: match => quadrantPins(match, quadrant) },
+        { key: `${quadrant}OurPins`, label: `Our pins in ${quadrant}`, get: match => alliancePinsInQuadrant(match, quadrant) },
+        { key: `${quadrant}OpponentPins`, label: `Opponent pins in ${quadrant}`, get: match => alliancePinsInQuadrant(match, quadrant, opponentAlliance(match)) },
+        { key: `${quadrant}OwnedYellow`, label: `Owned yellow pins in ${quadrant}`, get: match => ownedYellowPinsInQuadrant(match, quadrant) }
+      ])
+    ]
+  },
+  {
+    group: "Control",
+    options: [
+      { key: "ourOuterToggles", label: "Our outer toggles owned", get: match => outerToggleOwnedCount(match) },
+      { key: "opponentOuterToggles", label: "Opponent outer toggles owned", get: match => outerToggleOwnedCount(match, opponentAlliance(match)) },
+      { key: "centerControl", label: "Center controlled by us", get: centerControlledByUs },
+      { key: "midfieldRobots", label: "Our midfield robots", get: ourMidfieldRobots },
+      { key: "opponentMidfieldRobots", label: "Opponent midfield robots", get: opponentMidfieldRobots }
+    ]
+  },
+  {
+    group: "Autonomous",
+    options: [
+      { key: "autonPoints", label: "Auton points", get: autonPoints },
+      { key: "autonWon", label: "Won auton", get: autonWon },
+      { key: "autonLost", label: "Lost auton", get: autonLost },
+      { key: "autonTied", label: "Tied auton", get: autonTied }
+    ]
+  }
 ];
 
 const skillsCorrelationOptions = [
-  { key: "score", label: "Skills score", get: run => numericValue(run.score) },
-  { key: "redBluePins", label: "Red/blue pins", get: skillsRedBluePins },
-  { key: "yellowPins", label: "Yellow pins placed", get: skillsYellowPins },
-  { key: "scoredYellow", label: "Scored yellow pins", get: skillsScoredYellowPins },
-  { key: "midfield", label: "Midfield robot", get: run => run.skills?.centerToggle ? 1 : 0 },
-  { key: "driverRun", label: "Driver run", get: run => run.skillsType === "driver" ? 1 : 0 },
-  { key: "autonRun", label: "Autonomous run", get: run => run.skillsType === "autonomous" ? 1 : 0 }
+  {
+    group: "Score",
+    options: [
+      { key: "score", label: "Skills score", get: run => numericValue(run.score) },
+      { key: "driverRun", label: "Driver run", get: run => run.skillsType === "driver" ? 1 : 0 },
+      { key: "autonRun", label: "Autonomous run", get: run => run.skillsType === "autonomous" ? 1 : 0 }
+    ]
+  },
+  {
+    group: "Pins",
+    options: [
+      { key: "redBluePins", label: "Total red + blue pins", get: skillsRedBluePins },
+      { key: "redPins", label: "Red pins scored", get: run => skillsColorPins(run, "red") },
+      { key: "bluePins", label: "Blue pins scored", get: run => skillsColorPins(run, "blue") },
+      { key: "yellowPins", label: "Yellow pins placed", get: skillsYellowPins },
+      { key: "scoredYellow", label: "Yellow pins scored", get: skillsScoredYellowPins },
+      { key: "totalPins", label: "Total pins placed", get: skillsTotalPins }
+    ]
+  },
+  {
+    group: "Zones",
+    options: skillsQuadrants.map(quadrant => ({
+      key: `${quadrant}Pins`,
+      label: `${capitalize(quadrant)} zone pins`,
+      get: run => skillsPinsInQuadrant(run, quadrant)
+    }))
+  },
+  {
+    group: "Control",
+    options: [
+      { key: "midfield", label: "Center toggle active", get: run => run.skills?.centerToggle ? 1 : 0 },
+      { key: "correctYellowOwnership", label: "Correct yellow ownership count", get: skillsCorrectYellowOwnership },
+      { key: "missedYellowPins", label: "Missed yellow pins", get: skillsMissedYellowPins }
+    ]
+  }
 ];
 
-function correlationOptionsHtml(options, selected) {
-  return options.map(option => `
-    <option value="${escapeHtml(option.key)}" ${option.key === selected ? "selected" : ""}>${escapeHtml(option.label)}</option>
+function flatCorrelationOptions(groups) {
+  return groups.flatMap(group => group.options);
+}
+
+function correlationOptionsHtml(groups, selected) {
+  return groups.map(group => `
+    <optgroup label="${escapeHtml(group.group)}">
+      ${group.options.map(option => `
+        <option value="${escapeHtml(option.key)}" ${option.key === selected ? "selected" : ""}>${escapeHtml(option.label)}</option>
+      `).join("")}
+    </optgroup>
   `).join("");
 }
 
@@ -2302,13 +2529,18 @@ function correlationLabel(value) {
   return "Little relationship";
 }
 
-function renderCorrelation(records, options, selectedX, selectedY, mode) {
-  const optionX = options.find(option => option.key === selectedX) || options[0];
-  const optionY = options.find(option => option.key === selectedY) || options[1] || options[0];
+function correlationValue(records, optionX, optionY) {
   const pairs = records
     .map(record => ({ x: numericValue(optionX.get(record)), y: numericValue(optionY.get(record)) }))
     .filter(pair => Number.isFinite(pair.x) && Number.isFinite(pair.y));
-  const r = pearsonCorrelation(pairs);
+  return { r: pearsonCorrelation(pairs), count: pairs.length };
+}
+
+function renderCorrelation(records, options, selectedX, selectedY, mode) {
+  const flatOptions = flatCorrelationOptions(options);
+  const optionX = flatOptions.find(option => option.key === selectedX) || flatOptions[0];
+  const optionY = flatOptions.find(option => option.key === selectedY) || flatOptions[1] || flatOptions[0];
+  const { r, count } = correlationValue(records, optionX, optionY);
   const prettyR = Number.isFinite(r) ? r.toFixed(2) : "--";
 
   return `
@@ -2328,18 +2560,259 @@ function renderCorrelation(records, options, selectedX, selectedY, mode) {
     </div>
     <div class="analysis-correlation-result">
       <strong>${correlationLabel(r)}</strong>
-      <span>r = ${prettyR} from ${pairs.length} saved ${mode === "head" ? "matches" : "runs"}</span>
+      <span>r = ${prettyR} from ${count} saved ${mode === "head" ? "matches" : "runs"}</span>
       <small>Positive means the two numbers rise together. Negative means one tends to rise when the other falls.</small>
     </div>
   `;
 }
 
+function scoreGetterValues(records, getter) {
+  return records
+    .map(record => numericValue(getter(record)))
+    .filter(value => Number.isFinite(value));
+}
+
+function resultAverage(records, getter) {
+  return average(scoreGetterValues(records, getter));
+}
+
+function averageObject(items, key) {
+  return average(items.map(item => numericValue(item[key])).filter(value => Number.isFinite(value)));
+}
+
+function renderWinFactors(matches) {
+  const winOption = flatCorrelationOptions(headCorrelationOptions).find(option => option.key === "win");
+  const candidates = flatCorrelationOptions(headCorrelationOptions)
+    .filter(option => !["win", "ourScore", "opponentScore"].includes(option.key))
+    .map(option => ({ option, ...correlationValue(matches, option, winOption) }))
+    .filter(item => item.count >= 6 && Number.isFinite(item.r))
+    .sort((a, b) => Math.abs(b.r) - Math.abs(a.r))
+    .slice(0, 4);
+
+  if (!candidates.length) {
+    return analysisInsightCard("Win factors", "Save more varied matches to identify what is most tied to winning.", "Learning");
+  }
+
+  return `
+    <div class="analysis-insight-card analysis-insight-wide">
+      <span>Win factors</span>
+      <strong>Top ${candidates.length}</strong>
+      <p>The strongest simple relationships with winning in this range.</p>
+      <div class="analysis-mini-list">
+        ${candidates.map(item => analysisMiniRow(item.option.label, item.r.toFixed(2), correlationLabel(item.r))).join("")}
+      </div>
+    </div>
+  `;
+}
+
+function missedHeadPoints(match) {
+  const alliance = match.teamAlliance;
+  const opponent = opponentAlliance(match);
+  const scorer = match.scorer || {};
+  const centerOwner = midpointOwnerFromRobots(scorer.robots || {});
+  let unownedYellow = 0;
+  ["top", "right", "bottom", "left"].forEach((quadrant) => {
+    const q = scorer.quadrants?.[quadrant] || {};
+    if (q.toggle !== alliance) unownedYellow += numericValue(q.yellow) * POINTS.yellowPin;
+  });
+  const centerYellow = scorer.quadrants?.center?.yellow || 0;
+  if (centerOwner !== alliance) unownedYellow += numericValue(centerYellow) * POINTS.yellowPin;
+
+  const auton = scorer.auton || match.auton;
+  const autonGap = auton === alliance ? 0 : auton === "tie" ? POINTS.autonTie : POINTS.auton;
+  const missingRobots = Math.max(0, 2 - numericValue(ourMidfieldRobots(match))) * POINTS.midfieldRobot;
+  const missingCenter = centerOwner === alliance ? 0 : POINTS.midfieldRobot;
+
+  return {
+    unownedYellow,
+    autonGap,
+    missingRobots,
+    missingCenter,
+    total: unownedYellow + autonGap + missingRobots + missingCenter,
+    opponent
+  };
+}
+
+function renderHeadMissedPoints(matches) {
+  const missed = matches.map(missedHeadPoints);
+  const total = averageObject(missed, "total");
+  return analysisInsightCard(
+    "Missed points",
+    "Estimated points left from unowned yellows, lost or tied auton, and missing midfield robots/control.",
+    `${formatAnalysisNumber(total)} avg`
+  );
+}
+
+function renderAutonReliability(matches) {
+  const wins = matches.filter(autonWon);
+  const losses = matches.filter(autonLost);
+  const ties = matches.filter(autonTied);
+  const margin = group => formatAnalysisNumber(resultAverage(group, match => numericValue(match.ourScore) - numericValue(match.opponentScore)));
+  return `
+    <div class="analysis-insight-card analysis-insight-wide">
+      <span>Auton reliability</span>
+      <strong>${formatAnalysisNumber((wins.length / matches.length) * 100, "%")} won</strong>
+      <p>Auton outcome compared with final margin.</p>
+      <div class="analysis-mini-list">
+        ${analysisMiniRow("Won auton", `${wins.length}`, `avg margin ${margin(wins)}`)}
+        ${analysisMiniRow("Tied auton", `${ties.length}`, `avg margin ${margin(ties)}`)}
+        ${analysisMiniRow("Lost auton", `${losses.length}`, `avg margin ${margin(losses)}`)}
+      </div>
+    </div>
+  `;
+}
+
+function renderCenterImpact(matches) {
+  const controlled = matches.filter(match => centerControlledByUs(match));
+  const notControlled = matches.filter(match => !centerControlledByUs(match));
+  const controlledMargin = resultAverage(controlled, match => numericValue(match.ourScore) - numericValue(match.opponentScore));
+  const notMargin = resultAverage(notControlled, match => numericValue(match.ourScore) - numericValue(match.opponentScore));
+  const swing = Number.isFinite(controlledMargin) && Number.isFinite(notMargin) ? controlledMargin - notMargin : null;
+  return analysisInsightCard(
+    "Center control impact",
+    `Avg margin with center: ${formatAnalysisNumber(controlledMargin)}. Without center: ${formatAnalysisNumber(notMargin)}.`,
+    `${formatAnalysisNumber(swing)} swing`
+  );
+}
+
+function renderYellowEfficiency(matches) {
+  const placed = matches.reduce((total, match) => total + yellowPins(match), 0);
+  const scored = matches.reduce((total, match) => total + numericValue(ownedYellowPins(match)), 0);
+  const rate = placed ? (scored / placed) * 100 : null;
+  return analysisInsightCard(
+    "Toggle/yellows efficiency",
+    `${scored} of ${placed} yellow pins counted for your alliance in this range.`,
+    formatAnalysisNumber(rate, "%")
+  );
+}
+
+function renderFloorCeiling(records, getter, title) {
+  const values = scoreGetterValues(records, getter);
+  return analysisInsightCard(
+    title,
+    "A realistic low/high range using saved-score percentiles, less jumpy than raw worst and best.",
+    `${formatAnalysisNumber(percentile(values, .2))} - ${formatAnalysisNumber(percentile(values, .8))}`
+  );
+}
+
+function previousRangeRecords(records) {
+  const bounds = analysisRangeBounds();
+  const sorted = records.slice().sort((a, b) => recordTimestamp(a) - recordTimestamp(b));
+  if (!bounds) {
+    const midpoint = Math.floor(sorted.length / 2);
+    return { current: sorted.slice(midpoint), previous: sorted.slice(0, midpoint) };
+  }
+  const span = bounds.end - bounds.start;
+  const previousStart = bounds.start - span;
+  const previousEnd = bounds.start;
+  return {
+    current: sorted.filter(record => {
+      const time = recordTimestamp(record);
+      return time >= bounds.start && time <= bounds.end;
+    }),
+    previous: sorted.filter(record => {
+      const time = recordTimestamp(record);
+      return time >= previousStart && time < previousEnd;
+    })
+  };
+}
+
+function renderProgressCard(records, getter, title) {
+  const { current, previous } = previousRangeRecords(records);
+  const currentAvg = resultAverage(current, getter);
+  const previousAvg = resultAverage(previous, getter);
+  const delta = Number.isFinite(currentAvg) && Number.isFinite(previousAvg) ? currentAvg - previousAvg : null;
+  const sign = delta > 0 ? "+" : "";
+  return analysisInsightCard(
+    title,
+    previous.length ? `Previous comparable range averaged ${formatAnalysisNumber(previousAvg)}.` : "Need earlier saved data for a previous-range comparison.",
+    Number.isFinite(delta) ? `${sign}${formatAnalysisNumber(delta)}` : "--"
+  );
+}
+
+function renderBestMatchBlueprint(matches) {
+  const best = matches
+    .slice()
+    .sort((a, b) => numericValue(b.ourScore) - numericValue(a.ourScore))
+    .slice(0, 3);
+  if (!best.length) return "";
+  const avgAlliancePins = resultAverage(best, ourAlliancePins);
+  const avgYellows = resultAverage(best, match => ownedYellowPins(match));
+  const centerCount = best.filter(centerControlledByUs).length;
+  const autonCount = best.filter(autonWon).length;
+  return analysisInsightCard(
+    "Best match blueprint",
+    `Your best 3 averaged ${formatAnalysisNumber(avgAlliancePins)} red/blue pins and ${formatAnalysisNumber(avgYellows)} owned yellows. Center was controlled ${centerCount}/3 times; auton won ${autonCount}/3.`,
+    `${formatAnalysisNumber(resultAverage(best, match => match.ourScore))} avg`
+  );
+}
+
+function renderHeadInsights(matches, allMatches) {
+  if (!matches.length) return "";
+  return [
+    renderWinFactors(matches),
+    renderHeadMissedPoints(matches),
+    renderAutonReliability(matches),
+    renderCenterImpact(matches),
+    renderYellowEfficiency(matches),
+    renderFloorCeiling(matches, match => match.ourScore, "Floor / ceiling"),
+    renderProgressCard(allMatches, match => match.ourScore, "Weekly progress"),
+    renderBestMatchBlueprint(matches)
+  ].join("");
+}
+
+function renderSkillsMissedPoints(runs) {
+  const missed = runs.reduce((total, run) => total + skillsMissedYellowPins(run), 0);
+  const placed = runs.reduce((total, run) => total + skillsYellowPins(run), 0);
+  const rate = placed ? ((placed - missed) / placed) * 100 : null;
+  return analysisInsightCard(
+    "Yellow conversion",
+    `${placed - missed} of ${placed} yellow pins scored under the Skills ownership rules.`,
+    formatAnalysisNumber(rate, "%")
+  );
+}
+
+function renderSkillsRouteProgress(runs) {
+  const sorted = runs.slice().sort((a, b) => recordTimestamp(a) - recordTimestamp(b));
+  const driver = sorted.filter(run => run.skillsType === "driver");
+  const auton = sorted.filter(run => run.skillsType === "autonomous");
+  const splitDelta = group => {
+    if (group.length < 4) return null;
+    const midpoint = Math.floor(group.length / 2);
+    return resultAverage(group.slice(midpoint), run => run.score) - resultAverage(group.slice(0, midpoint), run => run.score);
+  };
+  const driverDelta = splitDelta(driver);
+  const autonDelta = splitDelta(auton);
+  return `
+    <div class="analysis-insight-card analysis-insight-wide">
+      <span>Skills route progress</span>
+      <strong>${runs.length} runs</strong>
+      <p>Compares newer runs against older runs separately for Driver and Autonomous.</p>
+      <div class="analysis-mini-list">
+        ${analysisMiniRow("Driver trend", Number.isFinite(driverDelta) ? `${driverDelta > 0 ? "+" : ""}${formatAnalysisNumber(driverDelta)}` : "--", `${driver.length} runs`)}
+        ${analysisMiniRow("Autonomous trend", Number.isFinite(autonDelta) ? `${autonDelta > 0 ? "+" : ""}${formatAnalysisNumber(autonDelta)}` : "--", `${auton.length} runs`)}
+      </div>
+    </div>
+  `;
+}
+
+function renderSkillsInsights(runs, allRuns) {
+  if (!runs.length) return "";
+  return [
+    renderSkillsMissedPoints(runs),
+    renderFloorCeiling(runs, run => run.score, "Floor / ceiling"),
+    renderProgressCard(allRuns, run => run.score, "Weekly progress"),
+    renderSkillsRouteProgress(runs)
+  ].join("");
+}
+
 function sparklineSvg(records, scoreGetter) {
-  const points = records
+  const entries = records
     .slice()
     .sort((a, b) => recordTimestamp(a) - recordTimestamp(b))
-    .map(record => numericValue(scoreGetter(record)))
-    .filter(value => Number.isFinite(value));
+    .map(record => ({ record, score: numericValue(scoreGetter(record)) }))
+    .filter(item => Number.isFinite(item.score));
+  const points = entries.map(item => item.score);
 
   if (points.length < 2) {
     return `<p class="analysis-empty-mini">Need at least 2 records for a trend.</p>`;
@@ -2365,11 +2838,21 @@ function sparklineSvg(records, scoreGetter) {
   }).join("");
 
   return `
-    <svg class="analysis-sparkline" viewBox="0 0 ${width} ${height}" role="img" aria-label="Score trend">
-      <line x1="${pad}" y1="${height - pad}" x2="${width - pad}" y2="${height - pad}" />
-      <polyline points="${coordinates}" />
-      ${dots}
-    </svg>
+    <div class="analysis-chart-wrap">
+      <div class="analysis-chart-labels">
+        <span>Low ${formatAnalysisNumber(min)}</span>
+        <span>High ${formatAnalysisNumber(max)}</span>
+      </div>
+      <svg class="analysis-sparkline" viewBox="0 0 ${width} ${height}" role="img" aria-label="Score trend">
+        <line x1="${pad}" y1="${height - pad}" x2="${width - pad}" y2="${height - pad}" />
+        <polyline points="${coordinates}" />
+        ${dots}
+      </svg>
+      <div class="analysis-chart-labels">
+        <span>Oldest ${formatAnalysisNumber(points[0])}</span>
+        <span>Newest ${formatAnalysisNumber(points[points.length - 1])}</span>
+      </div>
+    </div>
   `;
 }
 
@@ -2377,7 +2860,7 @@ function renderTrend(records, scoreGetter) {
   return `
     <div class="analysis-trend-head">
       <span>Score trend</span>
-      <small>Each dot is one saved record, oldest to newest.</small>
+      <small>Dots are saved records from oldest to newest.</small>
     </div>
     ${sparklineSvg(records, scoreGetter)}
   `;
@@ -2389,7 +2872,8 @@ function renderHeadAnalysis(allMatches, matches) {
   const statsWrap = $("[data-analysis-head-stats]");
   const trendWrap = $("[data-analysis-head-trend]");
   const correlationWrap = $("[data-analysis-head-correlation]");
-  if (!summary || !count || !statsWrap || !trendWrap || !correlationWrap) return;
+  const insightsWrap = $("[data-analysis-head-insights]");
+  if (!summary || !count || !statsWrap || !trendWrap || !correlationWrap || !insightsWrap) return;
 
   count.textContent = `${matches.length} ${matches.length === 1 ? "match" : "matches"}`;
   if (!allMatches.length) {
@@ -2397,6 +2881,7 @@ function renderHeadAnalysis(allMatches, matches) {
     statsWrap.innerHTML = `<p class="analysis-empty">Save head-on-head matches to unlock this panel.</p>`;
     trendWrap.innerHTML = "";
     correlationWrap.innerHTML = "";
+    insightsWrap.innerHTML = "";
     return;
   }
 
@@ -2405,6 +2890,7 @@ function renderHeadAnalysis(allMatches, matches) {
     statsWrap.innerHTML = `<p class="analysis-empty">No saved data in this range.</p>`;
     trendWrap.innerHTML = "";
     correlationWrap.innerHTML = "";
+    insightsWrap.innerHTML = "";
     return;
   }
 
@@ -2421,10 +2907,14 @@ function renderHeadAnalysis(allMatches, matches) {
     analysisStat("Best", formatAnalysisNumber(stats.best)),
     analysisStat("Median", formatAnalysisNumber(stats.median)),
     analysisStat("Worst", formatAnalysisNumber(stats.worst)),
-    analysisStat("Last 5 average", formatAnalysisNumber(stats.recentMean), recentFormDetail(stats))
+    analysisStat("Recent form", formatAnalysisNumber(stats.recentMean), recentFormDetail(stats))
   ].join("");
   trendWrap.innerHTML = renderTrend(matches, match => match.ourScore);
   correlationWrap.innerHTML = renderCorrelation(matches, headCorrelationOptions, headCorrelationX, headCorrelationY, "head");
+  insightsWrap.innerHTML = `
+    <p class="analysis-helper">Recent form compares your most recent 5 saved records in this range against your average for the selected range.</p>
+    ${renderHeadInsights(matches, allMatches)}
+  `;
 }
 
 function renderSkillsAnalysis(allRuns, runs) {
@@ -2434,7 +2924,8 @@ function renderSkillsAnalysis(allRuns, runs) {
   const splitWrap = $("[data-analysis-skills-split]");
   const trendWrap = $("[data-analysis-skills-trend]");
   const correlationWrap = $("[data-analysis-skills-correlation]");
-  if (!summary || !count || !statsWrap || !splitWrap || !trendWrap || !correlationWrap) return;
+  const insightsWrap = $("[data-analysis-skills-insights]");
+  if (!summary || !count || !statsWrap || !splitWrap || !trendWrap || !correlationWrap || !insightsWrap) return;
 
   count.textContent = `${runs.length} ${runs.length === 1 ? "run" : "runs"}`;
   if (!allRuns.length) {
@@ -2443,6 +2934,7 @@ function renderSkillsAnalysis(allRuns, runs) {
     splitWrap.innerHTML = "";
     trendWrap.innerHTML = "";
     correlationWrap.innerHTML = "";
+    insightsWrap.innerHTML = "";
     return;
   }
 
@@ -2452,6 +2944,7 @@ function renderSkillsAnalysis(allRuns, runs) {
     splitWrap.innerHTML = "";
     trendWrap.innerHTML = "";
     correlationWrap.innerHTML = "";
+    insightsWrap.innerHTML = "";
     return;
   }
 
@@ -2476,7 +2969,7 @@ function renderSkillsAnalysis(allRuns, runs) {
     analysisStat("Best", formatAnalysisNumber(stats.best)),
     analysisStat("Median", formatAnalysisNumber(stats.median)),
     analysisStat("Worst", formatAnalysisNumber(stats.worst)),
-    analysisStat("Last 5 average", formatAnalysisNumber(stats.recentMean), recentFormDetail(stats))
+    analysisStat("Recent form", formatAnalysisNumber(stats.recentMean), recentFormDetail(stats))
   ].join("");
   splitWrap.innerHTML = `
     <div class="analysis-trend-head">
@@ -2493,6 +2986,10 @@ function renderSkillsAnalysis(allRuns, runs) {
   `;
   trendWrap.innerHTML = renderTrend(runs, run => run.score);
   correlationWrap.innerHTML = renderCorrelation(runs, skillsCorrelationOptions, skillsCorrelationX, skillsCorrelationY, "skills");
+  insightsWrap.innerHTML = `
+    <p class="analysis-helper">Recent form compares your most recent 5 saved records in this range against your average for the selected range.</p>
+    ${renderSkillsInsights(runs, allRuns)}
+  `;
 }
 
 function renderAnalysis() {
