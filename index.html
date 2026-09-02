@@ -5,99 +5,110 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Override Scoring Prototype</title>
   <meta name="description" content="Interactive VEX V5 Override scoring prototype." />
-  <link rel="stylesheet" href="./styles.css?v=analysis-upgrade-20260825-1" />
+  <link rel="stylesheet" href="./styles.css?v=i18n-20260902-1" />
 </head>
 <body>
   <main class="score-app">
-    <section class="brand-banner" aria-label="App overview">
+    <section class="brand-banner" aria-label="App overview" data-i18n-aria="aria.appOverview">
       <div class="brand-lockup">
         <span class="brand-kicker">VEX V5 Override</span>
-        <h1>Override Scoring Analyzer</h1>
-        <p>Made by - 4330P RoboPigeons</p>
+        <h1 data-i18n="brand.title">Override Scoring Analyzer</h1>
+        <p data-i18n="brand.credit">Made by - 4330P RoboPigeons</p>
       </div>
-      <div class="brand-stats" aria-label="Saved match summary">
+      <div class="brand-stats" aria-label="Saved match summary" data-i18n-aria="aria.savedSummary">
         <span class="brand-stat">
-          <small>Team</small>
+          <small data-i18n="banner.team">Team</small>
           <strong data-banner-team>4330P</strong>
         </span>
         <span class="brand-stat">
-          <small>Matches</small>
+          <small data-i18n="banner.matches">Matches</small>
           <strong data-banner-matches>0</strong>
         </span>
         <span class="brand-stat">
-          <small>Record</small>
+          <small data-i18n="banner.record">Record</small>
           <strong data-banner-record>0-0-0</strong>
         </span>
       </div>
+      <label class="language-picker">
+        <span data-i18n="language.label">Language</span>
+        <select data-language-select aria-label="Language" data-i18n-aria="language.aria">
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="zh-CN">简体中文</option>
+        </select>
+      </label>
     </section>
 
-    <nav class="mode-switch" aria-label="Scoring mode">
-      <button class="mode-choice" type="button" data-mode-choice="head" aria-pressed="true">Head-on-head</button>
-      <button class="mode-choice" type="button" data-mode-choice="skills" aria-pressed="false">Skills</button>
-      <button class="mode-choice" type="button" data-mode-choice="scouting" aria-pressed="false">Scouting</button>
-      <button class="mode-choice" type="button" data-mode-choice="analysis" aria-pressed="false">Analysis</button>
+    <nav class="mode-switch" aria-label="Scoring mode" data-i18n-aria="aria.scoringMode">
+      <button class="mode-choice" type="button" data-mode-choice="head" aria-pressed="true" data-i18n="tabs.head">Head-on-head</button>
+      <button class="mode-choice" type="button" data-mode-choice="skills" aria-pressed="false" data-i18n="tabs.skills">Skills</button>
+      <button class="mode-choice" type="button" data-mode-choice="scouting" aria-pressed="false" data-i18n="tabs.scouting">Scouting</button>
+      <button class="mode-choice" type="button" data-mode-choice="analysis" aria-pressed="false" data-i18n="tabs.analysis">Analysis</button>
     </nav>
 
     <section class="analysis-panel" data-mode-section="analysis" aria-labelledby="analysisTitle" hidden>
       <div class="analysis-head">
         <div>
-          <span class="brand-kicker">Local performance</span>
-          <h2 id="analysisTitle">My Performance</h2>
-          <p>Score trends from saved matches and Skills runs on this device.</p>
+          <span class="brand-kicker" data-i18n="analysis.kicker">Local performance</span>
+          <h2 id="analysisTitle" data-i18n="analysis.title">My Performance</h2>
+          <p data-i18n="analysis.description">Score trends from saved matches and Skills runs on this device.</p>
         </div>
-        <div class="analysis-range" aria-label="Analysis date range">
-          <button type="button" data-analysis-range="today" aria-pressed="false">Today</button>
-          <button type="button" data-analysis-range="7" aria-pressed="false">7 days</button>
-          <button type="button" data-analysis-range="30" aria-pressed="false">30 days</button>
-          <button type="button" data-analysis-range="all" aria-pressed="true">All time</button>
-          <button type="button" data-analysis-range="custom" aria-pressed="false">Custom</button>
+        <div class="analysis-range" aria-label="Analysis date range" data-i18n-aria="analysis.rangeAria">
+          <button type="button" data-analysis-range="today" aria-pressed="false" data-i18n="range.today">Today</button>
+          <button type="button" data-analysis-range="7" aria-pressed="false" data-i18n="range.7">7 days</button>
+          <button type="button" data-analysis-range="30" aria-pressed="false" data-i18n="range.30">30 days</button>
+          <button type="button" data-analysis-range="all" aria-pressed="true" data-i18n="range.all">All time</button>
+          <button type="button" data-analysis-range="custom" aria-pressed="false" data-i18n="range.custom">Custom</button>
         </div>
       </div>
 
       <div class="analysis-custom-range" data-analysis-custom hidden>
         <label>
-          <span>Start</span>
+          <span data-i18n="range.start">Start</span>
           <input type="date" data-analysis-start />
         </label>
         <label>
-          <span>End</span>
+          <span data-i18n="range.end">End</span>
           <input type="date" data-analysis-end />
         </label>
       </div>
 
       <div class="analysis-mode-switch" aria-label="Analysis type">
-        <button type="button" data-analysis-mode="head" aria-pressed="true">Head-on-head</button>
-        <button type="button" data-analysis-mode="skills" aria-pressed="false">Skills</button>
+        <button type="button" data-analysis-mode="head" aria-pressed="true" data-i18n="tabs.head">Head-on-head</button>
+        <button type="button" data-analysis-mode="skills" aria-pressed="false" data-i18n="tabs.skills">Skills</button>
       </div>
 
       <div class="analysis-grid">
         <article class="analysis-card analysis-card-wide" data-analysis-section="head">
           <div class="analysis-card-head">
             <div>
-              <h3>Head-on-head</h3>
-              <p data-analysis-head-summary>Save matches to unlock head-on-head analysis.</p>
+              <h3 data-i18n="tabs.head">Head-on-head</h3>
+              <p data-analysis-head-summary data-i18n="analysis.head.emptySummary">Save matches to unlock head-on-head analysis.</p>
             </div>
             <span class="analysis-pill" data-analysis-head-count>0 matches</span>
           </div>
+          <div class="analysis-coach-note" data-analysis-head-coach></div>
+          <div class="analysis-insights analysis-coach-grid" data-analysis-head-insights></div>
           <div class="analysis-stats" data-analysis-head-stats></div>
           <div class="analysis-trend" data-analysis-head-trend></div>
+          <div class="analysis-breakdown" data-analysis-head-breakdown></div>
           <div class="analysis-correlation" data-analysis-head-correlation></div>
-          <div class="analysis-insights" data-analysis-head-insights></div>
         </article>
 
         <article class="analysis-card analysis-card-wide" data-analysis-section="skills" hidden>
           <div class="analysis-card-head">
             <div>
-              <h3>Skills</h3>
-              <p data-analysis-skills-summary>Save Skills runs to unlock Skills analysis.</p>
+              <h3 data-i18n="tabs.skills">Skills</h3>
+              <p data-analysis-skills-summary data-i18n="analysis.skills.emptySummary">Save Skills runs to unlock Skills analysis.</p>
             </div>
             <span class="analysis-pill" data-analysis-skills-count>0 runs</span>
           </div>
+          <div class="analysis-coach-note" data-analysis-skills-coach></div>
+          <div class="analysis-insights analysis-coach-grid" data-analysis-skills-insights></div>
           <div class="analysis-stats" data-analysis-skills-stats></div>
           <div class="analysis-split" data-analysis-skills-split></div>
           <div class="analysis-trend" data-analysis-skills-trend></div>
           <div class="analysis-correlation" data-analysis-skills-correlation></div>
-          <div class="analysis-insights" data-analysis-skills-insights></div>
         </article>
       </div>
     </section>
@@ -106,23 +117,23 @@
       <section class="team-skills-search" aria-labelledby="teamSkillsTitle">
         <div class="competition-head">
           <div>
-            <span class="brand-kicker">Official Skills standings</span>
-            <h2 id="teamSkillsTitle">Team Skills Search</h2>
-            <p>Search teams from the public VEX V5RC Override Skills standings.</p>
+            <span class="brand-kicker" data-i18n="scouting.skillsKicker">Official Skills standings</span>
+            <h2 id="teamSkillsTitle" data-i18n="scouting.teamSkillsTitle">Team Skills Search</h2>
+            <p data-i18n="scouting.teamSkillsDescription">Search teams from the public VEX V5RC Override Skills standings.</p>
           </div>
           <span class="competition-source" data-team-skills-source>Proxy not connected</span>
         </div>
 
         <form class="competition-search" data-team-skills-search-form>
           <label>
-            <span>Team search</span>
-            <input name="teamSkillsSearch" type="search" autocomplete="off" placeholder="Team number, name, city, region, or event code" />
+            <span data-i18n="scouting.teamSearch">Team search</span>
+            <input name="teamSkillsSearch" type="search" autocomplete="off" placeholder="Team number, name, city, region, or event code" data-i18n-placeholder="scouting.teamSearchPlaceholder" />
           </label>
-          <button class="save-trigger" type="submit">Search Teams</button>
+          <button class="save-trigger" type="submit" data-i18n="scouting.searchTeams">Search Teams</button>
         </form>
 
         <div class="competition-status" data-team-skills-status>
-          Search official season Skills results by team number, team name, or region.
+          <span data-i18n="scouting.teamSkillsInitial">Search official season Skills results by team number, team name, or region.</span>
         </div>
 
         <div class="team-skills-results" data-team-skills-results hidden></div>
@@ -131,9 +142,9 @@
       <section class="competition-data" aria-labelledby="competitionDataTitle">
         <div class="competition-head">
           <div>
-            <span class="brand-kicker">Official data import</span>
-            <h2 id="competitionDataTitle">Competition Data</h2>
-            <p>Search synced VEX event data, import teams, and cache official details for later analysis.</p>
+            <span class="brand-kicker" data-i18n="scouting.dataKicker">Official data import</span>
+            <h2 id="competitionDataTitle" data-i18n="scouting.competitionData">Competition Data</h2>
+            <p data-i18n="scouting.competitionDescription">Search synced VEX event data, import teams, and cache official details for later analysis.</p>
           </div>
           <span class="competition-source" data-competition-source>Proxy not connected</span>
         </div>
@@ -142,17 +153,18 @@
 
         <form class="competition-search event-browser" data-competition-search-form>
           <label>
-            <span>Find competition</span>
-            <input name="competitionSearch" type="search" autocomplete="off" placeholder="Ransom, Miami, 65030, Florida, 4330P..." />
+            <span data-i18n="scouting.findCompetition">Find competition</span>
+            <input name="competitionSearch" type="search" autocomplete="off" placeholder="Ransom, Miami, 65030, Florida, 4330P..." data-i18n-placeholder="scouting.findPlaceholder" />
           </label>
           <label>
-            <span>Region</span>
+            <span data-i18n="scouting.region">Region</span>
             <div class="region-combobox" data-region-combobox>
               <input
                 name="competitionRegionSearch"
                 type="search"
                 autocomplete="off"
                 placeholder="All synced regions"
+                data-i18n-placeholder="scouting.allSyncedRegions"
                 role="combobox"
                 aria-expanded="false"
                 aria-controls="competitionRegionOptions"
@@ -162,20 +174,20 @@
               <div class="region-options" id="competitionRegionOptions" role="listbox" data-competition-region-options hidden></div>
             </div>
           </label>
-          <button class="save-trigger" type="submit">Show Events</button>
+          <button class="save-trigger" type="submit" data-i18n="scouting.showEvents">Show Events</button>
         </form>
 
         <div class="competition-quick-filters" data-competition-quick-filters aria-label="Competition quick filters">
-          <button type="button" data-competition-filter="all" aria-pressed="true">All</button>
-          <button type="button" data-competition-filter="mine" aria-pressed="false">My competitions</button>
+          <button type="button" data-competition-filter="all" aria-pressed="true" data-i18n="filters.all">All</button>
+          <button type="button" data-competition-filter="mine" aria-pressed="false" data-i18n="filters.mine">My competitions</button>
           <button type="button" data-competition-filter="florida" aria-pressed="false">Florida</button>
-          <button type="button" data-competition-filter="usa" aria-pressed="false">United States</button>
-          <button type="button" data-competition-filter="upcoming" aria-pressed="false">Upcoming</button>
-          <button type="button" data-competition-filter="past" aria-pressed="false">Past</button>
+          <button type="button" data-competition-filter="usa" aria-pressed="false" data-i18n="filters.usa">United States</button>
+          <button type="button" data-competition-filter="upcoming" aria-pressed="false" data-i18n="filters.upcoming">Upcoming</button>
+          <button type="button" data-competition-filter="past" aria-pressed="false" data-i18n="filters.past">Past</button>
         </div>
 
         <div class="competition-status" data-competition-status>
-          Loading synced competitions...
+          <span data-i18n="scouting.loadingCompetitions">Loading synced competitions...</span>
         </div>
 
         <div class="competition-results" data-competition-results hidden></div>
@@ -183,7 +195,7 @@
         <article class="competition-current" data-competition-current hidden>
           <div class="competition-current-head">
             <div>
-              <span>Imported competition</span>
+              <span data-i18n="scouting.importedCompetition">Imported competition</span>
               <h3 data-competition-name></h3>
               <p data-competition-meta></p>
             </div>
@@ -196,9 +208,9 @@
       </section>
     </section>
 
-    <section class="skills-panel" data-mode-section="skills" aria-label="Skills analysis and scorer" hidden>
+    <section class="skills-panel" data-mode-section="skills" aria-label="Skills analysis and scorer" data-i18n-aria="aria.skillsPanel" hidden>
       <header class="topbar skills-topbar">
-        <button class="icon-reset" type="button" aria-label="Skills reset placeholder">
+        <button class="icon-reset" type="button" aria-label="Skills reset placeholder" data-i18n-aria="aria.skillsReset">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M3 6h18" />
             <path d="M8 6V4h8v2" />
@@ -207,15 +219,15 @@
             <path d="M14 10v7" />
           </svg>
         </button>
-        <section class="skills-scoreboard" aria-label="Skills score">
-          <span>Skills Score</span>
+        <section class="skills-scoreboard" aria-label="Skills score" data-i18n-aria="aria.skillsScore">
+          <span data-i18n="skills.score">Skills Score</span>
           <strong data-skills-score>0</strong>
         </section>
-        <div class="alliance-switch skills-run-switch" role="group" aria-label="Skills run type">
-          <button class="alliance-choice red" type="button" data-skills-type="driver" aria-pressed="false">Driver</button>
-          <button class="alliance-choice blue" type="button" data-skills-type="autonomous" aria-pressed="false">Autonomous</button>
+        <div class="alliance-switch skills-run-switch" role="group" aria-label="Skills run type" data-i18n-aria="aria.skillsRunType">
+          <button class="alliance-choice red" type="button" data-skills-type="driver" aria-pressed="false" data-i18n="skills.driver">Driver</button>
+          <button class="alliance-choice blue" type="button" data-skills-type="autonomous" aria-pressed="false" data-i18n="skills.autonomous">Autonomous</button>
         </div>
-        <button class="save-trigger" type="button" data-skills-save-open>Save Match</button>
+        <button class="save-trigger" type="button" data-skills-save-open data-i18n="skills.saveRun">Save Run</button>
       </header>
 
       <section class="scoring-board skills-board" aria-label="Skills field">
@@ -307,19 +319,19 @@
       <section class="match-history skills-history" aria-labelledby="skillsHistoryTitle">
         <div class="history-head">
           <div>
-            <h2 id="skillsHistoryTitle">Skills History</h2>
-            <p>Recent saved Skills runs on this device.</p>
+            <h2 id="skillsHistoryTitle" data-i18n="history.skillsTitle">Skills History</h2>
+            <p data-i18n="history.skillsDescription">Recent saved Skills runs on this device.</p>
           </div>
         </div>
         <div class="history-list" data-skills-history-list>
-          <p class="history-empty">Saved Skills runs will appear here after you score and save one.</p>
+          <p class="history-empty" data-i18n="history.skillsEmpty">Saved Skills runs will appear here after you score and save one.</p>
         </div>
         <button class="history-more" type="button" data-skills-history-more hidden>Show More</button>
       </section>
     </section>
 
     <header class="topbar" data-mode-section="head">
-      <button class="icon-reset" type="button" data-reset aria-label="Reset scorer">
+      <button class="icon-reset" type="button" data-reset aria-label="Reset scorer" data-i18n-aria="aria.resetScorer">
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M3 6h18" />
           <path d="M8 6V4h8v2" />
@@ -328,29 +340,29 @@
           <path d="M14 10v7" />
         </svg>
       </button>
-      <section class="scoreboard" aria-label="Live score">
-        <span class="score-label red-label">Red</span>
+      <section class="scoreboard" aria-label="Live score" data-i18n-aria="aria.liveScore">
+        <span class="score-label red-label" data-i18n="color.red">Red</span>
         <strong id="redTotal" class="score-number red-score">0</strong>
         <span class="score-divider">-</span>
         <strong id="blueTotal" class="score-number blue-score">0</strong>
-        <span class="score-label blue-label">Blue</span>
+        <span class="score-label blue-label" data-i18n="color.blue">Blue</span>
       </section>
-      <button class="save-trigger" type="button" data-save-open>Save Match</button>
+      <button class="save-trigger" type="button" data-save-open data-i18n="match.saveMatch">Save Match</button>
     </header>
 
     <section class="scoring-board" data-mode-section="head" aria-label="Interactive field scoring board">
       <div class="auton-row" aria-label="Autonomous bonus controls">
         <button class="auton-button red" type="button" data-auton="red" aria-pressed="false">
           <span>A</span>
-          <small>Red auton</small>
+          <small data-i18n="match.redAuton">Red auton</small>
         </button>
         <div class="alliance-switch" role="group" aria-label="Your alliance color">
-          <button class="alliance-choice red" type="button" data-team-alliance="red" aria-pressed="false">Red</button>
-          <button class="alliance-choice blue" type="button" data-team-alliance="blue" aria-pressed="false">Blue</button>
+          <button class="alliance-choice red" type="button" data-team-alliance="red" aria-pressed="false" data-i18n="color.red">Red</button>
+          <button class="alliance-choice blue" type="button" data-team-alliance="blue" aria-pressed="false" data-i18n="color.blue">Blue</button>
         </div>
         <button class="auton-button blue" type="button" data-auton="blue" aria-pressed="false">
           <span>A</span>
-          <small>Blue auton</small>
+          <small data-i18n="match.blueAuton">Blue auton</small>
         </button>
       </div>
 
@@ -380,21 +392,21 @@
     <section class="match-history" data-mode-section="head" aria-labelledby="matchHistoryTitle">
       <div class="history-head">
         <div>
-          <h2 id="matchHistoryTitle">Match History</h2>
-          <p>Recent saved matches on this device.</p>
+            <h2 id="matchHistoryTitle" data-i18n="history.matchTitle">Match History</h2>
+            <p data-i18n="history.matchDescription">Recent saved matches on this device.</p>
         </div>
       </div>
       <div class="dev-panel" data-dev-panel hidden>
         <div>
-          <strong>Dev Mode</strong>
-          <span>Edit saved records or wipe local test data on this device.</span>
+          <strong data-i18n="dev.title">Dev Mode</strong>
+          <span data-i18n="dev.description">Edit saved records or wipe local test data on this device.</span>
         </div>
-        <button class="dev-button" type="button" data-dev-seed-matches>Autofill Sample Data</button>
-        <button class="dev-button" type="button" data-dev-clear-matches>Clear Matches</button>
-        <button class="dev-button danger" type="button" data-dev-clear-all>Wipe All Data</button>
+        <button class="dev-button" type="button" data-dev-seed-matches data-i18n="dev.autofill">Autofill Sample Data</button>
+        <button class="dev-button" type="button" data-dev-clear-matches data-i18n="dev.clearMatches">Clear Matches</button>
+        <button class="dev-button danger" type="button" data-dev-clear-all data-i18n="dev.wipeAll">Wipe All Data</button>
       </div>
       <div class="history-list" data-history-list>
-        <p class="history-empty">Saved matches will appear here after you score and save one.</p>
+        <p class="history-empty" data-i18n="history.matchEmpty">Saved matches will appear here after you score and save one.</p>
       </div>
       <button class="history-more" type="button" data-history-more hidden>Show More</button>
     </section>
@@ -404,24 +416,24 @@
     <section class="setup-modal" role="dialog" aria-modal="true" aria-labelledby="setupTitle">
       <header class="modal-head">
         <div>
-          <h2 id="setupTitle">Team Setup</h2>
-          <p>Enter your team number once. This app will remember it on this device.</p>
+          <h2 id="setupTitle" data-i18n="setup.title">Team Setup</h2>
+          <p data-i18n="setup.description">Enter your team number once. This app will remember it on this device.</p>
         </div>
       </header>
 
       <form class="setup-form" data-setup-form>
         <label>
-          <span>Your team number</span>
+          <span data-i18n="setup.teamNumber">Your team number</span>
           <input name="teamNumber" type="text" inputmode="numeric" autocomplete="off" placeholder="4330P" required />
         </label>
-        <button class="modal-button primary" type="submit" data-setup-submit>Check Team</button>
+        <button class="modal-button primary" type="submit" data-setup-submit data-i18n="setup.checkTeam">Check Team</button>
       </form>
       <div class="setup-confirm" data-setup-confirm hidden>
-        <span>Team found</span>
+        <span data-i18n="setup.teamFound">Team found</span>
         <strong data-setup-confirm-name></strong>
         <div class="setup-confirm-actions">
-          <button class="modal-button primary" type="button" data-setup-confirm-yes>Yes, continue</button>
-          <button class="modal-button secondary" type="button" data-setup-confirm-no>No, edit team number</button>
+          <button class="modal-button primary" type="button" data-setup-confirm-yes data-i18n="setup.yesContinue">Yes, continue</button>
+          <button class="modal-button secondary" type="button" data-setup-confirm-no data-i18n="setup.noEdit">No, edit team number</button>
         </div>
       </div>
     </section>
@@ -431,42 +443,42 @@
     <section class="save-modal" role="dialog" aria-modal="true" aria-labelledby="saveMatchTitle">
       <header class="modal-head">
         <div>
-          <h2 id="saveMatchTitle">Save Match</h2>
-          <p>All details are optional. The score and full field state are saved automatically.</p>
+          <h2 id="saveMatchTitle" data-i18n="saveMatch.title">Save Match</h2>
+          <p data-i18n="saveMatch.description">All details are optional. The score and full field state are saved automatically.</p>
         </div>
-        <button class="modal-close" type="button" data-save-close aria-label="Close save match dialog">&times;</button>
+        <button class="modal-close" type="button" data-save-close aria-label="Close save match dialog" data-i18n-aria="aria.closeSaveMatch">&times;</button>
       </header>
 
       <form class="save-form" data-save-form>
         <label>
-          <span>Alliance partner team number</span>
-          <input name="partnerTeam" type="text" inputmode="numeric" autocomplete="off" placeholder="Optional" />
+          <span data-i18n="saveMatch.partnerTeam">Alliance partner team number</span>
+          <input name="partnerTeam" type="text" inputmode="numeric" autocomplete="off" placeholder="Optional" data-i18n-placeholder="common.optional" />
         </label>
         <label>
-          <span>Alliance partner notes</span>
-          <textarea name="partnerNotes" rows="2" placeholder="Optional"></textarea>
+          <span data-i18n="saveMatch.partnerNotes">Alliance partner notes</span>
+          <textarea name="partnerNotes" rows="2" placeholder="Optional" data-i18n-placeholder="common.optional"></textarea>
         </label>
         <label>
-          <span>Opponent 1 team number/name</span>
-          <input name="opponentOne" type="text" autocomplete="off" placeholder="Optional" />
+          <span data-i18n="saveMatch.opponentOne">Opponent 1 team number/name</span>
+          <input name="opponentOne" type="text" autocomplete="off" placeholder="Optional" data-i18n-placeholder="common.optional" />
         </label>
         <label>
-          <span>Opponent 1 notes</span>
-          <textarea name="opponentOneNotes" rows="2" placeholder="Optional"></textarea>
+          <span data-i18n="saveMatch.opponentOneNotes">Opponent 1 notes</span>
+          <textarea name="opponentOneNotes" rows="2" placeholder="Optional" data-i18n-placeholder="common.optional"></textarea>
         </label>
         <label>
-          <span>Opponent 2 team number/name</span>
-          <input name="opponentTwo" type="text" autocomplete="off" placeholder="Optional" />
+          <span data-i18n="saveMatch.opponentTwo">Opponent 2 team number/name</span>
+          <input name="opponentTwo" type="text" autocomplete="off" placeholder="Optional" data-i18n-placeholder="common.optional" />
         </label>
         <label>
-          <span>Opponent 2 notes</span>
-          <textarea name="opponentTwoNotes" rows="2" placeholder="Optional"></textarea>
+          <span data-i18n="saveMatch.opponentTwoNotes">Opponent 2 notes</span>
+          <textarea name="opponentTwoNotes" rows="2" placeholder="Optional" data-i18n-placeholder="common.optional"></textarea>
         </label>
 
         <footer class="modal-actions">
-          <button class="modal-button quiet" type="button" data-save-close>Cancel</button>
-          <button class="modal-button secondary" type="button" data-save-skip>Skip Details</button>
-          <button class="modal-button primary" type="submit">Save Match</button>
+          <button class="modal-button quiet" type="button" data-save-close data-i18n="common.cancel">Cancel</button>
+          <button class="modal-button secondary" type="button" data-save-skip data-i18n="saveMatch.skip">Skip Details</button>
+          <button class="modal-button primary" type="submit" data-i18n="match.saveMatch">Save Match</button>
         </footer>
       </form>
     </section>
@@ -476,22 +488,22 @@
     <section class="save-modal skills-save-modal" role="dialog" aria-modal="true" aria-labelledby="saveSkillsTitle">
       <header class="modal-head">
         <div>
-          <h2 id="saveSkillsTitle">Save Skills Run</h2>
-          <p>Notes are optional. The score and full Skills field state are saved automatically.</p>
+          <h2 id="saveSkillsTitle" data-i18n="saveSkills.title">Save Skills Run</h2>
+          <p data-i18n="saveSkills.description">Notes are optional. The score and full Skills field state are saved automatically.</p>
         </div>
-        <button class="modal-close" type="button" data-skills-save-close aria-label="Close skills save dialog">&times;</button>
+        <button class="modal-close" type="button" data-skills-save-close aria-label="Close skills save dialog" data-i18n-aria="aria.closeSkillsSave">&times;</button>
       </header>
 
       <form class="save-form skills-save-form" data-skills-save-form>
         <label class="wide-field">
-          <span>Run notes</span>
-          <textarea name="notes" rows="5" placeholder="Optional"></textarea>
+          <span data-i18n="saveSkills.notes">Run notes</span>
+          <textarea name="notes" rows="5" placeholder="Optional" data-i18n-placeholder="common.optional"></textarea>
         </label>
 
         <footer class="modal-actions">
-          <button class="modal-button quiet" type="button" data-skills-save-close>Cancel</button>
-          <button class="modal-button secondary" type="button" data-skills-save-skip>Skip Notes</button>
-          <button class="modal-button primary" type="submit">Save Run</button>
+          <button class="modal-button quiet" type="button" data-skills-save-close data-i18n="common.cancel">Cancel</button>
+          <button class="modal-button secondary" type="button" data-skills-save-skip data-i18n="saveSkills.skip">Skip Notes</button>
+          <button class="modal-button primary" type="submit" data-i18n="skills.saveRun">Save Run</button>
         </footer>
       </form>
     </section>
@@ -501,23 +513,23 @@
     <section class="save-modal dev-edit-modal" role="dialog" aria-modal="true" aria-labelledby="devEditTitle">
       <header class="modal-head">
         <div>
-          <h2 id="devEditTitle">Edit Saved Match</h2>
-          <p>Dev mode: edit the saved match JSON directly. Invalid JSON will not save.</p>
+          <h2 id="devEditTitle" data-i18n="dev.editTitle">Edit Saved Match</h2>
+          <p data-i18n="dev.editDescription">Dev mode: edit the saved match JSON directly. Invalid JSON will not save.</p>
         </div>
-        <button class="modal-close" type="button" data-dev-edit-close aria-label="Close dev edit dialog">&times;</button>
+        <button class="modal-close" type="button" data-dev-edit-close aria-label="Close dev edit dialog" data-i18n-aria="aria.closeDevEdit">&times;</button>
       </header>
 
       <form class="dev-edit-form" data-dev-edit-form>
         <textarea name="matchJson" spellcheck="false" aria-label="Saved match JSON"></textarea>
         <footer class="modal-actions">
-          <button class="modal-button quiet" type="button" data-dev-edit-close>Cancel</button>
-          <button class="modal-button primary" type="submit">Save Changes</button>
+          <button class="modal-button quiet" type="button" data-dev-edit-close data-i18n="common.cancel">Cancel</button>
+          <button class="modal-button primary" type="submit" data-i18n="dev.saveChanges">Save Changes</button>
         </footer>
       </form>
     </section>
   </div>
 
   <div class="toast" data-toast role="status" aria-live="polite"></div>
-  <script src="./app.js?v=analysis-upgrade-20260825-1"></script>
+  <script src="./app.js?v=i18n-20260902-1"></script>
 </body>
 </html>

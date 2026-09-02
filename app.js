@@ -13,6 +13,7 @@ const PROFILE_STORE_KEY = "vexOverrideProfile:v1";
 const COMPETITION_STORE_KEY = "vexOverrideCompetitionData:v1";
 const PROXY_URL_STORE_KEY = "vexOverrideDataProxyUrl:v1";
 const SEASON_SKILLS_STORE_KEY = "vexOverrideSeasonSkills:v1";
+const LANGUAGE_STORE_KEY = "vexOverrideLanguage:v1";
 const HISTORY_INITIAL_LIMIT = 3;
 const DEFAULT_VEX_PROXY_URL = "https://vexoverride-data-proxy.nnovate--26.workers.dev";
 const quadrants = ["top", "right", "bottom", "left", "center"];
@@ -87,9 +88,1175 @@ let seasonSkillsPromise = null;
 let lastModalFocus = null;
 let toastTimer = null;
 const REGION_MATCH_KEY = "__matching_regions__";
+const supportedLanguages = ["en", "es", "zh-CN"];
+const languageLocales = { en: "en-US", es: "es", "zh-CN": "zh-CN" };
+const translations = {
+  en: {
+    "aria.appOverview": "App overview",
+    "aria.savedSummary": "Saved match summary",
+    "aria.scoringMode": "Scoring mode",
+    "aria.skillsPanel": "Skills analysis and scorer",
+    "aria.skillsReset": "Skills reset placeholder",
+    "aria.skillsScore": "Skills score",
+    "aria.skillsRunType": "Skills run type",
+    "aria.resetScorer": "Reset scorer",
+    "aria.liveScore": "Live score",
+    "aria.closeSaveMatch": "Close save match dialog",
+    "aria.closeSkillsSave": "Close skills save dialog",
+    "aria.closeDevEdit": "Close dev edit dialog",
+    "brand.title": "Override Scoring Analyzer",
+    "brand.credit": "Made by - 4330P RoboPigeons",
+    "banner.team": "Team",
+    "banner.matches": "Matches",
+    "banner.record": "Record",
+    "language.label": "Language",
+    "language.aria": "Language",
+    "tabs.head": "Head-on-head",
+    "tabs.skills": "Skills",
+    "tabs.scouting": "Scouting",
+    "tabs.analysis": "Analysis",
+    "range.today": "Today",
+    "range.7": "7 days",
+    "range.30": "30 days",
+    "range.all": "All time",
+    "range.custom": "Custom",
+    "range.start": "Start",
+    "range.end": "End",
+    "common.optional": "Optional",
+    "common.notListed": "Not listed",
+    "common.notLoaded": "Not loaded",
+    "common.notSaved": "Not saved",
+    "common.notEntered": "Not entered",
+    "common.cancel": "Cancel",
+    "common.team": "Team",
+    "color.red": "Red",
+    "color.blue": "Blue",
+    "color.yellow": "Yellow",
+    "color.neutral": "Neutral",
+    "quadrant.top": "top",
+    "quadrant.right": "right",
+    "quadrant.bottom": "bottom",
+    "quadrant.left": "left",
+    "quadrant.center": "center",
+    "match.saveMatch": "Save Match",
+    "match.redAuton": "Red auton",
+    "match.blueAuton": "Blue auton",
+    "skills.score": "Skills Score",
+    "skills.driver": "Driver",
+    "skills.autonomous": "Autonomous",
+    "skills.saveRun": "Save Run",
+    "history.matchTitle": "Match History",
+    "history.matchDescription": "Recent saved matches on this device.",
+    "history.matchEmpty": "Saved matches will appear here after you score and save one.",
+    "history.skillsTitle": "Skills History",
+    "history.skillsDescription": "Recent saved Skills runs on this device.",
+    "history.skillsEmpty": "Saved Skills runs will appear here after you score and save one.",
+    "history.showMore": "Show More",
+    "history.showLess": "Show Less",
+    "history.confirmDelete": "Confirm Delete",
+    "history.deleteMatch": "Delete Match",
+    "history.savedMatch": "Saved match",
+    "history.result.saved": "saved",
+    "history.result.win": "win",
+    "history.result.loss": "loss",
+    "history.result.tie": "tie",
+    "history.team": "Team",
+    "history.alliance": "Alliance",
+    "history.ourScore": "Our score",
+    "history.opponentScore": "Opponent score",
+    "history.partner": "Partner",
+    "history.opponentOne": "Opponent 1",
+    "history.opponentTwo": "Opponent 2",
+    "history.runType": "Run type",
+    "history.notes": "Notes",
+    "setup.title": "Team Setup",
+    "setup.description": "Enter your team number once. This app will remember it on this device.",
+    "setup.teamNumber": "Your team number",
+    "setup.checkTeam": "Check Team",
+    "setup.checking": "Checking...",
+    "setup.teamFound": "Team found",
+    "setup.yesContinue": "Yes, continue",
+    "setup.noEdit": "No, edit team number",
+    "saveMatch.title": "Save Match",
+    "saveMatch.description": "All details are optional. The score and full field state are saved automatically.",
+    "saveMatch.partnerTeam": "Alliance partner team number",
+    "saveMatch.partnerNotes": "Alliance partner notes",
+    "saveMatch.opponentOne": "Opponent 1 team number/name",
+    "saveMatch.opponentOneNotes": "Opponent 1 notes",
+    "saveMatch.opponentTwo": "Opponent 2 team number/name",
+    "saveMatch.opponentTwoNotes": "Opponent 2 notes",
+    "saveMatch.skip": "Skip Details",
+    "saveSkills.title": "Save Skills Run",
+    "saveSkills.description": "Notes are optional. The score and full Skills field state are saved automatically.",
+    "saveSkills.notes": "Run notes",
+    "saveSkills.skip": "Skip Notes",
+    "dev.title": "Dev Mode",
+    "dev.description": "Edit saved records or wipe local test data on this device.",
+    "dev.autofill": "Autofill Sample Data",
+    "dev.clearMatches": "Clear Matches",
+    "dev.wipeAll": "Wipe All Data",
+    "dev.editTitle": "Edit Saved Match",
+    "dev.editDescription": "Dev mode: edit the saved match JSON directly. Invalid JSON will not save.",
+    "dev.saveChanges": "Save Changes",
+    "dev.tools": "Dev tools",
+    "dev.editJson": "Edit JSON",
+    "analysis.kicker": "Local performance",
+    "analysis.title": "My Performance",
+    "analysis.description": "Score trends from saved matches and Skills runs on this device.",
+    "analysis.rangeAria": "Analysis date range",
+    "analysis.head.emptySummary": "Save matches to unlock head-on-head analysis.",
+    "analysis.skills.emptySummary": "Save Skills runs to unlock Skills analysis.",
+    "analysis.head.emptyPanel": "Save head-on-head matches to unlock this panel.",
+    "analysis.skills.emptyPanel": "Save Skills runs to unlock this panel.",
+    "analysis.noRange": "No saved data in this range.",
+    "analysis.matches.one": "{count} match",
+    "analysis.matches.many": "{count} matches",
+    "analysis.runs.one": "{count} run",
+    "analysis.runs.many": "{count} runs",
+    "analysis.summaryAverage": "Averaging {score} points across this range.",
+    "analysis.coachNote": "Coach note",
+    "analysis.averageScore": "Average score",
+    "analysis.winRate": "Win rate",
+    "analysis.best": "Best",
+    "analysis.median": "Median",
+    "analysis.worst": "Worst",
+    "analysis.last5": "Last 5 vs average",
+    "analysis.trendTitle": "Are we improving?",
+    "analysis.trendDetail.match": "Each dot is one saved match, oldest to newest.",
+    "analysis.trendDetail.run": "Each dot is one saved run, oldest to newest.",
+    "analysis.needTrend": "Need at least 2 records for a trend.",
+    "analysis.low": "Low {value}",
+    "analysis.high": "High {value}",
+    "analysis.oldest": "Oldest {value}",
+    "analysis.newest": "Newest {value}",
+    "analysis.scoreTrend": "Score trend",
+    "analysis.pointTitle.match": "Match {index}: {score} pts - {date}",
+    "analysis.pointTitle.run": "Run {index}: {score} pts - {date}",
+    "analysis.openCorrelation": "Open Correlation Lab",
+    "analysis.correlationTool": "Advanced comparison tool",
+    "analysis.compare": "Compare",
+    "analysis.against": "Against",
+    "analysis.correlationResult": "r = {r} from {count} saved {type}",
+    "analysis.correlationHelp": "Positive means the two numbers rise together. Negative means one tends to rise when the other falls.",
+    "analysis.correlation.notEnough": "Not enough variation yet",
+    "analysis.correlation.strongPositive": "Strong positive",
+    "analysis.correlation.moderatePositive": "Moderate positive",
+    "analysis.correlation.weakPositive": "Weak positive",
+    "analysis.correlation.strongNegative": "Strong negative",
+    "analysis.correlation.moderateNegative": "Moderate negative",
+    "analysis.correlation.weakNegative": "Weak negative",
+    "analysis.correlation.little": "Little relationship",
+    "analysis.driverAvg": "Driver avg",
+    "analysis.autonAvg": "Auton avg",
+    "analysis.bestDriver": "Best Driver",
+    "analysis.bestAuton": "Best Auton",
+    "analysis.bestCombined": "Best combined",
+    "analysis.skillsSplit": "Skills split",
+    "analysis.skillsSplitDetail": "Driver plus Autonomous",
+    "analysis.skillsQuestion": "How do Driver and Autonomous compare?",
+    "analysis.skillsQuestionDetail": "Best combined means best Driver plus best Autonomous.",
+    "analysis.headQuestion": "Why are we winning or losing?",
+    "analysis.headQuestionDetail": "These cards explain the main scoring levers behind the record.",
+    "analysis.skillsSourceQuestion": "Where is the Skills score coming from?",
+    "analysis.skillsSourceDetail": "Driver and Autonomous are tracked separately, with yellow/control mistakes called out.",
+    "analysis.working": "What is working",
+    "analysis.costing": "What is costing points",
+    "analysis.focus": "What to focus on next",
+    "scouting.skillsKicker": "Official Skills standings",
+    "scouting.teamSkillsTitle": "Team Skills Search",
+    "scouting.teamSkillsDescription": "Search teams from the public VEX V5RC Override Skills standings.",
+    "scouting.teamSearch": "Team search",
+    "scouting.teamSearchPlaceholder": "Team number, name, city, region, or event code",
+    "scouting.searchTeams": "Search Teams",
+    "scouting.teamSkillsInitial": "Search official season Skills results by team number, team name, or region.",
+    "scouting.dataKicker": "Official data import",
+    "scouting.competitionData": "Competition Data",
+    "scouting.competitionDescription": "Search synced VEX event data, import teams, and cache official details for later analysis.",
+    "scouting.findCompetition": "Find competition",
+    "scouting.findPlaceholder": "Ransom, Miami, 65030, Florida, 4330P...",
+    "scouting.region": "Region",
+    "scouting.allSyncedRegions": "All synced regions",
+    "scouting.showEvents": "Show Events",
+    "scouting.loadingCompetitions": "Loading synced competitions...",
+    "scouting.importedCompetition": "Imported competition",
+    "scouting.syncedLocal": "Synced local data",
+    "scouting.noSyncedData": "No synced data",
+    "scouting.liveProxy": "Live proxy connected",
+    "scouting.noProxy": "Proxy not connected",
+    "scouting.searchingSkills": "Searching public VEX Skills standings...",
+    "scouting.foundTeams.one": "Found {count} matching team.",
+    "scouting.foundTeams.many": "Found {count} matching teams.",
+    "scouting.noTeams": "No matching teams found.",
+    "scouting.noTeamsLong": "No matching teams found in the public Skills standings.",
+    "scouting.typeTwo": "Type at least 2 characters to search teams.",
+    "scouting.skillsError": "Team Skills data could not load. Try again later.",
+    "scouting.dataError": "Competition data could not load. Try again later.",
+    "scouting.proxyNeeded": "Live VEX data needs the proxy before it can load official results.",
+    "scouting.noSynced": "No synced competitions found yet. Run the VEX collector and import a bundle.",
+    "scouting.searchingCompetitions": "Searching synced competitions...",
+    "scouting.noCompetitionMatches": "No matching competitions found.",
+    "scouting.foundCompetitions.one": "Found {count} synced competition.",
+    "scouting.foundCompetitions.many": "Found {count} synced competitions.",
+    "scouting.foundAcross.one": "Found {count} synced competitions across {regions} matching region.",
+    "scouting.foundAcross.many": "Found {count} synced competitions across {regions} matching regions.",
+    "scouting.noRegionMatch": "No synced regions match \"{query}\".",
+    "scouting.loaded.one": "{count} synced competition loaded.{updated}",
+    "scouting.loaded.many": "{count} synced competitions loaded.{updated}",
+    "scouting.lastUpdated": " Last updated {date}.",
+    "scouting.myCompetitions": "My competitions",
+    "scouting.enterTeam": "Enter a team number during setup to auto-detect your events.",
+    "scouting.noMyEvents": "No synced competitions found for {team}.",
+    "scouting.tryAll": "Try searching all synced events below.",
+    "scouting.myEvents.one": "{count} synced event found for {team}",
+    "scouting.myEvents.many": "{count} synced events found for {team}",
+    "scouting.event": "Event",
+    "scouting.unnamedEvent": "Unnamed event",
+    "scouting.count.teams": "{count} teams",
+    "scouting.count.skills": "{count} skills",
+    "scouting.count.awards": "{count} awards",
+    "scouting.viewImport": "View / Import",
+    "scouting.regionNotListed": "Region not listed",
+    "scouting.dateNotListed": "Date not listed",
+    "scouting.allMatchingRegions": "All matching regions for \"{query}\"",
+    "scouting.allMatchingMeta": "{regions} synced regions - {events} events",
+    "scouting.showEveryEvent": "Show every imported event",
+    "scouting.syncedEvents.one": "{count} synced event",
+    "scouting.syncedEvents.many": "{count} synced events",
+    "scouting.teams": "Teams",
+    "scouting.teamsHint": "Click a team for season Skills and event details.",
+    "scouting.noRegisteredTeams": "No registered teams are listed yet.",
+    "scouting.awards": "Awards",
+    "scouting.awardsSynced.one": "{count} award synced for this event.",
+    "scouting.awardsSynced.many": "{count} awards synced for this event.",
+    "scouting.noAwards": "No awards posted yet.",
+    "scouting.winnerNotListed": "Winner not listed",
+    "filters.all": "All",
+    "filters.mine": "My competitions",
+    "filters.usa": "United States",
+    "filters.upcoming": "Upcoming",
+    "filters.past": "Past",
+    "toast.enterTeam": "Enter your team number first.",
+    "toast.matchDeleted": "Match deleted.",
+    "toast.confirmDelete": "Press Confirm Delete to remove this match.",
+    "toast.matchesCleared": "Saved matches cleared.",
+    "toast.localWiped": "Local app data wiped.",
+    "toast.invalidJson": "Invalid JSON. Match was not changed.",
+    "toast.editNeedsId": "Edited match needs an id.",
+    "toast.matchUpdated": "Match updated.",
+    "toast.competitionImported": "Competition data imported.",
+    "toast.sampleRebuilt": "Sample dev data rebuilt.",
+    "toast.chooseAlliance": "Choose your alliance color before saving.",
+    "toast.chooseSkillsType": "Choose Driver or Autonomous before saving.",
+    "toast.matchSaveFailed": "Match could not be saved on this device.",
+    "toast.matchSaved": "Match saved on this device.",
+    "toast.skillsSaveFailed": "Skills run could not be saved on this device.",
+    "toast.skillsSaved": "Skills run saved on this device.",
+    "toast.teamNameSaved": "{teamNumber} {teamName} saved on this device.",
+    "toast.teamSaved": "Team {teamNumber} saved on this device.",
+    "setup.confirmIdentity": "Are you {teamNumber} {teamName}?",
+    "setup.checkAnother": "Check Another Team",
+    "aria.decreasePins": "Decrease {color} pins in {quadrant} quadrant",
+    "aria.increasePins": "Increase {color} pins in {quadrant} quadrant",
+    "aria.pinsInQuadrant": "{color} pins in {quadrant} quadrant",
+    "scouting.date": "Date",
+    "scouting.rank": "Rank #{rank}",
+    "scouting.officialSkillsResult": "Official Skills result",
+    "scouting.noExtraTeamDetails": "No extra team details listed.",
+    "scouting.eventWithId": "Event {id}",
+    "scouting.syncedDataCounts": "Synced data counts",
+    "scouting.teamDetails": "Team details",
+    "scouting.seasonSkills": "Season Skills",
+    "scouting.eventSkills": "Event Skills",
+    "scouting.robot": "Robot",
+    "scouting.noAdditionalTeamDetails": "No additional team details listed.",
+    "scouting.attempts": "{count} attempts",
+    "scouting.award": "Award",
+    "scouting.loadedDetail": "Loaded {date}. {skills} skills rows - {awards} awards.",
+    "scouting.onlyImportedRegions": "Only imported season-204 regions appear here.",
+    "analysis.matchesLabel": "matches",
+    "analysis.runsLabel": "runs",
+    "analysis.recentDetail": "last {count}, {delta} vs range avg",
+    "analysis.recordDetail": "{wins}W {losses}L {ties}T",
+    "analysis.winFactors": "What usually helps us win",
+    "analysis.winFactorsEmpty": "Save more varied matches to identify what is most tied to winning.",
+    "analysis.winFactorsDetail": "The strongest simple relationships with winning in this range.",
+    "analysis.learning": "Learning",
+    "analysis.topCount": "Top {count}",
+    "analysis.missedPoints": "Missed points",
+    "analysis.missedPointsDetail": "Estimated points left from unowned yellows, lost or tied auton, and missing midfield robots/control.",
+    "analysis.avgValue": "{value} avg",
+    "analysis.autonReliability": "Auton reliability",
+    "analysis.percentWon": "{value} won",
+    "analysis.autonReliabilityDetail": "Auton outcome compared with final margin.",
+    "analysis.wonAuton": "Won auton",
+    "analysis.tiedAuton": "Tied auton",
+    "analysis.lostAuton": "Lost auton",
+    "analysis.avgMargin": "avg margin {value}",
+    "analysis.centerImpact": "Center control impact",
+    "analysis.centerImpactDetail": "Avg margin with center: {withCenter}. Without center: {withoutCenter}.",
+    "analysis.swing": "{value} swing",
+    "analysis.yellowEfficiency": "Toggle/yellows efficiency",
+    "analysis.yellowEfficiencyDetail": "{scored} of {placed} yellow pins counted for your alliance in this range.",
+    "analysis.floorCeilingDetail": "A realistic low/high range using saved-score percentiles, less jumpy than raw worst and best.",
+    "analysis.previousAverage": "Previous comparable range averaged {value}.",
+    "analysis.needEarlierData": "Need earlier saved data for a previous-range comparison.",
+    "analysis.bestBlueprint": "Best match blueprint",
+    "analysis.bestBlueprintDetail": "Your best 3 averaged {pins} red/blue pins and {yellows} owned yellows. Center was controlled {center}/3 times; auton won {auton}/3.",
+    "analysis.badGoodRange": "Bad day / good day range",
+    "analysis.weeklyProgress": "Weekly progress",
+    "analysis.yellowConversion": "Yellow conversion",
+    "analysis.yellowConversionDetail": "{scored} of {placed} yellow pins scored under the Skills ownership rules.",
+    "analysis.skillsRouteProgress": "Skills route progress",
+    "analysis.skillsRouteProgressDetail": "Compares newer runs against older runs separately for Driver and Autonomous.",
+    "analysis.driverTrend": "Driver trend",
+    "analysis.autonTrend": "Autonomous trend",
+    "analysis.checkDetails": "Check details",
+    "analysis.nextPractice": "Next practice",
+    "analysis.routeBase": "Route base",
+    "analysis.missedCount": "{count} missed",
+    "analysis.correlationGroup.score": "Score",
+    "analysis.correlationGroup.pins": "Pins",
+    "analysis.correlationGroup.zones": "Zones",
+    "analysis.correlationGroup.control": "Control",
+    "analysis.correlationGroup.autonomous": "Autonomous",
+    "analysis.correlationOption.ourScore": "Our score",
+    "analysis.correlationOption.opponentScore": "Opponent score",
+    "analysis.correlationOption.margin": "Score margin",
+    "analysis.correlationOption.totalMatchScore": "Total match score",
+    "analysis.correlationOption.win": "Win result",
+    "analysis.correlationOption.alliancePins": "Our red/blue pins",
+    "analysis.correlationOption.opponentPins": "Opponent red/blue pins",
+    "analysis.correlationOption.totalRedBluePins": "Total red + blue pins",
+    "analysis.correlationOption.totalPins": "Total pins placed",
+    "analysis.correlationOption.ownedYellow": "Our owned yellow pins",
+    "analysis.correlationOption.opponentOwnedYellow": "Opponent owned yellow pins",
+    "analysis.correlationOption.yellowPins": "Yellow pins placed",
+    "analysis.correlationOption.ourOuterToggles": "Our outer toggles owned",
+    "analysis.correlationOption.opponentOuterToggles": "Opponent outer toggles owned",
+    "analysis.correlationOption.centerControl": "Center controlled by us",
+    "analysis.correlationOption.midfieldRobots": "Our midfield robots",
+    "analysis.correlationOption.opponentMidfieldRobots": "Opponent midfield robots",
+    "analysis.correlationOption.autonPoints": "Auton points",
+    "analysis.correlationOption.autonWon": "Won auton",
+    "analysis.correlationOption.autonLost": "Lost auton",
+    "analysis.correlationOption.autonTied": "Tied auton",
+    "analysis.correlationOption.score": "Skills score",
+    "analysis.correlationOption.driverRun": "Driver run",
+    "analysis.correlationOption.autonRun": "Autonomous run",
+    "analysis.correlationOption.redBluePins": "Total red + blue pins",
+    "analysis.correlationOption.redPins": "Red pins scored",
+    "analysis.correlationOption.bluePins": "Blue pins scored",
+    "analysis.correlationOption.scoredYellow": "Yellow pins scored",
+    "analysis.correlationOption.midfield": "Center toggle active",
+    "analysis.correlationOption.correctYellowOwnership": "Correct yellow ownership count",
+    "analysis.correlationOption.missedYellowPins": "Missed yellow pins",
+    "analysis.zoneOption.TotalPins": "{quadrant} zone total pins",
+    "analysis.zoneOption.OurPins": "Our pins in {quadrant}",
+    "analysis.zoneOption.OpponentPins": "Opponent pins in {quadrant}",
+    "analysis.zoneOption.OwnedYellow": "Owned yellow pins in {quadrant}",
+    "analysis.zoneOption.Pins": "{quadrant} zone pins"
+  },
+  es: {},
+  "zh-CN": {}
+};
+Object.assign(translations.es, {
+  "aria.appOverview": "Resumen de la app",
+  "aria.savedSummary": "Resumen de partidos guardados",
+  "aria.scoringMode": "Modo de puntuación",
+  "aria.skillsPanel": "Análisis y marcador de Skills",
+  "aria.skillsReset": "Reinicio de Skills",
+  "aria.skillsScore": "Puntuación de Skills",
+  "aria.skillsRunType": "Tipo de intento de Skills",
+  "aria.resetScorer": "Reiniciar marcador",
+  "aria.liveScore": "Puntuación en vivo",
+  "aria.closeSaveMatch": "Cerrar diálogo de guardar partido",
+  "aria.closeSkillsSave": "Cerrar diálogo de guardar Skills",
+  "aria.closeDevEdit": "Cerrar diálogo de edición de desarrollo",
+  "brand.title": "Analizador de Puntuación Override",
+  "brand.credit": "Hecho por - 4330P RoboPigeons",
+  "banner.team": "Equipo",
+  "banner.matches": "Partidos",
+  "banner.record": "Récord",
+  "language.label": "Idioma",
+  "language.aria": "Idioma",
+  "tabs.head": "Frente a frente",
+  "tabs.skills": "Skills",
+  "tabs.scouting": "Scouting",
+  "tabs.analysis": "Análisis",
+  "range.today": "Hoy",
+  "range.7": "7 días",
+  "range.30": "30 días",
+  "range.all": "Todo",
+  "range.custom": "Personalizado",
+  "range.start": "Inicio",
+  "range.end": "Fin",
+  "common.optional": "Opcional",
+  "common.notListed": "No listado",
+  "common.notLoaded": "No cargado",
+  "common.notSaved": "No guardado",
+  "common.notEntered": "No ingresado",
+  "common.cancel": "Cancelar",
+  "common.team": "Equipo",
+  "color.red": "Rojo",
+  "color.blue": "Azul",
+  "color.yellow": "Amarillo",
+  "color.neutral": "Neutral",
+  "quadrant.top": "superior",
+  "quadrant.right": "derecha",
+  "quadrant.bottom": "inferior",
+  "quadrant.left": "izquierda",
+  "quadrant.center": "centro",
+  "match.saveMatch": "Guardar partido",
+  "match.redAuton": "Autónomo rojo",
+  "match.blueAuton": "Autónomo azul",
+  "skills.score": "Puntuación Skills",
+  "skills.driver": "Driver",
+  "skills.autonomous": "Autónomo",
+  "skills.saveRun": "Guardar intento",
+  "history.matchTitle": "Historial de partidos",
+  "history.matchDescription": "Partidos guardados recientemente en este dispositivo.",
+  "history.matchEmpty": "Los partidos guardados aparecerán aquí después de puntuar y guardar uno.",
+  "history.skillsTitle": "Historial de Skills",
+  "history.skillsDescription": "Intentos de Skills guardados recientemente en este dispositivo.",
+  "history.skillsEmpty": "Los intentos de Skills guardados aparecerán aquí después de puntuar y guardar uno.",
+  "history.showMore": "Mostrar más",
+  "history.showLess": "Mostrar menos",
+  "history.confirmDelete": "Confirmar eliminación",
+  "history.deleteMatch": "Eliminar partido",
+  "history.savedMatch": "Partido guardado",
+  "history.result.saved": "guardado",
+  "history.result.win": "victoria",
+  "history.result.loss": "derrota",
+  "history.result.tie": "empate",
+  "history.team": "Equipo",
+  "history.alliance": "Alianza",
+  "history.ourScore": "Nuestra puntuación",
+  "history.opponentScore": "Puntuación rival",
+  "history.partner": "Compañero",
+  "history.opponentOne": "Rival 1",
+  "history.opponentTwo": "Rival 2",
+  "history.runType": "Tipo de intento",
+  "history.notes": "Notas",
+  "setup.title": "Configurar equipo",
+  "setup.description": "Ingresa tu número de equipo una vez. Esta app lo recordará en este dispositivo.",
+  "setup.teamNumber": "Tu número de equipo",
+  "setup.checkTeam": "Buscar equipo",
+  "setup.checking": "Buscando...",
+  "setup.teamFound": "Equipo encontrado",
+  "setup.yesContinue": "Sí, continuar",
+  "setup.noEdit": "No, editar número",
+  "saveMatch.title": "Guardar partido",
+  "saveMatch.description": "Todos los detalles son opcionales. La puntuación y el campo completo se guardan automáticamente.",
+  "saveMatch.partnerTeam": "Número del compañero de alianza",
+  "saveMatch.partnerNotes": "Notas del compañero",
+  "saveMatch.opponentOne": "Número/nombre del rival 1",
+  "saveMatch.opponentOneNotes": "Notas del rival 1",
+  "saveMatch.opponentTwo": "Número/nombre del rival 2",
+  "saveMatch.opponentTwoNotes": "Notas del rival 2",
+  "saveMatch.skip": "Omitir detalles",
+  "saveSkills.title": "Guardar intento de Skills",
+  "saveSkills.description": "Las notas son opcionales. La puntuación y el campo de Skills completo se guardan automáticamente.",
+  "saveSkills.notes": "Notas del intento",
+  "saveSkills.skip": "Omitir notas",
+  "dev.title": "Modo dev",
+  "dev.description": "Edita registros guardados o borra datos locales de prueba en este dispositivo.",
+  "dev.autofill": "Autocompletar datos de muestra",
+  "dev.clearMatches": "Borrar partidos",
+  "dev.wipeAll": "Borrar todos los datos",
+  "dev.editTitle": "Editar partido guardado",
+  "dev.editDescription": "Modo dev: edita directamente el JSON guardado. El JSON inválido no se guardará.",
+  "dev.saveChanges": "Guardar cambios",
+  "dev.tools": "Herramientas dev",
+  "dev.editJson": "Editar JSON",
+  "analysis.kicker": "Rendimiento local",
+  "analysis.title": "Mi rendimiento",
+  "analysis.description": "Tendencias de puntuación de partidos e intentos de Skills guardados en este dispositivo.",
+  "analysis.rangeAria": "Rango de fechas del análisis",
+  "analysis.head.emptySummary": "Guarda partidos para desbloquear el análisis frente a frente.",
+  "analysis.skills.emptySummary": "Guarda intentos de Skills para desbloquear el análisis.",
+  "analysis.head.emptyPanel": "Guarda partidos frente a frente para desbloquear este panel.",
+  "analysis.skills.emptyPanel": "Guarda intentos de Skills para desbloquear este panel.",
+  "analysis.noRange": "No hay datos guardados en este rango.",
+  "analysis.matches.one": "{count} partido",
+  "analysis.matches.many": "{count} partidos",
+  "analysis.runs.one": "{count} intento",
+  "analysis.runs.many": "{count} intentos",
+  "analysis.summaryAverage": "Promedio de {score} puntos en este rango.",
+  "analysis.coachNote": "Nota de coach",
+  "analysis.averageScore": "Puntuación media",
+  "analysis.winRate": "Porcentaje de victorias",
+  "analysis.best": "Mejor",
+  "analysis.median": "Mediana",
+  "analysis.worst": "Peor",
+  "analysis.last5": "Últimos 5 vs promedio",
+  "analysis.trendTitle": "¿Estamos mejorando?",
+  "analysis.trendDetail.match": "Cada punto es un partido guardado, de más antiguo a más reciente.",
+  "analysis.trendDetail.run": "Cada punto es un intento guardado, de más antiguo a más reciente.",
+  "analysis.needTrend": "Se necesitan al menos 2 registros para ver una tendencia.",
+  "analysis.low": "Bajo {value}",
+  "analysis.high": "Alto {value}",
+  "analysis.oldest": "Más antiguo {value}",
+  "analysis.newest": "Más reciente {value}",
+  "analysis.scoreTrend": "Tendencia de puntuación",
+  "analysis.pointTitle.match": "Partido {index}: {score} pts - {date}",
+  "analysis.pointTitle.run": "Intento {index}: {score} pts - {date}",
+  "analysis.openCorrelation": "Abrir laboratorio de correlación",
+  "analysis.correlationTool": "Herramienta avanzada de comparación",
+  "analysis.compare": "Comparar",
+  "analysis.against": "Con",
+  "analysis.correlationResult": "r = {r} con {count} {type} guardados",
+  "analysis.correlationHelp": "Positivo significa que ambos números suben juntos. Negativo significa que uno suele subir cuando el otro baja.",
+  "analysis.correlation.notEnough": "Todavía no hay suficiente variación",
+  "analysis.correlation.strongPositive": "Positiva fuerte",
+  "analysis.correlation.moderatePositive": "Positiva moderada",
+  "analysis.correlation.weakPositive": "Positiva débil",
+  "analysis.correlation.strongNegative": "Negativa fuerte",
+  "analysis.correlation.moderateNegative": "Negativa moderada",
+  "analysis.correlation.weakNegative": "Negativa débil",
+  "analysis.correlation.little": "Poca relación",
+  "analysis.driverAvg": "Prom. Driver",
+  "analysis.autonAvg": "Prom. Autónomo",
+  "analysis.bestDriver": "Mejor Driver",
+  "analysis.bestAuton": "Mejor Autónomo",
+  "analysis.bestCombined": "Mejor combinado",
+  "analysis.skillsSplit": "División de Skills",
+  "analysis.skillsSplitDetail": "Driver más Autónomo",
+  "analysis.skillsQuestion": "¿Cómo se comparan Driver y Autónomo?",
+  "analysis.skillsQuestionDetail": "Mejor combinado significa mejor Driver más mejor Autónomo.",
+  "analysis.headQuestion": "¿Por qué ganamos o perdemos?",
+  "analysis.headQuestionDetail": "Estas tarjetas explican las principales palancas de puntuación detrás del récord.",
+  "analysis.skillsSourceQuestion": "¿De dónde viene la puntuación de Skills?",
+  "analysis.skillsSourceDetail": "Driver y Autónomo se rastrean por separado, con errores de amarillos/control destacados.",
+  "analysis.working": "Qué está funcionando",
+  "analysis.costing": "Qué está costando puntos",
+  "analysis.focus": "En qué enfocarse ahora",
+  "scouting.skillsKicker": "Clasificación oficial de Skills",
+  "scouting.teamSkillsTitle": "Búsqueda de Skills por equipo",
+  "scouting.teamSkillsDescription": "Busca equipos en la clasificación pública VEX V5RC Override Skills.",
+  "scouting.teamSearch": "Buscar equipo",
+  "scouting.teamSearchPlaceholder": "Número, nombre, ciudad, región o código del evento",
+  "scouting.searchTeams": "Buscar equipos",
+  "scouting.teamSkillsInitial": "Busca resultados oficiales de Skills por número, nombre o región.",
+  "scouting.dataKicker": "Importación de datos oficiales",
+  "scouting.competitionData": "Datos de competencia",
+  "scouting.competitionDescription": "Busca datos sincronizados de eventos VEX, importa equipos y guarda detalles oficiales para análisis.",
+  "scouting.findCompetition": "Buscar competencia",
+  "scouting.findPlaceholder": "Ransom, Miami, 65030, Florida, 4330P...",
+  "scouting.region": "Región",
+  "scouting.allSyncedRegions": "Todas las regiones sincronizadas",
+  "scouting.showEvents": "Mostrar eventos",
+  "scouting.loadingCompetitions": "Cargando competencias sincronizadas...",
+  "scouting.importedCompetition": "Competencia importada",
+  "scouting.syncedLocal": "Datos locales sincronizados",
+  "scouting.noSyncedData": "Sin datos sincronizados",
+  "scouting.liveProxy": "Proxy en vivo conectado",
+  "scouting.noProxy": "Proxy no conectado",
+  "scouting.searchingSkills": "Buscando en la clasificación pública de Skills...",
+  "scouting.foundTeams.one": "Se encontró {count} equipo.",
+  "scouting.foundTeams.many": "Se encontraron {count} equipos.",
+  "scouting.noTeams": "No se encontraron equipos.",
+  "scouting.noTeamsLong": "No se encontraron equipos en la clasificación pública de Skills.",
+  "scouting.typeTwo": "Escribe al menos 2 caracteres para buscar equipos.",
+  "scouting.skillsError": "No se pudieron cargar los datos de Skills. Inténtalo más tarde.",
+  "scouting.dataError": "No se pudieron cargar los datos de competencia. Inténtalo más tarde.",
+  "scouting.proxyNeeded": "Los datos VEX en vivo necesitan el proxy para cargar resultados oficiales.",
+  "scouting.noSynced": "No hay competencias sincronizadas todavía. Ejecuta el colector VEX e importa un paquete.",
+  "scouting.searchingCompetitions": "Buscando competencias sincronizadas...",
+  "scouting.noCompetitionMatches": "No se encontraron competencias.",
+  "scouting.foundCompetitions.one": "Se encontró {count} competencia sincronizada.",
+  "scouting.foundCompetitions.many": "Se encontraron {count} competencias sincronizadas.",
+  "scouting.foundAcross.one": "Se encontraron {count} competencias en {regions} región coincidente.",
+  "scouting.foundAcross.many": "Se encontraron {count} competencias en {regions} regiones coincidentes.",
+  "scouting.noRegionMatch": "Ninguna región sincronizada coincide con \"{query}\".",
+  "scouting.loaded.one": "{count} competencia sincronizada cargada.{updated}",
+  "scouting.loaded.many": "{count} competencias sincronizadas cargadas.{updated}",
+  "scouting.lastUpdated": " Última actualización {date}.",
+  "scouting.myCompetitions": "Mis competencias",
+  "scouting.enterTeam": "Ingresa un número de equipo durante la configuración para detectar tus eventos.",
+  "scouting.noMyEvents": "No se encontraron competencias sincronizadas para {team}.",
+  "scouting.tryAll": "Prueba buscar en todos los eventos sincronizados abajo.",
+  "scouting.myEvents.one": "{count} evento sincronizado encontrado para {team}",
+  "scouting.myEvents.many": "{count} eventos sincronizados encontrados para {team}",
+  "scouting.event": "Evento",
+  "scouting.unnamedEvent": "Evento sin nombre",
+  "scouting.count.teams": "{count} equipos",
+  "scouting.count.skills": "{count} skills",
+  "scouting.count.awards": "{count} premios",
+  "scouting.viewImport": "Ver / Importar",
+  "scouting.regionNotListed": "Región no listada",
+  "scouting.dateNotListed": "Fecha no listada",
+  "scouting.allMatchingRegions": "Todas las regiones que coinciden con \"{query}\"",
+  "scouting.allMatchingMeta": "{regions} regiones sincronizadas - {events} eventos",
+  "scouting.showEveryEvent": "Mostrar todos los eventos importados",
+  "scouting.syncedEvents.one": "{count} evento sincronizado",
+  "scouting.syncedEvents.many": "{count} eventos sincronizados",
+  "scouting.teams": "Equipos",
+  "scouting.teamsHint": "Haz clic en un equipo para ver Skills de temporada y detalles del evento.",
+  "scouting.noRegisteredTeams": "Todavía no hay equipos registrados listados.",
+  "scouting.awards": "Premios",
+  "scouting.awardsSynced.one": "{count} premio sincronizado para este evento.",
+  "scouting.awardsSynced.many": "{count} premios sincronizados para este evento.",
+  "scouting.noAwards": "Todavía no hay premios publicados.",
+  "scouting.winnerNotListed": "Ganador no listado",
+  "filters.all": "Todos",
+  "filters.mine": "Mis competencias",
+  "filters.usa": "Estados Unidos",
+  "filters.upcoming": "Próximos",
+  "filters.past": "Pasados",
+  "toast.enterTeam": "Ingresa primero tu número de equipo.",
+  "toast.matchDeleted": "Partido eliminado.",
+  "toast.confirmDelete": "Presiona Confirmar eliminación para quitar este partido.",
+  "toast.matchesCleared": "Partidos guardados borrados.",
+  "toast.localWiped": "Datos locales de la app borrados.",
+  "toast.invalidJson": "JSON inválido. El partido no cambió.",
+  "toast.editNeedsId": "El partido editado necesita un id.",
+  "toast.matchUpdated": "Partido actualizado.",
+  "toast.competitionImported": "Datos de competencia importados.",
+  "toast.sampleRebuilt": "Datos de muestra reconstruidos.",
+  "toast.chooseAlliance": "Elige tu color de alianza antes de guardar.",
+  "toast.chooseSkillsType": "Elige Driver o Autónomo antes de guardar.",
+  "toast.matchSaveFailed": "No se pudo guardar el partido en este dispositivo.",
+  "toast.matchSaved": "Partido guardado en este dispositivo.",
+  "toast.skillsSaveFailed": "No se pudo guardar el intento de Skills en este dispositivo.",
+  "toast.skillsSaved": "Intento de Skills guardado en este dispositivo.",
+  "toast.teamNameSaved": "{teamNumber} {teamName} guardado en este dispositivo.",
+  "toast.teamSaved": "Equipo {teamNumber} guardado en este dispositivo.",
+  "setup.confirmIdentity": "¿Eres {teamNumber} {teamName}?",
+  "setup.checkAnother": "Buscar otro equipo",
+  "aria.decreasePins": "Disminuir pines {color} en el cuadrante {quadrant}",
+  "aria.increasePins": "Aumentar pines {color} en el cuadrante {quadrant}",
+  "aria.pinsInQuadrant": "Pines {color} en el cuadrante {quadrant}",
+  "scouting.date": "Fecha",
+  "scouting.rank": "Rango #{rank}",
+  "scouting.officialSkillsResult": "Resultado oficial de Skills",
+  "scouting.noExtraTeamDetails": "No hay más detalles del equipo.",
+  "scouting.eventWithId": "Evento {id}",
+  "scouting.syncedDataCounts": "Conteos de datos sincronizados",
+  "scouting.teamDetails": "Detalles del equipo",
+  "scouting.seasonSkills": "Skills de temporada",
+  "scouting.eventSkills": "Skills del evento",
+  "scouting.robot": "Robot",
+  "scouting.noAdditionalTeamDetails": "No hay detalles adicionales del equipo.",
+  "scouting.attempts": "{count} intentos",
+  "scouting.award": "Premio",
+  "scouting.loadedDetail": "Cargado {date}. {skills} filas de Skills - {awards} premios.",
+  "scouting.onlyImportedRegions": "Aquí solo aparecen regiones importadas de la temporada 204.",
+  "analysis.matchesLabel": "partidos",
+  "analysis.runsLabel": "intentos",
+  "analysis.recentDetail": "últimos {count}, {delta} vs promedio del rango",
+  "analysis.recordDetail": "{wins}V {losses}D {ties}E",
+  "analysis.winFactors": "Qué suele ayudarnos a ganar",
+  "analysis.winFactorsEmpty": "Guarda partidos más variados para identificar qué se relaciona más con ganar.",
+  "analysis.winFactorsDetail": "Las relaciones simples más fuertes con ganar en este rango.",
+  "analysis.learning": "Aprendiendo",
+  "analysis.topCount": "Top {count}",
+  "analysis.missedPoints": "Puntos perdidos",
+  "analysis.missedPointsDetail": "Puntos estimados que quedaron por amarillos no poseídos, autónomo perdido/empatado y falta de robots/control en midfield.",
+  "analysis.avgValue": "{value} prom.",
+  "analysis.autonReliability": "Confiabilidad autónoma",
+  "analysis.percentWon": "{value} ganado",
+  "analysis.autonReliabilityDetail": "Resultado autónomo comparado con el margen final.",
+  "analysis.wonAuton": "Ganó autónomo",
+  "analysis.tiedAuton": "Empató autónomo",
+  "analysis.lostAuton": "Perdió autónomo",
+  "analysis.avgMargin": "margen prom. {value}",
+  "analysis.centerImpact": "Impacto del control central",
+  "analysis.centerImpactDetail": "Margen prom. con centro: {withCenter}. Sin centro: {withoutCenter}.",
+  "analysis.swing": "{value} diferencia",
+  "analysis.yellowEfficiency": "Eficiencia de toggles/amarillos",
+  "analysis.yellowEfficiencyDetail": "{scored} de {placed} pines amarillos contaron para tu alianza en este rango.",
+  "analysis.floorCeilingDetail": "Rango bajo/alto realista usando percentiles, menos variable que peor/mejor crudo.",
+  "analysis.previousAverage": "El rango comparable anterior promedió {value}.",
+  "analysis.needEarlierData": "Se necesitan datos guardados anteriores para comparar rangos.",
+  "analysis.bestBlueprint": "Patrón de mejores partidos",
+  "analysis.bestBlueprintDetail": "Tus mejores 3 promediaron {pins} pines rojos/azules y {yellows} amarillos poseídos. Centro controlado {center}/3 veces; autónomo ganado {auton}/3.",
+  "analysis.badGoodRange": "Rango de mal día / buen día",
+  "analysis.weeklyProgress": "Progreso semanal",
+  "analysis.yellowConversion": "Conversión de amarillos",
+  "analysis.yellowConversionDetail": "{scored} de {placed} pines amarillos puntuaron bajo las reglas de posesión de Skills.",
+  "analysis.skillsRouteProgress": "Progreso de rutas Skills",
+  "analysis.skillsRouteProgressDetail": "Compara intentos nuevos contra antiguos por separado para Driver y Autónomo.",
+  "analysis.driverTrend": "Tendencia Driver",
+  "analysis.autonTrend": "Tendencia Autónoma",
+  "analysis.checkDetails": "Ver detalles",
+  "analysis.nextPractice": "Próxima práctica",
+  "analysis.routeBase": "Base de ruta",
+  "analysis.missedCount": "{count} perdidos",
+  "analysis.correlationGroup.score": "Puntuación",
+  "analysis.correlationGroup.pins": "Pines",
+  "analysis.correlationGroup.zones": "Zonas",
+  "analysis.correlationGroup.control": "Control",
+  "analysis.correlationGroup.autonomous": "Autónomo",
+  "analysis.correlationOption.ourScore": "Nuestra puntuación",
+  "analysis.correlationOption.opponentScore": "Puntuación rival",
+  "analysis.correlationOption.margin": "Margen de puntuación",
+  "analysis.correlationOption.totalMatchScore": "Puntuación total del partido",
+  "analysis.correlationOption.win": "Resultado de victoria",
+  "analysis.correlationOption.alliancePins": "Nuestros pines rojos/azules",
+  "analysis.correlationOption.opponentPins": "Pines rojos/azules rivales",
+  "analysis.correlationOption.totalRedBluePins": "Total pines rojos + azules",
+  "analysis.correlationOption.totalPins": "Total de pines colocados",
+  "analysis.correlationOption.ownedYellow": "Nuestros pines amarillos poseídos",
+  "analysis.correlationOption.opponentOwnedYellow": "Pines amarillos rivales poseídos",
+  "analysis.correlationOption.yellowPins": "Pines amarillos colocados",
+  "analysis.correlationOption.ourOuterToggles": "Toggles exteriores nuestros",
+  "analysis.correlationOption.opponentOuterToggles": "Toggles exteriores rivales",
+  "analysis.correlationOption.centerControl": "Centro controlado por nosotros",
+  "analysis.correlationOption.midfieldRobots": "Nuestros robots en midfield",
+  "analysis.correlationOption.opponentMidfieldRobots": "Robots rivales en midfield",
+  "analysis.correlationOption.autonPoints": "Puntos de autónomo",
+  "analysis.correlationOption.autonWon": "Autónomo ganado",
+  "analysis.correlationOption.autonLost": "Autónomo perdido",
+  "analysis.correlationOption.autonTied": "Autónomo empatado",
+  "analysis.correlationOption.score": "Puntuación Skills",
+  "analysis.correlationOption.driverRun": "Intento Driver",
+  "analysis.correlationOption.autonRun": "Intento Autónomo",
+  "analysis.correlationOption.redBluePins": "Total pines rojos + azules",
+  "analysis.correlationOption.redPins": "Pines rojos anotados",
+  "analysis.correlationOption.bluePins": "Pines azules anotados",
+  "analysis.correlationOption.scoredYellow": "Pines amarillos anotados",
+  "analysis.correlationOption.midfield": "Toggle central activo",
+  "analysis.correlationOption.correctYellowOwnership": "Conteo correcto de posesión amarilla",
+  "analysis.correlationOption.missedYellowPins": "Pines amarillos perdidos",
+  "analysis.zoneOption.TotalPins": "Pines totales en {quadrant}",
+  "analysis.zoneOption.OurPins": "Nuestros pines en {quadrant}",
+  "analysis.zoneOption.OpponentPins": "Pines rivales en {quadrant}",
+  "analysis.zoneOption.OwnedYellow": "Amarillos poseídos en {quadrant}",
+  "analysis.zoneOption.Pins": "Pines en {quadrant}"
+});
+Object.assign(translations["zh-CN"], {
+  "aria.appOverview": "应用概览",
+  "aria.savedSummary": "已保存比赛摘要",
+  "aria.scoringMode": "计分模式",
+  "aria.skillsPanel": "技能赛分析和计分器",
+  "aria.skillsReset": "技能赛重置",
+  "aria.skillsScore": "技能赛分数",
+  "aria.skillsRunType": "技能赛类型",
+  "aria.resetScorer": "重置计分器",
+  "aria.liveScore": "实时分数",
+  "aria.closeSaveMatch": "关闭保存比赛对话框",
+  "aria.closeSkillsSave": "关闭保存技能赛对话框",
+  "aria.closeDevEdit": "关闭开发编辑对话框",
+  "brand.title": "Override 计分分析器",
+  "brand.credit": "制作 - 4330P RoboPigeons",
+  "banner.team": "队伍",
+  "banner.matches": "比赛",
+  "banner.record": "战绩",
+  "language.label": "语言",
+  "language.aria": "语言",
+  "tabs.head": "对抗赛",
+  "tabs.skills": "技能赛",
+  "tabs.scouting": "侦察",
+  "tabs.analysis": "分析",
+  "range.today": "今天",
+  "range.7": "7天",
+  "range.30": "30天",
+  "range.all": "全部",
+  "range.custom": "自定义",
+  "range.start": "开始",
+  "range.end": "结束",
+  "common.optional": "可选",
+  "common.notListed": "未列出",
+  "common.notLoaded": "未加载",
+  "common.notSaved": "未保存",
+  "common.notEntered": "未填写",
+  "common.cancel": "取消",
+  "common.team": "队伍",
+  "color.red": "红",
+  "color.blue": "蓝",
+  "color.yellow": "黄",
+  "color.neutral": "中立",
+  "quadrant.top": "上方",
+  "quadrant.right": "右侧",
+  "quadrant.bottom": "下方",
+  "quadrant.left": "左侧",
+  "quadrant.center": "中心",
+  "match.saveMatch": "保存比赛",
+  "match.redAuton": "红方自动",
+  "match.blueAuton": "蓝方自动",
+  "skills.score": "技能赛分数",
+  "skills.driver": "驾驶",
+  "skills.autonomous": "自动",
+  "skills.saveRun": "保存尝试",
+  "history.matchTitle": "比赛历史",
+  "history.matchDescription": "此设备上最近保存的比赛。",
+  "history.matchEmpty": "计分并保存后，比赛会显示在这里。",
+  "history.skillsTitle": "技能赛历史",
+  "history.skillsDescription": "此设备上最近保存的技能赛尝试。",
+  "history.skillsEmpty": "计分并保存后，技能赛尝试会显示在这里。",
+  "history.showMore": "显示更多",
+  "history.showLess": "显示更少",
+  "history.confirmDelete": "确认删除",
+  "history.deleteMatch": "删除比赛",
+  "history.savedMatch": "已保存比赛",
+  "history.result.saved": "已保存",
+  "history.result.win": "胜",
+  "history.result.loss": "负",
+  "history.result.tie": "平",
+  "history.team": "队伍",
+  "history.alliance": "联盟",
+  "history.ourScore": "我方分数",
+  "history.opponentScore": "对手分数",
+  "history.partner": "队友",
+  "history.opponentOne": "对手 1",
+  "history.opponentTwo": "对手 2",
+  "history.runType": "尝试类型",
+  "history.notes": "备注",
+  "setup.title": "队伍设置",
+  "setup.description": "输入一次队号。此应用会在本设备记住它。",
+  "setup.teamNumber": "你的队号",
+  "setup.checkTeam": "查找队伍",
+  "setup.checking": "正在查找...",
+  "setup.teamFound": "找到队伍",
+  "setup.yesContinue": "是，继续",
+  "setup.noEdit": "否，修改队号",
+  "saveMatch.title": "保存比赛",
+  "saveMatch.description": "所有详情都是可选的。分数和完整场地状态会自动保存。",
+  "saveMatch.partnerTeam": "联盟队友队号",
+  "saveMatch.partnerNotes": "队友备注",
+  "saveMatch.opponentOne": "对手 1 队号/名称",
+  "saveMatch.opponentOneNotes": "对手 1 备注",
+  "saveMatch.opponentTwo": "对手 2 队号/名称",
+  "saveMatch.opponentTwoNotes": "对手 2 备注",
+  "saveMatch.skip": "跳过详情",
+  "saveSkills.title": "保存技能赛尝试",
+  "saveSkills.description": "备注是可选的。分数和完整技能赛场地状态会自动保存。",
+  "saveSkills.notes": "尝试备注",
+  "saveSkills.skip": "跳过备注",
+  "dev.title": "开发模式",
+  "dev.description": "编辑已保存记录，或清除此设备上的本地测试数据。",
+  "dev.autofill": "自动填入示例数据",
+  "dev.clearMatches": "清除比赛",
+  "dev.wipeAll": "清除全部数据",
+  "dev.editTitle": "编辑已保存比赛",
+  "dev.editDescription": "开发模式：直接编辑已保存比赛 JSON。无效 JSON 不会保存。",
+  "dev.saveChanges": "保存更改",
+  "dev.tools": "开发工具",
+  "dev.editJson": "编辑 JSON",
+  "analysis.kicker": "本地表现",
+  "analysis.title": "我的表现",
+  "analysis.description": "此设备上已保存比赛和技能赛的分数趋势。",
+  "analysis.rangeAria": "分析日期范围",
+  "analysis.head.emptySummary": "保存比赛以解锁对抗赛分析。",
+  "analysis.skills.emptySummary": "保存技能赛尝试以解锁技能赛分析。",
+  "analysis.head.emptyPanel": "保存对抗赛比赛以解锁此面板。",
+  "analysis.skills.emptyPanel": "保存技能赛尝试以解锁此面板。",
+  "analysis.noRange": "此范围内没有已保存数据。",
+  "analysis.matches.one": "{count} 场比赛",
+  "analysis.matches.many": "{count} 场比赛",
+  "analysis.runs.one": "{count} 次尝试",
+  "analysis.runs.many": "{count} 次尝试",
+  "analysis.summaryAverage": "此范围平均 {score} 分。",
+  "analysis.coachNote": "教练提示",
+  "analysis.averageScore": "平均分",
+  "analysis.winRate": "胜率",
+  "analysis.best": "最好",
+  "analysis.median": "中位数",
+  "analysis.worst": "最差",
+  "analysis.last5": "最近5次 vs 平均",
+  "analysis.trendTitle": "我们在进步吗？",
+  "analysis.trendDetail.match": "每个点是一场已保存比赛，按从旧到新排列。",
+  "analysis.trendDetail.run": "每个点是一次已保存尝试，按从旧到新排列。",
+  "analysis.needTrend": "至少需要 2 条记录才能显示趋势。",
+  "analysis.low": "低 {value}",
+  "analysis.high": "高 {value}",
+  "analysis.oldest": "最旧 {value}",
+  "analysis.newest": "最新 {value}",
+  "analysis.scoreTrend": "分数趋势",
+  "analysis.pointTitle.match": "比赛 {index}: {score} 分 - {date}",
+  "analysis.pointTitle.run": "尝试 {index}: {score} 分 - {date}",
+  "analysis.openCorrelation": "打开相关性实验室",
+  "analysis.correlationTool": "高级比较工具",
+  "analysis.compare": "比较",
+  "analysis.against": "对比",
+  "analysis.correlationResult": "r = {r}，来自 {count} 条已保存{type}",
+  "analysis.correlationHelp": "正值表示两个数字一起上升。负值表示一个上升时另一个通常下降。",
+  "analysis.correlation.notEnough": "变化还不够",
+  "analysis.correlation.strongPositive": "强正相关",
+  "analysis.correlation.moderatePositive": "中等正相关",
+  "analysis.correlation.weakPositive": "弱正相关",
+  "analysis.correlation.strongNegative": "强负相关",
+  "analysis.correlation.moderateNegative": "中等负相关",
+  "analysis.correlation.weakNegative": "弱负相关",
+  "analysis.correlation.little": "关系较弱",
+  "analysis.driverAvg": "驾驶平均",
+  "analysis.autonAvg": "自动平均",
+  "analysis.bestDriver": "最佳驾驶",
+  "analysis.bestAuton": "最佳自动",
+  "analysis.bestCombined": "最佳合计",
+  "analysis.skillsSplit": "技能赛拆分",
+  "analysis.skillsSplitDetail": "驾驶加自动",
+  "analysis.skillsQuestion": "驾驶和自动相比如何？",
+  "analysis.skillsQuestionDetail": "最佳合计指最佳驾驶加最佳自动。",
+  "analysis.headQuestion": "我们为什么赢或输？",
+  "analysis.headQuestionDetail": "这些卡片解释战绩背后的主要得分因素。",
+  "analysis.skillsSourceQuestion": "技能赛分数来自哪里？",
+  "analysis.skillsSourceDetail": "驾驶和自动分开追踪，并指出黄桩/控制失误。",
+  "analysis.working": "有效的地方",
+  "analysis.costing": "正在丢分的地方",
+  "analysis.focus": "下一步重点",
+  "scouting.skillsKicker": "官方技能赛排名",
+  "scouting.teamSkillsTitle": "队伍技能赛搜索",
+  "scouting.teamSkillsDescription": "搜索公开 VEX V5RC Override 技能赛排名中的队伍。",
+  "scouting.teamSearch": "搜索队伍",
+  "scouting.teamSearchPlaceholder": "队号、名称、城市、赛区或赛事代码",
+  "scouting.searchTeams": "搜索队伍",
+  "scouting.teamSkillsInitial": "按队号、队名或赛区搜索官方赛季技能赛结果。",
+  "scouting.dataKicker": "官方数据导入",
+  "scouting.competitionData": "比赛数据",
+  "scouting.competitionDescription": "搜索已同步的 VEX 赛事数据，导入队伍，并缓存官方详情用于后续分析。",
+  "scouting.findCompetition": "查找比赛",
+  "scouting.findPlaceholder": "Ransom, Miami, 65030, Florida, 4330P...",
+  "scouting.region": "赛区",
+  "scouting.allSyncedRegions": "所有已同步赛区",
+  "scouting.showEvents": "显示赛事",
+  "scouting.loadingCompetitions": "正在加载已同步比赛...",
+  "scouting.importedCompetition": "已导入比赛",
+  "scouting.syncedLocal": "已同步本地数据",
+  "scouting.noSyncedData": "没有同步数据",
+  "scouting.liveProxy": "实时代理已连接",
+  "scouting.noProxy": "代理未连接",
+  "scouting.searchingSkills": "正在搜索公开技能赛排名...",
+  "scouting.foundTeams.one": "找到 {count} 支匹配队伍。",
+  "scouting.foundTeams.many": "找到 {count} 支匹配队伍。",
+  "scouting.noTeams": "未找到匹配队伍。",
+  "scouting.noTeamsLong": "公开技能赛排名中未找到匹配队伍。",
+  "scouting.typeTwo": "请输入至少 2 个字符来搜索队伍。",
+  "scouting.skillsError": "无法加载队伍技能赛数据。请稍后再试。",
+  "scouting.dataError": "无法加载比赛数据。请稍后再试。",
+  "scouting.proxyNeeded": "实时 VEX 数据需要代理才能加载官方结果。",
+  "scouting.noSynced": "还没有同步比赛。请运行 VEX 收集器并导入数据包。",
+  "scouting.searchingCompetitions": "正在搜索已同步比赛...",
+  "scouting.noCompetitionMatches": "未找到匹配比赛。",
+  "scouting.foundCompetitions.one": "找到 {count} 场已同步比赛。",
+  "scouting.foundCompetitions.many": "找到 {count} 场已同步比赛。",
+  "scouting.foundAcross.one": "在 {regions} 个匹配赛区中找到 {count} 场已同步比赛。",
+  "scouting.foundAcross.many": "在 {regions} 个匹配赛区中找到 {count} 场已同步比赛。",
+  "scouting.noRegionMatch": "没有已同步赛区匹配 \"{query}\"。",
+  "scouting.loaded.one": "已加载 {count} 场同步比赛。{updated}",
+  "scouting.loaded.many": "已加载 {count} 场同步比赛。{updated}",
+  "scouting.lastUpdated": " 最后更新 {date}。",
+  "scouting.myCompetitions": "我的比赛",
+  "scouting.enterTeam": "在设置中输入队号后，会自动识别你的赛事。",
+  "scouting.noMyEvents": "未找到 {team} 的同步比赛。",
+  "scouting.tryAll": "试试搜索下面所有已同步赛事。",
+  "scouting.myEvents.one": "为 {team} 找到 {count} 场同步赛事",
+  "scouting.myEvents.many": "为 {team} 找到 {count} 场同步赛事",
+  "scouting.event": "赛事",
+  "scouting.unnamedEvent": "未命名赛事",
+  "scouting.count.teams": "{count} 支队伍",
+  "scouting.count.skills": "{count} 条技能赛",
+  "scouting.count.awards": "{count} 个奖项",
+  "scouting.viewImport": "查看 / 导入",
+  "scouting.regionNotListed": "未列出赛区",
+  "scouting.dateNotListed": "未列出日期",
+  "scouting.allMatchingRegions": "所有匹配 \"{query}\" 的赛区",
+  "scouting.allMatchingMeta": "{regions} 个同步赛区 - {events} 场赛事",
+  "scouting.showEveryEvent": "显示所有导入赛事",
+  "scouting.syncedEvents.one": "{count} 场同步赛事",
+  "scouting.syncedEvents.many": "{count} 场同步赛事",
+  "scouting.teams": "队伍",
+  "scouting.teamsHint": "点击队伍查看赛季技能赛和赛事详情。",
+  "scouting.noRegisteredTeams": "尚未列出注册队伍。",
+  "scouting.awards": "奖项",
+  "scouting.awardsSynced.one": "此赛事同步了 {count} 个奖项。",
+  "scouting.awardsSynced.many": "此赛事同步了 {count} 个奖项。",
+  "scouting.noAwards": "还没有公布奖项。",
+  "scouting.winnerNotListed": "未列出获奖者",
+  "filters.all": "全部",
+  "filters.mine": "我的比赛",
+  "filters.usa": "美国",
+  "filters.upcoming": "即将举行",
+  "filters.past": "已结束",
+  "toast.enterTeam": "请先输入你的队号。",
+  "toast.matchDeleted": "比赛已删除。",
+  "toast.confirmDelete": "按确认删除以移除此比赛。",
+  "toast.matchesCleared": "已清除保存的比赛。",
+  "toast.localWiped": "本地应用数据已清除。",
+  "toast.invalidJson": "JSON 无效。比赛未更改。",
+  "toast.editNeedsId": "编辑后的比赛需要 id。",
+  "toast.matchUpdated": "比赛已更新。",
+  "toast.competitionImported": "比赛数据已导入。",
+  "toast.sampleRebuilt": "开发示例数据已重建。",
+  "toast.chooseAlliance": "保存前请选择你的联盟颜色。",
+  "toast.chooseSkillsType": "保存前请选择驾驶或自动。",
+  "toast.matchSaveFailed": "无法在此设备保存比赛。",
+  "toast.matchSaved": "比赛已保存在此设备。",
+  "toast.skillsSaveFailed": "无法在此设备保存技能赛尝试。",
+  "toast.skillsSaved": "技能赛尝试已保存在此设备。",
+  "toast.teamNameSaved": "{teamNumber} {teamName} 已保存在此设备。",
+  "toast.teamSaved": "队伍 {teamNumber} 已保存在此设备。",
+  "setup.confirmIdentity": "你是 {teamNumber} {teamName} 吗？",
+  "setup.checkAnother": "查找另一支队伍",
+  "aria.decreasePins": "减少 {quadrant} 区域的{color}桩",
+  "aria.increasePins": "增加 {quadrant} 区域的{color}桩",
+  "aria.pinsInQuadrant": "{quadrant} 区域的{color}桩",
+  "scouting.date": "日期",
+  "scouting.rank": "排名 #{rank}",
+  "scouting.officialSkillsResult": "官方技能赛结果",
+  "scouting.noExtraTeamDetails": "没有更多队伍详情。",
+  "scouting.eventWithId": "赛事 {id}",
+  "scouting.syncedDataCounts": "同步数据数量",
+  "scouting.teamDetails": "队伍详情",
+  "scouting.seasonSkills": "赛季技能赛",
+  "scouting.eventSkills": "赛事技能赛",
+  "scouting.robot": "机器人",
+  "scouting.noAdditionalTeamDetails": "没有额外队伍详情。",
+  "scouting.attempts": "{count} 次尝试",
+  "scouting.award": "奖项",
+  "scouting.loadedDetail": "已加载 {date}。{skills} 条技能赛记录 - {awards} 个奖项。",
+  "scouting.onlyImportedRegions": "这里只显示已导入的 204 赛季赛区。",
+  "analysis.matchesLabel": "比赛",
+  "analysis.runsLabel": "尝试",
+  "analysis.recentDetail": "最近 {count} 次，较范围平均 {delta}",
+  "analysis.recordDetail": "{wins}胜 {losses}负 {ties}平",
+  "analysis.winFactors": "通常帮助我们获胜的因素",
+  "analysis.winFactorsEmpty": "保存更多不同类型的比赛，以找出最影响获胜的因素。",
+  "analysis.winFactorsDetail": "此范围内与获胜最相关的简单关系。",
+  "analysis.learning": "学习中",
+  "analysis.topCount": "前 {count}",
+  "analysis.missedPoints": "错失分数",
+  "analysis.missedPointsDetail": "估算来自未拥有黄桩、自动失利/平局、缺少 midfield 机器人/控制的分数损失。",
+  "analysis.avgValue": "{value} 平均",
+  "analysis.autonReliability": "自动可靠性",
+  "analysis.percentWon": "{value} 获胜",
+  "analysis.autonReliabilityDetail": "自动结果与最终分差的比较。",
+  "analysis.wonAuton": "自动获胜",
+  "analysis.tiedAuton": "自动平局",
+  "analysis.lostAuton": "自动失利",
+  "analysis.avgMargin": "平均分差 {value}",
+  "analysis.centerImpact": "中心控制影响",
+  "analysis.centerImpactDetail": "控制中心时平均分差：{withCenter}。未控制中心：{withoutCenter}。",
+  "analysis.swing": "{value} 变化",
+  "analysis.yellowEfficiency": "切换/黄桩效率",
+  "analysis.yellowEfficiencyDetail": "此范围内 {placed} 个黄桩中有 {scored} 个为你的联盟计分。",
+  "analysis.floorCeilingDetail": "使用保存分数百分位估算实际低/高范围，比单纯最差/最好更稳定。",
+  "analysis.previousAverage": "上一个可比范围平均 {value}。",
+  "analysis.needEarlierData": "需要更早保存的数据来比较范围。",
+  "analysis.bestBlueprint": "最佳比赛模式",
+  "analysis.bestBlueprintDetail": "最佳 3 场平均 {pins} 个红/蓝桩和 {yellows} 个拥有黄桩。中心控制 {center}/3 次；自动获胜 {auton}/3 次。",
+  "analysis.badGoodRange": "低迷日 / 出色日范围",
+  "analysis.weeklyProgress": "每周进步",
+  "analysis.yellowConversion": "黄桩转化",
+  "analysis.yellowConversionDetail": "根据技能赛拥有规则，{placed} 个黄桩中有 {scored} 个计分。",
+  "analysis.skillsRouteProgress": "技能赛路线进步",
+  "analysis.skillsRouteProgressDetail": "分别比较驾驶和自动的新旧尝试。",
+  "analysis.driverTrend": "驾驶趋势",
+  "analysis.autonTrend": "自动趋势",
+  "analysis.checkDetails": "查看详情",
+  "analysis.nextPractice": "下次练习",
+  "analysis.routeBase": "路线基础",
+  "analysis.missedCount": "错失 {count}",
+  "analysis.correlationGroup.score": "分数",
+  "analysis.correlationGroup.pins": "桩",
+  "analysis.correlationGroup.zones": "区域",
+  "analysis.correlationGroup.control": "控制",
+  "analysis.correlationGroup.autonomous": "自动",
+  "analysis.correlationOption.ourScore": "我方分数",
+  "analysis.correlationOption.opponentScore": "对手分数",
+  "analysis.correlationOption.margin": "分差",
+  "analysis.correlationOption.totalMatchScore": "比赛总分",
+  "analysis.correlationOption.win": "胜负结果",
+  "analysis.correlationOption.alliancePins": "我方红/蓝桩",
+  "analysis.correlationOption.opponentPins": "对手红/蓝桩",
+  "analysis.correlationOption.totalRedBluePins": "红+蓝桩总数",
+  "analysis.correlationOption.totalPins": "放置桩总数",
+  "analysis.correlationOption.ownedYellow": "我方拥有黄桩",
+  "analysis.correlationOption.opponentOwnedYellow": "对手拥有黄桩",
+  "analysis.correlationOption.yellowPins": "已放置黄桩",
+  "analysis.correlationOption.ourOuterToggles": "我方拥有外侧切换",
+  "analysis.correlationOption.opponentOuterToggles": "对手拥有外侧切换",
+  "analysis.correlationOption.centerControl": "我方控制中心",
+  "analysis.correlationOption.midfieldRobots": "我方 midfield 机器人",
+  "analysis.correlationOption.opponentMidfieldRobots": "对手 midfield 机器人",
+  "analysis.correlationOption.autonPoints": "自动分",
+  "analysis.correlationOption.autonWon": "自动获胜",
+  "analysis.correlationOption.autonLost": "自动失利",
+  "analysis.correlationOption.autonTied": "自动平局",
+  "analysis.correlationOption.score": "技能赛分数",
+  "analysis.correlationOption.driverRun": "驾驶尝试",
+  "analysis.correlationOption.autonRun": "自动尝试",
+  "analysis.correlationOption.redBluePins": "红+蓝桩总数",
+  "analysis.correlationOption.redPins": "红桩得分",
+  "analysis.correlationOption.bluePins": "蓝桩得分",
+  "analysis.correlationOption.scoredYellow": "黄桩得分",
+  "analysis.correlationOption.midfield": "中心切换激活",
+  "analysis.correlationOption.correctYellowOwnership": "正确黄桩拥有数量",
+  "analysis.correlationOption.missedYellowPins": "错失黄桩",
+  "analysis.zoneOption.TotalPins": "{quadrant}区域总桩数",
+  "analysis.zoneOption.OurPins": "我方在{quadrant}的桩",
+  "analysis.zoneOption.OpponentPins": "对手在{quadrant}的桩",
+  "analysis.zoneOption.OwnedYellow": "{quadrant}拥有黄桩",
+  "analysis.zoneOption.Pins": "{quadrant}区域桩数"
+});
+let currentLanguage = readLanguage();
 const initialProxyParam = new URLSearchParams(window.location.search).get("proxy");
 if (initialProxyParam) {
   localStorage.setItem(PROXY_URL_STORE_KEY, initialProxyParam.trim().replace(/\/$/, ""));
+}
+
+function readLanguage() {
+  try {
+    const stored = localStorage.getItem(LANGUAGE_STORE_KEY);
+    return supportedLanguages.includes(stored) ? stored : "en";
+  } catch {
+    return "en";
+  }
+}
+
+function languageLocale() {
+  return languageLocales[currentLanguage] || languageLocales.en;
+}
+
+function t(key, params = {}) {
+  const dictionary = translations[currentLanguage] || translations.en;
+  const template = dictionary[key] ?? translations.en[key] ?? key;
+  return String(template).replace(/\{(\w+)\}/g, (_, name) => params[name] ?? "");
+}
+
+function tt(key, fallback, params = {}) {
+  const dictionary = translations[currentLanguage] || translations.en;
+  const template = dictionary[key] ?? translations.en[key];
+  if (!template) return fallback;
+  return String(template).replace(/\{(\w+)\}/g, (_, name) => params[name] ?? "");
+}
+
+function countKey(base, count) {
+  return `${base}.${Number(count) === 1 ? "one" : "many"}`;
+}
+
+function countText(base, count) {
+  return t(countKey(base, count), { count });
+}
+
+function applyI18n() {
+  document.documentElement.lang = currentLanguage;
+  $$("[data-i18n]").forEach((element) => {
+    element.textContent = t(element.dataset.i18n);
+  });
+  $$("[data-i18n-placeholder]").forEach((element) => {
+    element.setAttribute("placeholder", t(element.dataset.i18nPlaceholder));
+  });
+  $$("[data-i18n-aria]").forEach((element) => {
+    element.setAttribute("aria-label", t(element.dataset.i18nAria));
+  });
+  const languageSelect = $("[data-language-select]");
+  if (languageSelect) languageSelect.value = currentLanguage;
+}
+
+function setLanguage(language) {
+  currentLanguage = supportedLanguages.includes(language) ? language : "en";
+  localStorage.setItem(LANGUAGE_STORE_KEY, currentLanguage);
+  applyI18n();
+  buildCounters();
+  renderMode();
+  render();
+  renderSkills();
+  renderHistory();
+  renderSkillsHistory();
+  renderScouting();
+  renderAnalysis();
+  renderImportedCompetition();
 }
 
 function vexProxyUrl() {
@@ -101,9 +1268,9 @@ function buildCounters() {
     const wrap = $(`[data-quadrant="${quadrant}"]`);
     wrap.innerHTML = colors.map(color => `
       <div class="counter ${color}" data-counter="${quadrant}:${color}">
-        <button type="button" data-step="${quadrant}:${color}:-1" aria-label="Decrease ${color} pins in ${quadrant} quadrant">-</button>
-        <output aria-label="${color} pins in ${quadrant} quadrant">0</output>
-        <button type="button" data-step="${quadrant}:${color}:1" aria-label="Increase ${color} pins in ${quadrant} quadrant">+</button>
+        <button type="button" data-step="${quadrant}:${color}:-1" aria-label="${escapeHtml(t("aria.decreasePins", { color: t(`color.${color}`), quadrant: t(`quadrant.${quadrant}`) }))}">-</button>
+        <output aria-label="${escapeHtml(t("aria.pinsInQuadrant", { color: t(`color.${color}`), quadrant: t(`quadrant.${quadrant}`) }))}">0</output>
+        <button type="button" data-step="${quadrant}:${color}:1" aria-label="${escapeHtml(t("aria.increasePins", { color: t(`color.${color}`), quadrant: t(`quadrant.${quadrant}`) }))}">+</button>
       </div>
     `).join("");
   });
@@ -292,10 +1459,10 @@ function officialEventRegionId(event) {
 
 function competitionDateLabel(event) {
   const value = event.date || event.start;
-  if (!value) return "Date not listed";
+  if (!value) return t("scouting.dateNotListed");
   const date = new Date(value);
   if (Number.isNaN(date.getTime())) return String(value);
-  return date.toLocaleDateString(undefined, {
+  return date.toLocaleDateString(languageLocale(), {
     year: "numeric",
     month: "short",
     day: "numeric"
@@ -391,7 +1558,7 @@ function eventRegionKey(event) {
 function eventRegionLabel(event) {
   const officialName = officialEventRegionName(event);
   if (officialName) return officialName;
-  return [event.region, event.country].filter(Boolean).join(", ") || "Region not listed";
+  return [event.region, event.country].filter(Boolean).join(", ") || t("scouting.regionNotListed");
 }
 
 function eventDateTime(event) {
@@ -550,8 +1717,8 @@ function visibleRegionRows(query = currentRegionInputValue()) {
       return [
         {
           key: REGION_MATCH_KEY,
-          label: `All matching regions for "${query}"`,
-          meta: `${matches.length} synced regions • ${count} events`
+          label: t("scouting.allMatchingRegions", { query }),
+          meta: t("scouting.allMatchingMeta", { regions: matches.length, events: count })
         },
         ...matches
       ];
@@ -559,7 +1726,7 @@ function visibleRegionRows(query = currentRegionInputValue()) {
     return matches;
   }
   return [
-    { key: "", label: "All synced regions", meta: "Show every imported event" },
+    { key: "", label: t("scouting.allSyncedRegions"), meta: t("scouting.showEveryEvent") },
     ...matches
   ];
 }
@@ -581,8 +1748,8 @@ function renderRegionOptions(open = false) {
   if (!rows.length) {
     list.innerHTML = `
       <div class="region-option region-option-empty" role="option" aria-disabled="true">
-        <strong>No synced region matches "${escapeHtml(query)}"</strong>
-        <small>Only imported season-204 regions appear here.</small>
+        <strong>${escapeHtml(t("scouting.noRegionMatch", { query }))}</strong>
+        <small>${escapeHtml(t("scouting.onlyImportedRegions"))}</small>
       </div>
     `;
     return;
@@ -678,7 +1845,7 @@ function setTeamSkillsStatus(message, tone = "") {
 async function vexProxyFetch(path) {
   const baseUrl = vexProxyUrl();
   if (!baseUrl) {
-    throw new Error("Live VEX data needs the proxy before it can load official results.");
+    throw new Error(t("scouting.proxyNeeded"));
   }
 
   const response = await fetch(`${baseUrl}${path}`, {
@@ -691,7 +1858,7 @@ async function vexProxyFetch(path) {
     payload = null;
   }
   if (!response.ok) {
-    throw new Error(payload?.error || "Competition data could not load. Try again later.");
+    throw new Error(payload?.error || t("scouting.dataError"));
   }
   return payload;
 }
@@ -701,15 +1868,15 @@ function renderCompetitionSource() {
   const teamSource = $("[data-team-skills-source]");
   if (source) {
     if (syncedEventsLoaded && syncedEvents.length) {
-      source.textContent = "Synced local data";
+      source.textContent = t("scouting.syncedLocal");
       source.dataset.connected = "true";
     } else {
-      source.textContent = "No synced data";
+      source.textContent = t("scouting.noSyncedData");
       source.dataset.connected = "false";
     }
   }
   if (teamSource) {
-    teamSource.textContent = vexProxyUrl() ? "Live proxy connected" : "Proxy not connected";
+    teamSource.textContent = vexProxyUrl() ? t("scouting.liveProxy") : t("scouting.noProxy");
     teamSource.dataset.connected = String(Boolean(vexProxyUrl()));
   }
 }
@@ -723,10 +1890,10 @@ function teamNumberKey(value) {
 }
 
 function officialDateLabel(value) {
-  if (!value) return "Date not listed";
+  if (!value) return t("scouting.dateNotListed");
   const date = new Date(value);
   if (Number.isNaN(date.getTime())) return String(value);
-  return date.toLocaleDateString(undefined, {
+  return date.toLocaleDateString(languageLocale(), {
     year: "numeric",
     month: "short",
     day: "numeric"
@@ -742,7 +1909,7 @@ function renderTeamSkillsResults(rows = []) {
   if (!results) return;
   results.hidden = false;
   if (!rows.length) {
-    results.innerHTML = `<p class="competition-empty">No matching teams found in the public Skills standings.</p>`;
+    results.innerHTML = `<p class="competition-empty">${escapeHtml(t("scouting.noTeamsLong"))}</p>`;
     return;
   }
 
@@ -757,25 +1924,25 @@ function renderTeamSkillsResults(rows = []) {
       <article class="team-skill-card ${open ? "open" : ""}">
         <button class="team-skill-summary" type="button" data-team-skill-toggle="${escapeHtml(id)}" aria-expanded="${open}">
           <span class="team-skill-identity">
-            <strong>${escapeHtml(team.teamNumber || "Team")}</strong>
-            <small>${escapeHtml(team.teamName || team.organization || "Official Skills result")}</small>
+            <strong>${escapeHtml(team.teamNumber || t("common.team"))}</strong>
+            <small>${escapeHtml(team.teamName || team.organization || t("scouting.officialSkillsResult"))}</small>
           </span>
-          <span class="team-skill-chip">Rank #${escapeHtml(row.rank ?? "-")}</span>
+          <span class="team-skill-chip">${escapeHtml(t("scouting.rank", { rank: row.rank ?? "-" }))}</span>
           <span class="team-skill-score">${escapeHtml(total)}</span>
         </button>
         <div class="team-skill-detail">
           ${open ? `
             <div class="team-skill-stats">
-              <span><small>Driver</small><strong>${escapeHtml(scores.maxDriver ?? scores.driver ?? 0)}</strong></span>
-              <span><small>Autonomous</small><strong>${escapeHtml(scores.maxProgramming ?? scores.programming ?? 0)}</strong></span>
-              <span><small>Event</small><strong>${escapeHtml(event.sku || "Not listed")}</strong></span>
-              <span><small>Date</small><strong>${escapeHtml(officialDateLabel(event.startDate))}</strong></span>
+              <span><small>${escapeHtml(t("skills.driver"))}</small><strong>${escapeHtml(scores.maxDriver ?? scores.driver ?? 0)}</strong></span>
+              <span><small>${escapeHtml(t("skills.autonomous"))}</small><strong>${escapeHtml(scores.maxProgramming ?? scores.programming ?? 0)}</strong></span>
+              <span><small>${escapeHtml(t("scouting.event"))}</small><strong>${escapeHtml(event.sku || t("common.notListed"))}</strong></span>
+              <span><small>${escapeHtml(t("scouting.date"))}</small><strong>${escapeHtml(officialDateLabel(event.startDate))}</strong></span>
             </div>
             <p>${escapeHtml([
               team.organization,
               teamSkillsLocation(row),
               team.eventRegion
-            ].filter(Boolean).join(" • ") || "No extra team details listed.")}</p>
+            ].filter(Boolean).join(" • ") || t("scouting.noExtraTeamDetails"))}</p>
           ` : ""}
         </div>
       </article>
@@ -858,14 +2025,14 @@ function skillsRowMatches(row, query) {
 }
 
 async function searchTeamSkills(query) {
-  setTeamSkillsStatus("Searching public VEX Skills standings...", "loading");
+  setTeamSkillsStatus(t("scouting.searchingSkills"), "loading");
   const index = await ensureSeasonSkillsIndex();
   teamSkillsResults = index.rows.filter(row => skillsRowMatches(row, query)).slice(0, 50);
   expandedTeamSkillId = null;
   renderTeamSkillsResults(teamSkillsResults);
   setTeamSkillsStatus(teamSkillsResults.length
-    ? `Found ${teamSkillsResults.length} matching team${teamSkillsResults.length === 1 ? "" : "s"}.`
-    : "No matching teams found.",
+    ? countText("scouting.foundTeams", teamSkillsResults.length)
+    : t("scouting.noTeams"),
     teamSkillsResults.length ? "ready" : "warn"
   );
 }
@@ -935,8 +2102,8 @@ function renderMyCompetitions() {
   if (!profile?.teamNumber) {
     wrap.innerHTML = `
       <div class="my-competitions-head">
-        <span class="brand-kicker">My competitions</span>
-        <strong>Enter a team number during setup to auto-detect your events.</strong>
+        <span class="brand-kicker">${escapeHtml(t("scouting.myCompetitions"))}</span>
+        <strong>${escapeHtml(t("scouting.enterTeam"))}</strong>
       </div>
     `;
     return;
@@ -945,9 +2112,9 @@ function renderMyCompetitions() {
   if (!events.length) {
     wrap.innerHTML = `
       <div class="my-competitions-head">
-        <span class="brand-kicker">My competitions</span>
-        <strong>No synced competitions found for ${escapeHtml(teamLabel)}.</strong>
-        <p>Try searching all synced events below.</p>
+        <span class="brand-kicker">${escapeHtml(t("scouting.myCompetitions"))}</span>
+        <strong>${escapeHtml(t("scouting.noMyEvents", { team: teamLabel }))}</strong>
+        <p>${escapeHtml(t("scouting.tryAll"))}</p>
       </div>
     `;
     return;
@@ -955,8 +2122,8 @@ function renderMyCompetitions() {
 
   wrap.innerHTML = `
     <div class="my-competitions-head">
-      <span class="brand-kicker">My competitions</span>
-      <strong>${escapeHtml(events.length)} synced event${events.length === 1 ? "" : "s"} found for ${escapeHtml(teamLabel)}</strong>
+      <span class="brand-kicker">${escapeHtml(t("scouting.myCompetitions"))}</span>
+      <strong>${escapeHtml(t(countKey("scouting.myEvents", events.length), { count: events.length, team: teamLabel }))}</strong>
     </div>
     <div class="my-competition-list">
       ${events.map(event => eventCardMarkup(event, "mine")).join("")}
@@ -970,17 +2137,17 @@ function eventCardMarkup(event, variant = "") {
   return `
     <article class="competition-result ${variant ? `competition-result-${variant}` : ""}">
       <div>
-        <span>${escapeHtml(event.sku || event.code || `Event ${id}`)} • Event ${escapeHtml(id)}</span>
-        <h3>${escapeHtml(event.name || "Unnamed event")}</h3>
+        <span>${escapeHtml(event.sku || event.code || t("scouting.eventWithId", { id }))} • ${escapeHtml(t("scouting.event"))} ${escapeHtml(id)}</span>
+        <h3>${escapeHtml(event.name || t("scouting.unnamedEvent"))}</h3>
         <p>${escapeHtml(competitionDateLabel(event))}${competitionLocation(event) ? ` • ${escapeHtml(competitionLocation(event))}` : ""}</p>
         ${officialRegion ? `<p class="competition-official-region">${escapeHtml(officialRegion)}</p>` : ""}
-        <div class="competition-counts" aria-label="Synced data counts">
-          <strong>${escapeHtml(event.teamCount ?? 0)} teams</strong>
-          <strong>${escapeHtml(event.skillCount ?? 0)} skills</strong>
-          <strong>${escapeHtml(event.awardCount ?? 0)} awards</strong>
+        <div class="competition-counts" aria-label="${escapeHtml(t("scouting.syncedDataCounts"))}">
+          <strong>${escapeHtml(t("scouting.count.teams", { count: event.teamCount ?? 0 }))}</strong>
+          <strong>${escapeHtml(t("scouting.count.skills", { count: event.skillCount ?? 0 }))}</strong>
+          <strong>${escapeHtml(t("scouting.count.awards", { count: event.awardCount ?? 0 }))}</strong>
         </div>
       </div>
-      <button class="modal-button secondary" type="button" data-import-event="${escapeHtml(id)}">View / Import</button>
+      <button class="modal-button secondary" type="button" data-import-event="${escapeHtml(id)}">${escapeHtml(t("scouting.viewImport"))}</button>
     </article>
   `;
 }
@@ -996,7 +2163,7 @@ function renderCompetitionResults(events = []) {
   if (!results) return;
   results.hidden = false;
   if (!events.length) {
-    results.innerHTML = `<p class="competition-empty">No matching competitions found.</p>`;
+    results.innerHTML = `<p class="competition-empty">${escapeHtml(t("scouting.noCompetitionMatches"))}</p>`;
     return;
   }
 
@@ -1036,29 +2203,29 @@ function competitionTeamMarkup(team) {
       <button class="competition-team-summary" type="button" data-competition-team-toggle="${escapeHtml(id)}" aria-expanded="${open}">
         <span class="team-main">
           <strong>${escapeHtml(number)}</strong>
-          <small>${escapeHtml(team.teamName || team.name || team.organization || "Team details")}</small>
+          <small>${escapeHtml(team.teamName || team.name || team.organization || t("scouting.teamDetails"))}</small>
         </span>
       </button>
       <div class="competition-team-detail">
         ${open ? `
           <div class="team-skill-stats">
-            <span><small>Season Skills</small><strong>${escapeHtml(total ?? "Not loaded")}</strong></span>
-            <span><small>Driver</small><strong>${escapeHtml(scores.maxDriver ?? scores.driver ?? 0)}</strong></span>
-            <span><small>Autonomous</small><strong>${escapeHtml(scores.maxProgramming ?? scores.programming ?? 0)}</strong></span>
-            <span><small>Event Skills</small><strong>${escapeHtml(eventSkills.length)}</strong></span>
+            <span><small>${escapeHtml(t("scouting.seasonSkills"))}</small><strong>${escapeHtml(total ?? t("common.notLoaded"))}</strong></span>
+            <span><small>${escapeHtml(t("skills.driver"))}</small><strong>${escapeHtml(scores.maxDriver ?? scores.driver ?? 0)}</strong></span>
+            <span><small>${escapeHtml(t("skills.autonomous"))}</small><strong>${escapeHtml(scores.maxProgramming ?? scores.programming ?? 0)}</strong></span>
+            <span><small>${escapeHtml(t("scouting.eventSkills"))}</small><strong>${escapeHtml(eventSkills.length)}</strong></span>
           </div>
           <p>${escapeHtml([
-            team.robotName ? `Robot: ${team.robotName}` : "",
+            team.robotName ? `${t("scouting.robot")}: ${team.robotName}` : "",
             team.organization,
             teamLocationLine(team)
-          ].filter(Boolean).join(" • ") || "No additional team details listed.")}</p>
+          ].filter(Boolean).join(" • ") || t("scouting.noAdditionalTeamDetails"))}</p>
           ${eventSkills.length ? `
             <div class="event-skill-list">
               ${eventSkills.map(row => `
                 <span>
-                  <small>${escapeHtml(row.type || "skills")}${row.rank ? ` • Rank #${escapeHtml(row.rank)}` : ""}</small>
+                  <small>${escapeHtml(row.type || "skills")}${row.rank ? ` • ${escapeHtml(t("scouting.rank", { rank: row.rank }))}` : ""}</small>
                   <strong>${escapeHtml(row.score ?? 0)}</strong>
-                  ${row.attempts ? `<small>${escapeHtml(row.attempts)} attempts</small>` : ""}
+                  ${row.attempts ? `<small>${escapeHtml(t("scouting.attempts", { count: row.attempts }))}</small>` : ""}
                 </span>
               `).join("")}
             </div>
@@ -1079,18 +2246,18 @@ function awardWinnerLabel(winner, teamByNumber = new Map()) {
 }
 
 function competitionAwardsMarkup(awards = [], teams = []) {
-  if (!awards.length) return `<p class="competition-empty">No awards posted yet.</p>`;
+  if (!awards.length) return `<p class="competition-empty">${escapeHtml(t("scouting.noAwards"))}</p>`;
   const teamByNumber = new Map(teams.map(team => [teamNumberKey(team.teamNumber || team.number), team]).filter(([number]) => number));
   return awards.map(award => `
     <article class="competition-award-row">
       <div>
-        <strong>${escapeHtml(award.title || "Award")}</strong>
+        <strong>${escapeHtml(award.title || t("scouting.award"))}</strong>
         <small>${escapeHtml([
           award.classification,
           award.designation
         ].filter(Boolean).join(" • "))}</small>
       </div>
-      <p>${escapeHtml((award.teamWinners || []).map(winner => awardWinnerLabel(winner, teamByNumber)).filter(Boolean).join(", ") || "Winner not listed")}</p>
+      <p>${escapeHtml((award.teamWinners || []).map(winner => awardWinnerLabel(winner, teamByNumber)).filter(Boolean).join(", ") || t("scouting.winnerNotListed"))}</p>
     </article>
   `).join("");
 }
@@ -1106,7 +2273,7 @@ function renderImportedCompetition() {
   }
 
   panel.hidden = false;
-  $("[data-competition-name]").textContent = importedCompetition.name || "Imported competition";
+  $("[data-competition-name]").textContent = importedCompetition.name || t("scouting.importedCompetition");
   $("[data-competition-meta]").textContent = [
     importedCompetition.eventCode,
     importedCompetition.date,
@@ -1118,26 +2285,30 @@ function renderImportedCompetition() {
   const teamCount = importedCompetition.teamCount ?? teams.length;
   const skillCount = importedCompetition.skillCount ?? 0;
   const awardCount = importedCompetition.awardCount ?? 0;
-  $("[data-competition-team-count]").textContent = `${teamCount} team${teamCount === 1 ? "" : "s"}`;
+  $("[data-competition-team-count]").textContent = t("scouting.count.teams", { count: teamCount });
   $("[data-competition-progress]").textContent = importedCompetition.loadedAt
-    ? `Loaded ${new Date(importedCompetition.loadedAt).toLocaleString()}. ${skillCount} skills rows • ${awardCount} awards.`
+    ? t("scouting.loadedDetail", {
+      date: new Date(importedCompetition.loadedAt).toLocaleString(languageLocale()),
+      skills: skillCount,
+      awards: awardCount
+    })
     : "";
   const teamList = $("[data-competition-team-list]");
   if (teamList) {
     teamList.innerHTML = `
       <div class="competition-section-title">
-        <strong>Teams</strong>
-        <span>Click a team for season Skills and event details.</span>
+        <strong>${escapeHtml(t("scouting.teams"))}</strong>
+        <span>${escapeHtml(t("scouting.teamsHint"))}</span>
       </div>
-      ${teams.length ? teams.map(competitionTeamMarkup).join("") : `<p class="competition-empty">No registered teams are listed yet.</p>`}
+      ${teams.length ? teams.map(competitionTeamMarkup).join("") : `<p class="competition-empty">${escapeHtml(t("scouting.noRegisteredTeams"))}</p>`}
     `;
   }
   const awardsList = $("[data-competition-awards-list]");
   if (awardsList) {
     awardsList.innerHTML = `
       <div class="competition-section-title">
-        <strong>Awards</strong>
-        <span>${awardCount} award${awardCount === 1 ? "" : "s"} synced for this event.</span>
+        <strong>${escapeHtml(t("scouting.awards"))}</strong>
+        <span>${escapeHtml(countText("scouting.awardsSynced", awardCount))}</span>
       </div>
       ${competitionAwardsMarkup(awards, teams)}
     `;
@@ -1157,10 +2328,10 @@ async function searchCompetitions(query) {
     renderCompetitionResults(competitionSearchResults);
     renderCompetitionPickers();
     renderMyCompetitions();
-    setCompetitionStatus(syncedEventsError || "No synced competitions found yet. Run the VEX collector and import a bundle.", "warn");
+    setCompetitionStatus(syncedEventsError || t("scouting.noSynced"), "warn");
     return;
   }
-  setCompetitionStatus("Searching synced competitions...", "loading");
+  setCompetitionStatus(t("scouting.searchingCompetitions"), "loading");
   await ensureSyncedTeamIndex();
   const { region, regionQuery } = competitionFilterValues();
   const searchInput = $("[data-competition-search-form] input[name='competitionSearch']");
@@ -1176,12 +2347,15 @@ async function searchCompetitions(query) {
   renderMyCompetitions();
   renderCompetitionResults(competitionSearchResults);
   let statusMessage = competitionSearchResults.length
-    ? `Found ${competitionSearchResults.length} synced competition${competitionSearchResults.length === 1 ? "" : "s"}.`
-    : "No matching competitions found.";
+    ? countText("scouting.foundCompetitions", competitionSearchResults.length)
+    : t("scouting.noCompetitionMatches");
   if (regionQuery) {
     statusMessage = matchingRegions.length
-      ? `Found ${competitionSearchResults.length} synced competition${competitionSearchResults.length === 1 ? "" : "s"} across ${matchingRegions.length} matching region${matchingRegions.length === 1 ? "" : "s"}.`
-      : `No synced regions match "${regionQuery}".`;
+      ? t(countKey("scouting.foundAcross", matchingRegions.length), {
+        count: competitionSearchResults.length,
+        regions: matchingRegions.length
+      })
+      : t("scouting.noRegionMatch", { query: regionQuery });
   }
   setCompetitionStatus(statusMessage, competitionSearchResults.length ? "ready" : "warn");
 }
@@ -1190,14 +2364,16 @@ async function ensureSyncedEventsLoaded() {
   if (syncedEventsLoaded || syncedEventsError) return;
   try {
     const response = await fetch("data/events/index.json", { headers: { "Accept": "application/json" } });
-    if (!response.ok) throw new Error("No synced competitions found yet. Run the VEX collector and import a bundle.");
+    if (!response.ok) throw new Error(t("scouting.noSynced"));
     const payload = await response.json();
     syncedEvents = Array.isArray(payload.events) ? payload.events : [];
     syncedEventsLoaded = true;
     renderCompetitionSource();
     if (syncedEvents.length) {
-      const updated = payload.updatedAt ? ` Last updated ${new Date(payload.updatedAt).toLocaleString()}.` : "";
-      setCompetitionStatus(`${syncedEvents.length} synced competition${syncedEvents.length === 1 ? "" : "s"} loaded.${updated}`, "ready");
+      const updated = payload.updatedAt
+        ? t("scouting.lastUpdated", { date: new Date(payload.updatedAt).toLocaleString(languageLocale()) })
+        : "";
+      setCompetitionStatus(t(countKey("scouting.loaded", syncedEvents.length), { count: syncedEvents.length, updated }), "ready");
       renderCompetitionPickers();
       renderCompetitionFilters();
       renderCompetitionResults(sortedSyncedEvents(syncedEvents).slice(0, 12));
@@ -1208,11 +2384,11 @@ async function ensureSyncedEventsLoaded() {
     } else {
       renderCompetitionPickers();
       renderMyCompetitions();
-      setCompetitionStatus("No synced competitions found yet. Run the VEX collector and import a bundle.", "warn");
+      setCompetitionStatus(t("scouting.noSynced"), "warn");
     }
   } catch (error) {
     syncedEvents = [];
-    syncedEventsError = error.message || "No synced competitions found yet. Run the VEX collector and import a bundle.";
+    syncedEventsError = error.message || t("scouting.noSynced");
     renderCompetitionSource();
     renderCompetitionPickers();
     renderMyCompetitions();
@@ -1307,7 +2483,7 @@ async function importLocalCompetition(eventId) {
   });
   renderImportedCompetition();
   setCompetitionStatus(`Imported ${teams.length} teams, ${skills.length} skills rows, and ${awards.length} awards from synced data.`, "ready");
-  showToast("Competition data imported.");
+  showToast(t("toast.competitionImported"));
 }
 
 async function importCompetitionFromProxy(eventId) {
@@ -1345,7 +2521,7 @@ async function importCompetitionFromProxy(eventId) {
   });
   renderImportedCompetition();
   setCompetitionStatus("Competition data loaded and saved on this device.", "ready");
-  showToast("Competition data imported.");
+  showToast(t("toast.competitionImported"));
 }
 
 function escapeHtml(value) {
@@ -1433,9 +2609,9 @@ function renderSetupConfirmation(match) {
   const submit = $("[data-setup-submit]");
   if (!confirm || !name) return;
   pendingProfileMatch = match;
-  name.textContent = `Are you ${match.teamNumber} ${match.teamName}?`;
+  name.textContent = t("setup.confirmIdentity", { teamNumber: match.teamNumber, teamName: match.teamName });
   confirm.hidden = false;
-  if (submit) submit.textContent = "Check Another Team";
+  if (submit) submit.textContent = t("setup.checkAnother");
 }
 
 function clearSetupConfirmation() {
@@ -1443,7 +2619,7 @@ function clearSetupConfirmation() {
   const submit = $("[data-setup-submit]");
   pendingProfileMatch = null;
   if (confirm) confirm.hidden = true;
-  if (submit) submit.textContent = "Check Team";
+  if (submit) submit.textContent = t("setup.checkTeam");
 }
 
 function finishProfileSetup(nextProfile) {
@@ -1452,8 +2628,8 @@ function finishProfileSetup(nextProfile) {
   renderCompetitionResults(filteredSyncedEvents().slice(0, 12));
   closeSetupModal();
   showToast(nextProfile.teamName
-    ? `${nextProfile.teamNumber} ${nextProfile.teamName} saved on this device.`
-    : `Team ${nextProfile.teamNumber} saved on this device.`
+    ? t("toast.teamNameSaved", { teamNumber: nextProfile.teamNumber, teamName: nextProfile.teamName })
+    : t("toast.teamSaved", { teamNumber: nextProfile.teamNumber })
   );
 }
 
@@ -1515,7 +2691,7 @@ function createMatchRecord(details) {
   return {
     id: crypto?.randomUUID?.() || `match-${savedAt.getTime()}-${Math.random().toString(16).slice(2)}`,
     savedAt: savedAt.toISOString(),
-    savedDate: savedAt.toLocaleDateString(undefined, {
+    savedDate: savedAt.toLocaleDateString(languageLocale(), {
       year: "numeric",
       month: "short",
       day: "numeric"
@@ -1538,7 +2714,7 @@ function createSkillsRunRecord(notes = "") {
     id: crypto?.randomUUID?.() || `skills-${savedAt.getTime()}-${Math.random().toString(16).slice(2)}`,
     mode: "skills",
     savedAt: savedAt.toISOString(),
-    savedDate: savedAt.toLocaleDateString(undefined, {
+    savedDate: savedAt.toLocaleDateString(languageLocale(), {
       year: "numeric",
       month: "short",
       day: "numeric"
@@ -1601,7 +2777,7 @@ function scoreSkillsSnapshot(snapshot) {
 }
 
 function sampleSavedDate(date) {
-  return date.toLocaleDateString(undefined, {
+  return date.toLocaleDateString(languageLocale(), {
     year: "numeric",
     month: "short",
     day: "numeric"
@@ -1781,10 +2957,10 @@ function createSampleSkillsRecord(seed) {
 }
 
 function seedSampleData() {
-  const headSeeds = Array.from({ length: 48 }, (_, index) => sampleHeadSeed(index, 48));
+  const headSeeds = Array.from({ length: 72 }, (_, index) => sampleHeadSeed(index, 72));
   const skillsSeeds = [
-    ...Array.from({ length: 24 }, (_, index) => sampleSkillsSeed(index, 24, "driver")),
-    ...Array.from({ length: 20 }, (_, index) => sampleSkillsSeed(index, 20, "autonomous"))
+    ...Array.from({ length: 40 }, (_, index) => sampleSkillsSeed(index, 40, "driver")),
+    ...Array.from({ length: 34 }, (_, index) => sampleSkillsSeed(index, 34, "autonomous"))
   ];
 
   const nextMatches = [
@@ -1796,7 +2972,7 @@ function seedSampleData() {
   renderHistory();
   renderSkillsHistory();
   renderAnalysis();
-  showToast("Sample dev data rebuilt.");
+  showToast(t("toast.sampleRebuilt"));
 }
 
 function showToast(message) {
@@ -1812,7 +2988,7 @@ function showToast(message) {
 
 function openSaveModal() {
   if (teamAlliance !== "red" && teamAlliance !== "blue") {
-    showToast("Choose your alliance color before saving.");
+    showToast(t("toast.chooseAlliance"));
     return;
   }
 
@@ -1838,7 +3014,7 @@ function closeSaveModal() {
 
 function openSkillsSaveModal() {
   if (skillsRunType !== "driver" && skillsRunType !== "autonomous") {
-    showToast("Choose Driver or Autonomous before saving.");
+    showToast(t("toast.chooseSkillsType"));
     return;
   }
 
@@ -1864,7 +3040,7 @@ function closeSkillsSaveModal() {
 
 function saveCurrentMatch(details) {
   if (teamAlliance !== "red" && teamAlliance !== "blue") {
-    showToast("Choose your alliance color before saving.");
+    showToast(t("toast.chooseAlliance"));
     return;
   }
 
@@ -1875,7 +3051,7 @@ function saveCurrentMatch(details) {
   try {
     writeSavedMatches(matches);
   } catch {
-    showToast("Match could not be saved on this device.");
+    showToast(t("toast.matchSaveFailed"));
     return;
   }
 
@@ -1883,12 +3059,12 @@ function saveCurrentMatch(details) {
   resetScorer();
   renderHistory();
   renderAnalysis();
-  showToast("Match saved on this device.");
+  showToast(t("toast.matchSaved"));
 }
 
 function saveCurrentSkillsRun(notes = "") {
   if (skillsRunType !== "driver" && skillsRunType !== "autonomous") {
-    showToast("Choose Driver or Autonomous before saving.");
+    showToast(t("toast.chooseSkillsType"));
     return;
   }
 
@@ -1899,7 +3075,7 @@ function saveCurrentSkillsRun(notes = "") {
   try {
     writeSavedMatches(matches);
   } catch {
-    showToast("Skills run could not be saved on this device.");
+    showToast(t("toast.skillsSaveFailed"));
     return;
   }
 
@@ -1907,7 +3083,7 @@ function saveCurrentSkillsRun(notes = "") {
   resetSkillsScorer();
   renderSkillsHistory();
   renderAnalysis();
-  showToast("Skills run saved on this device.");
+  showToast(t("toast.skillsSaved"));
 }
 
 function setTeamAlliance(alliance) {
@@ -2166,12 +3342,12 @@ function recentFormDetail(stats) {
   if (!Number.isFinite(stats.recentMean) || !Number.isFinite(stats.mean)) return "";
   const delta = stats.recentMean - stats.mean;
   const sign = delta > 0 ? "+" : "";
-  return `last ${stats.recentCount}, ${sign}${formatAnalysisNumber(delta)} vs range avg`;
+  return t("analysis.recentDetail", { count: stats.recentCount, delta: `${sign}${formatAnalysisNumber(delta)}` });
 }
 
-function analysisInsightCard(title, body, stat = "") {
+function analysisInsightCard(title, body, stat = "", extraClass = "") {
   return `
-    <div class="analysis-insight-card">
+    <div class="analysis-insight-card ${escapeHtml(extraClass)}">
       <span>${escapeHtml(title)}</span>
       ${stat ? `<strong>${escapeHtml(stat)}</strong>` : ""}
       <p>${escapeHtml(body)}</p>
@@ -2186,6 +3362,22 @@ function analysisMiniRow(label, value, detail = "") {
       <strong>${escapeHtml(value)}</strong>
       ${detail ? `<small>${escapeHtml(detail)}</small>` : ""}
     </div>
+  `;
+}
+
+function analysisSectionTitle(question, detail = "") {
+  return `
+    <div class="analysis-section-title">
+      <span>${escapeHtml(question)}</span>
+      ${detail ? `<small>${escapeHtml(detail)}</small>` : ""}
+    </div>
+  `;
+}
+
+function analysisCoachNote(message) {
+  return `
+    <strong>${escapeHtml(t("analysis.coachNote"))}</strong>
+    <span>${escapeHtml(message)}</span>
   `;
 }
 
@@ -2488,11 +3680,21 @@ function flatCorrelationOptions(groups) {
   return groups.flatMap(group => group.options);
 }
 
+function correlationOptionLabel(option) {
+  const exact = tt(`analysis.correlationOption.${option.key}`, "");
+  if (exact) return exact;
+  const zoneMatch = String(option.key).match(/^(top|right|bottom|left|center)(TotalPins|OurPins|OpponentPins|OwnedYellow|Pins)$/);
+  if (zoneMatch) {
+    return t(`analysis.zoneOption.${zoneMatch[2]}`, { quadrant: t(`quadrant.${zoneMatch[1]}`) });
+  }
+  return option.label;
+}
+
 function correlationOptionsHtml(groups, selected) {
   return groups.map(group => `
-    <optgroup label="${escapeHtml(group.group)}">
+    <optgroup label="${escapeHtml(tt(`analysis.correlationGroup.${group.group.toLowerCase()}`, group.group))}">
       ${group.options.map(option => `
-        <option value="${escapeHtml(option.key)}" ${option.key === selected ? "selected" : ""}>${escapeHtml(option.label)}</option>
+        <option value="${escapeHtml(option.key)}" ${option.key === selected ? "selected" : ""}>${escapeHtml(correlationOptionLabel(option))}</option>
       `).join("")}
     </optgroup>
   `).join("");
@@ -2520,13 +3722,13 @@ function pearsonCorrelation(pairs) {
 }
 
 function correlationLabel(value) {
-  if (!Number.isFinite(value)) return "Not enough variation yet";
+  if (!Number.isFinite(value)) return t("analysis.correlation.notEnough");
   const strength = Math.abs(value);
-  const direction = value > 0 ? "positive" : value < 0 ? "negative" : "flat";
-  if (strength >= .75) return `Strong ${direction}`;
-  if (strength >= .45) return `Moderate ${direction}`;
-  if (strength >= .22) return `Weak ${direction}`;
-  return "Little relationship";
+  const direction = value > 0 ? "Positive" : value < 0 ? "Negative" : "";
+  if (strength >= .75) return t(`analysis.correlation.strong${direction}`);
+  if (strength >= .45) return t(`analysis.correlation.moderate${direction}`);
+  if (strength >= .22) return t(`analysis.correlation.weak${direction}`);
+  return t("analysis.correlation.little");
 }
 
 function correlationValue(records, optionX, optionY) {
@@ -2544,25 +3746,29 @@ function renderCorrelation(records, options, selectedX, selectedY, mode) {
   const prettyR = Number.isFinite(r) ? r.toFixed(2) : "--";
 
   return `
-    <div class="analysis-trend-head">
-      <span>Correlation builder</span>
-      <small>Uses this date range</small>
-    </div>
-    <div class="analysis-correlation-controls">
-      <label>
-        <span>Compare</span>
-        <select data-correlation-axis="${mode}:x">${correlationOptionsHtml(options, optionX.key)}</select>
-      </label>
-      <label>
-        <span>Against</span>
-        <select data-correlation-axis="${mode}:y">${correlationOptionsHtml(options, optionY.key)}</select>
-      </label>
-    </div>
-    <div class="analysis-correlation-result">
-      <strong>${correlationLabel(r)}</strong>
-      <span>r = ${prettyR} from ${count} saved ${mode === "head" ? "matches" : "runs"}</span>
-      <small>Positive means the two numbers rise together. Negative means one tends to rise when the other falls.</small>
-    </div>
+    <details class="analysis-correlation-lab">
+      <summary>
+        <span>${escapeHtml(t("analysis.openCorrelation"))}</span>
+        <small>${escapeHtml(t("analysis.correlationTool"))}</small>
+      </summary>
+      <div class="analysis-correlation-body">
+        <div class="analysis-correlation-controls">
+          <label>
+            <span>${escapeHtml(t("analysis.compare"))}</span>
+            <select data-correlation-axis="${mode}:x">${correlationOptionsHtml(options, optionX.key)}</select>
+          </label>
+          <label>
+            <span>${escapeHtml(t("analysis.against"))}</span>
+            <select data-correlation-axis="${mode}:y">${correlationOptionsHtml(options, optionY.key)}</select>
+          </label>
+        </div>
+        <div class="analysis-correlation-result">
+          <strong>${correlationLabel(r)}</strong>
+          <span>${escapeHtml(t("analysis.correlationResult", { r: prettyR, count, type: mode === "head" ? t("analysis.matchesLabel") : t("analysis.runsLabel") }))}</span>
+          <small>${escapeHtml(t("analysis.correlationHelp"))}</small>
+        </div>
+      </div>
+    </details>
   `;
 }
 
@@ -2590,16 +3796,16 @@ function renderWinFactors(matches) {
     .slice(0, 4);
 
   if (!candidates.length) {
-    return analysisInsightCard("Win factors", "Save more varied matches to identify what is most tied to winning.", "Learning");
+    return analysisInsightCard(t("analysis.winFactors"), t("analysis.winFactorsEmpty"), t("analysis.learning"));
   }
 
   return `
     <div class="analysis-insight-card analysis-insight-wide">
-      <span>Win factors</span>
-      <strong>Top ${candidates.length}</strong>
-      <p>The strongest simple relationships with winning in this range.</p>
+      <span>${escapeHtml(t("analysis.winFactors"))}</span>
+      <strong>${escapeHtml(t("analysis.topCount", { count: candidates.length }))}</strong>
+      <p>${escapeHtml(t("analysis.winFactorsDetail"))}</p>
       <div class="analysis-mini-list">
-        ${candidates.map(item => analysisMiniRow(item.option.label, item.r.toFixed(2), correlationLabel(item.r))).join("")}
+        ${candidates.map(item => analysisMiniRow(correlationOptionLabel(item.option), item.r.toFixed(2), correlationLabel(item.r))).join("")}
       </div>
     </div>
   `;
@@ -2637,9 +3843,9 @@ function renderHeadMissedPoints(matches) {
   const missed = matches.map(missedHeadPoints);
   const total = averageObject(missed, "total");
   return analysisInsightCard(
-    "Missed points",
-    "Estimated points left from unowned yellows, lost or tied auton, and missing midfield robots/control.",
-    `${formatAnalysisNumber(total)} avg`
+    t("analysis.missedPoints"),
+    t("analysis.missedPointsDetail"),
+    t("analysis.avgValue", { value: formatAnalysisNumber(total) })
   );
 }
 
@@ -2650,13 +3856,13 @@ function renderAutonReliability(matches) {
   const margin = group => formatAnalysisNumber(resultAverage(group, match => numericValue(match.ourScore) - numericValue(match.opponentScore)));
   return `
     <div class="analysis-insight-card analysis-insight-wide">
-      <span>Auton reliability</span>
-      <strong>${formatAnalysisNumber((wins.length / matches.length) * 100, "%")} won</strong>
-      <p>Auton outcome compared with final margin.</p>
+      <span>${escapeHtml(t("analysis.autonReliability"))}</span>
+      <strong>${escapeHtml(t("analysis.percentWon", { value: formatAnalysisNumber((wins.length / matches.length) * 100, "%") }))}</strong>
+      <p>${escapeHtml(t("analysis.autonReliabilityDetail"))}</p>
       <div class="analysis-mini-list">
-        ${analysisMiniRow("Won auton", `${wins.length}`, `avg margin ${margin(wins)}`)}
-        ${analysisMiniRow("Tied auton", `${ties.length}`, `avg margin ${margin(ties)}`)}
-        ${analysisMiniRow("Lost auton", `${losses.length}`, `avg margin ${margin(losses)}`)}
+        ${analysisMiniRow(t("analysis.wonAuton"), `${wins.length}`, t("analysis.avgMargin", { value: margin(wins) }))}
+        ${analysisMiniRow(t("analysis.tiedAuton"), `${ties.length}`, t("analysis.avgMargin", { value: margin(ties) }))}
+        ${analysisMiniRow(t("analysis.lostAuton"), `${losses.length}`, t("analysis.avgMargin", { value: margin(losses) }))}
       </div>
     </div>
   `;
@@ -2669,9 +3875,9 @@ function renderCenterImpact(matches) {
   const notMargin = resultAverage(notControlled, match => numericValue(match.ourScore) - numericValue(match.opponentScore));
   const swing = Number.isFinite(controlledMargin) && Number.isFinite(notMargin) ? controlledMargin - notMargin : null;
   return analysisInsightCard(
-    "Center control impact",
-    `Avg margin with center: ${formatAnalysisNumber(controlledMargin)}. Without center: ${formatAnalysisNumber(notMargin)}.`,
-    `${formatAnalysisNumber(swing)} swing`
+    t("analysis.centerImpact"),
+    t("analysis.centerImpactDetail", { withCenter: formatAnalysisNumber(controlledMargin), withoutCenter: formatAnalysisNumber(notMargin) }),
+    t("analysis.swing", { value: formatAnalysisNumber(swing) })
   );
 }
 
@@ -2680,8 +3886,8 @@ function renderYellowEfficiency(matches) {
   const scored = matches.reduce((total, match) => total + numericValue(ownedYellowPins(match)), 0);
   const rate = placed ? (scored / placed) * 100 : null;
   return analysisInsightCard(
-    "Toggle/yellows efficiency",
-    `${scored} of ${placed} yellow pins counted for your alliance in this range.`,
+    t("analysis.yellowEfficiency"),
+    t("analysis.yellowEfficiencyDetail", { scored, placed }),
     formatAnalysisNumber(rate, "%")
   );
 }
@@ -2690,7 +3896,7 @@ function renderFloorCeiling(records, getter, title) {
   const values = scoreGetterValues(records, getter);
   return analysisInsightCard(
     title,
-    "A realistic low/high range using saved-score percentiles, less jumpy than raw worst and best.",
+    t("analysis.floorCeilingDetail"),
     `${formatAnalysisNumber(percentile(values, .2))} - ${formatAnalysisNumber(percentile(values, .8))}`
   );
 }
@@ -2725,7 +3931,7 @@ function renderProgressCard(records, getter, title) {
   const sign = delta > 0 ? "+" : "";
   return analysisInsightCard(
     title,
-    previous.length ? `Previous comparable range averaged ${formatAnalysisNumber(previousAvg)}.` : "Need earlier saved data for a previous-range comparison.",
+    previous.length ? t("analysis.previousAverage", { value: formatAnalysisNumber(previousAvg) }) : t("analysis.needEarlierData"),
     Number.isFinite(delta) ? `${sign}${formatAnalysisNumber(delta)}` : "--"
   );
 }
@@ -2741,9 +3947,14 @@ function renderBestMatchBlueprint(matches) {
   const centerCount = best.filter(centerControlledByUs).length;
   const autonCount = best.filter(autonWon).length;
   return analysisInsightCard(
-    "Best match blueprint",
-    `Your best 3 averaged ${formatAnalysisNumber(avgAlliancePins)} red/blue pins and ${formatAnalysisNumber(avgYellows)} owned yellows. Center was controlled ${centerCount}/3 times; auton won ${autonCount}/3.`,
-    `${formatAnalysisNumber(resultAverage(best, match => match.ourScore))} avg`
+    t("analysis.bestBlueprint"),
+    t("analysis.bestBlueprintDetail", {
+      pins: formatAnalysisNumber(avgAlliancePins),
+      yellows: formatAnalysisNumber(avgYellows),
+      center: centerCount,
+      auton: autonCount
+    }),
+    t("analysis.avgValue", { value: formatAnalysisNumber(resultAverage(best, match => match.ourScore)) })
   );
 }
 
@@ -2755,8 +3966,8 @@ function renderHeadInsights(matches, allMatches) {
     renderAutonReliability(matches),
     renderCenterImpact(matches),
     renderYellowEfficiency(matches),
-    renderFloorCeiling(matches, match => match.ourScore, "Floor / ceiling"),
-    renderProgressCard(allMatches, match => match.ourScore, "Weekly progress"),
+    renderFloorCeiling(matches, match => match.ourScore, t("analysis.badGoodRange")),
+    renderProgressCard(allMatches, match => match.ourScore, t("analysis.weeklyProgress")),
     renderBestMatchBlueprint(matches)
   ].join("");
 }
@@ -2766,8 +3977,8 @@ function renderSkillsMissedPoints(runs) {
   const placed = runs.reduce((total, run) => total + skillsYellowPins(run), 0);
   const rate = placed ? ((placed - missed) / placed) * 100 : null;
   return analysisInsightCard(
-    "Yellow conversion",
-    `${placed - missed} of ${placed} yellow pins scored under the Skills ownership rules.`,
+    t("analysis.yellowConversion"),
+    t("analysis.yellowConversionDetail", { scored: placed - missed, placed }),
     formatAnalysisNumber(rate, "%")
   );
 }
@@ -2785,12 +3996,12 @@ function renderSkillsRouteProgress(runs) {
   const autonDelta = splitDelta(auton);
   return `
     <div class="analysis-insight-card analysis-insight-wide">
-      <span>Skills route progress</span>
-      <strong>${runs.length} runs</strong>
-      <p>Compares newer runs against older runs separately for Driver and Autonomous.</p>
+      <span>${escapeHtml(t("analysis.skillsRouteProgress"))}</span>
+      <strong>${escapeHtml(countText("analysis.runs", runs.length))}</strong>
+      <p>${escapeHtml(t("analysis.skillsRouteProgressDetail"))}</p>
       <div class="analysis-mini-list">
-        ${analysisMiniRow("Driver trend", Number.isFinite(driverDelta) ? `${driverDelta > 0 ? "+" : ""}${formatAnalysisNumber(driverDelta)}` : "--", `${driver.length} runs`)}
-        ${analysisMiniRow("Autonomous trend", Number.isFinite(autonDelta) ? `${autonDelta > 0 ? "+" : ""}${formatAnalysisNumber(autonDelta)}` : "--", `${auton.length} runs`)}
+        ${analysisMiniRow(t("analysis.driverTrend"), Number.isFinite(driverDelta) ? `${driverDelta > 0 ? "+" : ""}${formatAnalysisNumber(driverDelta)}` : "--", countText("analysis.runs", driver.length))}
+        ${analysisMiniRow(t("analysis.autonTrend"), Number.isFinite(autonDelta) ? `${autonDelta > 0 ? "+" : ""}${formatAnalysisNumber(autonDelta)}` : "--", countText("analysis.runs", auton.length))}
       </div>
     </div>
   `;
@@ -2800,10 +4011,122 @@ function renderSkillsInsights(runs, allRuns) {
   if (!runs.length) return "";
   return [
     renderSkillsMissedPoints(runs),
-    renderFloorCeiling(runs, run => run.score, "Floor / ceiling"),
-    renderProgressCard(allRuns, run => run.score, "Weekly progress"),
+    renderFloorCeiling(runs, run => run.score, t("analysis.badGoodRange")),
+    renderProgressCard(allRuns, run => run.score, t("analysis.weeklyProgress")),
     renderSkillsRouteProgress(runs)
   ].join("");
+}
+
+function headCoachCards(matches) {
+  const stats = analysisScoreStats(matches, match => match.ourScore);
+  const wins = matches.filter(match => match.result === "win").length;
+  const winRate = matches.length ? (wins / matches.length) * 100 : null;
+  const yellowPlaced = matches.reduce((total, match) => total + yellowPins(match), 0);
+  const yellowScored = matches.reduce((total, match) => total + numericValue(ownedYellowPins(match)), 0);
+  const yellowRate = yellowPlaced ? (yellowScored / yellowPlaced) * 100 : null;
+  const autonWinRate = matches.length ? (matches.filter(autonWon).length / matches.length) * 100 : null;
+  const centerRate = matches.length ? (matches.filter(centerControlledByUs).length / matches.length) * 100 : null;
+  const missedAverage = resultAverage(matches, match => missedHeadPoints(match).total);
+  const recentDelta = Number.isFinite(stats.recentMean) && Number.isFinite(stats.mean) ? stats.recentMean - stats.mean : null;
+
+  const working = Number.isFinite(recentDelta) && recentDelta >= 3
+    ? `Your last ${stats.recentCount} matches are running ${formatAnalysisNumber(recentDelta)} points above this range.`
+    : Number.isFinite(winRate) && winRate >= 60
+      ? `You are winning ${formatAnalysisNumber(winRate, "%")} of matches in this range.`
+      : `Your current baseline is ${formatAnalysisNumber(stats.mean)} points. That is the number to push up.`;
+
+  const costing = Number.isFinite(yellowRate) && yellowRate < 70
+    ? `Yellow ownership is the biggest visible leak: ${yellowScored} of ${yellowPlaced} yellows counted.`
+    : Number.isFinite(autonWinRate) && autonWinRate < 45
+      ? `Autonomous is not reliable yet: ${formatAnalysisNumber(autonWinRate, "%")} won in this range.`
+      : `Missed-point estimate averages ${formatAnalysisNumber(missedAverage)} points per match.`;
+
+  const focus = Number.isFinite(centerRate) && centerRate < 55
+    ? "Prioritize ending with midfield control more often; it connects directly to robot points and center yellows."
+    : Number.isFinite(yellowRate) && yellowRate < 85
+      ? "Clean up toggle ownership before placing extra yellow pins."
+      : "Keep building around your best-match pattern and raise the floor on rough rounds.";
+
+  return [
+    analysisInsightCard(t("analysis.working"), working, Number.isFinite(recentDelta) ? `${recentDelta >= 0 ? "+" : ""}${formatAnalysisNumber(recentDelta)}` : `${formatAnalysisNumber(winRate, "%")}`, "analysis-coach-card"),
+    analysisInsightCard(t("analysis.costing"), costing, Number.isFinite(missedAverage) ? t("analysis.avgValue", { value: formatAnalysisNumber(missedAverage) }) : t("analysis.checkDetails"), "analysis-coach-card"),
+    analysisInsightCard(t("analysis.focus"), focus, t("analysis.nextPractice"), "analysis-coach-card")
+  ].join("");
+}
+
+function headCoachNote(matches) {
+  const stats = analysisScoreStats(matches, match => match.ourScore);
+  const missedAverage = resultAverage(matches, match => missedHeadPoints(match).total);
+  const delta = Number.isFinite(stats.recentMean) && Number.isFinite(stats.mean) ? stats.recentMean - stats.mean : null;
+  if (Number.isFinite(delta) && delta > 2) {
+    return `Your recent matches are trending up by ${formatAnalysisNumber(delta)} points against this range average. Keep the gains, then hunt the ${formatAnalysisNumber(missedAverage)} estimated missed points.`;
+  }
+  if (Number.isFinite(delta) && delta < -2) {
+    return `Your last ${stats.recentCount} matches are below the range average. Start with the repeatable points: auton, center control, and yellows that actually count.`;
+  }
+  return `Your performance is steady around ${formatAnalysisNumber(stats.mean)} points. The fastest improvement is turning missed yellow/control points into guaranteed points.`;
+}
+
+function renderHeadBreakdown(matches, allMatches) {
+  return `
+    ${analysisSectionTitle(t("analysis.headQuestion"), t("analysis.headQuestionDetail"))}
+    <div class="analysis-insights">
+      ${renderWinFactors(matches)}
+      ${renderHeadMissedPoints(matches)}
+      ${renderAutonReliability(matches)}
+      ${renderCenterImpact(matches)}
+      ${renderYellowEfficiency(matches)}
+      ${renderFloorCeiling(matches, match => match.ourScore, t("analysis.badGoodRange"))}
+      ${renderProgressCard(allMatches, match => match.ourScore, t("analysis.weeklyProgress"))}
+      ${renderBestMatchBlueprint(matches)}
+    </div>
+  `;
+}
+
+function skillsCoachCards(runs) {
+  const stats = analysisScoreStats(runs, run => run.score);
+  const driverScores = scoreGetterValues(runs.filter(run => run.skillsType === "driver"), run => run.score);
+  const autonScores = scoreGetterValues(runs.filter(run => run.skillsType === "autonomous"), run => run.score);
+  const bestDriver = driverScores.length ? Math.max(...driverScores) : null;
+  const bestAuton = autonScores.length ? Math.max(...autonScores) : null;
+  const missed = runs.reduce((total, run) => total + skillsMissedYellowPins(run), 0);
+  const placed = runs.reduce((total, run) => total + skillsYellowPins(run), 0);
+  const recentDelta = Number.isFinite(stats.recentMean) && Number.isFinite(stats.mean) ? stats.recentMean - stats.mean : null;
+
+  const working = Number.isFinite(recentDelta) && recentDelta >= 3
+    ? `Your last ${stats.recentCount} Skills runs are ${formatAnalysisNumber(recentDelta)} points above this range.`
+    : `Best combined is ${formatAnalysisNumber((bestDriver || 0) + (bestAuton || 0))}: Driver ${formatAnalysisNumber(bestDriver)} plus Autonomous ${formatAnalysisNumber(bestAuton)}.`;
+  const costing = placed
+    ? `${missed} of ${placed} yellow pins did not score because the needed ownership condition was missing.`
+    : "Save runs with yellow pins and toggle states to find the main scoring leak.";
+  const focus = average(driverScores) >= average(autonScores)
+    ? "Use Driver as the stable base, then raise Autonomous until the combined score jumps."
+    : "Autonomous is carrying well; now make Driver runs more repeatable.";
+
+  return [
+    analysisInsightCard(t("analysis.working"), working, Number.isFinite(recentDelta) ? `${recentDelta >= 0 ? "+" : ""}${formatAnalysisNumber(recentDelta)}` : t("analysis.routeBase"), "analysis-coach-card"),
+    analysisInsightCard(t("analysis.costing"), costing, missed ? t("analysis.missedCount", { count: missed }) : t("analysis.learning"), "analysis-coach-card"),
+    analysisInsightCard(t("analysis.focus"), focus, t("analysis.nextPractice"), "analysis-coach-card")
+  ].join("");
+}
+
+function skillsCoachNote(runs) {
+  const stats = analysisScoreStats(runs, run => run.score);
+  const driverAverage = resultAverage(runs.filter(run => run.skillsType === "driver"), run => run.score);
+  const autonAverage = resultAverage(runs.filter(run => run.skillsType === "autonomous"), run => run.score);
+  if (Number.isFinite(driverAverage) && Number.isFinite(autonAverage)) {
+    return `Your Skills average is ${formatAnalysisNumber(stats.mean)}. Driver is averaging ${formatAnalysisNumber(driverAverage)} and Autonomous is averaging ${formatAnalysisNumber(autonAverage)}, so the next gain is whichever route is less repeatable.`;
+  }
+  return `Your Skills average is ${formatAnalysisNumber(stats.mean)}. Save both Driver and Autonomous runs to see the real combined ceiling.`;
+}
+
+function renderSkillsBreakdown(runs, allRuns) {
+  return `
+    ${analysisSectionTitle(t("analysis.skillsSourceQuestion"), t("analysis.skillsSourceDetail"))}
+    <div class="analysis-insights">
+      ${renderSkillsInsights(runs, allRuns)}
+    </div>
+  `;
 }
 
 function sparklineSvg(records, scoreGetter) {
@@ -2815,7 +4138,7 @@ function sparklineSvg(records, scoreGetter) {
   const points = entries.map(item => item.score);
 
   if (points.length < 2) {
-    return `<p class="analysis-empty-mini">Need at least 2 records for a trend.</p>`;
+    return `<p class="analysis-empty-mini">${escapeHtml(t("analysis.needTrend"))}</p>`;
   }
 
   const width = 360;
@@ -2834,23 +4157,25 @@ function sparklineSvg(records, scoreGetter) {
   const dots = points.map((score, index) => {
     const x = pad + index * step;
     const y = height - pad - ((score - min) / range) * (height - pad * 2);
-    return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3" />`;
+    const key = entries[index].record.mode === "skills" ? "run" : "match";
+    const date = formatMatchDate(entries[index].record);
+    return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3.5"><title>${escapeHtml(t(`analysis.pointTitle.${key}`, { index: index + 1, score: formatAnalysisNumber(score), date }))}</title></circle>`;
   }).join("");
 
   return `
     <div class="analysis-chart-wrap">
       <div class="analysis-chart-labels">
-        <span>Low ${formatAnalysisNumber(min)}</span>
-        <span>High ${formatAnalysisNumber(max)}</span>
+        <span>${escapeHtml(t("analysis.low", { value: formatAnalysisNumber(min) }))}</span>
+        <span>${escapeHtml(t("analysis.high", { value: formatAnalysisNumber(max) }))}</span>
       </div>
-      <svg class="analysis-sparkline" viewBox="0 0 ${width} ${height}" role="img" aria-label="Score trend">
+      <svg class="analysis-sparkline" viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeHtml(t("analysis.scoreTrend"))}">
         <line x1="${pad}" y1="${height - pad}" x2="${width - pad}" y2="${height - pad}" />
         <polyline points="${coordinates}" />
         ${dots}
       </svg>
       <div class="analysis-chart-labels">
-        <span>Oldest ${formatAnalysisNumber(points[0])}</span>
-        <span>Newest ${formatAnalysisNumber(points[points.length - 1])}</span>
+        <span>${escapeHtml(t("analysis.oldest", { value: formatAnalysisNumber(points[0]) }))}</span>
+        <span>${escapeHtml(t("analysis.newest", { value: formatAnalysisNumber(points[points.length - 1]) }))}</span>
       </div>
     </div>
   `;
@@ -2859,8 +4184,8 @@ function sparklineSvg(records, scoreGetter) {
 function renderTrend(records, scoreGetter) {
   return `
     <div class="analysis-trend-head">
-      <span>Score trend</span>
-      <small>Dots are saved records from oldest to newest.</small>
+      <span>${escapeHtml(t("analysis.trendTitle"))}</span>
+      <small>${escapeHtml(t(records.some(record => record.mode === "skills") ? "analysis.trendDetail.run" : "analysis.trendDetail.match"))}</small>
     </div>
     ${sparklineSvg(records, scoreGetter)}
   `;
@@ -2869,28 +4194,34 @@ function renderTrend(records, scoreGetter) {
 function renderHeadAnalysis(allMatches, matches) {
   const summary = $("[data-analysis-head-summary]");
   const count = $("[data-analysis-head-count]");
+  const coachWrap = $("[data-analysis-head-coach]");
   const statsWrap = $("[data-analysis-head-stats]");
   const trendWrap = $("[data-analysis-head-trend]");
+  const breakdownWrap = $("[data-analysis-head-breakdown]");
   const correlationWrap = $("[data-analysis-head-correlation]");
   const insightsWrap = $("[data-analysis-head-insights]");
-  if (!summary || !count || !statsWrap || !trendWrap || !correlationWrap || !insightsWrap) return;
+  if (!summary || !count || !coachWrap || !statsWrap || !trendWrap || !breakdownWrap || !correlationWrap || !insightsWrap) return;
 
-  count.textContent = `${matches.length} ${matches.length === 1 ? "match" : "matches"}`;
+  count.textContent = countText("analysis.matches", matches.length);
   if (!allMatches.length) {
-    summary.textContent = "Save matches to unlock head-on-head analysis.";
-    statsWrap.innerHTML = `<p class="analysis-empty">Save head-on-head matches to unlock this panel.</p>`;
-    trendWrap.innerHTML = "";
-    correlationWrap.innerHTML = "";
+    summary.textContent = t("analysis.head.emptySummary");
+    coachWrap.innerHTML = "";
     insightsWrap.innerHTML = "";
+    statsWrap.innerHTML = `<p class="analysis-empty">${escapeHtml(t("analysis.head.emptyPanel"))}</p>`;
+    trendWrap.innerHTML = "";
+    breakdownWrap.innerHTML = "";
+    correlationWrap.innerHTML = "";
     return;
   }
 
   if (!matches.length) {
-    summary.textContent = "No saved data in this range.";
-    statsWrap.innerHTML = `<p class="analysis-empty">No saved data in this range.</p>`;
-    trendWrap.innerHTML = "";
-    correlationWrap.innerHTML = "";
+    summary.textContent = t("analysis.noRange");
+    coachWrap.innerHTML = "";
     insightsWrap.innerHTML = "";
+    statsWrap.innerHTML = `<p class="analysis-empty">${escapeHtml(t("analysis.noRange"))}</p>`;
+    trendWrap.innerHTML = "";
+    breakdownWrap.innerHTML = "";
+    correlationWrap.innerHTML = "";
     return;
   }
 
@@ -2900,51 +4231,53 @@ function renderHeadAnalysis(allMatches, matches) {
   const ties = matches.filter(match => match.result === "tie").length;
   const winRate = matches.length ? (wins / matches.length) * 100 : null;
 
-  summary.textContent = `Averaging ${formatAnalysisNumber(stats.mean)} points across this range.`;
+  summary.textContent = t("analysis.summaryAverage", { score: formatAnalysisNumber(stats.mean) });
+  coachWrap.innerHTML = analysisCoachNote(headCoachNote(matches));
+  insightsWrap.innerHTML = headCoachCards(matches);
   statsWrap.innerHTML = [
-    analysisStat("Mean score", formatAnalysisNumber(stats.mean)),
-    analysisStat("Win rate", formatAnalysisNumber(winRate, "%"), `${wins}W ${losses}L ${ties}T`),
-    analysisStat("Best", formatAnalysisNumber(stats.best)),
-    analysisStat("Median", formatAnalysisNumber(stats.median)),
-    analysisStat("Worst", formatAnalysisNumber(stats.worst)),
-    analysisStat("Recent form", formatAnalysisNumber(stats.recentMean), recentFormDetail(stats))
+    analysisStat(t("analysis.averageScore"), formatAnalysisNumber(stats.mean)),
+    analysisStat(t("analysis.winRate"), formatAnalysisNumber(winRate, "%"), t("analysis.recordDetail", { wins, losses, ties })),
+    analysisStat(t("analysis.best"), formatAnalysisNumber(stats.best)),
+    analysisStat(t("analysis.median"), formatAnalysisNumber(stats.median)),
+    analysisStat(t("analysis.worst"), formatAnalysisNumber(stats.worst)),
+    analysisStat(t("analysis.last5"), formatAnalysisNumber(stats.recentMean), recentFormDetail(stats))
   ].join("");
   trendWrap.innerHTML = renderTrend(matches, match => match.ourScore);
+  breakdownWrap.innerHTML = renderHeadBreakdown(matches, allMatches);
   correlationWrap.innerHTML = renderCorrelation(matches, headCorrelationOptions, headCorrelationX, headCorrelationY, "head");
-  insightsWrap.innerHTML = `
-    <p class="analysis-helper">Recent form compares your most recent 5 saved records in this range against your average for the selected range.</p>
-    ${renderHeadInsights(matches, allMatches)}
-  `;
 }
 
 function renderSkillsAnalysis(allRuns, runs) {
   const summary = $("[data-analysis-skills-summary]");
   const count = $("[data-analysis-skills-count]");
+  const coachWrap = $("[data-analysis-skills-coach]");
   const statsWrap = $("[data-analysis-skills-stats]");
   const splitWrap = $("[data-analysis-skills-split]");
   const trendWrap = $("[data-analysis-skills-trend]");
   const correlationWrap = $("[data-analysis-skills-correlation]");
   const insightsWrap = $("[data-analysis-skills-insights]");
-  if (!summary || !count || !statsWrap || !splitWrap || !trendWrap || !correlationWrap || !insightsWrap) return;
+  if (!summary || !count || !coachWrap || !statsWrap || !splitWrap || !trendWrap || !correlationWrap || !insightsWrap) return;
 
-  count.textContent = `${runs.length} ${runs.length === 1 ? "run" : "runs"}`;
+  count.textContent = countText("analysis.runs", runs.length);
   if (!allRuns.length) {
-    summary.textContent = "Save Skills runs to unlock Skills analysis.";
-    statsWrap.innerHTML = `<p class="analysis-empty">Save Skills runs to unlock this panel.</p>`;
+    summary.textContent = t("analysis.skills.emptySummary");
+    coachWrap.innerHTML = "";
+    insightsWrap.innerHTML = "";
+    statsWrap.innerHTML = `<p class="analysis-empty">${escapeHtml(t("analysis.skills.emptyPanel"))}</p>`;
     splitWrap.innerHTML = "";
     trendWrap.innerHTML = "";
     correlationWrap.innerHTML = "";
-    insightsWrap.innerHTML = "";
     return;
   }
 
   if (!runs.length) {
-    summary.textContent = "No saved data in this range.";
-    statsWrap.innerHTML = `<p class="analysis-empty">No saved data in this range.</p>`;
+    summary.textContent = t("analysis.noRange");
+    coachWrap.innerHTML = "";
+    insightsWrap.innerHTML = "";
+    statsWrap.innerHTML = `<p class="analysis-empty">${escapeHtml(t("analysis.noRange"))}</p>`;
     splitWrap.innerHTML = "";
     trendWrap.innerHTML = "";
     correlationWrap.innerHTML = "";
-    insightsWrap.innerHTML = "";
     return;
   }
 
@@ -2963,33 +4296,33 @@ function renderSkillsAnalysis(allRuns, runs) {
     ? (bestDriver || 0) + (bestAuton || 0)
     : null;
 
-  summary.textContent = `Averaging ${formatAnalysisNumber(stats.mean)} points across this range.`;
+  summary.textContent = t("analysis.summaryAverage", { score: formatAnalysisNumber(stats.mean) });
+  coachWrap.innerHTML = analysisCoachNote(skillsCoachNote(runs));
+  insightsWrap.innerHTML = skillsCoachCards(runs);
   statsWrap.innerHTML = [
-    analysisStat("Mean score", formatAnalysisNumber(stats.mean)),
-    analysisStat("Best", formatAnalysisNumber(stats.best)),
-    analysisStat("Median", formatAnalysisNumber(stats.median)),
-    analysisStat("Worst", formatAnalysisNumber(stats.worst)),
-    analysisStat("Recent form", formatAnalysisNumber(stats.recentMean), recentFormDetail(stats))
+    analysisStat(t("analysis.averageScore"), formatAnalysisNumber(stats.mean)),
+    analysisStat(t("analysis.best"), formatAnalysisNumber(stats.best)),
+    analysisStat(t("analysis.median"), formatAnalysisNumber(stats.median)),
+    analysisStat(t("analysis.worst"), formatAnalysisNumber(stats.worst)),
+    analysisStat(t("analysis.last5"), formatAnalysisNumber(stats.recentMean), recentFormDetail(stats))
   ].join("");
   splitWrap.innerHTML = `
-    <div class="analysis-trend-head">
-      <span>Skills split</span>
-      <small>Driver plus Autonomous</small>
+    ${analysisSectionTitle(t("analysis.skillsQuestion"), t("analysis.skillsQuestionDetail"))}
+    <div class="analysis-trend-head analysis-subhead">
+      <span>${escapeHtml(t("analysis.skillsSplit"))}</span>
+      <small>${escapeHtml(t("analysis.skillsSplitDetail"))}</small>
     </div>
     <div class="analysis-stats analysis-stats-tight">
-      ${analysisStat("Driver avg", formatAnalysisNumber(average(driverScores)))}
-      ${analysisStat("Auton avg", formatAnalysisNumber(average(autonScores)))}
-      ${analysisStat("Best Driver", formatAnalysisNumber(bestDriver))}
-      ${analysisStat("Best Auton", formatAnalysisNumber(bestAuton))}
-      ${analysisStat("Best combined", formatAnalysisNumber(theoretical))}
+      ${analysisStat(t("analysis.driverAvg"), formatAnalysisNumber(average(driverScores)))}
+      ${analysisStat(t("analysis.autonAvg"), formatAnalysisNumber(average(autonScores)))}
+      ${analysisStat(t("analysis.bestDriver"), formatAnalysisNumber(bestDriver))}
+      ${analysisStat(t("analysis.bestAuton"), formatAnalysisNumber(bestAuton))}
+      ${analysisStat(t("analysis.bestCombined"), formatAnalysisNumber(theoretical))}
     </div>
   `;
   trendWrap.innerHTML = renderTrend(runs, run => run.score);
   correlationWrap.innerHTML = renderCorrelation(runs, skillsCorrelationOptions, skillsCorrelationX, skillsCorrelationY, "skills");
-  insightsWrap.innerHTML = `
-    <p class="analysis-helper">Recent form compares your most recent 5 saved records in this range against your average for the selected range.</p>
-    ${renderSkillsInsights(runs, allRuns)}
-  `;
+  splitWrap.insertAdjacentHTML("beforeend", renderSkillsBreakdown(runs, allRuns));
 }
 
 function renderAnalysis() {
@@ -3004,7 +4337,7 @@ function renderAnalysis() {
 function formatMatchDate(match) {
   if (match.savedDate) return match.savedDate;
   const date = new Date(match.savedAt || Date.now());
-  return date.toLocaleDateString(undefined, {
+  return date.toLocaleDateString(languageLocale(), {
     year: "numeric",
     month: "short",
     day: "numeric"
@@ -3012,16 +4345,16 @@ function formatMatchDate(match) {
 }
 
 function formatMatchTime(match) {
-  if (!match.savedAt) return "Saved match";
-  return new Date(match.savedAt).toLocaleTimeString(undefined, {
+  if (!match.savedAt) return t("history.savedMatch");
+  return new Date(match.savedAt).toLocaleTimeString(languageLocale(), {
     hour: "numeric",
     minute: "2-digit"
   });
 }
 
 function matchResultLabel(match) {
-  if (["win", "loss", "tie"].includes(match.result)) return match.result;
-  return "saved";
+  if (["win", "loss", "tie"].includes(match.result)) return t(`history.result.${match.result}`);
+  return t("history.result.saved");
 }
 
 function scoreForSummary(match) {
@@ -3033,7 +4366,7 @@ function scoreForSummary(match) {
 
 function detailValue(value) {
   const text = String(value || "").trim();
-  return text || "Not entered";
+  return text || t("common.notEntered");
 }
 
 function hasDetail(...values) {
@@ -3140,34 +4473,34 @@ function renderSkillsHistoryField(run) {
 
 function renderMatchDetails(match) {
   const details = match.details || {};
-  const alliance = match.teamAlliance ? match.teamAlliance.toUpperCase() : "Not saved";
+  const alliance = match.teamAlliance ? t(`color.${match.teamAlliance}`) : t("common.notSaved");
   return `
     <div class="detail-grid">
       <div class="detail-box">
-        <span>Team</span>
-        <strong>${escapeHtml(match.teamNumber || "Not saved")}</strong>
+        <span>${escapeHtml(t("history.team"))}</span>
+        <strong>${escapeHtml(match.teamNumber || t("common.notSaved"))}</strong>
       </div>
       <div class="detail-box">
-        <span>Alliance</span>
+        <span>${escapeHtml(t("history.alliance"))}</span>
         <strong>${escapeHtml(alliance)}</strong>
       </div>
       <div class="detail-box">
-        <span>Our score</span>
+        <span>${escapeHtml(t("history.ourScore"))}</span>
         <strong>${escapeHtml(match.ourScore ?? match.redScore ?? 0)}</strong>
       </div>
       <div class="detail-box">
-        <span>Opponent score</span>
+        <span>${escapeHtml(t("history.opponentScore"))}</span>
         <strong>${escapeHtml(match.opponentScore ?? match.blueScore ?? 0)}</strong>
       </div>
-      ${optionalDetailBox("Partner", details.partnerTeam, details.partnerNotes)}
-      ${optionalDetailBox("Opponent 1", details.opponentOne, details.opponentOneNotes)}
-      ${optionalDetailBox("Opponent 2", details.opponentTwo, details.opponentTwoNotes)}
+      ${optionalDetailBox(t("history.partner"), details.partnerTeam, details.partnerNotes)}
+      ${optionalDetailBox(t("history.opponentOne"), details.opponentOne, details.opponentOneNotes)}
+      ${optionalDetailBox(t("history.opponentTwo"), details.opponentTwo, details.opponentTwoNotes)}
       ${isDevMode ? `
         <div class="detail-box wide">
-          <span>Dev tools</span>
+          <span>${escapeHtml(t("dev.tools"))}</span>
           <div class="history-dev-actions">
-            <button class="dev-button" type="button" data-dev-edit-match="${escapeHtml(match.id)}">Edit JSON</button>
-            <button class="dev-button danger" type="button" data-dev-delete-match="${escapeHtml(match.id)}">Delete Match</button>
+            <button class="dev-button" type="button" data-dev-edit-match="${escapeHtml(match.id)}">${escapeHtml(t("dev.editJson"))}</button>
+            <button class="dev-button danger" type="button" data-dev-delete-match="${escapeHtml(match.id)}">${escapeHtml(t("history.deleteMatch"))}</button>
           </div>
         </div>
       ` : ""}
@@ -3177,6 +4510,7 @@ function renderMatchDetails(match) {
 }
 
 function renderHistoryCard(match) {
+  const resultKey = ["win", "loss", "tie"].includes(match.result) ? match.result : "saved";
   const result = matchResultLabel(match);
   const score = scoreForSummary(match);
   const open = expandedMatchId === match.id;
@@ -3192,10 +4526,10 @@ function renderHistoryCard(match) {
           <span class="history-score">
             <strong>${escapeHtml(score.left)}</strong><span>-</span><strong>${escapeHtml(score.right)}</strong>
           </span>
-          <span class="result-pill ${escapeHtml(result)}">${escapeHtml(result)}</span>
+          <span class="result-pill ${escapeHtml(resultKey)}">${escapeHtml(result)}</span>
         </button>
         <button class="history-delete ${confirmingDelete ? "confirming" : ""}" type="button" data-delete-match="${escapeHtml(match.id)}">
-          ${confirmingDelete ? "Confirm Delete" : "Delete Match"}
+          ${confirmingDelete ? escapeHtml(t("history.confirmDelete")) : escapeHtml(t("history.deleteMatch"))}
         </button>
       </div>
       <div class="history-detail">
@@ -3206,9 +4540,9 @@ function renderHistoryCard(match) {
 }
 
 function skillsTypeLabel(type) {
-  if (type === "driver") return "Driver";
-  if (type === "autonomous") return "Autonomous";
-  return "Skills";
+  if (type === "driver") return t("skills.driver");
+  if (type === "autonomous") return t("skills.autonomous");
+  return t("tabs.skills");
 }
 
 function renderSkillsRunDetails(run) {
@@ -3216,20 +4550,20 @@ function renderSkillsRunDetails(run) {
   return `
     <div class="detail-grid">
       <div class="detail-box compact">
-        <span>Team</span>
-        <strong>${escapeHtml(run.teamNumber || "Not saved")}</strong>
+        <span>${escapeHtml(t("history.team"))}</span>
+        <strong>${escapeHtml(run.teamNumber || t("common.notSaved"))}</strong>
       </div>
       <div class="detail-box compact">
-        <span>Run type</span>
+        <span>${escapeHtml(t("history.runType"))}</span>
         <strong>${escapeHtml(skillsTypeLabel(run.skillsType))}</strong>
       </div>
       <div class="detail-box compact">
-        <span>Score</span>
+        <span>${escapeHtml(t("skills.score"))}</span>
         <strong>${escapeHtml(run.score ?? 0)}</strong>
       </div>
       ${notes ? `
         <div class="detail-box wide">
-          <span>Notes</span>
+          <span>${escapeHtml(t("history.notes"))}</span>
           <p>${escapeHtml(notes)}</p>
         </div>
       ` : ""}
@@ -3270,7 +4604,7 @@ function renderHistory() {
 
   const matches = sortedHeadMatches();
   if (!matches.length) {
-    list.innerHTML = `<p class="history-empty">Saved matches will appear here after you score and save one.</p>`;
+    list.innerHTML = `<p class="history-empty">${escapeHtml(t("history.matchEmpty"))}</p>`;
     more.hidden = true;
     return;
   }
@@ -3278,7 +4612,7 @@ function renderHistory() {
   const visible = showAllHistory ? matches : matches.slice(0, HISTORY_INITIAL_LIMIT);
   list.innerHTML = visible.map(renderHistoryCard).join("");
   more.hidden = matches.length <= HISTORY_INITIAL_LIMIT;
-  more.textContent = showAllHistory ? "Show Less" : "Show More";
+  more.textContent = showAllHistory ? t("history.showLess") : t("history.showMore");
 }
 
 function renderSkillsHistory() {
@@ -3288,7 +4622,7 @@ function renderSkillsHistory() {
 
   const runs = sortedSkillsRuns();
   if (!runs.length) {
-    list.innerHTML = `<p class="history-empty">Saved Skills runs will appear here after you score and save one.</p>`;
+    list.innerHTML = `<p class="history-empty">${escapeHtml(t("history.skillsEmpty"))}</p>`;
     more.hidden = true;
     return;
   }
@@ -3296,7 +4630,7 @@ function renderSkillsHistory() {
   const visible = showAllSkillsHistory ? runs : runs.slice(0, HISTORY_INITIAL_LIMIT);
   list.innerHTML = visible.map(renderSkillsRunCard).join("");
   more.hidden = runs.length <= HISTORY_INITIAL_LIMIT;
-  more.textContent = showAllSkillsHistory ? "Show Less" : "Show More";
+  more.textContent = showAllSkillsHistory ? t("history.showLess") : t("history.showMore");
 }
 
 function deleteMatch(id) {
@@ -3308,7 +4642,7 @@ function deleteMatch(id) {
   renderHistory();
   renderSkillsHistory();
   renderAnalysis();
-  showToast("Match deleted.");
+  showToast(t("toast.matchDeleted"));
 }
 
 function requestDeleteMatch(id) {
@@ -3318,7 +4652,7 @@ function requestDeleteMatch(id) {
   }
   pendingDeleteMatchId = id;
   renderHistory();
-  showToast("Press Confirm Delete to remove this match.");
+  showToast(t("toast.confirmDelete"));
 }
 
 function clearMatches() {
@@ -3330,7 +4664,7 @@ function clearMatches() {
   renderHistory();
   renderSkillsHistory();
   renderAnalysis();
-  showToast("Saved matches cleared.");
+  showToast(t("toast.matchesCleared"));
 }
 
 function wipeAllData() {
@@ -3348,7 +4682,7 @@ function wipeAllData() {
   renderAnalysis();
   renderImportedCompetition();
   openSetupModal();
-  showToast("Local app data wiped.");
+  showToast(t("toast.localWiped"));
 }
 
 function openDevEditor(id) {
@@ -3378,12 +4712,12 @@ function saveDevEdit() {
   try {
     edited = JSON.parse(form.elements.matchJson.value);
   } catch {
-    showToast("Invalid JSON. Match was not changed.");
+    showToast(t("toast.invalidJson"));
     return;
   }
 
   if (!edited || typeof edited !== "object" || !edited.id) {
-    showToast("Edited match needs an id.");
+    showToast(t("toast.editNeedsId"));
     return;
   }
 
@@ -3398,7 +4732,7 @@ function saveDevEdit() {
   renderHistory();
   renderSkillsHistory();
   renderAnalysis();
-  showToast("Match updated.");
+  showToast(t("toast.matchUpdated"));
 }
 
 function resetScorer() {
@@ -3514,7 +4848,7 @@ document.addEventListener("click", (event) => {
   if (regionOption) {
     selectCompetitionRegion(regionOption.dataset.regionOption, regionOption.querySelector("strong")?.textContent || "");
     searchCompetitions(competitionFilterValues().query).catch((error) => {
-      setCompetitionStatus(error.message || "Competition data could not load. Try again later.", "warn");
+      setCompetitionStatus(error.message || t("scouting.dataError"), "warn");
     });
     return;
   }
@@ -3546,8 +4880,8 @@ document.addEventListener("click", (event) => {
       importButton.disabled = false;
     }).catch((error) => {
       importButton.disabled = false;
-      setCompetitionStatus(error.message || "Competition data could not load. Try again later.", "warn");
-      showToast("Competition data could not load. Try again later.");
+      setCompetitionStatus(error.message || t("scouting.dataError"), "warn");
+      showToast(t("scouting.dataError"));
     });
     return;
   }
@@ -3588,17 +4922,20 @@ $("[data-setup-form]")?.addEventListener("submit", async (event) => {
   event.preventDefault();
   const value = String(new FormData(event.currentTarget).get("teamNumber") || "").trim();
   if (!value) {
-    showToast("Enter your team number first.");
+    showToast(t("toast.enterTeam"));
     return;
   }
   clearSetupConfirmation();
   const submit = $("[data-setup-submit]");
   if (submit) {
     submit.disabled = true;
-    submit.textContent = "Checking...";
+    submit.textContent = t("setup.checking");
   }
   const match = await findTeamIdentity(value);
-  if (submit) submit.disabled = false;
+  if (submit) {
+    submit.disabled = false;
+    submit.textContent = t("setup.checkTeam");
+  }
   if (match?.teamName) {
     renderSetupConfirmation(match);
     return;
@@ -3633,8 +4970,8 @@ $("[data-competition-search-form]")?.addEventListener("submit", (event) => {
   event.preventDefault();
   const query = String(new FormData(event.currentTarget).get("competitionSearch") || "").trim();
   searchCompetitions(query).catch((error) => {
-    setCompetitionStatus(error.message || "Competition data could not load. Try again later.", "warn");
-    showToast("Competition data could not load. Try again later.");
+    setCompetitionStatus(error.message || t("scouting.dataError"), "warn");
+    showToast(t("scouting.dataError"));
   });
 });
 
@@ -3664,7 +5001,7 @@ $("[data-competition-region-input]")?.addEventListener("keydown", (event) => {
     event.preventDefault();
     commitRegionInput();
     searchCompetitions(competitionFilterValues().query).catch((error) => {
-      setCompetitionStatus(error.message || "Competition data could not load. Try again later.", "warn");
+      setCompetitionStatus(error.message || t("scouting.dataError"), "warn");
     });
   } else if (event.key === "Escape") {
     renderRegionOptions(false);
@@ -3673,8 +5010,8 @@ $("[data-competition-region-input]")?.addEventListener("keydown", (event) => {
 
 $("[data-competition-search-form] input[name='competitionSearch']")?.addEventListener("input", (event) => {
   const value = String(event.currentTarget.value || "").trim();
-  searchCompetitions(value).catch((error) => {
-    setCompetitionStatus(error.message || "Competition data could not load. Try again later.", "warn");
+    searchCompetitions(value).catch((error) => {
+    setCompetitionStatus(error.message || t("scouting.dataError"), "warn");
   });
 });
 
@@ -3683,7 +5020,7 @@ $$("[data-competition-filter]").forEach((button) => {
     competitionQuickFilter = button.dataset.competitionFilter || "all";
     renderCompetitionFilters();
     searchCompetitions(competitionFilterValues().query).catch((error) => {
-      setCompetitionStatus(error.message || "Competition data could not load. Try again later.", "warn");
+      setCompetitionStatus(error.message || t("scouting.dataError"), "warn");
     });
   });
 });
@@ -3706,6 +5043,12 @@ $("[data-analysis-start]")?.addEventListener("change", renderAnalysis);
 $("[data-analysis-end]")?.addEventListener("change", renderAnalysis);
 
 document.addEventListener("change", (event) => {
+  const languageSelect = event.target.closest("[data-language-select]");
+  if (languageSelect) {
+    setLanguage(languageSelect.value);
+    return;
+  }
+
   const select = event.target.closest("[data-correlation-axis]");
   if (!select) return;
   const [mode, axis] = select.dataset.correlationAxis.split(":");
@@ -3720,12 +5063,12 @@ $("[data-team-skills-search-form]")?.addEventListener("submit", (event) => {
   event.preventDefault();
   const query = String(new FormData(event.currentTarget).get("teamSkillsSearch") || "").trim();
   if (query.length < 2) {
-    setTeamSkillsStatus("Type at least 2 characters to search teams.", "warn");
+    setTeamSkillsStatus(t("scouting.typeTwo"), "warn");
     return;
   }
   searchTeamSkills(query).catch((error) => {
-    setTeamSkillsStatus(error.message || "Team Skills data could not load. Try again later.", "warn");
-    showToast("Team Skills data could not load. Try again later.");
+    setTeamSkillsStatus(error.message || t("scouting.skillsError"), "warn");
+    showToast(t("scouting.skillsError"));
   });
 });
 
@@ -3741,6 +5084,7 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+applyI18n();
 buildCounters();
 renderMode();
 render();
