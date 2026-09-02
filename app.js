@@ -454,7 +454,27 @@ const translations = {
     "analysis.zoneOption.OurPins": "Our pins in {quadrant}",
     "analysis.zoneOption.OpponentPins": "Opponent pins in {quadrant}",
     "analysis.zoneOption.OwnedYellow": "Owned yellow pins in {quadrant}",
-    "analysis.zoneOption.Pins": "{quadrant} zone pins"
+    "analysis.zoneOption.Pins": "{quadrant} zone pins",
+    "analysis.headWorkingRecent": "Your last {count} matches are running {delta} points above this range.",
+    "analysis.headWorkingWinRate": "You are winning {rate} of matches in this range.",
+    "analysis.headWorkingBaseline": "Your current baseline is {average} points. That is the number to push up.",
+    "analysis.headCostingYellows": "Yellow ownership is the biggest visible leak: {scored} of {placed} yellows counted.",
+    "analysis.headCostingAuton": "Autonomous is not reliable yet: {rate} won in this range.",
+    "analysis.headCostingMissed": "Missed-point estimate averages {missed} points per match.",
+    "analysis.headFocusCenter": "Prioritize ending with midfield control more often; it connects directly to robot points and center yellows.",
+    "analysis.headFocusYellows": "Clean up toggle ownership before placing extra yellow pins.",
+    "analysis.headFocusBlueprint": "Keep building around your best-match pattern and raise the floor on rough rounds.",
+    "analysis.headNoteUp": "Your recent matches are trending up by {delta} points against this range average. Keep the gains, then hunt the {missed} estimated missed points.",
+    "analysis.headNoteDown": "Your last {count} matches are below the range average. Start with the repeatable points: auton, center control, and yellows that actually count.",
+    "analysis.headNoteSteady": "Your performance is steady around {average} points. The fastest improvement is turning missed yellow/control points into guaranteed points.",
+    "analysis.skillsWorkingRecent": "Your last {count} Skills runs are {delta} points above this range.",
+    "analysis.skillsWorkingCombined": "Best combined is {combined}: Driver {driver} plus Autonomous {auton}.",
+    "analysis.skillsCostingYellows": "{missed} of {placed} yellow pins did not score because the needed ownership condition was missing.",
+    "analysis.skillsCostingNoYellows": "Save runs with yellow pins and toggle states to find the main scoring leak.",
+    "analysis.skillsFocusAuton": "Use Driver as the stable base, then raise Autonomous until the combined score jumps.",
+    "analysis.skillsFocusDriver": "Autonomous is carrying well; now make Driver runs more repeatable.",
+    "analysis.skillsNoteSplit": "Your Skills average is {average}. Driver is averaging {driver} and Autonomous is averaging {auton}, so the next gain is whichever route is less repeatable.",
+    "analysis.skillsNoteOneType": "Your Skills average is {average}. Save both Driver and Autonomous runs to see the real combined ceiling."
   },
   es: {},
   "zh-CN": {}
@@ -822,7 +842,27 @@ Object.assign(translations.es, {
   "analysis.zoneOption.OurPins": "Nuestros pines en {quadrant}",
   "analysis.zoneOption.OpponentPins": "Pines rivales en {quadrant}",
   "analysis.zoneOption.OwnedYellow": "Amarillos poseídos en {quadrant}",
-  "analysis.zoneOption.Pins": "Pines en {quadrant}"
+  "analysis.zoneOption.Pins": "Pines en {quadrant}",
+  "analysis.headWorkingRecent": "Tus últimos {count} partidos están {delta} puntos por encima de este rango.",
+  "analysis.headWorkingWinRate": "Estás ganando el {rate} de los partidos en este rango.",
+  "analysis.headWorkingBaseline": "Tu base actual es {average} puntos. Ese es el número que hay que subir.",
+  "analysis.headCostingYellows": "La posesión de amarillos es la fuga más visible: {scored} de {placed} amarillos contaron.",
+  "analysis.headCostingAuton": "El autónomo aún no es confiable: {rate} ganado en este rango.",
+  "analysis.headCostingMissed": "La estimación de puntos perdidos promedia {missed} por partido.",
+  "analysis.headFocusCenter": "Prioriza terminar con más control de midfield; conecta directamente con puntos de robots y amarillos centrales.",
+  "analysis.headFocusYellows": "Asegura la posesión de toggles antes de colocar más pines amarillos.",
+  "analysis.headFocusBlueprint": "Sigue construyendo sobre el patrón de tus mejores partidos y sube el piso en rondas difíciles.",
+  "analysis.headNoteUp": "Tus partidos recientes suben {delta} puntos sobre el promedio de este rango. Mantén esa mejora y busca los {missed} puntos estimados perdidos.",
+  "analysis.headNoteDown": "Tus últimos {count} partidos están por debajo del promedio del rango. Empieza por puntos repetibles: autónomo, control central y amarillos que sí cuentan.",
+  "analysis.headNoteSteady": "Tu rendimiento está estable alrededor de {average} puntos. La mejora más rápida es convertir amarillos/control perdidos en puntos seguros.",
+  "analysis.skillsWorkingRecent": "Tus últimos {count} intentos de Skills están {delta} puntos por encima de este rango.",
+  "analysis.skillsWorkingCombined": "Mejor combinado: {combined}; Driver {driver} más Autónomo {auton}.",
+  "analysis.skillsCostingYellows": "{missed} de {placed} pines amarillos no puntuaron porque faltaba la condición de posesión.",
+  "analysis.skillsCostingNoYellows": "Guarda intentos con amarillos y toggles para encontrar la fuga principal.",
+  "analysis.skillsFocusAuton": "Usa Driver como base estable y sube Autónomo hasta que salte el combinado.",
+  "analysis.skillsFocusDriver": "Autónomo está fuerte; ahora haz que Driver sea más repetible.",
+  "analysis.skillsNoteSplit": "Tu promedio de Skills es {average}. Driver promedia {driver} y Autónomo {auton}; la próxima mejora está en la ruta menos repetible.",
+  "analysis.skillsNoteOneType": "Tu promedio de Skills es {average}. Guarda intentos Driver y Autónomo para ver el techo combinado real."
 });
 Object.assign(translations["zh-CN"], {
   "aria.appOverview": "应用概览",
@@ -1187,7 +1227,27 @@ Object.assign(translations["zh-CN"], {
   "analysis.zoneOption.OurPins": "我方在{quadrant}的桩",
   "analysis.zoneOption.OpponentPins": "对手在{quadrant}的桩",
   "analysis.zoneOption.OwnedYellow": "{quadrant}拥有黄桩",
-  "analysis.zoneOption.Pins": "{quadrant}区域桩数"
+  "analysis.zoneOption.Pins": "{quadrant}区域桩数",
+  "analysis.headWorkingRecent": "最近 {count} 场比赛比此范围高 {delta} 分。",
+  "analysis.headWorkingWinRate": "此范围内你的胜率是 {rate}。",
+  "analysis.headWorkingBaseline": "当前基准是 {average} 分。下一步就是把它推高。",
+  "analysis.headCostingYellows": "黄桩拥有是最明显的丢分点：{placed} 个黄桩中 {scored} 个计分。",
+  "analysis.headCostingAuton": "自动还不够稳定：此范围自动胜率 {rate}。",
+  "analysis.headCostingMissed": "估算每场平均错失 {missed} 分。",
+  "analysis.headFocusCenter": "优先提高 midfield 控制结束率；它直接影响机器人分和中心黄桩。",
+  "analysis.headFocusYellows": "放更多黄桩前，先把切换拥有权做稳。",
+  "analysis.headFocusBlueprint": "继续围绕最佳比赛模式训练，同时提高失误场次的下限。",
+  "analysis.headNoteUp": "最近比赛比此范围平均高 {delta} 分。保持提升，然后追掉那 {missed} 分估算错失点。",
+  "analysis.headNoteDown": "最近 {count} 场低于范围平均。先抓稳定分：自动、中心控制、真正计分的黄桩。",
+  "analysis.headNoteSteady": "表现稳定在 {average} 分左右。最快提升是把黄桩/控制失误变成稳定得分。",
+  "analysis.skillsWorkingRecent": "最近 {count} 次技能赛比此范围高 {delta} 分。",
+  "analysis.skillsWorkingCombined": "最佳合计 {combined}：驾驶 {driver} 加自动 {auton}。",
+  "analysis.skillsCostingYellows": "{placed} 个黄桩中 {missed} 个因为缺少拥有条件没有得分。",
+  "analysis.skillsCostingNoYellows": "保存带黄桩和切换状态的尝试，才能找到主要丢分点。",
+  "analysis.skillsFocusAuton": "把驾驶作为稳定基础，再提升自动直到合计分跳升。",
+  "analysis.skillsFocusDriver": "自动表现不错；现在让驾驶更可重复。",
+  "analysis.skillsNoteSplit": "技能赛平均 {average}。驾驶平均 {driver}，自动平均 {auton}；下一步提升在较不稳定的路线。",
+  "analysis.skillsNoteOneType": "技能赛平均 {average}。保存驾驶和自动尝试，才能看到真实合计上限。"
 });
 let currentLanguage = readLanguage();
 const initialProxyParam = new URLSearchParams(window.location.search).get("proxy");
@@ -4030,22 +4090,22 @@ function headCoachCards(matches) {
   const recentDelta = Number.isFinite(stats.recentMean) && Number.isFinite(stats.mean) ? stats.recentMean - stats.mean : null;
 
   const working = Number.isFinite(recentDelta) && recentDelta >= 3
-    ? `Your last ${stats.recentCount} matches are running ${formatAnalysisNumber(recentDelta)} points above this range.`
+    ? t("analysis.headWorkingRecent", { count: stats.recentCount, delta: formatAnalysisNumber(recentDelta) })
     : Number.isFinite(winRate) && winRate >= 60
-      ? `You are winning ${formatAnalysisNumber(winRate, "%")} of matches in this range.`
-      : `Your current baseline is ${formatAnalysisNumber(stats.mean)} points. That is the number to push up.`;
+      ? t("analysis.headWorkingWinRate", { rate: formatAnalysisNumber(winRate, "%") })
+      : t("analysis.headWorkingBaseline", { average: formatAnalysisNumber(stats.mean) });
 
   const costing = Number.isFinite(yellowRate) && yellowRate < 70
-    ? `Yellow ownership is the biggest visible leak: ${yellowScored} of ${yellowPlaced} yellows counted.`
+    ? t("analysis.headCostingYellows", { scored: yellowScored, placed: yellowPlaced })
     : Number.isFinite(autonWinRate) && autonWinRate < 45
-      ? `Autonomous is not reliable yet: ${formatAnalysisNumber(autonWinRate, "%")} won in this range.`
-      : `Missed-point estimate averages ${formatAnalysisNumber(missedAverage)} points per match.`;
+      ? t("analysis.headCostingAuton", { rate: formatAnalysisNumber(autonWinRate, "%") })
+      : t("analysis.headCostingMissed", { missed: formatAnalysisNumber(missedAverage) });
 
   const focus = Number.isFinite(centerRate) && centerRate < 55
-    ? "Prioritize ending with midfield control more often; it connects directly to robot points and center yellows."
+    ? t("analysis.headFocusCenter")
     : Number.isFinite(yellowRate) && yellowRate < 85
-      ? "Clean up toggle ownership before placing extra yellow pins."
-      : "Keep building around your best-match pattern and raise the floor on rough rounds.";
+      ? t("analysis.headFocusYellows")
+      : t("analysis.headFocusBlueprint");
 
   return [
     analysisInsightCard(t("analysis.working"), working, Number.isFinite(recentDelta) ? `${recentDelta >= 0 ? "+" : ""}${formatAnalysisNumber(recentDelta)}` : `${formatAnalysisNumber(winRate, "%")}`, "analysis-coach-card"),
@@ -4059,12 +4119,12 @@ function headCoachNote(matches) {
   const missedAverage = resultAverage(matches, match => missedHeadPoints(match).total);
   const delta = Number.isFinite(stats.recentMean) && Number.isFinite(stats.mean) ? stats.recentMean - stats.mean : null;
   if (Number.isFinite(delta) && delta > 2) {
-    return `Your recent matches are trending up by ${formatAnalysisNumber(delta)} points against this range average. Keep the gains, then hunt the ${formatAnalysisNumber(missedAverage)} estimated missed points.`;
+    return t("analysis.headNoteUp", { delta: formatAnalysisNumber(delta), missed: formatAnalysisNumber(missedAverage) });
   }
   if (Number.isFinite(delta) && delta < -2) {
-    return `Your last ${stats.recentCount} matches are below the range average. Start with the repeatable points: auton, center control, and yellows that actually count.`;
+    return t("analysis.headNoteDown", { count: stats.recentCount });
   }
-  return `Your performance is steady around ${formatAnalysisNumber(stats.mean)} points. The fastest improvement is turning missed yellow/control points into guaranteed points.`;
+  return t("analysis.headNoteSteady", { average: formatAnalysisNumber(stats.mean) });
 }
 
 function renderHeadBreakdown(matches, allMatches) {
@@ -4094,14 +4154,18 @@ function skillsCoachCards(runs) {
   const recentDelta = Number.isFinite(stats.recentMean) && Number.isFinite(stats.mean) ? stats.recentMean - stats.mean : null;
 
   const working = Number.isFinite(recentDelta) && recentDelta >= 3
-    ? `Your last ${stats.recentCount} Skills runs are ${formatAnalysisNumber(recentDelta)} points above this range.`
-    : `Best combined is ${formatAnalysisNumber((bestDriver || 0) + (bestAuton || 0))}: Driver ${formatAnalysisNumber(bestDriver)} plus Autonomous ${formatAnalysisNumber(bestAuton)}.`;
+    ? t("analysis.skillsWorkingRecent", { count: stats.recentCount, delta: formatAnalysisNumber(recentDelta) })
+    : t("analysis.skillsWorkingCombined", {
+      combined: formatAnalysisNumber((bestDriver || 0) + (bestAuton || 0)),
+      driver: formatAnalysisNumber(bestDriver),
+      auton: formatAnalysisNumber(bestAuton)
+    });
   const costing = placed
-    ? `${missed} of ${placed} yellow pins did not score because the needed ownership condition was missing.`
-    : "Save runs with yellow pins and toggle states to find the main scoring leak.";
+    ? t("analysis.skillsCostingYellows", { missed, placed })
+    : t("analysis.skillsCostingNoYellows");
   const focus = average(driverScores) >= average(autonScores)
-    ? "Use Driver as the stable base, then raise Autonomous until the combined score jumps."
-    : "Autonomous is carrying well; now make Driver runs more repeatable.";
+    ? t("analysis.skillsFocusAuton")
+    : t("analysis.skillsFocusDriver");
 
   return [
     analysisInsightCard(t("analysis.working"), working, Number.isFinite(recentDelta) ? `${recentDelta >= 0 ? "+" : ""}${formatAnalysisNumber(recentDelta)}` : t("analysis.routeBase"), "analysis-coach-card"),
@@ -4115,9 +4179,13 @@ function skillsCoachNote(runs) {
   const driverAverage = resultAverage(runs.filter(run => run.skillsType === "driver"), run => run.score);
   const autonAverage = resultAverage(runs.filter(run => run.skillsType === "autonomous"), run => run.score);
   if (Number.isFinite(driverAverage) && Number.isFinite(autonAverage)) {
-    return `Your Skills average is ${formatAnalysisNumber(stats.mean)}. Driver is averaging ${formatAnalysisNumber(driverAverage)} and Autonomous is averaging ${formatAnalysisNumber(autonAverage)}, so the next gain is whichever route is less repeatable.`;
+    return t("analysis.skillsNoteSplit", {
+      average: formatAnalysisNumber(stats.mean),
+      driver: formatAnalysisNumber(driverAverage),
+      auton: formatAnalysisNumber(autonAverage)
+    });
   }
-  return `Your Skills average is ${formatAnalysisNumber(stats.mean)}. Save both Driver and Autonomous runs to see the real combined ceiling.`;
+  return t("analysis.skillsNoteOneType", { average: formatAnalysisNumber(stats.mean) });
 }
 
 function renderSkillsBreakdown(runs, allRuns) {
