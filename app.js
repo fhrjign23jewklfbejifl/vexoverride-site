@@ -4844,11 +4844,13 @@ function sparklineSvg(records, scoreGetter) {
   const averageLine = average(points);
   const recentStart = Math.max(0, points.length - 5);
   const step = points.length === 1 ? 0 : (width - padX * 2) / (points.length - 1);
-  const coordinates = points.map((score, index) => {
+  const coordinatePairs = points.map((score, index) => {
     const x = padX + index * step;
     const y = height - padY - ((score - min) / range) * (height - padY * 2);
-    return `${x.toFixed(1)},${y.toFixed(1)}`;
-  }).join(" ");
+    return { x, y, text: `${x.toFixed(1)},${y.toFixed(1)}` };
+  });
+  const coordinates = coordinatePairs.map(point => point.text).join(" ");
+  const recentCoordinates = coordinatePairs.slice(recentStart).map(point => point.text).join(" ");
   const averageY = height - padY - ((averageLine - min) / range) * (height - padY * 2);
 
   const dots = points.map((score, index) => {
@@ -4873,6 +4875,7 @@ function sparklineSvg(records, scoreGetter) {
         <line class="analysis-grid-line" x1="${padX}" y1="${height - padY}" x2="${width - padX}" y2="${height - padY}" />
         <line class="analysis-average-line" x1="${padX}" y1="${averageY.toFixed(1)}" x2="${width - padX}" y2="${averageY.toFixed(1)}" />
         <polyline class="analysis-story-line" points="${coordinates}" />
+        ${recentCoordinates.includes(" ") ? `<polyline class="analysis-recent-line" points="${recentCoordinates}" />` : ""}
         ${dots}
       </svg>
       <div class="analysis-chart-labels">
@@ -4885,12 +4888,21 @@ function sparklineSvg(records, scoreGetter) {
 }
 
 function renderTrend(records, scoreGetter) {
+  const isSkills = records.some(record => record.mode === "skills");
   return `
-    <div class="analysis-trend-head">
-      <span>${escapeHtml(t("analysis.trendTitle"))}</span>
-      <small>${escapeHtml(t(records.some(record => record.mode === "skills") ? "analysis.trendDetail.run" : "analysis.trendDetail.match"))}</small>
-    </div>
-    ${sparklineSvg(records, scoreGetter)}
+    <section class="analysis-timeline-stage">
+      <div class="analysis-trend-head">
+        <span>${escapeHtml(t("analysis.story.progressStory"))}</span>
+        <small>${escapeHtml(t(isSkills ? "analysis.trendDetail.run" : "analysis.trendDetail.match"))}</small>
+      </div>
+      ${sparklineSvg(records, scoreGetter)}
+      <div class="analysis-chart-legend" aria-hidden="true">
+        ${isSkills
+          ? `<span class="driver">${escapeHtml(t("skills.driver"))}</span><span class="autonomous">${escapeHtml(t("skills.autonomous"))}</span>`
+          : `<span class="win">${escapeHtml(t("history.result.win"))}</span><span class="loss">${escapeHtml(t("history.result.loss"))}</span><span class="tie">${escapeHtml(t("history.result.tie"))}</span>`}
+        <span class="recent">${escapeHtml(t("analysis.story.recentFive"))}</span>
+      </div>
+    </section>
   `;
 }
 

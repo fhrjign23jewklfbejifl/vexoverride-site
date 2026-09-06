@@ -238,7 +238,8 @@ button {
 
 .analysis-panel {
   display: grid;
-  gap: 14px;
+  gap: 18px;
+  animation: analysis-stage-rise .42s ease-out both;
 }
 
 .analysis-head,
@@ -370,8 +371,25 @@ button {
 
 .analysis-card {
   display: grid;
-  gap: 22px;
+  gap: 24px;
   padding: 22px;
+  position: relative;
+  overflow: hidden;
+}
+
+.analysis-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(132, 241, 94, .11), transparent 30%),
+    linear-gradient(180deg, rgba(102, 217, 208, .05), transparent 260px);
+  pointer-events: none;
+}
+
+.analysis-card > * {
+  position: relative;
+  z-index: 1;
 }
 
 .analysis-card-head {
@@ -384,7 +402,7 @@ button {
 .analysis-card-head h3 {
   margin: 0 0 4px;
   color: var(--white);
-  font-size: 24px;
+  font-size: 22px;
   line-height: 1;
 }
 
@@ -511,6 +529,7 @@ button {
     rgba(6, 16, 20, .72);
   box-shadow: 0 18px 38px rgba(0, 0, 0, .24), 0 0 32px rgba(102, 217, 208, .09);
   overflow: hidden;
+  animation: analysis-card-enter .52s ease-out .1s both;
 }
 
 .analysis-story-hero::before {
@@ -596,6 +615,15 @@ button {
     linear-gradient(145deg, rgba(102, 217, 208, .08), rgba(255, 255, 255, .028)),
     rgba(255, 255, 255, .045);
   overflow: hidden;
+  animation: analysis-card-enter .44s ease-out both;
+}
+
+.analysis-phase-card:nth-child(2) {
+  animation-delay: .05s;
+}
+
+.analysis-phase-card:nth-child(3) {
+  animation-delay: .1s;
 }
 
 .analysis-phase-card::before {
@@ -668,6 +696,7 @@ button {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 8px;
+  animation: analysis-card-enter .44s ease-out .16s both;
 }
 
 .analysis-number-strip .analysis-stat {
@@ -760,6 +789,34 @@ button {
   align-items: center;
 }
 
+.analysis-timeline-stage .analysis-trend-head span {
+  color: var(--white);
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.analysis-timeline-stage .analysis-trend-head small {
+  max-width: 520px;
+  font-size: 13px;
+  line-height: 1.35;
+  text-align: right;
+}
+
+.analysis-timeline-stage {
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+  border: 1px solid rgba(102, 217, 208, .20);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 72% 16%, rgba(132, 241, 94, .18), transparent 30%),
+    radial-gradient(circle at 16% 86%, rgba(255, 111, 125, .10), transparent 28%),
+    linear-gradient(145deg, rgba(102, 217, 208, .10), rgba(255, 255, 255, .035)),
+    rgba(5, 14, 19, .66);
+  box-shadow: 0 22px 52px rgba(0, 0, 0, .24), inset 0 0 80px rgba(102, 217, 208, .035);
+  animation: analysis-card-enter .5s ease-out both;
+}
+
 .analysis-subhead {
   margin-top: 2px;
 }
@@ -801,7 +858,7 @@ button {
 .analysis-story-chart {
   display: grid;
   gap: 10px;
-  padding: 16px;
+  padding: 18px;
   border: 1px solid rgba(102, 217, 208, .16);
   border-radius: var(--radius-lg);
   background:
@@ -837,6 +894,19 @@ button {
   animation: analysis-line-draw .9s ease-out forwards;
 }
 
+.analysis-story-svg .analysis-recent-line {
+  fill: none;
+  stroke: #84f15e;
+  stroke-width: 7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: .82;
+  filter: drop-shadow(0 0 10px rgba(132, 241, 94, .38));
+  stroke-dasharray: 520;
+  stroke-dashoffset: 520;
+  animation: analysis-line-draw .72s ease-out .36s forwards;
+}
+
 .analysis-story-dot {
   stroke: #102028;
   stroke-width: 2.4;
@@ -864,7 +934,53 @@ button {
 .analysis-story-dot.recent {
   stroke: #ffffff;
   stroke-width: 3;
-  filter: drop-shadow(0 0 8px rgba(132, 241, 94, .28));
+  filter: drop-shadow(0 0 10px rgba(132, 241, 94, .52));
+}
+
+.analysis-chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: #bdd8df;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.analysis-chart-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 9px;
+  border: 1px solid rgba(255, 255, 255, .10);
+  border-radius: 999px;
+  background: rgba(6, 16, 20, .38);
+}
+
+.analysis-chart-legend span::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #84f15e;
+  box-shadow: 0 0 10px rgba(132, 241, 94, .46);
+}
+
+.analysis-chart-legend .loss::before,
+.analysis-chart-legend .autonomous::before {
+  background: #ff6f7d;
+  box-shadow: 0 0 10px rgba(255, 111, 125, .38);
+}
+
+.analysis-chart-legend .tie::before,
+.analysis-chart-legend .saved::before {
+  background: #ffd166;
+  box-shadow: 0 0 10px rgba(255, 209, 102, .34);
+}
+
+.analysis-chart-legend .recent::before {
+  width: 18px;
+  height: 3px;
+  background: #84f15e;
 }
 
 .analysis-strategy-grid {
@@ -888,10 +1004,11 @@ button {
   background:
     linear-gradient(145deg, rgba(102, 217, 208, .10), rgba(132, 241, 94, .035)),
     rgba(6, 16, 20, .38);
+  animation: analysis-card-enter .46s ease-out .22s both;
 }
 
 .analysis-strategy-map {
-  grid-template-columns: minmax(280px, .95fr) minmax(340px, 1.05fr);
+  grid-template-columns: minmax(300px, .82fr) minmax(360px, 1.18fr);
   align-items: stretch;
 }
 
@@ -1152,9 +1269,9 @@ button {
   display: grid;
   gap: 6px;
   color: #9db5c0;
-  font-size: 11px;
-  font-weight: 1000;
-  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 850;
+  text-transform: none;
 }
 
 .analysis-correlation-controls select {
@@ -1166,7 +1283,7 @@ button {
   background: #142128;
   padding: 0 12px;
   font: inherit;
-  font-weight: 900;
+  font-weight: 800;
 }
 
 .analysis-correlation-result {
@@ -1235,6 +1352,28 @@ button {
   }
 }
 
+@keyframes analysis-stage-rise {
+  from {
+    opacity: .72;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes analysis-card-enter {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(.992);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 @keyframes analysis-dot-pop {
   from {
     opacity: 0;
@@ -1247,7 +1386,16 @@ button {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .analysis-panel,
+  .analysis-timeline-stage,
+  .analysis-story-hero,
+  .analysis-phase-card,
+  .analysis-number-strip,
+  .analysis-strategy-map,
+  .analysis-turning-point,
+  .analysis-next-chapter,
   .analysis-story-svg .analysis-story-line,
+  .analysis-story-svg .analysis-recent-line,
   .analysis-story-dot {
     animation: none;
     opacity: 1;
