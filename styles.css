@@ -454,32 +454,10 @@ button {
 
 .analysis-coach-note {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  gap: 10px;
-  align-items: center;
-  padding: 12px 14px;
-  border: 1px solid rgba(102, 217, 208, .14);
-  border-radius: var(--radius-sm);
-  background: rgba(102, 217, 208, .045);
-  color: #bdd8df;
-  font-size: 13px;
-  font-weight: 850;
-  line-height: 1.35;
 }
 
 .analysis-coach-note:empty {
   display: none;
-}
-
-.analysis-coach-note strong {
-  color: #84f15e;
-  font-size: 12px;
-  font-weight: 1000;
-  text-transform: uppercase;
-}
-
-.analysis-coach-note span {
-  min-width: 0;
 }
 
 .analysis-helper {
@@ -518,6 +496,125 @@ button {
 
 .analysis-coach-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.analysis-story-hero {
+  position: relative;
+  display: grid;
+  gap: 13px;
+  padding: 22px;
+  border: 1px solid rgba(132, 241, 94, .26);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 12% 0%, rgba(132, 241, 94, .22), transparent 32%),
+    linear-gradient(135deg, rgba(102, 217, 208, .18), rgba(132, 241, 94, .055) 58%, rgba(255, 255, 255, .035)),
+    rgba(6, 16, 20, .72);
+  box-shadow: 0 18px 38px rgba(0, 0, 0, .24), 0 0 32px rgba(102, 217, 208, .09);
+  overflow: hidden;
+}
+
+.analysis-story-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 5px;
+  background: linear-gradient(#84f15e, #66d9d0);
+}
+
+.analysis-story-hero > span,
+.analysis-story-proof small {
+  color: #84f15e;
+  font-size: 11px;
+  font-weight: 1000;
+  text-transform: uppercase;
+}
+
+.analysis-story-hero h4 {
+  max-width: 920px;
+  margin: 0;
+  color: var(--white);
+  font-size: 34px;
+  line-height: 1;
+}
+
+.analysis-story-hero p {
+  max-width: 900px;
+  margin: 0;
+  color: #d4fff8;
+  font-size: 17px;
+  font-weight: 850;
+  line-height: 1.35;
+}
+
+.analysis-story-proof {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.analysis-story-proof div {
+  display: grid;
+  gap: 5px;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, .11);
+  border-radius: var(--radius-sm);
+  background: rgba(6, 16, 20, .42);
+}
+
+.analysis-story-proof strong {
+  color: var(--white);
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.analysis-proof-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.analysis-proof-card {
+  display: grid;
+  gap: 8px;
+  min-height: 132px;
+  padding: 15px;
+  border: 1px solid rgba(102, 217, 208, .18);
+  border-radius: var(--radius-sm);
+  background:
+    linear-gradient(145deg, rgba(102, 217, 208, .10), rgba(255, 255, 255, .035)),
+    rgba(255, 255, 255, .045);
+}
+
+.analysis-proof-card span {
+  color: #a8d4df;
+  font-size: 11px;
+  font-weight: 1000;
+  text-transform: uppercase;
+}
+
+.analysis-proof-card strong {
+  color: var(--white);
+  font-size: 29px;
+  line-height: 1;
+}
+
+.analysis-proof-card p {
+  margin: 0;
+  color: #bdd8df;
+  font-size: 13px;
+  font-weight: 850;
+  line-height: 1.35;
+}
+
+.analysis-number-strip {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.analysis-number-strip .analysis-stat {
+  min-height: 82px;
+  background: rgba(255, 255, 255, .042);
 }
 
 .analysis-insight-card {
@@ -641,6 +738,83 @@ button {
   fill: #84f15e;
   stroke: #102028;
   stroke-width: 2;
+}
+
+.analysis-story-chart {
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid rgba(102, 217, 208, .16);
+  border-radius: var(--radius-sm);
+  background:
+    linear-gradient(rgba(255, 255, 255, .035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, .025) 1px, transparent 1px),
+    rgba(6, 16, 20, .34);
+  background-size: 34px 34px;
+}
+
+.analysis-story-svg {
+  height: 210px;
+  border: 0;
+  background: transparent;
+}
+
+.analysis-story-svg .analysis-grid-line {
+  stroke: rgba(255, 255, 255, .14);
+}
+
+.analysis-story-svg .analysis-average-line {
+  stroke: rgba(255, 255, 255, .28);
+  stroke-width: 2;
+  stroke-dasharray: 7 8;
+}
+
+.analysis-story-svg .analysis-story-line {
+  stroke: #66d9d0;
+  stroke-width: 5;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: analysis-line-draw .9s ease-out forwards;
+}
+
+.analysis-story-dot {
+  stroke: #102028;
+  stroke-width: 2.4;
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: analysis-dot-pop .45s ease-out forwards;
+}
+
+.analysis-story-dot.win,
+.analysis-story-dot.driver {
+  fill: #84f15e;
+}
+
+.analysis-story-dot.loss,
+.analysis-story-dot.autonomous {
+  fill: #ff6f7d;
+}
+
+.analysis-story-dot.tie,
+.analysis-story-dot.saved {
+  fill: #ffd166;
+}
+
+.analysis-story-dot.recent {
+  stroke: #ffffff;
+  stroke-width: 3;
+  filter: drop-shadow(0 0 8px rgba(132, 241, 94, .28));
+}
+
+.analysis-strategy-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.analysis-strategy-grid .analysis-insight-card {
+  min-height: 138px;
 }
 
 .analysis-chart-wrap {
@@ -797,6 +971,32 @@ button {
   color: #b8cbd2;
   background: rgba(255, 255, 255, .045);
   font-weight: 900;
+}
+
+@keyframes analysis-line-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes analysis-dot-pop {
+  from {
+    opacity: 0;
+    transform: scale(.55);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .analysis-story-svg .analysis-story-line,
+  .analysis-story-dot {
+    animation: none;
+    opacity: 1;
+    stroke-dashoffset: 0;
+  }
 }
 
 .competition-data,
@@ -3103,6 +3303,13 @@ body.modal-open {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .analysis-story-proof,
+  .analysis-proof-grid,
+  .analysis-number-strip,
+  .analysis-strategy-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .analysis-stats-tight {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -3314,6 +3521,18 @@ body.modal-open {
     font-size: 32px;
   }
 
+  .analysis-story-hero {
+    padding: 18px;
+  }
+
+  .analysis-story-hero h4 {
+    font-size: 27px;
+  }
+
+  .analysis-story-hero p {
+    font-size: 15px;
+  }
+
   .analysis-range {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -3328,7 +3547,11 @@ body.modal-open {
 
   .analysis-stats,
   .analysis-stats-tight,
-  .analysis-insights {
+  .analysis-insights,
+  .analysis-story-proof,
+  .analysis-proof-grid,
+  .analysis-number-strip,
+  .analysis-strategy-grid {
     grid-template-columns: 1fr;
   }
 

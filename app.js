@@ -262,6 +262,82 @@ const translations = {
     "analysis.working": "What is working",
     "analysis.costing": "What is costing points",
     "analysis.focus": "What to focus on next",
+    "analysis.story.recommendedFocus": "Recommended focus",
+    "analysis.story.why": "Why",
+    "analysis.story.proof": "Proof",
+    "analysis.story.nextTarget": "Next practice target",
+    "analysis.story.whyWeThink": "Why we think that",
+    "analysis.story.whyWeThinkDetail": "The three strongest signals from your saved data.",
+    "analysis.story.numberProof": "Number proof",
+    "analysis.story.numberProofDetail": "The compact scoreboard behind the recommendation.",
+    "analysis.story.progressStory": "Progress story",
+    "analysis.story.strategyBreakdown": "Strategy breakdown",
+    "analysis.story.strategyDetail": "Where the match is usually being won, lost, or left unfinished.",
+    "analysis.story.averageLine": "Average {value}",
+    "analysis.story.recentFive": "Recent 5 highlighted",
+    "analysis.story.headSummary": "Averaging {score} points with a {rate} win rate in this range.",
+    "analysis.story.skillsSummary": "Averaging {score} Skills points with a {combined} best combined ceiling.",
+    "analysis.story.record": "Record",
+    "analysis.story.recordDetail": "{rate} win rate in this range.",
+    "analysis.story.needRecent": "Save five records in this range for a stronger recent-form read.",
+    "analysis.story.progressDetail": "{value} versus the previous comparable range.",
+    "analysis.story.rangeAverage": "Selected range average",
+    "analysis.story.ceilingMarker": "Best saved result",
+    "analysis.story.typicalMarker": "Typical saved result",
+    "analysis.story.floorMarker": "Rough-round floor",
+    "analysis.story.winLossDifference": "Win vs loss difference",
+    "analysis.story.winsVsLosses": "Wins / losses",
+    "analysis.story.winsLosses": "wins / losses",
+    "analysis.story.winLossDetail": "This shows what changes most when the match turns into a win.",
+    "analysis.story.driverAutonValue": "Driver {driver} / Auton {auton}",
+    "analysis.story.head.auton.title": "Make autonomous reliable first",
+    "analysis.story.head.auton.why": "Auton is the earliest swing in the match, and losing it forces the drive team to chase points.",
+    "analysis.story.head.auton.proof": "Auton win rate is {rate}; average final margin is {margin}.",
+    "analysis.story.head.auton.target": "Run a repeatable auton that wins or ties before adding risk.",
+    "analysis.story.head.center.title": "Finish with center control",
+    "analysis.story.head.center.why": "Center control turns midfield robots and center yellows into repeatable points.",
+    "analysis.story.head.center.proof": "Center control is happening {rate} of the time; missed points average {missed}.",
+    "analysis.story.head.center.target": "Practice final 20 seconds around center positioning.",
+    "analysis.story.head.yellow.title": "Score the yellows you already place",
+    "analysis.story.head.yellow.why": "Yellow pins only matter when ownership is correct, so conversion beats raw volume.",
+    "analysis.story.head.yellow.proof": "{scored} of {placed} yellows counted, a {rate} conversion rate.",
+    "analysis.story.head.yellow.target": "Call toggle ownership before placing extra yellows.",
+    "analysis.story.head.floor.title": "Raise the bad-match floor",
+    "analysis.story.head.floor.why": "Your ceiling is there, but rough rounds are pulling the average down.",
+    "analysis.story.head.floor.proof": "Average is {average}, while the lower-range floor is {floor}.",
+    "analysis.story.head.floor.target": "Build a low-risk scoring plan for messy matches.",
+    "analysis.story.head.margin.title": "Create more separation",
+    "analysis.story.head.margin.why": "Close matches need cleaner point swings, especially auton and controlled pins.",
+    "analysis.story.head.margin.proof": "Win rate is {rate}; average margin is {margin}.",
+    "analysis.story.head.margin.target": "Practice the two fastest swings that add margin.",
+    "analysis.story.head.ceiling.title": "Turn the best-match pattern into the normal pattern",
+    "analysis.story.head.ceiling.why": "Your data says the path is working; the next jump is making it repeatable.",
+    "analysis.story.head.ceiling.proof": "Average score is {average}; red/blue pin average is {pins}.",
+    "analysis.story.head.ceiling.target": "Replay the best-match blueprint until it becomes routine.",
+    "analysis.story.skills.balance.title": "Save both Driver and Autonomous routes",
+    "analysis.story.skills.balance.why": "The combined ceiling is only visible when both route types are represented.",
+    "analysis.story.skills.balance.proof": "Driver runs: {driver}. Autonomous runs: {auton}.",
+    "analysis.story.skills.balance.target": "Log paired Driver and Autonomous attempts in the same practice.",
+    "analysis.story.skills.driver.title": "Stabilize the Driver route",
+    "analysis.story.skills.driver.why": "Autonomous is outpacing Driver, so repeatable driver scoring is the fastest ceiling gain.",
+    "analysis.story.skills.driver.proof": "Driver averages {driver}; Autonomous averages {auton}.",
+    "analysis.story.skills.driver.target": "Practice one safer driver route before chasing max pins.",
+    "analysis.story.skills.auton.title": "Build the Autonomous route",
+    "analysis.story.skills.auton.why": "Driver is carrying the score, so autonomous improvement directly raises combined Skills.",
+    "analysis.story.skills.auton.proof": "Driver averages {driver}; Autonomous averages {auton}.",
+    "analysis.story.skills.auton.target": "Add one reliable autonomous scoring sequence.",
+    "analysis.story.skills.yellow.title": "Convert more yellow pins",
+    "analysis.story.skills.yellow.why": "Yellow points are being placed but not always made legal by ownership/control.",
+    "analysis.story.skills.yellow.proof": "{scored} of {placed} yellows scored, a {rate} conversion rate.",
+    "analysis.story.skills.yellow.target": "Practice toggle states before adding more yellows.",
+    "analysis.story.skills.center.title": "Make center control automatic",
+    "analysis.story.skills.center.why": "Center control protects yellow value and keeps the route from leaking points.",
+    "analysis.story.skills.center.proof": "Center toggle is active in {rate} of saved runs.",
+    "analysis.story.skills.center.target": "Add a consistent center-control checkpoint to the route.",
+    "analysis.story.skills.ceiling.title": "Push the combined ceiling",
+    "analysis.story.skills.ceiling.why": "The route base is healthy, so improvement should come from refining the highest-value sequence.",
+    "analysis.story.skills.ceiling.proof": "Best combined is {combined}; recent form is {recent}.",
+    "analysis.story.skills.ceiling.target": "Pick one route segment and chase cleaner execution.",
     "scouting.skillsKicker": "Official Skills standings",
     "scouting.teamSkillsTitle": "Team Skills Search",
     "scouting.teamSkillsDescription": "Search teams from the public VEX V5RC Override Skills standings.",
@@ -650,6 +726,82 @@ Object.assign(translations.es, {
   "analysis.working": "Qué está funcionando",
   "analysis.costing": "Qué está costando puntos",
   "analysis.focus": "En qué enfocarse ahora",
+  "analysis.story.recommendedFocus": "Enfoque recomendado",
+  "analysis.story.why": "Por qué",
+  "analysis.story.proof": "Prueba",
+  "analysis.story.nextTarget": "Meta de próxima práctica",
+  "analysis.story.whyWeThink": "Por qué pensamos eso",
+  "analysis.story.whyWeThinkDetail": "Las tres señales más fuertes de tus datos guardados.",
+  "analysis.story.numberProof": "Prueba numérica",
+  "analysis.story.numberProofDetail": "El marcador compacto detrás de la recomendación.",
+  "analysis.story.progressStory": "Historia de progreso",
+  "analysis.story.strategyBreakdown": "Desglose estratégico",
+  "analysis.story.strategyDetail": "Dónde el partido suele ganarse, perderse o quedar incompleto.",
+  "analysis.story.averageLine": "Promedio {value}",
+  "analysis.story.recentFive": "Últimos 5 resaltados",
+  "analysis.story.headSummary": "Promedio de {score} puntos con {rate} de victorias en este rango.",
+  "analysis.story.skillsSummary": "Promedio de {score} puntos de Skills con techo combinado de {combined}.",
+  "analysis.story.record": "Récord",
+  "analysis.story.recordDetail": "{rate} de victorias en este rango.",
+  "analysis.story.needRecent": "Guarda cinco registros en este rango para leer mejor la forma reciente.",
+  "analysis.story.progressDetail": "{value} frente al rango comparable anterior.",
+  "analysis.story.rangeAverage": "Promedio del rango seleccionado",
+  "analysis.story.ceilingMarker": "Mejor resultado guardado",
+  "analysis.story.typicalMarker": "Resultado típico guardado",
+  "analysis.story.floorMarker": "Piso de ronda difícil",
+  "analysis.story.winLossDifference": "Diferencia entre victorias y derrotas",
+  "analysis.story.winsVsLosses": "Victorias / derrotas",
+  "analysis.story.winsLosses": "victorias / derrotas",
+  "analysis.story.winLossDetail": "Muestra qué cambia más cuando el partido se convierte en victoria.",
+  "analysis.story.driverAutonValue": "Driver {driver} / Autónomo {auton}",
+  "analysis.story.head.auton.title": "Haz confiable el autónomo primero",
+  "analysis.story.head.auton.why": "Autónomo es el primer cambio de impulso del partido; perderlo obliga a perseguir puntos.",
+  "analysis.story.head.auton.proof": "La tasa de autónomo ganado es {rate}; el margen final promedio es {margin}.",
+  "analysis.story.head.auton.target": "Ejecuta un autónomo repetible que gane o empate antes de agregar riesgo.",
+  "analysis.story.head.center.title": "Termina con control del centro",
+  "analysis.story.head.center.why": "El centro convierte robots de midfield y amarillos centrales en puntos repetibles.",
+  "analysis.story.head.center.proof": "Controlas el centro {rate} del tiempo; los puntos perdidos promedian {missed}.",
+  "analysis.story.head.center.target": "Practica los últimos 20 segundos alrededor del posicionamiento central.",
+  "analysis.story.head.yellow.title": "Puntúa los amarillos que ya colocas",
+  "analysis.story.head.yellow.why": "Los amarillos solo importan con propiedad correcta; convertir vale más que volumen bruto.",
+  "analysis.story.head.yellow.proof": "{scored} de {placed} amarillos contaron, una conversión de {rate}.",
+  "analysis.story.head.yellow.target": "Confirma la propiedad del toggle antes de poner más amarillos.",
+  "analysis.story.head.floor.title": "Sube el piso de los malos partidos",
+  "analysis.story.head.floor.why": "El techo existe, pero las rondas difíciles bajan el promedio.",
+  "analysis.story.head.floor.proof": "El promedio es {average}; el piso bajo del rango es {floor}.",
+  "analysis.story.head.floor.target": "Construye un plan de bajo riesgo para partidos desordenados.",
+  "analysis.story.head.margin.title": "Crea más separación",
+  "analysis.story.head.margin.why": "Los partidos cerrados necesitan cambios de puntos más limpios, sobre todo autónomo y pines controlados.",
+  "analysis.story.head.margin.proof": "La tasa de victoria es {rate}; el margen promedio es {margin}.",
+  "analysis.story.head.margin.target": "Practica los dos cambios más rápidos que agregan margen.",
+  "analysis.story.head.ceiling.title": "Convierte el mejor patrón en el patrón normal",
+  "analysis.story.head.ceiling.why": "Los datos dicen que el camino funciona; el salto viene de repetirlo.",
+  "analysis.story.head.ceiling.proof": "El promedio es {average}; el promedio de pines rojos/azules es {pins}.",
+  "analysis.story.head.ceiling.target": "Repite el patrón de mejores partidos hasta que sea rutina.",
+  "analysis.story.skills.balance.title": "Guarda rutas Driver y Autónomo",
+  "analysis.story.skills.balance.why": "El techo combinado solo se ve cuando hay datos de ambos tipos de ruta.",
+  "analysis.story.skills.balance.proof": "Intentos Driver: {driver}. Intentos Autónomo: {auton}.",
+  "analysis.story.skills.balance.target": "Registra intentos Driver y Autónomo juntos en la misma práctica.",
+  "analysis.story.skills.driver.title": "Estabiliza la ruta Driver",
+  "analysis.story.skills.driver.why": "Autónomo supera a Driver, así que repetir Driver suma techo más rápido.",
+  "analysis.story.skills.driver.proof": "Driver promedia {driver}; Autónomo promedia {auton}.",
+  "analysis.story.skills.driver.target": "Practica una ruta Driver más segura antes de perseguir máximo de pines.",
+  "analysis.story.skills.auton.title": "Construye la ruta Autónoma",
+  "analysis.story.skills.auton.why": "Driver sostiene el puntaje; mejorar autónomo sube directamente el combinado.",
+  "analysis.story.skills.auton.proof": "Driver promedia {driver}; Autónomo promedia {auton}.",
+  "analysis.story.skills.auton.target": "Agrega una secuencia autónoma confiable.",
+  "analysis.story.skills.yellow.title": "Convierte más amarillos",
+  "analysis.story.skills.yellow.why": "Se colocan amarillos, pero no siempre se vuelven legales por propiedad/control.",
+  "analysis.story.skills.yellow.proof": "{scored} de {placed} amarillos puntuaron, una conversión de {rate}.",
+  "analysis.story.skills.yellow.target": "Practica estados de toggle antes de agregar más amarillos.",
+  "analysis.story.skills.center.title": "Haz automático el control del centro",
+  "analysis.story.skills.center.why": "El control central protege el valor amarillo y evita pérdidas en la ruta.",
+  "analysis.story.skills.center.proof": "El toggle central está activo en {rate} de los intentos guardados.",
+  "analysis.story.skills.center.target": "Agrega un punto de control central consistente a la ruta.",
+  "analysis.story.skills.ceiling.title": "Empuja el techo combinado",
+  "analysis.story.skills.ceiling.why": "La base de ruta está sana; la mejora viene de refinar la secuencia de mayor valor.",
+  "analysis.story.skills.ceiling.proof": "El mejor combinado es {combined}; la forma reciente es {recent}.",
+  "analysis.story.skills.ceiling.target": "Elige un segmento de ruta y busca ejecución más limpia.",
   "scouting.skillsKicker": "Clasificación oficial de Skills",
   "scouting.teamSkillsTitle": "Búsqueda de Skills por equipo",
   "scouting.teamSkillsDescription": "Busca equipos en la clasificación pública VEX V5RC Override Skills.",
@@ -1035,6 +1187,82 @@ Object.assign(translations["zh-CN"], {
   "analysis.working": "有效的地方",
   "analysis.costing": "正在丢分的地方",
   "analysis.focus": "下一步重点",
+  "analysis.story.recommendedFocus": "建议重点",
+  "analysis.story.why": "原因",
+  "analysis.story.proof": "依据",
+  "analysis.story.nextTarget": "下次练习目标",
+  "analysis.story.whyWeThink": "我们为什么这样判断",
+  "analysis.story.whyWeThinkDetail": "来自已保存数据的三个最强信号。",
+  "analysis.story.numberProof": "数字依据",
+  "analysis.story.numberProofDetail": "支撑建议的简明数据。",
+  "analysis.story.progressStory": "进步故事",
+  "analysis.story.strategyBreakdown": "策略拆解",
+  "analysis.story.strategyDetail": "比赛通常在哪些地方赢、输或漏分。",
+  "analysis.story.averageLine": "平均 {value}",
+  "analysis.story.recentFive": "突出最近5次",
+  "analysis.story.headSummary": "此范围平均 {score} 分，胜率 {rate}。",
+  "analysis.story.skillsSummary": "技能赛平均 {score} 分，最佳合计上限 {combined}。",
+  "analysis.story.record": "战绩",
+  "analysis.story.recordDetail": "此范围胜率 {rate}。",
+  "analysis.story.needRecent": "此范围保存五条记录后，近期状态会更可靠。",
+  "analysis.story.progressDetail": "相比上一个可比范围 {value}。",
+  "analysis.story.rangeAverage": "所选范围平均",
+  "analysis.story.ceilingMarker": "最佳保存结果",
+  "analysis.story.typicalMarker": "典型保存结果",
+  "analysis.story.floorMarker": "困难场次下限",
+  "analysis.story.winLossDifference": "胜负差异",
+  "analysis.story.winsVsLosses": "胜场 / 负场",
+  "analysis.story.winsLosses": "胜场 / 负场",
+  "analysis.story.winLossDetail": "显示比赛变成胜利时，哪些指标变化最大。",
+  "analysis.story.driverAutonValue": "驾驶 {driver} / 自动 {auton}",
+  "analysis.story.head.auton.title": "先让自动稳定",
+  "analysis.story.head.auton.why": "自动是比赛最早的分差摆动；输了自动会迫使后面追分。",
+  "analysis.story.head.auton.proof": "自动胜率 {rate}；最终平均分差 {margin}。",
+  "analysis.story.head.auton.target": "先跑能稳定获胜或打平的自动，再增加风险。",
+  "analysis.story.head.center.title": "以中心控制结束",
+  "analysis.story.head.center.why": "中心控制把 midfield 机器人和中心黄桩变成稳定分。",
+  "analysis.story.head.center.proof": "中心控制率 {rate}；平均错失分 {missed}。",
+  "analysis.story.head.center.target": "练习最后20秒的中心站位。",
+  "analysis.story.head.yellow.title": "让已放的黄桩真正得分",
+  "analysis.story.head.yellow.why": "黄桩只有拥有权正确才有价值，所以转化比数量更重要。",
+  "analysis.story.head.yellow.proof": "{placed} 个黄桩中 {scored} 个计分，转化率 {rate}。",
+  "analysis.story.head.yellow.target": "放更多黄桩前先确认 toggle 拥有权。",
+  "analysis.story.head.floor.title": "提高差场次下限",
+  "analysis.story.head.floor.why": "上限已经存在，但困难场次正在拉低平均。",
+  "analysis.story.head.floor.proof": "平均 {average}，低位下限 {floor}。",
+  "analysis.story.head.floor.target": "为混乱比赛准备低风险得分方案。",
+  "analysis.story.head.margin.title": "拉开更多分差",
+  "analysis.story.head.margin.why": "接近的比赛需要更干净的分数摆动，尤其是自动和受控桩。",
+  "analysis.story.head.margin.proof": "胜率 {rate}；平均分差 {margin}。",
+  "analysis.story.head.margin.target": "练习两个最快增加分差的动作。",
+  "analysis.story.head.ceiling.title": "把最佳比赛模式变成常态",
+  "analysis.story.head.ceiling.why": "数据说明路线有效；下一步是让它可重复。",
+  "analysis.story.head.ceiling.proof": "平均分 {average}；红/蓝桩平均 {pins}。",
+  "analysis.story.head.ceiling.target": "重复最佳比赛模式，直到变成常规表现。",
+  "analysis.story.skills.balance.title": "同时保存驾驶和自动路线",
+  "analysis.story.skills.balance.why": "只有两种路线都有数据，才能看清合计上限。",
+  "analysis.story.skills.balance.proof": "驾驶尝试：{driver}。自动尝试：{auton}。",
+  "analysis.story.skills.balance.target": "同一次练习中记录配对的驾驶和自动尝试。",
+  "analysis.story.skills.driver.title": "稳定驾驶路线",
+  "analysis.story.skills.driver.why": "自动高于驾驶，所以稳定驾驶是最快提高上限的方法。",
+  "analysis.story.skills.driver.proof": "驾驶平均 {driver}；自动平均 {auton}。",
+  "analysis.story.skills.driver.target": "追求最大桩数前，先练一条更稳的驾驶路线。",
+  "analysis.story.skills.auton.title": "建设自动路线",
+  "analysis.story.skills.auton.why": "驾驶撑住分数，自动提升会直接提高合计技能分。",
+  "analysis.story.skills.auton.proof": "驾驶平均 {driver}；自动平均 {auton}。",
+  "analysis.story.skills.auton.target": "增加一个可靠的自动得分序列。",
+  "analysis.story.skills.yellow.title": "提高黄桩转化",
+  "analysis.story.skills.yellow.why": "黄桩已经放置，但不总是被拥有权/控制变成合法分。",
+  "analysis.story.skills.yellow.proof": "{placed} 个黄桩中 {scored} 个计分，转化率 {rate}。",
+  "analysis.story.skills.yellow.target": "增加黄桩前先练 toggle 状态。",
+  "analysis.story.skills.center.title": "让中心控制自动化",
+  "analysis.story.skills.center.why": "中心控制保护黄桩价值，也减少路线漏分。",
+  "analysis.story.skills.center.proof": "中心 toggle 在 {rate} 的保存尝试中激活。",
+  "analysis.story.skills.center.target": "给路线加入稳定的中心控制检查点。",
+  "analysis.story.skills.ceiling.title": "提高合计上限",
+  "analysis.story.skills.ceiling.why": "路线基础健康，提升应来自优化最高价值的序列。",
+  "analysis.story.skills.ceiling.proof": "最佳合计 {combined}；近期状态 {recent}。",
+  "analysis.story.skills.ceiling.target": "选择一个路线片段，追求更干净的执行。",
   "scouting.skillsKicker": "官方技能赛排名",
   "scouting.teamSkillsTitle": "队伍技能赛搜索",
   "scouting.teamSkillsDescription": "搜索公开 VEX V5RC Override 技能赛排名中的队伍。",
@@ -3846,6 +4074,79 @@ function averageObject(items, key) {
   return average(items.map(item => numericValue(item[key])).filter(value => Number.isFinite(value)));
 }
 
+function percentRate(part, total) {
+  return total ? (part / total) * 100 : null;
+}
+
+function scoreMargin(match) {
+  return numericValue(match.ourScore) - numericValue(match.opponentScore);
+}
+
+function signedNumber(value, suffix = "") {
+  if (!Number.isFinite(value)) return "--";
+  return `${value > 0 ? "+" : ""}${formatAnalysisNumber(value, suffix)}`;
+}
+
+function formatRate(value) {
+  return formatAnalysisNumber(value, "%");
+}
+
+function yellowEfficiencyValue(matches) {
+  const placed = matches.reduce((total, match) => total + yellowPins(match), 0);
+  const scored = matches.reduce((total, match) => total + numericValue(ownedYellowPins(match)), 0);
+  return { placed, scored, rate: placed ? (scored / placed) * 100 : null };
+}
+
+function skillsYellowEfficiencyValue(runs) {
+  const placed = runs.reduce((total, run) => total + skillsYellowPins(run), 0);
+  const scored = runs.reduce((total, run) => total + skillsScoredYellowPins(run), 0);
+  return { placed, scored, rate: placed ? (scored / placed) * 100 : null };
+}
+
+function renderStoryHero(recommendation) {
+  return `
+    <section class="analysis-story-hero">
+      <span>${escapeHtml(t("analysis.story.recommendedFocus"))}</span>
+      <h4>${escapeHtml(recommendation.title)}</h4>
+      <p>${escapeHtml(recommendation.why)}</p>
+      <div class="analysis-story-proof">
+        <div>
+          <small>${escapeHtml(t("analysis.story.proof"))}</small>
+          <strong>${escapeHtml(recommendation.proof)}</strong>
+        </div>
+        <div>
+          <small>${escapeHtml(t("analysis.story.nextTarget"))}</small>
+          <strong>${escapeHtml(recommendation.target)}</strong>
+        </div>
+      </div>
+    </section>
+  `;
+}
+
+function renderProofGrid(cards) {
+  return `
+    ${analysisSectionTitle(t("analysis.story.whyWeThink"), t("analysis.story.whyWeThinkDetail"))}
+    <div class="analysis-proof-grid">
+      ${cards.map(card => `
+        <article class="analysis-proof-card">
+          <span>${escapeHtml(card.label)}</span>
+          <strong>${escapeHtml(card.value)}</strong>
+          <p>${escapeHtml(card.detail)}</p>
+        </article>
+      `).join("")}
+    </div>
+  `;
+}
+
+function renderNumberStrip(items) {
+  return `
+    ${analysisSectionTitle(t("analysis.story.numberProof"), t("analysis.story.numberProofDetail"))}
+    <div class="analysis-number-strip">
+      ${items.map(item => analysisStat(item.label, item.value, item.detail)).join("")}
+    </div>
+  `;
+}
+
 function renderWinFactors(matches) {
   const winOption = flatCorrelationOptions(headCorrelationOptions).find(option => option.key === "win");
   const candidates = flatCorrelationOptions(headCorrelationOptions)
@@ -4077,121 +4378,224 @@ function renderSkillsInsights(runs, allRuns) {
   ].join("");
 }
 
-function headCoachCards(matches) {
+function headRecommendation(matches) {
   const stats = analysisScoreStats(matches, match => match.ourScore);
   const wins = matches.filter(match => match.result === "win").length;
   const winRate = matches.length ? (wins / matches.length) * 100 : null;
-  const yellowPlaced = matches.reduce((total, match) => total + yellowPins(match), 0);
-  const yellowScored = matches.reduce((total, match) => total + numericValue(ownedYellowPins(match)), 0);
-  const yellowRate = yellowPlaced ? (yellowScored / yellowPlaced) * 100 : null;
+  const yellow = yellowEfficiencyValue(matches);
   const autonWinRate = matches.length ? (matches.filter(autonWon).length / matches.length) * 100 : null;
   const centerRate = matches.length ? (matches.filter(centerControlledByUs).length / matches.length) * 100 : null;
   const missedAverage = resultAverage(matches, match => missedHeadPoints(match).total);
   const recentDelta = Number.isFinite(stats.recentMean) && Number.isFinite(stats.mean) ? stats.recentMean - stats.mean : null;
+  const pinAverage = resultAverage(matches, ourAlliancePins);
+  const marginAverage = resultAverage(matches, scoreMargin);
+  const floor = percentile(scoreGetterValues(matches, match => match.ourScore), .2);
+  const floorGap = Number.isFinite(stats.mean) && Number.isFinite(floor) ? stats.mean - floor : null;
 
-  const working = Number.isFinite(recentDelta) && recentDelta >= 3
-    ? t("analysis.headWorkingRecent", { count: stats.recentCount, delta: formatAnalysisNumber(recentDelta) })
-    : Number.isFinite(winRate) && winRate >= 60
-      ? t("analysis.headWorkingWinRate", { rate: formatAnalysisNumber(winRate, "%") })
-      : t("analysis.headWorkingBaseline", { average: formatAnalysisNumber(stats.mean) });
-
-  const costing = Number.isFinite(yellowRate) && yellowRate < 70
-    ? t("analysis.headCostingYellows", { scored: yellowScored, placed: yellowPlaced })
-    : Number.isFinite(autonWinRate) && autonWinRate < 45
-      ? t("analysis.headCostingAuton", { rate: formatAnalysisNumber(autonWinRate, "%") })
-      : t("analysis.headCostingMissed", { missed: formatAnalysisNumber(missedAverage) });
-
-  const focus = Number.isFinite(centerRate) && centerRate < 55
-    ? t("analysis.headFocusCenter")
-    : Number.isFinite(yellowRate) && yellowRate < 85
-      ? t("analysis.headFocusYellows")
-      : t("analysis.headFocusBlueprint");
-
-  return [
-    analysisInsightCard(t("analysis.working"), working, Number.isFinite(recentDelta) ? `${recentDelta >= 0 ? "+" : ""}${formatAnalysisNumber(recentDelta)}` : `${formatAnalysisNumber(winRate, "%")}`, "analysis-coach-card"),
-    analysisInsightCard(t("analysis.costing"), costing, Number.isFinite(missedAverage) ? t("analysis.avgValue", { value: formatAnalysisNumber(missedAverage) }) : t("analysis.checkDetails"), "analysis-coach-card"),
-    analysisInsightCard(t("analysis.focus"), focus, t("analysis.nextPractice"), "analysis-coach-card")
-  ].join("");
+  if (Number.isFinite(autonWinRate) && autonWinRate < 45) {
+    return {
+      title: t("analysis.story.head.auton.title"),
+      why: t("analysis.story.head.auton.why"),
+      proof: t("analysis.story.head.auton.proof", { rate: formatRate(autonWinRate), margin: formatAnalysisNumber(marginAverage) }),
+      target: t("analysis.story.head.auton.target")
+    };
+  }
+  if (Number.isFinite(centerRate) && centerRate < 55) {
+    return {
+      title: t("analysis.story.head.center.title"),
+      why: t("analysis.story.head.center.why"),
+      proof: t("analysis.story.head.center.proof", { rate: formatRate(centerRate), missed: formatAnalysisNumber(missedAverage) }),
+      target: t("analysis.story.head.center.target")
+    };
+  }
+  if (Number.isFinite(yellow.rate) && yellow.rate < 78) {
+    return {
+      title: t("analysis.story.head.yellow.title"),
+      why: t("analysis.story.head.yellow.why"),
+      proof: t("analysis.story.head.yellow.proof", { scored: yellow.scored, placed: yellow.placed, rate: formatRate(yellow.rate) }),
+      target: t("analysis.story.head.yellow.target")
+    };
+  }
+  if (Number.isFinite(floorGap) && floorGap > 24) {
+    return {
+      title: t("analysis.story.head.floor.title"),
+      why: t("analysis.story.head.floor.why"),
+      proof: t("analysis.story.head.floor.proof", { average: formatAnalysisNumber(stats.mean), floor: formatAnalysisNumber(floor) }),
+      target: t("analysis.story.head.floor.target")
+    };
+  }
+  if (Number.isFinite(winRate) && winRate < 55) {
+    return {
+      title: t("analysis.story.head.margin.title"),
+      why: t("analysis.story.head.margin.why"),
+      proof: t("analysis.story.head.margin.proof", { rate: formatRate(winRate), margin: formatAnalysisNumber(marginAverage) }),
+      target: t("analysis.story.head.margin.target")
+    };
+  }
+  return {
+    title: t("analysis.story.head.ceiling.title"),
+    why: t("analysis.story.head.ceiling.why"),
+    proof: t("analysis.story.head.ceiling.proof", { average: formatAnalysisNumber(stats.mean), pins: formatAnalysisNumber(pinAverage) }),
+    target: t("analysis.story.head.ceiling.target")
+  };
 }
 
-function headCoachNote(matches) {
+function headProofCards(matches, allMatches) {
   const stats = analysisScoreStats(matches, match => match.ourScore);
+  const wins = matches.filter(match => match.result === "win").length;
+  const losses = matches.filter(match => match.result === "loss").length;
+  const ties = matches.filter(match => match.result === "tie").length;
+  const recentDelta = Number.isFinite(stats.recentMean) && Number.isFinite(stats.mean) ? stats.recentMean - stats.mean : null;
   const missedAverage = resultAverage(matches, match => missedHeadPoints(match).total);
-  const delta = Number.isFinite(stats.recentMean) && Number.isFinite(stats.mean) ? stats.recentMean - stats.mean : null;
-  if (Number.isFinite(delta) && delta > 2) {
-    return t("analysis.headNoteUp", { delta: formatAnalysisNumber(delta), missed: formatAnalysisNumber(missedAverage) });
-  }
-  if (Number.isFinite(delta) && delta < -2) {
-    return t("analysis.headNoteDown", { count: stats.recentCount });
-  }
-  return t("analysis.headNoteSteady", { average: formatAnalysisNumber(stats.mean) });
+  const { current, previous } = previousRangeRecords(allMatches);
+  const previousAverage = resultAverage(previous, match => match.ourScore);
+  const currentAverage = resultAverage(current, match => match.ourScore);
+  const progress = Number.isFinite(currentAverage) && Number.isFinite(previousAverage) ? currentAverage - previousAverage : null;
+  return [
+    {
+      label: t("analysis.story.record"),
+      value: t("analysis.recordDetail", { wins, losses, ties }),
+      detail: t("analysis.story.recordDetail", { rate: formatRate(percentRate(wins, matches.length)) })
+    },
+    {
+      label: t("analysis.last5"),
+      value: signedNumber(recentDelta),
+      detail: recentFormDetail(stats) || t("analysis.story.needRecent")
+    },
+    {
+      label: t("analysis.missedPoints"),
+      value: t("analysis.avgValue", { value: formatAnalysisNumber(missedAverage) }),
+      detail: Number.isFinite(progress)
+        ? t("analysis.story.progressDetail", { value: signedNumber(progress) })
+        : t("analysis.missedPointsDetail")
+    }
+  ];
 }
 
 function renderHeadBreakdown(matches, allMatches) {
+  const wins = matches.filter(match => match.result === "win");
+  const losses = matches.filter(match => match.result === "loss");
+  const compare = (label, getter, options = {}) => {
+    const winValue = resultAverage(wins, getter);
+    const lossValue = resultAverage(losses, getter);
+    const display = value => options.percent ? formatRate(Number.isFinite(value) ? value * 100 : value) : formatAnalysisNumber(value);
+    return analysisMiniRow(label, `${display(winValue)} / ${display(lossValue)}`, t("analysis.story.winsLosses"));
+  };
   return `
-    ${analysisSectionTitle(t("analysis.headQuestion"), t("analysis.headQuestionDetail"))}
-    <div class="analysis-insights">
-      ${renderWinFactors(matches)}
-      ${renderHeadMissedPoints(matches)}
+    ${analysisSectionTitle(t("analysis.story.strategyBreakdown"), t("analysis.story.strategyDetail"))}
+    <div class="analysis-strategy-grid">
       ${renderAutonReliability(matches)}
       ${renderCenterImpact(matches)}
       ${renderYellowEfficiency(matches)}
       ${renderFloorCeiling(matches, match => match.ourScore, t("analysis.badGoodRange"))}
-      ${renderProgressCard(allMatches, match => match.ourScore, t("analysis.weeklyProgress"))}
       ${renderBestMatchBlueprint(matches)}
+      <div class="analysis-insight-card analysis-insight-wide">
+        <span>${escapeHtml(t("analysis.story.winLossDifference"))}</span>
+        <strong>${escapeHtml(t("analysis.story.winsVsLosses"))}</strong>
+        <p>${escapeHtml(t("analysis.story.winLossDetail"))}</p>
+        <div class="analysis-mini-list">
+          ${compare(t("analysis.averageScore"), match => match.ourScore)}
+          ${compare(t("analysis.autonReliability"), autonWon, { percent: true })}
+          ${compare(t("analysis.centerImpact"), centerControlledByUs, { percent: true })}
+          ${compare(t("analysis.yellowEfficiency"), match => yellowPins(match) ? numericValue(ownedYellowPins(match)) / yellowPins(match) : null, { percent: true })}
+          ${compare(t("analysis.correlationOption.margin"), scoreMargin)}
+        </div>
+      </div>
+      ${renderWinFactors(matches)}
+      ${renderProgressCard(allMatches, match => match.ourScore, t("analysis.weeklyProgress"))}
     </div>
   `;
 }
 
-function skillsCoachCards(runs) {
+function skillsRecommendation(runs) {
   const stats = analysisScoreStats(runs, run => run.score);
   const driverScores = scoreGetterValues(runs.filter(run => run.skillsType === "driver"), run => run.score);
   const autonScores = scoreGetterValues(runs.filter(run => run.skillsType === "autonomous"), run => run.score);
   const bestDriver = driverScores.length ? Math.max(...driverScores) : null;
   const bestAuton = autonScores.length ? Math.max(...autonScores) : null;
-  const missed = runs.reduce((total, run) => total + skillsMissedYellowPins(run), 0);
-  const placed = runs.reduce((total, run) => total + skillsYellowPins(run), 0);
+  const driverAverage = resultAverage(runs.filter(run => run.skillsType === "driver"), run => run.score);
+  const autonAverage = resultAverage(runs.filter(run => run.skillsType === "autonomous"), run => run.score);
+  const yellow = skillsYellowEfficiencyValue(runs);
+  const centerRate = percentRate(runs.filter(run => run.skills?.centerToggle).length, runs.length);
+  const combined = (bestDriver || 0) + (bestAuton || 0);
   const recentDelta = Number.isFinite(stats.recentMean) && Number.isFinite(stats.mean) ? stats.recentMean - stats.mean : null;
-
-  const working = Number.isFinite(recentDelta) && recentDelta >= 3
-    ? t("analysis.skillsWorkingRecent", { count: stats.recentCount, delta: formatAnalysisNumber(recentDelta) })
-    : t("analysis.skillsWorkingCombined", {
-      combined: formatAnalysisNumber((bestDriver || 0) + (bestAuton || 0)),
-      driver: formatAnalysisNumber(bestDriver),
-      auton: formatAnalysisNumber(bestAuton)
-    });
-  const costing = placed
-    ? t("analysis.skillsCostingYellows", { missed, placed })
-    : t("analysis.skillsCostingNoYellows");
-  const focus = average(driverScores) >= average(autonScores)
-    ? t("analysis.skillsFocusAuton")
-    : t("analysis.skillsFocusDriver");
-
-  return [
-    analysisInsightCard(t("analysis.working"), working, Number.isFinite(recentDelta) ? `${recentDelta >= 0 ? "+" : ""}${formatAnalysisNumber(recentDelta)}` : t("analysis.routeBase"), "analysis-coach-card"),
-    analysisInsightCard(t("analysis.costing"), costing, missed ? t("analysis.missedCount", { count: missed }) : t("analysis.learning"), "analysis-coach-card"),
-    analysisInsightCard(t("analysis.focus"), focus, t("analysis.nextPractice"), "analysis-coach-card")
-  ].join("");
+  if (!driverScores.length || !autonScores.length) {
+    return {
+      title: t("analysis.story.skills.balance.title"),
+      why: t("analysis.story.skills.balance.why"),
+      proof: t("analysis.story.skills.balance.proof", { driver: driverScores.length, auton: autonScores.length }),
+      target: t("analysis.story.skills.balance.target")
+    };
+  }
+  if (Number.isFinite(driverAverage) && driverAverage + 8 < autonAverage) {
+    return {
+      title: t("analysis.story.skills.driver.title"),
+      why: t("analysis.story.skills.driver.why"),
+      proof: t("analysis.story.skills.driver.proof", { driver: formatAnalysisNumber(driverAverage), auton: formatAnalysisNumber(autonAverage) }),
+      target: t("analysis.story.skills.driver.target")
+    };
+  }
+  if (Number.isFinite(autonAverage) && autonAverage + 8 < driverAverage) {
+    return {
+      title: t("analysis.story.skills.auton.title"),
+      why: t("analysis.story.skills.auton.why"),
+      proof: t("analysis.story.skills.auton.proof", { driver: formatAnalysisNumber(driverAverage), auton: formatAnalysisNumber(autonAverage) }),
+      target: t("analysis.story.skills.auton.target")
+    };
+  }
+  if (Number.isFinite(yellow.rate) && yellow.rate < 78) {
+    return {
+      title: t("analysis.story.skills.yellow.title"),
+      why: t("analysis.story.skills.yellow.why"),
+      proof: t("analysis.story.skills.yellow.proof", { scored: yellow.scored, placed: yellow.placed, rate: formatRate(yellow.rate) }),
+      target: t("analysis.story.skills.yellow.target")
+    };
+  }
+  if (Number.isFinite(centerRate) && centerRate < 60) {
+    return {
+      title: t("analysis.story.skills.center.title"),
+      why: t("analysis.story.skills.center.why"),
+      proof: t("analysis.story.skills.center.proof", { rate: formatRate(centerRate) }),
+      target: t("analysis.story.skills.center.target")
+    };
+  }
+  return {
+    title: t("analysis.story.skills.ceiling.title"),
+    why: t("analysis.story.skills.ceiling.why"),
+    proof: t("analysis.story.skills.ceiling.proof", { combined: formatAnalysisNumber(combined), recent: signedNumber(recentDelta) }),
+    target: t("analysis.story.skills.ceiling.target")
+  };
 }
 
-function skillsCoachNote(runs) {
+function skillsProofCards(runs) {
   const stats = analysisScoreStats(runs, run => run.score);
   const driverAverage = resultAverage(runs.filter(run => run.skillsType === "driver"), run => run.score);
   const autonAverage = resultAverage(runs.filter(run => run.skillsType === "autonomous"), run => run.score);
-  if (Number.isFinite(driverAverage) && Number.isFinite(autonAverage)) {
-    return t("analysis.skillsNoteSplit", {
-      average: formatAnalysisNumber(stats.mean),
-      driver: formatAnalysisNumber(driverAverage),
-      auton: formatAnalysisNumber(autonAverage)
-    });
-  }
-  return t("analysis.skillsNoteOneType", { average: formatAnalysisNumber(stats.mean) });
+  const yellow = skillsYellowEfficiencyValue(runs);
+  const recentDelta = Number.isFinite(stats.recentMean) && Number.isFinite(stats.mean) ? stats.recentMean - stats.mean : null;
+  return [
+    {
+      label: t("analysis.skillsSplit"),
+      value: t("analysis.story.driverAutonValue", { driver: formatAnalysisNumber(driverAverage), auton: formatAnalysisNumber(autonAverage) }),
+      detail: t("analysis.skillsSplitDetail")
+    },
+    {
+      label: t("analysis.last5"),
+      value: signedNumber(recentDelta),
+      detail: recentFormDetail(stats) || t("analysis.story.needRecent")
+    },
+    {
+      label: t("analysis.yellowConversion"),
+      value: formatRate(yellow.rate),
+      detail: t("analysis.yellowConversionDetail", { scored: yellow.scored, placed: yellow.placed })
+    }
+  ];
 }
 
 function renderSkillsBreakdown(runs, allRuns) {
   return `
-    ${analysisSectionTitle(t("analysis.skillsSourceQuestion"), t("analysis.skillsSourceDetail"))}
-    <div class="analysis-insights">
+    ${analysisSectionTitle(t("analysis.story.strategyBreakdown"), t("analysis.skillsSourceDetail"))}
+    <div class="analysis-strategy-grid">
       ${renderSkillsInsights(runs, allRuns)}
     </div>
   `;
@@ -4209,40 +4613,50 @@ function sparklineSvg(records, scoreGetter) {
     return `<p class="analysis-empty-mini">${escapeHtml(t("analysis.needTrend"))}</p>`;
   }
 
-  const width = 360;
-  const height = 92;
-  const pad = 12;
+  const width = 760;
+  const height = 210;
+  const padX = 34;
+  const padY = 26;
   const min = Math.min(...points);
   const max = Math.max(...points);
   const range = Math.max(max - min, 1);
-  const step = points.length === 1 ? 0 : (width - pad * 2) / (points.length - 1);
+  const averageLine = average(points);
+  const recentStart = Math.max(0, points.length - 5);
+  const step = points.length === 1 ? 0 : (width - padX * 2) / (points.length - 1);
   const coordinates = points.map((score, index) => {
-    const x = pad + index * step;
-    const y = height - pad - ((score - min) / range) * (height - pad * 2);
+    const x = padX + index * step;
+    const y = height - padY - ((score - min) / range) * (height - padY * 2);
     return `${x.toFixed(1)},${y.toFixed(1)}`;
   }).join(" ");
+  const averageY = height - padY - ((averageLine - min) / range) * (height - padY * 2);
 
   const dots = points.map((score, index) => {
-    const x = pad + index * step;
-    const y = height - pad - ((score - min) / range) * (height - pad * 2);
-    const key = entries[index].record.mode === "skills" ? "run" : "match";
+    const x = padX + index * step;
+    const y = height - padY - ((score - min) / range) * (height - padY * 2);
+    const record = entries[index].record;
+    const key = record.mode === "skills" ? "run" : "match";
     const date = formatMatchDate(entries[index].record);
-    return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="3.5"><title>${escapeHtml(t(`analysis.pointTitle.${key}`, { index: index + 1, score: formatAnalysisNumber(score), date }))}</title></circle>`;
+    const resultClass = record.mode === "skills" ? (record.skillsType === "autonomous" ? "autonomous" : "driver") : (record.result || "saved");
+    const recentClass = index >= recentStart ? " recent" : "";
+    return `<circle class="analysis-story-dot ${escapeHtml(resultClass)}${recentClass}" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${index >= recentStart ? "5.2" : "4.1"}"><title>${escapeHtml(t(`analysis.pointTitle.${key}`, { index: index + 1, score: formatAnalysisNumber(score), date }))}</title></circle>`;
   }).join("");
 
   return `
-    <div class="analysis-chart-wrap">
+    <div class="analysis-story-chart">
       <div class="analysis-chart-labels">
         <span>${escapeHtml(t("analysis.low", { value: formatAnalysisNumber(min) }))}</span>
+        <span>${escapeHtml(t("analysis.story.averageLine", { value: formatAnalysisNumber(averageLine) }))}</span>
         <span>${escapeHtml(t("analysis.high", { value: formatAnalysisNumber(max) }))}</span>
       </div>
-      <svg class="analysis-sparkline" viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeHtml(t("analysis.scoreTrend"))}">
-        <line x1="${pad}" y1="${height - pad}" x2="${width - pad}" y2="${height - pad}" />
-        <polyline points="${coordinates}" />
+      <svg class="analysis-sparkline analysis-story-svg" viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeHtml(t("analysis.scoreTrend"))}">
+        <line class="analysis-grid-line" x1="${padX}" y1="${height - padY}" x2="${width - padX}" y2="${height - padY}" />
+        <line class="analysis-average-line" x1="${padX}" y1="${averageY.toFixed(1)}" x2="${width - padX}" y2="${averageY.toFixed(1)}" />
+        <polyline class="analysis-story-line" points="${coordinates}" />
         ${dots}
       </svg>
       <div class="analysis-chart-labels">
         <span>${escapeHtml(t("analysis.oldest", { value: formatAnalysisNumber(points[0]) }))}</span>
+        <span>${escapeHtml(t("analysis.story.recentFive"))}</span>
         <span>${escapeHtml(t("analysis.newest", { value: formatAnalysisNumber(points[points.length - 1]) }))}</span>
       </div>
     </div>
@@ -4299,17 +4713,17 @@ function renderHeadAnalysis(allMatches, matches) {
   const ties = matches.filter(match => match.result === "tie").length;
   const winRate = matches.length ? (wins / matches.length) * 100 : null;
 
-  summary.textContent = t("analysis.summaryAverage", { score: formatAnalysisNumber(stats.mean) });
-  coachWrap.innerHTML = analysisCoachNote(headCoachNote(matches));
-  insightsWrap.innerHTML = headCoachCards(matches);
-  statsWrap.innerHTML = [
-    analysisStat(t("analysis.averageScore"), formatAnalysisNumber(stats.mean)),
-    analysisStat(t("analysis.winRate"), formatAnalysisNumber(winRate, "%"), t("analysis.recordDetail", { wins, losses, ties })),
-    analysisStat(t("analysis.best"), formatAnalysisNumber(stats.best)),
-    analysisStat(t("analysis.median"), formatAnalysisNumber(stats.median)),
-    analysisStat(t("analysis.worst"), formatAnalysisNumber(stats.worst)),
-    analysisStat(t("analysis.last5"), formatAnalysisNumber(stats.recentMean), recentFormDetail(stats))
-  ].join("");
+  summary.textContent = t("analysis.story.headSummary", { score: formatAnalysisNumber(stats.mean), rate: formatRate(winRate) });
+  coachWrap.innerHTML = renderStoryHero(headRecommendation(matches));
+  insightsWrap.innerHTML = renderProofGrid(headProofCards(matches, allMatches));
+  statsWrap.innerHTML = renderNumberStrip([
+    { label: t("analysis.averageScore"), value: formatAnalysisNumber(stats.mean), detail: t("analysis.story.rangeAverage") },
+    { label: t("analysis.winRate"), value: formatRate(winRate), detail: t("analysis.recordDetail", { wins, losses, ties }) },
+    { label: t("analysis.best"), value: formatAnalysisNumber(stats.best), detail: t("analysis.story.ceilingMarker") },
+    { label: t("analysis.median"), value: formatAnalysisNumber(stats.median), detail: t("analysis.story.typicalMarker") },
+    { label: t("analysis.worst"), value: formatAnalysisNumber(stats.worst), detail: t("analysis.story.floorMarker") },
+    { label: t("analysis.last5"), value: formatAnalysisNumber(stats.recentMean), detail: recentFormDetail(stats) }
+  ]);
   trendWrap.innerHTML = renderTrend(matches, match => match.ourScore);
   breakdownWrap.innerHTML = renderHeadBreakdown(matches, allMatches);
   correlationWrap.innerHTML = renderCorrelation(matches, headCorrelationOptions, headCorrelationX, headCorrelationY, "head");
@@ -4364,16 +4778,16 @@ function renderSkillsAnalysis(allRuns, runs) {
     ? (bestDriver || 0) + (bestAuton || 0)
     : null;
 
-  summary.textContent = t("analysis.summaryAverage", { score: formatAnalysisNumber(stats.mean) });
-  coachWrap.innerHTML = analysisCoachNote(skillsCoachNote(runs));
-  insightsWrap.innerHTML = skillsCoachCards(runs);
-  statsWrap.innerHTML = [
-    analysisStat(t("analysis.averageScore"), formatAnalysisNumber(stats.mean)),
-    analysisStat(t("analysis.best"), formatAnalysisNumber(stats.best)),
-    analysisStat(t("analysis.median"), formatAnalysisNumber(stats.median)),
-    analysisStat(t("analysis.worst"), formatAnalysisNumber(stats.worst)),
-    analysisStat(t("analysis.last5"), formatAnalysisNumber(stats.recentMean), recentFormDetail(stats))
-  ].join("");
+  summary.textContent = t("analysis.story.skillsSummary", { score: formatAnalysisNumber(stats.mean), combined: formatAnalysisNumber(theoretical) });
+  coachWrap.innerHTML = renderStoryHero(skillsRecommendation(runs));
+  insightsWrap.innerHTML = renderProofGrid(skillsProofCards(runs));
+  statsWrap.innerHTML = renderNumberStrip([
+    { label: t("analysis.averageScore"), value: formatAnalysisNumber(stats.mean), detail: t("analysis.story.rangeAverage") },
+    { label: t("analysis.best"), value: formatAnalysisNumber(stats.best), detail: t("analysis.story.ceilingMarker") },
+    { label: t("analysis.median"), value: formatAnalysisNumber(stats.median), detail: t("analysis.story.typicalMarker") },
+    { label: t("analysis.worst"), value: formatAnalysisNumber(stats.worst), detail: t("analysis.story.floorMarker") },
+    { label: t("analysis.last5"), value: formatAnalysisNumber(stats.recentMean), detail: recentFormDetail(stats) }
+  ]);
   splitWrap.innerHTML = `
     ${analysisSectionTitle(t("analysis.skillsQuestion"), t("analysis.skillsQuestionDetail"))}
     <div class="analysis-trend-head analysis-subhead">
