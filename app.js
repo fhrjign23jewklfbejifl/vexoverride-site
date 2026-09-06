@@ -265,8 +265,8 @@ const translations = {
     "analysis.story.recommendedFocus": "Recommended focus",
     "analysis.story.why": "Why",
     "analysis.story.proof": "Proof",
-    "analysis.story.nextTarget": "Next practice target",
-    "analysis.story.theStoryNow": "The story right now",
+    "analysis.story.nextTarget": "Do this next",
+    "analysis.story.theStoryNow": "Coach read",
     "analysis.story.matchPhases": "Match phases",
     "analysis.story.openingPhase": "Opening phase",
     "analysis.story.controlPhase": "Control phase",
@@ -274,16 +274,16 @@ const translations = {
     "analysis.story.routeStart": "Route start",
     "analysis.story.routeControl": "Route control",
     "analysis.story.routeCeiling": "Route ceiling",
-    "analysis.story.openingHeadDetail": "{wins} wins, {losses} losses, {ties} ties after the match starts taking shape.",
-    "analysis.story.controlHeadDetail": "Center plus owned yellows tell the control story: {yellows} yellow conversion, {pins} red/blue pins.",
-    "analysis.story.finishHeadDetail": "{missed} estimated missed points with a {rate} win rate.",
-    "analysis.story.routeStartDetail": "The route begins with the balance between Driver and Autonomous.",
-    "analysis.story.routeControlDetail": "Center and yellow conversion are the control checks. Yellow conversion: {yellows}.",
+    "analysis.story.openingHeadDetail": "Auton record: {autonWins}W / {autonTies}T / {autonLosses}L. Average auton points: {points}.",
+    "analysis.story.controlHeadDetail": "Center control: {center}. Yellow conversion: {yellows}. Red/blue pins: {pins}.",
+    "analysis.story.finishHeadDetail": "Average margin: {margin}. Estimated missed points: {missed}.",
+    "analysis.story.routeStartDetail": "Driver avg {driver}. Autonomous avg {auton}.",
+    "analysis.story.routeControlDetail": "Center active {center}. Yellow conversion {yellows}.",
     "analysis.story.strategyMap": "Strategy map",
     "analysis.story.strategyMapHead": "Where the match is tilting",
-    "analysis.story.strategyMapDetail": "This field-style map turns the main scoring levers into one visual: green is stable, red is the leak to attack next.",
+    "analysis.story.strategyMapDetail": "Green is holding. Red is the next leak to attack.",
     "analysis.story.strategyMapSkills": "Where the route is leaking value",
-    "analysis.story.strategyMapSkillsDetail": "This map keeps Skills focused on route execution, not extra dashboards.",
+    "analysis.story.strategyMapSkillsDetail": "Use this to spot the weakest route segment fast.",
     "analysis.story.mapAuton": "Auton",
     "analysis.story.mapCenter": "Center",
     "analysis.story.mapYellows": "Yellows",
@@ -294,25 +294,25 @@ const translations = {
     "analysis.story.whatChanges": "What changes when we win",
     "analysis.story.nextChapter": "Next chapter",
     "analysis.story.missionAuton": "Opening mission",
-    "analysis.story.missionAutonDetail": "Current auton win rate is {value}; practice until it becomes a predictable start.",
+    "analysis.story.missionAutonDetail": "Raise auton to {value} or better in a 10-run drill.",
     "analysis.story.missionCenter": "Control mission",
-    "analysis.story.missionCenterDetail": "Center control is {value}; build the endgame habit around that swing.",
+    "analysis.story.missionCenterDetail": "Run final-20-second reps until center control is automatic.",
     "analysis.story.missionReview": "Review mission",
-    "analysis.story.missionReviewDetail": "After practice, save five clean records so the next story has real proof.",
+    "analysis.story.missionReviewDetail": "Save five clean records after the drill.",
     "analysis.story.missionDriver": "Driver mission",
-    "analysis.story.missionDriverDetail": "Driver average is {value}; choose one safer route and make it repeatable.",
-    "analysis.story.missionSkillsAutonDetail": "Autonomous average is {value}; add one reliable scoring sequence.",
+    "analysis.story.missionDriverDetail": "Build one driver route that beats {value} repeatedly.",
+    "analysis.story.missionSkillsAutonDetail": "Add one auton sequence that beats {value} repeatedly.",
     "analysis.story.whyWeThink": "Why we think that",
     "analysis.story.whyWeThinkDetail": "The three strongest signals from your saved data.",
     "analysis.story.numberProof": "Number proof",
-    "analysis.story.numberProofDetail": "The compact scoreboard behind the recommendation.",
-    "analysis.story.progressStory": "Progress story",
+    "analysis.story.numberProofDetail": "The quick proof behind the coach read.",
+    "analysis.story.progressStory": "Season timeline",
     "analysis.story.strategyBreakdown": "Strategy breakdown",
     "analysis.story.strategyDetail": "Where the match is usually being won, lost, or left unfinished.",
     "analysis.story.averageLine": "Average {value}",
     "analysis.story.recentFive": "Recent 5 highlighted",
-    "analysis.story.headSummary": "Averaging {score} points with a {rate} win rate in this range.",
-    "analysis.story.skillsSummary": "Averaging {score} Skills points with a {combined} best combined ceiling.",
+    "analysis.story.headSummary": "{count} saved matches. Average {score}. Win rate {rate}.",
+    "analysis.story.skillsSummary": "{count} saved runs. Average {score}. Best combined {combined}.",
     "analysis.story.record": "Record",
     "analysis.story.recordDetail": "{rate} win rate in this range.",
     "analysis.story.needRecent": "Save five records in this range for a stronger recent-form read.",
@@ -324,31 +324,31 @@ const translations = {
     "analysis.story.winLossDifference": "Win vs loss difference",
     "analysis.story.winsVsLosses": "Wins / losses",
     "analysis.story.winsLosses": "wins / losses",
-    "analysis.story.winLossDetail": "This shows what changes most when the match turns into a win.",
+    "analysis.story.winLossDetail": "The biggest difference between wins and losses.",
     "analysis.story.driverAutonValue": "Driver {driver} / Auton {auton}",
     "analysis.story.head.auton.title": "Make autonomous reliable first",
-    "analysis.story.head.auton.why": "Auton is the earliest swing in the match, and losing it forces the drive team to chase points.",
-    "analysis.story.head.auton.proof": "Auton win rate is {rate}; average final margin is {margin}.",
+    "analysis.story.head.auton.why": "The first swing is unstable, so good matches start with extra pressure.",
+    "analysis.story.head.auton.proof": "Auton win rate: {rate}. Average margin: {margin}.",
     "analysis.story.head.auton.target": "Run a repeatable auton that wins or ties before adding risk.",
     "analysis.story.head.center.title": "Finish with center control",
-    "analysis.story.head.center.why": "Center control turns midfield robots and center yellows into repeatable points.",
-    "analysis.story.head.center.proof": "Center control is happening {rate} of the time; missed points average {missed}.",
+    "analysis.story.head.center.why": "Too many points are decided around the center late.",
+    "analysis.story.head.center.proof": "Center control: {rate}. Missed points: {missed}.",
     "analysis.story.head.center.target": "Practice final 20 seconds around center positioning.",
     "analysis.story.head.yellow.title": "Score the yellows you already place",
-    "analysis.story.head.yellow.why": "Yellow pins only matter when ownership is correct, so conversion beats raw volume.",
-    "analysis.story.head.yellow.proof": "{scored} of {placed} yellows counted, a {rate} conversion rate.",
+    "analysis.story.head.yellow.why": "You are placing yellows that do not always become points.",
+    "analysis.story.head.yellow.proof": "{scored}/{placed} yellows counted. Conversion: {rate}.",
     "analysis.story.head.yellow.target": "Call toggle ownership before placing extra yellows.",
     "analysis.story.head.floor.title": "Raise the bad-match floor",
-    "analysis.story.head.floor.why": "Your ceiling is there, but rough rounds are pulling the average down.",
-    "analysis.story.head.floor.proof": "Average is {average}, while the lower-range floor is {floor}.",
+    "analysis.story.head.floor.why": "The best matches are fine; the bad matches are too expensive.",
+    "analysis.story.head.floor.proof": "Average: {average}. Bad-day floor: {floor}.",
     "analysis.story.head.floor.target": "Build a low-risk scoring plan for messy matches.",
     "analysis.story.head.margin.title": "Create more separation",
-    "analysis.story.head.margin.why": "Close matches need cleaner point swings, especially auton and controlled pins.",
-    "analysis.story.head.margin.proof": "Win rate is {rate}; average margin is {margin}.",
+    "analysis.story.head.margin.why": "Wins are not separated enough from losses yet.",
+    "analysis.story.head.margin.proof": "Win rate: {rate}. Average margin: {margin}.",
     "analysis.story.head.margin.target": "Practice the two fastest swings that add margin.",
     "analysis.story.head.ceiling.title": "Turn the best-match pattern into the normal pattern",
-    "analysis.story.head.ceiling.why": "Your data says the path is working; the next jump is making it repeatable.",
-    "analysis.story.head.ceiling.proof": "Average score is {average}; red/blue pin average is {pins}.",
+    "analysis.story.head.ceiling.why": "The pattern is there. Now make it boringly repeatable.",
+    "analysis.story.head.ceiling.proof": "Average: {average}. Red/blue pins: {pins}.",
     "analysis.story.head.ceiling.target": "Replay the best-match blueprint until it becomes routine.",
     "analysis.story.skills.balance.title": "Save both Driver and Autonomous routes",
     "analysis.story.skills.balance.why": "The combined ceiling is only visible when both route types are represented.",
@@ -764,9 +764,9 @@ Object.assign(translations.es, {
   "analysis.focus": "En qué enfocarse ahora",
   "analysis.story.recommendedFocus": "Enfoque recomendado",
   "analysis.story.why": "Por qué",
-  "analysis.story.proof": "Prueba",
-  "analysis.story.nextTarget": "Meta de próxima práctica",
-  "analysis.story.theStoryNow": "La historia ahora",
+    "analysis.story.proof": "Prueba",
+    "analysis.story.nextTarget": "Haz esto ahora",
+    "analysis.story.theStoryNow": "Lectura del coach",
   "analysis.story.matchPhases": "Fases del partido",
   "analysis.story.openingPhase": "Apertura",
   "analysis.story.controlPhase": "Control",
@@ -774,16 +774,16 @@ Object.assign(translations.es, {
   "analysis.story.routeStart": "Inicio de ruta",
   "analysis.story.routeControl": "Control de ruta",
   "analysis.story.routeCeiling": "Techo de ruta",
-  "analysis.story.openingHeadDetail": "{wins} victorias, {losses} derrotas, {ties} empates cuando el partido empieza a tomar forma.",
-  "analysis.story.controlHeadDetail": "Centro y amarillos poseídos cuentan la historia de control: {yellows} de conversión, {pins} pines rojos/azules.",
-  "analysis.story.finishHeadDetail": "{missed} puntos perdidos estimados con {rate} de victorias.",
-  "analysis.story.routeStartDetail": "La ruta empieza con el balance entre Driver y Autónomo.",
-  "analysis.story.routeControlDetail": "Centro y conversión de amarillos son los controles clave. Conversión: {yellows}.",
+  "analysis.story.openingHeadDetail": "Autónomo: {autonWins}V / {autonTies}E / {autonLosses}D. Puntos autónomos promedio: {points}.",
+  "analysis.story.controlHeadDetail": "Control del centro: {center}. Conversión amarilla: {yellows}. Pines rojos/azules: {pins}.",
+  "analysis.story.finishHeadDetail": "Margen promedio: {margin}. Puntos perdidos estimados: {missed}.",
+  "analysis.story.routeStartDetail": "Promedio Driver {driver}. Promedio Autónomo {auton}.",
+  "analysis.story.routeControlDetail": "Centro activo {center}. Conversión amarilla {yellows}.",
   "analysis.story.strategyMap": "Mapa estratégico",
   "analysis.story.strategyMapHead": "Hacia dónde se inclina el partido",
-  "analysis.story.strategyMapDetail": "Este mapa de campo convierte las palancas de puntuación en un visual: verde es estable, rojo es la fuga a atacar.",
+  "analysis.story.strategyMapDetail": "Verde aguanta. Rojo es la fuga que toca atacar.",
   "analysis.story.strategyMapSkills": "Dónde la ruta pierde valor",
-  "analysis.story.strategyMapSkillsDetail": "Este mapa mantiene Skills enfocado en ejecución de ruta, no en otro tablero.",
+  "analysis.story.strategyMapSkillsDetail": "Úsalo para encontrar rápido el tramo más débil de la ruta.",
   "analysis.story.mapAuton": "Autónomo",
   "analysis.story.mapCenter": "Centro",
   "analysis.story.mapYellows": "Amarillos",
@@ -794,25 +794,25 @@ Object.assign(translations.es, {
   "analysis.story.whatChanges": "Qué cambia cuando ganamos",
   "analysis.story.nextChapter": "Siguiente capítulo",
   "analysis.story.missionAuton": "Misión de apertura",
-  "analysis.story.missionAutonDetail": "La tasa actual de autónomo ganado es {value}; practícalo hasta que sea un inicio predecible.",
+  "analysis.story.missionAutonDetail": "Sube autónomo a {value} o más en una rutina de 10 intentos.",
   "analysis.story.missionCenter": "Misión de control",
-  "analysis.story.missionCenterDetail": "El control del centro está en {value}; construye el final alrededor de ese cambio.",
+  "analysis.story.missionCenterDetail": "Haz repeticiones de los últimos 20 segundos hasta controlar centro sin pensarlo.",
   "analysis.story.missionReview": "Misión de revisión",
-  "analysis.story.missionReviewDetail": "Después de practicar, guarda cinco registros limpios para que la próxima historia tenga prueba real.",
+  "analysis.story.missionReviewDetail": "Guarda cinco registros limpios después del ejercicio.",
   "analysis.story.missionDriver": "Misión Driver",
-  "analysis.story.missionDriverDetail": "El promedio Driver es {value}; elige una ruta más segura y hazla repetible.",
-  "analysis.story.missionSkillsAutonDetail": "El promedio Autónomo es {value}; agrega una secuencia confiable de puntuación.",
+  "analysis.story.missionDriverDetail": "Crea una ruta Driver que supere {value} repetidamente.",
+  "analysis.story.missionSkillsAutonDetail": "Agrega una secuencia autónoma que supere {value} repetidamente.",
   "analysis.story.whyWeThink": "Por qué pensamos eso",
   "analysis.story.whyWeThinkDetail": "Las tres señales más fuertes de tus datos guardados.",
   "analysis.story.numberProof": "Prueba numérica",
-  "analysis.story.numberProofDetail": "El marcador compacto detrás de la recomendación.",
-  "analysis.story.progressStory": "Historia de progreso",
+  "analysis.story.numberProofDetail": "La prueba rápida detrás de la lectura del coach.",
+  "analysis.story.progressStory": "Línea de temporada",
   "analysis.story.strategyBreakdown": "Desglose estratégico",
   "analysis.story.strategyDetail": "Dónde el partido suele ganarse, perderse o quedar incompleto.",
   "analysis.story.averageLine": "Promedio {value}",
   "analysis.story.recentFive": "Últimos 5 resaltados",
-  "analysis.story.headSummary": "Promedio de {score} puntos con {rate} de victorias en este rango.",
-  "analysis.story.skillsSummary": "Promedio de {score} puntos de Skills con techo combinado de {combined}.",
+  "analysis.story.headSummary": "{count} partidos guardados. Promedio {score}. Victorias {rate}.",
+  "analysis.story.skillsSummary": "{count} intentos guardados. Promedio {score}. Mejor combinado {combined}.",
   "analysis.story.record": "Récord",
   "analysis.story.recordDetail": "{rate} de victorias en este rango.",
   "analysis.story.needRecent": "Guarda cinco registros en este rango para leer mejor la forma reciente.",
@@ -824,11 +824,11 @@ Object.assign(translations.es, {
   "analysis.story.winLossDifference": "Diferencia entre victorias y derrotas",
   "analysis.story.winsVsLosses": "Victorias / derrotas",
   "analysis.story.winsLosses": "victorias / derrotas",
-  "analysis.story.winLossDetail": "Muestra qué cambia más cuando el partido se convierte en victoria.",
+  "analysis.story.winLossDetail": "La mayor diferencia entre victorias y derrotas.",
   "analysis.story.driverAutonValue": "Driver {driver} / Autónomo {auton}",
   "analysis.story.head.auton.title": "Haz confiable el autónomo primero",
-  "analysis.story.head.auton.why": "Autónomo es el primer cambio de impulso del partido; perderlo obliga a perseguir puntos.",
-  "analysis.story.head.auton.proof": "La tasa de autónomo ganado es {rate}; el margen final promedio es {margin}.",
+  "analysis.story.head.auton.why": "El primer cambio del partido no es estable todavía.",
+  "analysis.story.head.auton.proof": "Autónomo ganado: {rate}. Margen promedio: {margin}.",
   "analysis.story.head.auton.target": "Ejecuta un autónomo repetible que gane o empate antes de agregar riesgo.",
   "analysis.story.head.center.title": "Termina con control del centro",
   "analysis.story.head.center.why": "El centro convierte robots de midfield y amarillos centrales en puntos repetibles.",
@@ -1261,9 +1261,9 @@ Object.assign(translations["zh-CN"], {
   "analysis.focus": "下一步重点",
   "analysis.story.recommendedFocus": "建议重点",
   "analysis.story.why": "原因",
-  "analysis.story.proof": "依据",
-  "analysis.story.nextTarget": "下次练习目标",
-  "analysis.story.theStoryNow": "当前故事",
+    "analysis.story.proof": "依据",
+    "analysis.story.nextTarget": "下一步",
+    "analysis.story.theStoryNow": "教练判断",
   "analysis.story.matchPhases": "比赛阶段",
   "analysis.story.openingPhase": "开局阶段",
   "analysis.story.controlPhase": "控制阶段",
@@ -1271,16 +1271,16 @@ Object.assign(translations["zh-CN"], {
   "analysis.story.routeStart": "路线开局",
   "analysis.story.routeControl": "路线控制",
   "analysis.story.routeCeiling": "路线上限",
-  "analysis.story.openingHeadDetail": "比赛开始成形后：{wins} 胜，{losses} 负，{ties} 平。",
-  "analysis.story.controlHeadDetail": "中心和拥有黄桩说明控制故事：黄桩转化 {yellows}，红/蓝桩 {pins}。",
-  "analysis.story.finishHeadDetail": "估算错失 {missed} 分，胜率 {rate}。",
-  "analysis.story.routeStartDetail": "路线从驾驶和自动的平衡开始。",
-  "analysis.story.routeControlDetail": "中心和黄桩转化是控制检查点。黄桩转化：{yellows}。",
+  "analysis.story.openingHeadDetail": "自动：{autonWins}胜 / {autonTies}平 / {autonLosses}负。平均自动分：{points}。",
+  "analysis.story.controlHeadDetail": "中心控制：{center}。黄桩转化：{yellows}。红/蓝桩：{pins}。",
+  "analysis.story.finishHeadDetail": "平均分差：{margin}。估算错失分：{missed}。",
+  "analysis.story.routeStartDetail": "驾驶平均 {driver}。自动平均 {auton}。",
+  "analysis.story.routeControlDetail": "中心激活 {center}。黄桩转化 {yellows}。",
   "analysis.story.strategyMap": "策略地图",
   "analysis.story.strategyMapHead": "比赛正在往哪里倾斜",
-  "analysis.story.strategyMapDetail": "这个场地图把主要得分因素变成一个视觉：绿色是稳定点，红色是下一个要解决的漏分点。",
+  "analysis.story.strategyMapDetail": "绿色稳住了。红色是下一个要修的漏分点。",
   "analysis.story.strategyMapSkills": "路线哪里在漏分",
-  "analysis.story.strategyMapSkillsDetail": "这个地图让技能赛专注于路线执行，而不是更多仪表盘。",
+  "analysis.story.strategyMapSkillsDetail": "用它快速找到路线中最弱的一段。",
   "analysis.story.mapAuton": "自动",
   "analysis.story.mapCenter": "中心",
   "analysis.story.mapYellows": "黄桩",
@@ -1291,25 +1291,25 @@ Object.assign(translations["zh-CN"], {
   "analysis.story.whatChanges": "获胜时什么发生变化",
   "analysis.story.nextChapter": "下一章",
   "analysis.story.missionAuton": "开局任务",
-  "analysis.story.missionAutonDetail": "当前自动胜率 {value}；练到它成为可预测开局。",
+  "analysis.story.missionAutonDetail": "做10次练习，把自动提升到 {value} 或更高。",
   "analysis.story.missionCenter": "控制任务",
-  "analysis.story.missionCenterDetail": "中心控制率 {value}；围绕这个分差摆动建立收尾习惯。",
+  "analysis.story.missionCenterDetail": "练最后20秒，直到中心控制变成习惯。",
   "analysis.story.missionReview": "复盘任务",
-  "analysis.story.missionReviewDetail": "练习后保存五条干净记录，让下一次分析有真实依据。",
+  "analysis.story.missionReviewDetail": "练习后保存五条干净记录。",
   "analysis.story.missionDriver": "驾驶任务",
-  "analysis.story.missionDriverDetail": "驾驶平均 {value}；选择一条更稳路线并让它可重复。",
-  "analysis.story.missionSkillsAutonDetail": "自动平均 {value}；加入一个可靠得分序列。",
+  "analysis.story.missionDriverDetail": "做一条能反复超过 {value} 的驾驶路线。",
+  "analysis.story.missionSkillsAutonDetail": "加入一个能反复超过 {value} 的自动序列。",
   "analysis.story.whyWeThink": "我们为什么这样判断",
   "analysis.story.whyWeThinkDetail": "来自已保存数据的三个最强信号。",
   "analysis.story.numberProof": "数字依据",
-  "analysis.story.numberProofDetail": "支撑建议的简明数据。",
-  "analysis.story.progressStory": "进步故事",
+  "analysis.story.numberProofDetail": "支撑教练判断的快速数据。",
+  "analysis.story.progressStory": "赛季时间线",
   "analysis.story.strategyBreakdown": "策略拆解",
   "analysis.story.strategyDetail": "比赛通常在哪些地方赢、输或漏分。",
   "analysis.story.averageLine": "平均 {value}",
   "analysis.story.recentFive": "突出最近5次",
-  "analysis.story.headSummary": "此范围平均 {score} 分，胜率 {rate}。",
-  "analysis.story.skillsSummary": "技能赛平均 {score} 分，最佳合计上限 {combined}。",
+  "analysis.story.headSummary": "{count} 场已保存。平均 {score}。胜率 {rate}。",
+  "analysis.story.skillsSummary": "{count} 次已保存。平均 {score}。最佳合计 {combined}。",
   "analysis.story.record": "战绩",
   "analysis.story.recordDetail": "此范围胜率 {rate}。",
   "analysis.story.needRecent": "此范围保存五条记录后，近期状态会更可靠。",
@@ -1321,11 +1321,11 @@ Object.assign(translations["zh-CN"], {
   "analysis.story.winLossDifference": "胜负差异",
   "analysis.story.winsVsLosses": "胜场 / 负场",
   "analysis.story.winsLosses": "胜场 / 负场",
-  "analysis.story.winLossDetail": "显示比赛变成胜利时，哪些指标变化最大。",
+  "analysis.story.winLossDetail": "胜场和负场之间最大的区别。",
   "analysis.story.driverAutonValue": "驾驶 {driver} / 自动 {auton}",
   "analysis.story.head.auton.title": "先让自动稳定",
-  "analysis.story.head.auton.why": "自动是比赛最早的分差摆动；输了自动会迫使后面追分。",
-  "analysis.story.head.auton.proof": "自动胜率 {rate}；最终平均分差 {margin}。",
+  "analysis.story.head.auton.why": "比赛第一个得分摆动还不稳定。",
+  "analysis.story.head.auton.proof": "自动胜率：{rate}。平均分差：{margin}。",
   "analysis.story.head.auton.target": "先跑能稳定获胜或打平的自动，再增加风险。",
   "analysis.story.head.center.title": "以中心控制结束",
   "analysis.story.head.center.why": "中心控制把 midfield 机器人和中心黄桩变成稳定分。",
@@ -4640,29 +4640,42 @@ function headRecommendation(matches) {
 
 function headProofCards(matches, allMatches) {
   const stats = analysisScoreStats(matches, match => match.ourScore);
-  const wins = matches.filter(match => match.result === "win").length;
-  const losses = matches.filter(match => match.result === "loss").length;
-  const ties = matches.filter(match => match.result === "tie").length;
   const recentDelta = Number.isFinite(stats.recentMean) && Number.isFinite(stats.mean) ? stats.recentMean - stats.mean : null;
   const missedAverage = resultAverage(matches, match => missedHeadPoints(match).total);
   const autonRate = percentRate(matches.filter(autonWon).length, matches.length);
+  const autonWins = matches.filter(autonWon).length;
+  const autonLosses = matches.filter(autonLost).length;
+  const autonTies = matches.filter(autonTied).length;
   const centerRate = percentRate(matches.filter(centerControlledByUs).length, matches.length);
   const yellow = yellowEfficiencyValue(matches);
+  const margin = resultAverage(matches, scoreMargin);
   return [
     {
       label: t("analysis.story.openingPhase"),
       value: formatRate(autonRate),
-      detail: t("analysis.story.openingHeadDetail", { wins, losses, ties })
+      detail: t("analysis.story.openingHeadDetail", {
+        autonWins,
+        autonLosses,
+        autonTies,
+        points: formatAnalysisNumber(resultAverage(matches, autonPoints))
+      })
     },
     {
       label: t("analysis.story.controlPhase"),
       value: formatRate(centerRate),
-      detail: t("analysis.story.controlHeadDetail", { yellows: formatRate(yellow.rate), pins: formatAnalysisNumber(resultAverage(matches, ourAlliancePins)) })
+      detail: t("analysis.story.controlHeadDetail", {
+        center: formatRate(centerRate),
+        yellows: formatRate(yellow.rate),
+        pins: formatAnalysisNumber(resultAverage(matches, ourAlliancePins))
+      })
     },
     {
       label: t("analysis.story.finishPhase"),
       value: signedNumber(recentDelta),
-      detail: t("analysis.story.finishHeadDetail", { missed: formatAnalysisNumber(missedAverage), rate: formatRate(percentRate(wins, matches.length)) })
+      detail: t("analysis.story.finishHeadDetail", {
+        margin: signedNumber(margin),
+        missed: formatAnalysisNumber(missedAverage)
+      })
     }
   ];
 }
@@ -4671,11 +4684,23 @@ function renderHeadBreakdown(matches, allMatches) {
   const wins = matches.filter(match => match.result === "win");
   const losses = matches.filter(match => match.result === "loss");
   const recommendation = headRecommendation(matches);
-  const compare = (label, getter, options = {}) => {
-    const winValue = resultAverage(wins, getter);
-    const lossValue = resultAverage(losses, getter);
-    const display = value => options.percent ? formatRate(Number.isFinite(value) ? value * 100 : value) : formatAnalysisNumber(value);
-    return analysisMiniRow(label, `${display(winValue)} / ${display(lossValue)}`, t("analysis.story.winsLosses"));
+  const comparisonItems = [
+    { label: t("analysis.averageScore"), getter: match => match.ourScore },
+    { label: t("analysis.autonReliability"), getter: autonWon, percent: true },
+    { label: t("analysis.centerImpact"), getter: centerControlledByUs, percent: true },
+    { label: t("analysis.yellowEfficiency"), getter: match => yellowPins(match) ? numericValue(ownedYellowPins(match)) / yellowPins(match) : null, percent: true },
+    { label: t("analysis.correlationOption.margin"), getter: scoreMargin }
+  ].map(item => {
+    const winValue = resultAverage(wins, item.getter);
+    const lossValue = resultAverage(losses, item.getter);
+    const difference = Number.isFinite(winValue) && Number.isFinite(lossValue) ? Math.abs(winValue - lossValue) : -1;
+    return { ...item, winValue, lossValue, difference };
+  })
+    .sort((a, b) => b.difference - a.difference)
+    .slice(0, 3);
+  const compare = item => {
+    const display = value => item.percent ? formatRate(Number.isFinite(value) ? value * 100 : value) : formatAnalysisNumber(value);
+    return analysisMiniRow(item.label, `${display(item.winValue)} / ${display(item.lossValue)}`, t("analysis.story.winsLosses"));
   };
   return `
     ${renderHeadStrategyMap(matches)}
@@ -4687,11 +4712,7 @@ function renderHeadBreakdown(matches, allMatches) {
       </div>
       <div class="analysis-insight-card analysis-insight-wide">
         <div class="analysis-mini-list">
-          ${compare(t("analysis.averageScore"), match => match.ourScore)}
-          ${compare(t("analysis.autonReliability"), autonWon, { percent: true })}
-          ${compare(t("analysis.centerImpact"), centerControlledByUs, { percent: true })}
-          ${compare(t("analysis.yellowEfficiency"), match => yellowPins(match) ? numericValue(ownedYellowPins(match)) / yellowPins(match) : null, { percent: true })}
-          ${compare(t("analysis.correlationOption.margin"), scoreMargin)}
+          ${comparisonItems.map(compare).join("")}
         </div>
       </div>
     </section>
@@ -4774,12 +4795,12 @@ function skillsProofCards(runs) {
     {
       label: t("analysis.story.routeStart"),
       value: t("analysis.story.driverAutonValue", { driver: formatAnalysisNumber(driverAverage), auton: formatAnalysisNumber(autonAverage) }),
-      detail: t("analysis.story.routeStartDetail")
+      detail: t("analysis.story.routeStartDetail", { driver: formatAnalysisNumber(driverAverage), auton: formatAnalysisNumber(autonAverage) })
     },
     {
       label: t("analysis.story.routeControl"),
       value: formatRate(centerRate),
-      detail: t("analysis.story.routeControlDetail", { yellows: formatRate(yellow.rate) })
+      detail: t("analysis.story.routeControlDetail", { center: formatRate(centerRate), yellows: formatRate(yellow.rate) })
     },
     {
       label: t("analysis.story.routeCeiling"),
@@ -4913,16 +4934,15 @@ function renderHeadAnalysis(allMatches, matches) {
   const ties = matches.filter(match => match.result === "tie").length;
   const winRate = matches.length ? (wins / matches.length) * 100 : null;
 
-  summary.textContent = t("analysis.story.headSummary", { score: formatAnalysisNumber(stats.mean), rate: formatRate(winRate) });
+  summary.textContent = t("analysis.story.headSummary", { count: matches.length, score: formatAnalysisNumber(stats.mean), rate: formatRate(winRate) });
   coachWrap.innerHTML = renderStoryHero(headRecommendation(matches));
   insightsWrap.innerHTML = renderProofGrid(headProofCards(matches, allMatches));
   statsWrap.innerHTML = renderNumberStrip([
     { label: t("analysis.averageScore"), value: formatAnalysisNumber(stats.mean), detail: t("analysis.story.rangeAverage") },
     { label: t("analysis.winRate"), value: formatRate(winRate), detail: t("analysis.recordDetail", { wins, losses, ties }) },
+    { label: t("analysis.last5"), value: formatAnalysisNumber(stats.recentMean), detail: recentFormDetail(stats) },
     { label: t("analysis.best"), value: formatAnalysisNumber(stats.best), detail: t("analysis.story.ceilingMarker") },
-    { label: t("analysis.median"), value: formatAnalysisNumber(stats.median), detail: t("analysis.story.typicalMarker") },
-    { label: t("analysis.worst"), value: formatAnalysisNumber(stats.worst), detail: t("analysis.story.floorMarker") },
-    { label: t("analysis.last5"), value: formatAnalysisNumber(stats.recentMean), detail: recentFormDetail(stats) }
+    { label: t("analysis.worst"), value: formatAnalysisNumber(stats.worst), detail: t("analysis.story.floorMarker") }
   ]);
   trendWrap.innerHTML = renderTrend(matches, match => match.ourScore);
   breakdownWrap.innerHTML = renderHeadBreakdown(matches, allMatches);
@@ -4978,15 +4998,15 @@ function renderSkillsAnalysis(allRuns, runs) {
     ? (bestDriver || 0) + (bestAuton || 0)
     : null;
 
-  summary.textContent = t("analysis.story.skillsSummary", { score: formatAnalysisNumber(stats.mean), combined: formatAnalysisNumber(theoretical) });
+  summary.textContent = t("analysis.story.skillsSummary", { count: runs.length, score: formatAnalysisNumber(stats.mean), combined: formatAnalysisNumber(theoretical) });
   coachWrap.innerHTML = renderStoryHero(skillsRecommendation(runs));
   insightsWrap.innerHTML = renderProofGrid(skillsProofCards(runs));
   statsWrap.innerHTML = renderNumberStrip([
     { label: t("analysis.averageScore"), value: formatAnalysisNumber(stats.mean), detail: t("analysis.story.rangeAverage") },
+    { label: t("analysis.last5"), value: formatAnalysisNumber(stats.recentMean), detail: recentFormDetail(stats) },
     { label: t("analysis.best"), value: formatAnalysisNumber(stats.best), detail: t("analysis.story.ceilingMarker") },
-    { label: t("analysis.median"), value: formatAnalysisNumber(stats.median), detail: t("analysis.story.typicalMarker") },
     { label: t("analysis.worst"), value: formatAnalysisNumber(stats.worst), detail: t("analysis.story.floorMarker") },
-    { label: t("analysis.last5"), value: formatAnalysisNumber(stats.recentMean), detail: recentFormDetail(stats) }
+    { label: t("analysis.bestCombined"), value: formatAnalysisNumber(theoretical), detail: t("analysis.skillsSplitDetail") }
   ]);
   splitWrap.innerHTML = `
     ${analysisSectionTitle(t("analysis.skillsQuestion"), t("analysis.skillsQuestionDetail"))}
