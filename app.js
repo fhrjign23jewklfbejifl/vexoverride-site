@@ -307,6 +307,14 @@ const translations = {
     "analysis.story.numberProof": "Number proof",
     "analysis.story.numberProofDetail": "The quick proof behind the coach read.",
     "analysis.story.progressStory": "Season timeline",
+    "analysis.story.filmRoom": "Film room",
+    "analysis.story.timelineUp": "The tape says you are climbing",
+    "analysis.story.timelineDown": "The tape says the last stretch slipped",
+    "analysis.story.timelineFlat": "The tape says the level is steady",
+    "analysis.story.timelineUpDetail": "Recent records are {delta} above the opening stretch. Keep the better pattern and drill the weakest phase.",
+    "analysis.story.timelineDownDetail": "Recent records are {delta} below the opening stretch. Treat this as a practice signal, not a panic button.",
+    "analysis.story.timelineFlatDetail": "Recent records are within {delta} of the opening stretch. The next jump needs one specific scoring habit.",
+    "analysis.story.recentSwing": "Recent swing",
     "analysis.story.strategyBreakdown": "Strategy breakdown",
     "analysis.story.strategyDetail": "Where the match is usually being won, lost, or left unfinished.",
     "analysis.story.averageLine": "Average {value}",
@@ -807,6 +815,14 @@ Object.assign(translations.es, {
   "analysis.story.numberProof": "Prueba numérica",
   "analysis.story.numberProofDetail": "La prueba rápida detrás de la lectura del coach.",
   "analysis.story.progressStory": "Línea de temporada",
+  "analysis.story.filmRoom": "Sala de video",
+  "analysis.story.timelineUp": "La grabación dice que están subiendo",
+  "analysis.story.timelineDown": "La grabación dice que el tramo reciente bajó",
+  "analysis.story.timelineFlat": "La grabación dice que el nivel está estable",
+  "analysis.story.timelineUpDetail": "Los registros recientes están {delta} por encima del tramo inicial. Mantén el patrón mejor y practica la fase más débil.",
+  "analysis.story.timelineDownDetail": "Los registros recientes están {delta} por debajo del tramo inicial. Tómalo como señal de práctica, no como pánico.",
+  "analysis.story.timelineFlatDetail": "Los registros recientes están a {delta} del tramo inicial. El próximo salto necesita un hábito de puntuación específico.",
+  "analysis.story.recentSwing": "Cambio reciente",
   "analysis.story.strategyBreakdown": "Desglose estratégico",
   "analysis.story.strategyDetail": "Dónde el partido suele ganarse, perderse o quedar incompleto.",
   "analysis.story.averageLine": "Promedio {value}",
@@ -1304,6 +1320,14 @@ Object.assign(translations["zh-CN"], {
   "analysis.story.numberProof": "数字依据",
   "analysis.story.numberProofDetail": "支撑教练判断的快速数据。",
   "analysis.story.progressStory": "赛季时间线",
+  "analysis.story.filmRoom": "录像分析室",
+  "analysis.story.timelineUp": "录像显示你们正在上升",
+  "analysis.story.timelineDown": "录像显示最近一段下滑了",
+  "analysis.story.timelineFlat": "录像显示水平基本稳定",
+  "analysis.story.timelineUpDetail": "最近记录比开局阶段高 {delta}。保留更好的模式，然后练最弱阶段。",
+  "analysis.story.timelineDownDetail": "最近记录比开局阶段低 {delta}。把它当成训练信号，不是警报。",
+  "analysis.story.timelineFlatDetail": "最近记录与开局阶段只差 {delta}。下一次提升需要一个具体得分习惯。",
+  "analysis.story.recentSwing": "近期变化",
   "analysis.story.strategyBreakdown": "策略拆解",
   "analysis.story.strategyDetail": "比赛通常在哪些地方赢、输或漏分。",
   "analysis.story.averageLine": "平均 {value}",
@@ -4887,10 +4911,55 @@ function sparklineSvg(records, scoreGetter) {
   `;
 }
 
+function timelineRead(records, scoreGetter) {
+  const scores = records
+    .slice()
+    .sort((a, b) => recordTimestamp(a) - recordTimestamp(b))
+    .map(record => numericValue(scoreGetter(record)))
+    .filter(value => Number.isFinite(value));
+  if (scores.length < 4) {
+    return {
+      title: t("analysis.story.timelineFlat"),
+      detail: t("analysis.story.needRecent"),
+      delta: "--",
+      tone: "flat"
+    };
+  }
+  const windowSize = Math.min(5, Math.max(2, Math.floor(scores.length / 3)));
+  const opening = average(scores.slice(0, windowSize));
+  const recent = average(scores.slice(-windowSize));
+  const delta = recent - opening;
+  const absDelta = Math.abs(delta);
+  const tone = delta > 6 ? "up" : delta < -6 ? "down" : "flat";
+  const detailKey = tone === "up"
+    ? "analysis.story.timelineUpDetail"
+    : tone === "down"
+      ? "analysis.story.timelineDownDetail"
+      : "analysis.story.timelineFlatDetail";
+  return {
+    title: t(`analysis.story.timeline${tone === "up" ? "Up" : tone === "down" ? "Down" : "Flat"}`),
+    detail: t(detailKey, { delta: signedNumber(delta) }),
+    delta: signedNumber(delta),
+    tone
+  };
+}
+
 function renderTrend(records, scoreGetter) {
   const isSkills = records.some(record => record.mode === "skills");
+  const read = timelineRead(records, scoreGetter);
   return `
     <section class="analysis-timeline-stage">
+      <div class="analysis-film-room-read ${escapeHtml(read.tone)}">
+        <div>
+          <span>${escapeHtml(t("analysis.story.filmRoom"))}</span>
+          <h4>${escapeHtml(read.title)}</h4>
+          <p>${escapeHtml(read.detail)}</p>
+        </div>
+        <strong>
+          <small>${escapeHtml(t("analysis.story.recentSwing"))}</small>
+          ${escapeHtml(read.delta)}
+        </strong>
+      </div>
       <div class="analysis-trend-head">
         <span>${escapeHtml(t("analysis.story.progressStory"))}</span>
         <small>${escapeHtml(t(isSkills ? "analysis.trendDetail.run" : "analysis.trendDetail.match"))}</small>

@@ -804,17 +804,71 @@ button {
 
 .analysis-timeline-stage {
   display: grid;
-  gap: 12px;
-  padding: 18px;
+  gap: 16px;
+  padding: 22px;
   border: 1px solid rgba(102, 217, 208, .20);
   border-radius: var(--radius-lg);
   background:
-    radial-gradient(circle at 72% 16%, rgba(132, 241, 94, .18), transparent 30%),
-    radial-gradient(circle at 16% 86%, rgba(255, 111, 125, .10), transparent 28%),
+    linear-gradient(90deg, rgba(132, 241, 94, .13), transparent 1px),
+    linear-gradient(rgba(102, 217, 208, .10), transparent 1px),
+    radial-gradient(circle at 72% 16%, rgba(132, 241, 94, .24), transparent 31%),
+    radial-gradient(circle at 16% 86%, rgba(255, 111, 125, .13), transparent 30%),
     linear-gradient(145deg, rgba(102, 217, 208, .10), rgba(255, 255, 255, .035)),
     rgba(5, 14, 19, .66);
-  box-shadow: 0 22px 52px rgba(0, 0, 0, .24), inset 0 0 80px rgba(102, 217, 208, .035);
+  background-size: 42px 42px, 42px 42px, auto, auto, auto, auto;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, .34), inset 0 0 90px rgba(102, 217, 208, .045);
   animation: analysis-card-enter .5s ease-out both;
+}
+
+.analysis-film-room-read {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, .10);
+}
+
+.analysis-film-room-read span,
+.analysis-film-room-read small {
+  color: #84f15e;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.analysis-film-room-read h4 {
+  max-width: 900px;
+  margin: 4px 0 6px;
+  color: var(--white);
+  font-size: clamp(34px, 6vw, 72px);
+  line-height: .92;
+}
+
+.analysis-film-room-read p {
+  max-width: 760px;
+  margin: 0;
+  color: #d4fff8;
+  font-size: 17px;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.analysis-film-room-read > strong {
+  min-width: 146px;
+  display: grid;
+  gap: 4px;
+  justify-items: end;
+  color: var(--white);
+  font-size: 46px;
+  line-height: .92;
+}
+
+.analysis-film-room-read.down > strong {
+  color: #ffb0b8;
+}
+
+.analysis-film-room-read.flat > strong {
+  color: #ffd166;
 }
 
 .analysis-subhead {
@@ -858,7 +912,7 @@ button {
 .analysis-story-chart {
   display: grid;
   gap: 10px;
-  padding: 18px;
+  padding: 20px;
   border: 1px solid rgba(102, 217, 208, .16);
   border-radius: var(--radius-lg);
   background:
@@ -871,7 +925,7 @@ button {
 }
 
 .analysis-story-svg {
-  height: 250px;
+  height: 340px;
   border: 0;
   background: transparent;
 }
@@ -3946,6 +4000,16 @@ body.modal-open {
     padding: 18px;
   }
 
+  .analysis-film-room-read {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .analysis-film-room-read > strong {
+    justify-items: start;
+    font-size: 38px;
+  }
+
   .analysis-story-hero h4 {
     font-size: 27px;
   }
@@ -3995,6 +4059,10 @@ body.modal-open {
     min-height: 280px;
     padding: 12px;
     gap: 7px;
+  }
+
+  .analysis-story-svg {
+    height: 260px;
   }
 
   .analysis-field-zone {
