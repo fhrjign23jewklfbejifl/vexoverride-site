@@ -266,6 +266,42 @@ const translations = {
     "analysis.story.why": "Why",
     "analysis.story.proof": "Proof",
     "analysis.story.nextTarget": "Next practice target",
+    "analysis.story.theStoryNow": "The story right now",
+    "analysis.story.matchPhases": "Match phases",
+    "analysis.story.openingPhase": "Opening phase",
+    "analysis.story.controlPhase": "Control phase",
+    "analysis.story.finishPhase": "Finish phase",
+    "analysis.story.routeStart": "Route start",
+    "analysis.story.routeControl": "Route control",
+    "analysis.story.routeCeiling": "Route ceiling",
+    "analysis.story.openingHeadDetail": "{wins} wins, {losses} losses, {ties} ties after the match starts taking shape.",
+    "analysis.story.controlHeadDetail": "Center plus owned yellows tell the control story: {yellows} yellow conversion, {pins} red/blue pins.",
+    "analysis.story.finishHeadDetail": "{missed} estimated missed points with a {rate} win rate.",
+    "analysis.story.routeStartDetail": "The route begins with the balance between Driver and Autonomous.",
+    "analysis.story.routeControlDetail": "Center and yellow conversion are the control checks. Yellow conversion: {yellows}.",
+    "analysis.story.strategyMap": "Strategy map",
+    "analysis.story.strategyMapHead": "Where the match is tilting",
+    "analysis.story.strategyMapDetail": "This field-style map turns the main scoring levers into one visual: green is stable, red is the leak to attack next.",
+    "analysis.story.strategyMapSkills": "Where the route is leaking value",
+    "analysis.story.strategyMapSkillsDetail": "This map keeps Skills focused on route execution, not extra dashboards.",
+    "analysis.story.mapAuton": "Auton",
+    "analysis.story.mapCenter": "Center",
+    "analysis.story.mapYellows": "Yellows",
+    "analysis.story.mapPins": "Pins",
+    "analysis.story.mapMargin": "Margin",
+    "analysis.story.mapDriver": "Driver",
+    "analysis.story.turningPoint": "Turning point",
+    "analysis.story.whatChanges": "What changes when we win",
+    "analysis.story.nextChapter": "Next chapter",
+    "analysis.story.missionAuton": "Opening mission",
+    "analysis.story.missionAutonDetail": "Current auton win rate is {value}; practice until it becomes a predictable start.",
+    "analysis.story.missionCenter": "Control mission",
+    "analysis.story.missionCenterDetail": "Center control is {value}; build the endgame habit around that swing.",
+    "analysis.story.missionReview": "Review mission",
+    "analysis.story.missionReviewDetail": "After practice, save five clean records so the next story has real proof.",
+    "analysis.story.missionDriver": "Driver mission",
+    "analysis.story.missionDriverDetail": "Driver average is {value}; choose one safer route and make it repeatable.",
+    "analysis.story.missionSkillsAutonDetail": "Autonomous average is {value}; add one reliable scoring sequence.",
     "analysis.story.whyWeThink": "Why we think that",
     "analysis.story.whyWeThinkDetail": "The three strongest signals from your saved data.",
     "analysis.story.numberProof": "Number proof",
@@ -730,6 +766,42 @@ Object.assign(translations.es, {
   "analysis.story.why": "Por qué",
   "analysis.story.proof": "Prueba",
   "analysis.story.nextTarget": "Meta de próxima práctica",
+  "analysis.story.theStoryNow": "La historia ahora",
+  "analysis.story.matchPhases": "Fases del partido",
+  "analysis.story.openingPhase": "Apertura",
+  "analysis.story.controlPhase": "Control",
+  "analysis.story.finishPhase": "Cierre",
+  "analysis.story.routeStart": "Inicio de ruta",
+  "analysis.story.routeControl": "Control de ruta",
+  "analysis.story.routeCeiling": "Techo de ruta",
+  "analysis.story.openingHeadDetail": "{wins} victorias, {losses} derrotas, {ties} empates cuando el partido empieza a tomar forma.",
+  "analysis.story.controlHeadDetail": "Centro y amarillos poseídos cuentan la historia de control: {yellows} de conversión, {pins} pines rojos/azules.",
+  "analysis.story.finishHeadDetail": "{missed} puntos perdidos estimados con {rate} de victorias.",
+  "analysis.story.routeStartDetail": "La ruta empieza con el balance entre Driver y Autónomo.",
+  "analysis.story.routeControlDetail": "Centro y conversión de amarillos son los controles clave. Conversión: {yellows}.",
+  "analysis.story.strategyMap": "Mapa estratégico",
+  "analysis.story.strategyMapHead": "Hacia dónde se inclina el partido",
+  "analysis.story.strategyMapDetail": "Este mapa de campo convierte las palancas de puntuación en un visual: verde es estable, rojo es la fuga a atacar.",
+  "analysis.story.strategyMapSkills": "Dónde la ruta pierde valor",
+  "analysis.story.strategyMapSkillsDetail": "Este mapa mantiene Skills enfocado en ejecución de ruta, no en otro tablero.",
+  "analysis.story.mapAuton": "Autónomo",
+  "analysis.story.mapCenter": "Centro",
+  "analysis.story.mapYellows": "Amarillos",
+  "analysis.story.mapPins": "Pines",
+  "analysis.story.mapMargin": "Margen",
+  "analysis.story.mapDriver": "Driver",
+  "analysis.story.turningPoint": "Punto de giro",
+  "analysis.story.whatChanges": "Qué cambia cuando ganamos",
+  "analysis.story.nextChapter": "Siguiente capítulo",
+  "analysis.story.missionAuton": "Misión de apertura",
+  "analysis.story.missionAutonDetail": "La tasa actual de autónomo ganado es {value}; practícalo hasta que sea un inicio predecible.",
+  "analysis.story.missionCenter": "Misión de control",
+  "analysis.story.missionCenterDetail": "El control del centro está en {value}; construye el final alrededor de ese cambio.",
+  "analysis.story.missionReview": "Misión de revisión",
+  "analysis.story.missionReviewDetail": "Después de practicar, guarda cinco registros limpios para que la próxima historia tenga prueba real.",
+  "analysis.story.missionDriver": "Misión Driver",
+  "analysis.story.missionDriverDetail": "El promedio Driver es {value}; elige una ruta más segura y hazla repetible.",
+  "analysis.story.missionSkillsAutonDetail": "El promedio Autónomo es {value}; agrega una secuencia confiable de puntuación.",
   "analysis.story.whyWeThink": "Por qué pensamos eso",
   "analysis.story.whyWeThinkDetail": "Las tres señales más fuertes de tus datos guardados.",
   "analysis.story.numberProof": "Prueba numérica",
@@ -1191,6 +1263,42 @@ Object.assign(translations["zh-CN"], {
   "analysis.story.why": "原因",
   "analysis.story.proof": "依据",
   "analysis.story.nextTarget": "下次练习目标",
+  "analysis.story.theStoryNow": "当前故事",
+  "analysis.story.matchPhases": "比赛阶段",
+  "analysis.story.openingPhase": "开局阶段",
+  "analysis.story.controlPhase": "控制阶段",
+  "analysis.story.finishPhase": "收尾阶段",
+  "analysis.story.routeStart": "路线开局",
+  "analysis.story.routeControl": "路线控制",
+  "analysis.story.routeCeiling": "路线上限",
+  "analysis.story.openingHeadDetail": "比赛开始成形后：{wins} 胜，{losses} 负，{ties} 平。",
+  "analysis.story.controlHeadDetail": "中心和拥有黄桩说明控制故事：黄桩转化 {yellows}，红/蓝桩 {pins}。",
+  "analysis.story.finishHeadDetail": "估算错失 {missed} 分，胜率 {rate}。",
+  "analysis.story.routeStartDetail": "路线从驾驶和自动的平衡开始。",
+  "analysis.story.routeControlDetail": "中心和黄桩转化是控制检查点。黄桩转化：{yellows}。",
+  "analysis.story.strategyMap": "策略地图",
+  "analysis.story.strategyMapHead": "比赛正在往哪里倾斜",
+  "analysis.story.strategyMapDetail": "这个场地图把主要得分因素变成一个视觉：绿色是稳定点，红色是下一个要解决的漏分点。",
+  "analysis.story.strategyMapSkills": "路线哪里在漏分",
+  "analysis.story.strategyMapSkillsDetail": "这个地图让技能赛专注于路线执行，而不是更多仪表盘。",
+  "analysis.story.mapAuton": "自动",
+  "analysis.story.mapCenter": "中心",
+  "analysis.story.mapYellows": "黄桩",
+  "analysis.story.mapPins": "桩",
+  "analysis.story.mapMargin": "分差",
+  "analysis.story.mapDriver": "驾驶",
+  "analysis.story.turningPoint": "转折点",
+  "analysis.story.whatChanges": "获胜时什么发生变化",
+  "analysis.story.nextChapter": "下一章",
+  "analysis.story.missionAuton": "开局任务",
+  "analysis.story.missionAutonDetail": "当前自动胜率 {value}；练到它成为可预测开局。",
+  "analysis.story.missionCenter": "控制任务",
+  "analysis.story.missionCenterDetail": "中心控制率 {value}；围绕这个分差摆动建立收尾习惯。",
+  "analysis.story.missionReview": "复盘任务",
+  "analysis.story.missionReviewDetail": "练习后保存五条干净记录，让下一次分析有真实依据。",
+  "analysis.story.missionDriver": "驾驶任务",
+  "analysis.story.missionDriverDetail": "驾驶平均 {value}；选择一条更稳路线并让它可重复。",
+  "analysis.story.missionSkillsAutonDetail": "自动平均 {value}；加入一个可靠得分序列。",
   "analysis.story.whyWeThink": "我们为什么这样判断",
   "analysis.story.whyWeThinkDetail": "来自已保存数据的三个最强信号。",
   "analysis.story.numberProof": "数字依据",
@@ -4106,7 +4214,7 @@ function skillsYellowEfficiencyValue(runs) {
 function renderStoryHero(recommendation) {
   return `
     <section class="analysis-story-hero">
-      <span>${escapeHtml(t("analysis.story.recommendedFocus"))}</span>
+      <span>${escapeHtml(t("analysis.story.theStoryNow"))}</span>
       <h4>${escapeHtml(recommendation.title)}</h4>
       <p>${escapeHtml(recommendation.why)}</p>
       <div class="analysis-story-proof">
@@ -4125,10 +4233,9 @@ function renderStoryHero(recommendation) {
 
 function renderProofGrid(cards) {
   return `
-    ${analysisSectionTitle(t("analysis.story.whyWeThink"), t("analysis.story.whyWeThinkDetail"))}
-    <div class="analysis-proof-grid">
+    <div class="analysis-phase-rail" aria-label="${escapeHtml(t("analysis.story.matchPhases"))}">
       ${cards.map(card => `
-        <article class="analysis-proof-card">
+        <article class="analysis-phase-card">
           <span>${escapeHtml(card.label)}</span>
           <strong>${escapeHtml(card.value)}</strong>
           <p>${escapeHtml(card.detail)}</p>
@@ -4140,10 +4247,101 @@ function renderProofGrid(cards) {
 
 function renderNumberStrip(items) {
   return `
-    ${analysisSectionTitle(t("analysis.story.numberProof"), t("analysis.story.numberProofDetail"))}
     <div class="analysis-number-strip">
       ${items.map(item => analysisStat(item.label, item.value, item.detail)).join("")}
     </div>
+  `;
+}
+
+function renderMapMetric(label, value, detail = "") {
+  return `
+    <div class="analysis-map-metric">
+      <span>${escapeHtml(label)}</span>
+      <strong>${escapeHtml(value)}</strong>
+      ${detail ? `<small>${escapeHtml(detail)}</small>` : ""}
+    </div>
+  `;
+}
+
+function renderHeadStrategyMap(matches) {
+  const autonRate = percentRate(matches.filter(autonWon).length, matches.length);
+  const centerRate = percentRate(matches.filter(centerControlledByUs).length, matches.length);
+  const yellow = yellowEfficiencyValue(matches);
+  const pinAverage = resultAverage(matches, ourAlliancePins);
+  const margin = resultAverage(matches, scoreMargin);
+  return `
+    <section class="analysis-strategy-map">
+      <div class="analysis-map-copy">
+        <span>${escapeHtml(t("analysis.story.strategyMap"))}</span>
+        <h4>${escapeHtml(t("analysis.story.strategyMapHead"))}</h4>
+        <p>${escapeHtml(t("analysis.story.strategyMapDetail"))}</p>
+        <div class="analysis-map-metrics">
+          ${renderMapMetric(t("analysis.story.mapAuton"), formatRate(autonRate), t("analysis.wonAuton"))}
+          ${renderMapMetric(t("analysis.story.mapCenter"), formatRate(centerRate), t("analysis.centerImpact"))}
+          ${renderMapMetric(t("analysis.story.mapYellows"), formatRate(yellow.rate), t("analysis.yellowEfficiencyDetail", { scored: yellow.scored, placed: yellow.placed }))}
+          ${renderMapMetric(t("analysis.story.mapPins"), formatAnalysisNumber(pinAverage), t("analysis.correlationOption.alliancePins"))}
+          ${renderMapMetric(t("analysis.story.mapMargin"), signedNumber(margin), t("analysis.correlationOption.margin"))}
+        </div>
+      </div>
+      <div class="analysis-field-map" aria-hidden="true">
+        <div class="analysis-field-zone top ${autonRate >= 50 ? "good" : "needs"}"><b>${escapeHtml(t("analysis.story.mapAuton"))}</b><span>${escapeHtml(formatRate(autonRate))}</span></div>
+        <div class="analysis-field-zone left ${yellow.rate >= 75 ? "good" : "needs"}"><b>${escapeHtml(t("analysis.story.mapYellows"))}</b><span>${escapeHtml(formatRate(yellow.rate))}</span></div>
+        <div class="analysis-field-zone center ${centerRate >= 55 ? "good" : "needs"}"><b>${escapeHtml(t("analysis.story.mapCenter"))}</b><span>${escapeHtml(formatRate(centerRate))}</span></div>
+        <div class="analysis-field-zone right ${pinAverage >= 12 ? "good" : "needs"}"><b>${escapeHtml(t("analysis.story.mapPins"))}</b><span>${escapeHtml(formatAnalysisNumber(pinAverage))}</span></div>
+        <div class="analysis-field-zone bottom ${margin >= 0 ? "good" : "needs"}"><b>${escapeHtml(t("analysis.story.mapMargin"))}</b><span>${escapeHtml(signedNumber(margin))}</span></div>
+      </div>
+    </section>
+  `;
+}
+
+function renderSkillsStrategyMap(runs) {
+  const driverAverage = resultAverage(runs.filter(run => run.skillsType === "driver"), run => run.score);
+  const autonAverage = resultAverage(runs.filter(run => run.skillsType === "autonomous"), run => run.score);
+  const yellow = skillsYellowEfficiencyValue(runs);
+  const centerRate = percentRate(runs.filter(run => run.skills?.centerToggle).length, runs.length);
+  const pinAverage = resultAverage(runs, skillsRedBluePins);
+  return `
+    <section class="analysis-strategy-map">
+      <div class="analysis-map-copy">
+        <span>${escapeHtml(t("analysis.story.strategyMap"))}</span>
+        <h4>${escapeHtml(t("analysis.story.strategyMapSkills"))}</h4>
+        <p>${escapeHtml(t("analysis.story.strategyMapSkillsDetail"))}</p>
+        <div class="analysis-map-metrics">
+          ${renderMapMetric(t("analysis.story.mapDriver"), formatAnalysisNumber(driverAverage), t("analysis.driverAvg"))}
+          ${renderMapMetric(t("analysis.story.mapAuton"), formatAnalysisNumber(autonAverage), t("analysis.autonAvg"))}
+          ${renderMapMetric(t("analysis.story.mapCenter"), formatRate(centerRate), t("analysis.correlationOption.midfield"))}
+          ${renderMapMetric(t("analysis.story.mapYellows"), formatRate(yellow.rate), t("analysis.yellowConversionDetail", { scored: yellow.scored, placed: yellow.placed }))}
+          ${renderMapMetric(t("analysis.story.mapPins"), formatAnalysisNumber(pinAverage), t("analysis.correlationOption.redBluePins"))}
+        </div>
+      </div>
+      <div class="analysis-field-map skills" aria-hidden="true">
+        <div class="analysis-field-zone top ${driverAverage >= autonAverage ? "good" : "needs"}"><b>${escapeHtml(t("analysis.story.mapDriver"))}</b><span>${escapeHtml(formatAnalysisNumber(driverAverage))}</span></div>
+        <div class="analysis-field-zone left ${yellow.rate >= 75 ? "good" : "needs"}"><b>${escapeHtml(t("analysis.story.mapYellows"))}</b><span>${escapeHtml(formatRate(yellow.rate))}</span></div>
+        <div class="analysis-field-zone center ${centerRate >= 60 ? "good" : "needs"}"><b>${escapeHtml(t("analysis.story.mapCenter"))}</b><span>${escapeHtml(formatRate(centerRate))}</span></div>
+        <div class="analysis-field-zone right ${pinAverage >= 18 ? "good" : "needs"}"><b>${escapeHtml(t("analysis.story.mapPins"))}</b><span>${escapeHtml(formatAnalysisNumber(pinAverage))}</span></div>
+        <div class="analysis-field-zone bottom ${autonAverage >= driverAverage ? "good" : "needs"}"><b>${escapeHtml(t("analysis.story.mapAuton"))}</b><span>${escapeHtml(formatAnalysisNumber(autonAverage))}</span></div>
+      </div>
+    </section>
+  `;
+}
+
+function renderNextChapter(recommendation, supportingItems = []) {
+  return `
+    <section class="analysis-next-chapter">
+      <div>
+        <span>${escapeHtml(t("analysis.story.nextChapter"))}</span>
+        <h4>${escapeHtml(recommendation.target)}</h4>
+        <p>${escapeHtml(recommendation.proof)}</p>
+      </div>
+      <div class="analysis-mission-list">
+        ${supportingItems.map(item => `
+          <div class="analysis-mission">
+            <b>${escapeHtml(item.title)}</b>
+            <span>${escapeHtml(item.detail)}</span>
+          </div>
+        `).join("")}
+      </div>
+    </section>
   `;
 }
 
@@ -4447,27 +4645,24 @@ function headProofCards(matches, allMatches) {
   const ties = matches.filter(match => match.result === "tie").length;
   const recentDelta = Number.isFinite(stats.recentMean) && Number.isFinite(stats.mean) ? stats.recentMean - stats.mean : null;
   const missedAverage = resultAverage(matches, match => missedHeadPoints(match).total);
-  const { current, previous } = previousRangeRecords(allMatches);
-  const previousAverage = resultAverage(previous, match => match.ourScore);
-  const currentAverage = resultAverage(current, match => match.ourScore);
-  const progress = Number.isFinite(currentAverage) && Number.isFinite(previousAverage) ? currentAverage - previousAverage : null;
+  const autonRate = percentRate(matches.filter(autonWon).length, matches.length);
+  const centerRate = percentRate(matches.filter(centerControlledByUs).length, matches.length);
+  const yellow = yellowEfficiencyValue(matches);
   return [
     {
-      label: t("analysis.story.record"),
-      value: t("analysis.recordDetail", { wins, losses, ties }),
-      detail: t("analysis.story.recordDetail", { rate: formatRate(percentRate(wins, matches.length)) })
+      label: t("analysis.story.openingPhase"),
+      value: formatRate(autonRate),
+      detail: t("analysis.story.openingHeadDetail", { wins, losses, ties })
     },
     {
-      label: t("analysis.last5"),
+      label: t("analysis.story.controlPhase"),
+      value: formatRate(centerRate),
+      detail: t("analysis.story.controlHeadDetail", { yellows: formatRate(yellow.rate), pins: formatAnalysisNumber(resultAverage(matches, ourAlliancePins)) })
+    },
+    {
+      label: t("analysis.story.finishPhase"),
       value: signedNumber(recentDelta),
-      detail: recentFormDetail(stats) || t("analysis.story.needRecent")
-    },
-    {
-      label: t("analysis.missedPoints"),
-      value: t("analysis.avgValue", { value: formatAnalysisNumber(missedAverage) }),
-      detail: Number.isFinite(progress)
-        ? t("analysis.story.progressDetail", { value: signedNumber(progress) })
-        : t("analysis.missedPointsDetail")
+      detail: t("analysis.story.finishHeadDetail", { missed: formatAnalysisNumber(missedAverage), rate: formatRate(percentRate(wins, matches.length)) })
     }
   ];
 }
@@ -4475,6 +4670,7 @@ function headProofCards(matches, allMatches) {
 function renderHeadBreakdown(matches, allMatches) {
   const wins = matches.filter(match => match.result === "win");
   const losses = matches.filter(match => match.result === "loss");
+  const recommendation = headRecommendation(matches);
   const compare = (label, getter, options = {}) => {
     const winValue = resultAverage(wins, getter);
     const lossValue = resultAverage(losses, getter);
@@ -4482,17 +4678,14 @@ function renderHeadBreakdown(matches, allMatches) {
     return analysisMiniRow(label, `${display(winValue)} / ${display(lossValue)}`, t("analysis.story.winsLosses"));
   };
   return `
-    ${analysisSectionTitle(t("analysis.story.strategyBreakdown"), t("analysis.story.strategyDetail"))}
-    <div class="analysis-strategy-grid">
-      ${renderAutonReliability(matches)}
-      ${renderCenterImpact(matches)}
-      ${renderYellowEfficiency(matches)}
-      ${renderFloorCeiling(matches, match => match.ourScore, t("analysis.badGoodRange"))}
-      ${renderBestMatchBlueprint(matches)}
-      <div class="analysis-insight-card analysis-insight-wide">
-        <span>${escapeHtml(t("analysis.story.winLossDifference"))}</span>
-        <strong>${escapeHtml(t("analysis.story.winsVsLosses"))}</strong>
+    ${renderHeadStrategyMap(matches)}
+    <section class="analysis-turning-point">
+      <div>
+        <span>${escapeHtml(t("analysis.story.turningPoint"))}</span>
+        <h4>${escapeHtml(t("analysis.story.whatChanges"))}</h4>
         <p>${escapeHtml(t("analysis.story.winLossDetail"))}</p>
+      </div>
+      <div class="analysis-insight-card analysis-insight-wide">
         <div class="analysis-mini-list">
           ${compare(t("analysis.averageScore"), match => match.ourScore)}
           ${compare(t("analysis.autonReliability"), autonWon, { percent: true })}
@@ -4501,9 +4694,12 @@ function renderHeadBreakdown(matches, allMatches) {
           ${compare(t("analysis.correlationOption.margin"), scoreMargin)}
         </div>
       </div>
-      ${renderWinFactors(matches)}
-      ${renderProgressCard(allMatches, match => match.ourScore, t("analysis.weeklyProgress"))}
-    </div>
+    </section>
+    ${renderNextChapter(recommendation, [
+      { title: t("analysis.story.missionAuton"), detail: t("analysis.story.missionAutonDetail", { value: formatRate(percentRate(matches.filter(autonWon).length, matches.length)) }) },
+      { title: t("analysis.story.missionCenter"), detail: t("analysis.story.missionCenterDetail", { value: formatRate(percentRate(matches.filter(centerControlledByUs).length, matches.length)) }) },
+      { title: t("analysis.story.missionReview"), detail: t("analysis.story.missionReviewDetail") }
+    ])}
   `;
 }
 
@@ -4573,31 +4769,35 @@ function skillsProofCards(runs) {
   const autonAverage = resultAverage(runs.filter(run => run.skillsType === "autonomous"), run => run.score);
   const yellow = skillsYellowEfficiencyValue(runs);
   const recentDelta = Number.isFinite(stats.recentMean) && Number.isFinite(stats.mean) ? stats.recentMean - stats.mean : null;
+  const centerRate = percentRate(runs.filter(run => run.skills?.centerToggle).length, runs.length);
   return [
     {
-      label: t("analysis.skillsSplit"),
+      label: t("analysis.story.routeStart"),
       value: t("analysis.story.driverAutonValue", { driver: formatAnalysisNumber(driverAverage), auton: formatAnalysisNumber(autonAverage) }),
-      detail: t("analysis.skillsSplitDetail")
+      detail: t("analysis.story.routeStartDetail")
     },
     {
-      label: t("analysis.last5"),
+      label: t("analysis.story.routeControl"),
+      value: formatRate(centerRate),
+      detail: t("analysis.story.routeControlDetail", { yellows: formatRate(yellow.rate) })
+    },
+    {
+      label: t("analysis.story.routeCeiling"),
       value: signedNumber(recentDelta),
       detail: recentFormDetail(stats) || t("analysis.story.needRecent")
-    },
-    {
-      label: t("analysis.yellowConversion"),
-      value: formatRate(yellow.rate),
-      detail: t("analysis.yellowConversionDetail", { scored: yellow.scored, placed: yellow.placed })
     }
   ];
 }
 
 function renderSkillsBreakdown(runs, allRuns) {
+  const recommendation = skillsRecommendation(runs);
   return `
-    ${analysisSectionTitle(t("analysis.story.strategyBreakdown"), t("analysis.skillsSourceDetail"))}
-    <div class="analysis-strategy-grid">
-      ${renderSkillsInsights(runs, allRuns)}
-    </div>
+    ${renderSkillsStrategyMap(runs)}
+    ${renderNextChapter(recommendation, [
+      { title: t("analysis.story.missionDriver"), detail: t("analysis.story.missionDriverDetail", { value: formatAnalysisNumber(resultAverage(runs.filter(run => run.skillsType === "driver"), run => run.score)) }) },
+      { title: t("analysis.story.missionAuton"), detail: t("analysis.story.missionSkillsAutonDetail", { value: formatAnalysisNumber(resultAverage(runs.filter(run => run.skillsType === "autonomous"), run => run.score)) }) },
+      { title: t("analysis.story.missionReview"), detail: t("analysis.story.missionReviewDetail") }
+    ])}
   `;
 }
 
