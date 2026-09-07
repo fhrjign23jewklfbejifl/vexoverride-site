@@ -4135,6 +4135,48 @@ body.analysis-active .score-app {
   font-size: 12px;
 }
 
+.dev-panel .dev-diagnostics {
+  flex: 1 0 100%;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 2px 0 0;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 225, 111, .18);
+}
+
+.dev-diagnostics[hidden] {
+  display: none;
+}
+
+.dev-diagnostics span {
+  min-width: 0;
+  padding: 8px 10px;
+  border-radius: 4px;
+  background: rgba(7, 19, 24, .4);
+}
+
+.dev-diagnostics small,
+.dev-diagnostics strong {
+  display: block;
+}
+
+.dev-diagnostics small {
+  margin-bottom: 3px;
+  color: #91a5aa;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.dev-diagnostics strong {
+  overflow-wrap: anywhere;
+  color: #f4fbfa;
+  font-size: 12px;
+}
+
+.dev-diagnostics.is-mismatch {
+  border-top-color: rgba(255, 111, 116, .5);
+}
+
 .dev-button {
   min-height: 36px;
   border: 1px solid rgba(255, 255, 255, .14);
@@ -5415,6 +5457,10 @@ body.modal-open {
 
   .dev-panel {
     display: grid;
+  }
+
+  .dev-panel .dev-diagnostics {
+    grid-template-columns: 1fr;
   }
 
   .history-summary {

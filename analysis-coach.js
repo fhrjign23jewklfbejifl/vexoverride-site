@@ -27,6 +27,33 @@
   const rate = (rows, predicate) => rows.length ? rows.filter(predicate).length / rows.length : 0;
   const confidenceWeight = count => Math.min(1, Math.sqrt(count / 20));
 
+  function classifyTrajectory(inputValues) {
+    const values = (Array.isArray(inputValues) ? inputValues : [])
+      .map(value => Number(value))
+      .filter(Number.isFinite);
+    if (values.length < 4) {
+      return { shape: "steady", tone: "flat", opening: average(values), current: average(values), delta: 0 };
+    }
+
+    const windowSize = Math.min(5, Math.max(2, Math.floor(values.length / 4)));
+    const opening = average(values.slice(0, windowSize));
+    const current = average(values.slice(-windowSize));
+    const middleStart = Math.max(windowSize, Math.floor(values.length * .38));
+    const middleEnd = Math.min(values.length - windowSize, Math.ceil(values.length * .68));
+    const middle = average(values.slice(middleStart, Math.max(middleStart + 1, middleEnd)));
+    const delta = current - opening;
+    const recovered = Number.isFinite(middle)
+      && middle <= Math.min(opening, current) - 8
+      && current >= opening - 4
+      && current - middle >= 12;
+
+    if (recovered) return { shape: "recovery", tone: "up", opening, current, middle, delta };
+    if (delta >= 24) return { shape: "strongUp", tone: "up", opening, current, middle, delta };
+    if (delta > 6) return { shape: "gradualUp", tone: "up", opening, current, middle, delta };
+    if (delta < -6) return { shape: "decline", tone: "down", opening, current, middle, delta };
+    return { shape: "steady", tone: "flat", opening, current, middle, delta };
+  }
+
   function comparison(rows, predicate, getter = row => row.score) {
     const positive = rows.filter(predicate);
     const negative = rows.filter(row => !predicate(row));
@@ -325,6 +352,7 @@
     HEAD_MIN_RECORDS,
     SKILLS_MIN_RECORDS,
     GROUP_MIN_RECORDS,
+    classifyTrajectory,
     selectHeadRecommendation,
     selectSkillsRecommendation
   });

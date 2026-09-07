@@ -14,6 +14,7 @@ const COMPETITION_STORE_KEY = "vexOverrideCompetitionData:v1";
 const PROXY_URL_STORE_KEY = "vexOverrideDataProxyUrl:v1";
 const SEASON_SKILLS_STORE_KEY = "vexOverrideSeasonSkills:v1";
 const LANGUAGE_STORE_KEY = "vexOverrideLanguage:v1";
+const DEV_AUTOFILL_STORE_KEY = "vexOverrideDevAutofill:v1";
 const HISTORY_INITIAL_LIMIT = 3;
 const DEFAULT_VEX_PROXY_URL = "https://vexoverride-data-proxy.nnovate--26.workers.dev";
 const quadrants = ["top", "right", "bottom", "left", "center"];
@@ -57,8 +58,9 @@ let activeMode = "head";
 let analysisRange = "all";
 let analysisMode = "head";
 let replayObserver = null;
-let lastDevHeadRecommendation = "";
-let lastDevSkillsRecommendation = "";
+let devAutofillState = loadDevAutofillState();
+let lastDevHeadRecommendation = devAutofillState.headRecommendation || "";
+let lastDevSkillsRecommendation = devAutofillState.skillsRecommendation || "";
 let headCorrelationX = "alliancePins";
 let headCorrelationY = "ourScore";
 let skillsCorrelationX = "redBluePins";
@@ -198,6 +200,10 @@ const translations = {
     "dev.autofill": "Autofill Sample Data",
     "dev.clearMatches": "Clear Matches",
     "dev.wipeAll": "Wipe All Data",
+    "dev.generatedScenario": "Generated scenario",
+    "dev.coachSelected": "Coach selected",
+    "dev.seasonShape": "Season shape",
+    "dev.selectorMismatch": "Generator mismatch",
     "dev.editTitle": "Edit Saved Match",
     "dev.editDescription": "Dev mode: edit the saved match JSON directly. Invalid JSON will not save.",
     "dev.saveChanges": "Save Changes",
@@ -311,7 +317,9 @@ const translations = {
     "analysis.story.numberProofDetail": "The quick proof behind the coach read.",
     "analysis.story.progressStory": "Season timeline",
     "analysis.story.filmRoom": "Film room",
-    "analysis.story.timelineUp": "The tape says you are climbing",
+    "analysis.story.timelineStrongUp": "The tape shows a strong climb",
+    "analysis.story.timelineUp": "The tape shows steady progress",
+    "analysis.story.timelineRecovery": "The tape shows a setback and recovery",
     "analysis.story.timelineDown": "The tape says the last stretch slipped",
     "analysis.story.timelineFlat": "The tape says the level is steady",
     "analysis.story.timelineUpDetail": "Recent records are {delta} above the opening stretch. Keep the better pattern and drill the weakest phase.",
@@ -764,6 +772,10 @@ Object.assign(translations.es, {
   "dev.autofill": "Autocompletar datos de muestra",
   "dev.clearMatches": "Borrar partidos",
   "dev.wipeAll": "Borrar todos los datos",
+  "dev.generatedScenario": "Escenario generado",
+  "dev.coachSelected": "Selección del coach",
+  "dev.seasonShape": "Forma de la temporada",
+  "dev.selectorMismatch": "El generador no coincide",
   "dev.editTitle": "Editar partido guardado",
   "dev.editDescription": "Modo dev: edita directamente el JSON guardado. El JSON inválido no se guardará.",
   "dev.saveChanges": "Guardar cambios",
@@ -877,7 +889,9 @@ Object.assign(translations.es, {
   "analysis.story.numberProofDetail": "La prueba rápida detrás de la lectura del coach.",
   "analysis.story.progressStory": "Línea de temporada",
   "analysis.story.filmRoom": "Sala de video",
-  "analysis.story.timelineUp": "La grabación dice que están subiendo",
+  "analysis.story.timelineStrongUp": "La grabación muestra una gran subida",
+  "analysis.story.timelineUp": "La grabación muestra un progreso constante",
+  "analysis.story.timelineRecovery": "La grabación muestra un tropiezo y recuperación",
   "analysis.story.timelineDown": "La grabación dice que el tramo reciente bajó",
   "analysis.story.timelineFlat": "La grabación dice que el nivel está estable",
   "analysis.story.timelineUpDetail": "Los registros recientes están {delta} por encima del tramo inicial. Mantén el patrón mejor y practica la fase más débil.",
@@ -1327,6 +1341,10 @@ Object.assign(translations["zh-CN"], {
   "dev.autofill": "自动填入示例数据",
   "dev.clearMatches": "清除比赛",
   "dev.wipeAll": "清除全部数据",
+  "dev.generatedScenario": "生成的情景",
+  "dev.coachSelected": "教练建议",
+  "dev.seasonShape": "赛季走势",
+  "dev.selectorMismatch": "生成与建议不匹配",
   "dev.editTitle": "编辑已保存比赛",
   "dev.editDescription": "开发模式：直接编辑已保存比赛 JSON。无效 JSON 不会保存。",
   "dev.saveChanges": "保存更改",
@@ -1440,7 +1458,9 @@ Object.assign(translations["zh-CN"], {
   "analysis.story.numberProofDetail": "支撑教练判断的快速数据。",
   "analysis.story.progressStory": "赛季时间线",
   "analysis.story.filmRoom": "录像分析室",
-  "analysis.story.timelineUp": "录像显示你们正在上升",
+  "analysis.story.timelineStrongUp": "录像显示明显进步",
+  "analysis.story.timelineUp": "录像显示稳定进步",
+  "analysis.story.timelineRecovery": "录像显示低谷后的恢复",
   "analysis.story.timelineDown": "录像显示最近一段下滑了",
   "analysis.story.timelineFlat": "录像显示水平基本稳定",
   "analysis.story.timelineUpDetail": "最近记录比开局阶段高 {delta}。保留更好的模式，然后练最弱阶段。",
@@ -3692,6 +3712,63 @@ function daysAgo(days) {
   return date;
 }
 
+function loadDevAutofillState() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(DEV_AUTOFILL_STORE_KEY));
+    return saved && typeof saved === "object" ? saved : {};
+  } catch {
+    return {};
+  }
+}
+
+function saveDevAutofillState(nextState) {
+  devAutofillState = nextState;
+  try {
+    localStorage.setItem(DEV_AUTOFILL_STORE_KEY, JSON.stringify(nextState));
+  } catch {
+    // Diagnostics are optional; generated match data remains usable without this key.
+  }
+}
+
+function createDevRandom(seed = Date.now()) {
+  let value = Math.trunc(Number(seed)) >>> 0;
+  return () => {
+    value += 0x6D2B79F5;
+    let result = value;
+    result = Math.imul(result ^ (result >>> 15), result | 1);
+    result ^= result + Math.imul(result ^ (result >>> 7), result | 61);
+    return ((result ^ (result >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+function randomItem(values, random) {
+  return values[Math.floor(random() * values.length)];
+}
+
+function chooseDevScenario(values, previous, random) {
+  const available = values.filter(value => value !== previous);
+  return randomItem(available.length ? available : values, random);
+}
+
+function chooseDevTrajectory(random) {
+  const roll = random();
+  if (roll < .6) return "improving";
+  if (roll < .75) return "steady";
+  if (roll < .9) return "recovery";
+  return "decline";
+}
+
+function sampleTrajectoryForm(progress, shape, noise) {
+  const variation = (noise - .5) * .16;
+  if (shape === "steady") return Math.max(.2, Math.min(1, .63 + Math.sin(progress * Math.PI * 4) * .04 + variation));
+  if (shape === "recovery") {
+    const setback = .42 * Math.exp(-Math.pow((progress - .55) / .17, 2));
+    return Math.max(.16, Math.min(1, .66 + progress * .16 - setback + variation));
+  }
+  if (shape === "decline") return Math.max(.16, Math.min(1, .88 - progress * .5 + variation));
+  return Math.max(.16, Math.min(1, .3 + progress * .58 + variation));
+}
+
 function seededRandom(seed) {
   const x = Math.sin(seed * 999) * 10000;
   return x - Math.floor(x);
@@ -3707,14 +3784,14 @@ function sampleQuadrants(seed) {
   };
 }
 
-function sampleHeadSeed(index, total, scenario, salt) {
+function sampleHeadSeed(index, total, scenario, trajectoryShape, salt) {
   const progress = total <= 1 ? 1 : index / (total - 1);
   const daysAgoValue = Math.round((1 - progress) * (84 + Math.floor(seededRandom(salt) * 42)));
   const teamAlliance = (index + Math.floor(salt)) % 2 === 0 ? "blue" : "red";
   const ourColor = teamAlliance;
   const opponentColor = teamAlliance === "red" ? "blue" : "red";
   const noise = seededRandom(salt + index * 7.13);
-  const form = Math.max(.15, Math.min(1, .32 + progress * .58 + (noise - .5) * .24));
+  const form = sampleTrajectoryForm(progress, trajectoryShape, noise);
   const ourBase = 2 + Math.floor(form * 5);
   const oppBase = 2 + Math.floor((1 - form) * 4 + seededRandom(salt + index * 3.7) * 2);
   const seed = {
@@ -3761,9 +3838,13 @@ function sampleHeadSeed(index, total, scenario, salt) {
 
   if (scenario === "headAutonCode") {
     seed.auton = index % 3 === 0 ? opponentColor : index % 5 === 0 ? "tie" : ourColor;
+    seed.centerY = 0;
+    setRobotCounts(1, 1);
   } else if (scenario === "headHoldAuton") {
     seed.auton = index % 7 === 0 ? "tie" : ourColor;
-    if (index % 3 === 0) setColoredPins(3, 8);
+    seed.centerY = 0;
+    setRobotCounts(1, 1);
+    if (index % 3 === 0) setColoredPins(2, 9);
   } else if (scenario === "headMidfield") {
     const controlled = index % 2 === 0;
     setRobotCounts(controlled ? 2 : 0, controlled ? 0 : 2);
@@ -3784,24 +3865,27 @@ function sampleHeadSeed(index, total, scenario, salt) {
     seed.auton = "tie";
     seed.topY = seed.rightY = seed.bottomY = seed.leftY = seed.centerY = 0;
     setColoredPins(5, 5);
-    setRobotCounts(index < 6 ? 0 : 2, index < 6 ? 1 : 0);
+    const missedFinish = index % 7 < 2;
+    setRobotCounts(missedFinish ? 0 : 1, 1);
   } else if (scenario === "headPins") {
     seed.auton = "tie";
     seed.topY = seed.rightY = seed.bottomY = seed.leftY = seed.centerY = 0;
-    setRobotCounts(1, 1);
-    setColoredPins(index < total / 2 ? 7 : 3, index < total / 2 ? 3 : 7);
+    setRobotCounts(2, 0);
+    const strongPinMatch = index % 2 === 0;
+    setColoredPins(strongPinMatch ? 7 : 3, strongPinMatch ? 3 : 7);
   }
   return seed;
 }
 
-function sampleSkillsSeed(index, total, skillsType, scenario, salt) {
+function sampleSkillsSeed(index, total, skillsType, scenario, trajectoryShape, salt) {
   const progress = total <= 1 ? 1 : index / (total - 1);
   const daysAgoValue = Math.round((1 - progress) * (80 + Math.floor(seededRandom(salt + 1) * 36)) + (skillsType === "autonomous" ? 1 : 0));
   const noise = (seededRandom(salt + index * 5.21 + (skillsType === "driver" ? 11 : 29)) - .5) * .08;
-  let route = Math.max(.2, Math.min(1, .5 + progress * .36 + noise));
-  if (scenario === "skillsDriverRepeat" && skillsType === "driver") route = index % 5 < 2 ? .98 : .4 + progress * .08;
-  if (scenario === "skillsAutonRepeat" && skillsType === "autonomous") route = index % 5 < 2 ? .96 : .32 + progress * .08;
-  if (scenario === "skillsRouteGain") route = index % 5 < 2 ? (skillsType === "driver" ? 1 : .86) : (skillsType === "driver" ? .28 : .52);
+  let route = sampleTrajectoryForm(progress, trajectoryShape, .5 + noise * 4);
+  if (scenario === "skillsDriverRepeat") route = skillsType === "driver" ? (index % 5 < 2 ? .98 : .38) : .72 + noise;
+  if (scenario === "skillsAutonRepeat") route = skillsType === "autonomous" ? (index % 5 < 2 ? 1 : .28) : .72 + noise;
+  if (scenario === "skillsRouteGain") route = index % 5 < 2 ? (skillsType === "driver" ? 1 : .98) : (skillsType === "driver" ? .24 : .18);
+  if (["skillsYellow", "skillsCenter", "skillsPlacement"].includes(scenario)) route = .74 + noise;
   if (scenario === "skillsEventSet") route = skillsType === "driver" && index === total - 1 ? 1.18 : .52 + noise;
   if (scenario === "skillsCeiling" || scenario === "skillsBalance") route = .76 + noise;
   const seed = {
@@ -3831,23 +3915,23 @@ function sampleSkillsSeed(index, total, skillsType, scenario, salt) {
       ? `${skillsType === "driver" ? "Driver" : "Autonomous"} route is getting cleaner.`
       : `${skillsType === "driver" ? "Driver" : "Autonomous"} sample while tuning route.`
   };
-  if (scenario === "skillsYellow" && index % 3 !== 0) {
+  if (scenario === "skillsYellow") {
     seed.topToggle = "neutral";
     seed.rightToggle = "red";
     seed.bottomToggle = "neutral";
     seed.leftToggle = "blue";
   }
-  if (scenario === "skillsCenter") seed.centerToggle = index % 3 !== 0;
-  if (scenario === "skillsPlacement" && index % 2 === 0) {
-    seed.topR = 4;
-    seed.rightR = 3;
-    seed.bottomB = 4;
-    seed.leftB = 3;
+  if (scenario === "skillsCenter") seed.centerToggle = false;
+  if (scenario === "skillsPlacement") {
+    seed.topR = 5;
+    seed.rightR = 4;
+    seed.bottomB = 5;
+    seed.leftB = 4;
   }
   return seed;
 }
 
-function createSampleHeadRecord(seed) {
+function createSampleHeadRecord(seed, token = Math.random()) {
   const savedAt = daysAgo(seed.daysAgo);
   const scorer = {
     auton: seed.auton,
@@ -3865,7 +3949,7 @@ function createSampleHeadRecord(seed) {
   const opponentScore = seed.teamAlliance === "red" ? blueScore : redScore;
 
   return {
-    id: `dev-head-${savedAt.getTime()}-${Math.random().toString(16).slice(2)}`,
+    id: `dev-head-${savedAt.getTime()}-${Math.floor(token * 0xFFFFFF).toString(16)}`,
     savedAt: savedAt.toISOString(),
     savedDate: sampleSavedDate(savedAt),
     teamNumber: profile?.teamNumber || "4330P",
@@ -3885,7 +3969,7 @@ function createSampleHeadRecord(seed) {
   };
 }
 
-function createSampleSkillsRecord(seed) {
+function createSampleSkillsRecord(seed, token = Math.random()) {
   const savedAt = daysAgo(seed.daysAgo);
   const skills = {
     centerToggle: seed.centerToggle,
@@ -3905,7 +3989,7 @@ function createSampleSkillsRecord(seed) {
   };
 
   return {
-    id: `dev-skills-${savedAt.getTime()}-${Math.random().toString(16).slice(2)}`,
+    id: `dev-skills-${savedAt.getTime()}-${Math.floor(token * 0xFFFFFF).toString(16)}`,
     mode: "skills",
     savedAt: savedAt.toISOString(),
     savedDate: sampleSavedDate(savedAt),
@@ -3917,76 +4001,175 @@ function createSampleSkillsRecord(seed) {
   };
 }
 
-function seedSampleData() {
-  const shuffled = values => values
-    .map(value => ({ value, order: Math.random() }))
-    .sort((a, b) => a.order - b.order)
-    .map(item => item.value);
-  const headScenarios = shuffled([
-    "headAutonCode",
-    "headHoldAuton",
-    "headMidfield",
-    "headYellow",
-    "headToggleZone",
-    "headEndgame",
-    "headPins"
-  ]).sort((a, b) => Number(a === lastDevHeadRecommendation) - Number(b === lastDevHeadRecommendation));
-  const skillsScenarios = shuffled([
-    "skillsBalance",
-    "skillsDriverRepeat",
-    "skillsAutonRepeat",
-    "skillsRouteGain",
-    "skillsYellow",
-    "skillsCenter",
-    "skillsPlacement",
-    "skillsEventSet",
-    "skillsCeiling"
-  ]).sort((a, b) => Number(a === lastDevSkillsRecommendation) - Number(b === lastDevSkillsRecommendation));
+const DEV_HEAD_SCENARIOS = [
+  "headAutonCode",
+  "headHoldAuton",
+  "headMidfield",
+  "headYellow",
+  "headToggleZone",
+  "headEndgame",
+  "headPins"
+];
+const DEV_SKILLS_SCENARIOS = [
+  "skillsBalance",
+  "skillsDriverRepeat",
+  "skillsAutonRepeat",
+  "skillsRouteGain",
+  "skillsYellow",
+  "skillsCenter",
+  "skillsPlacement",
+  "skillsEventSet",
+  "skillsCeiling"
+];
 
-  let headRecords = [];
-  let headRecommendationKey = "";
-  for (const scenario of headScenarios) {
-    const salt = Math.random() * 100000;
-    const count = 54 + Math.floor(Math.random() * 25);
-    const candidate = Array.from({ length: count }, (_, index) => createSampleHeadRecord(sampleHeadSeed(index, count, scenario, salt)));
-    const recommendationKey = rankedHeadRecommendation(candidate).recommendationKey;
-    if (!headRecords.length || recommendationKey !== lastDevHeadRecommendation) {
-      headRecords = candidate;
-      headRecommendationKey = recommendationKey;
+function classifySavedTrajectory(records, getter) {
+  const scores = records
+    .slice()
+    .sort((a, b) => recordTimestamp(a) - recordTimestamp(b))
+    .map(record => numericValue(getter(record)));
+  return globalThis.VexAnalysisCoach?.classifyTrajectory(scores) || {
+    shape: "steady",
+    tone: "flat",
+    opening: average(scores),
+    current: average(scores),
+    delta: 0
+  };
+}
+
+function trajectoryMatchesProfile(shape, profile) {
+  if (profile === "improving") return shape === "strongUp" || shape === "gradualUp";
+  if (profile === "recovery") return shape === "recovery";
+  if (profile === "decline") return shape === "decline";
+  return shape === "steady";
+}
+
+function createDevHeadCandidate(scenario, trajectoryProfile, random) {
+  const salt = Math.floor(random() * 1000000) + 1;
+  const count = 54 + Math.floor(random() * 25);
+  return Array.from({ length: count }, (_, index) => createSampleHeadRecord(
+    sampleHeadSeed(index, count, scenario, trajectoryProfile, salt),
+    random()
+  ));
+}
+
+function createDevSkillsCandidate(scenario, trajectoryProfile, random) {
+  const salt = Math.floor(random() * 1000000) + 1;
+  const driverCount = scenario === "skillsBalance" ? 18 : 24 + Math.floor(random() * 17);
+  const autonCount = scenario === "skillsBalance" ? 3 : 24 + Math.floor(random() * 15);
+  return [
+    ...Array.from({ length: driverCount }, (_, index) => createSampleSkillsRecord(
+      sampleSkillsSeed(index, driverCount, "driver", scenario, trajectoryProfile, salt),
+      random()
+    )),
+    ...Array.from({ length: autonCount }, (_, index) => createSampleSkillsRecord(
+      sampleSkillsSeed(index, autonCount, "autonomous", scenario, trajectoryProfile, salt + 137),
+      random()
+    ))
+  ];
+}
+
+function buildVerifiedHeadScenario(scenario, trajectoryProfile, random) {
+  let recommendationFallback = null;
+  for (let attempt = 0; attempt < 80; attempt += 1) {
+    const records = createDevHeadCandidate(scenario, trajectoryProfile, random);
+    const selected = rankedHeadRecommendation(records);
+    const trajectory = classifySavedTrajectory(records, record => record.ourScore);
+    if (selected.recommendationKey === scenario && !recommendationFallback) {
+      recommendationFallback = { records, selected, trajectory };
     }
-    if (recommendationKey === scenario && recommendationKey !== lastDevHeadRecommendation) break;
-  }
-
-  let skillsRecords = [];
-  let skillsRecommendationKey = "";
-  for (const scenario of skillsScenarios) {
-    const salt = Math.random() * 100000;
-    const driverCount = scenario === "skillsBalance" ? 18 : 24 + Math.floor(Math.random() * 17);
-    const autonCount = scenario === "skillsBalance" ? 3 : 24 + Math.floor(Math.random() * 15);
-    const candidate = [
-      ...Array.from({ length: driverCount }, (_, index) => createSampleSkillsRecord(sampleSkillsSeed(index, driverCount, "driver", scenario, salt))),
-      ...Array.from({ length: autonCount }, (_, index) => createSampleSkillsRecord(sampleSkillsSeed(index, autonCount, "autonomous", scenario, salt + 137)))
-    ];
-    const recommendationKey = rankedSkillsRecommendation(candidate).recommendationKey;
-    if (!skillsRecords.length || recommendationKey !== lastDevSkillsRecommendation) {
-      skillsRecords = candidate;
-      skillsRecommendationKey = recommendationKey;
+    if (selected.recommendationKey === scenario && trajectoryMatchesProfile(trajectory.shape, trajectoryProfile)) {
+      return { records, selected, trajectory, verified: true };
     }
-    if (recommendationKey === scenario && recommendationKey !== lastDevSkillsRecommendation) break;
   }
+  return recommendationFallback || (() => {
+    const records = createDevHeadCandidate(scenario, trajectoryProfile, random);
+    return {
+      records,
+      selected: rankedHeadRecommendation(records),
+      trajectory: classifySavedTrajectory(records, record => record.ourScore),
+      verified: false
+    };
+  })();
+}
 
-  lastDevHeadRecommendation = headRecommendationKey;
-  lastDevSkillsRecommendation = skillsRecommendationKey;
+function buildVerifiedSkillsScenario(scenario, trajectoryProfile, random) {
+  for (let attempt = 0; attempt < 80; attempt += 1) {
+    const records = createDevSkillsCandidate(scenario, trajectoryProfile, random);
+    const selected = rankedSkillsRecommendation(records);
+    if (selected.recommendationKey === scenario) return { records, selected, verified: true };
+  }
+  const records = createDevSkillsCandidate(scenario, trajectoryProfile, random);
+  return { records, selected: rankedSkillsRecommendation(records), verified: false };
+}
+
+function devRecommendationLabel(key) {
+  const guide = coachGuides[currentLanguage]?.[key] || coachGuides.en[key];
+  return String(guide?.title || key || "--")
+    .replace(/\{zone\}/g, t("quadrant.top"))
+    .replace(/\{route\}/g, t("tabs.skills"))
+    .replace(/\{color\}/g, t("color.red").toLowerCase());
+}
+
+function trajectoryShapeLabel(shape) {
+  const keys = {
+    strongUp: "analysis.story.timelineStrongUp",
+    gradualUp: "analysis.story.timelineUp",
+    recovery: "analysis.story.timelineRecovery",
+    decline: "analysis.story.timelineDown",
+    steady: "analysis.story.timelineFlat"
+  };
+  return t(keys[shape] || keys.steady);
+}
+
+function renderDevDiagnostics() {
+  const mount = $("[data-dev-diagnostics]");
+  if (!mount) return;
+  const diagnostics = devAutofillState.diagnostics;
+  mount.hidden = !isDevMode || !diagnostics;
+  if (mount.hidden) return;
+  const mismatch = diagnostics.headTarget !== diagnostics.headSelected
+    || diagnostics.skillsTarget !== diagnostics.skillsSelected;
+  mount.classList.toggle("is-mismatch", mismatch);
+  const pair = (headKey, skillsKey) => `${t("tabs.head")}: ${devRecommendationLabel(headKey)} / ${t("tabs.skills")}: ${devRecommendationLabel(skillsKey)}`;
+  mount.innerHTML = `
+    <span><small>${escapeHtml(t("dev.generatedScenario"))}</small><strong>${escapeHtml(pair(diagnostics.headTarget, diagnostics.skillsTarget))}</strong></span>
+    <span><small>${escapeHtml(t(mismatch ? "dev.selectorMismatch" : "dev.coachSelected"))}</small><strong>${escapeHtml(pair(diagnostics.headSelected, diagnostics.skillsSelected))}</strong></span>
+    <span><small>${escapeHtml(t("dev.seasonShape"))}</small><strong>${escapeHtml(trajectoryShapeLabel(diagnostics.trajectoryShape))}</strong></span>`;
+}
+
+function seedSampleData(seed = Date.now()) {
+  const random = createDevRandom(seed);
+  const headTarget = chooseDevScenario(DEV_HEAD_SCENARIOS, lastDevHeadRecommendation, random);
+  const skillsTarget = chooseDevScenario(DEV_SKILLS_SCENARIOS, lastDevSkillsRecommendation, random);
+  const trajectoryProfile = chooseDevTrajectory(random);
+  const head = buildVerifiedHeadScenario(headTarget, trajectoryProfile, random);
+  const skills = buildVerifiedSkillsScenario(skillsTarget, trajectoryProfile, random);
+
+  lastDevHeadRecommendation = head.selected.recommendationKey;
+  lastDevSkillsRecommendation = skills.selected.recommendationKey;
+  saveDevAutofillState({
+    headRecommendation: lastDevHeadRecommendation,
+    skillsRecommendation: lastDevSkillsRecommendation,
+    diagnostics: {
+      headTarget,
+      headSelected: lastDevHeadRecommendation,
+      skillsTarget,
+      skillsSelected: lastDevSkillsRecommendation,
+      trajectoryShape: head.trajectory.shape,
+      generatedAt: new Date().toISOString()
+    }
+  });
 
   const nextMatches = [
     ...savedMatches().filter(record => !String(record.id || "").startsWith("dev-")),
-    ...headRecords,
-    ...skillsRecords
+    ...head.records,
+    ...skills.records
   ];
   writeSavedMatches(nextMatches);
   renderHistory();
   renderSkillsHistory();
   renderAnalysis();
+  renderDevDiagnostics();
   showToast(t("toast.sampleRebuilt"));
 }
 
@@ -5629,17 +5812,15 @@ function replayTurningMoment(records, getter) {
 }
 
 function replayTrajectory(records, getter) {
-  const opening = recordWindowAverage(records, getter, true);
-  const current = recordWindowAverage(records, getter, false);
-  const delta = Number.isFinite(opening) && Number.isFinite(current) ? current - opening : 0;
-  const tone = delta > 6 ? "up" : delta < -6 ? "down" : "flat";
-  const title = t(`analysis.story.timeline${tone === "up" ? "Up" : tone === "down" ? "Down" : "Flat"}`);
+  const classified = classifySavedTrajectory(records, getter);
+  const { opening, current, delta, tone, shape } = classified;
+  const title = trajectoryShapeLabel(shape);
   const summary = tone === "up"
     ? t("analysis.replay.turnUp", { value: formatAnalysisNumber(Math.abs(delta)) })
     : tone === "down"
       ? t("analysis.replay.turnDown", { value: formatAnalysisNumber(Math.abs(delta)) })
       : t("analysis.replay.turnFlat", { value: formatAnalysisNumber(Math.abs(delta)) });
-  return { opening, current, delta, tone, title, summary, turning: replayTurningMoment(records, getter) };
+  return { opening, current, delta, tone, shape, title, summary, turning: replayTurningMoment(records, getter) };
 }
 
 function headYellowRate(match) {
@@ -6452,6 +6633,7 @@ function renderHistory() {
 
   const devPanel = $("[data-dev-panel]");
   if (devPanel) devPanel.hidden = !isDevMode;
+  renderDevDiagnostics();
 
   const matches = sortedHeadMatches();
   if (!matches.length) {
@@ -6522,6 +6704,10 @@ function wipeAllData() {
   localStorage.removeItem(MATCH_STORE_KEY);
   localStorage.removeItem(PROFILE_STORE_KEY);
   localStorage.removeItem(COMPETITION_STORE_KEY);
+  localStorage.removeItem(DEV_AUTOFILL_STORE_KEY);
+  devAutofillState = {};
+  lastDevHeadRecommendation = "";
+  lastDevSkillsRecommendation = "";
   profile = null;
   importedCompetition = null;
   expandedMatchId = null;

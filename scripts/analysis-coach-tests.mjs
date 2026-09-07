@@ -87,4 +87,16 @@ assert(!headInsufficient.ready && headInsufficient.reason === "headCount", "Head
 const skillsInsufficient = coach.selectSkillsRecommendation(stableDriver.slice(0, 4));
 assert(!skillsInsufficient.ready && skillsInsufficient.reason === "skillsCount", "Skills sample gate failed");
 
-console.log("Analysis coach fixtures passed: 16 recommendations plus evidence gates.");
+const trajectoryFixtures = {
+  strongUp: [24, 28, 32, 45, 58, 72, 88, 96],
+  gradualUp: [50, 52, 54, 56, 59, 62, 65, 67],
+  steady: [68, 70, 67, 71, 69, 72, 68, 70],
+  recovery: [70, 72, 68, 40, 35, 48, 70, 76, 78, 80],
+  decline: [98, 94, 90, 82, 73, 65, 58, 52]
+};
+Object.entries(trajectoryFixtures).forEach(([shape, values]) => {
+  const result = coach.classifyTrajectory(values);
+  assert(result.shape === shape, `${shape}: trajectory classified as ${result.shape}`);
+});
+
+console.log("Analysis coach fixtures passed: 16 recommendations, evidence gates, and 5 trajectory stories.");
