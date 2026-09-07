@@ -69,6 +69,7 @@ const analysisDisclosureState = {
   skills: { evidence: false, correlation: false }
 };
 let replayObserver = null;
+let graphPrototypeDataset = null;
 let devAutofillState = loadDevAutofillState();
 let lastDevHeadRecommendation = devAutofillState.headRecommendation || "";
 let lastDevSkillsRecommendation = devAutofillState.skillsRecommendation || "";
@@ -257,6 +258,8 @@ const translations = {
     "analysis.scoreTrend": "Score trend",
     "analysis.pointTitle.match": "Match {index}: {score} pts - {date}",
     "analysis.pointTitle.run": "Run {index}: {score} pts - {date}",
+    "analysis.pointDetail.match": "Match {index} · {date} · {result} {ourScore}–{opponentScore} · {auton}",
+    "analysis.pointDetail.run": "{type} run {index} · {date} · {score} points",
     "analysis.openCorrelation": "Open Correlation Lab",
     "analysis.correlationTool": "Advanced comparison tool",
     "analysis.compare": "Compare",
@@ -317,7 +320,7 @@ const translations = {
     "analysis.story.mapDriver": "Driver",
     "analysis.story.turningPoint": "Turning point",
     "analysis.story.whatChanges": "What changes when we win",
-    "analysis.story.nextChapter": "Next chapter",
+    "analysis.story.nextChapter": "Next practice",
     "analysis.story.missionAuton": "Opening mission",
     "analysis.story.missionAutonDetail": "Raise auton to {value} or better in a 10-run drill.",
     "analysis.story.missionCenter": "Control mission",
@@ -333,14 +336,14 @@ const translations = {
     "analysis.story.numberProofDetail": "The quick proof behind the coach read.",
     "analysis.story.progressStory": "Season timeline",
     "analysis.story.filmRoom": "Film room",
-    "analysis.story.timelineStrongUp": "The tape shows a strong climb",
-    "analysis.story.timelineUp": "The tape shows steady progress",
-    "analysis.story.timelineRecovery": "The tape shows a setback and recovery",
-    "analysis.story.timelineDown": "The tape says the last stretch slipped",
-    "analysis.story.timelineFlat": "The tape says the level is steady",
-    "analysis.story.timelineUpDetail": "Recent records are {delta} above the opening stretch. Keep the better pattern and drill the weakest phase.",
-    "analysis.story.timelineDownDetail": "Recent records are {delta} below the opening stretch. Treat this as a practice signal, not a panic button.",
-    "analysis.story.timelineFlatDetail": "Recent records are within {delta} of the opening stretch. The next jump needs one specific scoring habit.",
+    "analysis.story.timelineStrongUp": "Scores have improved significantly",
+    "analysis.story.timelineUp": "Scores have steadily improved",
+    "analysis.story.timelineRecovery": "Scores dipped, then recovered",
+    "analysis.story.timelineDown": "Recent scores have declined",
+    "analysis.story.timelineFlat": "Scores have remained consistent",
+    "analysis.story.timelineUpDetail": "Recent results are stronger than the earliest results in this range.",
+    "analysis.story.timelineDownDetail": "Recent results are below the earliest results in this range.",
+    "analysis.story.timelineFlatDetail": "Recent and early results are performing at a similar level.",
     "analysis.story.recentSwing": "Recent swing",
     "analysis.story.strategyBreakdown": "Strategy breakdown",
     "analysis.story.strategyDetail": "Where the match is usually being won, lost, or left unfinished.",
@@ -417,34 +420,31 @@ const translations = {
     "analysis.replay.confidenceEarly": "Early read",
     "analysis.replay.confidenceDeveloping": "Developing signal",
     "analysis.replay.confidenceStrong": "Strong signal",
-    "analysis.replay.headline": "{trajectory}. Next: {focus}.",
+    "analysis.replay.intro": "Here is what your practice data shows.",
+    "analysis.replay.shapeImproving": "Scores have steadily improved.",
+    "analysis.replay.shapeRecovery": "Scores dipped in the middle of the season, then recovered.",
+    "analysis.replay.shapeSteady": "Scores have remained consistent.",
+    "analysis.replay.shapeDecline": "Recent scores have declined.",
     "analysis.replay.chapterTrajectory": "Trajectory",
-    "analysis.replay.chapterTurning": "Turning point",
-    "analysis.replay.chapterAnatomy": "Match anatomy",
-    "analysis.replay.chapterPractice": "Practice plan",
-    "analysis.replay.trajectoryKicker": "Chapter 1",
-    "analysis.replay.trajectoryTitle": "How the season moved",
+    "analysis.replay.chapterTurning": "Turning Point",
+    "analysis.replay.chapterAnatomy": "Match Breakdown",
+    "analysis.replay.chapterSkillsAnatomy": "Run Breakdown",
+    "analysis.replay.chapterPractice": "Practice Plan",
     "analysis.replay.trajectoryDetail": "Follow the scores from the first saved record to the most recent one.",
-    "analysis.replay.legendDots": "Dots: saved scores",
+    "analysis.replay.legendDots": "Dots: your alliance's final score",
+    "analysis.replay.legendSkillsDots": "Dots: saved Skills scores",
     "analysis.replay.legendTrend": "Line: 5-match trend",
     "analysis.replay.legendRecent": "Shaded: latest 5",
     "analysis.replay.recentBand": "Latest 5",
     "analysis.replay.startingLevel": "Starting level",
     "analysis.replay.currentLevel": "Current level",
     "analysis.replay.biggestTurn": "Biggest turn",
-    "analysis.replay.turningKicker": "Chapter 2",
-    "analysis.replay.turningTitle": "The deciding swing",
     "analysis.replay.turningDetail": "This is the most important repeatable difference in the selected data.",
     "analysis.replay.whenWorking": "When it works",
     "analysis.replay.whenMissing": "When it slips",
     "analysis.replay.averageScoreShort": "average score",
     "analysis.replay.pointSwing": "{value}-point swing",
-    "analysis.replay.anatomyKicker": "Chapter 3",
-    "analysis.replay.anatomyTitle": "How a match unfolds",
-    "analysis.replay.anatomySkillsTitle": "How the route unfolds",
     "analysis.replay.anatomyDetail": "One verdict for every phase. The weakest phase becomes the first practice mission.",
-    "analysis.replay.practiceKicker": "Final chapter",
-    "analysis.replay.practiceTitle": "Your next practice has a purpose",
     "analysis.replay.practiceDetail": "Three missions, in order. Finish the first target before adding complexity.",
     "analysis.replay.whyItMatters": "Why it matters",
     "analysis.replay.successTarget": "Success target",
@@ -453,14 +453,28 @@ const translations = {
     "analysis.replay.numberProof": "Number proof",
     "analysis.replay.winLossProof": "What changes between wins and losses",
     "analysis.replay.skillsProof": "Driver and Autonomous proof",
-    "analysis.replay.noDataTitle": "The replay needs a first chapter",
+    "analysis.replay.noDataTitle": "The replay needs saved data",
     "analysis.replay.noHeadData": "Save head-on-head matches to build your performance story.",
     "analysis.replay.noSkillsData": "Save Driver and Autonomous Skills runs to build your route story.",
     "analysis.replay.pointHint": "Hover or focus a point to read that record.",
-    "analysis.replay.turnUp": "Up {value} from the opening stretch",
-    "analysis.replay.turnDown": "Down {value} from the opening stretch",
-    "analysis.replay.turnFlat": "Holding within {value} of the opening stretch",
     "analysis.replay.dateTurn": "{date}, a {value}-point change",
+    "analysis.prototype.kicker": "Dev graph sampler",
+    "analysis.prototype.title": "Choose how the season should look",
+    "analysis.prototype.detail": "Six views of the same 50 prepared matches. Every dot is the same exact alliance score.",
+    "analysis.prototype.current": "Current graph",
+    "analysis.prototype.hint": "Green is a win, coral is a loss, gold is a draw, and the shaded area marks the latest five matches.",
+    "analysis.prototype.exact.title": "Exact Score Path",
+    "analysis.prototype.exact.detail": "Connect every saved alliance score in match order.",
+    "analysis.prototype.rolling.title": "Rolling Five",
+    "analysis.prototype.rolling.detail": "Keep exact dots and connect the trailing five-match average.",
+    "analysis.prototype.smooth.title": "Smooth Season Trend",
+    "analysis.prototype.smooth.detail": "Keep exact dots over a gently smoothed season curve.",
+    "analysis.prototype.range.title": "Performance Range",
+    "analysis.prototype.range.detail": "Show the rolling average inside the recent five-match low-to-high range.",
+    "analysis.prototype.blocks.title": "Practice Blocks",
+    "analysis.prototype.blocks.detail": "Group matches into five-match blocks and compare each block's average.",
+    "analysis.prototype.stems.title": "Score Stems",
+    "analysis.prototype.stems.detail": "Anchor each exact score to the season average without a zigzag line.",
     "analysis.replay.missionHeadAutonWhy": "A repeatable opening removes the first pressure point from every match.",
     "analysis.replay.missionHeadCenterWhy": "Center control protects robot points and legal yellow scoring late.",
     "analysis.replay.missionHeadYellowWhy": "Placed yellows only matter when ownership makes them score.",
@@ -844,6 +858,8 @@ Object.assign(translations.es, {
   "analysis.scoreTrend": "Tendencia de puntuación",
   "analysis.pointTitle.match": "Partido {index}: {score} pts - {date}",
   "analysis.pointTitle.run": "Intento {index}: {score} pts - {date}",
+  "analysis.pointDetail.match": "Partido {index} · {date} · {result} {ourScore}–{opponentScore} · {auton}",
+  "analysis.pointDetail.run": "Intento {index} de {type} · {date} · {score} puntos",
   "analysis.openCorrelation": "Abrir laboratorio de correlación",
   "analysis.correlationTool": "Herramienta avanzada de comparación",
   "analysis.compare": "Comparar",
@@ -904,7 +920,7 @@ Object.assign(translations.es, {
   "analysis.story.mapDriver": "Driver",
   "analysis.story.turningPoint": "Punto de giro",
   "analysis.story.whatChanges": "Qué cambia cuando ganamos",
-  "analysis.story.nextChapter": "Siguiente capítulo",
+  "analysis.story.nextChapter": "Próxima práctica",
   "analysis.story.missionAuton": "Misión de apertura",
   "analysis.story.missionAutonDetail": "Sube autónomo a {value} o más en una rutina de 10 intentos.",
   "analysis.story.missionCenter": "Misión de control",
@@ -920,14 +936,14 @@ Object.assign(translations.es, {
   "analysis.story.numberProofDetail": "La prueba rápida detrás de la lectura del coach.",
   "analysis.story.progressStory": "Línea de temporada",
   "analysis.story.filmRoom": "Sala de video",
-  "analysis.story.timelineStrongUp": "La grabación muestra una gran subida",
-  "analysis.story.timelineUp": "La grabación muestra un progreso constante",
-  "analysis.story.timelineRecovery": "La grabación muestra un tropiezo y recuperación",
-  "analysis.story.timelineDown": "La grabación dice que el tramo reciente bajó",
-  "analysis.story.timelineFlat": "La grabación dice que el nivel está estable",
-  "analysis.story.timelineUpDetail": "Los registros recientes están {delta} por encima del tramo inicial. Mantén el patrón mejor y practica la fase más débil.",
-  "analysis.story.timelineDownDetail": "Los registros recientes están {delta} por debajo del tramo inicial. Tómalo como señal de práctica, no como pánico.",
-  "analysis.story.timelineFlatDetail": "Los registros recientes están a {delta} del tramo inicial. El próximo salto necesita un hábito de puntuación específico.",
+  "analysis.story.timelineStrongUp": "Los puntajes han mejorado significativamente",
+  "analysis.story.timelineUp": "Los puntajes han mejorado de forma constante",
+  "analysis.story.timelineRecovery": "Los puntajes bajaron y luego se recuperaron",
+  "analysis.story.timelineDown": "Los puntajes recientes han bajado",
+  "analysis.story.timelineFlat": "Los puntajes se han mantenido constantes",
+  "analysis.story.timelineUpDetail": "Los resultados recientes superan los primeros resultados de este período.",
+  "analysis.story.timelineDownDetail": "Los resultados recientes están por debajo de los primeros resultados de este período.",
+  "analysis.story.timelineFlatDetail": "Los resultados recientes y los primeros están en un nivel parecido.",
   "analysis.story.recentSwing": "Cambio reciente",
   "analysis.story.strategyBreakdown": "Desglose estratégico",
   "analysis.story.strategyDetail": "Dónde el partido suele ganarse, perderse o quedar incompleto.",
@@ -1004,34 +1020,31 @@ Object.assign(translations.es, {
   "analysis.replay.confidenceEarly": "Lectura inicial",
   "analysis.replay.confidenceDeveloping": "Señal en desarrollo",
   "analysis.replay.confidenceStrong": "Señal fuerte",
-  "analysis.replay.headline": "{trajectory}. Siguiente: {focus}.",
+  "analysis.replay.intro": "Esto es lo que muestran tus datos de práctica.",
+  "analysis.replay.shapeImproving": "Los puntajes han mejorado de forma constante.",
+  "analysis.replay.shapeRecovery": "Los puntajes bajaron a mitad de temporada y luego se recuperaron.",
+  "analysis.replay.shapeSteady": "Los puntajes se han mantenido constantes.",
+  "analysis.replay.shapeDecline": "Los puntajes recientes han bajado.",
   "analysis.replay.chapterTrajectory": "Trayectoria",
   "analysis.replay.chapterTurning": "Punto de giro",
-  "analysis.replay.chapterAnatomy": "Anatomía del partido",
+  "analysis.replay.chapterAnatomy": "Desglose del partido",
+  "analysis.replay.chapterSkillsAnatomy": "Desglose del intento",
   "analysis.replay.chapterPractice": "Plan de práctica",
-  "analysis.replay.trajectoryKicker": "Capítulo 1",
-  "analysis.replay.trajectoryTitle": "Cómo se movió la temporada",
   "analysis.replay.trajectoryDetail": "Sigue los puntajes desde el primer registro guardado hasta el más reciente.",
-  "analysis.replay.legendDots": "Puntos: resultados guardados",
+  "analysis.replay.legendDots": "Puntos: puntaje final de tu alianza",
+  "analysis.replay.legendSkillsDots": "Puntos: puntajes de Skills guardados",
   "analysis.replay.legendTrend": "Línea: tendencia de 5 partidos",
   "analysis.replay.legendRecent": "Sombreado: últimos 5",
   "analysis.replay.recentBand": "Últimos 5",
   "analysis.replay.startingLevel": "Nivel inicial",
   "analysis.replay.currentLevel": "Nivel actual",
   "analysis.replay.biggestTurn": "Mayor giro",
-  "analysis.replay.turningKicker": "Capítulo 2",
-  "analysis.replay.turningTitle": "El cambio decisivo",
   "analysis.replay.turningDetail": "Esta es la diferencia repetible más importante de los datos seleccionados.",
   "analysis.replay.whenWorking": "Cuando funciona",
   "analysis.replay.whenMissing": "Cuando falla",
   "analysis.replay.averageScoreShort": "puntaje promedio",
   "analysis.replay.pointSwing": "cambio de {value} puntos",
-  "analysis.replay.anatomyKicker": "Capítulo 3",
-  "analysis.replay.anatomyTitle": "Cómo se desarrolla un partido",
-  "analysis.replay.anatomySkillsTitle": "Cómo se desarrolla la ruta",
   "analysis.replay.anatomyDetail": "Un veredicto por fase. La fase más débil se convierte en la primera misión.",
-  "analysis.replay.practiceKicker": "Capítulo final",
-  "analysis.replay.practiceTitle": "Tu próxima práctica tiene un propósito",
   "analysis.replay.practiceDetail": "Tres misiones, en orden. Completa la primera meta antes de añadir complejidad.",
   "analysis.replay.whyItMatters": "Por qué importa",
   "analysis.replay.successTarget": "Meta de éxito",
@@ -1040,14 +1053,28 @@ Object.assign(translations.es, {
   "analysis.replay.numberProof": "Prueba numérica",
   "analysis.replay.winLossProof": "Qué cambia entre victorias y derrotas",
   "analysis.replay.skillsProof": "Prueba de Driver y Autónomo",
-  "analysis.replay.noDataTitle": "La repetición necesita un primer capítulo",
+  "analysis.replay.noDataTitle": "La repetición necesita datos guardados",
   "analysis.replay.noHeadData": "Guarda partidos frente a frente para construir tu historia de rendimiento.",
   "analysis.replay.noSkillsData": "Guarda intentos Driver y Autónomo para construir la historia de tu ruta.",
   "analysis.replay.pointHint": "Pasa el cursor o enfoca un punto para leer ese registro.",
-  "analysis.replay.turnUp": "Subió {value} desde el tramo inicial",
-  "analysis.replay.turnDown": "Bajó {value} desde el tramo inicial",
-  "analysis.replay.turnFlat": "Se mantiene a {value} del tramo inicial",
   "analysis.replay.dateTurn": "{date}, un cambio de {value} puntos",
+  "analysis.prototype.kicker": "Muestra de gráficas para desarrollo",
+  "analysis.prototype.title": "Elige cómo debe verse la temporada",
+  "analysis.prototype.detail": "Seis vistas de los mismos 50 partidos preparados. Cada punto conserva exactamente el mismo puntaje de alianza.",
+  "analysis.prototype.current": "Gráfica actual",
+  "analysis.prototype.hint": "Verde es victoria, coral es derrota, dorado es empate y el área sombreada marca los últimos cinco partidos.",
+  "analysis.prototype.exact.title": "Ruta de puntajes exactos",
+  "analysis.prototype.exact.detail": "Conecta cada puntaje de alianza guardado en orden de partido.",
+  "analysis.prototype.rolling.title": "Promedio móvil de cinco",
+  "analysis.prototype.rolling.detail": "Mantiene los puntos exactos y conecta el promedio de los últimos cinco partidos.",
+  "analysis.prototype.smooth.title": "Tendencia suave de temporada",
+  "analysis.prototype.smooth.detail": "Mantiene los puntos exactos sobre una curva de temporada suavizada.",
+  "analysis.prototype.range.title": "Rango de rendimiento",
+  "analysis.prototype.range.detail": "Muestra el promedio móvil dentro del rango bajo-alto de los cinco partidos recientes.",
+  "analysis.prototype.blocks.title": "Bloques de práctica",
+  "analysis.prototype.blocks.detail": "Agrupa partidos en bloques de cinco y compara el promedio de cada bloque.",
+  "analysis.prototype.stems.title": "Líneas de puntaje",
+  "analysis.prototype.stems.detail": "Une cada puntaje exacto con el promedio de temporada sin una línea en zigzag.",
   "analysis.replay.missionHeadAutonWhy": "Una apertura repetible elimina el primer punto de presión de cada partido.",
   "analysis.replay.missionHeadCenterWhy": "El control del centro protege puntos de robots y amarillos legales al final.",
   "analysis.replay.missionHeadYellowWhy": "Los amarillos colocados solo importan cuando la propiedad los hace puntuar.",
@@ -1428,6 +1455,8 @@ Object.assign(translations["zh-CN"], {
   "analysis.scoreTrend": "分数趋势",
   "analysis.pointTitle.match": "比赛 {index}: {score} 分 - {date}",
   "analysis.pointTitle.run": "尝试 {index}: {score} 分 - {date}",
+  "analysis.pointDetail.match": "比赛 {index} · {date} · {result} {ourScore}–{opponentScore} · {auton}",
+  "analysis.pointDetail.run": "{type}尝试 {index} · {date} · {score} 分",
   "analysis.openCorrelation": "打开相关性实验室",
   "analysis.correlationTool": "高级比较工具",
   "analysis.compare": "比较",
@@ -1488,7 +1517,7 @@ Object.assign(translations["zh-CN"], {
   "analysis.story.mapDriver": "驾驶",
   "analysis.story.turningPoint": "转折点",
   "analysis.story.whatChanges": "获胜时什么发生变化",
-  "analysis.story.nextChapter": "下一章",
+  "analysis.story.nextChapter": "下一次训练",
   "analysis.story.missionAuton": "开局任务",
   "analysis.story.missionAutonDetail": "做10次练习，把自动提升到 {value} 或更高。",
   "analysis.story.missionCenter": "控制任务",
@@ -1504,14 +1533,14 @@ Object.assign(translations["zh-CN"], {
   "analysis.story.numberProofDetail": "支撑教练判断的快速数据。",
   "analysis.story.progressStory": "赛季时间线",
   "analysis.story.filmRoom": "录像分析室",
-  "analysis.story.timelineStrongUp": "录像显示明显进步",
-  "analysis.story.timelineUp": "录像显示稳定进步",
-  "analysis.story.timelineRecovery": "录像显示低谷后的恢复",
-  "analysis.story.timelineDown": "录像显示最近一段下滑了",
-  "analysis.story.timelineFlat": "录像显示水平基本稳定",
-  "analysis.story.timelineUpDetail": "最近记录比开局阶段高 {delta}。保留更好的模式，然后练最弱阶段。",
-  "analysis.story.timelineDownDetail": "最近记录比开局阶段低 {delta}。把它当成训练信号，不是警报。",
-  "analysis.story.timelineFlatDetail": "最近记录与开局阶段只差 {delta}。下一次提升需要一个具体得分习惯。",
+  "analysis.story.timelineStrongUp": "得分已有显著提高",
+  "analysis.story.timelineUp": "得分一直在稳步提高",
+  "analysis.story.timelineRecovery": "得分下滑后已经恢复",
+  "analysis.story.timelineDown": "近期得分有所下降",
+  "analysis.story.timelineFlat": "得分一直保持稳定",
+  "analysis.story.timelineUpDetail": "近期结果高于本时段最早的结果。",
+  "analysis.story.timelineDownDetail": "近期结果低于本时段最早的结果。",
+  "analysis.story.timelineFlatDetail": "近期与早期结果处于相近水平。",
   "analysis.story.recentSwing": "近期变化",
   "analysis.story.strategyBreakdown": "策略拆解",
   "analysis.story.strategyDetail": "比赛通常在哪些地方赢、输或漏分。",
@@ -1588,34 +1617,31 @@ Object.assign(translations["zh-CN"], {
   "analysis.replay.confidenceEarly": "初步判断",
   "analysis.replay.confidenceDeveloping": "正在形成的信号",
   "analysis.replay.confidenceStrong": "强信号",
-  "analysis.replay.headline": "{trajectory}。下一步：{focus}。",
+  "analysis.replay.intro": "这是你的练习数据所显示的结果。",
+  "analysis.replay.shapeImproving": "得分一直在稳步提高。",
+  "analysis.replay.shapeRecovery": "赛季中段得分下滑，随后恢复。",
+  "analysis.replay.shapeSteady": "得分一直保持稳定。",
+  "analysis.replay.shapeDecline": "近期得分有所下降。",
   "analysis.replay.chapterTrajectory": "走势",
   "analysis.replay.chapterTurning": "转折点",
-  "analysis.replay.chapterAnatomy": "比赛结构",
+  "analysis.replay.chapterAnatomy": "比赛解析",
+  "analysis.replay.chapterSkillsAnatomy": "尝试解析",
   "analysis.replay.chapterPractice": "训练计划",
-  "analysis.replay.trajectoryKicker": "第一章",
-  "analysis.replay.trajectoryTitle": "赛季如何变化",
   "analysis.replay.trajectoryDetail": "从第一条保存记录看到最近一条记录。",
-  "analysis.replay.legendDots": "圆点：已保存分数",
+  "analysis.replay.legendDots": "圆点：本方联盟最终得分",
+  "analysis.replay.legendSkillsDots": "圆点：已保存的技能赛得分",
   "analysis.replay.legendTrend": "线条：最近 5 场趋势",
   "analysis.replay.legendRecent": "阴影：最近 5 场",
   "analysis.replay.recentBand": "最近 5 场",
   "analysis.replay.startingLevel": "起点水平",
   "analysis.replay.currentLevel": "当前水平",
   "analysis.replay.biggestTurn": "最大转折",
-  "analysis.replay.turningKicker": "第二章",
-  "analysis.replay.turningTitle": "决定胜负的变化",
   "analysis.replay.turningDetail": "这是所选数据中最重要、最可重复的差异。",
   "analysis.replay.whenWorking": "做到时",
   "analysis.replay.whenMissing": "没做到时",
   "analysis.replay.averageScoreShort": "平均分",
   "analysis.replay.pointSwing": "{value} 分变化",
-  "analysis.replay.anatomyKicker": "第三章",
-  "analysis.replay.anatomyTitle": "比赛如何展开",
-  "analysis.replay.anatomySkillsTitle": "路线如何展开",
   "analysis.replay.anatomyDetail": "每个阶段一个判断。最弱阶段成为第一项训练任务。",
-  "analysis.replay.practiceKicker": "终章",
-  "analysis.replay.practiceTitle": "下一次训练有明确目标",
   "analysis.replay.practiceDetail": "依次完成三项任务。达到第一项目标后再增加复杂度。",
   "analysis.replay.whyItMatters": "为什么重要",
   "analysis.replay.successTarget": "达标目标",
@@ -1624,14 +1650,28 @@ Object.assign(translations["zh-CN"], {
   "analysis.replay.numberProof": "数字证据",
   "analysis.replay.winLossProof": "胜负之间发生了什么变化",
   "analysis.replay.skillsProof": "Driver 与自动技能证据",
-  "analysis.replay.noDataTitle": "回放还缺少第一章",
+  "analysis.replay.noDataTitle": "回放需要已保存的数据",
   "analysis.replay.noHeadData": "保存对抗赛记录后即可生成表现故事。",
   "analysis.replay.noSkillsData": "保存 Driver 和自动技能赛记录后即可生成路线故事。",
   "analysis.replay.pointHint": "悬停或聚焦数据点即可查看该条记录。",
-  "analysis.replay.turnUp": "比起始阶段提高 {value}",
-  "analysis.replay.turnDown": "比起始阶段下降 {value}",
-  "analysis.replay.turnFlat": "与起始阶段相差不超过 {value}",
   "analysis.replay.dateTurn": "{date}，变化 {value} 分",
+  "analysis.prototype.kicker": "开发模式图表样例",
+  "analysis.prototype.title": "选择赛季走势的呈现方式",
+  "analysis.prototype.detail": "同一组 50 场预设比赛的六种视图。每个圆点都使用完全相同的联盟得分。",
+  "analysis.prototype.current": "当前图表",
+  "analysis.prototype.hint": "绿色表示胜，珊瑚色表示负，金色表示平，阴影区域表示最近五场比赛。",
+  "analysis.prototype.exact.title": "精确得分路径",
+  "analysis.prototype.exact.detail": "按比赛顺序连接每一个已保存的联盟得分。",
+  "analysis.prototype.rolling.title": "五场移动平均",
+  "analysis.prototype.rolling.detail": "保留精确圆点，并连接最近五场比赛的平均值。",
+  "analysis.prototype.smooth.title": "平滑赛季趋势",
+  "analysis.prototype.smooth.detail": "在轻度平滑的赛季曲线上保留所有精确圆点。",
+  "analysis.prototype.range.title": "表现范围",
+  "analysis.prototype.range.detail": "在最近五场的最低至最高范围内显示移动平均。",
+  "analysis.prototype.blocks.title": "训练分组",
+  "analysis.prototype.blocks.detail": "每五场比赛分为一组，并比较各组平均分。",
+  "analysis.prototype.stems.title": "得分垂线",
+  "analysis.prototype.stems.detail": "将每个精确得分连接到赛季平均线，不使用锯齿折线。",
   "analysis.replay.missionHeadAutonWhy": "稳定的开局能消除每场比赛的第一个压力点。",
   "analysis.replay.missionHeadCenterWhy": "控制中心能在末段保护机器人分和有效黄桩分。",
   "analysis.replay.missionHeadYellowWhy": "黄桩只有在归属正确时才真正得分。",
@@ -6111,11 +6151,14 @@ function replayTrajectory(records, getter) {
   const classified = classifySavedTrajectory(records, getter);
   const { opening, current, delta, tone, shape } = classified;
   const title = trajectoryShapeLabel(shape);
-  const summary = tone === "up"
-    ? t("analysis.replay.turnUp", { value: formatAnalysisNumber(Math.abs(delta)) })
-    : tone === "down"
-      ? t("analysis.replay.turnDown", { value: formatAnalysisNumber(Math.abs(delta)) })
-      : t("analysis.replay.turnFlat", { value: formatAnalysisNumber(Math.abs(delta)) });
+  const summaryKey = shape === "recovery"
+    ? "analysis.replay.shapeRecovery"
+    : shape === "decline"
+      ? "analysis.replay.shapeDecline"
+      : shape === "steady"
+        ? "analysis.replay.shapeSteady"
+        : "analysis.replay.shapeImproving";
+  const summary = t(summaryKey);
   return { opening, current, delta, tone, shape, title, summary, turning: replayTurningMoment(records, getter) };
 }
 
@@ -6244,23 +6287,35 @@ function rankedSkillsRecommendation(runs) {
   return coachRecommendationView(result, "skills");
 }
 
-function replayPointFactor(mode, record, story) {
+function sentenceCase(value) {
+  const text = String(value || "");
+  return text ? `${text.charAt(0).toLocaleUpperCase(languageLocale())}${text.slice(1)}` : text;
+}
+
+function autonResultLabel(record) {
+  if (autonWon(record)) return t("analysis.wonAuton");
+  if (autonTied(record)) return t("analysis.tiedAuton");
+  return t("analysis.lostAuton");
+}
+
+function replayPointLabel(mode, record, index) {
+  const date = formatMatchDate(record);
   if (mode === "skills") {
-    if (story.key === "yellow") {
-      const rate = skillsYellowRate(record);
-      return `${t("analysis.story.mapYellows")}: ${formatRate(Number.isFinite(rate) ? rate * 100 : null)}`;
-    }
-    if (story.key === "center") return `${t("analysis.story.mapCenter")}: ${record.skills?.centerToggle ? "✓" : "–"}`;
-    return skillsTypeLabel(record.skillsType);
+    return t("analysis.pointDetail.run", {
+      type: skillsTypeLabel(record.skillsType),
+      index: index + 1,
+      date,
+      score: formatAnalysisNumber(record.score)
+    });
   }
-  if (story.key === "auton") return `${t("analysis.story.mapAuton")}: ${autonWon(record) ? t("analysis.wonAuton") : autonTied(record) ? t("analysis.tiedAuton") : t("analysis.lostAuton")}`;
-  if (story.key === "center") return `${t("analysis.story.mapCenter")}: ${centerControlledByUs(record) ? "✓" : "–"}`;
-  if (story.key === "yellow") {
-    const rate = headYellowRate(record);
-    return `${t("analysis.story.mapYellows")}: ${formatRate(Number.isFinite(rate) ? rate * 100 : null)}`;
-  }
-  if (story.key === "pins") return `${t("analysis.story.mapPins")}: ${formatAnalysisNumber(ourAlliancePins(record))}`;
-  return `${t("analysis.story.mapMargin")}: ${signedNumber(scoreMargin(record))}`;
+  return t("analysis.pointDetail.match", {
+    index: index + 1,
+    date,
+    result: sentenceCase(matchResultLabel(record)),
+    ourScore: formatAnalysisNumber(record.ourScore),
+    opponentScore: formatAnalysisNumber(record.opponentScore),
+    auton: autonResultLabel(record)
+  });
 }
 
 function trailingAverageValues(values, windowSize = 5) {
@@ -6300,8 +6355,7 @@ function renderReplayTimeline(mode, records, getter, trajectory, story) {
   const dots = coordinates.map((point, index) => {
     const record = ordered[index];
     const resultClass = mode === "skills" ? (record.skillsType === "autonomous" ? "autonomous" : "driver") : (record.result || "saved");
-    const pointTitle = t(`analysis.pointTitle.${mode === "skills" ? "run" : "match"}`, { index: index + 1, score: formatAnalysisNumber(point.score), date: formatMatchDate(record) });
-    const label = `${pointTitle}. ${mode === "skills" ? skillsTypeLabel(record.skillsType) : matchResultLabel(record)}. ${replayPointFactor(mode, record, story)}.`;
+    const label = replayPointLabel(mode, record, index);
     return `
       <g class="replay-chart-point ${escapeHtml(resultClass)}${index >= recentStart ? " recent" : ""}" transform="translate(${point.x.toFixed(1)} ${point.y.toFixed(1)})" tabindex="0" role="button" data-replay-point="${escapeHtml(label)}" aria-label="${escapeHtml(label)}">
         <circle class="replay-point-hit" r="17"></circle>
@@ -6312,8 +6366,7 @@ function renderReplayTimeline(mode, records, getter, trajectory, story) {
   return `
     <section id="${mode}-trajectory" class="replay-chapter replay-trajectory replay-reveal" data-replay-mode="${mode}" data-replay-chapter="trajectory">
       <header class="replay-chapter-heading">
-        <span>${escapeHtml(t("analysis.replay.trajectoryKicker"))}</span>
-        <h4>${escapeHtml(t("analysis.replay.trajectoryTitle"))}</h4>
+        <h4>${escapeHtml(t("analysis.replay.chapterTrajectory"))}</h4>
         <p>${escapeHtml(t("analysis.replay.trajectoryDetail"))}</p>
       </header>
       <div class="replay-chart-shell">
@@ -6333,7 +6386,7 @@ function renderReplayTimeline(mode, records, getter, trajectory, story) {
           ${dots}
         </svg>
         <div class="replay-chart-legend" aria-label="${escapeHtml(t("analysis.scoreTrend"))}">
-          <span><i class="dots"></i>${escapeHtml(t("analysis.replay.legendDots"))}</span>
+          <span><i class="dots"></i>${escapeHtml(t(mode === "skills" ? "analysis.replay.legendSkillsDots" : "analysis.replay.legendDots"))}</span>
           <span><i class="trend"></i>${escapeHtml(t("analysis.replay.legendTrend"))}</span>
           <span><i class="recent"></i>${escapeHtml(t("analysis.replay.legendRecent"))}</span>
         </div>
@@ -6344,6 +6397,166 @@ function renderReplayTimeline(mode, records, getter, trajectory, story) {
         <div class="current"><dt>${escapeHtml(t("analysis.replay.currentLevel"))}</dt><dd>${escapeHtml(formatAnalysisNumber(trajectory.current))}</dd></div>
         <div><dt>${escapeHtml(t("analysis.replay.biggestTurn"))}</dt><dd>${escapeHtml(t("analysis.replay.dateTurn", { date: formatMatchDate(trajectory.turning.record), value: formatAnalysisNumber(Math.abs(trajectory.turning.delta)) }))}</dd></div>
       </dl>
+    </section>`;
+}
+
+function centeredAverageValues(values, windowSize = 7) {
+  const radius = Math.floor(windowSize / 2);
+  return values.map((_, index) => average(values.slice(
+    Math.max(0, index - radius),
+    Math.min(values.length, index + radius + 1)
+  )));
+}
+
+function rollingWindowValues(values, windowSize, getter) {
+  return values.map((_, index) => getter(values.slice(Math.max(0, index - windowSize + 1), index + 1)));
+}
+
+function smoothSvgPath(coordinates) {
+  if (!coordinates.length) return "";
+  if (coordinates.length === 1) return `M ${coordinates[0].x.toFixed(1)} ${coordinates[0].y.toFixed(1)}`;
+  let path = `M ${coordinates[0].x.toFixed(1)} ${coordinates[0].y.toFixed(1)}`;
+  for (let index = 0; index < coordinates.length - 1; index += 1) {
+    const previous = coordinates[Math.max(0, index - 1)];
+    const current = coordinates[index];
+    const next = coordinates[index + 1];
+    const after = coordinates[Math.min(coordinates.length - 1, index + 2)];
+    const controlOneX = current.x + (next.x - previous.x) / 6;
+    const controlOneY = current.y + (next.y - previous.y) / 6;
+    const controlTwoX = next.x - (after.x - current.x) / 6;
+    const controlTwoY = next.y - (after.y - current.y) / 6;
+    path += ` C ${controlOneX.toFixed(1)} ${controlOneY.toFixed(1)}, ${controlTwoX.toFixed(1)} ${controlTwoY.toFixed(1)}, ${next.x.toFixed(1)} ${next.y.toFixed(1)}`;
+  }
+  return path;
+}
+
+function graphPrototypeRecords() {
+  if (!graphPrototypeDataset) graphPrototypeDataset = buildJudgeDataset().filter(isHeadMatch);
+  return graphPrototypeDataset;
+}
+
+function graphPrototypeModel() {
+  const ordered = graphPrototypeRecords().slice().sort((a, b) => recordTimestamp(a) - recordTimestamp(b));
+  const scores = ordered.map(record => numericValue(record.ourScore));
+  const width = 720;
+  const height = 250;
+  const padX = 34;
+  const padY = 26;
+  const rawMin = Math.min(...scores);
+  const rawMax = Math.max(...scores);
+  const padding = Math.max(8, (rawMax - rawMin) * .08);
+  const min = rawMin - padding;
+  const max = rawMax + padding;
+  const range = Math.max(max - min, 1);
+  const step = (width - padX * 2) / Math.max(scores.length - 1, 1);
+  const yFor = score => height - padY - ((score - min) / range) * (height - padY * 2);
+  const coordinatesFor = values => values.map((score, index) => ({ x: padX + index * step, y: yFor(score), score }));
+  const coordinates = coordinatesFor(scores);
+  const averageScore = average(scores);
+  const recentStart = Math.max(0, scores.length - 5);
+  const recentBandStart = Math.max(padX, coordinates[recentStart].x - step / 2);
+  const recentBandEnd = Math.min(width - padX, coordinates.at(-1).x + step / 2);
+  return {
+    ordered,
+    scores,
+    width,
+    height,
+    padX,
+    padY,
+    step,
+    yFor,
+    coordinatesFor,
+    coordinates,
+    averageScore,
+    averageY: yFor(averageScore),
+    recentStart,
+    recentBandStart,
+    recentBandWidth: Math.max(0, recentBandEnd - recentBandStart)
+  };
+}
+
+function prototypeDots(model) {
+  return model.coordinates.map((point, index) => {
+    const record = model.ordered[index];
+    const resultClass = record.result || "saved";
+    const label = replayPointLabel("head", record, index);
+    return `
+      <g class="replay-chart-point prototype-point ${escapeHtml(resultClass)}${index >= model.recentStart ? " recent" : ""}" transform="translate(${point.x.toFixed(1)} ${point.y.toFixed(1)})" tabindex="0" role="button" data-replay-point="${escapeHtml(label)}" aria-label="${escapeHtml(label)}">
+        <circle class="replay-point-hit" r="14"></circle>
+        <circle class="replay-point-ring" r="${index >= model.recentStart ? "7" : "5"}"></circle>
+        <circle class="replay-point-core" r="3"></circle>
+      </g>`;
+  }).join("");
+}
+
+function graphPrototypePlot(type, model) {
+  const pointString = model.coordinates.map(point => `${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(" ");
+  const rolling = model.coordinatesFor(trailingAverageValues(model.scores));
+  const rollingString = rolling.map(point => `${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(" ");
+  const base = `
+    <rect class="graph-prototype-recent" x="${model.recentBandStart.toFixed(1)}" y="${model.padY}" width="${model.recentBandWidth.toFixed(1)}" height="${model.height - model.padY * 2}"></rect>
+    <line class="graph-prototype-average" x1="${model.padX}" y1="${model.averageY.toFixed(1)}" x2="${model.width - model.padX}" y2="${model.averageY.toFixed(1)}"></line>`;
+  if (type === "exact") {
+    return `${base}<polyline class="graph-prototype-line exact" points="${pointString}"></polyline>`;
+  }
+  if (type === "rolling") {
+    return `${base}<polyline class="graph-prototype-line rolling" points="${rollingString}"></polyline>`;
+  }
+  if (type === "smooth") {
+    const smoothCoordinates = model.coordinatesFor(centeredAverageValues(model.scores));
+    return `${base}<path class="graph-prototype-line smooth" d="${smoothSvgPath(smoothCoordinates)}"></path>`;
+  }
+  if (type === "range") {
+    const low = model.coordinatesFor(rollingWindowValues(model.scores, 5, values => Math.min(...values)));
+    const high = model.coordinatesFor(rollingWindowValues(model.scores, 5, values => Math.max(...values)));
+    const rangePoints = [...high, ...low.slice().reverse()].map(point => `${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(" ");
+    return `${base}<polygon class="graph-prototype-range" points="${rangePoints}"></polygon><polyline class="graph-prototype-line rolling" points="${rollingString}"></polyline>`;
+  }
+  if (type === "blocks") {
+    const blocks = [];
+    for (let start = 0; start < model.scores.length; start += 5) {
+      const end = Math.min(model.scores.length - 1, start + 4);
+      const score = average(model.scores.slice(start, end + 1));
+      blocks.push({ startX: model.coordinates[start].x, endX: model.coordinates[end].x, y: model.yFor(score) });
+    }
+    const connectors = blocks.slice(1).map((block, index) => `<line class="graph-prototype-block-connector" x1="${blocks[index].endX.toFixed(1)}" y1="${blocks[index].y.toFixed(1)}" x2="${block.startX.toFixed(1)}" y2="${block.y.toFixed(1)}"></line>`).join("");
+    const lines = blocks.map(block => `<line class="graph-prototype-block" x1="${block.startX.toFixed(1)}" y1="${block.y.toFixed(1)}" x2="${block.endX.toFixed(1)}" y2="${block.y.toFixed(1)}"></line>`).join("");
+    return `${base}${connectors}${lines}`;
+  }
+  const stems = model.coordinates.map(point => `<line class="graph-prototype-stem" x1="${point.x.toFixed(1)}" y1="${model.averageY.toFixed(1)}" x2="${point.x.toFixed(1)}" y2="${point.y.toFixed(1)}"></line>`).join("");
+  return `${base}${stems}`;
+}
+
+function renderGraphPrototypeSampler() {
+  if (!isDevMode) return "";
+  const model = graphPrototypeModel();
+  const prototypes = ["exact", "rolling", "smooth", "range", "blocks", "stems"];
+  const dots = prototypeDots(model);
+  return `
+    <section class="graph-prototype-sampler" data-graph-prototype-sampler>
+      <header>
+        <span>${escapeHtml(t("analysis.prototype.kicker"))}</span>
+        <h4>${escapeHtml(t("analysis.prototype.title"))}</h4>
+        <p>${escapeHtml(t("analysis.prototype.detail"))}</p>
+        <small>${escapeHtml(t("analysis.prototype.hint"))}</small>
+      </header>
+      <div class="graph-prototype-grid">
+        ${prototypes.map((type, index) => `
+          <article class="graph-prototype${type === "rolling" ? " current" : ""}" data-graph-prototype="${index + 1}">
+            <div class="graph-prototype-heading">
+              <span>0${index + 1}</span>
+              <div><h5>${escapeHtml(t(`analysis.prototype.${type}.title`))}</h5><p>${escapeHtml(t(`analysis.prototype.${type}.detail`))}</p></div>
+              ${type === "rolling" ? `<small>${escapeHtml(t("analysis.prototype.current"))}</small>` : ""}
+            </div>
+            <div class="replay-chart-shell graph-prototype-chart-shell">
+              <svg class="graph-prototype-chart" viewBox="0 0 ${model.width} ${model.height}" role="img" aria-label="${escapeHtml(t(`analysis.prototype.${type}.title`))}">
+                ${graphPrototypePlot(type, model)}
+                ${dots}
+              </svg>
+              <p class="replay-point-readout" data-replay-point-readout>${escapeHtml(t("analysis.replay.pointHint"))}</p>
+            </div>
+          </article>`).join("")}
+      </div>
     </section>`;
 }
 
@@ -6393,7 +6606,8 @@ function renderReplayOpening(mode, records, story, trajectory) {
         <span>${escapeHtml(count)}</span>
         <span class="${escapeHtml(confidence.tone)}">${escapeHtml(confidence.label)}</span>
       </div>
-      <h3>${escapeHtml(t("analysis.replay.headline", { trajectory: trajectory.title, focus: story.title }))}</h3>
+      <p class="replay-opening-intro">${escapeHtml(t("analysis.replay.intro"))}</p>
+      <h3>${escapeHtml(story.title)}</h3>
       <div class="replay-opening-signal"><i></i><span>${escapeHtml(trajectory.summary)}</span></div>
     </section>`;
 }
@@ -6405,7 +6619,7 @@ function renderReplayNav(mode) {
     <nav class="replay-chapter-nav" data-replay-nav="${mode}" aria-label="${escapeHtml(t("analysis.replay.title"))}">
       <a href="${escapeHtml(chapterHref("trajectory"))}" aria-current="step"><span>01</span>${escapeHtml(t("analysis.replay.chapterTrajectory"))}</a>
       <a href="${escapeHtml(chapterHref("turning"))}"><span>02</span>${escapeHtml(t("analysis.replay.chapterTurning"))}</a>
-      <a href="${escapeHtml(chapterHref("anatomy"))}"><span>03</span>${escapeHtml(t("analysis.replay.chapterAnatomy"))}</a>
+      <a href="${escapeHtml(chapterHref("anatomy"))}"><span>03</span>${escapeHtml(t(mode === "skills" ? "analysis.replay.chapterSkillsAnatomy" : "analysis.replay.chapterAnatomy"))}</a>
       <a href="${escapeHtml(chapterHref("practice"))}"><span>04</span>${escapeHtml(t("analysis.replay.chapterPractice"))}</a>
     </nav>`;
 }
@@ -6431,8 +6645,7 @@ function renderReplayTurning(mode, records, story) {
   return `
     <section id="${mode}-turning" class="replay-chapter replay-turning replay-reveal" data-replay-mode="${mode}" data-replay-chapter="turning">
       <header class="replay-chapter-heading">
-        <span>${escapeHtml(t("analysis.replay.turningKicker"))}</span>
-        <h4>${escapeHtml(t("analysis.replay.turningTitle"))}</h4>
+        <h4>${escapeHtml(t("analysis.replay.chapterTurning"))}</h4>
         <p>${escapeHtml(t("analysis.replay.turningDetail"))}</p>
       </header>
       <div class="replay-decision">
@@ -6461,8 +6674,7 @@ function renderReplayAnatomy(mode, phases, story) {
   return `
     <section id="${mode}-anatomy" class="replay-chapter replay-anatomy replay-reveal" data-replay-mode="${mode}" data-replay-chapter="anatomy">
       <header class="replay-chapter-heading">
-        <span>${escapeHtml(t("analysis.replay.anatomyKicker"))}</span>
-        <h4>${escapeHtml(t(mode === "skills" ? "analysis.replay.anatomySkillsTitle" : "analysis.replay.anatomyTitle"))}</h4>
+        <h4>${escapeHtml(t(mode === "skills" ? "analysis.replay.chapterSkillsAnatomy" : "analysis.replay.chapterAnatomy"))}</h4>
         <p>${escapeHtml(t("analysis.replay.anatomyDetail"))}</p>
       </header>
       <div class="replay-phase-sequence">
@@ -6503,8 +6715,7 @@ function renderReplayPractice(mode, missions) {
   return `
     <section id="${mode}-practice" class="replay-chapter replay-practice replay-reveal" data-replay-mode="${mode}" data-replay-chapter="practice">
       <header class="replay-chapter-heading">
-        <span>${escapeHtml(t("analysis.replay.practiceKicker"))}</span>
-        <h4>${escapeHtml(t("analysis.replay.practiceTitle"))}</h4>
+        <h4>${escapeHtml(t("analysis.replay.chapterPractice"))}</h4>
         <p>${escapeHtml(t("analysis.replay.practiceDetail"))}</p>
       </header>
       <ol class="replay-missions">
@@ -6622,6 +6833,7 @@ function renderSeasonReplay(mode, allRecords, records) {
     ${renderReplayOpening(mode, records, story, trajectory)}
     ${renderReplayNav(mode)}
     ${renderReplayTimeline(mode, records, getter, trajectory, story)}
+    ${mode === "head" ? renderGraphPrototypeSampler() : ""}
     ${renderReplayTurning(mode, records, story)}
     ${renderReplayAnatomy(mode, phases, story)}
     ${renderReplayPractice(mode, missions)}
@@ -6646,7 +6858,7 @@ function initReplayMotion() {
       const mode = entry.target.dataset.replayMode;
       if (chapter && chapter !== "opening") {
         $$(`[data-replay-nav="${mode}"] a`).forEach((link) => {
-          const current = link.getAttribute("href") === `#${mode}-${chapter}`;
+          const current = new URL(link.href, window.location.href).hash === `#${mode}-${chapter}`;
           if (current) link.setAttribute("aria-current", "step");
           else link.removeAttribute("aria-current");
         });
