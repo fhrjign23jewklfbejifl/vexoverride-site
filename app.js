@@ -56,6 +56,7 @@ let profile = loadProfile();
 let activeMode = "head";
 let analysisRange = "all";
 let analysisMode = "head";
+let replayObserver = null;
 let headCorrelationX = "alliancePins";
 let headCorrelationY = "ourScore";
 let skillsCorrelationX = "redBluePins";
@@ -382,6 +383,64 @@ const translations = {
     "analysis.story.skills.ceiling.why": "The route base is healthy, so improvement should come from refining the highest-value sequence.",
     "analysis.story.skills.ceiling.proof": "Best combined is {combined}; recent form is {recent}.",
     "analysis.story.skills.ceiling.target": "Pick one route segment and chase cleaner execution.",
+    "analysis.replay.kicker": "Performance story",
+    "analysis.replay.title": "Season Replay",
+    "analysis.replay.modeAria": "Replay type",
+    "analysis.replay.period": "Selected period",
+    "analysis.replay.confidence": "Story confidence",
+    "analysis.replay.confidenceEarly": "Early read",
+    "analysis.replay.confidenceDeveloping": "Developing signal",
+    "analysis.replay.confidenceStrong": "Strong signal",
+    "analysis.replay.headline": "{trajectory}. Next: {focus}.",
+    "analysis.replay.chapterTrajectory": "Trajectory",
+    "analysis.replay.chapterTurning": "Turning point",
+    "analysis.replay.chapterAnatomy": "Match anatomy",
+    "analysis.replay.chapterPractice": "Practice plan",
+    "analysis.replay.trajectoryKicker": "Chapter 1",
+    "analysis.replay.trajectoryTitle": "How the season moved",
+    "analysis.replay.trajectoryDetail": "Follow the scores from the first saved record to the most recent one.",
+    "analysis.replay.startingLevel": "Starting level",
+    "analysis.replay.currentLevel": "Current level",
+    "analysis.replay.biggestTurn": "Biggest turn",
+    "analysis.replay.turningKicker": "Chapter 2",
+    "analysis.replay.turningTitle": "The deciding swing",
+    "analysis.replay.turningDetail": "This is the most important repeatable difference in the selected data.",
+    "analysis.replay.whenWorking": "When it works",
+    "analysis.replay.whenMissing": "When it slips",
+    "analysis.replay.averageScoreShort": "average score",
+    "analysis.replay.pointSwing": "{value}-point swing",
+    "analysis.replay.anatomyKicker": "Chapter 3",
+    "analysis.replay.anatomyTitle": "How a match unfolds",
+    "analysis.replay.anatomySkillsTitle": "How the route unfolds",
+    "analysis.replay.anatomyDetail": "One verdict for every phase. The weakest phase becomes the first practice mission.",
+    "analysis.replay.practiceKicker": "Final chapter",
+    "analysis.replay.practiceTitle": "Your next practice has a purpose",
+    "analysis.replay.practiceDetail": "Three missions, in order. Finish the first target before adding complexity.",
+    "analysis.replay.whyItMatters": "Why it matters",
+    "analysis.replay.successTarget": "Success target",
+    "analysis.replay.evidenceTitle": "Explore the Evidence",
+    "analysis.replay.evidenceDetail": "Open the numbers, comparisons, and correlation tools behind this replay.",
+    "analysis.replay.numberProof": "Number proof",
+    "analysis.replay.winLossProof": "What changes between wins and losses",
+    "analysis.replay.skillsProof": "Driver and Autonomous proof",
+    "analysis.replay.noDataTitle": "The replay needs a first chapter",
+    "analysis.replay.noHeadData": "Save head-on-head matches to build your performance story.",
+    "analysis.replay.noSkillsData": "Save Driver and Autonomous Skills runs to build your route story.",
+    "analysis.replay.pointHint": "Hover or focus a point to read that record.",
+    "analysis.replay.turnUp": "Up {value} from the opening stretch",
+    "analysis.replay.turnDown": "Down {value} from the opening stretch",
+    "analysis.replay.turnFlat": "Holding within {value} of the opening stretch",
+    "analysis.replay.dateTurn": "{date}, a {value}-point change",
+    "analysis.replay.missionHeadAutonWhy": "A repeatable opening removes the first pressure point from every match.",
+    "analysis.replay.missionHeadCenterWhy": "Center control protects robot points and legal yellow scoring late.",
+    "analysis.replay.missionHeadYellowWhy": "Placed yellows only matter when ownership makes them score.",
+    "analysis.replay.missionHeadFloorWhy": "A safer minimum plan keeps one rough sequence from deciding the match.",
+    "analysis.replay.missionHeadReviewWhy": "Fresh saved matches prove whether the practice change survives real play.",
+    "analysis.replay.missionSkillsDriverWhy": "A stable Driver route turns peak scores into repeatable scores.",
+    "analysis.replay.missionSkillsAutonWhy": "Autonomous improvement adds directly to the combined Skills ceiling.",
+    "analysis.replay.missionSkillsYellowWhy": "Clean ownership converts the pins already in the route into real points.",
+    "analysis.replay.missionSkillsCenterWhy": "A reliable center checkpoint prevents late route value from disappearing.",
+    "analysis.replay.missionSkillsReviewWhy": "Paired runs show whether Driver and Autonomous are improving together.",
     "scouting.skillsKicker": "Official Skills standings",
     "scouting.teamSkillsTitle": "Team Skills Search",
     "scouting.teamSkillsDescription": "Search teams from the public VEX V5RC Override Skills standings.",
@@ -890,6 +949,64 @@ Object.assign(translations.es, {
   "analysis.story.skills.ceiling.why": "La base de ruta está sana; la mejora viene de refinar la secuencia de mayor valor.",
   "analysis.story.skills.ceiling.proof": "El mejor combinado es {combined}; la forma reciente es {recent}.",
   "analysis.story.skills.ceiling.target": "Elige un segmento de ruta y busca ejecución más limpia.",
+  "analysis.replay.kicker": "Historia de rendimiento",
+  "analysis.replay.title": "Repetición de Temporada",
+  "analysis.replay.modeAria": "Tipo de repetición",
+  "analysis.replay.period": "Período seleccionado",
+  "analysis.replay.confidence": "Confianza de la lectura",
+  "analysis.replay.confidenceEarly": "Lectura inicial",
+  "analysis.replay.confidenceDeveloping": "Señal en desarrollo",
+  "analysis.replay.confidenceStrong": "Señal fuerte",
+  "analysis.replay.headline": "{trajectory}. Siguiente: {focus}.",
+  "analysis.replay.chapterTrajectory": "Trayectoria",
+  "analysis.replay.chapterTurning": "Punto de giro",
+  "analysis.replay.chapterAnatomy": "Anatomía del partido",
+  "analysis.replay.chapterPractice": "Plan de práctica",
+  "analysis.replay.trajectoryKicker": "Capítulo 1",
+  "analysis.replay.trajectoryTitle": "Cómo se movió la temporada",
+  "analysis.replay.trajectoryDetail": "Sigue los puntajes desde el primer registro guardado hasta el más reciente.",
+  "analysis.replay.startingLevel": "Nivel inicial",
+  "analysis.replay.currentLevel": "Nivel actual",
+  "analysis.replay.biggestTurn": "Mayor giro",
+  "analysis.replay.turningKicker": "Capítulo 2",
+  "analysis.replay.turningTitle": "El cambio decisivo",
+  "analysis.replay.turningDetail": "Esta es la diferencia repetible más importante de los datos seleccionados.",
+  "analysis.replay.whenWorking": "Cuando funciona",
+  "analysis.replay.whenMissing": "Cuando falla",
+  "analysis.replay.averageScoreShort": "puntaje promedio",
+  "analysis.replay.pointSwing": "cambio de {value} puntos",
+  "analysis.replay.anatomyKicker": "Capítulo 3",
+  "analysis.replay.anatomyTitle": "Cómo se desarrolla un partido",
+  "analysis.replay.anatomySkillsTitle": "Cómo se desarrolla la ruta",
+  "analysis.replay.anatomyDetail": "Un veredicto por fase. La fase más débil se convierte en la primera misión.",
+  "analysis.replay.practiceKicker": "Capítulo final",
+  "analysis.replay.practiceTitle": "Tu próxima práctica tiene un propósito",
+  "analysis.replay.practiceDetail": "Tres misiones, en orden. Completa la primera meta antes de añadir complejidad.",
+  "analysis.replay.whyItMatters": "Por qué importa",
+  "analysis.replay.successTarget": "Meta de éxito",
+  "analysis.replay.evidenceTitle": "Explorar la evidencia",
+  "analysis.replay.evidenceDetail": "Abre los números, comparaciones y correlaciones detrás de esta repetición.",
+  "analysis.replay.numberProof": "Prueba numérica",
+  "analysis.replay.winLossProof": "Qué cambia entre victorias y derrotas",
+  "analysis.replay.skillsProof": "Prueba de Driver y Autónomo",
+  "analysis.replay.noDataTitle": "La repetición necesita un primer capítulo",
+  "analysis.replay.noHeadData": "Guarda partidos frente a frente para construir tu historia de rendimiento.",
+  "analysis.replay.noSkillsData": "Guarda intentos Driver y Autónomo para construir la historia de tu ruta.",
+  "analysis.replay.pointHint": "Pasa el cursor o enfoca un punto para leer ese registro.",
+  "analysis.replay.turnUp": "Subió {value} desde el tramo inicial",
+  "analysis.replay.turnDown": "Bajó {value} desde el tramo inicial",
+  "analysis.replay.turnFlat": "Se mantiene a {value} del tramo inicial",
+  "analysis.replay.dateTurn": "{date}, un cambio de {value} puntos",
+  "analysis.replay.missionHeadAutonWhy": "Una apertura repetible elimina el primer punto de presión de cada partido.",
+  "analysis.replay.missionHeadCenterWhy": "El control del centro protege puntos de robots y amarillos legales al final.",
+  "analysis.replay.missionHeadYellowWhy": "Los amarillos colocados solo importan cuando la propiedad los hace puntuar.",
+  "analysis.replay.missionHeadFloorWhy": "Un plan mínimo seguro evita que una secuencia mala decida el partido.",
+  "analysis.replay.missionHeadReviewWhy": "Nuevos partidos guardados demuestran si el cambio funciona en juego real.",
+  "analysis.replay.missionSkillsDriverWhy": "Una ruta Driver estable convierte máximos en puntajes repetibles.",
+  "analysis.replay.missionSkillsAutonWhy": "Mejorar Autónomo aumenta directamente el techo combinado de Skills.",
+  "analysis.replay.missionSkillsYellowWhy": "La propiedad correcta convierte los pines de la ruta en puntos reales.",
+  "analysis.replay.missionSkillsCenterWhy": "Un punto de control central fiable evita perder valor al final de la ruta.",
+  "analysis.replay.missionSkillsReviewWhy": "Intentos emparejados muestran si Driver y Autónomo mejoran juntos.",
   "scouting.skillsKicker": "Clasificación oficial de Skills",
   "scouting.teamSkillsTitle": "Búsqueda de Skills por equipo",
   "scouting.teamSkillsDescription": "Busca equipos en la clasificación pública VEX V5RC Override Skills.",
@@ -1395,6 +1512,64 @@ Object.assign(translations["zh-CN"], {
   "analysis.story.skills.ceiling.why": "路线基础健康，提升应来自优化最高价值的序列。",
   "analysis.story.skills.ceiling.proof": "最佳合计 {combined}；近期状态 {recent}。",
   "analysis.story.skills.ceiling.target": "选择一个路线片段，追求更干净的执行。",
+  "analysis.replay.kicker": "表现故事",
+  "analysis.replay.title": "赛季回放",
+  "analysis.replay.modeAria": "回放类型",
+  "analysis.replay.period": "所选时段",
+  "analysis.replay.confidence": "结论可信度",
+  "analysis.replay.confidenceEarly": "初步判断",
+  "analysis.replay.confidenceDeveloping": "正在形成的信号",
+  "analysis.replay.confidenceStrong": "强信号",
+  "analysis.replay.headline": "{trajectory}。下一步：{focus}。",
+  "analysis.replay.chapterTrajectory": "走势",
+  "analysis.replay.chapterTurning": "转折点",
+  "analysis.replay.chapterAnatomy": "比赛结构",
+  "analysis.replay.chapterPractice": "训练计划",
+  "analysis.replay.trajectoryKicker": "第一章",
+  "analysis.replay.trajectoryTitle": "赛季如何变化",
+  "analysis.replay.trajectoryDetail": "从第一条保存记录看到最近一条记录。",
+  "analysis.replay.startingLevel": "起点水平",
+  "analysis.replay.currentLevel": "当前水平",
+  "analysis.replay.biggestTurn": "最大转折",
+  "analysis.replay.turningKicker": "第二章",
+  "analysis.replay.turningTitle": "决定胜负的变化",
+  "analysis.replay.turningDetail": "这是所选数据中最重要、最可重复的差异。",
+  "analysis.replay.whenWorking": "做到时",
+  "analysis.replay.whenMissing": "没做到时",
+  "analysis.replay.averageScoreShort": "平均分",
+  "analysis.replay.pointSwing": "{value} 分变化",
+  "analysis.replay.anatomyKicker": "第三章",
+  "analysis.replay.anatomyTitle": "比赛如何展开",
+  "analysis.replay.anatomySkillsTitle": "路线如何展开",
+  "analysis.replay.anatomyDetail": "每个阶段一个判断。最弱阶段成为第一项训练任务。",
+  "analysis.replay.practiceKicker": "终章",
+  "analysis.replay.practiceTitle": "下一次训练有明确目标",
+  "analysis.replay.practiceDetail": "依次完成三项任务。达到第一项目标后再增加复杂度。",
+  "analysis.replay.whyItMatters": "为什么重要",
+  "analysis.replay.successTarget": "达标目标",
+  "analysis.replay.evidenceTitle": "查看数据证据",
+  "analysis.replay.evidenceDetail": "展开查看支撑本次回放的数字、对比和相关性工具。",
+  "analysis.replay.numberProof": "数字证据",
+  "analysis.replay.winLossProof": "胜负之间发生了什么变化",
+  "analysis.replay.skillsProof": "Driver 与自动技能证据",
+  "analysis.replay.noDataTitle": "回放还缺少第一章",
+  "analysis.replay.noHeadData": "保存对抗赛记录后即可生成表现故事。",
+  "analysis.replay.noSkillsData": "保存 Driver 和自动技能赛记录后即可生成路线故事。",
+  "analysis.replay.pointHint": "悬停或聚焦数据点即可查看该条记录。",
+  "analysis.replay.turnUp": "比起始阶段提高 {value}",
+  "analysis.replay.turnDown": "比起始阶段下降 {value}",
+  "analysis.replay.turnFlat": "与起始阶段相差不超过 {value}",
+  "analysis.replay.dateTurn": "{date}，变化 {value} 分",
+  "analysis.replay.missionHeadAutonWhy": "稳定的开局能消除每场比赛的第一个压力点。",
+  "analysis.replay.missionHeadCenterWhy": "控制中心能在末段保护机器人分和有效黄桩分。",
+  "analysis.replay.missionHeadYellowWhy": "黄桩只有在归属正确时才真正得分。",
+  "analysis.replay.missionHeadFloorWhy": "安全的最低得分方案能避免一次失误决定比赛。",
+  "analysis.replay.missionHeadReviewWhy": "新的比赛记录能验证训练成果是否适用于实战。",
+  "analysis.replay.missionSkillsDriverWhy": "稳定的 Driver 路线能把峰值变成可重复的成绩。",
+  "analysis.replay.missionSkillsAutonWhy": "提升自动技能会直接提高组合技能分上限。",
+  "analysis.replay.missionSkillsYellowWhy": "正确归属能把路线中已有的黄桩转化为真实得分。",
+  "analysis.replay.missionSkillsCenterWhy": "稳定的中心检查点能避免路线后段丢分。",
+  "analysis.replay.missionSkillsReviewWhy": "成对记录能显示 Driver 和自动技能是否同步进步。",
   "scouting.skillsKicker": "官方技能赛排名",
   "scouting.teamSkillsTitle": "队伍技能赛搜索",
   "scouting.teamSkillsDescription": "搜索公开 VEX V5RC Override 技能赛排名中的队伍。",
@@ -1674,7 +1849,12 @@ function setLanguage(language) {
   renderSkills();
   renderHistory();
   renderSkillsHistory();
-  renderScouting();
+  renderCompetitionPickers(syncedEvents);
+  renderCompetitionSource();
+  renderMyCompetitions();
+  renderCompetitionFilters();
+  renderCompetitionResults(competitionSearchResults);
+  renderTeamSkillsResults(teamSkillsResults);
   renderAnalysis();
   renderImportedCompetition();
 }
@@ -3539,6 +3719,7 @@ function setMode(mode) {
 }
 
 function renderMode() {
+  document.body.classList.toggle("analysis-active", activeMode === "analysis");
   $$("[data-mode-choice]").forEach((button) => {
     button.setAttribute("aria-pressed", String(button.dataset.modeChoice === activeMode));
   });
@@ -3548,6 +3729,7 @@ function renderMode() {
     section.hidden = !isActive;
     section.classList.toggle("is-active-mode-section", isActive);
   });
+  if (activeMode === "analysis") requestAnimationFrame(initReplayMotion);
 }
 
 function renderSkills() {
@@ -4616,6 +4798,7 @@ function headRecommendation(matches) {
 
   if (Number.isFinite(autonWinRate) && autonWinRate < 45) {
     return {
+      key: "auton",
       title: t("analysis.story.head.auton.title"),
       why: t("analysis.story.head.auton.why"),
       proof: t("analysis.story.head.auton.proof", { rate: formatRate(autonWinRate), margin: formatAnalysisNumber(marginAverage) }),
@@ -4624,6 +4807,7 @@ function headRecommendation(matches) {
   }
   if (Number.isFinite(centerRate) && centerRate < 55) {
     return {
+      key: "center",
       title: t("analysis.story.head.center.title"),
       why: t("analysis.story.head.center.why"),
       proof: t("analysis.story.head.center.proof", { rate: formatRate(centerRate), missed: formatAnalysisNumber(missedAverage) }),
@@ -4632,6 +4816,7 @@ function headRecommendation(matches) {
   }
   if (Number.isFinite(yellow.rate) && yellow.rate < 78) {
     return {
+      key: "yellow",
       title: t("analysis.story.head.yellow.title"),
       why: t("analysis.story.head.yellow.why"),
       proof: t("analysis.story.head.yellow.proof", { scored: yellow.scored, placed: yellow.placed, rate: formatRate(yellow.rate) }),
@@ -4640,6 +4825,7 @@ function headRecommendation(matches) {
   }
   if (Number.isFinite(floorGap) && floorGap > 24) {
     return {
+      key: "floor",
       title: t("analysis.story.head.floor.title"),
       why: t("analysis.story.head.floor.why"),
       proof: t("analysis.story.head.floor.proof", { average: formatAnalysisNumber(stats.mean), floor: formatAnalysisNumber(floor) }),
@@ -4648,6 +4834,7 @@ function headRecommendation(matches) {
   }
   if (Number.isFinite(winRate) && winRate < 55) {
     return {
+      key: "margin",
       title: t("analysis.story.head.margin.title"),
       why: t("analysis.story.head.margin.why"),
       proof: t("analysis.story.head.margin.proof", { rate: formatRate(winRate), margin: formatAnalysisNumber(marginAverage) }),
@@ -4655,6 +4842,7 @@ function headRecommendation(matches) {
     };
   }
   return {
+    key: "ceiling",
     title: t("analysis.story.head.ceiling.title"),
     why: t("analysis.story.head.ceiling.why"),
     proof: t("analysis.story.head.ceiling.proof", { average: formatAnalysisNumber(stats.mean), pins: formatAnalysisNumber(pinAverage) }),
@@ -4762,6 +4950,7 @@ function skillsRecommendation(runs) {
   const recentDelta = Number.isFinite(stats.recentMean) && Number.isFinite(stats.mean) ? stats.recentMean - stats.mean : null;
   if (!driverScores.length || !autonScores.length) {
     return {
+      key: "balance",
       title: t("analysis.story.skills.balance.title"),
       why: t("analysis.story.skills.balance.why"),
       proof: t("analysis.story.skills.balance.proof", { driver: driverScores.length, auton: autonScores.length }),
@@ -4770,6 +4959,7 @@ function skillsRecommendation(runs) {
   }
   if (Number.isFinite(driverAverage) && driverAverage + 8 < autonAverage) {
     return {
+      key: "driver",
       title: t("analysis.story.skills.driver.title"),
       why: t("analysis.story.skills.driver.why"),
       proof: t("analysis.story.skills.driver.proof", { driver: formatAnalysisNumber(driverAverage), auton: formatAnalysisNumber(autonAverage) }),
@@ -4778,6 +4968,7 @@ function skillsRecommendation(runs) {
   }
   if (Number.isFinite(autonAverage) && autonAverage + 8 < driverAverage) {
     return {
+      key: "auton",
       title: t("analysis.story.skills.auton.title"),
       why: t("analysis.story.skills.auton.why"),
       proof: t("analysis.story.skills.auton.proof", { driver: formatAnalysisNumber(driverAverage), auton: formatAnalysisNumber(autonAverage) }),
@@ -4786,6 +4977,7 @@ function skillsRecommendation(runs) {
   }
   if (Number.isFinite(yellow.rate) && yellow.rate < 78) {
     return {
+      key: "yellow",
       title: t("analysis.story.skills.yellow.title"),
       why: t("analysis.story.skills.yellow.why"),
       proof: t("analysis.story.skills.yellow.proof", { scored: yellow.scored, placed: yellow.placed, rate: formatRate(yellow.rate) }),
@@ -4794,6 +4986,7 @@ function skillsRecommendation(runs) {
   }
   if (Number.isFinite(centerRate) && centerRate < 60) {
     return {
+      key: "center",
       title: t("analysis.story.skills.center.title"),
       why: t("analysis.story.skills.center.why"),
       proof: t("analysis.story.skills.center.proof", { rate: formatRate(centerRate) }),
@@ -4801,6 +4994,7 @@ function skillsRecommendation(runs) {
     };
   }
   return {
+    key: "ceiling",
     title: t("analysis.story.skills.ceiling.title"),
     why: t("analysis.story.skills.ceiling.why"),
     proof: t("analysis.story.skills.ceiling.proof", { combined: formatAnalysisNumber(combined), recent: signedNumber(recentDelta) }),
@@ -4975,137 +5169,563 @@ function renderTrend(records, scoreGetter) {
   `;
 }
 
-function renderHeadAnalysis(allMatches, matches) {
-  const summary = $("[data-analysis-head-summary]");
-  const count = $("[data-analysis-head-count]");
-  const coachWrap = $("[data-analysis-head-coach]");
-  const statsWrap = $("[data-analysis-head-stats]");
-  const trendWrap = $("[data-analysis-head-trend]");
-  const breakdownWrap = $("[data-analysis-head-breakdown]");
-  const correlationWrap = $("[data-analysis-head-correlation]");
-  const insightsWrap = $("[data-analysis-head-insights]");
-  if (!summary || !count || !coachWrap || !statsWrap || !trendWrap || !breakdownWrap || !correlationWrap || !insightsWrap) return;
+function clampUnit(value) {
+  return Math.max(0, Math.min(1, Number.isFinite(value) ? value : 0));
+}
 
-  count.textContent = countText("analysis.matches", matches.length);
-  if (!allMatches.length) {
-    summary.textContent = t("analysis.head.emptySummary");
-    coachWrap.innerHTML = "";
-    insightsWrap.innerHTML = "";
-    statsWrap.innerHTML = `<p class="analysis-empty">${escapeHtml(t("analysis.head.emptyPanel"))}</p>`;
-    trendWrap.innerHTML = "";
-    breakdownWrap.innerHTML = "";
-    correlationWrap.innerHTML = "";
-    return;
+function replayConfidence(count) {
+  if (count >= 12) return { label: t("analysis.replay.confidenceStrong"), tone: "strong" };
+  if (count >= 5) return { label: t("analysis.replay.confidenceDeveloping"), tone: "developing" };
+  return { label: t("analysis.replay.confidenceEarly"), tone: "early" };
+}
+
+function replayRangeLabel() {
+  if (analysisRange === "today") return t("range.today");
+  if (analysisRange === "7") return t("range.7");
+  if (analysisRange === "30") return t("range.30");
+  if (analysisRange === "custom") {
+    const start = $("[data-analysis-start]")?.value || t("range.start");
+    const end = $("[data-analysis-end]")?.value || t("range.end");
+    return `${start} - ${end}`;
   }
+  return t("range.all");
+}
 
-  if (!matches.length) {
-    summary.textContent = t("analysis.noRange");
-    coachWrap.innerHTML = "";
-    insightsWrap.innerHTML = "";
-    statsWrap.innerHTML = `<p class="analysis-empty">${escapeHtml(t("analysis.noRange"))}</p>`;
-    trendWrap.innerHTML = "";
-    breakdownWrap.innerHTML = "";
-    correlationWrap.innerHTML = "";
-    return;
+function recordWindowAverage(records, getter, fromStart) {
+  const ordered = records.slice().sort((a, b) => recordTimestamp(a) - recordTimestamp(b));
+  const size = Math.min(5, Math.max(1, Math.ceil(ordered.length / 4)));
+  return resultAverage(fromStart ? ordered.slice(0, size) : ordered.slice(-size), getter);
+}
+
+function replayTurningMoment(records, getter) {
+  const ordered = records.slice().sort((a, b) => recordTimestamp(a) - recordTimestamp(b));
+  if (ordered.length < 5) {
+    const record = ordered[ordered.length - 1];
+    return { index: Math.max(ordered.length - 1, 0), record, delta: 0 };
   }
+  let strongest = { index: 2, record: ordered[2], delta: 0 };
+  for (let index = 2; index <= ordered.length - 3; index += 1) {
+    const before = resultAverage(ordered.slice(Math.max(0, index - 3), index), getter);
+    const after = resultAverage(ordered.slice(index, Math.min(ordered.length, index + 3)), getter);
+    const delta = Number.isFinite(before) && Number.isFinite(after) ? after - before : 0;
+    if (Math.abs(delta) > Math.abs(strongest.delta)) strongest = { index, record: ordered[index], delta };
+  }
+  return strongest;
+}
 
+function replayTrajectory(records, getter) {
+  const opening = recordWindowAverage(records, getter, true);
+  const current = recordWindowAverage(records, getter, false);
+  const delta = Number.isFinite(opening) && Number.isFinite(current) ? current - opening : 0;
+  const tone = delta > 6 ? "up" : delta < -6 ? "down" : "flat";
+  const title = t(`analysis.story.timeline${tone === "up" ? "Up" : tone === "down" ? "Down" : "Flat"}`);
+  const summary = tone === "up"
+    ? t("analysis.replay.turnUp", { value: formatAnalysisNumber(Math.abs(delta)) })
+    : tone === "down"
+      ? t("analysis.replay.turnDown", { value: formatAnalysisNumber(Math.abs(delta)) })
+      : t("analysis.replay.turnFlat", { value: formatAnalysisNumber(Math.abs(delta)) });
+  return { opening, current, delta, tone, title, summary, turning: replayTurningMoment(records, getter) };
+}
+
+function headYellowRate(match) {
+  const placed = yellowPins(match);
+  return placed ? numericValue(ownedYellowPins(match)) / placed : null;
+}
+
+function skillsYellowRate(run) {
+  const placed = skillsYellowPins(run);
+  return placed ? skillsScoredYellowPins(run) / placed : null;
+}
+
+function scoreGapForGroups(positive, negative, getter) {
+  if (positive.length < 2 || negative.length < 2) return 0;
+  return resultAverage(positive, getter) - resultAverage(negative, getter);
+}
+
+function rankedHeadRecommendation(matches) {
+  const fallback = headRecommendation(matches);
   const stats = analysisScoreStats(matches, match => match.ourScore);
   const wins = matches.filter(match => match.result === "win").length;
-  const losses = matches.filter(match => match.result === "loss").length;
-  const ties = matches.filter(match => match.result === "tie").length;
-  const winRate = matches.length ? (wins / matches.length) * 100 : null;
+  const winRate = percentRate(wins, matches.length);
+  const autonRate = percentRate(matches.filter(autonWon).length, matches.length);
+  const centerRate = percentRate(matches.filter(centerControlledByUs).length, matches.length);
+  const yellow = yellowEfficiencyValue(matches);
+  const floor = percentile(scoreGetterValues(matches, match => match.ourScore), .2);
+  const floorGap = Number.isFinite(stats.mean) && Number.isFinite(floor) ? stats.mean - floor : 0;
+  const margin = resultAverage(matches, scoreMargin);
+  const pinAverage = resultAverage(matches, ourAlliancePins);
+  const highYellow = matches.filter(match => numericValue(headYellowRate(match)) >= .8);
+  const lowYellow = matches.filter(match => numericValue(headYellowRate(match)) < .8);
+  const pinMedian = median(scoreGetterValues(matches, ourAlliancePins));
+  const candidates = [
+    { key: "auton", score: clampUnit((60 - autonRate) / 60) * .68 + clampUnit(Math.abs(scoreGapForGroups(matches.filter(autonWon), matches.filter(match => !autonWon(match)), match => match.ourScore)) / 55) * .32 },
+    { key: "center", score: clampUnit((65 - centerRate) / 65) * .68 + clampUnit(Math.abs(scoreGapForGroups(matches.filter(centerControlledByUs), matches.filter(match => !centerControlledByUs(match)), match => match.ourScore)) / 55) * .32 },
+    { key: "yellow", score: (Number.isFinite(yellow.rate) ? clampUnit((88 - yellow.rate) / 88) : 0) * .68 + clampUnit(Math.abs(scoreGapForGroups(highYellow, lowYellow, match => match.ourScore)) / 55) * .32 },
+    { key: "floor", score: clampUnit(floorGap / Math.max(numericValue(stats.mean) * .35, 20)) },
+    { key: "margin", score: clampUnit((55 - winRate) / 55) * .55 + clampUnit((8 - margin) / 45) * .45 },
+    { key: "ceiling", score: .08 + (Number.isFinite(pinAverage) ? clampUnit((14 - pinAverage) / 14) * .35 : 0) + clampUnit(Math.max(0, stats.best - stats.mean) / 100) * .2 }
+  ].sort((a, b) => b.score - a.score);
+  const key = candidates[0]?.key || fallback.key || "ceiling";
+  if (fallback.key === key) return fallback;
+  const missedAverage = resultAverage(matches, match => missedHeadPoints(match).total);
+  const catalog = {
+    auton: { key, title: t("analysis.story.head.auton.title"), why: t("analysis.story.head.auton.why"), proof: t("analysis.story.head.auton.proof", { rate: formatRate(autonRate), margin: formatAnalysisNumber(margin) }), target: t("analysis.story.head.auton.target") },
+    center: { key, title: t("analysis.story.head.center.title"), why: t("analysis.story.head.center.why"), proof: t("analysis.story.head.center.proof", { rate: formatRate(centerRate), missed: formatAnalysisNumber(missedAverage) }), target: t("analysis.story.head.center.target") },
+    yellow: { key, title: t("analysis.story.head.yellow.title"), why: t("analysis.story.head.yellow.why"), proof: t("analysis.story.head.yellow.proof", { scored: yellow.scored, placed: yellow.placed, rate: formatRate(yellow.rate) }), target: t("analysis.story.head.yellow.target") },
+    floor: { key, title: t("analysis.story.head.floor.title"), why: t("analysis.story.head.floor.why"), proof: t("analysis.story.head.floor.proof", { average: formatAnalysisNumber(stats.mean), floor: formatAnalysisNumber(floor) }), target: t("analysis.story.head.floor.target") },
+    margin: { key, title: t("analysis.story.head.margin.title"), why: t("analysis.story.head.margin.why"), proof: t("analysis.story.head.margin.proof", { rate: formatRate(winRate), margin: formatAnalysisNumber(margin) }), target: t("analysis.story.head.margin.target") },
+    ceiling: { key, title: t("analysis.story.head.ceiling.title"), why: t("analysis.story.head.ceiling.why"), proof: t("analysis.story.head.ceiling.proof", { average: formatAnalysisNumber(stats.mean), pins: formatAnalysisNumber(pinAverage) }), target: t("analysis.story.head.ceiling.target") }
+  };
+  return catalog[key] || fallback;
+}
 
-  summary.textContent = t("analysis.story.headSummary", { count: matches.length, score: formatAnalysisNumber(stats.mean), rate: formatRate(winRate) });
-  coachWrap.innerHTML = renderStoryHero(headRecommendation(matches));
-  insightsWrap.innerHTML = renderProofGrid(headProofCards(matches, allMatches));
-  statsWrap.innerHTML = renderNumberStrip([
-    { label: t("analysis.averageScore"), value: formatAnalysisNumber(stats.mean), detail: t("analysis.story.rangeAverage") },
-    { label: t("analysis.winRate"), value: formatRate(winRate), detail: t("analysis.recordDetail", { wins, losses, ties }) },
-    { label: t("analysis.last5"), value: formatAnalysisNumber(stats.recentMean), detail: recentFormDetail(stats) },
-    { label: t("analysis.best"), value: formatAnalysisNumber(stats.best), detail: t("analysis.story.ceilingMarker") },
-    { label: t("analysis.worst"), value: formatAnalysisNumber(stats.worst), detail: t("analysis.story.floorMarker") }
-  ]);
-  trendWrap.innerHTML = renderTrend(matches, match => match.ourScore);
-  breakdownWrap.innerHTML = renderHeadBreakdown(matches, allMatches);
-  correlationWrap.innerHTML = renderCorrelation(matches, headCorrelationOptions, headCorrelationX, headCorrelationY, "head");
+function rankedSkillsRecommendation(runs) {
+  const fallback = skillsRecommendation(runs);
+  const driver = runs.filter(run => run.skillsType === "driver");
+  const auton = runs.filter(run => run.skillsType === "autonomous");
+  if (!driver.length || !auton.length) return { ...fallback, key: "balance" };
+  const stats = analysisScoreStats(runs, run => run.score);
+  const driverAverage = resultAverage(driver, run => run.score);
+  const autonAverage = resultAverage(auton, run => run.score);
+  const bestDriver = Math.max(...scoreGetterValues(driver, run => run.score));
+  const bestAuton = Math.max(...scoreGetterValues(auton, run => run.score));
+  const combined = bestDriver + bestAuton;
+  const recentDelta = Number.isFinite(stats.recentMean) && Number.isFinite(stats.mean) ? stats.recentMean - stats.mean : null;
+  const yellow = skillsYellowEfficiencyValue(runs);
+  const centerRate = percentRate(runs.filter(run => run.skills?.centerToggle).length, runs.length);
+  const candidates = [
+    { key: "driver", score: clampUnit((autonAverage - driverAverage) / 45) },
+    { key: "auton", score: clampUnit((driverAverage - autonAverage) / 45) },
+    { key: "yellow", score: Number.isFinite(yellow.rate) ? clampUnit((88 - yellow.rate) / 88) : 0 },
+    { key: "center", score: clampUnit((70 - centerRate) / 70) },
+    { key: "ceiling", score: .12 }
+  ].sort((a, b) => b.score - a.score);
+  const key = candidates[0]?.key || fallback.key || "ceiling";
+  if (fallback.key === key) return fallback;
+  const catalog = {
+    driver: { key, title: t("analysis.story.skills.driver.title"), why: t("analysis.story.skills.driver.why"), proof: t("analysis.story.skills.driver.proof", { driver: formatAnalysisNumber(driverAverage), auton: formatAnalysisNumber(autonAverage) }), target: t("analysis.story.skills.driver.target") },
+    auton: { key, title: t("analysis.story.skills.auton.title"), why: t("analysis.story.skills.auton.why"), proof: t("analysis.story.skills.auton.proof", { driver: formatAnalysisNumber(driverAverage), auton: formatAnalysisNumber(autonAverage) }), target: t("analysis.story.skills.auton.target") },
+    yellow: { key, title: t("analysis.story.skills.yellow.title"), why: t("analysis.story.skills.yellow.why"), proof: t("analysis.story.skills.yellow.proof", { scored: yellow.scored, placed: yellow.placed, rate: formatRate(yellow.rate) }), target: t("analysis.story.skills.yellow.target") },
+    center: { key, title: t("analysis.story.skills.center.title"), why: t("analysis.story.skills.center.why"), proof: t("analysis.story.skills.center.proof", { rate: formatRate(centerRate) }), target: t("analysis.story.skills.center.target") },
+    ceiling: { key, title: t("analysis.story.skills.ceiling.title"), why: t("analysis.story.skills.ceiling.why"), proof: t("analysis.story.skills.ceiling.proof", { combined: formatAnalysisNumber(combined), recent: signedNumber(recentDelta) }), target: t("analysis.story.skills.ceiling.target") }
+  };
+  return catalog[key] || fallback;
+}
+
+function replayPointFactor(mode, record, story) {
+  if (mode === "skills") {
+    if (story.key === "yellow") {
+      const rate = skillsYellowRate(record);
+      return `${t("analysis.story.mapYellows")}: ${formatRate(Number.isFinite(rate) ? rate * 100 : null)}`;
+    }
+    if (story.key === "center") return `${t("analysis.story.mapCenter")}: ${record.skills?.centerToggle ? "✓" : "–"}`;
+    return skillsTypeLabel(record.skillsType);
+  }
+  if (story.key === "auton") return `${t("analysis.story.mapAuton")}: ${autonWon(record) ? t("analysis.wonAuton") : autonTied(record) ? t("analysis.tiedAuton") : t("analysis.lostAuton")}`;
+  if (story.key === "center") return `${t("analysis.story.mapCenter")}: ${centerControlledByUs(record) ? "✓" : "–"}`;
+  if (story.key === "yellow") {
+    const rate = headYellowRate(record);
+    return `${t("analysis.story.mapYellows")}: ${formatRate(Number.isFinite(rate) ? rate * 100 : null)}`;
+  }
+  if (story.key === "ceiling") return `${t("analysis.story.mapPins")}: ${formatAnalysisNumber(ourAlliancePins(record))}`;
+  return `${t("analysis.story.mapMargin")}: ${signedNumber(scoreMargin(record))}`;
+}
+
+function renderReplayTimeline(mode, records, getter, trajectory, story) {
+  const ordered = records.slice().sort((a, b) => recordTimestamp(a) - recordTimestamp(b));
+  const points = ordered.map(record => numericValue(getter(record)));
+  const width = 1000;
+  const height = 360;
+  const padX = 58;
+  const padY = 42;
+  const rawMin = Math.min(...points);
+  const rawMax = Math.max(...points);
+  const padding = Math.max(8, (rawMax - rawMin) * .08);
+  const min = rawMin - padding;
+  const max = rawMax + padding;
+  const range = Math.max(max - min, 1);
+  const step = points.length === 1 ? 0 : (width - padX * 2) / (points.length - 1);
+  const yFor = score => height - padY - ((score - min) / range) * (height - padY * 2);
+  const coordinates = points.map((score, index) => ({ x: padX + index * step, y: yFor(score), score }));
+  const pointString = coordinates.map(point => `${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(" ");
+  const recentStart = Math.max(0, points.length - 5);
+  const recentString = coordinates.slice(recentStart).map(point => `${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(" ");
+  const areaString = `${padX},${height - padY} ${pointString} ${coordinates.at(-1)?.x || padX},${height - padY}`;
+  const averageLine = average(points);
+  const averageY = yFor(averageLine);
+  const turningX = coordinates[trajectory.turning.index]?.x || padX;
+  const dots = coordinates.map((point, index) => {
+    const record = ordered[index];
+    const resultClass = mode === "skills" ? (record.skillsType === "autonomous" ? "autonomous" : "driver") : (record.result || "saved");
+    const pointTitle = t(`analysis.pointTitle.${mode === "skills" ? "run" : "match"}`, { index: index + 1, score: formatAnalysisNumber(point.score), date: formatMatchDate(record) });
+    const label = `${pointTitle}. ${mode === "skills" ? skillsTypeLabel(record.skillsType) : matchResultLabel(record)}. ${replayPointFactor(mode, record, story)}.`;
+    return `
+      <g class="replay-chart-point ${escapeHtml(resultClass)}${index >= recentStart ? " recent" : ""}" transform="translate(${point.x.toFixed(1)} ${point.y.toFixed(1)})" tabindex="0" role="button" data-replay-point="${escapeHtml(label)}" aria-label="${escapeHtml(label)}">
+        <circle class="replay-point-hit" r="17"></circle>
+        <circle class="replay-point-ring" r="${index >= recentStart ? "10" : "7"}"></circle>
+        <circle class="replay-point-core" r="4.5"></circle>
+      </g>`;
+  }).join("");
+  return `
+    <section id="${mode}-trajectory" class="replay-chapter replay-trajectory replay-reveal" data-replay-mode="${mode}" data-replay-chapter="trajectory">
+      <header class="replay-chapter-heading">
+        <span>${escapeHtml(t("analysis.replay.trajectoryKicker"))}</span>
+        <h4>${escapeHtml(t("analysis.replay.trajectoryTitle"))}</h4>
+        <p>${escapeHtml(t("analysis.replay.trajectoryDetail"))}</p>
+      </header>
+      <div class="replay-chart-shell">
+        <svg class="replay-chart" viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeHtml(t("analysis.scoreTrend"))}">
+          <defs>
+            <linearGradient id="${mode}-replay-area" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#66d9d0" stop-opacity=".26"></stop>
+              <stop offset="1" stop-color="#66d9d0" stop-opacity="0"></stop>
+            </linearGradient>
+          </defs>
+          <line class="replay-chart-grid" x1="${padX}" y1="${averageY.toFixed(1)}" x2="${width - padX}" y2="${averageY.toFixed(1)}"></line>
+          <line class="replay-turn-line" x1="${turningX.toFixed(1)}" y1="${padY}" x2="${turningX.toFixed(1)}" y2="${height - padY}"></line>
+          <polygon class="replay-chart-area" points="${areaString}" fill="url(#${mode}-replay-area)"></polygon>
+          <polyline class="replay-chart-line" pathLength="1" points="${pointString}"></polyline>
+          ${recentString.includes(" ") ? `<polyline class="replay-chart-recent" pathLength="1" points="${recentString}"></polyline>` : ""}
+          ${dots}
+        </svg>
+        <p class="replay-point-readout" data-replay-point-readout>${escapeHtml(t("analysis.replay.pointHint"))}</p>
+      </div>
+      <dl class="replay-trajectory-markers">
+        <div><dt>${escapeHtml(t("analysis.replay.startingLevel"))}</dt><dd>${escapeHtml(formatAnalysisNumber(trajectory.opening))}</dd></div>
+        <div class="current"><dt>${escapeHtml(t("analysis.replay.currentLevel"))}</dt><dd>${escapeHtml(formatAnalysisNumber(trajectory.current))}</dd></div>
+        <div><dt>${escapeHtml(t("analysis.replay.biggestTurn"))}</dt><dd>${escapeHtml(t("analysis.replay.dateTurn", { date: formatMatchDate(trajectory.turning.record), value: formatAnalysisNumber(Math.abs(trajectory.turning.delta)) }))}</dd></div>
+      </dl>
+    </section>`;
+}
+
+function replayTurningData(mode, records, story) {
+  let positive = [];
+  let negative = [];
+  let positiveLabel = t("analysis.replay.whenWorking");
+  let negativeLabel = t("analysis.replay.whenMissing");
+  if (mode === "head") {
+    if (story.key === "auton") {
+      positive = records.filter(autonWon);
+      negative = records.filter(match => !autonWon(match));
+    } else if (story.key === "center") {
+      positive = records.filter(centerControlledByUs);
+      negative = records.filter(match => !centerControlledByUs(match));
+    } else if (story.key === "yellow") {
+      positive = records.filter(match => numericValue(headYellowRate(match)) >= .8);
+      negative = records.filter(match => numericValue(headYellowRate(match)) < .8);
+    } else if (story.key === "margin") {
+      positive = records.filter(match => match.result === "win");
+      negative = records.filter(match => match.result === "loss");
+      positiveLabel = t("history.result.win");
+      negativeLabel = t("history.result.loss");
+    } else {
+      const midpoint = median(scoreGetterValues(records, match => match.ourScore));
+      positive = records.filter(match => numericValue(match.ourScore) >= midpoint);
+      negative = records.filter(match => numericValue(match.ourScore) < midpoint);
+    }
+  } else if (["driver", "auton", "balance"].includes(story.key)) {
+    positive = records.filter(run => run.skillsType === "driver");
+    negative = records.filter(run => run.skillsType === "autonomous");
+    positiveLabel = t("skills.driver");
+    negativeLabel = t("skills.autonomous");
+  } else if (story.key === "yellow") {
+    positive = records.filter(run => numericValue(skillsYellowRate(run)) >= .8);
+    negative = records.filter(run => numericValue(skillsYellowRate(run)) < .8);
+  } else if (story.key === "center") {
+    positive = records.filter(run => run.skills?.centerToggle);
+    negative = records.filter(run => !run.skills?.centerToggle);
+  } else {
+    const midpoint = median(scoreGetterValues(records, run => run.score));
+    positive = records.filter(run => numericValue(run.score) >= midpoint);
+    negative = records.filter(run => numericValue(run.score) < midpoint);
+  }
+  if (!positive.length || !negative.length) {
+    const ordered = records.slice().sort((a, b) => recordTimestamp(a) - recordTimestamp(b));
+    const midpoint = Math.max(1, Math.floor(ordered.length / 2));
+    negative = ordered.slice(0, midpoint);
+    positive = ordered.slice(midpoint);
+  }
+  const getter = mode === "head" ? match => match.ourScore : run => run.score;
+  const withValue = resultAverage(positive, getter);
+  const withoutValue = resultAverage(negative, getter);
+  return { positiveLabel, negativeLabel, withValue, withoutValue, swing: withValue - withoutValue };
+}
+
+function renderReplayOpening(mode, records, story, trajectory) {
+  const confidence = replayConfidence(records.length);
+  const team = profile?.teamName ? `${profile.teamNumber} ${profile.teamName}` : (profile?.teamNumber || "4330P");
+  const count = countText(mode === "head" ? "analysis.matches" : "analysis.runs", records.length);
+  return `
+    <section class="replay-opening replay-reveal ${escapeHtml(trajectory.tone)}" data-replay-mode="${mode}" data-replay-chapter="opening">
+      <div class="replay-opening-meta">
+        <span>${escapeHtml(team)}</span>
+        <span>${escapeHtml(replayRangeLabel())}</span>
+        <span>${escapeHtml(count)}</span>
+        <span class="${escapeHtml(confidence.tone)}">${escapeHtml(confidence.label)}</span>
+      </div>
+      <h3>${escapeHtml(t("analysis.replay.headline", { trajectory: trajectory.title, focus: story.title }))}</h3>
+      <div class="replay-opening-signal"><i></i><span>${escapeHtml(trajectory.summary)}</span></div>
+    </section>`;
+}
+
+function renderReplayNav(mode) {
+  return `
+    <nav class="replay-chapter-nav" data-replay-nav="${mode}" aria-label="${escapeHtml(t("analysis.replay.title"))}">
+      <a href="#${mode}-trajectory" aria-current="step"><span>01</span>${escapeHtml(t("analysis.replay.chapterTrajectory"))}</a>
+      <a href="#${mode}-turning"><span>02</span>${escapeHtml(t("analysis.replay.chapterTurning"))}</a>
+      <a href="#${mode}-anatomy"><span>03</span>${escapeHtml(t("analysis.replay.chapterAnatomy"))}</a>
+      <a href="#${mode}-practice"><span>04</span>${escapeHtml(t("analysis.replay.chapterPractice"))}</a>
+    </nav>`;
+}
+
+function renderReplayTurning(mode, records, story) {
+  const data = replayTurningData(mode, records, story);
+  const confidence = replayConfidence(records.length);
+  return `
+    <section id="${mode}-turning" class="replay-chapter replay-turning replay-reveal" data-replay-mode="${mode}" data-replay-chapter="turning">
+      <header class="replay-chapter-heading">
+        <span>${escapeHtml(t("analysis.replay.turningKicker"))}</span>
+        <h4>${escapeHtml(t("analysis.replay.turningTitle"))}</h4>
+        <p>${escapeHtml(t("analysis.replay.turningDetail"))}</p>
+      </header>
+      <div class="replay-decision">
+        <span class="replay-confidence ${escapeHtml(confidence.tone)}">${escapeHtml(confidence.label)}</span>
+        <h5>${escapeHtml(story.title)}</h5>
+        <p>${escapeHtml(story.why)}</p>
+        <div class="replay-versus">
+          <div class="positive"><span>${escapeHtml(data.positiveLabel)}</span><strong>${escapeHtml(formatAnalysisNumber(data.withValue))}</strong><small>${escapeHtml(t("analysis.replay.averageScoreShort"))}</small></div>
+          <div class="replay-swing"><i></i><strong>${escapeHtml(t("analysis.replay.pointSwing", { value: formatAnalysisNumber(Math.abs(data.swing)) }))}</strong></div>
+          <div class="negative"><span>${escapeHtml(data.negativeLabel)}</span><strong>${escapeHtml(formatAnalysisNumber(data.withoutValue))}</strong><small>${escapeHtml(t("analysis.replay.averageScoreShort"))}</small></div>
+        </div>
+        <blockquote>${escapeHtml(story.proof)}</blockquote>
+      </div>
+    </section>`;
+}
+
+function replayFocusPhase(mode, key) {
+  if (mode === "skills") {
+    if (["driver", "auton", "balance"].includes(key)) return 0;
+    if (["yellow", "center"].includes(key)) return 1;
+    return 2;
+  }
+  if (key === "auton") return 0;
+  if (["center", "yellow"].includes(key)) return 1;
+  return 2;
+}
+
+function renderReplayAnatomy(mode, phases, story) {
+  const focusIndex = replayFocusPhase(mode, story.key);
+  return `
+    <section id="${mode}-anatomy" class="replay-chapter replay-anatomy replay-reveal" data-replay-mode="${mode}" data-replay-chapter="anatomy">
+      <header class="replay-chapter-heading">
+        <span>${escapeHtml(t("analysis.replay.anatomyKicker"))}</span>
+        <h4>${escapeHtml(t(mode === "skills" ? "analysis.replay.anatomySkillsTitle" : "analysis.replay.anatomyTitle"))}</h4>
+        <p>${escapeHtml(t("analysis.replay.anatomyDetail"))}</p>
+      </header>
+      <div class="replay-phase-sequence">
+        ${phases.map((phase, index) => `
+          <article class="replay-phase${index === focusIndex ? " focus" : ""}">
+            <span class="replay-phase-number">0${index + 1}</span>
+            <div><small>${escapeHtml(phase.label)}</small><h5>${escapeHtml(phase.value)}</h5><p>${escapeHtml(phase.detail)}</p></div>
+          </article>`).join("")}
+      </div>
+    </section>`;
+}
+
+function headPracticeMissions(story) {
+  const pool = [
+    { key: "auton", title: t("analysis.story.head.auton.title"), why: t("analysis.replay.missionHeadAutonWhy"), target: t("analysis.story.head.auton.target") },
+    { key: "center", title: t("analysis.story.head.center.title"), why: t("analysis.replay.missionHeadCenterWhy"), target: t("analysis.story.head.center.target") },
+    { key: "yellow", title: t("analysis.story.head.yellow.title"), why: t("analysis.replay.missionHeadYellowWhy"), target: t("analysis.story.head.yellow.target") },
+    { key: "floor", title: t("analysis.story.head.floor.title"), why: t("analysis.replay.missionHeadFloorWhy"), target: t("analysis.story.head.floor.target") },
+    { key: "review", title: t("analysis.story.missionReview"), why: t("analysis.replay.missionHeadReviewWhy"), target: t("analysis.story.missionReviewDetail") }
+  ];
+  const primary = { key: story.key, title: story.title, why: story.why, target: story.target };
+  return [primary, ...pool.filter(item => item.key !== story.key)].slice(0, 3);
+}
+
+function skillsPracticeMissions(story) {
+  const pool = [
+    { key: "driver", title: t("analysis.story.skills.driver.title"), why: t("analysis.replay.missionSkillsDriverWhy"), target: t("analysis.story.skills.driver.target") },
+    { key: "auton", title: t("analysis.story.skills.auton.title"), why: t("analysis.replay.missionSkillsAutonWhy"), target: t("analysis.story.skills.auton.target") },
+    { key: "yellow", title: t("analysis.story.skills.yellow.title"), why: t("analysis.replay.missionSkillsYellowWhy"), target: t("analysis.story.skills.yellow.target") },
+    { key: "center", title: t("analysis.story.skills.center.title"), why: t("analysis.replay.missionSkillsCenterWhy"), target: t("analysis.story.skills.center.target") },
+    { key: "review", title: t("analysis.story.missionReview"), why: t("analysis.replay.missionSkillsReviewWhy"), target: t("analysis.story.missionReviewDetail") }
+  ];
+  const primary = { key: story.key, title: story.title, why: story.why, target: story.target };
+  return [primary, ...pool.filter(item => item.key !== story.key)].slice(0, 3);
+}
+
+function renderReplayPractice(mode, missions) {
+  return `
+    <section id="${mode}-practice" class="replay-chapter replay-practice replay-reveal" data-replay-mode="${mode}" data-replay-chapter="practice">
+      <header class="replay-chapter-heading">
+        <span>${escapeHtml(t("analysis.replay.practiceKicker"))}</span>
+        <h4>${escapeHtml(t("analysis.replay.practiceTitle"))}</h4>
+        <p>${escapeHtml(t("analysis.replay.practiceDetail"))}</p>
+      </header>
+      <ol class="replay-missions">
+        ${missions.map((mission, index) => `
+          <li${index === 0 ? " class=\"primary\"" : ""}>
+            <span>${String(index + 1).padStart(2, "0")}</span>
+            <div><h5>${escapeHtml(mission.title)}</h5><p><b>${escapeHtml(t("analysis.replay.whyItMatters"))}:</b> ${escapeHtml(mission.why)}</p><p><b>${escapeHtml(t("analysis.replay.successTarget"))}:</b> ${escapeHtml(mission.target)}</p></div>
+          </li>`).join("")}
+      </ol>
+    </section>`;
+}
+
+function renderEvidenceMetrics(items) {
+  return `<dl class="replay-evidence-metrics">${items.map(item => `<div><dt>${escapeHtml(item.label)}</dt><dd>${escapeHtml(item.value)}</dd>${item.detail ? `<small>${escapeHtml(item.detail)}</small>` : ""}</div>`).join("")}</dl>`;
+}
+
+function renderHeadEvidence(matches) {
+  const stats = analysisScoreStats(matches, match => match.ourScore);
+  const wins = matches.filter(match => match.result === "win");
+  const losses = matches.filter(match => match.result === "loss");
+  const ties = matches.filter(match => match.result === "tie");
+  const yellow = yellowEfficiencyValue(matches);
+  const metrics = [
+    { label: t("analysis.averageScore"), value: formatAnalysisNumber(stats.mean) },
+    { label: t("analysis.winRate"), value: formatRate(percentRate(wins.length, matches.length)), detail: t("analysis.recordDetail", { wins: wins.length, losses: losses.length, ties: ties.length }) },
+    { label: t("analysis.median"), value: formatAnalysisNumber(stats.median) },
+    { label: t("analysis.best"), value: formatAnalysisNumber(stats.best) },
+    { label: t("analysis.worst"), value: formatAnalysisNumber(stats.worst) },
+    { label: t("analysis.yellowEfficiency"), value: formatRate(yellow.rate) }
+  ];
+  const comparisons = [
+    { label: t("analysis.averageScore"), getter: match => match.ourScore },
+    { label: t("analysis.autonReliability"), getter: autonWon, percent: true },
+    { label: t("analysis.centerImpact"), getter: centerControlledByUs, percent: true },
+    { label: t("analysis.yellowEfficiency"), getter: headYellowRate, percent: true },
+    { label: t("analysis.correlationOption.margin"), getter: scoreMargin }
+  ].map(item => {
+    const winValue = resultAverage(wins, item.getter);
+    const lossValue = resultAverage(losses, item.getter);
+    return { ...item, winValue, lossValue, difference: Math.abs(winValue - lossValue) };
+  }).filter(item => Number.isFinite(item.difference)).sort((a, b) => b.difference - a.difference).slice(0, 3);
+  return `
+    <h5>${escapeHtml(t("analysis.replay.numberProof"))}</h5>
+    ${renderEvidenceMetrics(metrics)}
+    <h5>${escapeHtml(t("analysis.replay.winLossProof"))}</h5>
+    <div class="replay-comparison-list">
+      ${comparisons.map(item => {
+        const display = value => item.percent ? formatRate(value * 100) : formatAnalysisNumber(value);
+        return `<div><span>${escapeHtml(item.label)}</span><strong>${escapeHtml(display(item.winValue))}</strong><i></i><strong>${escapeHtml(display(item.lossValue))}</strong></div>`;
+      }).join("") || `<p>${escapeHtml(t("analysis.winFactorsEmpty"))}</p>`}
+    </div>`;
+}
+
+function renderSkillsEvidence(runs) {
+  const stats = analysisScoreStats(runs, run => run.score);
+  const driver = runs.filter(run => run.skillsType === "driver");
+  const auton = runs.filter(run => run.skillsType === "autonomous");
+  const bestDriver = driver.length ? Math.max(...scoreGetterValues(driver, run => run.score)) : null;
+  const bestAuton = auton.length ? Math.max(...scoreGetterValues(auton, run => run.score)) : null;
+  return `
+    <h5>${escapeHtml(t("analysis.replay.numberProof"))}</h5>
+    ${renderEvidenceMetrics([
+      { label: t("analysis.averageScore"), value: formatAnalysisNumber(stats.mean) },
+      { label: t("analysis.median"), value: formatAnalysisNumber(stats.median) },
+      { label: t("analysis.best"), value: formatAnalysisNumber(stats.best) },
+      { label: t("analysis.worst"), value: formatAnalysisNumber(stats.worst) },
+      { label: t("analysis.bestCombined"), value: formatAnalysisNumber((bestDriver || 0) + (bestAuton || 0)) },
+      { label: t("analysis.yellowConversion"), value: formatRate(skillsYellowEfficiencyValue(runs).rate) }
+    ])}
+    <h5>${escapeHtml(t("analysis.replay.skillsProof"))}</h5>
+    <div class="replay-route-proof">
+      <div><span>${escapeHtml(t("skills.driver"))}</span><strong>${escapeHtml(formatAnalysisNumber(resultAverage(driver, run => run.score)))}</strong><small>${escapeHtml(t("analysis.driverAvg"))}</small></div>
+      <i></i>
+      <div><span>${escapeHtml(t("skills.autonomous"))}</span><strong>${escapeHtml(formatAnalysisNumber(resultAverage(auton, run => run.score)))}</strong><small>${escapeHtml(t("analysis.autonAvg"))}</small></div>
+    </div>`;
+}
+
+function renderReplayEvidence(mode, records) {
+  const correlation = mode === "head"
+    ? renderCorrelation(records, headCorrelationOptions, headCorrelationX, headCorrelationY, "head")
+    : renderCorrelation(records, skillsCorrelationOptions, skillsCorrelationX, skillsCorrelationY, "skills");
+  return `
+    <details class="replay-evidence-vault">
+      <summary><span>${escapeHtml(t("analysis.replay.evidenceTitle"))}</span><small>${escapeHtml(t("analysis.replay.evidenceDetail"))}</small></summary>
+      <div class="replay-evidence-body">
+        ${mode === "head" ? renderHeadEvidence(records) : renderSkillsEvidence(records)}
+        ${correlation}
+      </div>
+    </details>`;
+}
+
+function renderReplayEmpty(mode, allRecords) {
+  const rangeEmpty = allRecords.length > 0;
+  return `
+    <section class="replay-empty">
+      <span>${escapeHtml(t("analysis.replay.kicker"))}</span>
+      <h3>${escapeHtml(t("analysis.replay.noDataTitle"))}</h3>
+      <p>${escapeHtml(rangeEmpty ? t("analysis.noRange") : t(mode === "head" ? "analysis.replay.noHeadData" : "analysis.replay.noSkillsData"))}</p>
+    </section>`;
+}
+
+function renderSeasonReplay(mode, allRecords, records) {
+  const mount = $(`[data-analysis-${mode === "head" ? "head" : "skills"}-replay]`);
+  if (!mount) return;
+  if (!records.length) {
+    mount.innerHTML = renderReplayEmpty(mode, allRecords);
+    return;
+  }
+  const getter = mode === "head" ? match => match.ourScore : run => run.score;
+  const story = mode === "head" ? rankedHeadRecommendation(records) : rankedSkillsRecommendation(records);
+  const trajectory = replayTrajectory(records, getter);
+  const phases = mode === "head" ? headProofCards(records, allRecords) : skillsProofCards(records);
+  const missions = mode === "head" ? headPracticeMissions(story) : skillsPracticeMissions(story);
+  mount.innerHTML = `
+    ${renderReplayOpening(mode, records, story, trajectory)}
+    ${renderReplayNav(mode)}
+    ${renderReplayTimeline(mode, records, getter, trajectory, story)}
+    ${renderReplayTurning(mode, records, story)}
+    ${renderReplayAnatomy(mode, phases, story)}
+    ${renderReplayPractice(mode, missions)}
+    ${renderReplayEvidence(mode, records)}`;
+}
+
+function initReplayMotion() {
+  replayObserver?.disconnect();
+  const active = $(".season-replay.is-active-analysis-section");
+  if (!active) return;
+  const sections = [...active.querySelectorAll(".replay-reveal")];
+  const reduced = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+  if (reduced || !("IntersectionObserver" in window)) {
+    sections.forEach(section => section.classList.add("is-visible"));
+    return;
+  }
+  replayObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-visible");
+      const chapter = entry.target.dataset.replayChapter;
+      const mode = entry.target.dataset.replayMode;
+      if (chapter && chapter !== "opening") {
+        $$(`[data-replay-nav="${mode}"] a`).forEach((link) => {
+          const current = link.getAttribute("href") === `#${mode}-${chapter}`;
+          if (current) link.setAttribute("aria-current", "step");
+          else link.removeAttribute("aria-current");
+        });
+      }
+    });
+  }, { threshold: .22, rootMargin: "0px 0px -12% 0px" });
+  sections.forEach(section => replayObserver.observe(section));
+}
+
+function updateReplayPointReadout(target) {
+  const point = target?.closest?.("[data-replay-point]");
+  if (!point) return;
+  const readout = point.closest(".replay-chart-shell")?.querySelector("[data-replay-point-readout]");
+  if (readout) readout.textContent = point.dataset.replayPoint || "";
+}
+
+function renderHeadAnalysis(allMatches, matches) {
+  renderSeasonReplay("head", allMatches, matches);
 }
 
 function renderSkillsAnalysis(allRuns, runs) {
-  const summary = $("[data-analysis-skills-summary]");
-  const count = $("[data-analysis-skills-count]");
-  const coachWrap = $("[data-analysis-skills-coach]");
-  const statsWrap = $("[data-analysis-skills-stats]");
-  const splitWrap = $("[data-analysis-skills-split]");
-  const trendWrap = $("[data-analysis-skills-trend]");
-  const correlationWrap = $("[data-analysis-skills-correlation]");
-  const insightsWrap = $("[data-analysis-skills-insights]");
-  if (!summary || !count || !coachWrap || !statsWrap || !splitWrap || !trendWrap || !correlationWrap || !insightsWrap) return;
-
-  count.textContent = countText("analysis.runs", runs.length);
-  if (!allRuns.length) {
-    summary.textContent = t("analysis.skills.emptySummary");
-    coachWrap.innerHTML = "";
-    insightsWrap.innerHTML = "";
-    statsWrap.innerHTML = `<p class="analysis-empty">${escapeHtml(t("analysis.skills.emptyPanel"))}</p>`;
-    splitWrap.innerHTML = "";
-    trendWrap.innerHTML = "";
-    correlationWrap.innerHTML = "";
-    return;
-  }
-
-  if (!runs.length) {
-    summary.textContent = t("analysis.noRange");
-    coachWrap.innerHTML = "";
-    insightsWrap.innerHTML = "";
-    statsWrap.innerHTML = `<p class="analysis-empty">${escapeHtml(t("analysis.noRange"))}</p>`;
-    splitWrap.innerHTML = "";
-    trendWrap.innerHTML = "";
-    correlationWrap.innerHTML = "";
-    return;
-  }
-
-  const stats = analysisScoreStats(runs, run => run.score);
-  const driverScores = runs
-    .filter(run => run.skillsType === "driver")
-    .map(run => numericValue(run.score))
-    .filter(value => Number.isFinite(value));
-  const autonScores = runs
-    .filter(run => run.skillsType === "autonomous")
-    .map(run => numericValue(run.score))
-    .filter(value => Number.isFinite(value));
-  const bestDriver = driverScores.length ? Math.max(...driverScores) : null;
-  const bestAuton = autonScores.length ? Math.max(...autonScores) : null;
-  const theoretical = Number.isFinite(bestDriver) || Number.isFinite(bestAuton)
-    ? (bestDriver || 0) + (bestAuton || 0)
-    : null;
-
-  summary.textContent = t("analysis.story.skillsSummary", { count: runs.length, score: formatAnalysisNumber(stats.mean), combined: formatAnalysisNumber(theoretical) });
-  coachWrap.innerHTML = renderStoryHero(skillsRecommendation(runs));
-  insightsWrap.innerHTML = renderProofGrid(skillsProofCards(runs));
-  statsWrap.innerHTML = renderNumberStrip([
-    { label: t("analysis.averageScore"), value: formatAnalysisNumber(stats.mean), detail: t("analysis.story.rangeAverage") },
-    { label: t("analysis.last5"), value: formatAnalysisNumber(stats.recentMean), detail: recentFormDetail(stats) },
-    { label: t("analysis.best"), value: formatAnalysisNumber(stats.best), detail: t("analysis.story.ceilingMarker") },
-    { label: t("analysis.worst"), value: formatAnalysisNumber(stats.worst), detail: t("analysis.story.floorMarker") },
-    { label: t("analysis.bestCombined"), value: formatAnalysisNumber(theoretical), detail: t("analysis.skillsSplitDetail") }
-  ]);
-  splitWrap.innerHTML = `
-    ${analysisSectionTitle(t("analysis.skillsQuestion"), t("analysis.skillsQuestionDetail"))}
-    <div class="analysis-trend-head analysis-subhead">
-      <span>${escapeHtml(t("analysis.skillsSplit"))}</span>
-      <small>${escapeHtml(t("analysis.skillsSplitDetail"))}</small>
-    </div>
-    <div class="analysis-stats analysis-stats-tight">
-      ${analysisStat(t("analysis.driverAvg"), formatAnalysisNumber(average(driverScores)))}
-      ${analysisStat(t("analysis.autonAvg"), formatAnalysisNumber(average(autonScores)))}
-      ${analysisStat(t("analysis.bestDriver"), formatAnalysisNumber(bestDriver))}
-      ${analysisStat(t("analysis.bestAuton"), formatAnalysisNumber(bestAuton))}
-      ${analysisStat(t("analysis.bestCombined"), formatAnalysisNumber(theoretical))}
-    </div>
-  `;
-  trendWrap.innerHTML = renderTrend(runs, run => run.score);
-  correlationWrap.innerHTML = renderCorrelation(runs, skillsCorrelationOptions, skillsCorrelationX, skillsCorrelationY, "skills");
-  splitWrap.insertAdjacentHTML("beforeend", renderSkillsBreakdown(runs, allRuns));
+  renderSeasonReplay("skills", allRuns, runs);
 }
 
 function renderAnalysis() {
@@ -5115,6 +5735,7 @@ function renderAnalysis() {
   const skillsRuns = sortedSkillsRuns();
   renderHeadAnalysis(headMatches, filterAnalysisRecords(headMatches));
   renderSkillsAnalysis(skillsRuns, filterAnalysisRecords(skillsRuns));
+  requestAnimationFrame(initReplayMotion);
 }
 
 function formatMatchDate(match) {
@@ -5689,6 +6310,9 @@ document.addEventListener("click", (event) => {
 
   if (event.target.closest("[data-reset]")) resetScorer();
 });
+
+document.addEventListener("pointerover", (event) => updateReplayPointReadout(event.target));
+document.addEventListener("focusin", (event) => updateReplayPointReadout(event.target));
 
 $("[data-save-form]")?.addEventListener("submit", (event) => {
   event.preventDefault();

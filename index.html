@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Override Scoring Prototype</title>
   <meta name="description" content="Interactive VEX V5 Override scoring prototype." />
-  <link rel="stylesheet" href="./styles.css?v=analysis-experience-20260906-2" />
+  <link rel="stylesheet" href="./styles.css?v=season-replay-20260906-1" />
 </head>
 <body>
   <main class="score-app">
@@ -46,21 +46,26 @@
       <button class="mode-choice" type="button" data-mode-choice="analysis" aria-pressed="false" data-i18n="tabs.analysis">Analysis</button>
     </nav>
 
-    <section class="analysis-panel" data-mode-section="analysis" aria-labelledby="analysisTitle" hidden>
-      <div class="analysis-head">
-        <div>
-          <span class="brand-kicker" data-i18n="analysis.kicker">Local performance</span>
-          <h2 id="analysisTitle" data-i18n="analysis.title">My Performance</h2>
-          <p data-i18n="analysis.description">Score trends from saved matches and Skills runs on this device.</p>
+    <section class="analysis-panel season-replay-panel" data-mode-section="analysis" aria-labelledby="analysisTitle" hidden>
+      <header class="replay-toolbar">
+        <div class="replay-toolbar-title">
+          <span class="brand-kicker" data-i18n="analysis.replay.kicker">Performance story</span>
+          <h2 id="analysisTitle" data-i18n="analysis.replay.title">Season Replay</h2>
         </div>
-        <div class="analysis-range" aria-label="Analysis date range" data-i18n-aria="analysis.rangeAria">
-          <button type="button" data-analysis-range="today" aria-pressed="false" data-i18n="range.today">Today</button>
-          <button type="button" data-analysis-range="7" aria-pressed="false" data-i18n="range.7">7 days</button>
-          <button type="button" data-analysis-range="30" aria-pressed="false" data-i18n="range.30">30 days</button>
-          <button type="button" data-analysis-range="all" aria-pressed="true" data-i18n="range.all">All time</button>
-          <button type="button" data-analysis-range="custom" aria-pressed="false" data-i18n="range.custom">Custom</button>
+        <div class="replay-toolbar-controls">
+          <div class="analysis-mode-switch" aria-label="Analysis type" data-i18n-aria="analysis.replay.modeAria">
+            <button type="button" data-analysis-mode="head" aria-pressed="true" data-i18n="tabs.head">Head-on-head</button>
+            <button type="button" data-analysis-mode="skills" aria-pressed="false" data-i18n="tabs.skills">Skills</button>
+          </div>
+          <div class="analysis-range" aria-label="Analysis date range" data-i18n-aria="analysis.rangeAria">
+            <button type="button" data-analysis-range="today" aria-pressed="false" data-i18n="range.today">Today</button>
+            <button type="button" data-analysis-range="7" aria-pressed="false" data-i18n="range.7">7 days</button>
+            <button type="button" data-analysis-range="30" aria-pressed="false" data-i18n="range.30">30 days</button>
+            <button type="button" data-analysis-range="all" aria-pressed="true" data-i18n="range.all">All time</button>
+            <button type="button" data-analysis-range="custom" aria-pressed="false" data-i18n="range.custom">Custom</button>
+          </div>
         </div>
-      </div>
+      </header>
 
       <div class="analysis-custom-range" data-analysis-custom hidden>
         <label>
@@ -73,44 +78,13 @@
         </label>
       </div>
 
-      <div class="analysis-mode-switch" aria-label="Analysis type">
-        <button type="button" data-analysis-mode="head" aria-pressed="true" data-i18n="tabs.head">Head-on-head</button>
-        <button type="button" data-analysis-mode="skills" aria-pressed="false" data-i18n="tabs.skills">Skills</button>
-      </div>
+      <article class="season-replay" data-analysis-section="head">
+        <div data-analysis-head-replay></div>
+      </article>
 
-      <div class="analysis-grid">
-        <article class="analysis-card analysis-card-wide" data-analysis-section="head">
-          <div class="analysis-card-head">
-            <div>
-              <h3 data-i18n="tabs.head">Head-on-head</h3>
-              <p data-analysis-head-summary data-i18n="analysis.head.emptySummary">Save matches to unlock head-on-head analysis.</p>
-            </div>
-            <span class="analysis-pill" data-analysis-head-count>0 matches</span>
-          </div>
-          <div class="analysis-trend" data-analysis-head-trend></div>
-          <div class="analysis-coach-note" data-analysis-head-coach></div>
-          <div class="analysis-insights analysis-coach-grid" data-analysis-head-insights></div>
-          <div class="analysis-stats" data-analysis-head-stats></div>
-          <div class="analysis-breakdown" data-analysis-head-breakdown></div>
-          <div class="analysis-correlation" data-analysis-head-correlation></div>
-        </article>
-
-        <article class="analysis-card analysis-card-wide" data-analysis-section="skills" hidden>
-          <div class="analysis-card-head">
-            <div>
-              <h3 data-i18n="tabs.skills">Skills</h3>
-              <p data-analysis-skills-summary data-i18n="analysis.skills.emptySummary">Save Skills runs to unlock Skills analysis.</p>
-            </div>
-            <span class="analysis-pill" data-analysis-skills-count>0 runs</span>
-          </div>
-          <div class="analysis-trend" data-analysis-skills-trend></div>
-          <div class="analysis-coach-note" data-analysis-skills-coach></div>
-          <div class="analysis-insights analysis-coach-grid" data-analysis-skills-insights></div>
-          <div class="analysis-stats" data-analysis-skills-stats></div>
-          <div class="analysis-split" data-analysis-skills-split></div>
-          <div class="analysis-correlation" data-analysis-skills-correlation></div>
-        </article>
-      </div>
+      <article class="season-replay" data-analysis-section="skills" hidden>
+        <div data-analysis-skills-replay></div>
+      </article>
     </section>
 
     <section class="scouting-panel" data-mode-section="scouting" aria-label="Scouting and official data" hidden>
@@ -530,6 +504,6 @@
   </div>
 
   <div class="toast" data-toast role="status" aria-live="polite"></div>
-  <script src="./app.js?v=analysis-experience-20260906-2"></script>
+  <script src="./app.js?v=season-replay-20260906-1"></script>
 </body>
 </html>
