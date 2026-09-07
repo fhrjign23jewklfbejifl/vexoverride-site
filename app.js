@@ -57,6 +57,8 @@ let activeMode = "head";
 let analysisRange = "all";
 let analysisMode = "head";
 let replayObserver = null;
+let lastDevHeadRecommendation = "";
+let lastDevSkillsRecommendation = "";
 let headCorrelationX = "alliancePins";
 let headCorrelationY = "ourScore";
 let skillsCorrelationX = "redBluePins";
@@ -3705,84 +3707,144 @@ function sampleQuadrants(seed) {
   };
 }
 
-function sampleHeadSeed(index, total) {
+function sampleHeadSeed(index, total, scenario, salt) {
   const progress = total <= 1 ? 1 : index / (total - 1);
-  const daysAgoValue = Math.round((1 - progress) * 104);
-  const teamAlliance = index % 2 === 0 ? "blue" : "red";
-  const roughMatch = index % 11 === 2 || index % 13 === 5;
-  const closeLoss = index % 7 === 3 || index % 17 === 8;
-  const upsetWin = index % 19 === 11;
-  const strong = Math.min(1, Math.max(0, progress + (upsetWin ? .18 : 0) - (roughMatch ? .24 : 0)));
+  const daysAgoValue = Math.round((1 - progress) * (84 + Math.floor(seededRandom(salt) * 42)));
+  const teamAlliance = (index + Math.floor(salt)) % 2 === 0 ? "blue" : "red";
   const ourColor = teamAlliance;
   const opponentColor = teamAlliance === "red" ? "blue" : "red";
-  const noise = seededRandom(index + 31);
-  const ourBase = 1 + Math.floor(strong * 5) + (noise > .78 ? 1 : 0);
-  const oppBase = Math.max(1, 5 - Math.floor(strong * 3)) + (closeLoss ? 3 : 0) + (roughMatch ? 1 : 0);
-  const ourRobots = strong > .36 ? (index % 8 === 0 ? 1 : 2) : (index % 4 === 0 ? 1 : 0);
-  const oppRobots = closeLoss || roughMatch ? 2 : (strong > .74 ? 0 : 1);
-  const owned = ourColor;
-  const notOwned = opponentColor;
+  const noise = seededRandom(salt + index * 7.13);
+  const form = Math.max(.15, Math.min(1, .32 + progress * .58 + (noise - .5) * .24));
+  const ourBase = 2 + Math.floor(form * 5);
+  const oppBase = 2 + Math.floor((1 - form) * 4 + seededRandom(salt + index * 3.7) * 2);
   const seed = {
     daysAgo: daysAgoValue,
     teamAlliance,
-    auton: strong > .68 ? ourColor : (roughMatch || closeLoss ? opponentColor : (index % 6 === 0 ? "tie" : "none")),
-    redRobots: teamAlliance === "red" ? ourRobots : oppRobots,
-    blueRobots: teamAlliance === "blue" ? ourRobots : oppRobots,
-    topToggle: teamAlliance === "blue" ? owned : notOwned,
-    rightToggle: teamAlliance === "blue" ? owned : (closeLoss ? notOwned : "neutral"),
-    bottomToggle: teamAlliance === "red" ? owned : notOwned,
-    leftToggle: teamAlliance === "red" ? owned : (closeLoss ? notOwned : "neutral"),
-    topY: teamAlliance === "blue" ? Math.floor(strong * 4) : Math.floor(seededRandom(index + 1) * 2),
-    topR: teamAlliance === "red" ? ourBase : Math.max(0, oppBase - 1),
-    topB: teamAlliance === "blue" ? ourBase + Math.floor(strong * 2) : oppBase,
-    rightY: teamAlliance === "blue" ? 1 + Math.floor(strong * 3) : Math.floor(seededRandom(index + 2) * 2),
-    rightR: teamAlliance === "red" ? Math.max(0, ourBase - 1) : oppBase,
-    rightB: teamAlliance === "blue" ? ourBase : Math.max(0, oppBase - 1),
-    bottomY: teamAlliance === "red" ? 1 + Math.floor(strong * 3) : Math.floor(seededRandom(index + 3) * 2),
-    bottomR: teamAlliance === "red" ? ourBase + Math.floor(strong * 2) : oppBase,
-    bottomB: teamAlliance === "blue" ? Math.max(0, ourBase - 1) : Math.max(0, oppBase - 1),
-    leftY: teamAlliance === "red" ? Math.floor(strong * 4) : Math.floor(seededRandom(index + 4) * 2),
-    leftR: teamAlliance === "red" ? ourBase : Math.max(0, oppBase - 1),
-    leftB: teamAlliance === "blue" ? Math.max(0, ourBase - 1) : oppBase,
-    centerY: Math.floor(strong * 3),
-    centerR: teamAlliance === "red" ? Math.floor(strong * 3) : Math.max(0, Math.floor((1 - strong) * 2)),
-    centerB: teamAlliance === "blue" ? Math.floor(strong * 3) : Math.max(0, Math.floor((1 - strong) * 2)),
+    auton: index % 8 === 0 ? "tie" : ourColor,
+    redRobots: teamAlliance === "red" ? 2 : 0,
+    blueRobots: teamAlliance === "blue" ? 2 : 0,
+    topToggle: ourColor,
+    rightToggle: ourColor,
+    bottomToggle: ourColor,
+    leftToggle: ourColor,
+    topY: 1 + Math.floor(form * 2),
+    topR: teamAlliance === "red" ? ourBase : oppBase,
+    topB: teamAlliance === "blue" ? ourBase : oppBase,
+    rightY: 1 + Math.floor(form * 2),
+    rightR: teamAlliance === "red" ? ourBase : oppBase,
+    rightB: teamAlliance === "blue" ? ourBase : oppBase,
+    bottomY: 1 + Math.floor(form * 2),
+    bottomR: teamAlliance === "red" ? ourBase : oppBase,
+    bottomB: teamAlliance === "blue" ? ourBase : oppBase,
+    leftY: 1 + Math.floor(form * 2),
+    leftR: teamAlliance === "red" ? ourBase : oppBase,
+    leftB: teamAlliance === "blue" ? ourBase : oppBase,
+    centerY: 1 + Math.floor(form * 2),
+    centerR: teamAlliance === "red" ? Math.max(1, ourBase - 2) : Math.max(1, oppBase - 2),
+    centerB: teamAlliance === "blue" ? Math.max(1, ourBase - 2) : Math.max(1, oppBase - 2),
     partner: ["355V", "2055A", "169C", "1000A", "10K"][index % 5],
     opponentOne: ["169A", "32C", "96Z", "663A", "1468A"][index % 5],
     opponentTwo: ["227R", "10B", "471B", "886S", "1069A"][index % 5]
   };
+
+  const setRobotCounts = (ours, theirs) => {
+    seed.redRobots = teamAlliance === "red" ? ours : theirs;
+    seed.blueRobots = teamAlliance === "blue" ? ours : theirs;
+  };
+  const setColoredPins = (ours, theirs) => {
+    ["top", "right", "bottom", "left"].forEach(zone => {
+      const prefix = zone;
+      seed[`${prefix}${ourColor === "red" ? "R" : "B"}`] = Math.max(0, ours + (index + zone.length) % 2);
+      seed[`${prefix}${opponentColor === "red" ? "R" : "B"}`] = Math.max(0, theirs + (index + zone.length + 1) % 2);
+    });
+  };
+
+  if (scenario === "headAutonCode") {
+    seed.auton = index % 3 === 0 ? opponentColor : index % 5 === 0 ? "tie" : ourColor;
+  } else if (scenario === "headHoldAuton") {
+    seed.auton = index % 7 === 0 ? "tie" : ourColor;
+    if (index % 3 === 0) setColoredPins(3, 8);
+  } else if (scenario === "headMidfield") {
+    const controlled = index % 2 === 0;
+    setRobotCounts(controlled ? 2 : 0, controlled ? 0 : 2);
+    setColoredPins(controlled ? ourBase + 1 : ourBase - 1, controlled ? oppBase : oppBase + 2);
+  } else if (scenario === "headYellow") {
+    seed.centerY = 0;
+    ["top", "right", "bottom", "left"].forEach((zone, zoneIndex) => {
+      seed[`${zone}Y`] = 3;
+      seed[`${zone}Toggle`] = (index + zoneIndex) % 2 === 0 ? ourColor : opponentColor;
+    });
+  } else if (scenario === "headToggleZone") {
+    seed.topY = 4;
+    seed.rightY = 1;
+    seed.bottomY = 1;
+    seed.leftY = 1;
+    seed.topToggle = index % 5 < 3 ? opponentColor : ourColor;
+  } else if (scenario === "headEndgame") {
+    seed.auton = "tie";
+    seed.topY = seed.rightY = seed.bottomY = seed.leftY = seed.centerY = 0;
+    setColoredPins(5, 5);
+    setRobotCounts(index < 6 ? 0 : 2, index < 6 ? 1 : 0);
+  } else if (scenario === "headPins") {
+    seed.auton = "tie";
+    seed.topY = seed.rightY = seed.bottomY = seed.leftY = seed.centerY = 0;
+    setRobotCounts(1, 1);
+    setColoredPins(index < total / 2 ? 7 : 3, index < total / 2 ? 3 : 7);
+  }
   return seed;
 }
 
-function sampleSkillsSeed(index, total, skillsType) {
+function sampleSkillsSeed(index, total, skillsType, scenario, salt) {
   const progress = total <= 1 ? 1 : index / (total - 1);
-  const daysAgoValue = Math.round((1 - progress) * 96 + (skillsType === "autonomous" ? 1 : 0));
-  const earlyMiss = index % 8 === 1 || index % 13 === 6;
-  const lateClean = index > total * .68 && index % 5 !== 2;
-  const route = Math.min(1, Math.max(0, progress + (lateClean ? .12 : 0) - (earlyMiss ? .25 : 0)));
-  return {
+  const daysAgoValue = Math.round((1 - progress) * (80 + Math.floor(seededRandom(salt + 1) * 36)) + (skillsType === "autonomous" ? 1 : 0));
+  const noise = (seededRandom(salt + index * 5.21 + (skillsType === "driver" ? 11 : 29)) - .5) * .08;
+  let route = Math.max(.2, Math.min(1, .5 + progress * .36 + noise));
+  if (scenario === "skillsDriverRepeat" && skillsType === "driver") route = index % 5 < 2 ? .98 : .4 + progress * .08;
+  if (scenario === "skillsAutonRepeat" && skillsType === "autonomous") route = index % 5 < 2 ? .96 : .32 + progress * .08;
+  if (scenario === "skillsRouteGain") route = index % 5 < 2 ? (skillsType === "driver" ? 1 : .86) : (skillsType === "driver" ? .28 : .52);
+  if (scenario === "skillsEventSet") route = skillsType === "driver" && index === total - 1 ? 1.18 : .52 + noise;
+  if (scenario === "skillsCeiling" || scenario === "skillsBalance") route = .76 + noise;
+  const seed = {
     daysAgo: daysAgoValue,
     skillsType,
-    centerToggle: route > .28,
-    topToggle: route > .38 ? "blue" : "neutral",
-    rightToggle: route > .58 ? "blue" : (route > .25 ? "neutral" : "red"),
-    bottomToggle: route > .34 ? "red" : "neutral",
-    leftToggle: route > .5 ? "red" : (route > .2 ? "neutral" : "blue"),
-    topY: Math.floor(route * 3),
-    topB: Math.floor(route * (skillsType === "driver" ? 5 : 3)),
-    rightY: Math.floor(route * 3),
-    rightB: Math.floor(route * (skillsType === "driver" ? 4 : 3)),
-    bottomY: Math.floor(route * 3),
-    bottomR: Math.floor(route * (skillsType === "driver" ? 5 : 3)),
-    leftY: Math.floor(route * 3),
-    leftR: Math.floor(route * (skillsType === "driver" ? 4 : 2)),
-    centerY: Math.floor(route * 2),
-    centerR: Math.floor(route * (skillsType === "driver" ? 2 : 1)),
-    centerB: Math.floor(route * (skillsType === "driver" ? 2 : 1)),
+    centerToggle: true,
+    topToggle: "blue",
+    rightToggle: "blue",
+    bottomToggle: "red",
+    leftToggle: "red",
+    topY: 1 + Math.floor(route * 2),
+    topR: 0,
+    topB: Math.floor(route * (skillsType === "driver" ? 6 : 4)),
+    rightY: 1 + Math.floor(route * 2),
+    rightR: 0,
+    rightB: Math.floor(route * (skillsType === "driver" ? 5 : 3)),
+    bottomY: 1 + Math.floor(route * 2),
+    bottomR: Math.floor(route * (skillsType === "driver" ? 6 : 4)),
+    bottomB: 0,
+    leftY: 1 + Math.floor(route * 2),
+    leftR: Math.floor(route * (skillsType === "driver" ? 5 : 3)),
+    leftB: 0,
+    centerY: 1 + Math.floor(route * 2),
+    centerR: Math.floor(route * (skillsType === "driver" ? 3 : 2)),
+    centerB: Math.floor(route * (skillsType === "driver" ? 3 : 2)),
     notes: route > .72
       ? `${skillsType === "driver" ? "Driver" : "Autonomous"} route is getting cleaner.`
       : `${skillsType === "driver" ? "Driver" : "Autonomous"} sample while tuning route.`
   };
+  if (scenario === "skillsYellow" && index % 3 !== 0) {
+    seed.topToggle = "neutral";
+    seed.rightToggle = "red";
+    seed.bottomToggle = "neutral";
+    seed.leftToggle = "blue";
+  }
+  if (scenario === "skillsCenter") seed.centerToggle = index % 3 !== 0;
+  if (scenario === "skillsPlacement" && index % 2 === 0) {
+    seed.topR = 4;
+    seed.rightR = 3;
+    seed.bottomB = 4;
+    seed.leftB = 3;
+  }
+  return seed;
 }
 
 function createSampleHeadRecord(seed) {
@@ -3834,10 +3896,10 @@ function createSampleSkillsRecord(seed) {
       left: seed.leftToggle
     },
     quadrants: {
-      top: { yellow: seed.topY, red: 0, blue: seed.topB },
-      right: { yellow: seed.rightY, red: 0, blue: seed.rightB },
-      bottom: { yellow: seed.bottomY, red: seed.bottomR, blue: 0 },
-      left: { yellow: seed.leftY, red: seed.leftR, blue: 0 },
+      top: { yellow: seed.topY, red: seed.topR || 0, blue: seed.topB },
+      right: { yellow: seed.rightY, red: seed.rightR || 0, blue: seed.rightB },
+      bottom: { yellow: seed.bottomY, red: seed.bottomR, blue: seed.bottomB || 0 },
+      left: { yellow: seed.leftY, red: seed.leftR, blue: seed.leftB || 0 },
       center: { yellow: seed.centerY, red: seed.centerR, blue: seed.centerB }
     }
   };
@@ -3856,16 +3918,70 @@ function createSampleSkillsRecord(seed) {
 }
 
 function seedSampleData() {
-  const headSeeds = Array.from({ length: 72 }, (_, index) => sampleHeadSeed(index, 72));
-  const skillsSeeds = [
-    ...Array.from({ length: 40 }, (_, index) => sampleSkillsSeed(index, 40, "driver")),
-    ...Array.from({ length: 34 }, (_, index) => sampleSkillsSeed(index, 34, "autonomous"))
-  ];
+  const shuffled = values => values
+    .map(value => ({ value, order: Math.random() }))
+    .sort((a, b) => a.order - b.order)
+    .map(item => item.value);
+  const headScenarios = shuffled([
+    "headAutonCode",
+    "headHoldAuton",
+    "headMidfield",
+    "headYellow",
+    "headToggleZone",
+    "headEndgame",
+    "headPins"
+  ]).sort((a, b) => Number(a === lastDevHeadRecommendation) - Number(b === lastDevHeadRecommendation));
+  const skillsScenarios = shuffled([
+    "skillsBalance",
+    "skillsDriverRepeat",
+    "skillsAutonRepeat",
+    "skillsRouteGain",
+    "skillsYellow",
+    "skillsCenter",
+    "skillsPlacement",
+    "skillsEventSet",
+    "skillsCeiling"
+  ]).sort((a, b) => Number(a === lastDevSkillsRecommendation) - Number(b === lastDevSkillsRecommendation));
+
+  let headRecords = [];
+  let headRecommendationKey = "";
+  for (const scenario of headScenarios) {
+    const salt = Math.random() * 100000;
+    const count = 54 + Math.floor(Math.random() * 25);
+    const candidate = Array.from({ length: count }, (_, index) => createSampleHeadRecord(sampleHeadSeed(index, count, scenario, salt)));
+    const recommendationKey = rankedHeadRecommendation(candidate).recommendationKey;
+    if (!headRecords.length || recommendationKey !== lastDevHeadRecommendation) {
+      headRecords = candidate;
+      headRecommendationKey = recommendationKey;
+    }
+    if (recommendationKey === scenario && recommendationKey !== lastDevHeadRecommendation) break;
+  }
+
+  let skillsRecords = [];
+  let skillsRecommendationKey = "";
+  for (const scenario of skillsScenarios) {
+    const salt = Math.random() * 100000;
+    const driverCount = scenario === "skillsBalance" ? 18 : 24 + Math.floor(Math.random() * 17);
+    const autonCount = scenario === "skillsBalance" ? 3 : 24 + Math.floor(Math.random() * 15);
+    const candidate = [
+      ...Array.from({ length: driverCount }, (_, index) => createSampleSkillsRecord(sampleSkillsSeed(index, driverCount, "driver", scenario, salt))),
+      ...Array.from({ length: autonCount }, (_, index) => createSampleSkillsRecord(sampleSkillsSeed(index, autonCount, "autonomous", scenario, salt + 137)))
+    ];
+    const recommendationKey = rankedSkillsRecommendation(candidate).recommendationKey;
+    if (!skillsRecords.length || recommendationKey !== lastDevSkillsRecommendation) {
+      skillsRecords = candidate;
+      skillsRecommendationKey = recommendationKey;
+    }
+    if (recommendationKey === scenario && recommendationKey !== lastDevSkillsRecommendation) break;
+  }
+
+  lastDevHeadRecommendation = headRecommendationKey;
+  lastDevSkillsRecommendation = skillsRecommendationKey;
 
   const nextMatches = [
     ...savedMatches().filter(record => !String(record.id || "").startsWith("dev-")),
-    ...headSeeds.map(createSampleHeadRecord),
-    ...skillsSeeds.map(createSampleSkillsRecord)
+    ...headRecords,
+    ...skillsRecords
   ];
   writeSavedMatches(nextMatches);
   renderHistory();
