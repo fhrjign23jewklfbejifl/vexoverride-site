@@ -15,7 +15,7 @@ const JUDGE_MATCH_STORE_KEY = "vexOverrideJudgeMatches:v1";
 const JUDGE_PROFILE_STORE_KEY = "vexOverrideJudgeProfile:v1";
 const JUDGE_COMPETITION_STORE_KEY = "vexOverrideJudgeCompetitionData:v1";
 const JUDGE_DATASET_VERSION_STORE_KEY = "vexOverrideJudgeDatasetVersion:v1";
-const JUDGE_DATASET_VERSION = "4330p-season-replay-20260907-v1";
+const JUDGE_DATASET_VERSION = "4330p-season-replay-20260907-v2";
 const PROXY_URL_STORE_KEY = "vexOverrideDataProxyUrl:v1";
 const SEASON_SKILLS_STORE_KEY = "vexOverrideSeasonSkills:v1";
 const LANGUAGE_STORE_KEY = "vexOverrideLanguage:v1";
@@ -64,6 +64,10 @@ let profile = loadProfile();
 let activeMode = "head";
 let analysisRange = "all";
 let analysisMode = "head";
+const analysisDisclosureState = {
+  head: { evidence: false, correlation: false },
+  skills: { evidence: false, correlation: false }
+};
 let replayObserver = null;
 let devAutofillState = loadDevAutofillState();
 let lastDevHeadRecommendation = devAutofillState.headRecommendation || "";
@@ -4226,9 +4230,24 @@ function buildVerifiedSkillsScenario(scenario, trajectoryProfile, random) {
 function createJudgeHeadCandidate(salt) {
   const count = 50;
   const random = createDevRandom(433000 + salt);
+  const preparedLosses = new Set([2, 3, 6, 9, 12, 15, 18, 24, 27, 30, 33, 36, 39, 45, 48]);
   return Array.from({ length: count }, (_, index) => {
-    const seed = sampleHeadSeed(index, count, "headToggleZone", "recovery", salt);
-    if ([12, 29, 44].includes(index)) {
+    const seed = sampleHeadSeed(index, count, "headHoldAuton", "recovery", salt);
+    const isPreparedDraw = index === 29;
+    ["top", "right", "bottom", "left"].forEach((zone) => {
+      seed[`${zone}Y`] = 0;
+    });
+    if (!isPreparedDraw) {
+      const ourColor = seed.teamAlliance === "red" ? "R" : "B";
+      const opponentColor = seed.teamAlliance === "red" ? "B" : "R";
+      ["top", "right", "bottom", "left"].forEach((zone) => {
+        const ourPins = seed[`${zone}${ourColor}`];
+        seed[`${zone}${opponentColor}`] = preparedLosses.has(index)
+          ? ourPins + 3
+          : Math.max(0, ourPins - 2);
+      });
+    }
+    if (isPreparedDraw) {
       seed.auton = "tie";
       seed.redRobots = 1;
       seed.blueRobots = 1;
@@ -4279,8 +4298,8 @@ function buildJudgeDataset() {
     const trajectory = classifySavedTrajectory(records, record => record.ourScore);
     const outcomes = new Set(records.map(record => record.result));
     const candidate = { records, recommendation, trajectory };
-    if (!headFallback && recommendation.recommendationKey === "headToggleZone") headFallback = candidate;
-    if (recommendation.recommendationKey === "headToggleZone"
+    if (!headFallback && recommendation.recommendationKey === "headHoldAuton") headFallback = candidate;
+    if (recommendation.recommendationKey === "headHoldAuton"
       && trajectory.shape === "recovery"
       && ["win", "loss", "tie"].every(outcome => outcomes.has(outcome))) {
       headFallback = candidate;
@@ -4301,7 +4320,7 @@ function buildJudgeDataset() {
   }
 
   if (!headFallback || !skillsFallback
-    || headFallback.recommendation.recommendationKey !== "headToggleZone"
+    || headFallback.recommendation.recommendationKey !== "headHoldAuton"
     || skillsFallback.recommendation.recommendationKey !== "skillsDriverRepeat") {
     throw new Error("Prepared judge dataset did not validate against the recommendation engine.");
   }
@@ -5179,7 +5198,7 @@ function renderCorrelation(records, options, selectedX, selectedY, mode) {
   const prettyR = Number.isFinite(r) ? r.toFixed(2) : "--";
 
   return `
-    <details class="analysis-correlation-lab">
+    <details class="analysis-correlation-lab" ${analysisDisclosureState[mode].correlation ? "open" : ""}>
       <summary>
         <span>${escapeHtml(t("analysis.openCorrelation"))}</span>
         <small>${escapeHtml(t("analysis.correlationTool"))}</small>
@@ -6505,7 +6524,7 @@ function renderReplayEvidence(mode, records) {
     ? renderCorrelation(records, headCorrelationOptions, headCorrelationX, headCorrelationY, "head")
     : renderCorrelation(records, skillsCorrelationOptions, skillsCorrelationX, skillsCorrelationY, "skills");
   return `
-    <details class="replay-evidence-vault">
+    <details class="replay-evidence-vault" ${analysisDisclosureState[mode].evidence ? "open" : ""}>
       <summary><span>${escapeHtml(t("analysis.replay.evidenceTitle"))}</span><small>${escapeHtml(t("analysis.replay.evidenceDetail"))}</small></summary>
       <div class="replay-evidence-body">
         ${mode === "head" ? renderHeadEvidence(records) : renderSkillsEvidence(records)}
@@ -6589,7 +6608,18 @@ function renderSkillsAnalysis(allRuns, runs) {
   renderSeasonReplay("skills", allRuns, runs);
 }
 
+function captureAnalysisDisclosureState() {
+  ["head", "skills"].forEach((mode) => {
+    const mount = $(`[data-analysis-${mode === "head" ? "head" : "skills"}-replay]`);
+    const evidence = mount?.querySelector(".replay-evidence-vault");
+    const correlation = mount?.querySelector(".analysis-correlation-lab");
+    if (evidence) analysisDisclosureState[mode].evidence = evidence.open;
+    if (correlation) analysisDisclosureState[mode].correlation = correlation.open;
+  });
+}
+
 function renderAnalysis() {
+  captureAnalysisDisclosureState();
   renderAnalysisMode();
   renderAnalysisRange();
   const headMatches = sortedHeadMatches();
