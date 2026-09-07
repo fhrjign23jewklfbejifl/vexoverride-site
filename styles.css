@@ -724,7 +724,7 @@ body.analysis-active .score-app {
   border-top: 1px solid rgba(255, 255, 255, .12);
 }
 
-.replay-missions li {
+.replay-missions > li {
   display: grid;
   grid-template-columns: 68px minmax(0, 1fr);
   gap: 22px;
@@ -732,7 +732,7 @@ body.analysis-active .score-app {
   border-bottom: 1px solid rgba(255, 255, 255, .12);
 }
 
-.replay-missions li.primary {
+.replay-missions > li.primary {
   background: linear-gradient(90deg, rgba(132, 241, 94, .14), transparent 86%);
 }
 
@@ -742,11 +742,11 @@ body.analysis-active .score-app {
   font-weight: 850;
 }
 
-.replay-missions li.primary > span {
+.replay-missions > li.primary > span {
   color: #84f15e;
 }
 
-.replay-missions li > div {
+.replay-missions > li > div {
   display: grid;
   gap: 10px;
 }
@@ -768,6 +768,21 @@ body.analysis-active .score-app {
 
 .replay-missions b {
   color: #e9f4f4;
+}
+
+.replay-drill-steps {
+  display: grid;
+  gap: 7px;
+  margin: 4px 0 2px;
+  padding-left: 24px;
+  color: #d7e6e8;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.replay-drill-steps li::marker {
+  color: #84f15e;
+  font-weight: 800;
 }
 
 .replay-evidence-vault {
@@ -1085,14 +1100,13 @@ body.analysis-active .score-app {
   }
 
   .season-replay-panel .analysis-range {
-    display: flex;
-    overflow-x: auto;
-    scrollbar-width: thin;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .season-replay-panel .analysis-range button {
-    min-width: 82px;
-    flex: 1 0 82px;
+    min-width: 0;
+    padding-inline: 8px;
   }
 
   .replay-opening {
@@ -1168,7 +1182,7 @@ body.analysis-active .score-app {
     padding: 28px 20px;
   }
 
-  .replay-missions li {
+  .replay-missions > li {
     grid-template-columns: 44px minmax(0, 1fr);
     gap: 12px;
     padding: 24px 4px;

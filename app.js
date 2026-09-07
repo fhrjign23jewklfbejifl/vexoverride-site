@@ -1784,6 +1784,305 @@ Object.assign(translations["zh-CN"], {
   "analysis.skillsNoteSplit": "技能赛平均 {average}。驾驶平均 {driver}，自动平均 {auton}；下一步提升在较不稳定的路线。",
   "analysis.skillsNoteOneType": "技能赛平均 {average}。保存驾驶和自动尝试，才能看到真实合计上限。"
 });
+
+const coachGuides = {
+  en: {
+    headAutonCode: {
+      title: "Improve your autonomous code",
+      meaning: "Your autonomous result is inconsistent, so the first scoring opportunity is not dependable yet.",
+      proof: "Autonomous won or tied {successCount} of {count} matches ({rate}).",
+      steps: [
+        "Freeze the code at its current point value instead of adding another action.",
+        "Run it 10 times from the same legal starting position.",
+        "Record the first failed action each time: localization, alignment, pickup, placement, or timing.",
+        "Fix the most common failure and repeat the set with normal battery and field variation.",
+        "Add complexity only after at least 8 of 10 runs complete correctly."
+      ],
+      target: "Win or tie autonomous in at least 8 of 10 practice matches."
+    },
+    headHoldAuton: {
+      title: "Hold your autonomous advantage",
+      meaning: "Your alliance often wins autonomous, but that early lead is not surviving Driver Control.",
+      proof: "You converted {converted} of {autonWins} autonomous wins into match wins ({rate}).",
+      steps: [
+        "Review matches where autonomous was won but the match was lost.",
+        "Mark where the lead disappeared: scoring pace, yellow ownership, Midfield, or an uncompleted task.",
+        "Assign each alliance robot its first Driver Control job before the match.",
+        "Run scrimmages that begin with a 12-point lead and protect it while continuing to score.",
+        "Check whether the alliance still leads halfway through the match and at the finish."
+      ],
+      target: "Turn at least 7 of the next 10 autonomous wins into match wins."
+    },
+    headMidfield: {
+      title: "Make Midfield control part of your match plan",
+      meaning: "Your saved matches finish better when your alliance controls Midfield, but that result is not reliable yet.",
+      proof: "Your final margin averaged {swing} points better with Midfield control; you controlled it in {rate} of matches.",
+      steps: [
+        "Decide before each match which robot is responsible for entering Midfield and which robot is the backup.",
+        "Give the drive team one consistent call before the final 10 seconds.",
+        "Practice the approach from several realistic field positions, including a blocked direct path.",
+        "Rehearse the choice between sending one robot, sending both, or protecting points already secured.",
+        "Score the drill only after checking robot count and ownership of the yellow pins in Midfield."
+      ],
+      target: "Achieve the planned Midfield result in at least 8 of 10 practice matches."
+    },
+    headYellow: {
+      title: "Make more of your yellow pins count",
+      meaning: "Yellow pins are being placed, but too many finish in quadrants your alliance does not own.",
+      proof: "{scored} of {placed} placed yellow pins scored ({rate}), leaving about {missedPoints} points per match available.",
+      steps: [
+        "Find the quadrant losing the most yellow value.",
+        "Decide whether that zone should be protected, retaken near the end, or removed from the scoring route.",
+        "Use one drive-team call for a yellow pin placed without a secured Toggle.",
+        "Practice placing the yellow pin and finishing with the correct Toggle state as one complete action.",
+        "End every drill by checking ownership, not only whether the pin was placed."
+      ],
+      target: "Score at least 85% of placed yellow pins across 10 consecutive practice matches."
+    },
+    headToggleZone: {
+      title: "Secure the {zone} Toggle",
+      meaning: "The {zone} quadrant is where your alliance most often leaves placed yellow pins without ownership.",
+      proof: "That quadrant contains {missedPins} missed yellow pins in this range, averaging {missedPoints} available points per match.",
+      steps: [
+        "Start the drill with yellow pins already placed in the {zone} quadrant.",
+        "Give one robot responsibility for checking and securing that Toggle before the finish.",
+        "Practice approaching it from the two most common field positions.",
+        "Repeat with the Toggle neutral and opponent-owned.",
+        "Finish by checking whether every yellow pin in the quadrant actually scored."
+      ],
+      target: "Own the {zone} Toggle in at least 8 of 10 drills when your alliance has yellow value there."
+    },
+    headEndgame: {
+      title: "Execute the Endgame more consistently",
+      meaning: "Your alliance is sometimes reaching the final seconds without completing its intended Midfield result.",
+      proof: "No alliance robot finished in Midfield in {missedMatches} matches, including {closeLosses} losses within 16 points.",
+      steps: [
+        "Choose the Endgame result before the match instead of assuming every match needs the same plan.",
+        "Assign a primary robot and a backup for that result.",
+        "Use the same drive-team time call before the final 10 seconds.",
+        "Practice from clear, obstructed, and wrong-side starting positions.",
+        "Judge the drill by whether the chosen plan was executed, not automatically by sending both robots."
+      ],
+      target: "Execute the chosen Endgame plan in at least 8 of 10 practice matches."
+    },
+    headPins: {
+      title: "Score more red and blue pins",
+      meaning: "Control is reasonably stable, but your winning matches contain more alliance-colored pins than your losses.",
+      proof: "Wins averaged {winningPins} alliance-colored pins; losses averaged {losingPins}, a difference of {pinGap} pins.",
+      steps: [
+        "Run a timed 30-second pin-scoring segment.",
+        "Count completed scoring actions and identify where time is being lost.",
+        "Remove one repeated delay in pickup, alignment, travel, or placement.",
+        "Test the faster action inside a full match without sacrificing yellows or the Endgame.",
+        "Keep the change only when the total score rises consistently."
+      ],
+      target: "Match the alliance-colored pin count from your winning matches in at least 8 of 10 practice matches."
+    },
+    headNeedData: {
+      title: "Save more matches before choosing a focus",
+      meaning: "There is not enough evidence yet to recommend changing your match strategy.",
+      proof: "You have {count} saved matches in this range; a recommendation needs at least 10.",
+      steps: [
+        "Keep using your current match plan while building a baseline.",
+        "Save every practice match, including losses and unusual results.",
+        "Record autonomous, Toggle ownership, pins, and Midfield accurately.",
+        "Reach at least 10 saved matches in the selected range.",
+        "Return to Analysis and review the first supported pattern."
+      ],
+      target: "Save {needed} more complete matches in this range."
+    },
+    headNoSignal: {
+      title: "Keep collecting complete match data",
+      meaning: "No single weakness is frequent and costly enough to justify changing practice yet.",
+      proof: "The saved matches do not contain a recommendation with enough repeatable evidence.",
+      steps: [
+        "Keep the current strategy stable for the next practice set.",
+        "Save every match rather than only the best or worst ones.",
+        "Check that autonomous, pins, Toggle ownership, and Midfield are recorded.",
+        "Review failures by action after practice.",
+        "Return when another five complete matches are available."
+      ],
+      target: "Save five more complete matches before changing the practice plan."
+    },
+    skillsBalance: {
+      title: "We do not have enough Skills data yet",
+      meaning: "A useful Skills recommendation needs at least five Driver runs and five Autonomous Coding runs.",
+      proof: "Saved so far: {driverCount} Driver runs and {autonCount} Autonomous Coding runs.",
+      steps: [
+        "Keep the current routes unchanged while creating a baseline.",
+        "Record at least five complete Driver runs.",
+        "Record at least five complete Autonomous Coding runs.",
+        "Save every attempt, including low scores and failures.",
+        "Return to Analysis after both sets are complete."
+      ],
+      target: "Save five valid runs of each Skills type."
+    },
+    skillsDriverRepeat: {
+      title: "Increase Driver Skills practice and consistency",
+      meaning: "Your best Driver score shows what the route can do, but most attempts are not reaching it yet.",
+      proof: "Your best Driver score is {best}; your typical score is {median}, a {gap}-point gap.",
+      steps: [
+        "Divide the one-minute route into three timed checkpoints.",
+        "Run the same route five times without improvising.",
+        "Mark the first checkpoint that falls behind or fails.",
+        "Practice that section alone, then reconnect it to the full route.",
+        "Change the route only after the current version becomes repeatable."
+      ],
+      target: "Put at least 4 of 5 Driver runs within 10% of your current best score."
+    },
+    skillsAutonRepeat: {
+      title: "Make your Autonomous Skills code more reliable",
+      meaning: "The code has achieved a strong score, but it does not repeat that score often enough.",
+      proof: "Your best Autonomous score is {best}; your typical score is {median}, a {gap}-point gap.",
+      steps: [
+        "Freeze the current route and run the code five times.",
+        "Log the first failed programmed action in every run.",
+        "Fix the most common failure before adding another action.",
+        "Test normal variation in starting position, battery state, and field setup.",
+        "Run the full code again after every local fix."
+      ],
+      target: "Put at least 4 of 5 Autonomous Coding runs within 10% of your current best score."
+    },
+    skillsRouteGain: {
+      title: "Practice {route} more often",
+      meaning: "Your {route} best score is much higher than a normal attempt, so repeatability is the quickest available gain.",
+      proof: "Its best score is {best}, while its typical score is {median}; {gap} points are currently within reach.",
+      steps: [
+        "Compare the route's typical score with its best score.",
+        "Identify which already-successful actions disappear in normal runs.",
+        "Recover those proven actions before making the route longer.",
+        "Practice the weakest checkpoint by itself.",
+        "Confirm the improvement in a five-run set."
+      ],
+      target: "Recover at least half of the gap between the route's typical and best scores."
+    },
+    skillsYellow: {
+      title: "Score more of the yellow pins you place",
+      meaning: "Placed yellow pins are not consistently ending with the Toggle or Midfield ownership needed to score.",
+      proof: "{scored} of {placed} placed yellow pins scored ({rate}), leaving about {missedPoints} points per run available.",
+      steps: [
+        "Find the quadrant losing the most yellow points.",
+        "Treat placement and ownership as one complete scoring action.",
+        "Add a route checkpoint that verifies the correct Toggle state.",
+        "Test the route after deliberately resetting that Toggle incorrectly.",
+        "End every run by scoring ownership, not placement alone."
+      ],
+      target: "Score at least 90% of placed yellow pins in five consecutive runs."
+    },
+    skillsCenter: {
+      title: "Complete the Midfield objective more often",
+      meaning: "Too many Skills attempts finish without completing the planned Midfield scoring action.",
+      proof: "The Midfield finish was completed in {completeCount} of {count} runs ({rate}).",
+      steps: [
+        "Choose the exact point in the route when Midfield becomes the priority.",
+        "Practice the entry from the route's real preceding position.",
+        "Leave a time buffer instead of relying on a final-second arrival.",
+        "Score the robot and center yellow pins only when the full condition is met.",
+        "Shorten the earlier route if the Midfield finish remains unreliable."
+      ],
+      target: "Complete the planned Midfield finish in at least 8 of 10 runs."
+    },
+    skillsPlacement: {
+      title: "Stop placing {color} pins where they cannot score",
+      meaning: "The {zone} quadrant does not score those {color} pins, so that part of the route uses time without adding points.",
+      proof: "{pins} {color} pins were placed there in this range, averaging {missedPoints} unavailable points per run.",
+      steps: [
+        "Remove the highest-cost wrong-zone placement from the route.",
+        "Redirect that pin to the nearest scoring quadrant or leave it out.",
+        "Practice the corrected travel path five times.",
+        "Confirm that the shorter or redirected path produces a net score gain.",
+        "Correct the next wrong-zone placement only after the first change works."
+      ],
+      target: "Finish at least 95% of red and blue pins in quadrants where they can score."
+    },
+    skillsEventSet: {
+      title: "Prepare for all three official Skills attempts",
+      meaning: "One attempt is strong, but the next-best attempt is too far behind to make a three-attempt event reliable.",
+      proof: "Your best {route} run is {best}; your second-best is {second}, a {gap}-point drop.",
+      steps: [
+        "Simulate exactly three {route} runs.",
+        "Do not restart failed attempts.",
+        "Use the same repair and reset time you expect at an event.",
+        "Record the best, second-best, and worst score in each set.",
+        "Repeat sets until one bad attempt no longer defines the session."
+      ],
+      target: "In three consecutive sets, produce at least two runs within 10% of the route's best."
+    },
+    skillsCeiling: {
+      title: "Add one scoring action to your stable {route} route",
+      meaning: "Your {route} route is repeatable enough to test one small scoring addition without rebuilding it.",
+      proof: "Your typical {route} score is {median} and your best is {best}; reliability is already strong.",
+      steps: [
+        "Protect the current reliable route as the baseline.",
+        "Add one scoring action at the lowest-risk point.",
+        "Test the new route five times against five baseline runs.",
+        "Keep the addition only if the typical score rises without a sharp drop in the low runs.",
+        "Remove it if the extra points appear only once."
+      ],
+      target: "Raise the route's typical score to {target} while keeping 4 of 5 runs within 10% of the new best."
+    },
+    skillsNoSignal: {
+      title: "Keep recording complete Skills attempts",
+      meaning: "The saved attempts do not show one repeatable weakness strongly enough to change the route yet.",
+      proof: "More complete Driver and Autonomous attempts will make the next recommendation more specific.",
+      steps: [
+        "Keep both current routes unchanged for the next practice set.",
+        "Save every complete attempt, including failures.",
+        "Record pin placement, Toggle states, and the Midfield result accurately.",
+        "Review the first failed action after each attempt.",
+        "Return after five more complete attempts."
+      ],
+      target: "Save five more complete Skills attempts before changing the route."
+    }
+  },
+  es: {},
+  "zh-CN": {}
+};
+
+Object.assign(coachGuides.es, {
+  headAutonCode: { title: "Mejora tu código autónomo", meaning: "El resultado autónomo es irregular y todavía no ofrece un inicio confiable.", proof: "Autónomo ganó o empató {successCount} de {count} partidos ({rate}).", steps: ["Mantén el código en su valor actual sin añadir otra acción.", "Ejecútalo 10 veces desde la misma posición inicial legal.", "Anota la primera acción que falla: localización, alineación, recogida, colocación o tiempo.", "Corrige la falla más común y repite con variaciones normales de batería y campo.", "Añade complejidad solo después de completar bien 8 de 10 intentos."], target: "Gana o empata autónomo en al menos 8 de 10 partidos de práctica." },
+  headHoldAuton: { title: "Mantén tu ventaja autónoma", meaning: "La alianza suele ganar autónomo, pero pierde esa ventaja durante Driver Control.", proof: "Convertiste {converted} de {autonWins} victorias autónomas en victorias del partido ({rate}).", steps: ["Revisa los partidos donde ganaste autónomo pero perdiste el partido.", "Marca dónde desapareció la ventaja: ritmo, amarillos, Midfield o una tarea incompleta.", "Asigna el primer trabajo de cada robot antes del partido.", "Practica partidos que comiencen con 12 puntos de ventaja sin dejar de anotar.", "Comprueba si la alianza conserva la ventaja a mitad del partido y al final."], target: "Convierte al menos 7 de las próximas 10 victorias autónomas en victorias del partido." },
+  headMidfield: { title: "Incluye el control de Midfield en tu plan", meaning: "Tus partidos terminan mejor con control de Midfield, pero aún no lo consigues de forma confiable.", proof: "El margen final fue {swing} puntos mejor con control de Midfield; lo controlaste en {rate} de los partidos.", steps: ["Decide antes de cada partido qué robot entrará a Midfield y cuál será el respaldo.", "Usa una llamada constante antes de los últimos 10 segundos.", "Practica la entrada desde varias posiciones reales, incluida una ruta bloqueada.", "Ensaya cuándo enviar uno, ambos o proteger puntos ya asegurados.", "Puntúa el ejercicio después de revisar robots y amarillos de Midfield."], target: "Consigue el resultado de Midfield planeado en al menos 8 de 10 partidos de práctica." },
+  headYellow: { title: "Haz que puntúen más pines amarillos", meaning: "Se colocan amarillos, pero demasiados terminan en cuadrantes que tu alianza no posee.", proof: "Puntuaron {scored} de {placed} amarillos colocados ({rate}); quedaron disponibles unos {missedPoints} puntos por partido.", steps: ["Encuentra el cuadrante que pierde más valor amarillo.", "Decide si se protege, se recupera al final o se elimina de la ruta.", "Usa una llamada cuando haya un amarillo colocado sin Toggle asegurado.", "Practica colocar el amarillo y terminar con el Toggle correcto como una sola acción.", "Termina cada ejercicio comprobando propiedad, no solo colocación."], target: "Haz puntuar al menos el 85% de los amarillos colocados durante 10 partidos seguidos." },
+  headToggleZone: { title: "Asegura el Toggle de {zone}", meaning: "El cuadrante {zone} es donde quedan más amarillos colocados sin propiedad.", proof: "Ese cuadrante contiene {missedPins} amarillos perdidos y promedia {missedPoints} puntos disponibles por partido.", steps: ["Empieza con amarillos ya colocados en el cuadrante {zone}.", "Asigna a un robot la revisión y control de ese Toggle.", "Practica la aproximación desde las dos posiciones más comunes.", "Repite con el Toggle neutral y en poder del rival.", "Comprueba al final si todos los amarillos realmente puntuaron."], target: "Posee el Toggle de {zone} en al menos 8 de 10 ejercicios cuando haya valor amarillo allí." },
+  headEndgame: { title: "Ejecuta el Endgame con más consistencia", meaning: "La alianza llega a veces a los segundos finales sin completar el resultado de Midfield que eligió.", proof: "Ningún robot de la alianza terminó en Midfield en {missedMatches} partidos, incluidos {closeLosses} perdidos por 16 puntos o menos.", steps: ["Elige el objetivo de Endgame antes del partido; no todos necesitan el mismo plan.", "Asigna un robot principal y uno de respaldo.", "Usa la misma llamada de tiempo antes de los últimos 10 segundos.", "Practica desde posiciones libres, bloqueadas y del lado incorrecto.", "Evalúa si se ejecutó el plan elegido, no si ambos robots entraron siempre."], target: "Ejecuta el plan de Endgame elegido en al menos 8 de 10 partidos de práctica." },
+  headPins: { title: "Anota más pines rojos y azules", meaning: "El control es razonablemente estable, pero tus victorias contienen más pines del color de la alianza.", proof: "Las victorias promediaron {winningPins} pines de alianza y las derrotas {losingPins}; diferencia de {pinGap}.", steps: ["Haz un ejercicio de 30 segundos para anotar pines.", "Cuenta acciones completas y localiza dónde se pierde tiempo.", "Elimina una demora repetida de recogida, alineación, recorrido o colocación.", "Prueba la acción más rápida en un partido completo sin sacrificar amarillos ni Endgame.", "Conserva el cambio solo si el puntaje total sube de forma constante."], target: "Iguala los pines de alianza de tus victorias en al menos 8 de 10 partidos de práctica." },
+  headNeedData: { title: "Guarda más partidos antes de elegir un enfoque", meaning: "Todavía no hay evidencia suficiente para recomendar un cambio de estrategia.", proof: "Hay {count} partidos guardados en este rango; se necesitan al menos 10.", steps: ["Mantén el plan actual mientras creas una referencia.", "Guarda todos los partidos, incluidas derrotas y resultados inusuales.", "Registra bien autónomo, Toggles, pines y Midfield.", "Llega a 10 partidos guardados en el rango.", "Vuelve a Analysis para revisar el primer patrón respaldado."], target: "Guarda {needed} partidos completos más en este rango." },
+  headNoSignal: { title: "Sigue guardando datos completos de partidos", meaning: "Ninguna debilidad es todavía lo bastante frecuente y costosa para cambiar la práctica.", proof: "Los partidos guardados no muestran una recomendación con evidencia repetible suficiente.", steps: ["Mantén estable la estrategia durante la próxima serie.", "Guarda todos los partidos, no solo los mejores o peores.", "Comprueba que autónomo, pines, Toggles y Midfield estén registrados.", "Después de practicar, revisa las fallas por acción.", "Vuelve cuando haya cinco partidos completos más."], target: "Guarda cinco partidos completos más antes de cambiar el plan de práctica." },
+  skillsBalance: { title: "Todavía no tenemos suficientes datos de Skills", meaning: "Una recomendación útil necesita cinco intentos Driver y cinco de Código Autónomo.", proof: "Guardados: {driverCount} Driver y {autonCount} de Código Autónomo.", steps: ["Mantén las rutas actuales mientras creas la referencia.", "Guarda cinco intentos Driver completos.", "Guarda cinco intentos de Código Autónomo completos.", "Guarda todos los intentos, incluso fallas y puntajes bajos.", "Vuelve a Analysis cuando ambos grupos estén completos."], target: "Guarda cinco intentos válidos de cada tipo de Skills." },
+  skillsDriverRepeat: { title: "Aumenta la práctica y consistencia de Driver Skills", meaning: "Tu mejor puntaje muestra lo que la ruta puede hacer, pero la mayoría de intentos aún no lo alcanzan.", proof: "Tu mejor Driver es {best}; el puntaje típico es {median}, una diferencia de {gap}.", steps: ["Divide la ruta de un minuto en tres controles de tiempo.", "Haz la misma ruta cinco veces sin improvisar.", "Marca el primer control que se atrasa o falla.", "Practica esa sección sola y vuelve a unirla.", "Cambia la ruta solo cuando la actual sea repetible."], target: "Logra que al menos 4 de 5 Driver queden dentro del 10% de tu mejor puntaje." },
+  skillsAutonRepeat: { title: "Haz más confiable tu código de Autonomous Skills", meaning: "El código ya logró un buen puntaje, pero todavía no lo repite con suficiente frecuencia.", proof: "Tu mejor Autónomo es {best}; el puntaje típico es {median}, una diferencia de {gap}.", steps: ["Congela la ruta actual y ejecuta el código cinco veces.", "Anota la primera acción programada que falla.", "Corrige la falla más común antes de añadir otra acción.", "Prueba variaciones normales de posición, batería y campo.", "Ejecuta el código completo después de cada corrección."], target: "Logra que al menos 4 de 5 Autónomos queden dentro del 10% de tu mejor puntaje." },
+  skillsRouteGain: { title: "Practica {route} con más frecuencia", meaning: "El mejor puntaje de {route} supera mucho un intento normal, así que repetir lo que ya funciona es la mejora más cercana.", proof: "Su mejor puntaje es {best} y el típico {median}; hay {gap} puntos alcanzables.", steps: ["Compara el puntaje típico con el mejor.", "Identifica qué acciones ya logradas desaparecen en intentos normales.", "Recupera esos puntos antes de alargar la ruta.", "Practica por separado el control más débil.", "Confirma la mejora en cinco intentos."], target: "Recupera al menos la mitad de la diferencia entre el puntaje típico y el mejor." },
+  skillsYellow: { title: "Haz puntuar más amarillos de los que colocas", meaning: "Los amarillos colocados no terminan siempre con la propiedad necesaria.", proof: "Puntuaron {scored} de {placed} amarillos ({rate}); quedaron unos {missedPoints} puntos por intento.", steps: ["Encuentra el cuadrante que pierde más puntos amarillos.", "Trata colocación y propiedad como una sola acción.", "Añade un control de ruta para verificar el Toggle.", "Prueba la ruta con el Toggle colocado mal a propósito.", "Puntúa propiedad al final, no solo colocación."], target: "Haz puntuar al menos el 90% de los amarillos en cinco intentos seguidos." },
+  skillsCenter: { title: "Completa el objetivo de Midfield con más frecuencia", meaning: "Demasiados intentos terminan sin completar la acción de puntuación planeada en Midfield.", proof: "Completaste Midfield en {completeCount} de {count} intentos ({rate}).", steps: ["Elige el momento exacto en que Midfield se vuelve prioridad.", "Practica la entrada desde la posición real anterior.", "Deja margen de tiempo y no dependas del último segundo.", "Cuenta robot y amarillos solo cuando se cumpla toda la condición.", "Acorta la ruta anterior si el final sigue siendo irregular."], target: "Completa el final de Midfield en al menos 8 de 10 intentos." },
+  skillsPlacement: { title: "Deja de colocar pines {color} donde no puntúan", meaning: "El cuadrante {zone} no puntúa esos pines {color}, así que esa parte de la ruta usa tiempo sin sumar puntos.", proof: "Se colocaron allí {pins} pines {color}, un promedio de {missedPoints} puntos no disponibles por intento.", steps: ["Elimina la colocación incorrecta de mayor costo.", "Redirige el pin al cuadrante válido más cercano o déjalo fuera.", "Practica el recorrido corregido cinco veces.", "Confirma que el cambio produce una ganancia neta.", "Corrige la siguiente colocación solo después de que funcione la primera."], target: "Termina al menos el 95% de pines rojos y azules en cuadrantes donde puedan puntuar." },
+  skillsEventSet: { title: "Prepárate para los tres intentos oficiales de Skills", meaning: "Un intento es fuerte, pero el segundo mejor está demasiado lejos para confiar en las tres oportunidades del evento.", proof: "Tu mejor {route} es {best}; el segundo es {second}, una caída de {gap}.", steps: ["Simula exactamente tres intentos de {route}.", "No reinicies los intentos fallidos.", "Usa el mismo tiempo de reparación y reinicio esperado en un evento.", "Guarda el mejor, segundo y peor puntaje.", "Repite hasta que una falla no defina la sesión."], target: "En tres series seguidas, logra dos intentos dentro del 10% del mejor de la ruta." },
+  skillsCeiling: { title: "Añade una acción de puntuación a tu ruta estable de {route}", meaning: "La ruta ya es repetible y puede probar una pequeña adición sin reconstruirla.", proof: "Tu puntaje típico de {route} es {median} y el mejor {best}; la fiabilidad ya es fuerte.", steps: ["Protege la ruta confiable como referencia.", "Añade una acción en el punto de menor riesgo.", "Compara cinco rutas nuevas con cinco de referencia.", "Conserva la acción solo si sube el típico sin hundir los intentos bajos.", "Quítala si los puntos extra aparecen una sola vez."], target: "Sube el puntaje típico a {target} y mantén 4 de 5 intentos dentro del 10% del nuevo mejor." },
+  skillsNoSignal: { title: "Sigue guardando intentos completos de Skills", meaning: "Los intentos guardados no muestran una debilidad repetible suficiente para cambiar la ruta.", proof: "Más intentos completos de Driver y Autónomo permitirán una recomendación específica.", steps: ["Mantén ambas rutas sin cambios durante la próxima serie.", "Guarda cada intento completo, incluidas las fallas.", "Registra bien pines, Toggles y Midfield.", "Revisa la primera acción fallida después de cada intento.", "Vuelve después de cinco intentos completos más."], target: "Guarda cinco intentos completos más antes de cambiar la ruta." }
+});
+
+Object.assign(coachGuides["zh-CN"], {
+  headAutonCode: { title: "改进自动代码", meaning: "自动结果不稳定，开局得分还不可靠。", proof: "{count} 场中自动获胜或打平 {successCount} 场（{rate}）。", steps: ["先固定当前代码，不要继续增加动作。", "从同一合法起点连续运行 10 次。", "记录每次最先失败的动作：定位、对准、拾取、放置或时序。", "修复最常见的失败，再加入正常电量和场地误差测试。", "至少 10 次成功 8 次后再增加复杂度。"], target: "在 10 场练习赛中至少 8 场赢下或打平自动。" },
+  headHoldAuton: { title: "把自动优势保持到比赛结束", meaning: "联盟经常赢下自动，但进入驾驶阶段后把领先交了回去。", proof: "{autonWins} 次自动获胜中有 {converted} 次转化为比赛胜利（{rate}）。", steps: ["复盘赢下自动却输掉比赛的记录。", "标出领先从哪里消失：得分速度、黄桩归属、Midfield 或未完成任务。", "赛前明确两台联盟机器人的第一个驾驶任务。", "从领先 12 分开始打练习赛，并在继续得分的同时守住优势。", "在比赛中段和终场都检查是否仍然领先。"], target: "接下来 10 次自动获胜中至少 7 次转化为比赛胜利。" },
+  headMidfield: { title: "把 Midfield 控制写进比赛计划", meaning: "控制 Midfield 时比赛结果更好，但目前还不够稳定。", proof: "控制 Midfield 时最终分差平均好 {swing} 分；控制率为 {rate}。", steps: ["赛前确定负责进入 Midfield 的机器人和备用机器人。", "在最后 10 秒前使用固定的驾驶队口令。", "从多个真实位置练习进入，包括直接路线被挡住时。", "练习选择一台进入、两台进入或保护已有得分。", "检查机器人数量和 Midfield 黄桩归属后再给练习计分。"], target: "10 场练习赛中至少 8 场完成计划中的 Midfield 结果。" },
+  headYellow: { title: "让更多已放置黄桩真正得分", meaning: "黄桩已经放置，但太多位于联盟最终没有控制的区域。", proof: "{placed} 个已放置黄桩中有 {scored} 个得分（{rate}），每场约有 {missedPoints} 分未拿到。", steps: ["找出损失黄桩价值最多的区域。", "决定该区域要保护、终场夺回，还是从路线中移除。", "黄桩已放置但 Toggle 未锁定时使用统一口令。", "把放黄桩和最终正确 Toggle 状态作为一个完整动作练习。", "每次练习最后检查归属，而不只是放置。"], target: "连续 10 场练习赛让至少 85% 的已放置黄桩得分。" },
+  headToggleZone: { title: "锁定{zone}区域的 Toggle", meaning: "{zone}区域最常出现黄桩已放置但联盟没有归属的情况。", proof: "该区域本时段共有 {missedPins} 个未得分黄桩，平均每场约 {missedPoints} 分。", steps: ["练习开始时先在{zone}区域放好黄桩。", "指定一台机器人在终场前检查并锁定该 Toggle。", "从两个最常见的位置练习接近。", "分别从中立和对手控制状态开始练习。", "最后确认该区域每个黄桩是否真正得分。"], target: "当该区域有黄桩价值时，10 次练习至少 8 次控制{zone} Toggle。" },
+  headEndgame: { title: "更稳定地执行 Endgame", meaning: "联盟有时进入最后阶段却没有完成赛前选择的 Midfield 结果。", proof: "{missedMatches} 场没有联盟机器人进入 Midfield，其中 {closeLosses} 场以不超过 16 分落败。", steps: ["赛前选择本场 Endgame 目标，不假设每场都用同一计划。", "指定主执行机器人和备用机器人。", "最后 10 秒前使用相同的时间口令。", "从畅通、受阻和错误侧位置练习。", "按是否完成所选计划评价，而不是强求两台机器人都进入。"], target: "10 场练习赛中至少 8 场完成所选 Endgame 计划。" },
+  headPins: { title: "得到更多红色和蓝色桩分", meaning: "控制表现已经较稳定，但获胜场次的联盟色桩明显更多。", proof: "胜场平均 {winningPins} 个联盟色桩，负场平均 {losingPins} 个，相差 {pinGap} 个。", steps: ["进行 30 秒限时桩得分练习。", "统计完整得分动作并找出时间损失。", "消除拾取、对准、移动或放置中的一个重复延迟。", "在完整比赛中测试更快动作，同时保持黄桩和 Endgame。", "只有总分稳定提高时才保留改变。"], target: "10 场练习赛中至少 8 场达到胜场的联盟色桩数量。" },
+  headNeedData: { title: "先保存更多比赛再选择训练重点", meaning: "目前证据不足，不能可靠地建议改变比赛策略。", proof: "此范围内已保存 {count} 场；至少需要 10 场。", steps: ["建立基准期间保持当前比赛计划。", "保存每场练习赛，包括失利和异常结果。", "准确记录自动、Toggle、桩和 Midfield。", "在所选范围内达到至少 10 场。", "回到分析查看第一个有证据支持的模式。"], target: "在此范围内再保存 {needed} 场完整比赛。" },
+  headNoSignal: { title: "继续保存完整的比赛数据", meaning: "目前没有一个弱点既频繁又代价足够高，值得改变训练。", proof: "已保存比赛中还没有足够可重复证据支持单一建议。", steps: ["下一组练习继续使用当前策略。", "保存所有比赛，不只保存最好或最差的。", "确认记录自动、桩、Toggle 和 Midfield。", "练习后按动作复盘失败。", "再有五场完整比赛后回来查看。"], target: "改变训练计划前再保存五场完整比赛。" },
+  skillsBalance: { title: "Skills 数据还不够", meaning: "可靠建议至少需要 5 次 Driver 和 5 次自动编程记录。", proof: "目前已保存：Driver {driverCount} 次，自动编程 {autonCount} 次。", steps: ["建立基准期间先保持当前路线。", "保存至少 5 次完整 Driver。", "保存至少 5 次完整自动编程。", "每次都保存，包括低分和失败。", "两组完成后再回到分析。"], target: "每种 Skills 类型保存 5 次有效记录。" },
+  skillsDriverRepeat: { title: "增加 Driver Skills 练习并提高稳定性", meaning: "最佳成绩说明路线有能力得分，但大多数尝试还没有达到它。", proof: "Driver 最佳 {best}，典型成绩 {median}，相差 {gap} 分。", steps: ["把一分钟路线分成三个计时检查点。", "不临时改变路线，连续运行五次。", "标记最先落后或失败的检查点。", "单独练习该段，再接回完整路线。", "当前路线稳定后再更改路线。"], target: "5 次 Driver 中至少 4 次达到最佳成绩的 90%。" },
+  skillsAutonRepeat: { title: "提高自动 Skills 代码的可靠性", meaning: "代码已经取得过好成绩，但还不能足够频繁地重复。", proof: "自动最佳 {best}，典型成绩 {median}，相差 {gap} 分。", steps: ["固定当前路线并运行代码五次。", "记录每次最先失败的编程动作。", "修复最常见失败后再增加动作。", "测试起点、电量和场地的正常误差。", "每次局部修复后重新运行完整代码。"], target: "5 次自动编程中至少 4 次达到最佳成绩的 90%。" },
+  skillsRouteGain: { title: "增加{route}练习次数", meaning: "{route}最佳成绩明显高于普通尝试，先稳定已有动作是最近的提升。", proof: "最佳 {best}，典型成绩 {median}，已有 {gap} 分可以追回。", steps: ["比较路线的典型成绩和最佳成绩。", "找出普通运行中消失的已成功动作。", "先追回这些得分，再延长路线。", "单独练习最弱检查点。", "用五次完整运行确认提升。"], target: "至少追回典型成绩与最佳成绩差距的一半。" },
+  skillsYellow: { title: "让更多已放置黄桩得分", meaning: "黄桩已放置，但终场时没有稳定满足 Toggle 或 Midfield 归属。", proof: "{placed} 个已放置黄桩中有 {scored} 个得分（{rate}），每次约有 {missedPoints} 分未拿到。", steps: ["找出损失黄桩分最多的区域。", "把放置和归属当作一个完整得分动作。", "在路线中加入 Toggle 状态检查点。", "故意把 Toggle 重置错误后测试路线。", "每次最后按归属计分，而不是只看放置。"], target: "连续五次让至少 90% 的已放置黄桩得分。" },
+  skillsCenter: { title: "更频繁地完成 Midfield 目标", meaning: "太多尝试结束时没有完成计划中的 Midfield 得分动作。", proof: "{count} 次中有 {completeCount} 次完成 Midfield（{rate}）。", steps: ["确定路线中开始优先 Midfield 的准确时间。", "从路线真实的前一个位置练习进入。", "预留时间，不依赖最后一秒。", "只有完整满足条件时才计算机器人和中心黄桩。", "如果仍不稳定，就缩短前面的路线。"], target: "10 次中至少 8 次完成计划中的 Midfield 终点。" },
+  skillsPlacement: { title: "不要把{color}桩放在不能得分的位置", meaning: "{zone}区域不能让这些{color}桩得分，这段路线耗时却不加分。", proof: "本时段有 {pins} 个{color}桩放在这里，平均每次约 {missedPoints} 分无效。", steps: ["先删除代价最高的错误区域放置。", "把桩送到最近的有效区域，或不做该动作。", "练习修正后的路线五次。", "确认更短或改向后的路线带来净得分。", "第一处修正稳定后再处理下一处。"], target: "至少 95% 的红蓝桩最终位于可以得分的区域。" },
+  skillsEventSet: { title: "为三次正式 Skills 尝试做好准备", meaning: "一次尝试很强，但第二高分落后太多，三次比赛机会还不可靠。", proof: "{route}最佳 {best}，第二高 {second}，下降 {gap} 分。", steps: ["准确模拟三次{route}运行。", "失败后不要重启。", "使用比赛中预期的维修和重置时间。", "记录每组最佳、第二和最低成绩。", "反复练习，直到一次失败不会毁掉整组。"], target: "连续三组中，每组至少两次达到该路线最佳成绩的 90%。" },
+  skillsCeiling: { title: "给稳定的{route}路线增加一个得分动作", meaning: "路线已经足够稳定，可以测试一个小的得分动作而不必重做路线。", proof: "{route}典型成绩 {median}，最佳 {best}；稳定性已经足够。", steps: ["把当前稳定路线保留为基准。", "在风险最低的位置增加一个得分动作。", "用五次新路线对比五次基准路线。", "只有典型成绩提高且低分没有明显下降时才保留。", "如果额外得分只出现一次，就删除该动作。"], target: "把典型成绩提高到 {target}，并让 5 次中至少 4 次达到新最佳的 90%。" },
+  skillsNoSignal: { title: "继续保存完整的 Skills 尝试", meaning: "已保存尝试还没有显示出足够稳定的单一弱点来改变路线。", proof: "更多完整 Driver 和自动尝试会让下一条建议更具体。", steps: ["下一组练习保持两条路线不变。", "保存每次完整尝试，包括失败。", "准确记录桩、Toggle 和 Midfield。", "每次尝试后复盘第一个失败动作。", "再完成五次后回到分析。"], target: "改变路线前再保存五次完整 Skills 尝试。" }
+});
+
 let currentLanguage = readLanguage();
 const initialProxyParam = new URLSearchParams(window.location.search).get("proxy");
 if (initialProxyParam) {
@@ -5242,74 +5541,114 @@ function scoreGapForGroups(positive, negative, getter) {
   return resultAverage(positive, getter) - resultAverage(negative, getter);
 }
 
-function rankedHeadRecommendation(matches) {
-  const fallback = headRecommendation(matches);
-  const stats = analysisScoreStats(matches, match => match.ourScore);
-  const wins = matches.filter(match => match.result === "win").length;
-  const winRate = percentRate(wins, matches.length);
-  const autonRate = percentRate(matches.filter(autonWon).length, matches.length);
-  const centerRate = percentRate(matches.filter(centerControlledByUs).length, matches.length);
-  const yellow = yellowEfficiencyValue(matches);
-  const floor = percentile(scoreGetterValues(matches, match => match.ourScore), .2);
-  const floorGap = Number.isFinite(stats.mean) && Number.isFinite(floor) ? stats.mean - floor : 0;
-  const margin = resultAverage(matches, scoreMargin);
-  const pinAverage = resultAverage(matches, ourAlliancePins);
-  const highYellow = matches.filter(match => numericValue(headYellowRate(match)) >= .8);
-  const lowYellow = matches.filter(match => numericValue(headYellowRate(match)) < .8);
-  const pinMedian = median(scoreGetterValues(matches, ourAlliancePins));
-  const candidates = [
-    { key: "auton", score: clampUnit((60 - autonRate) / 60) * .68 + clampUnit(Math.abs(scoreGapForGroups(matches.filter(autonWon), matches.filter(match => !autonWon(match)), match => match.ourScore)) / 55) * .32 },
-    { key: "center", score: clampUnit((65 - centerRate) / 65) * .68 + clampUnit(Math.abs(scoreGapForGroups(matches.filter(centerControlledByUs), matches.filter(match => !centerControlledByUs(match)), match => match.ourScore)) / 55) * .32 },
-    { key: "yellow", score: (Number.isFinite(yellow.rate) ? clampUnit((88 - yellow.rate) / 88) : 0) * .68 + clampUnit(Math.abs(scoreGapForGroups(highYellow, lowYellow, match => match.ourScore)) / 55) * .32 },
-    { key: "floor", score: clampUnit(floorGap / Math.max(numericValue(stats.mean) * .35, 20)) },
-    { key: "margin", score: clampUnit((55 - winRate) / 55) * .55 + clampUnit((8 - margin) / 45) * .45 },
-    { key: "ceiling", score: .08 + (Number.isFinite(pinAverage) ? clampUnit((14 - pinAverage) / 14) * .35 : 0) + clampUnit(Math.max(0, stats.best - stats.mean) / 100) * .2 }
-  ].sort((a, b) => b.score - a.score);
-  const key = candidates[0]?.key || fallback.key || "ceiling";
-  if (fallback.key === key) return fallback;
-  const missedAverage = resultAverage(matches, match => missedHeadPoints(match).total);
-  const catalog = {
-    auton: { key, title: t("analysis.story.head.auton.title"), why: t("analysis.story.head.auton.why"), proof: t("analysis.story.head.auton.proof", { rate: formatRate(autonRate), margin: formatAnalysisNumber(margin) }), target: t("analysis.story.head.auton.target") },
-    center: { key, title: t("analysis.story.head.center.title"), why: t("analysis.story.head.center.why"), proof: t("analysis.story.head.center.proof", { rate: formatRate(centerRate), missed: formatAnalysisNumber(missedAverage) }), target: t("analysis.story.head.center.target") },
-    yellow: { key, title: t("analysis.story.head.yellow.title"), why: t("analysis.story.head.yellow.why"), proof: t("analysis.story.head.yellow.proof", { scored: yellow.scored, placed: yellow.placed, rate: formatRate(yellow.rate) }), target: t("analysis.story.head.yellow.target") },
-    floor: { key, title: t("analysis.story.head.floor.title"), why: t("analysis.story.head.floor.why"), proof: t("analysis.story.head.floor.proof", { average: formatAnalysisNumber(stats.mean), floor: formatAnalysisNumber(floor) }), target: t("analysis.story.head.floor.target") },
-    margin: { key, title: t("analysis.story.head.margin.title"), why: t("analysis.story.head.margin.why"), proof: t("analysis.story.head.margin.proof", { rate: formatRate(winRate), margin: formatAnalysisNumber(margin) }), target: t("analysis.story.head.margin.target") },
-    ceiling: { key, title: t("analysis.story.head.ceiling.title"), why: t("analysis.story.head.ceiling.why"), proof: t("analysis.story.head.ceiling.proof", { average: formatAnalysisNumber(stats.mean), pins: formatAnalysisNumber(pinAverage) }), target: t("analysis.story.head.ceiling.target") }
+function coachRecommendationView(result, mode) {
+  const fallbackKey = mode === "head" ? "headNeedData" : "skillsBalance";
+  const key = result?.ready
+    ? result.key
+    : result?.reason === "noSignal"
+      ? mode === "head" ? "headNoSignal" : "skillsNoSignal"
+      : fallbackKey;
+  const guide = coachGuides[currentLanguage]?.[key] || coachGuides.en[key] || coachGuides.en[fallbackKey];
+  const evidence = result?.evidence || {};
+  const params = {
+    ...evidence,
+    count: result?.count ?? 0,
+    needed: result?.needed ?? 0,
+    rate: Number.isFinite(evidence.rate) ? formatRate(evidence.rate * 100) : "--",
+    swing: formatAnalysisNumber(evidence.marginSwing),
+    marginSwing: formatAnalysisNumber(evidence.marginSwing),
+    missedPoints: formatAnalysisNumber(evidence.missedPoints),
+    winningPins: formatAnalysisNumber(evidence.winningPins),
+    losingPins: formatAnalysisNumber(evidence.losingPins),
+    pinGap: formatAnalysisNumber(evidence.pinGap),
+    best: formatAnalysisNumber(evidence.best),
+    median: formatAnalysisNumber(evidence.median),
+    gap: formatAnalysisNumber(evidence.gap),
+    second: formatAnalysisNumber(evidence.second),
+    target: formatAnalysisNumber(evidence.target),
+    route: evidence.route ? t(`skills.${evidence.route}`) : "",
+    zone: evidence.zone ? t(`quadrant.${evidence.zone}`) : "",
+    color: evidence.color ? t(`color.${evidence.color}`).toLowerCase() : ""
   };
-  return catalog[key] || fallback;
+  const interpolate = text => String(text || "").replace(/\{(\w+)\}/g, (_, name) => params[name] ?? "");
+  const focusKeys = {
+    headAutonCode: "auton",
+    headHoldAuton: "auton",
+    headMidfield: "center",
+    headYellow: "yellow",
+    headToggleZone: "yellow",
+    headEndgame: "endgame",
+    headPins: "pins",
+    headNeedData: "review",
+    headNoSignal: "review",
+    skillsBalance: "balance",
+    skillsDriverRepeat: "driver",
+    skillsAutonRepeat: "auton",
+    skillsRouteGain: evidence.route || "driver",
+    skillsYellow: "yellow",
+    skillsCenter: "center",
+    skillsPlacement: "placement",
+    skillsEventSet: "eventSet",
+    skillsCeiling: "ceiling"
+  };
+  return {
+    key: focusKeys[key] || "review",
+    recommendationKey: key,
+    ready: Boolean(result?.ready),
+    confidence: result?.confidence || "early",
+    comparison: result?.comparison || null,
+    title: interpolate(guide.title),
+    why: interpolate(guide.meaning),
+    proof: interpolate(guide.proof),
+    target: interpolate(guide.target),
+    steps: guide.steps.map(interpolate)
+  };
+}
+
+function rankedHeadRecommendation(matches) {
+  const rows = matches.map(match => ({
+    score: numericValue(match.ourScore),
+    margin: scoreMargin(match),
+    result: match.result,
+    autonOutcome: autonWon(match) ? "win" : autonTied(match) ? "tie" : "loss",
+    centerControlled: Boolean(centerControlledByUs(match)),
+    ourMidfieldRobots: numericValue(ourMidfieldRobots(match)),
+    opponentMidfieldRobots: numericValue(opponentMidfieldRobots(match)),
+    yellowPlaced: yellowPins(match),
+    yellowOwned: numericValue(ownedYellowPins(match)),
+    opponentYellowOwned: numericValue(opponentOwnedYellowPins(match)),
+    alliancePins: numericValue(ourAlliancePins(match)),
+    opponentPins: numericValue(opponentAlliancePins(match)),
+    zoneMissedYellow: Object.fromEntries(["top", "right", "bottom", "left"].map(zone => [
+      zone,
+      Math.max(0, yellowPinsInQuadrant(match, zone) - ownedYellowPinsInQuadrant(match, zone))
+    ]))
+  }));
+  const result = globalThis.VexAnalysisCoach?.selectHeadRecommendation(rows);
+  return coachRecommendationView(result, "head");
 }
 
 function rankedSkillsRecommendation(runs) {
-  const fallback = skillsRecommendation(runs);
-  const driver = runs.filter(run => run.skillsType === "driver");
-  const auton = runs.filter(run => run.skillsType === "autonomous");
-  if (!driver.length || !auton.length) return { ...fallback, key: "balance" };
-  const stats = analysisScoreStats(runs, run => run.score);
-  const driverAverage = resultAverage(driver, run => run.score);
-  const autonAverage = resultAverage(auton, run => run.score);
-  const bestDriver = Math.max(...scoreGetterValues(driver, run => run.score));
-  const bestAuton = Math.max(...scoreGetterValues(auton, run => run.score));
-  const combined = bestDriver + bestAuton;
-  const recentDelta = Number.isFinite(stats.recentMean) && Number.isFinite(stats.mean) ? stats.recentMean - stats.mean : null;
-  const yellow = skillsYellowEfficiencyValue(runs);
-  const centerRate = percentRate(runs.filter(run => run.skills?.centerToggle).length, runs.length);
-  const candidates = [
-    { key: "driver", score: clampUnit((autonAverage - driverAverage) / 45) },
-    { key: "auton", score: clampUnit((driverAverage - autonAverage) / 45) },
-    { key: "yellow", score: Number.isFinite(yellow.rate) ? clampUnit((88 - yellow.rate) / 88) : 0 },
-    { key: "center", score: clampUnit((70 - centerRate) / 70) },
-    { key: "ceiling", score: .12 }
-  ].sort((a, b) => b.score - a.score);
-  const key = candidates[0]?.key || fallback.key || "ceiling";
-  if (fallback.key === key) return fallback;
-  const catalog = {
-    driver: { key, title: t("analysis.story.skills.driver.title"), why: t("analysis.story.skills.driver.why"), proof: t("analysis.story.skills.driver.proof", { driver: formatAnalysisNumber(driverAverage), auton: formatAnalysisNumber(autonAverage) }), target: t("analysis.story.skills.driver.target") },
-    auton: { key, title: t("analysis.story.skills.auton.title"), why: t("analysis.story.skills.auton.why"), proof: t("analysis.story.skills.auton.proof", { driver: formatAnalysisNumber(driverAverage), auton: formatAnalysisNumber(autonAverage) }), target: t("analysis.story.skills.auton.target") },
-    yellow: { key, title: t("analysis.story.skills.yellow.title"), why: t("analysis.story.skills.yellow.why"), proof: t("analysis.story.skills.yellow.proof", { scored: yellow.scored, placed: yellow.placed, rate: formatRate(yellow.rate) }), target: t("analysis.story.skills.yellow.target") },
-    center: { key, title: t("analysis.story.skills.center.title"), why: t("analysis.story.skills.center.why"), proof: t("analysis.story.skills.center.proof", { rate: formatRate(centerRate) }), target: t("analysis.story.skills.center.target") },
-    ceiling: { key, title: t("analysis.story.skills.ceiling.title"), why: t("analysis.story.skills.ceiling.why"), proof: t("analysis.story.skills.ceiling.proof", { combined: formatAnalysisNumber(combined), recent: signedNumber(recentDelta) }), target: t("analysis.story.skills.ceiling.target") }
+  const misplaced = (run, color, zone) => {
+    const scoresHere = color === "red"
+      ? ["left", "bottom", "center"].includes(zone)
+      : ["top", "right", "center"].includes(zone);
+    return scoresHere ? 0 : numericValue(run.skills?.quadrants?.[zone]?.[color]);
   };
-  return catalog[key] || fallback;
+  const rows = runs.map(run => ({
+    type: run.skillsType,
+    score: numericValue(run.score),
+    yellowPlaced: skillsYellowPins(run),
+    yellowScored: skillsScoredYellowPins(run),
+    centerComplete: Boolean(run.skills?.centerToggle),
+    centerPotentialPoints: POINTS.midfieldRobot + numericValue(run.skills?.quadrants?.center?.yellow) * POINTS.yellowPin,
+    misplacedPins: Object.fromEntries(["red", "blue"].map(color => [
+      color,
+      Object.fromEntries(skillsQuadrants.map(zone => [zone, misplaced(run, color, zone)]))
+    ]))
+  }));
+  const result = globalThis.VexAnalysisCoach?.selectSkillsRecommendation(rows);
+  return coachRecommendationView(result, "skills");
 }
 
 function replayPointFactor(mode, record, story) {
@@ -5327,7 +5666,7 @@ function replayPointFactor(mode, record, story) {
     const rate = headYellowRate(record);
     return `${t("analysis.story.mapYellows")}: ${formatRate(Number.isFinite(rate) ? rate * 100 : null)}`;
   }
-  if (story.key === "ceiling") return `${t("analysis.story.mapPins")}: ${formatAnalysisNumber(ourAlliancePins(record))}`;
+  if (story.key === "pins") return `${t("analysis.story.mapPins")}: ${formatAnalysisNumber(ourAlliancePins(record))}`;
   return `${t("analysis.story.mapMargin")}: ${signedNumber(scoreMargin(record))}`;
 }
 
@@ -5399,60 +5738,41 @@ function renderReplayTimeline(mode, records, getter, trajectory, story) {
 }
 
 function replayTurningData(mode, records, story) {
-  let positive = [];
-  let negative = [];
-  let positiveLabel = t("analysis.replay.whenWorking");
-  let negativeLabel = t("analysis.replay.whenMissing");
-  if (mode === "head") {
-    if (story.key === "auton") {
-      positive = records.filter(autonWon);
-      negative = records.filter(match => !autonWon(match));
-    } else if (story.key === "center") {
-      positive = records.filter(centerControlledByUs);
-      negative = records.filter(match => !centerControlledByUs(match));
-    } else if (story.key === "yellow") {
-      positive = records.filter(match => numericValue(headYellowRate(match)) >= .8);
-      negative = records.filter(match => numericValue(headYellowRate(match)) < .8);
-    } else if (story.key === "margin") {
-      positive = records.filter(match => match.result === "win");
-      negative = records.filter(match => match.result === "loss");
-      positiveLabel = t("history.result.win");
-      negativeLabel = t("history.result.loss");
-    } else {
-      const midpoint = median(scoreGetterValues(records, match => match.ourScore));
-      positive = records.filter(match => numericValue(match.ourScore) >= midpoint);
-      negative = records.filter(match => numericValue(match.ourScore) < midpoint);
-    }
-  } else if (["driver", "auton", "balance"].includes(story.key)) {
-    positive = records.filter(run => run.skillsType === "driver");
-    negative = records.filter(run => run.skillsType === "autonomous");
-    positiveLabel = t("skills.driver");
-    negativeLabel = t("skills.autonomous");
-  } else if (story.key === "yellow") {
-    positive = records.filter(run => numericValue(skillsYellowRate(run)) >= .8);
-    negative = records.filter(run => numericValue(skillsYellowRate(run)) < .8);
-  } else if (story.key === "center") {
-    positive = records.filter(run => run.skills?.centerToggle);
-    negative = records.filter(run => !run.skills?.centerToggle);
-  } else {
-    const midpoint = median(scoreGetterValues(records, run => run.score));
-    positive = records.filter(run => numericValue(run.score) >= midpoint);
-    negative = records.filter(run => numericValue(run.score) < midpoint);
-  }
-  if (!positive.length || !negative.length) {
-    const ordered = records.slice().sort((a, b) => recordTimestamp(a) - recordTimestamp(b));
-    const midpoint = Math.max(1, Math.floor(ordered.length / 2));
-    negative = ordered.slice(0, midpoint);
-    positive = ordered.slice(midpoint);
-  }
-  const getter = mode === "head" ? match => match.ourScore : run => run.score;
-  const withValue = resultAverage(positive, getter);
-  const withoutValue = resultAverage(negative, getter);
-  return { positiveLabel, negativeLabel, withValue, withoutValue, swing: withValue - withoutValue };
+  if (!story.comparison) return null;
+  const labels = {
+    autonSuccess: t("analysis.replay.whenWorking"),
+    autonFailure: t("analysis.replay.whenMissing"),
+    converted: t("analysis.replay.whenWorking"),
+    gaveBack: t("analysis.replay.whenMissing"),
+    centerOwned: t("analysis.replay.whenWorking"),
+    centerNotOwned: t("analysis.replay.whenMissing"),
+    yellowConverted: t("analysis.replay.whenWorking"),
+    yellowMissed: t("analysis.replay.whenMissing"),
+    zoneSecured: t("analysis.replay.whenWorking"),
+    zoneLost: t("analysis.replay.whenMissing"),
+    midfieldFinish: t("analysis.replay.whenWorking"),
+    noMidfieldFinish: t("analysis.replay.whenMissing"),
+    wins: t("history.result.win"),
+    losses: t("history.result.loss"),
+    centerComplete: t("analysis.replay.whenWorking"),
+    centerMissed: t("analysis.replay.whenMissing")
+  };
+  return {
+    positiveLabel: labels[story.comparison.positiveLabel] || t("analysis.replay.whenWorking"),
+    negativeLabel: labels[story.comparison.negativeLabel] || t("analysis.replay.whenMissing"),
+    withValue: story.comparison.positiveValue,
+    withoutValue: story.comparison.negativeValue,
+    swing: story.comparison.swing,
+    metric: story.comparison.metric
+  };
 }
 
 function renderReplayOpening(mode, records, story, trajectory) {
-  const confidence = replayConfidence(records.length);
+  const confidence = story.confidence === "strong"
+    ? { label: t("analysis.replay.confidenceStrong"), tone: "strong" }
+    : story.confidence === "developing"
+      ? { label: t("analysis.replay.confidenceDeveloping"), tone: "developing" }
+      : { label: t("analysis.replay.confidenceEarly"), tone: "early" };
   const team = profile?.teamName ? `${profile.teamNumber} ${profile.teamName}` : (profile?.teamNumber || "4330P");
   const count = countText(mode === "head" ? "analysis.matches" : "analysis.runs", records.length);
   return `
@@ -5480,7 +5800,22 @@ function renderReplayNav(mode) {
 
 function renderReplayTurning(mode, records, story) {
   const data = replayTurningData(mode, records, story);
-  const confidence = replayConfidence(records.length);
+  const confidence = story.confidence === "strong"
+    ? { label: t("analysis.replay.confidenceStrong"), tone: "strong" }
+    : story.confidence === "developing"
+      ? { label: t("analysis.replay.confidenceDeveloping"), tone: "developing" }
+      : { label: t("analysis.replay.confidenceEarly"), tone: "early" };
+  const metricLabel = data?.metric === "pins"
+    ? t("analysis.correlationOption.ourPins")
+    : data?.metric === "margin"
+      ? t("analysis.correlationOption.margin")
+      : t("analysis.replay.averageScoreShort");
+  const comparison = data ? `
+        <div class="replay-versus">
+          <div class="positive"><span>${escapeHtml(data.positiveLabel)}</span><strong>${escapeHtml(formatAnalysisNumber(data.withValue))}</strong><small>${escapeHtml(metricLabel)}</small></div>
+          <div class="replay-swing"><i></i><strong>${escapeHtml(t("analysis.replay.pointSwing", { value: formatAnalysisNumber(Math.abs(data.swing)) }))}</strong></div>
+          <div class="negative"><span>${escapeHtml(data.negativeLabel)}</span><strong>${escapeHtml(formatAnalysisNumber(data.withoutValue))}</strong><small>${escapeHtml(metricLabel)}</small></div>
+        </div>` : "";
   return `
     <section id="${mode}-turning" class="replay-chapter replay-turning replay-reveal" data-replay-mode="${mode}" data-replay-chapter="turning">
       <header class="replay-chapter-heading">
@@ -5492,11 +5827,7 @@ function renderReplayTurning(mode, records, story) {
         <span class="replay-confidence ${escapeHtml(confidence.tone)}">${escapeHtml(confidence.label)}</span>
         <h5>${escapeHtml(story.title)}</h5>
         <p>${escapeHtml(story.why)}</p>
-        <div class="replay-versus">
-          <div class="positive"><span>${escapeHtml(data.positiveLabel)}</span><strong>${escapeHtml(formatAnalysisNumber(data.withValue))}</strong><small>${escapeHtml(t("analysis.replay.averageScoreShort"))}</small></div>
-          <div class="replay-swing"><i></i><strong>${escapeHtml(t("analysis.replay.pointSwing", { value: formatAnalysisNumber(Math.abs(data.swing)) }))}</strong></div>
-          <div class="negative"><span>${escapeHtml(data.negativeLabel)}</span><strong>${escapeHtml(formatAnalysisNumber(data.withoutValue))}</strong><small>${escapeHtml(t("analysis.replay.averageScoreShort"))}</small></div>
-        </div>
+        ${comparison}
         <blockquote>${escapeHtml(story.proof)}</blockquote>
       </div>
     </section>`;
@@ -5540,7 +5871,7 @@ function headPracticeMissions(story) {
     { key: "floor", title: t("analysis.story.head.floor.title"), why: t("analysis.replay.missionHeadFloorWhy"), target: t("analysis.story.head.floor.target") },
     { key: "review", title: t("analysis.story.missionReview"), why: t("analysis.replay.missionHeadReviewWhy"), target: t("analysis.story.missionReviewDetail") }
   ];
-  const primary = { key: story.key, title: story.title, why: story.why, target: story.target };
+  const primary = { key: story.key, title: story.title, why: story.why, target: story.target, steps: story.steps };
   return [primary, ...pool.filter(item => item.key !== story.key)].slice(0, 3);
 }
 
@@ -5552,7 +5883,7 @@ function skillsPracticeMissions(story) {
     { key: "center", title: t("analysis.story.skills.center.title"), why: t("analysis.replay.missionSkillsCenterWhy"), target: t("analysis.story.skills.center.target") },
     { key: "review", title: t("analysis.story.missionReview"), why: t("analysis.replay.missionSkillsReviewWhy"), target: t("analysis.story.missionReviewDetail") }
   ];
-  const primary = { key: story.key, title: story.title, why: story.why, target: story.target };
+  const primary = { key: story.key, title: story.title, why: story.why, target: story.target, steps: story.steps };
   return [primary, ...pool.filter(item => item.key !== story.key)].slice(0, 3);
 }
 
@@ -5568,7 +5899,7 @@ function renderReplayPractice(mode, missions) {
         ${missions.map((mission, index) => `
           <li${index === 0 ? " class=\"primary\"" : ""}>
             <span>${String(index + 1).padStart(2, "0")}</span>
-            <div><h5>${escapeHtml(mission.title)}</h5><p><b>${escapeHtml(t("analysis.replay.whyItMatters"))}:</b> ${escapeHtml(mission.why)}</p><p><b>${escapeHtml(t("analysis.replay.successTarget"))}:</b> ${escapeHtml(mission.target)}</p></div>
+            <div><h5>${escapeHtml(mission.title)}</h5><p><b>${escapeHtml(t("analysis.replay.whyItMatters"))}:</b> ${escapeHtml(mission.why)}</p>${mission.steps ? `<ol class="replay-drill-steps">${mission.steps.map(step => `<li>${escapeHtml(step)}</li>`).join("")}</ol>` : ""}<p><b>${escapeHtml(t("analysis.replay.successTarget"))}:</b> ${escapeHtml(mission.target)}</p></div>
           </li>`).join("")}
       </ol>
     </section>`;
