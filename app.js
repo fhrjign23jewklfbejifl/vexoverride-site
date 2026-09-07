@@ -15,7 +15,7 @@ const JUDGE_MATCH_STORE_KEY = "vexOverrideJudgeMatches:v1";
 const JUDGE_PROFILE_STORE_KEY = "vexOverrideJudgeProfile:v1";
 const JUDGE_COMPETITION_STORE_KEY = "vexOverrideJudgeCompetitionData:v1";
 const JUDGE_DATASET_VERSION_STORE_KEY = "vexOverrideJudgeDatasetVersion:v1";
-const JUDGE_DATASET_VERSION = "4330p-season-replay-20260907-v2";
+const JUDGE_DATASET_VERSION = "4330p-season-replay-20260907-v3";
 const PROXY_URL_STORE_KEY = "vexOverrideDataProxyUrl:v1";
 const SEASON_SKILLS_STORE_KEY = "vexOverrideSeasonSkills:v1";
 const LANGUAGE_STORE_KEY = "vexOverrideLanguage:v1";
@@ -128,6 +128,8 @@ const translations = {
     "banner.team": "Team",
     "banner.matches": "Matches",
     "banner.record": "Record",
+    "judge.practiceMatches": "Practice matches",
+    "judge.practiceRecord": "Practice record",
     "language.label": "Language",
     "language.aria": "Language",
     "tabs.head": "Head-on-head",
@@ -423,6 +425,10 @@ const translations = {
     "analysis.replay.trajectoryKicker": "Chapter 1",
     "analysis.replay.trajectoryTitle": "How the season moved",
     "analysis.replay.trajectoryDetail": "Follow the scores from the first saved record to the most recent one.",
+    "analysis.replay.legendDots": "Dots: saved scores",
+    "analysis.replay.legendTrend": "Line: 5-match trend",
+    "analysis.replay.legendRecent": "Shaded: latest 5",
+    "analysis.replay.recentBand": "Latest 5",
     "analysis.replay.startingLevel": "Starting level",
     "analysis.replay.currentLevel": "Current level",
     "analysis.replay.biggestTurn": "Biggest turn",
@@ -709,6 +715,8 @@ Object.assign(translations.es, {
   "banner.team": "Equipo",
   "banner.matches": "Partidos",
   "banner.record": "Récord",
+  "judge.practiceMatches": "Partidos de práctica",
+  "judge.practiceRecord": "Récord de práctica",
   "language.label": "Idioma",
   "language.aria": "Idioma",
   "tabs.head": "Frente a frente",
@@ -1004,6 +1012,10 @@ Object.assign(translations.es, {
   "analysis.replay.trajectoryKicker": "Capítulo 1",
   "analysis.replay.trajectoryTitle": "Cómo se movió la temporada",
   "analysis.replay.trajectoryDetail": "Sigue los puntajes desde el primer registro guardado hasta el más reciente.",
+  "analysis.replay.legendDots": "Puntos: resultados guardados",
+  "analysis.replay.legendTrend": "Línea: tendencia de 5 partidos",
+  "analysis.replay.legendRecent": "Sombreado: últimos 5",
+  "analysis.replay.recentBand": "Últimos 5",
   "analysis.replay.startingLevel": "Nivel inicial",
   "analysis.replay.currentLevel": "Nivel actual",
   "analysis.replay.biggestTurn": "Mayor giro",
@@ -1287,6 +1299,8 @@ Object.assign(translations["zh-CN"], {
   "banner.team": "队伍",
   "banner.matches": "比赛",
   "banner.record": "战绩",
+  "judge.practiceMatches": "练习赛",
+  "judge.practiceRecord": "练习赛战绩",
   "language.label": "语言",
   "language.aria": "语言",
   "tabs.head": "对抗赛",
@@ -1582,6 +1596,10 @@ Object.assign(translations["zh-CN"], {
   "analysis.replay.trajectoryKicker": "第一章",
   "analysis.replay.trajectoryTitle": "赛季如何变化",
   "analysis.replay.trajectoryDetail": "从第一条保存记录看到最近一条记录。",
+  "analysis.replay.legendDots": "圆点：已保存分数",
+  "analysis.replay.legendTrend": "线条：最近 5 场趋势",
+  "analysis.replay.legendRecent": "阴影：最近 5 场",
+  "analysis.replay.recentBand": "最近 5 场",
   "analysis.replay.startingLevel": "起点水平",
   "analysis.replay.currentLevel": "当前水平",
   "analysis.replay.biggestTurn": "最大转折",
@@ -2412,6 +2430,8 @@ function renderBanner() {
   const team = $("[data-banner-team]");
   const count = $("[data-banner-matches]");
   const record = $("[data-banner-record]");
+  const countLabel = $("[data-banner-matches-label]");
+  const recordLabel = $("[data-banner-record-label]");
   if (!team || !count || !record) return;
 
   const matches = savedMatches().filter(isHeadMatch);
@@ -2419,6 +2439,8 @@ function renderBanner() {
   team.textContent = profile?.teamName ? `${profile.teamNumber} ${profile.teamName}` : (profile?.teamNumber || "4330P");
   count.textContent = String(matches.length);
   record.textContent = `${summary.wins}-${summary.losses}-${summary.ties}`;
+  if (countLabel) countLabel.textContent = t(isJudgeMode ? "judge.practiceMatches" : "banner.matches");
+  if (recordLabel) recordLabel.textContent = t(isJudgeMode ? "judge.practiceRecord" : "banner.record");
 }
 
 function competitionLocation(event) {
@@ -4230,36 +4252,58 @@ function buildVerifiedSkillsScenario(scenario, trajectoryProfile, random) {
 function createJudgeHeadCandidate(salt) {
   const count = 50;
   const random = createDevRandom(433000 + salt);
-  const preparedLosses = new Set([2, 3, 6, 9, 12, 15, 18, 24, 27, 30, 33, 36, 39, 45, 48]);
+  const preparedLosses = new Set([2, 5, 6, 9, 13, 15, 18, 22, 24, 27, 31, 34, 38, 43, 47]);
+  const preparedAutonTies = new Set([4, 17, 32, 46]);
   return Array.from({ length: count }, (_, index) => {
     const seed = sampleHeadSeed(index, count, "headHoldAuton", "recovery", salt);
     const isPreparedDraw = index === 29;
-    ["top", "right", "bottom", "left"].forEach((zone) => {
-      seed[`${zone}Y`] = 0;
-    });
-    if (!isPreparedDraw) {
-      const ourColor = seed.teamAlliance === "red" ? "R" : "B";
-      const opponentColor = seed.teamAlliance === "red" ? "B" : "R";
-      ["top", "right", "bottom", "left"].forEach((zone) => {
-        const ourPins = seed[`${zone}${ourColor}`];
-        seed[`${zone}${opponentColor}`] = preparedLosses.has(index)
-          ? ourPins + 3
-          : Math.max(0, ourPins - 2);
+    const progress = index / (count - 1);
+    const form = sampleTrajectoryForm(progress, "recovery", .5);
+    const variance = Math.round((seededRandom(salt + index * 11.7) - .5) * 3);
+    const ourOuterTotal = Math.max(16, Math.round(18 + form * 16) + variance);
+    const ourColor = seed.teamAlliance === "red" ? "R" : "B";
+    const opponentColor = seed.teamAlliance === "red" ? "B" : "R";
+    const allianceName = seed.teamAlliance;
+    const distributePins = (total, color) => {
+      const zones = ["top", "right", "bottom", "left"];
+      const base = Math.floor(total / zones.length);
+      const remainder = total % zones.length;
+      zones.forEach((zone, zoneIndex) => {
+        seed[`${zone}${color}`] = base + (zoneIndex < remainder ? 1 : 0);
       });
+    };
+
+    seed.auton = isPreparedDraw || preparedAutonTies.has(index) ? "tie" : allianceName;
+    seed.redRobots = 1;
+    seed.blueRobots = 1;
+    seed.centerY = 0;
+    seed.centerR = 2;
+    seed.centerB = 2;
+    ["top", "right", "bottom", "left"].forEach((zone, zoneIndex) => {
+      seed[`${zone}Toggle`] = allianceName;
+      seed[`${zone}Y`] = zoneIndex === 0 || (zoneIndex === 1 && index % 4 === 0) ? 1 : 0;
+    });
+
+    if (!isPreparedDraw) {
+      const autonAdvantage = seed.auton === allianceName ? POINTS.auton : 0;
+      const yellowAdvantage = ["top", "right", "bottom", "left"]
+        .reduce((total, zone) => total + seed[`${zone}Y`] * POINTS.yellowPin, 0);
+      const baseAdvantage = autonAdvantage + yellowAdvantage;
+      const targetMargin = 5 * (1 + (index % 4));
+      const opponentOuterTotal = preparedLosses.has(index)
+        ? ourOuterTotal + Math.ceil((baseAdvantage + targetMargin) / POINTS.alliancePin)
+        : Math.max(4, ourOuterTotal - (2 + (index % 5)));
+      distributePins(ourOuterTotal, ourColor);
+      distributePins(opponentOuterTotal, opponentColor);
+    } else {
+      distributePins(ourOuterTotal, ourColor);
+      distributePins(ourOuterTotal, opponentColor);
     }
     if (isPreparedDraw) {
-      seed.auton = "tie";
-      seed.redRobots = 1;
-      seed.blueRobots = 1;
       ["top", "right", "bottom", "left"].forEach((zone) => {
         seed[`${zone}Toggle`] = "neutral";
         seed[`${zone}Y`] = 0;
-        seed[`${zone}R`] = 4;
-        seed[`${zone}B`] = 4;
       });
-      seed.centerY = 0;
-      seed.centerR = 2;
-      seed.centerB = 2;
     }
     return {
       ...createSampleHeadRecord(seed, random()),
@@ -6219,6 +6263,13 @@ function replayPointFactor(mode, record, story) {
   return `${t("analysis.story.mapMargin")}: ${signedNumber(scoreMargin(record))}`;
 }
 
+function trailingAverageValues(values, windowSize = 5) {
+  return values.map((_, index) => {
+    const start = Math.max(0, index - windowSize + 1);
+    return average(values.slice(start, index + 1));
+  });
+}
+
 function renderReplayTimeline(mode, records, getter, trajectory, story) {
   const ordered = records.slice().sort((a, b) => recordTimestamp(a) - recordTimestamp(b));
   const points = ordered.map(record => numericValue(getter(record)));
@@ -6235,10 +6286,14 @@ function renderReplayTimeline(mode, records, getter, trajectory, story) {
   const step = points.length === 1 ? 0 : (width - padX * 2) / (points.length - 1);
   const yFor = score => height - padY - ((score - min) / range) * (height - padY * 2);
   const coordinates = points.map((score, index) => ({ x: padX + index * step, y: yFor(score), score }));
-  const pointString = coordinates.map(point => `${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(" ");
+  const trendPoints = trailingAverageValues(points);
+  const trendCoordinates = trendPoints.map((score, index) => ({ x: coordinates[index].x, y: yFor(score), score }));
+  const trendString = trendCoordinates.map(point => `${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(" ");
   const recentStart = Math.max(0, points.length - 5);
-  const recentString = coordinates.slice(recentStart).map(point => `${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(" ");
-  const areaString = `${padX},${height - padY} ${pointString} ${coordinates.at(-1)?.x || padX},${height - padY}`;
+  const recentBandStart = Math.max(padX, coordinates[recentStart].x - step / 2);
+  const recentBandEnd = Math.min(width - padX, coordinates.at(-1).x + step / 2);
+  const recentBandWidth = Math.max(0, recentBandEnd - recentBandStart);
+  const areaString = `${padX},${height - padY} ${trendString} ${trendCoordinates.at(-1)?.x || padX},${height - padY}`;
   const averageLine = average(points);
   const averageY = yFor(averageLine);
   const turningX = coordinates[trajectory.turning.index]?.x || padX;
@@ -6269,13 +6324,19 @@ function renderReplayTimeline(mode, records, getter, trajectory, story) {
               <stop offset="1" stop-color="#66d9d0" stop-opacity="0"></stop>
             </linearGradient>
           </defs>
+          <rect class="replay-recent-band" x="${recentBandStart.toFixed(1)}" y="${padY}" width="${recentBandWidth.toFixed(1)}" height="${height - padY * 2}"></rect>
+          <text class="replay-recent-label" x="${(recentBandStart + 8).toFixed(1)}" y="${padY + 18}">${escapeHtml(t("analysis.replay.recentBand"))}</text>
           <line class="replay-chart-grid" x1="${padX}" y1="${averageY.toFixed(1)}" x2="${width - padX}" y2="${averageY.toFixed(1)}"></line>
           <line class="replay-turn-line" x1="${turningX.toFixed(1)}" y1="${padY}" x2="${turningX.toFixed(1)}" y2="${height - padY}"></line>
           <polygon class="replay-chart-area" points="${areaString}" fill="url(#${mode}-replay-area)"></polygon>
-          <polyline class="replay-chart-line" pathLength="1" points="${pointString}"></polyline>
-          ${recentString.includes(" ") ? `<polyline class="replay-chart-recent" pathLength="1" points="${recentString}"></polyline>` : ""}
+          <polyline class="replay-chart-line" pathLength="1" points="${trendString}"></polyline>
           ${dots}
         </svg>
+        <div class="replay-chart-legend" aria-label="${escapeHtml(t("analysis.scoreTrend"))}">
+          <span><i class="dots"></i>${escapeHtml(t("analysis.replay.legendDots"))}</span>
+          <span><i class="trend"></i>${escapeHtml(t("analysis.replay.legendTrend"))}</span>
+          <span><i class="recent"></i>${escapeHtml(t("analysis.replay.legendRecent"))}</span>
+        </div>
         <p class="replay-point-readout" data-replay-point-readout>${escapeHtml(t("analysis.replay.pointHint"))}</p>
       </div>
       <dl class="replay-trajectory-markers">
@@ -6338,12 +6399,14 @@ function renderReplayOpening(mode, records, story, trajectory) {
 }
 
 function renderReplayNav(mode) {
+  const route = `${window.location.pathname}${window.location.search}`;
+  const chapterHref = chapter => `${route}#${mode}-${chapter}`;
   return `
     <nav class="replay-chapter-nav" data-replay-nav="${mode}" aria-label="${escapeHtml(t("analysis.replay.title"))}">
-      <a href="#${mode}-trajectory" aria-current="step"><span>01</span>${escapeHtml(t("analysis.replay.chapterTrajectory"))}</a>
-      <a href="#${mode}-turning"><span>02</span>${escapeHtml(t("analysis.replay.chapterTurning"))}</a>
-      <a href="#${mode}-anatomy"><span>03</span>${escapeHtml(t("analysis.replay.chapterAnatomy"))}</a>
-      <a href="#${mode}-practice"><span>04</span>${escapeHtml(t("analysis.replay.chapterPractice"))}</a>
+      <a href="${escapeHtml(chapterHref("trajectory"))}" aria-current="step"><span>01</span>${escapeHtml(t("analysis.replay.chapterTrajectory"))}</a>
+      <a href="${escapeHtml(chapterHref("turning"))}"><span>02</span>${escapeHtml(t("analysis.replay.chapterTurning"))}</a>
+      <a href="${escapeHtml(chapterHref("anatomy"))}"><span>03</span>${escapeHtml(t("analysis.replay.chapterAnatomy"))}</a>
+      <a href="${escapeHtml(chapterHref("practice"))}"><span>04</span>${escapeHtml(t("analysis.replay.chapterPractice"))}</a>
     </nav>`;
 }
 

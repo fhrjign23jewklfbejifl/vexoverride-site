@@ -376,8 +376,7 @@ body.analysis-active .score-app {
   transition: opacity .8s ease .45s;
 }
 
-.replay-chart-line,
-.replay-chart-recent {
+.replay-chart-line {
   fill: none;
   stroke: #66d9d0;
   stroke-width: 4;
@@ -386,12 +385,21 @@ body.analysis-active .score-app {
   vector-effect: non-scaling-stroke;
   stroke-dasharray: 1;
   stroke-dashoffset: 1;
+  filter: drop-shadow(0 0 5px rgba(102, 217, 208, .3));
 }
 
-.replay-chart-recent {
-  stroke: #84f15e;
-  stroke-width: 7;
-  filter: drop-shadow(0 0 8px rgba(132, 241, 94, .48));
+.replay-recent-band {
+  fill: rgba(132, 241, 94, .065);
+  stroke: rgba(132, 241, 94, .2);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.replay-recent-label {
+  fill: #a8d89a;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0;
 }
 
 .replay-chart-point {
@@ -447,7 +455,7 @@ body.analysis-active .score-app {
 
 .replay-chart-point.recent .replay-point-ring {
   stroke-width: 4;
-  filter: drop-shadow(0 0 9px rgba(132, 241, 94, .75));
+  filter: drop-shadow(0 0 7px rgba(255, 255, 255, .42));
 }
 
 .replay-chart-point:hover .replay-point-ring,
@@ -463,6 +471,48 @@ body.analysis-active .score-app {
   font-size: 14px;
   font-weight: 700;
   text-align: center;
+}
+
+.replay-chart-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 18px;
+  margin-top: 8px;
+  color: #8faab2;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.replay-chart-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.replay-chart-legend i {
+  width: 18px;
+  height: 8px;
+  display: inline-block;
+}
+
+.replay-chart-legend .dots {
+  width: 8px;
+  border: 2px solid #84f15e;
+  border-radius: 50%;
+  background: #0b171d;
+}
+
+.replay-chart-legend .trend {
+  height: 3px;
+  border-radius: 2px;
+  background: #66d9d0;
+  box-shadow: 0 0 5px rgba(102, 217, 208, .34);
+}
+
+.replay-chart-legend .recent {
+  border: 1px solid rgba(132, 241, 94, .28);
+  background: rgba(132, 241, 94, .1);
 }
 
 .replay-trajectory-markers {
@@ -992,8 +1042,7 @@ body.analysis-active .score-app {
   transform: translateY(0);
 }
 
-.replay-reveal.is-visible .replay-chart-line,
-.replay-reveal.is-visible .replay-chart-recent {
+.replay-reveal.is-visible .replay-chart-line {
   animation: replay-line-draw 1.25s cubic-bezier(.2, .8, .2, 1) .18s forwards;
 }
 
@@ -1223,8 +1272,7 @@ body.analysis-active .score-app {
     animation: none;
   }
 
-  .replay-chart-line,
-  .replay-chart-recent {
+  .replay-chart-line {
     stroke-dashoffset: 0;
     animation: none !important;
   }
