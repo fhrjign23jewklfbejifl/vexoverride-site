@@ -1577,6 +1577,39 @@ body.analysis-active .score-app {
   pointer-events: none;
 }
 
+.judge-notice {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 1px solid rgba(102, 217, 208, .24);
+  border-radius: var(--radius-sm);
+  color: #d9eeee;
+  background: rgba(21, 72, 72, .28);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.judge-notice[hidden] {
+  display: none;
+}
+
+.judge-notice > span {
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(102, 217, 208, .48);
+  border-radius: 50%;
+  color: #8de5dc;
+  font-weight: 900;
+}
+
+.judge-notice p {
+  margin: 0;
+}
+
 .analysis-card > * {
   position: relative;
   z-index: 1;
@@ -2658,6 +2691,86 @@ body.analysis-active .score-app {
     linear-gradient(145deg, rgba(255, 255, 255, .060), rgba(255, 255, 255, .026)),
     rgba(17, 28, 35, .66);
   box-shadow: var(--soft-shadow);
+}
+
+.judge-team-card {
+  display: grid;
+  gap: 16px;
+  padding: 18px;
+  border: 1px solid rgba(132, 241, 94, .32);
+  border-radius: var(--radius-sm);
+  background:
+    linear-gradient(110deg, rgba(132, 241, 94, .12), transparent 48%),
+    rgba(13, 30, 34, .82);
+  box-shadow: inset 4px 0 0 rgba(132, 241, 94, .78), var(--soft-shadow);
+}
+
+.judge-team-card[hidden] {
+  display: none;
+}
+
+.judge-team-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 16px;
+}
+
+.judge-team-heading h2 {
+  margin: 2px 0 0;
+  color: var(--white);
+  font-size: clamp(26px, 3.5vw, 42px);
+  line-height: 1;
+}
+
+.judge-team-heading p {
+  margin: 6px 0 0;
+  color: #a9bdc2;
+  font-size: 13px;
+}
+
+.judge-team-verified {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(132, 241, 94, .42);
+  border-radius: 50%;
+  color: #102018;
+  background: #84f15e;
+  font-size: 22px;
+  font-weight: 1000;
+}
+
+.judge-team-facts {
+  display: grid;
+  grid-template-columns: .75fr 1.4fr 1.15fr .75fr;
+  gap: 8px;
+  margin: 0;
+}
+
+.judge-team-facts div {
+  min-width: 0;
+  display: grid;
+  align-content: start;
+  gap: 3px;
+  padding: 10px 12px;
+  border-top: 1px solid rgba(255, 255, 255, .13);
+}
+
+.judge-team-facts dt {
+  color: #83b9bd;
+  font-size: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.judge-team-facts dd {
+  margin: 0;
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 800;
+  overflow-wrap: anywhere;
 }
 
 .competition-head,
@@ -4974,6 +5087,10 @@ body.modal-open {
     grid-template-columns: 1fr;
   }
 
+  .judge-team-facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .competition-source,
   .competition-current-head strong,
   .analysis-pill {
@@ -5214,6 +5331,22 @@ body.modal-open {
 
   .brand-stat strong {
     font-size: 15px;
+  }
+
+  .judge-notice {
+    align-items: flex-start;
+  }
+
+  .judge-team-card {
+    padding: 15px;
+  }
+
+  .judge-team-heading h2 {
+    font-size: 28px;
+  }
+
+  .judge-team-facts {
+    grid-template-columns: 1fr;
   }
 
   .competition-data,

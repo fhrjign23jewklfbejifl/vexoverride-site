@@ -13,7 +13,8 @@
     "vex:import-bundle": "node scripts/vex-save-clipboard.mjs --bundle",
     "vex:copy-collector": "node scripts/vex-copy-collector.mjs",
     "vex:headers-help": "node scripts/vex-event-updater.mjs --headers-help",
-    "check": "node --check analysis-coach.js && node --check app.js && node --check scripts/vex-event-updater.mjs && node --check scripts/vex-save-clipboard.mjs && node --check scripts/vex-copy-collector.mjs && node --check scripts/vex-browser-collector.js && node scripts/analysis-coach-tests.mjs"
+    "sync:judge": "node scripts/sync-judge-page.mjs",
+    "check": "node --check analysis-coach.js && node --check app.js && node --check scripts/vex-event-updater.mjs && node --check scripts/vex-save-clipboard.mjs && node --check scripts/vex-copy-collector.mjs && node --check scripts/vex-browser-collector.js && node --check scripts/sync-judge-page.mjs && node scripts/sync-judge-page.mjs --check && node scripts/analysis-coach-tests.mjs"
   },
   "devDependencies": {
     "playwright": "^1.54.2"

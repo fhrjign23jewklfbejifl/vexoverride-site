@@ -11,6 +11,11 @@ const POINTS = {
 const MATCH_STORE_KEY = "vexOverrideMatches:v1";
 const PROFILE_STORE_KEY = "vexOverrideProfile:v1";
 const COMPETITION_STORE_KEY = "vexOverrideCompetitionData:v1";
+const JUDGE_MATCH_STORE_KEY = "vexOverrideJudgeMatches:v1";
+const JUDGE_PROFILE_STORE_KEY = "vexOverrideJudgeProfile:v1";
+const JUDGE_COMPETITION_STORE_KEY = "vexOverrideJudgeCompetitionData:v1";
+const JUDGE_DATASET_VERSION_STORE_KEY = "vexOverrideJudgeDatasetVersion:v1";
+const JUDGE_DATASET_VERSION = "4330p-season-replay-20260907-v1";
 const PROXY_URL_STORE_KEY = "vexOverrideDataProxyUrl:v1";
 const SEASON_SKILLS_STORE_KEY = "vexOverrideSeasonSkills:v1";
 const LANGUAGE_STORE_KEY = "vexOverrideLanguage:v1";
@@ -52,7 +57,9 @@ const skillsState = {
 
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];
-const isDevMode = new URLSearchParams(window.location.search).get("dev") === "1" || window.location.hash === "#dev";
+const normalizedPagePath = window.location.pathname.replace(/\/+$/, "") || "/";
+const isJudgeMode = normalizedPagePath === "/judge";
+const isDevMode = !isJudgeMode && (new URLSearchParams(window.location.search).get("dev") === "1" || window.location.hash === "#dev");
 let profile = loadProfile();
 let activeMode = "head";
 let analysisRange = "all";
@@ -90,6 +97,9 @@ let expandedTeamSkillId = null;
 let expandedCompetitionTeam = null;
 let seasonSkillsIndex = null;
 let seasonSkillsPromise = null;
+let judgeTeamIdentity = null;
+let judgeSkillsLookupComplete = false;
+let judgeScoutingPromise = null;
 let lastModalFocus = null;
 let toastTimer = null;
 const REGION_MATCH_KEY = "__matching_regions__";
@@ -452,6 +462,15 @@ const translations = {
     "analysis.replay.missionSkillsCenterWhy": "A reliable center checkpoint prevents late route value from disappearing.",
     "analysis.replay.missionSkillsReviewWhy": "Paired runs show whether Driver and Autonomous are improving together.",
     "scouting.skillsKicker": "Official Skills standings",
+    "judge.notice": "Prepared sample data for 4330P RoboPigeons is loaded to save review time.",
+    "judge.identityKicker": "Recognized team",
+    "judge.identitySource": "Team details verified from synced VEX event data",
+    "judge.robot": "Robot",
+    "judge.organization": "Organization",
+    "judge.location": "Location",
+    "judge.officialSkills": "Official Override Skills",
+    "judge.officialSkillsPending": "No official Override Skills score has been posted for 4330P yet.",
+    "judge.officialSkillsFound": "Official Override Skills results for 4330P are shown below.",
     "scouting.teamSkillsTitle": "Team Skills Search",
     "scouting.teamSkillsDescription": "Search teams from the public VEX V5RC Override Skills standings.",
     "scouting.teamSearch": "Team search",
@@ -1024,6 +1043,15 @@ Object.assign(translations.es, {
   "analysis.replay.missionSkillsCenterWhy": "Un punto de control central fiable evita perder valor al final de la ruta.",
   "analysis.replay.missionSkillsReviewWhy": "Intentos emparejados muestran si Driver y Autónomo mejoran juntos.",
   "scouting.skillsKicker": "Clasificación oficial de Skills",
+  "judge.notice": "Se cargaron datos de muestra preparados para 4330P RoboPigeons para ahorrar tiempo de revisión.",
+  "judge.identityKicker": "Equipo reconocido",
+  "judge.identitySource": "Datos del equipo verificados con eventos VEX sincronizados",
+  "judge.robot": "Robot",
+  "judge.organization": "Organización",
+  "judge.location": "Ubicación",
+  "judge.officialSkills": "Skills oficiales de Override",
+  "judge.officialSkillsPending": "Todavía no se ha publicado un puntaje oficial de Override Skills para 4330P.",
+  "judge.officialSkillsFound": "Los resultados oficiales de Override Skills para 4330P aparecen abajo.",
   "scouting.teamSkillsTitle": "Búsqueda de Skills por equipo",
   "scouting.teamSkillsDescription": "Busca equipos en la clasificación pública VEX V5RC Override Skills.",
   "scouting.teamSearch": "Buscar equipo",
@@ -1593,6 +1621,15 @@ Object.assign(translations["zh-CN"], {
   "analysis.replay.missionSkillsCenterWhy": "稳定的中心检查点能避免路线后段丢分。",
   "analysis.replay.missionSkillsReviewWhy": "成对记录能显示 Driver 和自动技能是否同步进步。",
   "scouting.skillsKicker": "官方技能赛排名",
+  "judge.notice": "已加载为 4330P RoboPigeons 准备的示例数据，以节省查看时间。",
+  "judge.identityKicker": "已识别队伍",
+  "judge.identitySource": "队伍信息已通过同步的 VEX 赛事数据验证",
+  "judge.robot": "机器人",
+  "judge.organization": "组织",
+  "judge.location": "地点",
+  "judge.officialSkills": "官方 Override 技能赛",
+  "judge.officialSkillsPending": "4330P 尚未发布官方 Override 技能赛成绩。",
+  "judge.officialSkillsFound": "4330P 的官方 Override 技能赛成绩如下。",
   "scouting.teamSkillsTitle": "队伍技能赛搜索",
   "scouting.teamSkillsDescription": "搜索公开 VEX V5RC Override 技能赛排名中的队伍。",
   "scouting.teamSearch": "搜索队伍",
@@ -2176,6 +2213,8 @@ function setLanguage(language) {
   renderCompetitionFilters();
   renderCompetitionResults(competitionSearchResults);
   renderTeamSkillsResults(teamSkillsResults);
+  renderJudgeTeamIdentity();
+  renderJudgeOfficialSkillsState();
   renderAnalysis();
   renderImportedCompetition();
 }
@@ -2309,9 +2348,21 @@ function autonText() {
   return "No autonomous bonus selected.";
 }
 
+function activeMatchStoreKey() {
+  return isJudgeMode ? JUDGE_MATCH_STORE_KEY : MATCH_STORE_KEY;
+}
+
+function activeProfileStoreKey() {
+  return isJudgeMode ? JUDGE_PROFILE_STORE_KEY : PROFILE_STORE_KEY;
+}
+
+function activeCompetitionStoreKey() {
+  return isJudgeMode ? JUDGE_COMPETITION_STORE_KEY : COMPETITION_STORE_KEY;
+}
+
 function savedMatches() {
   try {
-    const matches = JSON.parse(localStorage.getItem(MATCH_STORE_KEY));
+    const matches = JSON.parse(localStorage.getItem(activeMatchStoreKey()));
     return Array.isArray(matches) ? matches : [];
   } catch {
     return [];
@@ -2319,12 +2370,12 @@ function savedMatches() {
 }
 
 function writeSavedMatches(matches) {
-  localStorage.setItem(MATCH_STORE_KEY, JSON.stringify(matches));
+  localStorage.setItem(activeMatchStoreKey(), JSON.stringify(matches));
 }
 
 function loadCompetitionData() {
   try {
-    const saved = JSON.parse(localStorage.getItem(COMPETITION_STORE_KEY));
+    const saved = JSON.parse(localStorage.getItem(activeCompetitionStoreKey()));
     return saved && typeof saved === "object" ? saved : null;
   } catch {
     return null;
@@ -2332,7 +2383,7 @@ function loadCompetitionData() {
 }
 
 function writeCompetitionData(competition) {
-  localStorage.setItem(COMPETITION_STORE_KEY, JSON.stringify(competition));
+  localStorage.setItem(activeCompetitionStoreKey(), JSON.stringify(competition));
   importedCompetition = competition;
 }
 
@@ -2874,7 +2925,9 @@ function renderTeamSkillsResults(rows = []) {
 function loadCachedSeasonSkills() {
   try {
     const cached = JSON.parse(localStorage.getItem(SEASON_SKILLS_STORE_KEY));
-    if (cached && Array.isArray(cached.skills)) return cached.skills;
+    const cachedAt = new Date(cached?.cachedAt || 0).getTime();
+    const freshForSixHours = Number.isFinite(cachedAt) && Date.now() - cachedAt < 6 * 60 * 60 * 1000;
+    if (cached && Array.isArray(cached.skills) && freshForSixHours) return cached.skills;
   } catch {
     return null;
   }
@@ -2956,6 +3009,74 @@ async function searchTeamSkills(query) {
     : t("scouting.noTeams"),
     teamSkillsResults.length ? "ready" : "warn"
   );
+}
+
+function renderJudgeTeamIdentity() {
+  const card = $("[data-judge-team-card]");
+  if (!card) return;
+  card.hidden = !isJudgeMode;
+  if (!isJudgeMode) return;
+
+  const team = judgeTeamIdentity;
+  if (!team) {
+    card.innerHTML = `<p>${escapeHtml(t("scouting.loadingCompetitions"))}</p>`;
+    return;
+  }
+
+  card.innerHTML = `
+    <div class="judge-team-heading">
+      <div>
+        <span class="brand-kicker">${escapeHtml(t("judge.identityKicker"))}</span>
+        <h2>${escapeHtml(team.teamNumber)} ${escapeHtml(team.teamName)}</h2>
+        <p>${escapeHtml(t("judge.identitySource"))}</p>
+      </div>
+      <span class="judge-team-verified" aria-hidden="true">✓</span>
+    </div>
+    <dl class="judge-team-facts">
+      <div><dt>${escapeHtml(t("judge.robot"))}</dt><dd>${escapeHtml(team.robotName || t("common.notListed"))}</dd></div>
+      <div><dt>${escapeHtml(t("judge.organization"))}</dt><dd>${escapeHtml(team.organization || t("common.notListed"))}</dd></div>
+      <div><dt>${escapeHtml(t("judge.location"))}</dt><dd>${escapeHtml(team.location || t("common.notListed"))}</dd></div>
+      <div><dt>${escapeHtml(t("judge.officialSkills"))}</dt><dd>${escapeHtml(teamSkillsResults.length ? seasonSkillTotal(teamSkillsResults[0]) : "--")}</dd></div>
+    </dl>`;
+}
+
+function renderJudgeOfficialSkillsState() {
+  if (!isJudgeMode || !judgeSkillsLookupComplete) return;
+  if (teamSkillsResults.length) {
+    setTeamSkillsStatus(t("judge.officialSkillsFound"), "ready");
+    return;
+  }
+  const results = $("[data-team-skills-results]");
+  if (results) {
+    results.hidden = false;
+    results.innerHTML = `<p class="competition-empty">${escapeHtml(t("judge.officialSkillsPending"))}</p>`;
+  }
+  setTeamSkillsStatus(t("judge.officialSkillsPending"), "ready");
+}
+
+async function initializeJudgeScouting() {
+  if (!isJudgeMode) return;
+  if (judgeScoutingPromise) return judgeScoutingPromise;
+  judgeScoutingPromise = (async () => {
+    await ensureSyncedTeamIndex();
+    const entry = (syncedTeamIndex?.byTeam.get("4330P") || []).find(item => item.team?.teamName === "RoboPigeons")
+      || (syncedTeamIndex?.byTeam.get("4330P") || [])[0];
+    judgeTeamIdentity = entry?.team || null;
+    renderJudgeTeamIdentity();
+    renderMyCompetitions();
+
+    const input = $("[data-team-skills-search-form] input[name='teamSkillsSearch']");
+    if (input) input.value = "4330P";
+    try {
+      await searchTeamSkills("4330P");
+      judgeSkillsLookupComplete = true;
+      renderJudgeOfficialSkillsState();
+      renderJudgeTeamIdentity();
+    } catch (error) {
+      setTeamSkillsStatus(error.message || t("scouting.skillsError"), "warn");
+    }
+  })();
+  return judgeScoutingPromise;
 }
 
 async function ensureSyncedTeamIndex() {
@@ -3462,7 +3583,7 @@ function capitalize(value) {
 
 function loadProfile() {
   try {
-    const saved = JSON.parse(localStorage.getItem(PROFILE_STORE_KEY));
+    const saved = JSON.parse(localStorage.getItem(activeProfileStoreKey()));
     if (saved && typeof saved.teamNumber === "string" && saved.teamNumber.trim()) {
       return {
         teamNumber: saved.teamNumber.trim(),
@@ -3484,7 +3605,7 @@ function saveProfile(teamNumber, teamName = "", teamSource = "") {
     teamSource,
     createdAt: new Date().toISOString()
   };
-  localStorage.setItem(PROFILE_STORE_KEY, JSON.stringify(nextProfile));
+  localStorage.setItem(activeProfileStoreKey(), JSON.stringify(nextProfile));
   profile = nextProfile;
   return nextProfile;
 }
@@ -4102,6 +4223,118 @@ function buildVerifiedSkillsScenario(scenario, trajectoryProfile, random) {
   return { records, selected: rankedSkillsRecommendation(records), verified: false };
 }
 
+function createJudgeHeadCandidate(salt) {
+  const count = 50;
+  const random = createDevRandom(433000 + salt);
+  return Array.from({ length: count }, (_, index) => {
+    const seed = sampleHeadSeed(index, count, "headToggleZone", "recovery", salt);
+    if ([12, 29, 44].includes(index)) {
+      seed.auton = "tie";
+      seed.redRobots = 1;
+      seed.blueRobots = 1;
+      ["top", "right", "bottom", "left"].forEach((zone) => {
+        seed[`${zone}Toggle`] = "neutral";
+        seed[`${zone}Y`] = 0;
+        seed[`${zone}R`] = 4;
+        seed[`${zone}B`] = 4;
+      });
+      seed.centerY = 0;
+      seed.centerR = 2;
+      seed.centerB = 2;
+    }
+    return {
+      ...createSampleHeadRecord(seed, random()),
+      recordSource: "prepared-practice"
+    };
+  });
+}
+
+function createJudgeSkillsCandidate(salt) {
+  const random = createDevRandom(433100 + salt);
+  const driverCount = 18;
+  const autonCount = 12;
+  return [
+    ...Array.from({ length: driverCount }, (_, index) => ({
+      ...createSampleSkillsRecord(
+        sampleSkillsSeed(index, driverCount, "driver", "skillsDriverRepeat", "recovery", salt),
+        random()
+      ),
+      recordSource: "prepared-practice"
+    })),
+    ...Array.from({ length: autonCount }, (_, index) => ({
+      ...createSampleSkillsRecord(
+        sampleSkillsSeed(index, autonCount, "autonomous", "skillsDriverRepeat", "recovery", salt + 137),
+        random()
+      ),
+      recordSource: "prepared-practice"
+    }))
+  ];
+}
+
+function buildJudgeDataset() {
+  let headFallback = null;
+  for (let salt = 4330; salt < 4530; salt += 1) {
+    const records = createJudgeHeadCandidate(salt);
+    const recommendation = rankedHeadRecommendation(records);
+    const trajectory = classifySavedTrajectory(records, record => record.ourScore);
+    const outcomes = new Set(records.map(record => record.result));
+    const candidate = { records, recommendation, trajectory };
+    if (!headFallback && recommendation.recommendationKey === "headToggleZone") headFallback = candidate;
+    if (recommendation.recommendationKey === "headToggleZone"
+      && trajectory.shape === "recovery"
+      && ["win", "loss", "tie"].every(outcome => outcomes.has(outcome))) {
+      headFallback = candidate;
+      break;
+    }
+  }
+
+  let skillsFallback = null;
+  for (let salt = 7330; salt < 7530; salt += 1) {
+    const records = createJudgeSkillsCandidate(salt);
+    const recommendation = rankedSkillsRecommendation(records);
+    const candidate = { records, recommendation };
+    if (!skillsFallback) skillsFallback = candidate;
+    if (recommendation.recommendationKey === "skillsDriverRepeat") {
+      skillsFallback = candidate;
+      break;
+    }
+  }
+
+  if (!headFallback || !skillsFallback
+    || headFallback.recommendation.recommendationKey !== "headToggleZone"
+    || skillsFallback.recommendation.recommendationKey !== "skillsDriverRepeat") {
+    throw new Error("Prepared judge dataset did not validate against the recommendation engine.");
+  }
+
+  return [
+    ...headFallback.records.map(record => ({ ...record, id: record.id.replace(/^dev-/, "judge-sample-") })),
+    ...skillsFallback.records.map(record => ({ ...record, id: record.id.replace(/^dev-/, "judge-sample-") }))
+  ];
+}
+
+function initializeJudgeWorkspace() {
+  if (!isJudgeMode) return;
+  document.body.classList.add("judge-mode");
+  const notice = $("[data-judge-notice]");
+  if (notice) notice.hidden = false;
+
+  const previousProfile = loadProfile();
+  profile = {
+    teamNumber: "4330P",
+    teamName: "RoboPigeons",
+    teamSource: "synced-events",
+    createdAt: previousProfile?.createdAt || new Date().toISOString()
+  };
+  localStorage.setItem(JUDGE_PROFILE_STORE_KEY, JSON.stringify(profile));
+
+  if (localStorage.getItem(JUDGE_DATASET_VERSION_STORE_KEY) !== JUDGE_DATASET_VERSION) {
+    localStorage.setItem(JUDGE_MATCH_STORE_KEY, JSON.stringify(buildJudgeDataset()));
+    localStorage.removeItem(JUDGE_COMPETITION_STORE_KEY);
+    localStorage.setItem(JUDGE_DATASET_VERSION_STORE_KEY, JUDGE_DATASET_VERSION);
+  }
+  importedCompetition = loadCompetitionData();
+}
+
 function devRecommendationLabel(key) {
   const guide = coachGuides[currentLanguage]?.[key] || coachGuides.en[key];
   return String(guide?.title || key || "--")
@@ -4306,7 +4539,7 @@ function closeSetupModal() {
 }
 
 function initializeProfileGate() {
-  if (!profile) {
+  if (!profile && !isJudgeMode) {
     openSetupModal();
   }
 }
@@ -7124,6 +7357,7 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+initializeJudgeWorkspace();
 applyI18n();
 buildCounters();
 renderMode();
@@ -7133,5 +7367,5 @@ renderHistory();
 renderSkillsHistory();
 renderAnalysis();
 renderImportedCompetition();
-ensureSyncedEventsLoaded();
+ensureSyncedEventsLoaded().then(() => initializeJudgeScouting()).catch(() => {});
 initializeProfileGate();
