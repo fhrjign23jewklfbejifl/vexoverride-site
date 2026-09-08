@@ -361,54 +361,67 @@ body.analysis-active .score-app {
   background-size: 44px 44px;
 }
 
+.replay-chart-scroll {
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-color: rgba(102, 217, 208, .45) rgba(255, 255, 255, .04);
+}
+
 .replay-chart {
   width: 100%;
-  height: clamp(310px, 36vw, 470px);
+  height: auto;
+  aspect-ratio: 1000 / 420;
   display: block;
   overflow: visible;
 }
 
-.replay-chart-grid {
-  stroke: rgba(255, 255, 255, .22);
-  stroke-width: 1.5;
-  stroke-dasharray: 8 9;
+.replay-score-guide {
+  stroke: rgba(209, 228, 233, .17);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
 }
 
-.replay-turn-line {
-  stroke: rgba(255, 209, 102, .5);
-  stroke-width: 1.5;
-  stroke-dasharray: 4 8;
+.replay-axis,
+.replay-axis-tick {
+  stroke: rgba(209, 228, 233, .58);
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
 }
 
-.replay-chart-area {
-  opacity: 0;
-  transition: opacity .8s ease .45s;
+.replay-axis-label,
+.replay-axis-title,
+.replay-recent-bracket-label {
+  fill: #9eb6bd;
+  font-size: 13px;
+  font-weight: 750;
+  letter-spacing: 0;
+}
+
+.replay-axis-title {
+  fill: #c8d8dc;
+  font-size: 14px;
 }
 
 .replay-chart-line {
   fill: none;
-  stroke: #66d9d0;
-  stroke-width: 4;
+  stroke: rgba(226, 235, 238, .72);
+  stroke-width: 2.25;
   stroke-linecap: round;
   stroke-linejoin: round;
   vector-effect: non-scaling-stroke;
   stroke-dasharray: 1;
   stroke-dashoffset: 1;
-  filter: drop-shadow(0 0 5px rgba(102, 217, 208, .3));
 }
 
-.replay-recent-band {
-  fill: rgba(132, 241, 94, .065);
-  stroke: rgba(132, 241, 94, .2);
-  stroke-width: 1;
+.replay-recent-bracket {
+  fill: none;
+  stroke: rgba(132, 241, 94, .78);
+  stroke-width: 1.5;
   vector-effect: non-scaling-stroke;
 }
 
-.replay-recent-label {
-  fill: #a8d89a;
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 0;
+.replay-recent-bracket-label {
+  fill: #b9ecaa;
 }
 
 .replay-chart-point {
@@ -462,11 +475,6 @@ body.analysis-active .score-app {
   fill: #ffd166;
 }
 
-.replay-chart-point.recent .replay-point-ring {
-  stroke-width: 4;
-  filter: drop-shadow(0 0 7px rgba(255, 255, 255, .42));
-}
-
 .replay-chart-point:hover .replay-point-ring,
 .replay-chart-point:focus .replay-point-ring {
   fill: rgba(255, 255, 255, .14);
@@ -515,279 +523,14 @@ body.analysis-active .score-app {
 .replay-chart-legend .trend {
   height: 3px;
   border-radius: 2px;
-  background: #66d9d0;
-  box-shadow: 0 0 5px rgba(102, 217, 208, .34);
+  background: rgba(226, 235, 238, .72);
 }
 
 .replay-chart-legend .recent {
-  border: 1px solid rgba(132, 241, 94, .28);
-  background: rgba(132, 241, 94, .1);
-}
-
-.graph-prototype-sampler {
-  display: grid;
-  gap: 36px;
-  padding: clamp(56px, 7vw, 96px) clamp(20px, 5vw, 72px);
-  border-bottom: 1px solid rgba(255, 255, 255, .09);
-  background: #09151b;
-}
-
-.graph-prototype-sampler > header {
-  display: grid;
-  gap: 9px;
-  max-width: 860px;
-}
-
-.graph-prototype-sampler > header > span {
-  color: #66d9d0;
-  font-size: 13px;
-  font-weight: 850;
-}
-
-.graph-prototype-sampler > header h4 {
-  margin: 0;
-  color: var(--white);
-  font-size: clamp(30px, 3.5vw, 52px);
-  line-height: 1.05;
-}
-
-.graph-prototype-sampler > header p,
-.graph-prototype-sampler > header small {
-  margin: 0;
-  color: #a9c0c8;
-  font-size: 15px;
-  line-height: 1.5;
-}
-
-.graph-prototype-sampler > header small {
-  color: #7f9aa3;
-  font-size: 13px;
-}
-
-.graph-prototype-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 36px 28px;
-}
-
-.graph-prototype-group {
-  display: grid;
-  gap: 18px;
-}
-
-.graph-prototype-group-title {
-  margin: 0;
-  padding-bottom: 10px;
-  border-bottom: 1px solid rgba(102, 217, 208, .32);
-  color: #cde5ea;
-  font-size: 15px;
-  font-weight: 850;
-}
-
-.graph-prototype {
-  min-width: 0;
-  padding-top: 18px;
-  border-top: 1px solid rgba(255, 255, 255, .16);
-}
-
-.graph-prototype-heading {
-  min-height: 92px;
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  align-items: start;
-  gap: 13px;
-  padding: 0 4px 14px;
-}
-
-.graph-prototype-heading > span {
-  color: #66d9d0;
-  font-size: 13px;
-  font-weight: 900;
-}
-
-.graph-prototype-heading h5,
-.graph-prototype-heading p {
-  margin: 0;
-}
-
-.graph-prototype-heading h5 {
-  color: var(--white);
-  font-size: 20px;
-  line-height: 1.2;
-}
-
-.graph-prototype-heading p {
-  margin-top: 5px;
-  color: #8faab2;
-  font-size: 13px;
-  line-height: 1.4;
-}
-
-.graph-prototype-chart-shell {
-  padding: 8px 8px 10px;
-  background-size: 34px 34px;
-  overflow-x: auto;
-}
-
-.graph-prototype-chart {
-  width: 100%;
-  aspect-ratio: 720 / 300;
-  display: block;
-  overflow: visible;
-}
-
-.graph-prototype-chart .replay-chart-point {
-  opacity: 1;
-}
-
-.graph-prototype-chart .replay-point-ring {
-  stroke-width: 1.8;
-}
-
-.graph-prototype-axis,
-.graph-prototype-tick {
-  stroke: rgba(209, 228, 233, .48);
-  stroke-width: 1;
-  vector-effect: non-scaling-stroke;
-}
-
-.graph-prototype-gridline {
-  stroke: rgba(209, 228, 233, .11);
-  stroke-width: 1;
-  vector-effect: non-scaling-stroke;
-}
-
-.graph-prototype-tick-label,
-.graph-prototype-axis-title,
-.graph-prototype-bracket-label,
-.graph-prototype-reference-label {
-  fill: #9eb6bd;
-  font-size: 11px;
-  font-weight: 750;
-  letter-spacing: 0;
-}
-
-.graph-prototype-axis-title {
-  fill: #c2d3d8;
-  font-size: 12px;
-}
-
-.graph-prototype-recent-band {
-  fill: rgba(132, 241, 94, .055);
-  stroke: rgba(132, 241, 94, .17);
-  stroke-width: 1;
-  vector-effect: non-scaling-stroke;
-}
-
-.graph-prototype-line {
-  fill: none;
-  stroke: #66d9d0;
-  stroke-width: 3;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  vector-effect: non-scaling-stroke;
-}
-
-.graph-prototype-line.exact {
-  stroke-width: 2;
-  opacity: .82;
-}
-
-.graph-prototype-line.recent-glow,
-.graph-prototype-line.recent-path {
-  stroke: #84f15e;
-  stroke-width: 3.5;
-  opacity: 1;
-  filter: drop-shadow(0 0 6px rgba(132, 241, 94, .5));
-}
-
-.graph-prototype-line.quiet-history {
-  opacity: .22;
-}
-
-.graph-prototype-line.neutral {
-  stroke: rgba(226, 235, 238, .7);
-  stroke-width: 2;
-}
-
-.graph-prototype-fill {
-  stroke: none;
-}
-
-.graph-prototype-fill.full-fill {
-  fill: rgba(102, 217, 208, .1);
-}
-
-.graph-prototype-fill.recent-fill {
-  fill: rgba(132, 241, 94, .13);
-}
-
-.graph-prototype-result-segment {
-  stroke-width: 2.5;
-  stroke-linecap: round;
-  vector-effect: non-scaling-stroke;
-}
-
-.graph-prototype-result-segment.win {
-  stroke: #84f15e;
-}
-
-.graph-prototype-result-segment.loss {
-  stroke: #ff6f7d;
-}
-
-.graph-prototype-result-segment.tie,
-.graph-prototype-result-segment.saved {
-  stroke: #ffd166;
-}
-
-.graph-prototype-bracket {
-  fill: none;
-  stroke: rgba(132, 241, 94, .75);
-  stroke-width: 1.5;
-  vector-effect: non-scaling-stroke;
-}
-
-.graph-prototype-bracket-label {
-  fill: #b9ecaa;
-}
-
-.graph-prototype-reference {
-  stroke-width: 1.5;
-  stroke-dasharray: 6 6;
-  vector-effect: non-scaling-stroke;
-}
-
-.graph-prototype-reference.season {
-  stroke: rgba(255, 255, 255, .58);
-}
-
-.graph-prototype-reference.recent {
-  stroke: rgba(132, 241, 94, .9);
-}
-
-.graph-prototype-reference-label.season {
-  fill: #d4dfe2;
-}
-
-.graph-prototype-reference-label.recent {
-  fill: #b9f1a5;
-}
-
-.graph-prototype-chart .prototype-point.recent-glow-point .replay-point-ring {
-  stroke-width: 3.4;
-  filter: drop-shadow(0 0 7px rgba(132, 241, 94, .66));
-}
-
-.graph-prototype-chart .prototype-point.quiet-point {
-  opacity: .24;
-}
-
-.graph-prototype .replay-point-readout {
-  min-height: 42px;
-  margin-inline: 6px;
-  font-size: 12px;
-  line-height: 1.35;
+  height: 6px;
+  border-right: 1px solid rgba(132, 241, 94, .75);
+  border-bottom: 2px solid rgba(132, 241, 94, .75);
+  border-left: 1px solid rgba(132, 241, 94, .75);
 }
 
 .replay-trajectory-markers {
@@ -1321,10 +1064,6 @@ body.analysis-active .score-app {
   animation: replay-line-draw 1.25s cubic-bezier(.2, .8, .2, 1) .18s forwards;
 }
 
-.replay-reveal.is-visible .replay-chart-area {
-  opacity: 1;
-}
-
 .replay-reveal.is-visible .replay-chart-point {
   animation: replay-point-arrive .42s ease .72s forwards;
 }
@@ -1381,10 +1120,6 @@ body.analysis-active .score-app {
 
   .replay-chapter {
     min-height: auto;
-  }
-
-  .graph-prototype-grid {
-    grid-template-columns: 1fr;
   }
 
   .replay-phase-sequence {
@@ -1471,25 +1206,13 @@ body.analysis-active .score-app {
     padding: 64px 20px;
   }
 
-  .graph-prototype-sampler {
-    padding: 48px 16px;
-  }
-
-  .graph-prototype-heading {
-    grid-template-columns: auto minmax(0, 1fr);
-  }
-
-  .graph-prototype-chart {
-    width: 620px;
+  .replay-chart {
+    width: 760px;
     max-width: none;
   }
 
   .replay-chart-shell {
     padding: 8px 4px 12px;
-  }
-
-  .replay-chart {
-    height: 300px;
   }
 
   .replay-trajectory-markers,
@@ -1553,7 +1276,6 @@ body.analysis-active .score-app {
 
 @media (prefers-reduced-motion: reduce) {
   .replay-reveal,
-  .replay-chart-area,
   .replay-chart-point {
     opacity: 1;
     transform: none;

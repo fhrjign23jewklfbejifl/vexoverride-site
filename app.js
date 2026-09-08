@@ -69,7 +69,6 @@ const analysisDisclosureState = {
   skills: { evidence: false, correlation: false }
 };
 let replayObserver = null;
-let graphPrototypeDataset = null;
 let devAutofillState = loadDevAutofillState();
 let lastDevHeadRecommendation = devAutofillState.headRecommendation || "";
 let lastDevSkillsRecommendation = devAutofillState.skillsRecommendation || "";
@@ -433,9 +432,13 @@ const translations = {
     "analysis.replay.trajectoryDetail": "Follow the scores from the first saved record to the most recent one.",
     "analysis.replay.legendDots": "Dots: your alliance's final score",
     "analysis.replay.legendSkillsDots": "Dots: saved Skills scores",
-    "analysis.replay.legendTrend": "Line: 5-match trend",
-    "analysis.replay.legendRecent": "Shaded: latest 5",
-    "analysis.replay.recentBand": "Latest 5",
+    "analysis.replay.legendTrend": "Line: exact saved-score path",
+    "analysis.replay.legendRecent": "Bracket: latest {count}",
+    "analysis.replay.axisHeadX": "Practice match number",
+    "analysis.replay.axisHeadY": "Our alliance final score (points)",
+    "analysis.replay.axisSkillsX": "Practice run number",
+    "analysis.replay.axisSkillsY": "Skills run score (points)",
+    "analysis.replay.latestBracket": "Latest {count}",
     "analysis.replay.startingLevel": "Starting level",
     "analysis.replay.currentLevel": "Current level",
     "analysis.replay.biggestTurn": "Biggest turn",
@@ -458,43 +461,6 @@ const translations = {
     "analysis.replay.noSkillsData": "Save Driver and Autonomous Skills runs to build your route story.",
     "analysis.replay.pointHint": "Hover or focus a point to read that record.",
     "analysis.replay.dateTurn": "{date}, a {value}-point change",
-    "analysis.prototype.kicker": "Dev graph sampler",
-    "analysis.prototype.title": "Choose the exact-score graph",
-    "analysis.prototype.detail": "Twelve views of the same 50 prepared matches. Every path connects the same exact alliance scores.",
-    "analysis.prototype.hint": "Green is a win, coral is a loss, and gold is a draw. Latest five always means matches 46–50.",
-    "analysis.prototype.group.axes": "Axes",
-    "analysis.prototype.group.recent": "Latest Five",
-    "analysis.prototype.group.emphasis": "Fill and Emphasis",
-    "analysis.prototype.group.context": "Context",
-    "analysis.prototype.axisX": "Practice match number",
-    "analysis.prototype.axisY": "Our alliance final score (points)",
-    "analysis.prototype.latestFive": "Latest five",
-    "analysis.prototype.seasonAverage": "Season average",
-    "analysis.prototype.recentAverage": "Latest-five average",
-    "analysis.prototype.clean.title": "Clean Path",
-    "analysis.prototype.clean.detail": "Only the exact cyan path and result-colored dots.",
-    "analysis.prototype.axes.title": "Labeled Axes",
-    "analysis.prototype.axes.detail": "Add sparse match-number and alliance-score axes.",
-    "analysis.prototype.grid.title": "Score Grid",
-    "analysis.prototype.grid.detail": "Add horizontal score guides to the labeled axes.",
-    "analysis.prototype.recentBand.title": "Recent Band",
-    "analysis.prototype.recentBand.detail": "Shade the background behind matches 46–50.",
-    "analysis.prototype.recentGlow.title": "Recent Glow",
-    "analysis.prototype.recentGlow.detail": "Brighten the final path and enlarge the latest-five dots.",
-    "analysis.prototype.recentBracket.title": "Recent Bracket",
-    "analysis.prototype.recentBracket.detail": "Label the latest five beneath the x-axis without shading.",
-    "analysis.prototype.fullFill.title": "Full Area Fill",
-    "analysis.prototype.fullFill.detail": "Lightly fill beneath the complete exact-score path.",
-    "analysis.prototype.recentFill.title": "Recent Area Fill",
-    "analysis.prototype.recentFill.detail": "Fill only beneath the exact path for matches 46–50.",
-    "analysis.prototype.quiet.title": "Quiet History",
-    "analysis.prototype.quiet.detail": "Fade earlier results so the latest five command attention.",
-    "analysis.prototype.resultPath.title": "Result-Colored Path",
-    "analysis.prototype.resultPath.detail": "Color each segment by the result of the match it reaches.",
-    "analysis.prototype.neutral.title": "Neutral Path",
-    "analysis.prototype.neutral.detail": "Use a quiet neutral line so result colors carry the story.",
-    "analysis.prototype.averages.title": "Average Context",
-    "analysis.prototype.averages.detail": "Compare the exact path with season and latest-five averages.",
     "analysis.replay.missionHeadAutonWhy": "A repeatable opening removes the first pressure point from every match.",
     "analysis.replay.missionHeadCenterWhy": "Center control protects robot points and legal yellow scoring late.",
     "analysis.replay.missionHeadYellowWhy": "Placed yellows only matter when ownership makes them score.",
@@ -1053,9 +1019,13 @@ Object.assign(translations.es, {
   "analysis.replay.trajectoryDetail": "Sigue los puntajes desde el primer registro guardado hasta el más reciente.",
   "analysis.replay.legendDots": "Puntos: puntaje final de tu alianza",
   "analysis.replay.legendSkillsDots": "Puntos: puntajes de Skills guardados",
-  "analysis.replay.legendTrend": "Línea: tendencia de 5 partidos",
-  "analysis.replay.legendRecent": "Sombreado: últimos 5",
-  "analysis.replay.recentBand": "Últimos 5",
+  "analysis.replay.legendTrend": "Línea: ruta exacta de puntajes guardados",
+  "analysis.replay.legendRecent": "Corchete: últimos {count}",
+  "analysis.replay.axisHeadX": "Número de partido de práctica",
+  "analysis.replay.axisHeadY": "Puntaje final de nuestra alianza (puntos)",
+  "analysis.replay.axisSkillsX": "Número de intento de práctica",
+  "analysis.replay.axisSkillsY": "Puntaje del intento de Skills (puntos)",
+  "analysis.replay.latestBracket": "Últimos {count}",
   "analysis.replay.startingLevel": "Nivel inicial",
   "analysis.replay.currentLevel": "Nivel actual",
   "analysis.replay.biggestTurn": "Mayor giro",
@@ -1078,43 +1048,6 @@ Object.assign(translations.es, {
   "analysis.replay.noSkillsData": "Guarda intentos Driver y Autónomo para construir la historia de tu ruta.",
   "analysis.replay.pointHint": "Pasa el cursor o enfoca un punto para leer ese registro.",
   "analysis.replay.dateTurn": "{date}, un cambio de {value} puntos",
-  "analysis.prototype.kicker": "Muestra de gráficas para desarrollo",
-  "analysis.prototype.title": "Elige la gráfica de puntajes exactos",
-  "analysis.prototype.detail": "Doce vistas de los mismos 50 partidos preparados. Cada ruta conecta exactamente los mismos puntajes de alianza.",
-  "analysis.prototype.hint": "Verde es victoria, coral es derrota y dorado es empate. Los últimos cinco siempre son los partidos 46–50.",
-  "analysis.prototype.group.axes": "Ejes",
-  "analysis.prototype.group.recent": "Últimos cinco",
-  "analysis.prototype.group.emphasis": "Relleno y énfasis",
-  "analysis.prototype.group.context": "Contexto",
-  "analysis.prototype.axisX": "Número de partido de práctica",
-  "analysis.prototype.axisY": "Puntaje final de nuestra alianza (puntos)",
-  "analysis.prototype.latestFive": "Últimos cinco",
-  "analysis.prototype.seasonAverage": "Promedio de temporada",
-  "analysis.prototype.recentAverage": "Promedio de los últimos cinco",
-  "analysis.prototype.clean.title": "Ruta limpia",
-  "analysis.prototype.clean.detail": "Solo la ruta exacta en cian y los puntos coloreados por resultado.",
-  "analysis.prototype.axes.title": "Ejes etiquetados",
-  "analysis.prototype.axes.detail": "Añade ejes simples para número de partido y puntaje de alianza.",
-  "analysis.prototype.grid.title": "Cuadrícula de puntaje",
-  "analysis.prototype.grid.detail": "Añade guías horizontales de puntaje a los ejes etiquetados.",
-  "analysis.prototype.recentBand.title": "Banda reciente",
-  "analysis.prototype.recentBand.detail": "Sombrea el fondo detrás de los partidos 46–50.",
-  "analysis.prototype.recentGlow.title": "Brillo reciente",
-  "analysis.prototype.recentGlow.detail": "Ilumina la ruta final y agranda los puntos de los últimos cinco.",
-  "analysis.prototype.recentBracket.title": "Corchete reciente",
-  "analysis.prototype.recentBracket.detail": "Marca los últimos cinco bajo el eje horizontal sin sombreado.",
-  "analysis.prototype.fullFill.title": "Relleno de área completa",
-  "analysis.prototype.fullFill.detail": "Rellena ligeramente debajo de toda la ruta de puntajes exactos.",
-  "analysis.prototype.recentFill.title": "Relleno del área reciente",
-  "analysis.prototype.recentFill.detail": "Rellena solo debajo de la ruta exacta de los partidos 46–50.",
-  "analysis.prototype.quiet.title": "Historial discreto",
-  "analysis.prototype.quiet.detail": "Atenúa los resultados anteriores para destacar los últimos cinco.",
-  "analysis.prototype.resultPath.title": "Ruta coloreada por resultado",
-  "analysis.prototype.resultPath.detail": "Colorea cada segmento según el resultado del partido al que llega.",
-  "analysis.prototype.neutral.title": "Ruta neutral",
-  "analysis.prototype.neutral.detail": "Usa una línea neutral para que los colores de resultado cuenten la historia.",
-  "analysis.prototype.averages.title": "Contexto de promedios",
-  "analysis.prototype.averages.detail": "Compara la ruta exacta con el promedio de temporada y el de los últimos cinco.",
   "analysis.replay.missionHeadAutonWhy": "Una apertura repetible elimina el primer punto de presión de cada partido.",
   "analysis.replay.missionHeadCenterWhy": "El control del centro protege puntos de robots y amarillos legales al final.",
   "analysis.replay.missionHeadYellowWhy": "Los amarillos colocados solo importan cuando la propiedad los hace puntuar.",
@@ -1670,9 +1603,13 @@ Object.assign(translations["zh-CN"], {
   "analysis.replay.trajectoryDetail": "从第一条保存记录看到最近一条记录。",
   "analysis.replay.legendDots": "圆点：本方联盟最终得分",
   "analysis.replay.legendSkillsDots": "圆点：已保存的技能赛得分",
-  "analysis.replay.legendTrend": "线条：最近 5 场趋势",
-  "analysis.replay.legendRecent": "阴影：最近 5 场",
-  "analysis.replay.recentBand": "最近 5 场",
+  "analysis.replay.legendTrend": "线：已保存得分的精确路径",
+  "analysis.replay.legendRecent": "括号：最近 {count} 场",
+  "analysis.replay.axisHeadX": "练习赛场次",
+  "analysis.replay.axisHeadY": "本方联盟最终得分（分）",
+  "analysis.replay.axisSkillsX": "练习运行次数",
+  "analysis.replay.axisSkillsY": "技能赛运行得分（分）",
+  "analysis.replay.latestBracket": "最近 {count} 场",
   "analysis.replay.startingLevel": "起点水平",
   "analysis.replay.currentLevel": "当前水平",
   "analysis.replay.biggestTurn": "最大转折",
@@ -1695,43 +1632,6 @@ Object.assign(translations["zh-CN"], {
   "analysis.replay.noSkillsData": "保存 Driver 和自动技能赛记录后即可生成路线故事。",
   "analysis.replay.pointHint": "悬停或聚焦数据点即可查看该条记录。",
   "analysis.replay.dateTurn": "{date}，变化 {value} 分",
-  "analysis.prototype.kicker": "开发模式图表样例",
-  "analysis.prototype.title": "选择精确得分图",
-  "analysis.prototype.detail": "同一组 50 场预设比赛的十二种视图。每条路径都连接完全相同的联盟得分。",
-  "analysis.prototype.hint": "绿色表示胜，珊瑚色表示负，金色表示平。最近五场始终指第 46–50 场比赛。",
-  "analysis.prototype.group.axes": "坐标轴",
-  "analysis.prototype.group.recent": "最近五场",
-  "analysis.prototype.group.emphasis": "填充与强调",
-  "analysis.prototype.group.context": "对比信息",
-  "analysis.prototype.axisX": "练习赛场次",
-  "analysis.prototype.axisY": "本方联盟最终得分（分）",
-  "analysis.prototype.latestFive": "最近五场",
-  "analysis.prototype.seasonAverage": "赛季平均",
-  "analysis.prototype.recentAverage": "最近五场平均",
-  "analysis.prototype.clean.title": "简洁路径",
-  "analysis.prototype.clean.detail": "只显示青色精确路径和按赛果着色的圆点。",
-  "analysis.prototype.axes.title": "标注坐标轴",
-  "analysis.prototype.axes.detail": "增加稀疏刻度，并说明练习赛场次与联盟最终得分。",
-  "analysis.prototype.grid.title": "得分网格",
-  "analysis.prototype.grid.detail": "在坐标轴后增加淡化的横向得分参考线。",
-  "analysis.prototype.recentBand.title": "最近五场区间",
-  "analysis.prototype.recentBand.detail": "在第 46–50 场比赛后方加入低调的阴影区。",
-  "analysis.prototype.recentGlow.title": "最近五场高亮",
-  "analysis.prototype.recentGlow.detail": "放大最近五个圆点，并只提亮最后四段连线。",
-  "analysis.prototype.recentBracket.title": "最近五场括号",
-  "analysis.prototype.recentBracket.detail": "用坐标轴下方的括号标记第 46–50 场，不使用阴影。",
-  "analysis.prototype.fullFill.title": "完整面积填充",
-  "analysis.prototype.fullFill.detail": "轻微填充整条精确得分路径下方的区域。",
-  "analysis.prototype.recentFill.title": "最近五场面积",
-  "analysis.prototype.recentFill.detail": "只填充第 46–50 场精确路径下方的区域。",
-  "analysis.prototype.quiet.title": "弱化历史",
-  "analysis.prototype.quiet.detail": "淡化较早的路径和圆点，让最近五场保持完整饱和度。",
-  "analysis.prototype.resultPath.title": "赛果着色路径",
-  "analysis.prototype.resultPath.detail": "每段连线按后一场比赛的胜、负或平局着色。",
-  "analysis.prototype.neutral.title": "中性路径",
-  "analysis.prototype.neutral.detail": "使用克制的灰白连线，让彩色赛果圆点成为重点。",
-  "analysis.prototype.averages.title": "平均值对比",
-  "analysis.prototype.averages.detail": "将精确路径与赛季平均和最近五场平均分别对比。",
   "analysis.replay.missionHeadAutonWhy": "稳定的开局能消除每场比赛的第一个压力点。",
   "analysis.replay.missionHeadCenterWhy": "控制中心能在末段保护机器人分和有效黄桩分。",
   "analysis.replay.missionHeadYellowWhy": "黄桩只有在归属正确时才真正得分。",
@@ -6378,48 +6278,75 @@ function replayPointLabel(mode, record, index) {
   });
 }
 
-function trailingAverageValues(values, windowSize = 5) {
-  return values.map((_, index) => {
-    const start = Math.max(0, index - windowSize + 1);
-    return average(values.slice(start, index + 1));
+function replayXAxisIndexes(count) {
+  if (count <= 6) return Array.from({ length: count }, (_, index) => index);
+  const candidates = [2, 3, 5, 10, 15, 20, 25, 50, 100, 200];
+  let best = [];
+  let bestDistance = Infinity;
+  candidates.forEach(step => {
+    const labels = new Set([1, count]);
+    for (let value = step; value < count; value += step) labels.add(value);
+    const indexes = [...labels].sort((a, b) => a - b).map(value => value - 1);
+    const distance = Math.abs(indexes.length - 6);
+    if (distance < bestDistance) {
+      best = indexes;
+      bestDistance = distance;
+    }
   });
+  return best;
 }
 
-function renderReplayTimeline(mode, records, getter, trajectory, story) {
+function renderReplayTimeline(mode, records, getter, trajectory) {
   const ordered = records.slice().sort((a, b) => recordTimestamp(a) - recordTimestamp(b));
   const points = ordered.map(record => numericValue(getter(record)));
   const width = 1000;
-  const height = 360;
-  const padX = 58;
-  const padY = 42;
+  const height = 420;
+  const padLeft = 96;
+  const padRight = 30;
+  const padTop = 26;
+  const padBottom = 104;
+  const plotRight = width - padRight;
+  const plotBottom = height - padBottom;
   const rawMin = Math.min(...points);
   const rawMax = Math.max(...points);
-  const padding = Math.max(8, (rawMax - rawMin) * .08);
-  const min = rawMin - padding;
-  const max = rawMax + padding;
-  const range = Math.max(max - min, 1);
-  const step = points.length === 1 ? 0 : (width - padX * 2) / (points.length - 1);
-  const yFor = score => height - padY - ((score - min) / range) * (height - padY * 2);
-  const coordinates = points.map((score, index) => ({ x: padX + index * step, y: yFor(score), score }));
-  const trendPoints = trailingAverageValues(points);
-  const trendCoordinates = trendPoints.map((score, index) => ({ x: coordinates[index].x, y: yFor(score), score }));
-  const trendString = trendCoordinates.map(point => `${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(" ");
+  let min = Math.max(0, Math.floor(rawMin / 25) * 25);
+  let max = Math.ceil(rawMax / 25) * 25;
+  if (min === rawMin && min > 0) min -= 25;
+  if (max === rawMax) max += 25;
+  const range = Math.max(max - min, 25);
+  const step = points.length === 1 ? 0 : (plotRight - padLeft) / (points.length - 1);
+  const yFor = score => plotBottom - ((score - min) / range) * (plotBottom - padTop);
+  const coordinates = points.map((score, index) => ({ x: padLeft + index * step, y: yFor(score), score }));
+  const pathPoints = coordinates.map(point => `${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(" ");
   const recentStart = Math.max(0, points.length - 5);
-  const recentBandStart = Math.max(padX, coordinates[recentStart].x - step / 2);
-  const recentBandEnd = Math.min(width - padX, coordinates.at(-1).x + step / 2);
-  const recentBandWidth = Math.max(0, recentBandEnd - recentBandStart);
-  const areaString = `${padX},${height - padY} ${trendString} ${trendCoordinates.at(-1)?.x || padX},${height - padY}`;
-  const averageLine = average(points);
-  const averageY = yFor(averageLine);
-  const turningX = coordinates[trajectory.turning.index]?.x || padX;
+  const recentCount = points.length - recentStart;
+  const bracketStart = points.length === 1 ? Math.max(padLeft, coordinates[0].x - 18) : coordinates[recentStart].x;
+  const bracketEnd = points.length === 1 ? Math.min(plotRight, coordinates[0].x + 18) : coordinates.at(-1).x;
+  const bracketY = plotBottom + 38;
+  const yTicks = [];
+  for (let value = min; value <= max; value += 25) yTicks.push(value);
+  const grid = yTicks.map(value => {
+    const y = yFor(value);
+    return `<line class="replay-score-guide" x1="${padLeft}" y1="${y.toFixed(1)}" x2="${plotRight}" y2="${y.toFixed(1)}"></line>
+      <line class="replay-axis-tick" x1="${padLeft - 6}" y1="${y.toFixed(1)}" x2="${padLeft}" y2="${y.toFixed(1)}"></line>
+      <text class="replay-axis-label" x="${padLeft - 12}" y="${(y + 5).toFixed(1)}" text-anchor="end">${value}</text>`;
+  }).join("");
+  const xTicks = replayXAxisIndexes(points.length).map(index => {
+    const x = coordinates[index].x;
+    return `<line class="replay-axis-tick" x1="${x.toFixed(1)}" y1="${plotBottom}" x2="${x.toFixed(1)}" y2="${plotBottom + 6}"></line>
+      <text class="replay-axis-label" x="${x.toFixed(1)}" y="${plotBottom + 25}" text-anchor="middle">${index + 1}</text>`;
+  }).join("");
+  const axisXKey = mode === "skills" ? "analysis.replay.axisSkillsX" : "analysis.replay.axisHeadX";
+  const axisYKey = mode === "skills" ? "analysis.replay.axisSkillsY" : "analysis.replay.axisHeadY";
+  const axisCenterY = (padTop + plotBottom) / 2;
   const dots = coordinates.map((point, index) => {
     const record = ordered[index];
     const resultClass = mode === "skills" ? (record.skillsType === "autonomous" ? "autonomous" : "driver") : (record.result || "saved");
     const label = replayPointLabel(mode, record, index);
     return `
-      <g class="replay-chart-point ${escapeHtml(resultClass)}${index >= recentStart ? " recent" : ""}" transform="translate(${point.x.toFixed(1)} ${point.y.toFixed(1)})" tabindex="0" role="button" data-replay-point="${escapeHtml(label)}" aria-label="${escapeHtml(label)}">
+      <g class="replay-chart-point ${escapeHtml(resultClass)}" transform="translate(${point.x.toFixed(1)} ${point.y.toFixed(1)})" tabindex="0" role="button" data-replay-point="${escapeHtml(label)}" aria-label="${escapeHtml(label)}">
         <circle class="replay-point-hit" r="17"></circle>
-        <circle class="replay-point-ring" r="${index >= recentStart ? "10" : "7"}"></circle>
+        <circle class="replay-point-ring" r="7"></circle>
         <circle class="replay-point-core" r="4.5"></circle>
       </g>`;
   }).join("");
@@ -6430,25 +6357,24 @@ function renderReplayTimeline(mode, records, getter, trajectory, story) {
         <p>${escapeHtml(t("analysis.replay.trajectoryDetail"))}</p>
       </header>
       <div class="replay-chart-shell">
-        <svg class="replay-chart" viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeHtml(t("analysis.scoreTrend"))}">
-          <defs>
-            <linearGradient id="${mode}-replay-area" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#66d9d0" stop-opacity=".26"></stop>
-              <stop offset="1" stop-color="#66d9d0" stop-opacity="0"></stop>
-            </linearGradient>
-          </defs>
-          <rect class="replay-recent-band" x="${recentBandStart.toFixed(1)}" y="${padY}" width="${recentBandWidth.toFixed(1)}" height="${height - padY * 2}"></rect>
-          <text class="replay-recent-label" x="${(recentBandStart + 8).toFixed(1)}" y="${padY + 18}">${escapeHtml(t("analysis.replay.recentBand"))}</text>
-          <line class="replay-chart-grid" x1="${padX}" y1="${averageY.toFixed(1)}" x2="${width - padX}" y2="${averageY.toFixed(1)}"></line>
-          <line class="replay-turn-line" x1="${turningX.toFixed(1)}" y1="${padY}" x2="${turningX.toFixed(1)}" y2="${height - padY}"></line>
-          <polygon class="replay-chart-area" points="${areaString}" fill="url(#${mode}-replay-area)"></polygon>
-          <polyline class="replay-chart-line" pathLength="1" points="${trendString}"></polyline>
-          ${dots}
-        </svg>
+        <div class="replay-chart-scroll">
+          <svg class="replay-chart" viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeHtml(t("analysis.scoreTrend"))}">
+            ${grid}
+            ${xTicks}
+            <line class="replay-axis" x1="${padLeft}" y1="${padTop}" x2="${padLeft}" y2="${plotBottom}"></line>
+            <line class="replay-axis" x1="${padLeft}" y1="${plotBottom}" x2="${plotRight}" y2="${plotBottom}"></line>
+            <text class="replay-axis-title" x="${((padLeft + plotRight) / 2).toFixed(1)}" y="${height - 8}" text-anchor="middle">${escapeHtml(t(axisXKey))}</text>
+            <text class="replay-axis-title" x="20" y="${axisCenterY.toFixed(1)}" text-anchor="middle" transform="rotate(-90 20 ${axisCenterY.toFixed(1)})">${escapeHtml(t(axisYKey))}</text>
+            <polyline class="replay-chart-line" pathLength="1" points="${pathPoints}"></polyline>
+            ${dots}
+            <path class="replay-recent-bracket" d="M ${bracketStart.toFixed(1)} ${bracketY - 7} V ${bracketY} H ${bracketEnd.toFixed(1)} V ${bracketY - 7}"></path>
+            <text class="replay-recent-bracket-label" x="${((bracketStart + bracketEnd) / 2).toFixed(1)}" y="${bracketY + 18}" text-anchor="middle">${escapeHtml(t("analysis.replay.latestBracket", { count: recentCount }))}</text>
+          </svg>
+        </div>
         <div class="replay-chart-legend" aria-label="${escapeHtml(t("analysis.scoreTrend"))}">
           <span><i class="dots"></i>${escapeHtml(t(mode === "skills" ? "analysis.replay.legendSkillsDots" : "analysis.replay.legendDots"))}</span>
           <span><i class="trend"></i>${escapeHtml(t("analysis.replay.legendTrend"))}</span>
-          <span><i class="recent"></i>${escapeHtml(t("analysis.replay.legendRecent"))}</span>
+          <span><i class="recent"></i>${escapeHtml(t("analysis.replay.legendRecent", { count: recentCount }))}</span>
         </div>
         <p class="replay-point-readout" data-replay-point-readout>${escapeHtml(t("analysis.replay.pointHint"))}</p>
       </div>
@@ -6457,211 +6383,6 @@ function renderReplayTimeline(mode, records, getter, trajectory, story) {
         <div class="current"><dt>${escapeHtml(t("analysis.replay.currentLevel"))}</dt><dd>${escapeHtml(formatAnalysisNumber(trajectory.current))}</dd></div>
         <div><dt>${escapeHtml(t("analysis.replay.biggestTurn"))}</dt><dd>${escapeHtml(t("analysis.replay.dateTurn", { date: formatMatchDate(trajectory.turning.record), value: formatAnalysisNumber(Math.abs(trajectory.turning.delta)) }))}</dd></div>
       </dl>
-    </section>`;
-}
-
-function graphPrototypeRecords() {
-  if (!graphPrototypeDataset) graphPrototypeDataset = buildJudgeDataset().filter(isHeadMatch);
-  return graphPrototypeDataset;
-}
-
-function graphPrototypeModel() {
-  const ordered = graphPrototypeRecords().slice().sort((a, b) => recordTimestamp(a) - recordTimestamp(b));
-  const scores = ordered.map(record => numericValue(record.ourScore));
-  const width = 720;
-  const height = 300;
-  const padLeft = 74;
-  const padRight = 24;
-  const padTop = 24;
-  const padBottom = 62;
-  const rawMin = Math.min(...scores);
-  const rawMax = Math.max(...scores);
-  let min = Math.floor(rawMin / 25) * 25;
-  let max = Math.ceil(rawMax / 25) * 25;
-  if (min === rawMin) min -= 25;
-  if (max === rawMax) max += 25;
-  const range = Math.max(max - min, 25);
-  const plotBottom = height - padBottom;
-  const plotRight = width - padRight;
-  const step = (plotRight - padLeft) / Math.max(scores.length - 1, 1);
-  const yFor = score => plotBottom - ((score - min) / range) * (plotBottom - padTop);
-  const coordinates = scores.map((score, index) => ({ x: padLeft + index * step, y: yFor(score), score }));
-  const averageScore = average(scores);
-  const recentStart = Math.max(0, scores.length - 5);
-  const recentAverage = average(scores.slice(recentStart));
-  const recentBandStart = Math.max(padLeft, coordinates[recentStart].x - step / 2);
-  const recentBandEnd = plotRight;
-  const yTicks = [];
-  for (let value = min; value <= max; value += 25) yTicks.push(value);
-  const xTicks = [0, 9, 19, 29, 39, 49].filter(index => index < scores.length);
-  return {
-    ordered,
-    scores,
-    width,
-    height,
-    padLeft,
-    padRight,
-    padTop,
-    padBottom,
-    plotBottom,
-    plotRight,
-    step,
-    yFor,
-    coordinates,
-    min,
-    max,
-    yTicks,
-    xTicks,
-    averageScore,
-    averageY: yFor(averageScore),
-    recentAverage,
-    recentAverageY: yFor(recentAverage),
-    recentStart,
-    recentBandStart,
-    recentBandWidth: Math.max(0, recentBandEnd - recentBandStart)
-  };
-}
-
-function graphPrototypePointString(points) {
-  return points.map(point => `${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(" ");
-}
-
-function prototypeDots(model, type) {
-  return model.coordinates.map((point, index) => {
-    const record = model.ordered[index];
-    const resultClass = record.result || "saved";
-    const label = replayPointLabel("head", record, index);
-    const isRecent = index >= model.recentStart;
-    const emphasisClass = type === "recentGlow" && isRecent
-      ? " recent-glow-point"
-      : type === "quiet" && !isRecent
-        ? " quiet-point"
-        : "";
-    return `
-      <g class="replay-chart-point prototype-point ${escapeHtml(resultClass)}${emphasisClass}" transform="translate(${point.x.toFixed(1)} ${point.y.toFixed(1)})" tabindex="0" role="button" data-replay-point="${escapeHtml(label)}" aria-label="${escapeHtml(label)}">
-        <circle class="replay-point-hit" r="14"></circle>
-        <circle class="replay-point-ring" r="${type === "recentGlow" && isRecent ? "8" : "5"}"></circle>
-        <circle class="replay-point-core" r="3"></circle>
-      </g>`;
-  }).join("");
-}
-
-function graphPrototypeAxes(model, includeGrid = false) {
-  const yTicks = model.yTicks.map(value => {
-    const y = model.yFor(value);
-    return `${includeGrid ? `<line class="graph-prototype-gridline" x1="${model.padLeft}" y1="${y.toFixed(1)}" x2="${model.plotRight}" y2="${y.toFixed(1)}"></line>` : ""}
-      <line class="graph-prototype-tick" x1="${model.padLeft - 5}" y1="${y.toFixed(1)}" x2="${model.padLeft}" y2="${y.toFixed(1)}"></line>
-      <text class="graph-prototype-tick-label" x="${model.padLeft - 10}" y="${(y + 4).toFixed(1)}" text-anchor="end">${value}</text>`;
-  }).join("");
-  const xTicks = model.xTicks.map(index => {
-    const x = model.coordinates[index].x;
-    return `<line class="graph-prototype-tick" x1="${x.toFixed(1)}" y1="${model.plotBottom}" x2="${x.toFixed(1)}" y2="${model.plotBottom + 5}"></line>
-      <text class="graph-prototype-tick-label" x="${x.toFixed(1)}" y="${model.plotBottom + 20}" text-anchor="middle">${index + 1}</text>`;
-  }).join("");
-  const centerY = (model.padTop + model.plotBottom) / 2;
-  return `${yTicks}${xTicks}
-    <line class="graph-prototype-axis" x1="${model.padLeft}" y1="${model.padTop}" x2="${model.padLeft}" y2="${model.plotBottom}"></line>
-    <line class="graph-prototype-axis" x1="${model.padLeft}" y1="${model.plotBottom}" x2="${model.plotRight}" y2="${model.plotBottom}"></line>
-    <text class="graph-prototype-axis-title" x="${((model.padLeft + model.plotRight) / 2).toFixed(1)}" y="${model.height - 8}" text-anchor="middle">${escapeHtml(t("analysis.prototype.axisX"))}</text>
-    <text class="graph-prototype-axis-title" x="17" y="${centerY.toFixed(1)}" text-anchor="middle" transform="rotate(-90 17 ${centerY.toFixed(1)})">${escapeHtml(t("analysis.prototype.axisY"))}</text>`;
-}
-
-function graphPrototypePlot(type, model) {
-  const pointString = graphPrototypePointString(model.coordinates);
-  const recentPoints = model.coordinates.slice(model.recentStart);
-  const recentString = graphPrototypePointString(recentPoints);
-  const baseline = model.plotBottom;
-  const axes = type === "clean" ? "" : graphPrototypeAxes(model, type === "grid");
-  let treatment = "";
-
-  if (type === "recentBand") {
-    treatment += `<rect class="graph-prototype-recent-band" x="${model.recentBandStart.toFixed(1)}" y="${model.padTop}" width="${model.recentBandWidth.toFixed(1)}" height="${model.plotBottom - model.padTop}"></rect>`;
-  }
-  if (type === "fullFill") {
-    treatment += `<polygon class="graph-prototype-fill full-fill" points="${model.padLeft},${baseline} ${pointString} ${model.plotRight},${baseline}"></polygon>`;
-  }
-  if (type === "recentFill") {
-    treatment += `<polygon class="graph-prototype-fill recent-fill" points="${recentPoints[0].x.toFixed(1)},${baseline} ${recentString} ${model.plotRight},${baseline}"></polygon>`;
-  }
-
-  if (type === "resultPath") {
-    treatment += model.coordinates.slice(1).map((point, index) => {
-      const previous = model.coordinates[index];
-      const resultClass = model.ordered[index + 1].result || "saved";
-      return `<line class="graph-prototype-result-segment ${escapeHtml(resultClass)}" x1="${previous.x.toFixed(1)}" y1="${previous.y.toFixed(1)}" x2="${point.x.toFixed(1)}" y2="${point.y.toFixed(1)}"></line>`;
-    }).join("");
-  } else if (type === "quiet") {
-    const history = model.coordinates.slice(0, model.recentStart + 1);
-    treatment += `<polyline class="graph-prototype-line exact quiet-history" points="${graphPrototypePointString(history)}"></polyline>
-      <polyline class="graph-prototype-line exact recent-path" points="${recentString}"></polyline>`;
-  } else {
-    const lineClass = type === "neutral" ? " neutral" : "";
-    treatment += `<polyline class="graph-prototype-line exact${lineClass}" points="${pointString}"></polyline>`;
-    if (type === "recentGlow") {
-      treatment += `<polyline class="graph-prototype-line recent-glow" points="${recentString}"></polyline>`;
-    }
-  }
-
-  if (type === "recentBracket") {
-    const startX = recentPoints[0].x;
-    const endX = recentPoints.at(-1).x;
-    const bracketY = model.plotBottom + 31;
-    treatment += `<path class="graph-prototype-bracket" d="M ${startX.toFixed(1)} ${bracketY - 6} V ${bracketY} H ${endX.toFixed(1)} V ${bracketY - 6}"></path>
-      <text class="graph-prototype-bracket-label" x="${((startX + endX) / 2).toFixed(1)}" y="${bracketY + 14}" text-anchor="middle">${escapeHtml(t("analysis.prototype.latestFive"))}</text>`;
-  }
-
-  if (type === "averages") {
-    const labelX = model.plotRight - 4;
-    treatment += `<line class="graph-prototype-reference season" x1="${model.padLeft}" y1="${model.averageY.toFixed(1)}" x2="${model.plotRight}" y2="${model.averageY.toFixed(1)}"></line>
-      <text class="graph-prototype-reference-label season" x="${labelX}" y="${(model.averageY - 6).toFixed(1)}" text-anchor="end">${escapeHtml(t("analysis.prototype.seasonAverage"))} ${formatAnalysisNumber(model.averageScore)}</text>
-      <line class="graph-prototype-reference recent" x1="${recentPoints[0].x.toFixed(1)}" y1="${model.recentAverageY.toFixed(1)}" x2="${model.plotRight}" y2="${model.recentAverageY.toFixed(1)}"></line>
-      <text class="graph-prototype-reference-label recent" x="${labelX}" y="${(model.recentAverageY - 6).toFixed(1)}" text-anchor="end">${escapeHtml(t("analysis.prototype.recentAverage"))} ${formatAnalysisNumber(model.recentAverage)}</text>`;
-  }
-
-  return `${axes}${treatment}`;
-}
-
-function renderGraphPrototypeSampler() {
-  if (!isDevMode) return "";
-  const model = graphPrototypeModel();
-  const groups = [
-    { key: "axes", types: ["clean", "axes", "grid"] },
-    { key: "recent", types: ["recentBand", "recentGlow", "recentBracket"] },
-    { key: "emphasis", types: ["fullFill", "recentFill", "quiet"] },
-    { key: "context", types: ["resultPath", "neutral", "averages"] }
-  ];
-  let prototypeNumber = 0;
-  return `
-    <section class="graph-prototype-sampler" data-graph-prototype-sampler>
-      <header>
-        <span>${escapeHtml(t("analysis.prototype.kicker"))}</span>
-        <h4>${escapeHtml(t("analysis.prototype.title"))}</h4>
-        <p>${escapeHtml(t("analysis.prototype.detail"))}</p>
-        <small>${escapeHtml(t("analysis.prototype.hint"))}</small>
-      </header>
-      ${groups.map(group => `
-        <section class="graph-prototype-group" aria-labelledby="graph-prototype-group-${group.key}">
-          <h5 id="graph-prototype-group-${group.key}" class="graph-prototype-group-title">${escapeHtml(t(`analysis.prototype.group.${group.key}`))}</h5>
-          <div class="graph-prototype-grid">
-            ${group.types.map(type => {
-              prototypeNumber += 1;
-              return `
-                <article class="graph-prototype" data-graph-prototype="${prototypeNumber}" data-graph-prototype-type="${type}">
-                  <div class="graph-prototype-heading">
-                    <span>${String(prototypeNumber).padStart(2, "0")}</span>
-                    <div><h5>${escapeHtml(t(`analysis.prototype.${type}.title`))}</h5><p>${escapeHtml(t(`analysis.prototype.${type}.detail`))}</p></div>
-                  </div>
-                  <div class="replay-chart-shell graph-prototype-chart-shell">
-                    <svg class="graph-prototype-chart" viewBox="0 0 ${model.width} ${model.height}" role="img" aria-label="${escapeHtml(t(`analysis.prototype.${type}.title`))}">
-                      ${graphPrototypePlot(type, model)}
-                      ${prototypeDots(model, type)}
-                    </svg>
-                    <p class="replay-point-readout" data-replay-point-readout>${escapeHtml(t("analysis.replay.pointHint"))}</p>
-                  </div>
-                </article>`;
-            }).join("")}
-          </div>
-        </section>`).join("")}
     </section>`;
 }
 
@@ -6937,8 +6658,7 @@ function renderSeasonReplay(mode, allRecords, records) {
   mount.innerHTML = `
     ${renderReplayOpening(mode, records, story, trajectory)}
     ${renderReplayNav(mode)}
-    ${renderReplayTimeline(mode, records, getter, trajectory, story)}
-    ${mode === "head" ? renderGraphPrototypeSampler() : ""}
+    ${renderReplayTimeline(mode, records, getter, trajectory)}
     ${renderReplayTurning(mode, records, story)}
     ${renderReplayAnatomy(mode, phases, story)}
     ${renderReplayPractice(mode, missions)}
