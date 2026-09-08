@@ -570,20 +570,30 @@ body.analysis-active .score-app {
   gap: 36px 28px;
 }
 
+.graph-prototype-group {
+  display: grid;
+  gap: 18px;
+}
+
+.graph-prototype-group-title {
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(102, 217, 208, .32);
+  color: #cde5ea;
+  font-size: 15px;
+  font-weight: 850;
+}
+
 .graph-prototype {
   min-width: 0;
   padding-top: 18px;
   border-top: 1px solid rgba(255, 255, 255, .16);
 }
 
-.graph-prototype.current {
-  border-top-color: rgba(132, 241, 94, .58);
-}
-
 .graph-prototype-heading {
   min-height: 92px;
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-columns: auto minmax(0, 1fr);
   align-items: start;
   gap: 13px;
   padding: 0 4px 14px;
@@ -613,23 +623,15 @@ body.analysis-active .score-app {
   line-height: 1.4;
 }
 
-.graph-prototype-heading > small {
-  padding: 4px 7px;
-  border: 1px solid rgba(132, 241, 94, .35);
-  color: #aef394;
-  font-size: 10px;
-  font-weight: 850;
-  white-space: nowrap;
-}
-
 .graph-prototype-chart-shell {
   padding: 8px 8px 10px;
   background-size: 34px 34px;
+  overflow-x: auto;
 }
 
 .graph-prototype-chart {
   width: 100%;
-  aspect-ratio: 720 / 250;
+  aspect-ratio: 720 / 300;
   display: block;
   overflow: visible;
 }
@@ -642,21 +644,38 @@ body.analysis-active .score-app {
   stroke-width: 1.8;
 }
 
-.graph-prototype-chart .replay-chart-point.recent .replay-point-ring {
-  stroke-width: 3;
-}
-
-.graph-prototype-recent {
-  fill: rgba(132, 241, 94, .055);
-  stroke: rgba(132, 241, 94, .17);
+.graph-prototype-axis,
+.graph-prototype-tick {
+  stroke: rgba(209, 228, 233, .48);
   stroke-width: 1;
   vector-effect: non-scaling-stroke;
 }
 
-.graph-prototype-average {
-  stroke: rgba(255, 255, 255, .22);
+.graph-prototype-gridline {
+  stroke: rgba(209, 228, 233, .11);
   stroke-width: 1;
-  stroke-dasharray: 6 7;
+  vector-effect: non-scaling-stroke;
+}
+
+.graph-prototype-tick-label,
+.graph-prototype-axis-title,
+.graph-prototype-bracket-label,
+.graph-prototype-reference-label {
+  fill: #9eb6bd;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0;
+}
+
+.graph-prototype-axis-title {
+  fill: #c2d3d8;
+  font-size: 12px;
+}
+
+.graph-prototype-recent-band {
+  fill: rgba(132, 241, 94, .055);
+  stroke: rgba(132, 241, 94, .17);
+  stroke-width: 1;
   vector-effect: non-scaling-stroke;
 }
 
@@ -671,39 +690,97 @@ body.analysis-active .score-app {
 
 .graph-prototype-line.exact {
   stroke-width: 2;
-  opacity: .72;
+  opacity: .82;
 }
 
-.graph-prototype-line.smooth {
-  stroke-width: 4;
-  filter: drop-shadow(0 0 5px rgba(102, 217, 208, .28));
+.graph-prototype-line.recent-glow,
+.graph-prototype-line.recent-path {
+  stroke: #84f15e;
+  stroke-width: 3.5;
+  opacity: 1;
+  filter: drop-shadow(0 0 6px rgba(132, 241, 94, .5));
 }
 
-.graph-prototype-range {
-  fill: rgba(102, 217, 208, .12);
-  stroke: rgba(102, 217, 208, .28);
-  stroke-width: 1;
-  vector-effect: non-scaling-stroke;
+.graph-prototype-line.quiet-history {
+  opacity: .22;
 }
 
-.graph-prototype-block {
-  stroke: #66d9d0;
-  stroke-width: 5;
+.graph-prototype-line.neutral {
+  stroke: rgba(226, 235, 238, .7);
+  stroke-width: 2;
+}
+
+.graph-prototype-fill {
+  stroke: none;
+}
+
+.graph-prototype-fill.full-fill {
+  fill: rgba(102, 217, 208, .1);
+}
+
+.graph-prototype-fill.recent-fill {
+  fill: rgba(132, 241, 94, .13);
+}
+
+.graph-prototype-result-segment {
+  stroke-width: 2.5;
   stroke-linecap: round;
   vector-effect: non-scaling-stroke;
 }
 
-.graph-prototype-block-connector {
-  stroke: rgba(102, 217, 208, .42);
+.graph-prototype-result-segment.win {
+  stroke: #84f15e;
+}
+
+.graph-prototype-result-segment.loss {
+  stroke: #ff6f7d;
+}
+
+.graph-prototype-result-segment.tie,
+.graph-prototype-result-segment.saved {
+  stroke: #ffd166;
+}
+
+.graph-prototype-bracket {
+  fill: none;
+  stroke: rgba(132, 241, 94, .75);
   stroke-width: 1.5;
-  stroke-dasharray: 4 5;
   vector-effect: non-scaling-stroke;
 }
 
-.graph-prototype-stem {
-  stroke: rgba(102, 217, 208, .42);
+.graph-prototype-bracket-label {
+  fill: #b9ecaa;
+}
+
+.graph-prototype-reference {
   stroke-width: 1.5;
+  stroke-dasharray: 6 6;
   vector-effect: non-scaling-stroke;
+}
+
+.graph-prototype-reference.season {
+  stroke: rgba(255, 255, 255, .58);
+}
+
+.graph-prototype-reference.recent {
+  stroke: rgba(132, 241, 94, .9);
+}
+
+.graph-prototype-reference-label.season {
+  fill: #d4dfe2;
+}
+
+.graph-prototype-reference-label.recent {
+  fill: #b9f1a5;
+}
+
+.graph-prototype-chart .prototype-point.recent-glow-point .replay-point-ring {
+  stroke-width: 3.4;
+  filter: drop-shadow(0 0 7px rgba(132, 241, 94, .66));
+}
+
+.graph-prototype-chart .prototype-point.quiet-point {
+  opacity: .24;
 }
 
 .graph-prototype .replay-point-readout {
@@ -1402,9 +1479,9 @@ body.analysis-active .score-app {
     grid-template-columns: auto minmax(0, 1fr);
   }
 
-  .graph-prototype-heading > small {
-    grid-column: 2;
-    justify-self: start;
+  .graph-prototype-chart {
+    width: 620px;
+    max-width: none;
   }
 
   .replay-chart-shell {

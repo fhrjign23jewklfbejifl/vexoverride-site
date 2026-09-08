@@ -459,22 +459,42 @@ const translations = {
     "analysis.replay.pointHint": "Hover or focus a point to read that record.",
     "analysis.replay.dateTurn": "{date}, a {value}-point change",
     "analysis.prototype.kicker": "Dev graph sampler",
-    "analysis.prototype.title": "Choose how the season should look",
-    "analysis.prototype.detail": "Six views of the same 50 prepared matches. Every dot is the same exact alliance score.",
-    "analysis.prototype.current": "Current graph",
-    "analysis.prototype.hint": "Green is a win, coral is a loss, gold is a draw, and the shaded area marks the latest five matches.",
-    "analysis.prototype.exact.title": "Exact Score Path",
-    "analysis.prototype.exact.detail": "Connect every saved alliance score in match order.",
-    "analysis.prototype.rolling.title": "Rolling Five",
-    "analysis.prototype.rolling.detail": "Keep exact dots and connect the trailing five-match average.",
-    "analysis.prototype.smooth.title": "Smooth Season Trend",
-    "analysis.prototype.smooth.detail": "Keep exact dots over a gently smoothed season curve.",
-    "analysis.prototype.range.title": "Performance Range",
-    "analysis.prototype.range.detail": "Show the rolling average inside the recent five-match low-to-high range.",
-    "analysis.prototype.blocks.title": "Practice Blocks",
-    "analysis.prototype.blocks.detail": "Group matches into five-match blocks and compare each block's average.",
-    "analysis.prototype.stems.title": "Score Stems",
-    "analysis.prototype.stems.detail": "Anchor each exact score to the season average without a zigzag line.",
+    "analysis.prototype.title": "Choose the exact-score graph",
+    "analysis.prototype.detail": "Twelve views of the same 50 prepared matches. Every path connects the same exact alliance scores.",
+    "analysis.prototype.hint": "Green is a win, coral is a loss, and gold is a draw. Latest five always means matches 46–50.",
+    "analysis.prototype.group.axes": "Axes",
+    "analysis.prototype.group.recent": "Latest Five",
+    "analysis.prototype.group.emphasis": "Fill and Emphasis",
+    "analysis.prototype.group.context": "Context",
+    "analysis.prototype.axisX": "Practice match number",
+    "analysis.prototype.axisY": "Our alliance final score (points)",
+    "analysis.prototype.latestFive": "Latest five",
+    "analysis.prototype.seasonAverage": "Season average",
+    "analysis.prototype.recentAverage": "Latest-five average",
+    "analysis.prototype.clean.title": "Clean Path",
+    "analysis.prototype.clean.detail": "Only the exact cyan path and result-colored dots.",
+    "analysis.prototype.axes.title": "Labeled Axes",
+    "analysis.prototype.axes.detail": "Add sparse match-number and alliance-score axes.",
+    "analysis.prototype.grid.title": "Score Grid",
+    "analysis.prototype.grid.detail": "Add horizontal score guides to the labeled axes.",
+    "analysis.prototype.recentBand.title": "Recent Band",
+    "analysis.prototype.recentBand.detail": "Shade the background behind matches 46–50.",
+    "analysis.prototype.recentGlow.title": "Recent Glow",
+    "analysis.prototype.recentGlow.detail": "Brighten the final path and enlarge the latest-five dots.",
+    "analysis.prototype.recentBracket.title": "Recent Bracket",
+    "analysis.prototype.recentBracket.detail": "Label the latest five beneath the x-axis without shading.",
+    "analysis.prototype.fullFill.title": "Full Area Fill",
+    "analysis.prototype.fullFill.detail": "Lightly fill beneath the complete exact-score path.",
+    "analysis.prototype.recentFill.title": "Recent Area Fill",
+    "analysis.prototype.recentFill.detail": "Fill only beneath the exact path for matches 46–50.",
+    "analysis.prototype.quiet.title": "Quiet History",
+    "analysis.prototype.quiet.detail": "Fade earlier results so the latest five command attention.",
+    "analysis.prototype.resultPath.title": "Result-Colored Path",
+    "analysis.prototype.resultPath.detail": "Color each segment by the result of the match it reaches.",
+    "analysis.prototype.neutral.title": "Neutral Path",
+    "analysis.prototype.neutral.detail": "Use a quiet neutral line so result colors carry the story.",
+    "analysis.prototype.averages.title": "Average Context",
+    "analysis.prototype.averages.detail": "Compare the exact path with season and latest-five averages.",
     "analysis.replay.missionHeadAutonWhy": "A repeatable opening removes the first pressure point from every match.",
     "analysis.replay.missionHeadCenterWhy": "Center control protects robot points and legal yellow scoring late.",
     "analysis.replay.missionHeadYellowWhy": "Placed yellows only matter when ownership makes them score.",
@@ -1059,22 +1079,42 @@ Object.assign(translations.es, {
   "analysis.replay.pointHint": "Pasa el cursor o enfoca un punto para leer ese registro.",
   "analysis.replay.dateTurn": "{date}, un cambio de {value} puntos",
   "analysis.prototype.kicker": "Muestra de gráficas para desarrollo",
-  "analysis.prototype.title": "Elige cómo debe verse la temporada",
-  "analysis.prototype.detail": "Seis vistas de los mismos 50 partidos preparados. Cada punto conserva exactamente el mismo puntaje de alianza.",
-  "analysis.prototype.current": "Gráfica actual",
-  "analysis.prototype.hint": "Verde es victoria, coral es derrota, dorado es empate y el área sombreada marca los últimos cinco partidos.",
-  "analysis.prototype.exact.title": "Ruta de puntajes exactos",
-  "analysis.prototype.exact.detail": "Conecta cada puntaje de alianza guardado en orden de partido.",
-  "analysis.prototype.rolling.title": "Promedio móvil de cinco",
-  "analysis.prototype.rolling.detail": "Mantiene los puntos exactos y conecta el promedio de los últimos cinco partidos.",
-  "analysis.prototype.smooth.title": "Tendencia suave de temporada",
-  "analysis.prototype.smooth.detail": "Mantiene los puntos exactos sobre una curva de temporada suavizada.",
-  "analysis.prototype.range.title": "Rango de rendimiento",
-  "analysis.prototype.range.detail": "Muestra el promedio móvil dentro del rango bajo-alto de los cinco partidos recientes.",
-  "analysis.prototype.blocks.title": "Bloques de práctica",
-  "analysis.prototype.blocks.detail": "Agrupa partidos en bloques de cinco y compara el promedio de cada bloque.",
-  "analysis.prototype.stems.title": "Líneas de puntaje",
-  "analysis.prototype.stems.detail": "Une cada puntaje exacto con el promedio de temporada sin una línea en zigzag.",
+  "analysis.prototype.title": "Elige la gráfica de puntajes exactos",
+  "analysis.prototype.detail": "Doce vistas de los mismos 50 partidos preparados. Cada ruta conecta exactamente los mismos puntajes de alianza.",
+  "analysis.prototype.hint": "Verde es victoria, coral es derrota y dorado es empate. Los últimos cinco siempre son los partidos 46–50.",
+  "analysis.prototype.group.axes": "Ejes",
+  "analysis.prototype.group.recent": "Últimos cinco",
+  "analysis.prototype.group.emphasis": "Relleno y énfasis",
+  "analysis.prototype.group.context": "Contexto",
+  "analysis.prototype.axisX": "Número de partido de práctica",
+  "analysis.prototype.axisY": "Puntaje final de nuestra alianza (puntos)",
+  "analysis.prototype.latestFive": "Últimos cinco",
+  "analysis.prototype.seasonAverage": "Promedio de temporada",
+  "analysis.prototype.recentAverage": "Promedio de los últimos cinco",
+  "analysis.prototype.clean.title": "Ruta limpia",
+  "analysis.prototype.clean.detail": "Solo la ruta exacta en cian y los puntos coloreados por resultado.",
+  "analysis.prototype.axes.title": "Ejes etiquetados",
+  "analysis.prototype.axes.detail": "Añade ejes simples para número de partido y puntaje de alianza.",
+  "analysis.prototype.grid.title": "Cuadrícula de puntaje",
+  "analysis.prototype.grid.detail": "Añade guías horizontales de puntaje a los ejes etiquetados.",
+  "analysis.prototype.recentBand.title": "Banda reciente",
+  "analysis.prototype.recentBand.detail": "Sombrea el fondo detrás de los partidos 46–50.",
+  "analysis.prototype.recentGlow.title": "Brillo reciente",
+  "analysis.prototype.recentGlow.detail": "Ilumina la ruta final y agranda los puntos de los últimos cinco.",
+  "analysis.prototype.recentBracket.title": "Corchete reciente",
+  "analysis.prototype.recentBracket.detail": "Marca los últimos cinco bajo el eje horizontal sin sombreado.",
+  "analysis.prototype.fullFill.title": "Relleno de área completa",
+  "analysis.prototype.fullFill.detail": "Rellena ligeramente debajo de toda la ruta de puntajes exactos.",
+  "analysis.prototype.recentFill.title": "Relleno del área reciente",
+  "analysis.prototype.recentFill.detail": "Rellena solo debajo de la ruta exacta de los partidos 46–50.",
+  "analysis.prototype.quiet.title": "Historial discreto",
+  "analysis.prototype.quiet.detail": "Atenúa los resultados anteriores para destacar los últimos cinco.",
+  "analysis.prototype.resultPath.title": "Ruta coloreada por resultado",
+  "analysis.prototype.resultPath.detail": "Colorea cada segmento según el resultado del partido al que llega.",
+  "analysis.prototype.neutral.title": "Ruta neutral",
+  "analysis.prototype.neutral.detail": "Usa una línea neutral para que los colores de resultado cuenten la historia.",
+  "analysis.prototype.averages.title": "Contexto de promedios",
+  "analysis.prototype.averages.detail": "Compara la ruta exacta con el promedio de temporada y el de los últimos cinco.",
   "analysis.replay.missionHeadAutonWhy": "Una apertura repetible elimina el primer punto de presión de cada partido.",
   "analysis.replay.missionHeadCenterWhy": "El control del centro protege puntos de robots y amarillos legales al final.",
   "analysis.replay.missionHeadYellowWhy": "Los amarillos colocados solo importan cuando la propiedad los hace puntuar.",
@@ -1656,22 +1696,42 @@ Object.assign(translations["zh-CN"], {
   "analysis.replay.pointHint": "悬停或聚焦数据点即可查看该条记录。",
   "analysis.replay.dateTurn": "{date}，变化 {value} 分",
   "analysis.prototype.kicker": "开发模式图表样例",
-  "analysis.prototype.title": "选择赛季走势的呈现方式",
-  "analysis.prototype.detail": "同一组 50 场预设比赛的六种视图。每个圆点都使用完全相同的联盟得分。",
-  "analysis.prototype.current": "当前图表",
-  "analysis.prototype.hint": "绿色表示胜，珊瑚色表示负，金色表示平，阴影区域表示最近五场比赛。",
-  "analysis.prototype.exact.title": "精确得分路径",
-  "analysis.prototype.exact.detail": "按比赛顺序连接每一个已保存的联盟得分。",
-  "analysis.prototype.rolling.title": "五场移动平均",
-  "analysis.prototype.rolling.detail": "保留精确圆点，并连接最近五场比赛的平均值。",
-  "analysis.prototype.smooth.title": "平滑赛季趋势",
-  "analysis.prototype.smooth.detail": "在轻度平滑的赛季曲线上保留所有精确圆点。",
-  "analysis.prototype.range.title": "表现范围",
-  "analysis.prototype.range.detail": "在最近五场的最低至最高范围内显示移动平均。",
-  "analysis.prototype.blocks.title": "训练分组",
-  "analysis.prototype.blocks.detail": "每五场比赛分为一组，并比较各组平均分。",
-  "analysis.prototype.stems.title": "得分垂线",
-  "analysis.prototype.stems.detail": "将每个精确得分连接到赛季平均线，不使用锯齿折线。",
+  "analysis.prototype.title": "选择精确得分图",
+  "analysis.prototype.detail": "同一组 50 场预设比赛的十二种视图。每条路径都连接完全相同的联盟得分。",
+  "analysis.prototype.hint": "绿色表示胜，珊瑚色表示负，金色表示平。最近五场始终指第 46–50 场比赛。",
+  "analysis.prototype.group.axes": "坐标轴",
+  "analysis.prototype.group.recent": "最近五场",
+  "analysis.prototype.group.emphasis": "填充与强调",
+  "analysis.prototype.group.context": "对比信息",
+  "analysis.prototype.axisX": "练习赛场次",
+  "analysis.prototype.axisY": "本方联盟最终得分（分）",
+  "analysis.prototype.latestFive": "最近五场",
+  "analysis.prototype.seasonAverage": "赛季平均",
+  "analysis.prototype.recentAverage": "最近五场平均",
+  "analysis.prototype.clean.title": "简洁路径",
+  "analysis.prototype.clean.detail": "只显示青色精确路径和按赛果着色的圆点。",
+  "analysis.prototype.axes.title": "标注坐标轴",
+  "analysis.prototype.axes.detail": "增加稀疏刻度，并说明练习赛场次与联盟最终得分。",
+  "analysis.prototype.grid.title": "得分网格",
+  "analysis.prototype.grid.detail": "在坐标轴后增加淡化的横向得分参考线。",
+  "analysis.prototype.recentBand.title": "最近五场区间",
+  "analysis.prototype.recentBand.detail": "在第 46–50 场比赛后方加入低调的阴影区。",
+  "analysis.prototype.recentGlow.title": "最近五场高亮",
+  "analysis.prototype.recentGlow.detail": "放大最近五个圆点，并只提亮最后四段连线。",
+  "analysis.prototype.recentBracket.title": "最近五场括号",
+  "analysis.prototype.recentBracket.detail": "用坐标轴下方的括号标记第 46–50 场，不使用阴影。",
+  "analysis.prototype.fullFill.title": "完整面积填充",
+  "analysis.prototype.fullFill.detail": "轻微填充整条精确得分路径下方的区域。",
+  "analysis.prototype.recentFill.title": "最近五场面积",
+  "analysis.prototype.recentFill.detail": "只填充第 46–50 场精确路径下方的区域。",
+  "analysis.prototype.quiet.title": "弱化历史",
+  "analysis.prototype.quiet.detail": "淡化较早的路径和圆点，让最近五场保持完整饱和度。",
+  "analysis.prototype.resultPath.title": "赛果着色路径",
+  "analysis.prototype.resultPath.detail": "每段连线按后一场比赛的胜、负或平局着色。",
+  "analysis.prototype.neutral.title": "中性路径",
+  "analysis.prototype.neutral.detail": "使用克制的灰白连线，让彩色赛果圆点成为重点。",
+  "analysis.prototype.averages.title": "平均值对比",
+  "analysis.prototype.averages.detail": "将精确路径与赛季平均和最近五场平均分别对比。",
   "analysis.replay.missionHeadAutonWhy": "稳定的开局能消除每场比赛的第一个压力点。",
   "analysis.replay.missionHeadCenterWhy": "控制中心能在末段保护机器人分和有效黄桩分。",
   "analysis.replay.missionHeadYellowWhy": "黄桩只有在归属正确时才真正得分。",
@@ -6400,36 +6460,6 @@ function renderReplayTimeline(mode, records, getter, trajectory, story) {
     </section>`;
 }
 
-function centeredAverageValues(values, windowSize = 7) {
-  const radius = Math.floor(windowSize / 2);
-  return values.map((_, index) => average(values.slice(
-    Math.max(0, index - radius),
-    Math.min(values.length, index + radius + 1)
-  )));
-}
-
-function rollingWindowValues(values, windowSize, getter) {
-  return values.map((_, index) => getter(values.slice(Math.max(0, index - windowSize + 1), index + 1)));
-}
-
-function smoothSvgPath(coordinates) {
-  if (!coordinates.length) return "";
-  if (coordinates.length === 1) return `M ${coordinates[0].x.toFixed(1)} ${coordinates[0].y.toFixed(1)}`;
-  let path = `M ${coordinates[0].x.toFixed(1)} ${coordinates[0].y.toFixed(1)}`;
-  for (let index = 0; index < coordinates.length - 1; index += 1) {
-    const previous = coordinates[Math.max(0, index - 1)];
-    const current = coordinates[index];
-    const next = coordinates[index + 1];
-    const after = coordinates[Math.min(coordinates.length - 1, index + 2)];
-    const controlOneX = current.x + (next.x - previous.x) / 6;
-    const controlOneY = current.y + (next.y - previous.y) / 6;
-    const controlTwoX = next.x - (after.x - current.x) / 6;
-    const controlTwoY = next.y - (after.y - current.y) / 6;
-    path += ` C ${controlOneX.toFixed(1)} ${controlOneY.toFixed(1)}, ${controlTwoX.toFixed(1)} ${controlTwoY.toFixed(1)}, ${next.x.toFixed(1)} ${next.y.toFixed(1)}`;
-  }
-  return path;
-}
-
 function graphPrototypeRecords() {
   if (!graphPrototypeDataset) graphPrototypeDataset = buildJudgeDataset().filter(isHeadMatch);
   return graphPrototypeDataset;
@@ -6439,99 +6469,168 @@ function graphPrototypeModel() {
   const ordered = graphPrototypeRecords().slice().sort((a, b) => recordTimestamp(a) - recordTimestamp(b));
   const scores = ordered.map(record => numericValue(record.ourScore));
   const width = 720;
-  const height = 250;
-  const padX = 34;
-  const padY = 26;
+  const height = 300;
+  const padLeft = 74;
+  const padRight = 24;
+  const padTop = 24;
+  const padBottom = 62;
   const rawMin = Math.min(...scores);
   const rawMax = Math.max(...scores);
-  const padding = Math.max(8, (rawMax - rawMin) * .08);
-  const min = rawMin - padding;
-  const max = rawMax + padding;
-  const range = Math.max(max - min, 1);
-  const step = (width - padX * 2) / Math.max(scores.length - 1, 1);
-  const yFor = score => height - padY - ((score - min) / range) * (height - padY * 2);
-  const coordinatesFor = values => values.map((score, index) => ({ x: padX + index * step, y: yFor(score), score }));
-  const coordinates = coordinatesFor(scores);
+  let min = Math.floor(rawMin / 25) * 25;
+  let max = Math.ceil(rawMax / 25) * 25;
+  if (min === rawMin) min -= 25;
+  if (max === rawMax) max += 25;
+  const range = Math.max(max - min, 25);
+  const plotBottom = height - padBottom;
+  const plotRight = width - padRight;
+  const step = (plotRight - padLeft) / Math.max(scores.length - 1, 1);
+  const yFor = score => plotBottom - ((score - min) / range) * (plotBottom - padTop);
+  const coordinates = scores.map((score, index) => ({ x: padLeft + index * step, y: yFor(score), score }));
   const averageScore = average(scores);
   const recentStart = Math.max(0, scores.length - 5);
-  const recentBandStart = Math.max(padX, coordinates[recentStart].x - step / 2);
-  const recentBandEnd = Math.min(width - padX, coordinates.at(-1).x + step / 2);
+  const recentAverage = average(scores.slice(recentStart));
+  const recentBandStart = Math.max(padLeft, coordinates[recentStart].x - step / 2);
+  const recentBandEnd = plotRight;
+  const yTicks = [];
+  for (let value = min; value <= max; value += 25) yTicks.push(value);
+  const xTicks = [0, 9, 19, 29, 39, 49].filter(index => index < scores.length);
   return {
     ordered,
     scores,
     width,
     height,
-    padX,
-    padY,
+    padLeft,
+    padRight,
+    padTop,
+    padBottom,
+    plotBottom,
+    plotRight,
     step,
     yFor,
-    coordinatesFor,
     coordinates,
+    min,
+    max,
+    yTicks,
+    xTicks,
     averageScore,
     averageY: yFor(averageScore),
+    recentAverage,
+    recentAverageY: yFor(recentAverage),
     recentStart,
     recentBandStart,
     recentBandWidth: Math.max(0, recentBandEnd - recentBandStart)
   };
 }
 
-function prototypeDots(model) {
+function graphPrototypePointString(points) {
+  return points.map(point => `${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(" ");
+}
+
+function prototypeDots(model, type) {
   return model.coordinates.map((point, index) => {
     const record = model.ordered[index];
     const resultClass = record.result || "saved";
     const label = replayPointLabel("head", record, index);
+    const isRecent = index >= model.recentStart;
+    const emphasisClass = type === "recentGlow" && isRecent
+      ? " recent-glow-point"
+      : type === "quiet" && !isRecent
+        ? " quiet-point"
+        : "";
     return `
-      <g class="replay-chart-point prototype-point ${escapeHtml(resultClass)}${index >= model.recentStart ? " recent" : ""}" transform="translate(${point.x.toFixed(1)} ${point.y.toFixed(1)})" tabindex="0" role="button" data-replay-point="${escapeHtml(label)}" aria-label="${escapeHtml(label)}">
+      <g class="replay-chart-point prototype-point ${escapeHtml(resultClass)}${emphasisClass}" transform="translate(${point.x.toFixed(1)} ${point.y.toFixed(1)})" tabindex="0" role="button" data-replay-point="${escapeHtml(label)}" aria-label="${escapeHtml(label)}">
         <circle class="replay-point-hit" r="14"></circle>
-        <circle class="replay-point-ring" r="${index >= model.recentStart ? "7" : "5"}"></circle>
+        <circle class="replay-point-ring" r="${type === "recentGlow" && isRecent ? "8" : "5"}"></circle>
         <circle class="replay-point-core" r="3"></circle>
       </g>`;
   }).join("");
 }
 
+function graphPrototypeAxes(model, includeGrid = false) {
+  const yTicks = model.yTicks.map(value => {
+    const y = model.yFor(value);
+    return `${includeGrid ? `<line class="graph-prototype-gridline" x1="${model.padLeft}" y1="${y.toFixed(1)}" x2="${model.plotRight}" y2="${y.toFixed(1)}"></line>` : ""}
+      <line class="graph-prototype-tick" x1="${model.padLeft - 5}" y1="${y.toFixed(1)}" x2="${model.padLeft}" y2="${y.toFixed(1)}"></line>
+      <text class="graph-prototype-tick-label" x="${model.padLeft - 10}" y="${(y + 4).toFixed(1)}" text-anchor="end">${value}</text>`;
+  }).join("");
+  const xTicks = model.xTicks.map(index => {
+    const x = model.coordinates[index].x;
+    return `<line class="graph-prototype-tick" x1="${x.toFixed(1)}" y1="${model.plotBottom}" x2="${x.toFixed(1)}" y2="${model.plotBottom + 5}"></line>
+      <text class="graph-prototype-tick-label" x="${x.toFixed(1)}" y="${model.plotBottom + 20}" text-anchor="middle">${index + 1}</text>`;
+  }).join("");
+  const centerY = (model.padTop + model.plotBottom) / 2;
+  return `${yTicks}${xTicks}
+    <line class="graph-prototype-axis" x1="${model.padLeft}" y1="${model.padTop}" x2="${model.padLeft}" y2="${model.plotBottom}"></line>
+    <line class="graph-prototype-axis" x1="${model.padLeft}" y1="${model.plotBottom}" x2="${model.plotRight}" y2="${model.plotBottom}"></line>
+    <text class="graph-prototype-axis-title" x="${((model.padLeft + model.plotRight) / 2).toFixed(1)}" y="${model.height - 8}" text-anchor="middle">${escapeHtml(t("analysis.prototype.axisX"))}</text>
+    <text class="graph-prototype-axis-title" x="17" y="${centerY.toFixed(1)}" text-anchor="middle" transform="rotate(-90 17 ${centerY.toFixed(1)})">${escapeHtml(t("analysis.prototype.axisY"))}</text>`;
+}
+
 function graphPrototypePlot(type, model) {
-  const pointString = model.coordinates.map(point => `${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(" ");
-  const rolling = model.coordinatesFor(trailingAverageValues(model.scores));
-  const rollingString = rolling.map(point => `${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(" ");
-  const base = `
-    <rect class="graph-prototype-recent" x="${model.recentBandStart.toFixed(1)}" y="${model.padY}" width="${model.recentBandWidth.toFixed(1)}" height="${model.height - model.padY * 2}"></rect>
-    <line class="graph-prototype-average" x1="${model.padX}" y1="${model.averageY.toFixed(1)}" x2="${model.width - model.padX}" y2="${model.averageY.toFixed(1)}"></line>`;
-  if (type === "exact") {
-    return `${base}<polyline class="graph-prototype-line exact" points="${pointString}"></polyline>`;
+  const pointString = graphPrototypePointString(model.coordinates);
+  const recentPoints = model.coordinates.slice(model.recentStart);
+  const recentString = graphPrototypePointString(recentPoints);
+  const baseline = model.plotBottom;
+  const axes = type === "clean" ? "" : graphPrototypeAxes(model, type === "grid");
+  let treatment = "";
+
+  if (type === "recentBand") {
+    treatment += `<rect class="graph-prototype-recent-band" x="${model.recentBandStart.toFixed(1)}" y="${model.padTop}" width="${model.recentBandWidth.toFixed(1)}" height="${model.plotBottom - model.padTop}"></rect>`;
   }
-  if (type === "rolling") {
-    return `${base}<polyline class="graph-prototype-line rolling" points="${rollingString}"></polyline>`;
+  if (type === "fullFill") {
+    treatment += `<polygon class="graph-prototype-fill full-fill" points="${model.padLeft},${baseline} ${pointString} ${model.plotRight},${baseline}"></polygon>`;
   }
-  if (type === "smooth") {
-    const smoothCoordinates = model.coordinatesFor(centeredAverageValues(model.scores));
-    return `${base}<path class="graph-prototype-line smooth" d="${smoothSvgPath(smoothCoordinates)}"></path>`;
+  if (type === "recentFill") {
+    treatment += `<polygon class="graph-prototype-fill recent-fill" points="${recentPoints[0].x.toFixed(1)},${baseline} ${recentString} ${model.plotRight},${baseline}"></polygon>`;
   }
-  if (type === "range") {
-    const low = model.coordinatesFor(rollingWindowValues(model.scores, 5, values => Math.min(...values)));
-    const high = model.coordinatesFor(rollingWindowValues(model.scores, 5, values => Math.max(...values)));
-    const rangePoints = [...high, ...low.slice().reverse()].map(point => `${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(" ");
-    return `${base}<polygon class="graph-prototype-range" points="${rangePoints}"></polygon><polyline class="graph-prototype-line rolling" points="${rollingString}"></polyline>`;
-  }
-  if (type === "blocks") {
-    const blocks = [];
-    for (let start = 0; start < model.scores.length; start += 5) {
-      const end = Math.min(model.scores.length - 1, start + 4);
-      const score = average(model.scores.slice(start, end + 1));
-      blocks.push({ startX: model.coordinates[start].x, endX: model.coordinates[end].x, y: model.yFor(score) });
+
+  if (type === "resultPath") {
+    treatment += model.coordinates.slice(1).map((point, index) => {
+      const previous = model.coordinates[index];
+      const resultClass = model.ordered[index + 1].result || "saved";
+      return `<line class="graph-prototype-result-segment ${escapeHtml(resultClass)}" x1="${previous.x.toFixed(1)}" y1="${previous.y.toFixed(1)}" x2="${point.x.toFixed(1)}" y2="${point.y.toFixed(1)}"></line>`;
+    }).join("");
+  } else if (type === "quiet") {
+    const history = model.coordinates.slice(0, model.recentStart + 1);
+    treatment += `<polyline class="graph-prototype-line exact quiet-history" points="${graphPrototypePointString(history)}"></polyline>
+      <polyline class="graph-prototype-line exact recent-path" points="${recentString}"></polyline>`;
+  } else {
+    const lineClass = type === "neutral" ? " neutral" : "";
+    treatment += `<polyline class="graph-prototype-line exact${lineClass}" points="${pointString}"></polyline>`;
+    if (type === "recentGlow") {
+      treatment += `<polyline class="graph-prototype-line recent-glow" points="${recentString}"></polyline>`;
     }
-    const connectors = blocks.slice(1).map((block, index) => `<line class="graph-prototype-block-connector" x1="${blocks[index].endX.toFixed(1)}" y1="${blocks[index].y.toFixed(1)}" x2="${block.startX.toFixed(1)}" y2="${block.y.toFixed(1)}"></line>`).join("");
-    const lines = blocks.map(block => `<line class="graph-prototype-block" x1="${block.startX.toFixed(1)}" y1="${block.y.toFixed(1)}" x2="${block.endX.toFixed(1)}" y2="${block.y.toFixed(1)}"></line>`).join("");
-    return `${base}${connectors}${lines}`;
   }
-  const stems = model.coordinates.map(point => `<line class="graph-prototype-stem" x1="${point.x.toFixed(1)}" y1="${model.averageY.toFixed(1)}" x2="${point.x.toFixed(1)}" y2="${point.y.toFixed(1)}"></line>`).join("");
-  return `${base}${stems}`;
+
+  if (type === "recentBracket") {
+    const startX = recentPoints[0].x;
+    const endX = recentPoints.at(-1).x;
+    const bracketY = model.plotBottom + 31;
+    treatment += `<path class="graph-prototype-bracket" d="M ${startX.toFixed(1)} ${bracketY - 6} V ${bracketY} H ${endX.toFixed(1)} V ${bracketY - 6}"></path>
+      <text class="graph-prototype-bracket-label" x="${((startX + endX) / 2).toFixed(1)}" y="${bracketY + 14}" text-anchor="middle">${escapeHtml(t("analysis.prototype.latestFive"))}</text>`;
+  }
+
+  if (type === "averages") {
+    const labelX = model.plotRight - 4;
+    treatment += `<line class="graph-prototype-reference season" x1="${model.padLeft}" y1="${model.averageY.toFixed(1)}" x2="${model.plotRight}" y2="${model.averageY.toFixed(1)}"></line>
+      <text class="graph-prototype-reference-label season" x="${labelX}" y="${(model.averageY - 6).toFixed(1)}" text-anchor="end">${escapeHtml(t("analysis.prototype.seasonAverage"))} ${formatAnalysisNumber(model.averageScore)}</text>
+      <line class="graph-prototype-reference recent" x1="${recentPoints[0].x.toFixed(1)}" y1="${model.recentAverageY.toFixed(1)}" x2="${model.plotRight}" y2="${model.recentAverageY.toFixed(1)}"></line>
+      <text class="graph-prototype-reference-label recent" x="${labelX}" y="${(model.recentAverageY - 6).toFixed(1)}" text-anchor="end">${escapeHtml(t("analysis.prototype.recentAverage"))} ${formatAnalysisNumber(model.recentAverage)}</text>`;
+  }
+
+  return `${axes}${treatment}`;
 }
 
 function renderGraphPrototypeSampler() {
   if (!isDevMode) return "";
   const model = graphPrototypeModel();
-  const prototypes = ["exact", "rolling", "smooth", "range", "blocks", "stems"];
-  const dots = prototypeDots(model);
+  const groups = [
+    { key: "axes", types: ["clean", "axes", "grid"] },
+    { key: "recent", types: ["recentBand", "recentGlow", "recentBracket"] },
+    { key: "emphasis", types: ["fullFill", "recentFill", "quiet"] },
+    { key: "context", types: ["resultPath", "neutral", "averages"] }
+  ];
+  let prototypeNumber = 0;
   return `
     <section class="graph-prototype-sampler" data-graph-prototype-sampler>
       <header>
@@ -6540,23 +6639,29 @@ function renderGraphPrototypeSampler() {
         <p>${escapeHtml(t("analysis.prototype.detail"))}</p>
         <small>${escapeHtml(t("analysis.prototype.hint"))}</small>
       </header>
-      <div class="graph-prototype-grid">
-        ${prototypes.map((type, index) => `
-          <article class="graph-prototype${type === "rolling" ? " current" : ""}" data-graph-prototype="${index + 1}">
-            <div class="graph-prototype-heading">
-              <span>0${index + 1}</span>
-              <div><h5>${escapeHtml(t(`analysis.prototype.${type}.title`))}</h5><p>${escapeHtml(t(`analysis.prototype.${type}.detail`))}</p></div>
-              ${type === "rolling" ? `<small>${escapeHtml(t("analysis.prototype.current"))}</small>` : ""}
-            </div>
-            <div class="replay-chart-shell graph-prototype-chart-shell">
-              <svg class="graph-prototype-chart" viewBox="0 0 ${model.width} ${model.height}" role="img" aria-label="${escapeHtml(t(`analysis.prototype.${type}.title`))}">
-                ${graphPrototypePlot(type, model)}
-                ${dots}
-              </svg>
-              <p class="replay-point-readout" data-replay-point-readout>${escapeHtml(t("analysis.replay.pointHint"))}</p>
-            </div>
-          </article>`).join("")}
-      </div>
+      ${groups.map(group => `
+        <section class="graph-prototype-group" aria-labelledby="graph-prototype-group-${group.key}">
+          <h5 id="graph-prototype-group-${group.key}" class="graph-prototype-group-title">${escapeHtml(t(`analysis.prototype.group.${group.key}`))}</h5>
+          <div class="graph-prototype-grid">
+            ${group.types.map(type => {
+              prototypeNumber += 1;
+              return `
+                <article class="graph-prototype" data-graph-prototype="${prototypeNumber}" data-graph-prototype-type="${type}">
+                  <div class="graph-prototype-heading">
+                    <span>${String(prototypeNumber).padStart(2, "0")}</span>
+                    <div><h5>${escapeHtml(t(`analysis.prototype.${type}.title`))}</h5><p>${escapeHtml(t(`analysis.prototype.${type}.detail`))}</p></div>
+                  </div>
+                  <div class="replay-chart-shell graph-prototype-chart-shell">
+                    <svg class="graph-prototype-chart" viewBox="0 0 ${model.width} ${model.height}" role="img" aria-label="${escapeHtml(t(`analysis.prototype.${type}.title`))}">
+                      ${graphPrototypePlot(type, model)}
+                      ${prototypeDots(model, type)}
+                    </svg>
+                    <p class="replay-point-readout" data-replay-point-readout>${escapeHtml(t("analysis.replay.pointHint"))}</p>
+                  </div>
+                </article>`;
+            }).join("")}
+          </div>
+        </section>`).join("")}
     </section>`;
 }
 
