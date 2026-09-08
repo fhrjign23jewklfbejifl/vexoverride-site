@@ -459,23 +459,6 @@ body.analysis-active .score-app {
   stroke-dashoffset: 1;
 }
 
-.replay-chart-projection {
-  fill: none;
-  stroke: #66d9d0;
-  stroke-width: 2.5;
-  stroke-linecap: round;
-  vector-effect: non-scaling-stroke;
-  stroke-dasharray: 8 8;
-  opacity: 0;
-}
-
-.replay-chart-projection-label {
-  fill: #9fece6;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0;
-}
-
 .replay-recent-bracket {
   fill: none;
   stroke: rgba(132, 241, 94, .78);
@@ -593,11 +576,6 @@ body.analysis-active .score-app {
   height: 3px;
   border-radius: 2px;
   background: #66d9d0;
-}
-
-.replay-chart-legend .projection {
-  height: 0;
-  border-top: 2px dashed #66d9d0;
 }
 
 .replay-chart-legend .recent {
@@ -1138,10 +1116,6 @@ body.analysis-active .score-app {
   animation: replay-line-draw 1.25s cubic-bezier(.2, .8, .2, 1) .18s forwards;
 }
 
-.replay-reveal.is-visible .replay-chart-projection {
-  animation: replay-projection-arrive .5s ease 1.35s forwards;
-}
-
 .replay-reveal.is-visible .replay-chart-point {
   animation: replay-point-arrive .42s ease .72s forwards;
 }
@@ -1169,11 +1143,6 @@ body.analysis-active .score-app {
 @keyframes replay-point-arrive {
   from { opacity: 0; }
   to { opacity: 1; }
-}
-
-@keyframes replay-projection-arrive {
-  from { opacity: 0; }
-  to { opacity: .82; }
 }
 
 @keyframes replay-line-grow {
@@ -1371,11 +1340,6 @@ body.analysis-active .score-app {
 
   .replay-chart-rolling {
     stroke-dashoffset: 0;
-    animation: none !important;
-  }
-
-  .replay-chart-projection {
-    opacity: .82;
     animation: none !important;
   }
 

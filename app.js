@@ -15,7 +15,7 @@ const JUDGE_MATCH_STORE_KEY = "vexOverrideJudgeMatches:v1";
 const JUDGE_PROFILE_STORE_KEY = "vexOverrideJudgeProfile:v1";
 const JUDGE_COMPETITION_STORE_KEY = "vexOverrideJudgeCompetitionData:v1";
 const JUDGE_DATASET_VERSION_STORE_KEY = "vexOverrideJudgeDatasetVersion:v1";
-const JUDGE_DATASET_VERSION = "4330p-season-replay-20260907-v5";
+const JUDGE_DATASET_VERSION = "4330p-season-replay-20260908-v6";
 const PROXY_URL_STORE_KEY = "vexOverrideDataProxyUrl:v1";
 const SEASON_SKILLS_STORE_KEY = "vexOverrideSeasonSkills:v1";
 const LANGUAGE_STORE_KEY = "vexOverrideLanguage:v1";
@@ -439,7 +439,7 @@ const translations = {
     "analysis.replay.legendSkillsDots": "Dots: saved Skills scores",
     "analysis.replay.legendTrend": "Gray line: exact results",
     "analysis.replay.legendRolling": "Cyan line: 5-record average",
-    "analysis.replay.legendProjection": "Dotted line: next 5 practice projection",
+    "analysis.replay.legendMarginRolling": "Cyan line: 10-match average margin",
     "analysis.replay.legendRecent": "Bracket: latest {count}",
     "analysis.replay.axisHeadX": "Practice match number",
     "analysis.replay.axisHeadY": "Our alliance final score (points)",
@@ -447,7 +447,6 @@ const translations = {
     "analysis.replay.axisSkillsX": "Practice run number",
     "analysis.replay.axisSkillsY": "Skills run score (points)",
     "analysis.replay.latestBracket": "Latest {count}",
-    "analysis.replay.projectionLabel": "Projected next 5 practices",
     "analysis.replay.startingLevel": "Starting level",
     "analysis.replay.currentLevel": "Current level",
     "analysis.replay.biggestTurn": "Biggest turn",
@@ -1034,7 +1033,7 @@ Object.assign(translations.es, {
   "analysis.replay.legendSkillsDots": "Puntos: puntajes de Skills guardados",
   "analysis.replay.legendTrend": "Línea gris: resultados exactos",
   "analysis.replay.legendRolling": "Línea cian: promedio de 5 registros",
-  "analysis.replay.legendProjection": "Línea punteada: proyección de las próximas 5 prácticas",
+  "analysis.replay.legendMarginRolling": "Línea cian: margen promedio de 10 partidos",
   "analysis.replay.legendRecent": "Corchete: últimos {count}",
   "analysis.replay.axisHeadX": "Número de partido de práctica",
   "analysis.replay.axisHeadY": "Puntaje final de nuestra alianza (puntos)",
@@ -1042,7 +1041,6 @@ Object.assign(translations.es, {
   "analysis.replay.axisSkillsX": "Número de intento de práctica",
   "analysis.replay.axisSkillsY": "Puntaje del intento de Skills (puntos)",
   "analysis.replay.latestBracket": "Últimos {count}",
-  "analysis.replay.projectionLabel": "Proyección de las próximas 5 prácticas",
   "analysis.replay.startingLevel": "Nivel inicial",
   "analysis.replay.currentLevel": "Nivel actual",
   "analysis.replay.biggestTurn": "Mayor giro",
@@ -1626,7 +1624,7 @@ Object.assign(translations["zh-CN"], {
   "analysis.replay.legendSkillsDots": "圆点：已保存的技能赛得分",
   "analysis.replay.legendTrend": "灰线：每次准确结果",
   "analysis.replay.legendRolling": "青色线：5 次记录平均值",
-  "analysis.replay.legendProjection": "虚线：未来 5 次训练预测",
+  "analysis.replay.legendMarginRolling": "青色线：10 场比赛平均分差",
   "analysis.replay.legendRecent": "括号：最近 {count} 场",
   "analysis.replay.axisHeadX": "练习赛场次",
   "analysis.replay.axisHeadY": "本方联盟最终得分（分）",
@@ -1634,7 +1632,6 @@ Object.assign(translations["zh-CN"], {
   "analysis.replay.axisSkillsX": "练习运行次数",
   "analysis.replay.axisSkillsY": "技能赛运行得分（分）",
   "analysis.replay.latestBracket": "最近 {count} 场",
-  "analysis.replay.projectionLabel": "未来 5 次训练预测",
   "analysis.replay.startingLevel": "起点水平",
   "analysis.replay.currentLevel": "当前水平",
   "analysis.replay.biggestTurn": "最大转折",
@@ -4314,8 +4311,9 @@ function createJudgeHeadCandidate(salt) {
       const yellowAdvantage = ["top", "right", "bottom", "left"]
         .reduce((total, zone) => total + seed[`${zone}Y`] * POINTS.yellowPin, 0);
       const baseAdvantage = autonAdvantage + yellowAdvantage;
-      const targetMargin = [3, 8, 13, 18, 8, 13][(index * 3 + Math.floor(salt / 7)) % 6];
-      const targetWinMargin = [2, 7, 12, 17, 7, 12, 22][(index * 5 + salt) % 7];
+      const marginVariation = (seededRandom(salt + index * 13.1) - .5) * 4;
+      const targetMargin = Math.max(3, 19 - progress * 14 + marginVariation);
+      const targetWinMargin = Math.min(24, 2 + progress * 20 + marginVariation);
       const opponentOuterTotal = preparedLosses.has(index)
         ? ourOuterTotal + Math.ceil((baseAdvantage + targetMargin) / POINTS.alliancePin)
         : Math.max(4, ourOuterTotal + Math.floor((baseAdvantage - targetWinMargin) / POINTS.alliancePin));
@@ -4367,10 +4365,13 @@ function buildJudgeDataset() {
     const recommendation = rankedHeadRecommendation(records);
     const trajectory = classifySavedTrajectory(records, record => record.ourScore);
     const outcomes = new Set(records.map(record => record.result));
-    const candidate = { records, recommendation, trajectory };
+    const margins = records.map(record => numericValue(record.ourScore) - numericValue(record.opponentScore));
+    const marginGrowth = average(margins.slice(-10)) - average(margins.slice(0, 10));
+    const candidate = { records, recommendation, trajectory, marginGrowth };
     if (!headFallback && recommendation.recommendationKey === "headHoldAuton") headFallback = candidate;
     if (recommendation.recommendationKey === "headHoldAuton"
       && trajectory.shape === "recovery"
+      && marginGrowth >= 10
       && ["win", "loss", "tie"].every(outcome => outcomes.has(outcome))) {
       headFallback = candidate;
       break;
@@ -4396,6 +4397,7 @@ function buildJudgeDataset() {
   if (!headFallback || !skillsFallback
     || headFallback.recommendation.recommendationKey !== "headHoldAuton"
     || headFallback.trajectory.shape !== "recovery"
+    || headFallback.marginGrowth < 10
     || judgeOutcomeCounts?.win !== 34
     || judgeOutcomeCounts?.loss !== 15
     || judgeOutcomeCounts?.tie !== 1
@@ -6334,19 +6336,6 @@ function rollingAverageSeries(values, windowSize = 5) {
   return values.map((_, index) => average(values.slice(Math.max(0, index - windowSize + 1), index + 1)));
 }
 
-function projectedSeries(values, count = 5) {
-  const sample = values.slice(-10);
-  if (sample.length < 2) return [];
-  const xMean = (sample.length - 1) / 2;
-  const yMean = average(sample);
-  const denominator = sample.reduce((total, _, index) => total + Math.pow(index - xMean, 2), 0);
-  const slope = denominator
-    ? sample.reduce((total, value, index) => total + (index - xMean) * (value - yMean), 0) / denominator
-    : 0;
-  const intercept = yMean - slope * xMean;
-  return Array.from({ length: count }, (_, index) => Math.max(0, intercept + slope * (sample.length + index)));
-}
-
 function signedAnalysisNumber(value) {
   const formatted = formatAnalysisNumber(value);
   return Number(value) > 0 ? `+${formatted}` : formatted;
@@ -6355,9 +6344,8 @@ function signedAnalysisNumber(value) {
 function renderReplayTimeline(mode, records, getter, trajectory) {
   const ordered = records.slice().sort((a, b) => recordTimestamp(a) - recordTimestamp(b));
   const points = ordered.map(record => numericValue(getter(record)));
-  const rolling = rollingAverageSeries(points);
-  const showProjection = isJudgeMode && mode === "head" && headTrajectoryMetric === "score" && points.length >= 10;
-  const projection = showProjection ? projectedSeries(rolling) : [];
+  const isMargin = mode === "head" && headTrajectoryMetric === "margin";
+  const rolling = rollingAverageSeries(points, isMargin ? 10 : 5);
   const width = 1000;
   const height = 420;
   const padLeft = 96;
@@ -6366,10 +6354,9 @@ function renderReplayTimeline(mode, records, getter, trajectory) {
   const padBottom = 104;
   const plotRight = width - padRight;
   const plotBottom = height - padBottom;
-  const domainValues = [...points, ...projection];
+  const domainValues = points;
   const rawMin = Math.min(...domainValues);
   const rawMax = Math.max(...domainValues);
-  const isMargin = mode === "head" && headTrajectoryMetric === "margin";
   let min = Math.floor(rawMin / 25) * 25;
   let max = Math.ceil(rawMax / 25) * 25;
   if (!isMargin) min = Math.max(0, min);
@@ -6384,21 +6371,13 @@ function renderReplayTimeline(mode, records, getter, trajectory) {
     max += 25;
   }
   const range = Math.max(max - min, 25);
-  const slotCount = Math.max(1, points.length + projection.length);
+  const slotCount = Math.max(1, points.length);
   const step = slotCount === 1 ? 0 : (plotRight - padLeft) / (slotCount - 1);
   const yFor = score => plotBottom - ((score - min) / range) * (plotBottom - padTop);
   const coordinates = points.map((score, index) => ({ x: padLeft + index * step, y: yFor(score), score }));
   const pathPoints = coordinates.map(point => `${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(" ");
   const rollingCoordinates = rolling.map((score, index) => ({ x: padLeft + index * step, y: yFor(score), score }));
   const rollingPathPoints = rollingCoordinates.map(point => `${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(" ");
-  const projectionCoordinates = projection.map((score, index) => ({
-    x: padLeft + (points.length + index) * step,
-    y: yFor(score),
-    score
-  }));
-  const projectionPathPoints = projection.length
-    ? [rollingCoordinates.at(-1), ...projectionCoordinates].map(point => `${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(" ")
-    : "";
   const recentStart = Math.max(0, points.length - 5);
   const recentCount = points.length - recentStart;
   const bracketStart = points.length === 1 ? Math.max(padLeft, coordinates[0].x - 18) : coordinates[recentStart].x;
@@ -6456,10 +6435,8 @@ function renderReplayTimeline(mode, records, getter, trajectory) {
             <line class="replay-axis" x1="${padLeft}" y1="${plotBottom}" x2="${plotRight}" y2="${plotBottom}"></line>
             <text class="replay-axis-title" x="${((padLeft + plotRight) / 2).toFixed(1)}" y="${height - 8}" text-anchor="middle">${escapeHtml(t(axisXKey))}</text>
             <text class="replay-axis-title" x="20" y="${axisCenterY.toFixed(1)}" text-anchor="middle" transform="rotate(-90 20 ${axisCenterY.toFixed(1)})">${escapeHtml(t(axisYKey))}</text>
-            <polyline class="replay-chart-line" points="${pathPoints}"></polyline>
+            ${isMargin ? "" : `<polyline class="replay-chart-line" points="${pathPoints}"></polyline>`}
             <polyline class="replay-chart-rolling" pathLength="1" points="${rollingPathPoints}"></polyline>
-            ${projection.length ? `<polyline class="replay-chart-projection" points="${projectionPathPoints}"></polyline>
-              <text class="replay-chart-projection-label" x="${projectionCoordinates.at(-1).x.toFixed(1)}" y="${Math.max(padTop + 14, projectionCoordinates.at(-1).y - 12).toFixed(1)}" text-anchor="end">${escapeHtml(t("analysis.replay.projectionLabel"))}</text>` : ""}
             ${dots}
             <path class="replay-recent-bracket" d="M ${bracketStart.toFixed(1)} ${bracketY - 7} V ${bracketY} H ${bracketEnd.toFixed(1)} V ${bracketY - 7}"></path>
             <text class="replay-recent-bracket-label" x="${((bracketStart + bracketEnd) / 2).toFixed(1)}" y="${bracketY + 18}" text-anchor="middle">${escapeHtml(t("analysis.replay.latestBracket", { count: recentCount }))}</text>
@@ -6467,9 +6444,8 @@ function renderReplayTimeline(mode, records, getter, trajectory) {
         </div>
         <div class="replay-chart-legend" aria-label="${escapeHtml(t("analysis.scoreTrend"))}">
           <span><i class="dots"></i>${escapeHtml(t(mode === "skills" ? "analysis.replay.legendSkillsDots" : isMargin ? "analysis.replay.legendMarginDots" : "analysis.replay.legendDots"))}</span>
-          <span><i class="exact"></i>${escapeHtml(t("analysis.replay.legendTrend"))}</span>
-          <span><i class="trend"></i>${escapeHtml(t("analysis.replay.legendRolling"))}</span>
-          ${projection.length ? `<span><i class="projection"></i>${escapeHtml(t("analysis.replay.legendProjection"))}</span>` : ""}
+          ${isMargin ? "" : `<span><i class="exact"></i>${escapeHtml(t("analysis.replay.legendTrend"))}</span>`}
+          <span><i class="trend"></i>${escapeHtml(t(isMargin ? "analysis.replay.legendMarginRolling" : "analysis.replay.legendRolling"))}</span>
           <span><i class="recent"></i>${escapeHtml(t("analysis.replay.legendRecent", { count: recentCount }))}</span>
         </div>
         <p class="replay-point-readout" data-replay-point-readout>${escapeHtml(t("analysis.replay.pointHint"))}</p>
