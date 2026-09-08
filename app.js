@@ -15,7 +15,7 @@ const JUDGE_MATCH_STORE_KEY = "vexOverrideJudgeMatches:v1";
 const JUDGE_PROFILE_STORE_KEY = "vexOverrideJudgeProfile:v1";
 const JUDGE_COMPETITION_STORE_KEY = "vexOverrideJudgeCompetitionData:v1";
 const JUDGE_DATASET_VERSION_STORE_KEY = "vexOverrideJudgeDatasetVersion:v1";
-const JUDGE_DATASET_VERSION = "4330p-season-replay-20260907-v3";
+const JUDGE_DATASET_VERSION = "4330p-season-replay-20260907-v5";
 const PROXY_URL_STORE_KEY = "vexOverrideDataProxyUrl:v1";
 const SEASON_SKILLS_STORE_KEY = "vexOverrideSeasonSkills:v1";
 const LANGUAGE_STORE_KEY = "vexOverrideLanguage:v1";
@@ -64,6 +64,7 @@ let profile = loadProfile();
 let activeMode = "head";
 let analysisRange = "all";
 let analysisMode = "head";
+let headTrajectoryMetric = "score";
 const analysisDisclosureState = {
   head: { evidence: false, correlation: false },
   skills: { evidence: false, correlation: false }
@@ -429,16 +430,24 @@ const translations = {
     "analysis.replay.chapterAnatomy": "Match Breakdown",
     "analysis.replay.chapterSkillsAnatomy": "Run Breakdown",
     "analysis.replay.chapterPractice": "Practice Plan",
-    "analysis.replay.trajectoryDetail": "Follow the scores from the first saved record to the most recent one.",
+    "analysis.replay.trajectoryDetail": "Follow every exact result and the five-record trend over time.",
+    "analysis.replay.metricAria": "Head-on-head trajectory metric",
+    "analysis.replay.metricScore": "Alliance score",
+    "analysis.replay.metricMargin": "Match margin",
     "analysis.replay.legendDots": "Dots: your alliance's final score",
+    "analysis.replay.legendMarginDots": "Dots: final match margin",
     "analysis.replay.legendSkillsDots": "Dots: saved Skills scores",
-    "analysis.replay.legendTrend": "Line: exact saved-score path",
+    "analysis.replay.legendTrend": "Gray line: exact results",
+    "analysis.replay.legendRolling": "Cyan line: 5-record average",
+    "analysis.replay.legendProjection": "Dotted line: next 5 practice projection",
     "analysis.replay.legendRecent": "Bracket: latest {count}",
     "analysis.replay.axisHeadX": "Practice match number",
     "analysis.replay.axisHeadY": "Our alliance final score (points)",
+    "analysis.replay.axisHeadMarginY": "Match margin (points)",
     "analysis.replay.axisSkillsX": "Practice run number",
     "analysis.replay.axisSkillsY": "Skills run score (points)",
     "analysis.replay.latestBracket": "Latest {count}",
+    "analysis.replay.projectionLabel": "Projected next 5 practices",
     "analysis.replay.startingLevel": "Starting level",
     "analysis.replay.currentLevel": "Current level",
     "analysis.replay.biggestTurn": "Biggest turn",
@@ -1016,16 +1025,24 @@ Object.assign(translations.es, {
   "analysis.replay.chapterAnatomy": "Desglose del partido",
   "analysis.replay.chapterSkillsAnatomy": "Desglose del intento",
   "analysis.replay.chapterPractice": "Plan de práctica",
-  "analysis.replay.trajectoryDetail": "Sigue los puntajes desde el primer registro guardado hasta el más reciente.",
+  "analysis.replay.trajectoryDetail": "Sigue cada resultado exacto y la tendencia de cinco registros a lo largo del tiempo.",
+  "analysis.replay.metricAria": "Métrica de trayectoria frente a frente",
+  "analysis.replay.metricScore": "Puntaje de alianza",
+  "analysis.replay.metricMargin": "Margen del partido",
   "analysis.replay.legendDots": "Puntos: puntaje final de tu alianza",
+  "analysis.replay.legendMarginDots": "Puntos: margen final del partido",
   "analysis.replay.legendSkillsDots": "Puntos: puntajes de Skills guardados",
-  "analysis.replay.legendTrend": "Línea: ruta exacta de puntajes guardados",
+  "analysis.replay.legendTrend": "Línea gris: resultados exactos",
+  "analysis.replay.legendRolling": "Línea cian: promedio de 5 registros",
+  "analysis.replay.legendProjection": "Línea punteada: proyección de las próximas 5 prácticas",
   "analysis.replay.legendRecent": "Corchete: últimos {count}",
   "analysis.replay.axisHeadX": "Número de partido de práctica",
   "analysis.replay.axisHeadY": "Puntaje final de nuestra alianza (puntos)",
+  "analysis.replay.axisHeadMarginY": "Margen del partido (puntos)",
   "analysis.replay.axisSkillsX": "Número de intento de práctica",
   "analysis.replay.axisSkillsY": "Puntaje del intento de Skills (puntos)",
   "analysis.replay.latestBracket": "Últimos {count}",
+  "analysis.replay.projectionLabel": "Proyección de las próximas 5 prácticas",
   "analysis.replay.startingLevel": "Nivel inicial",
   "analysis.replay.currentLevel": "Nivel actual",
   "analysis.replay.biggestTurn": "Mayor giro",
@@ -1600,16 +1617,24 @@ Object.assign(translations["zh-CN"], {
   "analysis.replay.chapterAnatomy": "比赛解析",
   "analysis.replay.chapterSkillsAnatomy": "尝试解析",
   "analysis.replay.chapterPractice": "训练计划",
-  "analysis.replay.trajectoryDetail": "从第一条保存记录看到最近一条记录。",
+  "analysis.replay.trajectoryDetail": "查看每次准确结果和五次记录移动趋势。",
+  "analysis.replay.metricAria": "对抗赛走势指标",
+  "analysis.replay.metricScore": "联盟得分",
+  "analysis.replay.metricMargin": "比赛分差",
   "analysis.replay.legendDots": "圆点：本方联盟最终得分",
+  "analysis.replay.legendMarginDots": "圆点：比赛最终分差",
   "analysis.replay.legendSkillsDots": "圆点：已保存的技能赛得分",
-  "analysis.replay.legendTrend": "线：已保存得分的精确路径",
+  "analysis.replay.legendTrend": "灰线：每次准确结果",
+  "analysis.replay.legendRolling": "青色线：5 次记录平均值",
+  "analysis.replay.legendProjection": "虚线：未来 5 次训练预测",
   "analysis.replay.legendRecent": "括号：最近 {count} 场",
   "analysis.replay.axisHeadX": "练习赛场次",
   "analysis.replay.axisHeadY": "本方联盟最终得分（分）",
+  "analysis.replay.axisHeadMarginY": "比赛分差（分）",
   "analysis.replay.axisSkillsX": "练习运行次数",
   "analysis.replay.axisSkillsY": "技能赛运行得分（分）",
   "analysis.replay.latestBracket": "最近 {count} 场",
+  "analysis.replay.projectionLabel": "未来 5 次训练预测",
   "analysis.replay.startingLevel": "起点水平",
   "analysis.replay.currentLevel": "当前水平",
   "analysis.replay.biggestTurn": "最大转折",
@@ -4258,9 +4283,9 @@ function createJudgeHeadCandidate(salt) {
     const seed = sampleHeadSeed(index, count, "headHoldAuton", "recovery", salt);
     const isPreparedDraw = index === 29;
     const progress = index / (count - 1);
-    const form = sampleTrajectoryForm(progress, "recovery", .5);
+    const setback = 11.5 * Math.exp(-Math.pow((progress - .55) / .14, 2));
     const variance = Math.round((seededRandom(salt + index * 11.7) - .5) * 3);
-    const ourOuterTotal = Math.max(16, Math.round(18 + form * 16) + variance);
+    const ourOuterTotal = Math.max(16, Math.round(19 + progress * 12 - setback) + variance);
     const ourColor = seed.teamAlliance === "red" ? "R" : "B";
     const opponentColor = seed.teamAlliance === "red" ? "B" : "R";
     const allianceName = seed.teamAlliance;
@@ -4281,7 +4306,7 @@ function createJudgeHeadCandidate(salt) {
     seed.centerB = 2;
     ["top", "right", "bottom", "left"].forEach((zone, zoneIndex) => {
       seed[`${zone}Toggle`] = allianceName;
-      seed[`${zone}Y`] = zoneIndex === 0 || (zoneIndex === 1 && index % 4 === 0) ? 1 : 0;
+      seed[`${zone}Y`] = zoneIndex === 0 ? 1 : 0;
     });
 
     if (!isPreparedDraw) {
@@ -4289,10 +4314,11 @@ function createJudgeHeadCandidate(salt) {
       const yellowAdvantage = ["top", "right", "bottom", "left"]
         .reduce((total, zone) => total + seed[`${zone}Y`] * POINTS.yellowPin, 0);
       const baseAdvantage = autonAdvantage + yellowAdvantage;
-      const targetMargin = 5 * (1 + (index % 4));
+      const targetMargin = [3, 8, 13, 18, 8, 13][(index * 3 + Math.floor(salt / 7)) % 6];
+      const targetWinMargin = [2, 7, 12, 17, 7, 12, 22][(index * 5 + salt) % 7];
       const opponentOuterTotal = preparedLosses.has(index)
         ? ourOuterTotal + Math.ceil((baseAdvantage + targetMargin) / POINTS.alliancePin)
-        : Math.max(4, ourOuterTotal - (2 + (index % 5)));
+        : Math.max(4, ourOuterTotal + Math.floor((baseAdvantage - targetWinMargin) / POINTS.alliancePin));
       distributePins(ourOuterTotal, ourColor);
       distributePins(opponentOuterTotal, opponentColor);
     } else {
@@ -4363,8 +4389,16 @@ function buildJudgeDataset() {
     }
   }
 
+  const judgeOutcomeCounts = headFallback?.records.reduce((counts, record) => {
+    counts[record.result] = (counts[record.result] || 0) + 1;
+    return counts;
+  }, {});
   if (!headFallback || !skillsFallback
     || headFallback.recommendation.recommendationKey !== "headHoldAuton"
+    || headFallback.trajectory.shape !== "recovery"
+    || judgeOutcomeCounts?.win !== 34
+    || judgeOutcomeCounts?.loss !== 15
+    || judgeOutcomeCounts?.tie !== 1
     || skillsFallback.recommendation.recommendationKey !== "skillsDriverRepeat") {
     throw new Error("Prepared judge dataset did not validate against the recommendation engine.");
   }
@@ -6296,9 +6330,34 @@ function replayXAxisIndexes(count) {
   return best;
 }
 
+function rollingAverageSeries(values, windowSize = 5) {
+  return values.map((_, index) => average(values.slice(Math.max(0, index - windowSize + 1), index + 1)));
+}
+
+function projectedSeries(values, count = 5) {
+  const sample = values.slice(-10);
+  if (sample.length < 2) return [];
+  const xMean = (sample.length - 1) / 2;
+  const yMean = average(sample);
+  const denominator = sample.reduce((total, _, index) => total + Math.pow(index - xMean, 2), 0);
+  const slope = denominator
+    ? sample.reduce((total, value, index) => total + (index - xMean) * (value - yMean), 0) / denominator
+    : 0;
+  const intercept = yMean - slope * xMean;
+  return Array.from({ length: count }, (_, index) => Math.max(0, intercept + slope * (sample.length + index)));
+}
+
+function signedAnalysisNumber(value) {
+  const formatted = formatAnalysisNumber(value);
+  return Number(value) > 0 ? `+${formatted}` : formatted;
+}
+
 function renderReplayTimeline(mode, records, getter, trajectory) {
   const ordered = records.slice().sort((a, b) => recordTimestamp(a) - recordTimestamp(b));
   const points = ordered.map(record => numericValue(getter(record)));
+  const rolling = rollingAverageSeries(points);
+  const showProjection = isJudgeMode && mode === "head" && headTrajectoryMetric === "score" && points.length >= 10;
+  const projection = showProjection ? projectedSeries(rolling) : [];
   const width = 1000;
   const height = 420;
   const padLeft = 96;
@@ -6307,17 +6366,39 @@ function renderReplayTimeline(mode, records, getter, trajectory) {
   const padBottom = 104;
   const plotRight = width - padRight;
   const plotBottom = height - padBottom;
-  const rawMin = Math.min(...points);
-  const rawMax = Math.max(...points);
-  let min = Math.max(0, Math.floor(rawMin / 25) * 25);
+  const domainValues = [...points, ...projection];
+  const rawMin = Math.min(...domainValues);
+  const rawMax = Math.max(...domainValues);
+  const isMargin = mode === "head" && headTrajectoryMetric === "margin";
+  let min = Math.floor(rawMin / 25) * 25;
   let max = Math.ceil(rawMax / 25) * 25;
-  if (min === rawMin && min > 0) min -= 25;
+  if (!isMargin) min = Math.max(0, min);
+  if (isMargin) {
+    min = Math.min(0, min);
+    max = Math.max(0, max);
+  }
+  if (min === rawMin && (!isMargin || min !== 0) && min > 0) min -= 25;
   if (max === rawMax) max += 25;
+  if (min === max) {
+    min -= isMargin ? 25 : 0;
+    max += 25;
+  }
   const range = Math.max(max - min, 25);
-  const step = points.length === 1 ? 0 : (plotRight - padLeft) / (points.length - 1);
+  const slotCount = Math.max(1, points.length + projection.length);
+  const step = slotCount === 1 ? 0 : (plotRight - padLeft) / (slotCount - 1);
   const yFor = score => plotBottom - ((score - min) / range) * (plotBottom - padTop);
   const coordinates = points.map((score, index) => ({ x: padLeft + index * step, y: yFor(score), score }));
   const pathPoints = coordinates.map(point => `${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(" ");
+  const rollingCoordinates = rolling.map((score, index) => ({ x: padLeft + index * step, y: yFor(score), score }));
+  const rollingPathPoints = rollingCoordinates.map(point => `${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(" ");
+  const projectionCoordinates = projection.map((score, index) => ({
+    x: padLeft + (points.length + index) * step,
+    y: yFor(score),
+    score
+  }));
+  const projectionPathPoints = projection.length
+    ? [rollingCoordinates.at(-1), ...projectionCoordinates].map(point => `${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(" ")
+    : "";
   const recentStart = Math.max(0, points.length - 5);
   const recentCount = points.length - recentStart;
   const bracketStart = points.length === 1 ? Math.max(padLeft, coordinates[0].x - 18) : coordinates[recentStart].x;
@@ -6327,7 +6408,8 @@ function renderReplayTimeline(mode, records, getter, trajectory) {
   for (let value = min; value <= max; value += 25) yTicks.push(value);
   const grid = yTicks.map(value => {
     const y = yFor(value);
-    return `<line class="replay-score-guide" x1="${padLeft}" y1="${y.toFixed(1)}" x2="${plotRight}" y2="${y.toFixed(1)}"></line>
+    const guideClass = isMargin && value === 0 ? "replay-score-guide replay-zero-guide" : "replay-score-guide";
+    return `<line class="${guideClass}" x1="${padLeft}" y1="${y.toFixed(1)}" x2="${plotRight}" y2="${y.toFixed(1)}"></line>
       <line class="replay-axis-tick" x1="${padLeft - 6}" y1="${y.toFixed(1)}" x2="${padLeft}" y2="${y.toFixed(1)}"></line>
       <text class="replay-axis-label" x="${padLeft - 12}" y="${(y + 5).toFixed(1)}" text-anchor="end">${value}</text>`;
   }).join("");
@@ -6337,7 +6419,9 @@ function renderReplayTimeline(mode, records, getter, trajectory) {
       <text class="replay-axis-label" x="${x.toFixed(1)}" y="${plotBottom + 25}" text-anchor="middle">${index + 1}</text>`;
   }).join("");
   const axisXKey = mode === "skills" ? "analysis.replay.axisSkillsX" : "analysis.replay.axisHeadX";
-  const axisYKey = mode === "skills" ? "analysis.replay.axisSkillsY" : "analysis.replay.axisHeadY";
+  const axisYKey = mode === "skills"
+    ? "analysis.replay.axisSkillsY"
+    : isMargin ? "analysis.replay.axisHeadMarginY" : "analysis.replay.axisHeadY";
   const axisCenterY = (padTop + plotBottom) / 2;
   const dots = coordinates.map((point, index) => {
     const record = ordered[index];
@@ -6350,12 +6434,19 @@ function renderReplayTimeline(mode, records, getter, trajectory) {
         <circle class="replay-point-core" r="4.5"></circle>
       </g>`;
   }).join("");
+  const metricControls = mode === "head" ? `
+    <div class="replay-chart-metric" role="group" aria-label="${escapeHtml(t("analysis.replay.metricAria"))}">
+      <button type="button" data-head-trajectory-metric="score" aria-pressed="${headTrajectoryMetric === "score"}">${escapeHtml(t("analysis.replay.metricScore"))}</button>
+      <button type="button" data-head-trajectory-metric="margin" aria-pressed="${headTrajectoryMetric === "margin"}">${escapeHtml(t("analysis.replay.metricMargin"))}</button>
+    </div>` : "";
+  const markerValue = value => isMargin ? signedAnalysisNumber(value) : formatAnalysisNumber(value);
   return `
     <section id="${mode}-trajectory" class="replay-chapter replay-trajectory replay-reveal" data-replay-mode="${mode}" data-replay-chapter="trajectory">
       <header class="replay-chapter-heading">
         <h4>${escapeHtml(t("analysis.replay.chapterTrajectory"))}</h4>
         <p>${escapeHtml(t("analysis.replay.trajectoryDetail"))}</p>
       </header>
+      ${metricControls}
       <div class="replay-chart-shell">
         <div class="replay-chart-scroll">
           <svg class="replay-chart" viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeHtml(t("analysis.scoreTrend"))}">
@@ -6365,22 +6456,27 @@ function renderReplayTimeline(mode, records, getter, trajectory) {
             <line class="replay-axis" x1="${padLeft}" y1="${plotBottom}" x2="${plotRight}" y2="${plotBottom}"></line>
             <text class="replay-axis-title" x="${((padLeft + plotRight) / 2).toFixed(1)}" y="${height - 8}" text-anchor="middle">${escapeHtml(t(axisXKey))}</text>
             <text class="replay-axis-title" x="20" y="${axisCenterY.toFixed(1)}" text-anchor="middle" transform="rotate(-90 20 ${axisCenterY.toFixed(1)})">${escapeHtml(t(axisYKey))}</text>
-            <polyline class="replay-chart-line" pathLength="1" points="${pathPoints}"></polyline>
+            <polyline class="replay-chart-line" points="${pathPoints}"></polyline>
+            <polyline class="replay-chart-rolling" pathLength="1" points="${rollingPathPoints}"></polyline>
+            ${projection.length ? `<polyline class="replay-chart-projection" points="${projectionPathPoints}"></polyline>
+              <text class="replay-chart-projection-label" x="${projectionCoordinates.at(-1).x.toFixed(1)}" y="${Math.max(padTop + 14, projectionCoordinates.at(-1).y - 12).toFixed(1)}" text-anchor="end">${escapeHtml(t("analysis.replay.projectionLabel"))}</text>` : ""}
             ${dots}
             <path class="replay-recent-bracket" d="M ${bracketStart.toFixed(1)} ${bracketY - 7} V ${bracketY} H ${bracketEnd.toFixed(1)} V ${bracketY - 7}"></path>
             <text class="replay-recent-bracket-label" x="${((bracketStart + bracketEnd) / 2).toFixed(1)}" y="${bracketY + 18}" text-anchor="middle">${escapeHtml(t("analysis.replay.latestBracket", { count: recentCount }))}</text>
           </svg>
         </div>
         <div class="replay-chart-legend" aria-label="${escapeHtml(t("analysis.scoreTrend"))}">
-          <span><i class="dots"></i>${escapeHtml(t(mode === "skills" ? "analysis.replay.legendSkillsDots" : "analysis.replay.legendDots"))}</span>
-          <span><i class="trend"></i>${escapeHtml(t("analysis.replay.legendTrend"))}</span>
+          <span><i class="dots"></i>${escapeHtml(t(mode === "skills" ? "analysis.replay.legendSkillsDots" : isMargin ? "analysis.replay.legendMarginDots" : "analysis.replay.legendDots"))}</span>
+          <span><i class="exact"></i>${escapeHtml(t("analysis.replay.legendTrend"))}</span>
+          <span><i class="trend"></i>${escapeHtml(t("analysis.replay.legendRolling"))}</span>
+          ${projection.length ? `<span><i class="projection"></i>${escapeHtml(t("analysis.replay.legendProjection"))}</span>` : ""}
           <span><i class="recent"></i>${escapeHtml(t("analysis.replay.legendRecent", { count: recentCount }))}</span>
         </div>
         <p class="replay-point-readout" data-replay-point-readout>${escapeHtml(t("analysis.replay.pointHint"))}</p>
       </div>
       <dl class="replay-trajectory-markers">
-        <div><dt>${escapeHtml(t("analysis.replay.startingLevel"))}</dt><dd>${escapeHtml(formatAnalysisNumber(trajectory.opening))}</dd></div>
-        <div class="current"><dt>${escapeHtml(t("analysis.replay.currentLevel"))}</dt><dd>${escapeHtml(formatAnalysisNumber(trajectory.current))}</dd></div>
+        <div><dt>${escapeHtml(t("analysis.replay.startingLevel"))}</dt><dd>${escapeHtml(markerValue(trajectory.opening))}</dd></div>
+        <div class="current"><dt>${escapeHtml(t("analysis.replay.currentLevel"))}</dt><dd>${escapeHtml(markerValue(trajectory.current))}</dd></div>
         <div><dt>${escapeHtml(t("analysis.replay.biggestTurn"))}</dt><dd>${escapeHtml(t("analysis.replay.dateTurn", { date: formatMatchDate(trajectory.turning.record), value: formatAnalysisNumber(Math.abs(trajectory.turning.delta)) }))}</dd></div>
       </dl>
     </section>`;
@@ -6650,15 +6746,19 @@ function renderSeasonReplay(mode, allRecords, records) {
     mount.innerHTML = renderReplayEmpty(mode, allRecords);
     return;
   }
-  const getter = mode === "head" ? match => match.ourScore : run => run.score;
+  const scoreGetter = mode === "head" ? match => match.ourScore : run => run.score;
+  const timelineGetter = mode === "head" && headTrajectoryMetric === "margin"
+    ? match => numericValue(match.ourScore) - numericValue(match.opponentScore)
+    : scoreGetter;
   const story = mode === "head" ? rankedHeadRecommendation(records) : rankedSkillsRecommendation(records);
-  const trajectory = replayTrajectory(records, getter);
+  const storyTrajectory = replayTrajectory(records, scoreGetter);
+  const timelineTrajectory = replayTrajectory(records, timelineGetter);
   const phases = mode === "head" ? headProofCards(records, allRecords) : skillsProofCards(records);
   const missions = mode === "head" ? headPracticeMissions(story) : skillsPracticeMissions(story);
   mount.innerHTML = `
-    ${renderReplayOpening(mode, records, story, trajectory)}
+    ${renderReplayOpening(mode, records, story, storyTrajectory)}
     ${renderReplayNav(mode)}
-    ${renderReplayTimeline(mode, records, getter, trajectory)}
+    ${renderReplayTimeline(mode, records, timelineGetter, timelineTrajectory)}
     ${renderReplayTurning(mode, records, story)}
     ${renderReplayAnatomy(mode, phases, story)}
     ${renderReplayPractice(mode, missions)}
@@ -7440,6 +7540,13 @@ $$("[data-analysis-mode]").forEach((button) => {
     analysisMode = button.dataset.analysisMode === "skills" ? "skills" : "head";
     renderAnalysis();
   });
+});
+
+document.addEventListener("click", (event) => {
+  const metricButton = event.target.closest("[data-head-trajectory-metric]");
+  if (!metricButton) return;
+  headTrajectoryMetric = metricButton.dataset.headTrajectoryMetric === "margin" ? "margin" : "score";
+  renderAnalysis();
 });
 
 $("[data-analysis-start]")?.addEventListener("change", renderAnalysis);

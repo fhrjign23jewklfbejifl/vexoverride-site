@@ -348,6 +348,38 @@ body.analysis-active .score-app {
     #0e1a21;
 }
 
+.replay-chart-metric {
+  width: fit-content;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(128px, 1fr));
+  gap: 3px;
+  padding: 3px;
+  border: 1px solid rgba(102, 217, 208, .3);
+  background: rgba(5, 15, 20, .72);
+}
+
+.replay-chart-metric button {
+  min-height: 38px;
+  padding: 8px 15px;
+  border: 0;
+  color: #9eb6bd;
+  background: transparent;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.replay-chart-metric button[aria-pressed="true"] {
+  color: #071411;
+  background: #72e8c0;
+}
+
+.replay-chart-metric button:focus-visible {
+  outline: 2px solid #d7fff1;
+  outline-offset: 2px;
+}
+
 .replay-chart-shell {
   position: relative;
   min-width: 0;
@@ -381,6 +413,11 @@ body.analysis-active .score-app {
   vector-effect: non-scaling-stroke;
 }
 
+.replay-score-guide.replay-zero-guide {
+  stroke: rgba(255, 209, 102, .62);
+  stroke-width: 1.5;
+}
+
 .replay-axis,
 .replay-axis-tick {
   stroke: rgba(209, 228, 233, .58);
@@ -404,13 +441,39 @@ body.analysis-active .score-app {
 
 .replay-chart-line {
   fill: none;
-  stroke: rgba(226, 235, 238, .72);
-  stroke-width: 2.25;
+  stroke: rgba(226, 235, 238, .58);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.replay-chart-rolling {
+  fill: none;
+  stroke: #66d9d0;
+  stroke-width: 3.25;
   stroke-linecap: round;
   stroke-linejoin: round;
   vector-effect: non-scaling-stroke;
   stroke-dasharray: 1;
   stroke-dashoffset: 1;
+}
+
+.replay-chart-projection {
+  fill: none;
+  stroke: #66d9d0;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+  stroke-dasharray: 8 8;
+  opacity: 0;
+}
+
+.replay-chart-projection-label {
+  fill: #9fece6;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0;
 }
 
 .replay-recent-bracket {
@@ -520,10 +583,21 @@ body.analysis-active .score-app {
   background: #0b171d;
 }
 
+.replay-chart-legend .exact {
+  height: 3px;
+  border-radius: 2px;
+  background: rgba(226, 235, 238, .58);
+}
+
 .replay-chart-legend .trend {
   height: 3px;
   border-radius: 2px;
-  background: rgba(226, 235, 238, .72);
+  background: #66d9d0;
+}
+
+.replay-chart-legend .projection {
+  height: 0;
+  border-top: 2px dashed #66d9d0;
 }
 
 .replay-chart-legend .recent {
@@ -1060,8 +1134,12 @@ body.analysis-active .score-app {
   transform: translateY(0);
 }
 
-.replay-reveal.is-visible .replay-chart-line {
+.replay-reveal.is-visible .replay-chart-rolling {
   animation: replay-line-draw 1.25s cubic-bezier(.2, .8, .2, 1) .18s forwards;
+}
+
+.replay-reveal.is-visible .replay-chart-projection {
+  animation: replay-projection-arrive .5s ease 1.35s forwards;
 }
 
 .replay-reveal.is-visible .replay-chart-point {
@@ -1091,6 +1169,11 @@ body.analysis-active .score-app {
 @keyframes replay-point-arrive {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+@keyframes replay-projection-arrive {
+  from { opacity: 0; }
+  to { opacity: .82; }
 }
 
 @keyframes replay-line-grow {
@@ -1286,8 +1369,13 @@ body.analysis-active .score-app {
     animation: none;
   }
 
-  .replay-chart-line {
+  .replay-chart-rolling {
     stroke-dashoffset: 0;
+    animation: none !important;
+  }
+
+  .replay-chart-projection {
+    opacity: .82;
     animation: none !important;
   }
 
