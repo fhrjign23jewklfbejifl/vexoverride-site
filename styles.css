@@ -459,6 +459,26 @@ body.analysis-active .score-app {
   stroke-dashoffset: 1;
 }
 
+.replay-chart-rolling.is-immediate {
+  stroke-dasharray: none;
+  stroke-dashoffset: 0;
+}
+
+.replay-margin-endpoint {
+  fill: #9fece6;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0;
+  paint-order: stroke;
+  stroke: #07151b;
+  stroke-width: 4px;
+  stroke-linejoin: round;
+}
+
+.replay-margin-endpoint.latest {
+  fill: #c8fff2;
+}
+
 .replay-recent-bracket {
   fill: none;
   stroke: rgba(132, 241, 94, .78);
@@ -583,6 +603,18 @@ body.analysis-active .score-app {
   border-right: 1px solid rgba(132, 241, 94, .75);
   border-bottom: 2px solid rgba(132, 241, 94, .75);
   border-left: 1px solid rgba(132, 241, 94, .75);
+}
+
+.replay-margin-improvement {
+  width: fit-content;
+  margin: 10px auto 0;
+  padding: 7px 11px;
+  border: 1px solid rgba(102, 217, 208, .34);
+  color: #c8fff2;
+  background: rgba(24, 85, 78, .22);
+  font-size: 13px;
+  font-weight: 800;
+  text-align: center;
 }
 
 .replay-trajectory-markers {
@@ -1114,6 +1146,10 @@ body.analysis-active .score-app {
 
 .replay-reveal.is-visible .replay-chart-rolling {
   animation: replay-line-draw 1.25s cubic-bezier(.2, .8, .2, 1) .18s forwards;
+}
+
+.replay-reveal.is-visible .replay-chart-rolling.is-immediate {
+  animation: none;
 }
 
 .replay-reveal.is-visible .replay-chart-point {

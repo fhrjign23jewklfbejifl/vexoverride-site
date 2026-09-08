@@ -431,6 +431,7 @@ const translations = {
     "analysis.replay.chapterSkillsAnatomy": "Run Breakdown",
     "analysis.replay.chapterPractice": "Practice Plan",
     "analysis.replay.trajectoryDetail": "Follow every exact result and the five-record trend over time.",
+    "analysis.replay.trajectoryMarginDetail": "Each dot is one match. The line begins at match 10 and follows complete 10-match averages.",
     "analysis.replay.metricAria": "Head-on-head trajectory metric",
     "analysis.replay.metricScore": "Alliance score",
     "analysis.replay.metricMargin": "Match margin",
@@ -447,6 +448,9 @@ const translations = {
     "analysis.replay.axisSkillsX": "Practice run number",
     "analysis.replay.axisSkillsY": "Skills run score (points)",
     "analysis.replay.latestBracket": "Latest {count}",
+    "analysis.replay.firstTenAverage": "First 10 avg {value}",
+    "analysis.replay.latestTenAverage": "Latest 10 avg {value}",
+    "analysis.replay.marginImprovement": "Margin improvement {value} points",
     "analysis.replay.startingLevel": "Starting level",
     "analysis.replay.currentLevel": "Current level",
     "analysis.replay.biggestTurn": "Biggest turn",
@@ -1025,6 +1029,7 @@ Object.assign(translations.es, {
   "analysis.replay.chapterSkillsAnatomy": "Desglose del intento",
   "analysis.replay.chapterPractice": "Plan de práctica",
   "analysis.replay.trajectoryDetail": "Sigue cada resultado exacto y la tendencia de cinco registros a lo largo del tiempo.",
+  "analysis.replay.trajectoryMarginDetail": "Cada punto es un partido. La línea comienza en el partido 10 y sigue promedios completos de 10 partidos.",
   "analysis.replay.metricAria": "Métrica de trayectoria frente a frente",
   "analysis.replay.metricScore": "Puntaje de alianza",
   "analysis.replay.metricMargin": "Margen del partido",
@@ -1041,6 +1046,9 @@ Object.assign(translations.es, {
   "analysis.replay.axisSkillsX": "Número de intento de práctica",
   "analysis.replay.axisSkillsY": "Puntaje del intento de Skills (puntos)",
   "analysis.replay.latestBracket": "Últimos {count}",
+  "analysis.replay.firstTenAverage": "Promedio inicial de 10: {value}",
+  "analysis.replay.latestTenAverage": "Promedio reciente de 10: {value}",
+  "analysis.replay.marginImprovement": "Mejora del margen: {value} puntos",
   "analysis.replay.startingLevel": "Nivel inicial",
   "analysis.replay.currentLevel": "Nivel actual",
   "analysis.replay.biggestTurn": "Mayor giro",
@@ -1616,6 +1624,7 @@ Object.assign(translations["zh-CN"], {
   "analysis.replay.chapterSkillsAnatomy": "尝试解析",
   "analysis.replay.chapterPractice": "训练计划",
   "analysis.replay.trajectoryDetail": "查看每次准确结果和五次记录移动趋势。",
+  "analysis.replay.trajectoryMarginDetail": "每个圆点代表一场比赛。趋势线从第 10 场开始，显示完整的 10 场平均值。",
   "analysis.replay.metricAria": "对抗赛走势指标",
   "analysis.replay.metricScore": "联盟得分",
   "analysis.replay.metricMargin": "比赛分差",
@@ -1632,6 +1641,9 @@ Object.assign(translations["zh-CN"], {
   "analysis.replay.axisSkillsX": "练习运行次数",
   "analysis.replay.axisSkillsY": "技能赛运行得分（分）",
   "analysis.replay.latestBracket": "最近 {count} 场",
+  "analysis.replay.firstTenAverage": "前 10 场平均 {value}",
+  "analysis.replay.latestTenAverage": "最近 10 场平均 {value}",
+  "analysis.replay.marginImprovement": "分差提升 {value} 分",
   "analysis.replay.startingLevel": "起点水平",
   "analysis.replay.currentLevel": "当前水平",
   "analysis.replay.biggestTurn": "最大转折",
@@ -6376,8 +6388,13 @@ function renderReplayTimeline(mode, records, getter, trajectory) {
   const yFor = score => plotBottom - ((score - min) / range) * (plotBottom - padTop);
   const coordinates = points.map((score, index) => ({ x: padLeft + index * step, y: yFor(score), score }));
   const pathPoints = coordinates.map(point => `${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(" ");
-  const rollingCoordinates = rolling.map((score, index) => ({ x: padLeft + index * step, y: yFor(score), score }));
+  const rollingCoordinates = rolling
+    .map((score, index) => ({ x: padLeft + index * step, y: yFor(score), score }))
+    .slice(isMargin ? 9 : 0);
   const rollingPathPoints = rollingCoordinates.map(point => `${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(" ");
+  const marginGrowth = isMargin && rollingCoordinates.length
+    ? rollingCoordinates.at(-1).score - rollingCoordinates[0].score
+    : null;
   const recentStart = Math.max(0, points.length - 5);
   const recentCount = points.length - recentStart;
   const bracketStart = points.length === 1 ? Math.max(padLeft, coordinates[0].x - 18) : coordinates[recentStart].x;
@@ -6423,7 +6440,7 @@ function renderReplayTimeline(mode, records, getter, trajectory) {
     <section id="${mode}-trajectory" class="replay-chapter replay-trajectory replay-reveal" data-replay-mode="${mode}" data-replay-chapter="trajectory">
       <header class="replay-chapter-heading">
         <h4>${escapeHtml(t("analysis.replay.chapterTrajectory"))}</h4>
-        <p>${escapeHtml(t("analysis.replay.trajectoryDetail"))}</p>
+        <p>${escapeHtml(t(isMargin ? "analysis.replay.trajectoryMarginDetail" : "analysis.replay.trajectoryDetail"))}</p>
       </header>
       ${metricControls}
       <div class="replay-chart-shell">
@@ -6436,7 +6453,10 @@ function renderReplayTimeline(mode, records, getter, trajectory) {
             <text class="replay-axis-title" x="${((padLeft + plotRight) / 2).toFixed(1)}" y="${height - 8}" text-anchor="middle">${escapeHtml(t(axisXKey))}</text>
             <text class="replay-axis-title" x="20" y="${axisCenterY.toFixed(1)}" text-anchor="middle" transform="rotate(-90 20 ${axisCenterY.toFixed(1)})">${escapeHtml(t(axisYKey))}</text>
             ${isMargin ? "" : `<polyline class="replay-chart-line" points="${pathPoints}"></polyline>`}
-            <polyline class="replay-chart-rolling" pathLength="1" points="${rollingPathPoints}"></polyline>
+            ${rollingCoordinates.length ? `<polyline class="replay-chart-rolling ${isMargin ? "is-immediate" : ""}" pathLength="1" points="${rollingPathPoints}"></polyline>` : ""}
+            ${isMargin && rollingCoordinates.length ? `
+              <text class="replay-margin-endpoint" x="${rollingCoordinates[0].x.toFixed(1)}" y="${Math.max(padTop + 14, rollingCoordinates[0].y - 12).toFixed(1)}" text-anchor="start">${escapeHtml(t("analysis.replay.firstTenAverage", { value: signedAnalysisNumber(rollingCoordinates[0].score) }))}</text>
+              <text class="replay-margin-endpoint latest" x="${rollingCoordinates.at(-1).x.toFixed(1)}" y="${Math.max(padTop + 14, rollingCoordinates.at(-1).y - 12).toFixed(1)}" text-anchor="end">${escapeHtml(t("analysis.replay.latestTenAverage", { value: signedAnalysisNumber(rollingCoordinates.at(-1).score) }))}</text>` : ""}
             ${dots}
             <path class="replay-recent-bracket" d="M ${bracketStart.toFixed(1)} ${bracketY - 7} V ${bracketY} H ${bracketEnd.toFixed(1)} V ${bracketY - 7}"></path>
             <text class="replay-recent-bracket-label" x="${((bracketStart + bracketEnd) / 2).toFixed(1)}" y="${bracketY + 18}" text-anchor="middle">${escapeHtml(t("analysis.replay.latestBracket", { count: recentCount }))}</text>
@@ -6448,6 +6468,7 @@ function renderReplayTimeline(mode, records, getter, trajectory) {
           <span><i class="trend"></i>${escapeHtml(t(isMargin ? "analysis.replay.legendMarginRolling" : "analysis.replay.legendRolling"))}</span>
           <span><i class="recent"></i>${escapeHtml(t("analysis.replay.legendRecent", { count: recentCount }))}</span>
         </div>
+        ${Number.isFinite(marginGrowth) ? `<p class="replay-margin-improvement">${escapeHtml(t("analysis.replay.marginImprovement", { value: signedAnalysisNumber(marginGrowth) }))}</p>` : ""}
         <p class="replay-point-readout" data-replay-point-readout>${escapeHtml(t("analysis.replay.pointHint"))}</p>
       </div>
       <dl class="replay-trajectory-markers">
