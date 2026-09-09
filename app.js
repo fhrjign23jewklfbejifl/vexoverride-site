@@ -6170,6 +6170,34 @@ function replayTrajectory(records, getter) {
   return { opening, current, delta, tone, shape, title, summary, turning: replayTurningMoment(records, getter) };
 }
 
+function replayRollingTrajectory(records, getter, windowSize) {
+  const ordered = records.slice().sort((a, b) => recordTimestamp(a) - recordTimestamp(b));
+  if (ordered.length < windowSize) return replayTrajectory(records, getter);
+  const values = ordered.map(record => numericValue(getter(record)));
+  const averages = rollingAverageSeries(values, windowSize).slice(windowSize - 1);
+  let turningIndex = 0;
+  let turningDelta = 0;
+  for (let index = 1; index < averages.length; index += 1) {
+    const change = averages[index] - averages[index - 1];
+    if (Math.abs(change) > Math.abs(turningDelta)) {
+      turningIndex = index;
+      turningDelta = change;
+    }
+  }
+  const base = replayTrajectory(records, getter);
+  return {
+    ...base,
+    opening: averages[0],
+    current: averages.at(-1),
+    delta: averages.at(-1) - averages[0],
+    turning: {
+      index: turningIndex + windowSize - 1,
+      record: ordered[turningIndex + windowSize - 1],
+      delta: turningDelta
+    }
+  };
+}
+
 function headYellowRate(match) {
   const placed = yellowPins(match);
   return placed ? numericValue(ownedYellowPins(match)) / placed : null;
@@ -6749,7 +6777,9 @@ function renderSeasonReplay(mode, allRecords, records) {
     : scoreGetter;
   const story = mode === "head" ? rankedHeadRecommendation(records) : rankedSkillsRecommendation(records);
   const storyTrajectory = replayTrajectory(records, scoreGetter);
-  const timelineTrajectory = replayTrajectory(records, timelineGetter);
+  const timelineTrajectory = mode === "head" && headTrajectoryMetric === "margin"
+    ? replayRollingTrajectory(records, timelineGetter, 10)
+    : replayTrajectory(records, timelineGetter);
   const phases = mode === "head" ? headProofCards(records, allRecords) : skillsProofCards(records);
   const missions = mode === "head" ? headPracticeMissions(story) : skillsPracticeMissions(story);
   mount.innerHTML = `
