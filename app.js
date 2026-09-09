@@ -15,7 +15,7 @@ const JUDGE_MATCH_STORE_KEY = "vexOverrideJudgeMatches:v1";
 const JUDGE_PROFILE_STORE_KEY = "vexOverrideJudgeProfile:v1";
 const JUDGE_COMPETITION_STORE_KEY = "vexOverrideJudgeCompetitionData:v1";
 const JUDGE_DATASET_VERSION_STORE_KEY = "vexOverrideJudgeDatasetVersion:v1";
-const JUDGE_DATASET_VERSION = "4330p-season-replay-20260908-v6";
+const JUDGE_DATASET_VERSION = "4330p-season-replay-20260909-v7";
 const PROXY_URL_STORE_KEY = "vexOverrideDataProxyUrl:v1";
 const SEASON_SKILLS_STORE_KEY = "vexOverrideSeasonSkills:v1";
 const LANGUAGE_STORE_KEY = "vexOverrideLanguage:v1";
@@ -431,6 +431,7 @@ const translations = {
     "analysis.replay.chapterSkillsAnatomy": "Run Breakdown",
     "analysis.replay.chapterPractice": "Practice Plan",
     "analysis.replay.trajectoryDetail": "Follow every exact result and the five-record trend over time.",
+    "analysis.replay.trajectorySkillsDetail": "Compare Driver and Autonomous Skills progress over time.",
     "analysis.replay.trajectoryMarginDetail": "Each dot is one match. The line begins at match 10 and follows complete 10-match averages.",
     "analysis.replay.metricAria": "Head-on-head trajectory metric",
     "analysis.replay.metricScore": "Alliance score",
@@ -438,6 +439,8 @@ const translations = {
     "analysis.replay.legendDots": "Dots: your alliance's final score",
     "analysis.replay.legendMarginDots": "Dots: final match margin",
     "analysis.replay.legendSkillsDots": "Dots: saved Skills scores",
+    "analysis.replay.legendSkillsDriver": "Green line: Driver 5-run average",
+    "analysis.replay.legendSkillsAuton": "Cyan line: Autonomous 5-run average",
     "analysis.replay.legendTrend": "Gray line: exact results",
     "analysis.replay.legendRolling": "Cyan line: 5-record average",
     "analysis.replay.legendMarginRolling": "Cyan line: 10-match average margin",
@@ -454,6 +457,10 @@ const translations = {
     "analysis.replay.startingLevel": "Starting level",
     "analysis.replay.currentLevel": "Current level",
     "analysis.replay.biggestTurn": "Biggest turn",
+    "analysis.replay.driverProgress": "Driver progress",
+    "analysis.replay.autonProgress": "Autonomous progress",
+    "analysis.replay.bestCombined": "Best combined",
+    "analysis.replay.progressRange": "{start} to {current}",
     "analysis.replay.turningDetail": "This is the most important repeatable difference in the selected data.",
     "analysis.replay.whenWorking": "When it works",
     "analysis.replay.whenMissing": "When it slips",
@@ -1029,6 +1036,7 @@ Object.assign(translations.es, {
   "analysis.replay.chapterSkillsAnatomy": "Desglose del intento",
   "analysis.replay.chapterPractice": "Plan de práctica",
   "analysis.replay.trajectoryDetail": "Sigue cada resultado exacto y la tendencia de cinco registros a lo largo del tiempo.",
+  "analysis.replay.trajectorySkillsDetail": "Compara el progreso de Driver y Skills Autónomas a lo largo del tiempo.",
   "analysis.replay.trajectoryMarginDetail": "Cada punto es un partido. La línea comienza en el partido 10 y sigue promedios completos de 10 partidos.",
   "analysis.replay.metricAria": "Métrica de trayectoria frente a frente",
   "analysis.replay.metricScore": "Puntaje de alianza",
@@ -1036,6 +1044,8 @@ Object.assign(translations.es, {
   "analysis.replay.legendDots": "Puntos: puntaje final de tu alianza",
   "analysis.replay.legendMarginDots": "Puntos: margen final del partido",
   "analysis.replay.legendSkillsDots": "Puntos: puntajes de Skills guardados",
+  "analysis.replay.legendSkillsDriver": "Línea verde: promedio de 5 intentos de Driver",
+  "analysis.replay.legendSkillsAuton": "Línea cian: promedio de 5 intentos autónomos",
   "analysis.replay.legendTrend": "Línea gris: resultados exactos",
   "analysis.replay.legendRolling": "Línea cian: promedio de 5 registros",
   "analysis.replay.legendMarginRolling": "Línea cian: margen promedio de 10 partidos",
@@ -1052,6 +1062,10 @@ Object.assign(translations.es, {
   "analysis.replay.startingLevel": "Nivel inicial",
   "analysis.replay.currentLevel": "Nivel actual",
   "analysis.replay.biggestTurn": "Mayor giro",
+  "analysis.replay.driverProgress": "Progreso de Driver",
+  "analysis.replay.autonProgress": "Progreso autónomo",
+  "analysis.replay.bestCombined": "Mejor combinación",
+  "analysis.replay.progressRange": "{start} a {current}",
   "analysis.replay.turningDetail": "Esta es la diferencia repetible más importante de los datos seleccionados.",
   "analysis.replay.whenWorking": "Cuando funciona",
   "analysis.replay.whenMissing": "Cuando falla",
@@ -1624,6 +1638,7 @@ Object.assign(translations["zh-CN"], {
   "analysis.replay.chapterSkillsAnatomy": "尝试解析",
   "analysis.replay.chapterPractice": "训练计划",
   "analysis.replay.trajectoryDetail": "查看每次准确结果和五次记录移动趋势。",
+  "analysis.replay.trajectorySkillsDetail": "比较驾驶技能赛和自动技能赛随时间的进步。",
   "analysis.replay.trajectoryMarginDetail": "每个圆点代表一场比赛。趋势线从第 10 场开始，显示完整的 10 场平均值。",
   "analysis.replay.metricAria": "对抗赛走势指标",
   "analysis.replay.metricScore": "联盟得分",
@@ -1631,6 +1646,8 @@ Object.assign(translations["zh-CN"], {
   "analysis.replay.legendDots": "圆点：本方联盟最终得分",
   "analysis.replay.legendMarginDots": "圆点：比赛最终分差",
   "analysis.replay.legendSkillsDots": "圆点：已保存的技能赛得分",
+  "analysis.replay.legendSkillsDriver": "绿线：驾驶技能赛 5 次平均",
+  "analysis.replay.legendSkillsAuton": "青线：自动技能赛 5 次平均",
   "analysis.replay.legendTrend": "灰线：每次准确结果",
   "analysis.replay.legendRolling": "青色线：5 次记录平均值",
   "analysis.replay.legendMarginRolling": "青色线：10 场比赛平均分差",
@@ -1647,6 +1664,10 @@ Object.assign(translations["zh-CN"], {
   "analysis.replay.startingLevel": "起点水平",
   "analysis.replay.currentLevel": "当前水平",
   "analysis.replay.biggestTurn": "最大转折",
+  "analysis.replay.driverProgress": "驾驶技能进步",
+  "analysis.replay.autonProgress": "自动技能进步",
+  "analysis.replay.bestCombined": "最佳组合分",
+  "analysis.replay.progressRange": "{start} 到 {current}",
   "analysis.replay.turningDetail": "这是所选数据中最重要、最可重复的差异。",
   "analysis.replay.whenWorking": "做到时",
   "analysis.replay.whenMissing": "没做到时",
@@ -4069,6 +4090,16 @@ function sampleSkillsSeed(index, total, skillsType, scenario, trajectoryShape, s
   if (["skillsYellow", "skillsCenter", "skillsPlacement"].includes(scenario)) route = .74 + noise;
   if (scenario === "skillsEventSet") route = skillsType === "driver" && index === total - 1 ? 1.18 : .52 + noise;
   if (scenario === "skillsCeiling" || scenario === "skillsBalance") route = .76 + noise;
+  if (scenario === "skillsJudgeGrowth") {
+    if (skillsType === "driver") {
+      const driverVariation = [-.16, .05, .1, -.08, .08, .02][index % 6];
+      route = .42 + progress * .5 + driverVariation + noise;
+    } else {
+      const earlyAdjustment = index < 3 ? -.12 + index * .035 : 0;
+      route = .68 + progress * .16 + earlyAdjustment + noise * .35;
+    }
+    route = Math.max(.24, Math.min(1.05, route));
+  }
   const seed = {
     daysAgo: daysAgoValue,
     skillsType,
@@ -4355,14 +4386,14 @@ function createJudgeSkillsCandidate(salt) {
   return [
     ...Array.from({ length: driverCount }, (_, index) => ({
       ...createSampleSkillsRecord(
-        sampleSkillsSeed(index, driverCount, "driver", "skillsDriverRepeat", "recovery", salt),
+        sampleSkillsSeed(index, driverCount, "driver", "skillsJudgeGrowth", "improving", salt),
         random()
       ),
       recordSource: "prepared-practice"
     })),
     ...Array.from({ length: autonCount }, (_, index) => ({
       ...createSampleSkillsRecord(
-        sampleSkillsSeed(index, autonCount, "autonomous", "skillsDriverRepeat", "recovery", salt + 137),
+        sampleSkillsSeed(index, autonCount, "autonomous", "skillsJudgeGrowth", "improving", salt + 137),
         random()
       ),
       recordSource: "prepared-practice"
@@ -4394,9 +4425,16 @@ function buildJudgeDataset() {
   for (let salt = 7330; salt < 7530; salt += 1) {
     const records = createJudgeSkillsCandidate(salt);
     const recommendation = rankedSkillsRecommendation(records);
-    const candidate = { records, recommendation };
+    const skillsGrowth = ["driver", "autonomous"].every(type => {
+      const scores = records
+        .filter(record => record.skillsType === type)
+        .sort((a, b) => recordTimestamp(a) - recordTimestamp(b))
+        .map(record => numericValue(record.score));
+      return average(scores.slice(-5)) > average(scores.slice(0, 5));
+    });
+    const candidate = { records, recommendation, skillsGrowth };
     if (!skillsFallback) skillsFallback = candidate;
-    if (recommendation.recommendationKey === "skillsDriverRepeat") {
+    if (recommendation.recommendationKey === "skillsDriverRepeat" && skillsGrowth) {
       skillsFallback = candidate;
       break;
     }
@@ -4413,7 +4451,8 @@ function buildJudgeDataset() {
     || judgeOutcomeCounts?.win !== 34
     || judgeOutcomeCounts?.loss !== 15
     || judgeOutcomeCounts?.tie !== 1
-    || skillsFallback.recommendation.recommendationKey !== "skillsDriverRepeat") {
+    || skillsFallback.recommendation.recommendationKey !== "skillsDriverRepeat"
+    || !skillsFallback.skillsGrowth) {
     throw new Error("Prepared judge dataset did not validate against the recommendation engine.");
   }
 
@@ -6384,8 +6423,9 @@ function signedAnalysisNumber(value) {
 function renderReplayTimeline(mode, records, getter, trajectory) {
   const ordered = records.slice().sort((a, b) => recordTimestamp(a) - recordTimestamp(b));
   const points = ordered.map(record => numericValue(getter(record)));
+  const isSkills = mode === "skills";
   const isMargin = mode === "head" && headTrajectoryMetric === "margin";
-  const rolling = rollingAverageSeries(points, isMargin ? 10 : 5);
+  const rolling = isSkills ? [] : rollingAverageSeries(points, isMargin ? 10 : 5);
   const width = 1000;
   const height = 420;
   const padLeft = 96;
@@ -6416,10 +6456,26 @@ function renderReplayTimeline(mode, records, getter, trajectory) {
   const yFor = score => plotBottom - ((score - min) / range) * (plotBottom - padTop);
   const coordinates = points.map((score, index) => ({ x: padLeft + index * step, y: yFor(score), score }));
   const pathPoints = coordinates.map(point => `${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(" ");
-  const rollingCoordinates = rolling
+  const rollingCoordinates = isSkills ? [] : rolling
     .map((score, index) => ({ x: padLeft + index * step, y: yFor(score), score }))
     .slice(isMargin ? 9 : 0);
   const rollingPathPoints = rollingCoordinates.map(point => `${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(" ");
+  const skillsSeries = isSkills ? ["driver", "autonomous"].map(type => {
+    const recentScores = [];
+    const trend = [];
+    ordered.forEach((record, index) => {
+      if (record.skillsType !== type) return;
+      recentScores.push(numericValue(record.score));
+      if (recentScores.length > 5) recentScores.shift();
+      const score = average(recentScores);
+      trend.push({ x: padLeft + index * step, y: yFor(score), score });
+    });
+    return {
+      type,
+      trend,
+      path: trend.map(point => `${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(" ")
+    };
+  }) : [];
   const marginGrowth = isMargin && rollingCoordinates.length
     ? rollingCoordinates.at(-1).score - rollingCoordinates[0].score
     : null;
@@ -6464,11 +6520,46 @@ function renderReplayTimeline(mode, records, getter, trajectory) {
       <button type="button" data-head-trajectory-metric="margin" aria-pressed="${headTrajectoryMetric === "margin"}">${escapeHtml(t("analysis.replay.metricMargin"))}</button>
     </div>` : "";
   const markerValue = value => isMargin ? signedAnalysisNumber(value) : formatAnalysisNumber(value);
+  const trajectoryMarkers = isSkills ? (() => {
+    const progress = type => {
+      const scores = ordered
+        .filter(record => record.skillsType === type)
+        .map(record => numericValue(record.score));
+      if (!scores.length) return { start: null, current: null, best: null };
+      return {
+        start: average(scores.slice(0, Math.min(5, scores.length))),
+        current: average(scores.slice(-Math.min(5, scores.length))),
+        best: Math.max(...scores)
+      };
+    };
+    const driver = progress("driver");
+    const auton = progress("autonomous");
+    const range = values => Number.isFinite(values.start) && Number.isFinite(values.current)
+      ? t("analysis.replay.progressRange", {
+          start: formatAnalysisNumber(values.start),
+          current: formatAnalysisNumber(values.current)
+        })
+      : "--";
+    const combined = Number.isFinite(driver.best) && Number.isFinite(auton.best)
+      ? formatAnalysisNumber(driver.best + auton.best)
+      : "--";
+    return `
+      <dl class="replay-trajectory-markers skills-progress-markers">
+        <div class="skills-driver"><dt>${escapeHtml(t("analysis.replay.driverProgress"))}</dt><dd>${escapeHtml(range(driver))}</dd></div>
+        <div class="skills-autonomous"><dt>${escapeHtml(t("analysis.replay.autonProgress"))}</dt><dd>${escapeHtml(range(auton))}</dd></div>
+        <div><dt>${escapeHtml(t("analysis.replay.bestCombined"))}</dt><dd>${escapeHtml(combined)}</dd></div>
+      </dl>`;
+  })() : `
+      <dl class="replay-trajectory-markers">
+        <div><dt>${escapeHtml(t("analysis.replay.startingLevel"))}</dt><dd>${escapeHtml(markerValue(trajectory.opening))}</dd></div>
+        <div class="current"><dt>${escapeHtml(t("analysis.replay.currentLevel"))}</dt><dd>${escapeHtml(markerValue(trajectory.current))}</dd></div>
+        <div><dt>${escapeHtml(t("analysis.replay.biggestTurn"))}</dt><dd>${escapeHtml(t("analysis.replay.dateTurn", { date: formatMatchDate(trajectory.turning.record), value: formatAnalysisNumber(Math.abs(trajectory.turning.delta)) }))}</dd></div>
+      </dl>`;
   return `
     <section id="${mode}-trajectory" class="replay-chapter replay-trajectory replay-reveal" data-replay-mode="${mode}" data-replay-chapter="trajectory">
       <header class="replay-chapter-heading">
         <h4>${escapeHtml(t("analysis.replay.chapterTrajectory"))}</h4>
-        <p>${escapeHtml(t(isMargin ? "analysis.replay.trajectoryMarginDetail" : "analysis.replay.trajectoryDetail"))}</p>
+        <p>${escapeHtml(t(isSkills ? "analysis.replay.trajectorySkillsDetail" : isMargin ? "analysis.replay.trajectoryMarginDetail" : "analysis.replay.trajectoryDetail"))}</p>
       </header>
       ${metricControls}
       <div class="replay-chart-shell">
@@ -6480,8 +6571,11 @@ function renderReplayTimeline(mode, records, getter, trajectory) {
             <line class="replay-axis" x1="${padLeft}" y1="${plotBottom}" x2="${plotRight}" y2="${plotBottom}"></line>
             <text class="replay-axis-title" x="${((padLeft + plotRight) / 2).toFixed(1)}" y="${height - 8}" text-anchor="middle">${escapeHtml(t(axisXKey))}</text>
             <text class="replay-axis-title" x="20" y="${axisCenterY.toFixed(1)}" text-anchor="middle" transform="rotate(-90 20 ${axisCenterY.toFixed(1)})">${escapeHtml(t(axisYKey))}</text>
-            ${isMargin ? "" : `<polyline class="replay-chart-line" points="${pathPoints}"></polyline>`}
+            ${mode === "head" && !isMargin ? `<polyline class="replay-chart-line" points="${pathPoints}"></polyline>` : ""}
             ${rollingCoordinates.length ? `<polyline class="replay-chart-rolling ${isMargin ? "is-immediate" : ""}" pathLength="1" points="${rollingPathPoints}"></polyline>` : ""}
+            ${skillsSeries.map(series => series.trend.length ? `
+              <polyline class="replay-chart-rolling replay-chart-skills-line ${series.type}" pathLength="1" points="${series.path}"></polyline>
+              <text class="replay-skills-endpoint ${series.type}" x="${series.trend.at(-1).x.toFixed(1)}" y="${Math.max(padTop + 14, series.trend.at(-1).y - 12).toFixed(1)}" text-anchor="end">${escapeHtml(series.type === "driver" ? t("skills.driver") : t("skills.autonomous"))}</text>` : "").join("")}
             ${isMargin && rollingCoordinates.length ? `
               <text class="replay-margin-endpoint" x="${rollingCoordinates[0].x.toFixed(1)}" y="${Math.max(padTop + 14, rollingCoordinates[0].y - 12).toFixed(1)}" text-anchor="start">${escapeHtml(t("analysis.replay.firstTenAverage", { value: signedAnalysisNumber(rollingCoordinates[0].score) }))}</text>
               <text class="replay-margin-endpoint latest" x="${rollingCoordinates.at(-1).x.toFixed(1)}" y="${Math.max(padTop + 14, rollingCoordinates.at(-1).y - 12).toFixed(1)}" text-anchor="end">${escapeHtml(t("analysis.replay.latestTenAverage", { value: signedAnalysisNumber(rollingCoordinates.at(-1).score) }))}</text>` : ""}
@@ -6492,18 +6586,17 @@ function renderReplayTimeline(mode, records, getter, trajectory) {
         </div>
         <div class="replay-chart-legend" aria-label="${escapeHtml(t("analysis.scoreTrend"))}">
           <span><i class="dots"></i>${escapeHtml(t(mode === "skills" ? "analysis.replay.legendSkillsDots" : isMargin ? "analysis.replay.legendMarginDots" : "analysis.replay.legendDots"))}</span>
-          ${isMargin ? "" : `<span><i class="exact"></i>${escapeHtml(t("analysis.replay.legendTrend"))}</span>`}
-          <span><i class="trend"></i>${escapeHtml(t(isMargin ? "analysis.replay.legendMarginRolling" : "analysis.replay.legendRolling"))}</span>
+          ${mode === "head" && !isMargin ? `<span><i class="exact"></i>${escapeHtml(t("analysis.replay.legendTrend"))}</span>` : ""}
+          ${isSkills
+            ? `<span><i class="skills-driver"></i>${escapeHtml(t("analysis.replay.legendSkillsDriver"))}</span>
+              <span><i class="skills-autonomous"></i>${escapeHtml(t("analysis.replay.legendSkillsAuton"))}</span>`
+            : `<span><i class="trend"></i>${escapeHtml(t(isMargin ? "analysis.replay.legendMarginRolling" : "analysis.replay.legendRolling"))}</span>`}
           <span><i class="recent"></i>${escapeHtml(t("analysis.replay.legendRecent", { count: recentCount }))}</span>
         </div>
         ${Number.isFinite(marginGrowth) ? `<p class="replay-margin-improvement">${escapeHtml(t("analysis.replay.marginImprovement", { value: signedAnalysisNumber(marginGrowth) }))}</p>` : ""}
         <p class="replay-point-readout" data-replay-point-readout>${escapeHtml(t("analysis.replay.pointHint"))}</p>
       </div>
-      <dl class="replay-trajectory-markers">
-        <div><dt>${escapeHtml(t("analysis.replay.startingLevel"))}</dt><dd>${escapeHtml(markerValue(trajectory.opening))}</dd></div>
-        <div class="current"><dt>${escapeHtml(t("analysis.replay.currentLevel"))}</dt><dd>${escapeHtml(markerValue(trajectory.current))}</dd></div>
-        <div><dt>${escapeHtml(t("analysis.replay.biggestTurn"))}</dt><dd>${escapeHtml(t("analysis.replay.dateTurn", { date: formatMatchDate(trajectory.turning.record), value: formatAnalysisNumber(Math.abs(trajectory.turning.delta)) }))}</dd></div>
-      </dl>
+      ${trajectoryMarkers}
     </section>`;
 }
 

@@ -464,6 +464,33 @@ body.analysis-active .score-app {
   stroke-dashoffset: 0;
 }
 
+.replay-chart-skills-line.driver {
+  stroke: #84f15e;
+}
+
+.replay-chart-skills-line.autonomous {
+  stroke: #66d9d0;
+}
+
+.replay-skills-endpoint {
+  fill: #d8e8eb;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0;
+  paint-order: stroke;
+  stroke: #07151b;
+  stroke-width: 4px;
+  stroke-linejoin: round;
+}
+
+.replay-skills-endpoint.driver {
+  fill: #b9fba1;
+}
+
+.replay-skills-endpoint.autonomous {
+  fill: #9fece6;
+}
+
 .replay-margin-endpoint {
   fill: #9fece6;
   font-size: 12px;
@@ -521,14 +548,20 @@ body.analysis-active .score-app {
   fill: #84f15e;
 }
 
-.replay-chart-point.loss .replay-point-ring,
-.replay-chart-point.autonomous .replay-point-ring {
+.replay-chart-point.loss .replay-point-ring {
   stroke: #ff6f7d;
 }
 
-.replay-chart-point.loss .replay-point-core,
-.replay-chart-point.autonomous .replay-point-core {
+.replay-chart-point.loss .replay-point-core {
   fill: #ff6f7d;
+}
+
+.replay-chart-point.autonomous .replay-point-ring {
+  stroke: #66d9d0;
+}
+
+.replay-chart-point.autonomous .replay-point-core {
+  fill: #66d9d0;
 }
 
 .replay-chart-point.tie .replay-point-ring,
@@ -598,6 +631,20 @@ body.analysis-active .score-app {
   background: #66d9d0;
 }
 
+.replay-chart-legend .skills-driver,
+.replay-chart-legend .skills-autonomous {
+  height: 3px;
+  border-radius: 2px;
+}
+
+.replay-chart-legend .skills-driver {
+  background: #84f15e;
+}
+
+.replay-chart-legend .skills-autonomous {
+  background: #66d9d0;
+}
+
 .replay-chart-legend .recent {
   height: 6px;
   border-right: 1px solid rgba(132, 241, 94, .75);
@@ -623,6 +670,14 @@ body.analysis-active .score-app {
   margin: 0;
   border-top: 1px solid rgba(255, 255, 255, .1);
   border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+
+.skills-progress-markers .skills-driver dd {
+  color: #84f15e;
+}
+
+.skills-progress-markers .skills-autonomous dd {
+  color: #66d9d0;
 }
 
 .replay-trajectory-markers div {
