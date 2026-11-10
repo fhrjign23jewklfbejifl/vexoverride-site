@@ -1,17 +1,1 @@
-{
-  "meta": {
-    "current_page": 1,
-    "first_page_url": "https://events.vex.com/api/v2/events/64730/teams?page=1",
-    "from": null,
-    "last_page": 1,
-    "last_page_url": "https://events.vex.com/api/v2/events/64730/teams?page=1",
-    "next_page_url": null,
-    "path": "https://events.vex.com/api/v2/events/64730/teams",
-    "per_page": 250,
-    "prev_page_url": null,
-    "to": null,
-    "total": 0,
-    "merged_pages": 1
-  },
-  "data": []
-}
+{"data":[{"id":141393,"number":"4557B","team_name":"Zooper Dooper - MCSHS","robot_name":"Robot V67","organization":"Mountain Creek State High School","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Mountain Creek","region":"Queensland","country":"Australia"}},{"id":200114,"number":"11505A","team_name":"Aussie Pineapples","robot_name":"Pineapple 1","organization":"St Peters Lutheran College, Indooroopilly","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Indooroopilly","region":"Queensland","country":"Australia"}},{"id":160143,"number":"13818A","team_name":"QRCA","robot_name":"","organization":"AAA Training and Tuition (RTO 46396)","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Burleigh Head","region":"Queensland","country":"Australia"}},{"id":179354,"number":"13818Z","team_name":"QRCA","robot_name":"","organization":"AAA Training and Tuition (RTO 46396)","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Burleigh Heads","region":"Queensland","country":"Australia"}},{"id":190504,"number":"21572A","team_name":"TLC Terminators","robot_name":"Terminator","organization":"The Lakes College","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"North Lakes","region":"Queensland","country":"Australia"}},{"id":201558,"number":"21572C","team_name":"TLC ","robot_name":"The Claw","organization":"The Lakes College","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"North Lakes","region":"Queensland","country":"Australia"}},{"id":122004,"number":"36010A","team_name":"CSDE","robot_name":"Guilty Sparks","organization":"Cairns School of Distance Education","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Manunda","region":"Queensland","country":"Australia"}},{"id":204023,"number":"40502S","team_name":"T.F.S","robot_name":"Gerrae","organization":"Toowoomba Grammar School","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"East Toowoomba","region":"Queensland","country":"Australia"}},{"id":190644,"number":"85657C","team_name":"Marsden Robotics C","robot_name":"","organization":"Marsden State High School","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Brisbane","region":"Queensland","country":"Australia"}},{"id":190645,"number":"85657D","team_name":"Marsden Robotics D","robot_name":"","organization":"Marsden State High School","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Brisbane","region":"Queensland","country":"Australia"}}]}
