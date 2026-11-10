@@ -1,17 +1,1 @@
-{
-  "meta": {
-    "current_page": 1,
-    "first_page_url": "https://events.vex.com/api/v2/events/64332/teams?page=1",
-    "from": null,
-    "last_page": 1,
-    "last_page_url": "https://events.vex.com/api/v2/events/64332/teams?page=1",
-    "next_page_url": null,
-    "path": "https://events.vex.com/api/v2/events/64332/teams",
-    "per_page": 250,
-    "prev_page_url": null,
-    "to": null,
-    "total": 0,
-    "merged_pages": 1
-  },
-  "data": []
-}
+{"data":[{"id":139683,"number":"46V","team_name":"Venom","robot_name":"","organization":"Seton SCHOOL","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Manassas","region":"Virginia","country":"United States"}},{"id":51821,"number":"9451A","team_name":"My Favorite Team","robot_name":"","organization":"JAMES RUMSEY TECHNICAL INSTITUTE","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Martinsburg","region":"West Virginia","country":"United States"}},{"id":203572,"number":"11001D","team_name":"SPUN Robotics Tigers ","robot_name":"Tigers","organization":"SPUN Robotics Inc","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Sterling","region":"Virginia","country":"United States"}},{"id":201831,"number":"34233X","team_name":"Riptide","robot_name":"","organization":"FO Robotics","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Manassas","region":"Virginia","country":"United States"}}]}

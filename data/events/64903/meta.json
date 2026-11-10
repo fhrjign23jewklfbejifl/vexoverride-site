@@ -1,13 +1,1 @@
-{
-  "eventId": 64903,
-  "updatedAt": "2026-08-23T14:03:43.641Z",
-  "source": "browser-side events.vex.com collector",
-  "eventRegion": {
-    "id": null,
-    "name": "California - Region 4",
-    "source": "listing",
-    "eventCode": "RE-V5RC-26-4903"
-  },
-  "officialRegionMapVersion": "2026-08-22T13:25:26.679Z",
-  "status": "ok"
-}
+{"eventId":64903,"updatedAt":"2026-11-10T23:27:06Z","source":"https://events.vex.com/api/v2","eventRegion":{"id":null,"name":"California - Region 4","source":"listing","eventCode":"RE-V5RC-26-4903"},"officialRegionMapVersion":"2026-08-22T13:25:26.679Z","status":"ok","collectorVersion":1,"divisionCount":1}

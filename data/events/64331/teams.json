@@ -1,17 +1,1 @@
-{
-  "meta": {
-    "current_page": 1,
-    "first_page_url": "https://events.vex.com/api/v2/events/64331/teams?page=1",
-    "from": null,
-    "last_page": 1,
-    "last_page_url": "https://events.vex.com/api/v2/events/64331/teams?page=1",
-    "next_page_url": null,
-    "path": "https://events.vex.com/api/v2/events/64331/teams",
-    "per_page": 250,
-    "prev_page_url": null,
-    "to": null,
-    "total": 0,
-    "merged_pages": 1
-  },
-  "data": []
-}
+{"data":[{"id":49743,"number":"46C","team_name":"Carnage","robot_name":"46C","organization":"Seton","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Manassas","region":"Virginia","country":"United States"}},{"id":63810,"number":"9901A","team_name":"Aimbot Apple Bees","robot_name":"Shelby","organization":"ST ANDREW THE APOSTLE SCHOOL","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Clifton","region":"Virginia","country":"United States"}},{"id":63811,"number":"9901B","team_name":"Baddie Black Bears","robot_name":"","organization":"ST ANDREW THE APOSTLE SCHOOL","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Clifton","region":"Virginia","country":"United States"}},{"id":63812,"number":"9901C","team_name":"Chimichungas","robot_name":"","organization":"ST ANDREW THE APOSTLE SCHOOL","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Clifton","region":"Virginia","country":"United States"}},{"id":84590,"number":"9901D","team_name":"Dino Nuggies","robot_name":"","organization":"ST ANDREW THE APOSTLE SCHOOL","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Clifton","region":"Virginia","country":"United States"}},{"id":100669,"number":"9901X","team_name":"Xtreme chicken wings","robot_name":"?>","organization":"ST ANDREW THE APOSTLE SCHOOL","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Clifton","region":"Virginia","country":"United States"}},{"id":203124,"number":"11001C","team_name":"SPUN Robotics Cheetahs","robot_name":"Cheetahs","organization":"SPUN Robotics Inc","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Sterling","region":"Virginia","country":"United States"}},{"id":197790,"number":"59208A","team_name":"Mechanical Maniacs","robot_name":"Lassi Launcher","organization":"Innovire Robotics","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Ashburn","region":"Virginia","country":"United States"}},{"id":197648,"number":"78861X","team_name":"The Scouts","robot_name":"The honored one","organization":"FutureForge","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Sterling","region":"Virginia","country":"United States"}},{"id":204167,"number":"85902A","team_name":"TBD","robot_name":"","organization":"Woodson Robotics","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Fairfax","region":"Virginia","country":"United States"}}]}
