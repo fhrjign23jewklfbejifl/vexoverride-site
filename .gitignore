@@ -21,3 +21,6 @@ windows-list.json
 vexoverride-live-final.json
 final-https-check.json
 *.zip
+
+__pycache__/
+*.pyc

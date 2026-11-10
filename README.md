@@ -28,132 +28,41 @@ The app is designed for pre-match, post-match, practice, scouting, and notebook 
 
 Data is stored locally in the browser using LocalStorage. Use Export Data / Import JSON to move data between devices.
 
-## VEX competition data proxy
+## Automatic competition data
 
-The website never stores VEX session cookies or private account data in browser code. Live competition import uses the Cloudflare Worker source in `workers/vex-data-proxy.js`.
+The supported updater is now `scripts/vex_sync.py`. It uses the official VEX Events API, never guessed event ID ranges or browser session cookies.
 
-Worker setup:
+The GitHub Actions workflow **Refresh VEX data** is configured for every six hours, at minute 17 UTC. It can also run manually from the repository's Actions tab. Scheduling requires the workflow on the default branch and Actions enabled. This is a cached scouting dataset, not a live match feed.
 
-- Deploy `workers/vex-data-proxy.js` to a free Cloudflare Worker.
-- The public season skills endpoint does not need a token.
-- Event/team-history API endpoints may still need an official VEX route or token before they can be fully automated.
-- Open the website once with `?proxy=https://YOUR-WORKER.workers.dev` to override the default proxy URL on that device.
+- Without an API key: refresh the public high-school season Skills standings and a compact daily history snapshot.
+- With `VEX_EVENTS_TOKEN` configured as a GitHub Actions repository secret: also discover the season's actual events and gradually refresh event teams, Skills, awards, match schedules/results, qualification rankings, and finalist rankings.
+- A run updates at most 24 complete event snapshots. Half the batch is reserved for old data so backfill can progress. The first complete season import takes multiple runs.
+- Refresh failures retain prior data and expose their last successful timestamp in `data/season-204/sync-status.json`.
 
-## Local VEX event updater
+**Setup and current limits:** [Data setup guide](docs/DATA_SETUP.md).
 
-The local updater is for protected VEX Events data that should be fetched from this computer, cleaned into public JSON files, and pushed to GitHub Pages.
+Current public data files:
 
-Private local files stay under `.local/` and are ignored by Git. Do not commit `.local/`, `.env`, browser session folders, or logs.
+- `data/season-204/skills-high-school.json`: published standings, team metadata, separate score fields, source and retrieval time.
+- `data/season-204/history/YYYY-MM-DD.json`: one observed standings snapshot per UTC day. This is not a reconstruction of previous matches.
+- `data/season-204/sync-status.json`: freshness and errors for each source.
+- `data/events/index.json`: successfully saved event snapshots, with each event's own freshness date.
+- `data/events/catalog.json`: complete authenticated event discovery, created after API access works.
+- `data/events/{id}/`: event, teams, skills, awards, matches, rankings, finalistRankings, and meta JSON files after an authenticated refresh.
 
-Public synced files are written here:
+The new season feed is available as data. Connecting it to the redesigned analysis screens is a separate pending step; downloading it does not automatically create the charts.
 
-- `data/events/index.json`
-- `data/events/{eventId}/event.json`
-- `data/events/{eventId}/teams.json`
-- `data/events/{eventId}/skills.json`
-- `data/events/{eventId}/awards.json`
-- `data/events/{eventId}/meta.json`
+For local development, Python 3.11+ is sufficient; no Python packages are needed:
 
-Setup:
-
-1. Run `npm install`.
-2. Sign into VEX Events in your normal Chrome browser.
-3. Open `https://events.vex.com/` in that signed-in Chrome window.
-4. Copy the browser-side collector:
-
-```powershell
-npm.cmd run vex:copy-collector
+```sh
+python scripts/vex_sync.py --public-only
+python -m unittest discover -s scripts -p 'test_vex_sync.py' -v
 ```
 
-5. Press `F12`, open the Chrome DevTools `Console` tab, paste, and press Enter.
-6. Enter event IDs or ranges when prompted. To scan the broad current-season window, type:
+Set `VEX_EVENTS_TOKEN` in the process environment to enable authenticated collection. Keep it out of files, command arguments, screenshots, and chat. The script never prints it. Configuration is in `data/vex-sync-config.json`.
 
-```text
-all
-```
+The older browser collector, Chrome profile updater, header-copying workflow, and Windows scheduled-task installer remain as legacy files. They are no longer the supported collection or scheduling path. Do not run a broad event-ID scan.
 
-That first tries the VEX season event index for season id `204`. If VEX returns a usable event list, the collector skips the broad brute-force range and downloads only those event IDs. If the index endpoint is blocked or empty, it falls back to checking event IDs `64205-70000`, keeps only season id `204`, and downloads full event data only for matching events. That fallback scan can take a long time because the collector intentionally runs slowly, pauses after small batches, and backs off for several minutes if VEX/Cloudflare returns `429 Too Many Requests`.
+## Existing live data proxy
 
-After a successful broad discovery run, the collector remembers what it learned in `events.vex.com` browser storage. Future `all` runs check known working season-204 event IDs, recheck a rotating batch of IDs that were previously blank/404, and discover a small batch of not-yet-seen IDs from `64205-70000`. That catches newly added competitions without rediscovering thousands of old-season events every day.
-
-The collector memory key is versioned. Updating the memory version intentionally starts a fresh event-memory map without requiring manual browser storage cleanup.
-
-If Chrome shows `Error 1015` or says you are rate limited, stop the scan and wait before trying again. That block is from Cloudflare on `events.vex.com`, not from this app. After waiting, copy the newest collector again with `npm.cmd run vex:copy-collector`, refresh `events.vex.com`, and paste the updated collector into the Console.
-
-You can also enter exact IDs:
-
-```text
-65030,64306
-```
-
-or:
-
-```text
-64000-65100
-```
-
-The collector runs inside `events.vex.com`, so VEX sees the same trusted browser session that can already view the JSON pages. It filters to season id `204`, downloads teams/skills/awards/event JSON for matching events, and saves one bundle file to Downloads.
-
-7. Import the downloaded bundle:
-
-```powershell
-npm.cmd run vex:import-bundle -- "C:\Users\29SSchwartz\Downloads\vex-event-bundle-PASTE-THE-REAL-NAME.json"
-```
-
-8. Commit and push the public JSON files when ready.
-
-This is the preferred batch path. It scales to hundreds of event IDs in one run without putting your VEX password, cookies, or session data in this repo.
-
-Experimental direct updater:
-
-```powershell
-npm.cmd run vex:update:headed
-```
-
-The default config uses:
-
-- `useRemoteChrome: false`
-- remote debugging port `9222`
-- `useExistingChromeProfile: false`
-- `%LOCALAPPDATA%\Google\Chrome\User Data`
-- Chrome profile `Default`
-
-The direct updater is kept for future experiments, but VEX currently rejects many non-browser automation attempts with `401` / `403` or robot checks. Use the browser-side collector first.
-
-If the existing Chrome profile is locked or still gets blocked, use the normal-Chrome header fallback:
-
-1. Run `npm run vex:headers-help`.
-2. Sign into VEX Events in your normal Chrome browser.
-3. Use DevTools Network on a working VEX API request.
-4. Copy only the `cookie` and `user-agent` request headers into `.local/vex-request-headers.json`.
-5. Run `npm run vex:update:headed`.
-
-Never paste `.local/vex-request-headers.json`, cookies, passwords, or session tokens into chat. The `.local/` folder is ignored by Git and stays on this computer.
-
-Manual API import fallback:
-
-If VEX blocks automated API reads, open each API URL directly in normal Chrome, copy the visible JSON, then save it from the clipboard:
-
-```powershell
-npm.cmd run vex:save-clipboard -- --event 65030 --kind event
-npm.cmd run vex:save-clipboard -- --event 65030 --kind teams
-npm.cmd run vex:save-clipboard -- --event 65030 --kind skills
-npm.cmd run vex:save-clipboard -- --event 65030 --kind awards
-```
-
-Use these URLs for event `65030`:
-
-- `https://events.vex.com/api/v2/events/65030`
-- `https://events.vex.com/api/v2/events/65030/teams?&per_page=250&page=1`
-- `https://events.vex.com/api/v2/events/65030/skills?&page=1&per_page=250`
-- `https://events.vex.com/api/v2/events/65030/awards?&per_page=999`
-
-The manual importer still enforces the configured `2026-2027` / season id `204` check for event metadata.
-
-Install the 3:00 AM Windows scheduled task:
-
-```powershell
-powershell -ExecutionPolicy Bypass -File scripts/install-vex-updater-task.ps1
-```
-
-The updater only publishes events that match the configured target season, currently `2026-2027` / season id `204`. Older event IDs from previous seasons are skipped and logged.
+`workers/vex-data-proxy.js` is the older Cloudflare proxy used by the original website. It is independent of the scheduled snapshot updater. Its deployment and authenticated endpoints are not validated by the new pipeline. Future live competition mode should fetch a selected event through a rate-limited server cache, with the API key held server-side.

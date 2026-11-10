@@ -1,0 +1,10 @@
+{
+  "seasonId": 204,
+  "seasonName": "2026-2027",
+  "programId": 1,
+  "gradeLevel": "High School",
+  "priorityEventIds": [65030, 64306],
+  "maxEventsPerRun": 24,
+  "maxRequestsPerRun": 400,
+  "requestDelaySeconds": 2
+}
