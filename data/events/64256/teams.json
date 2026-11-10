@@ -1,17 +1,1 @@
-{
-  "meta": {
-    "current_page": 1,
-    "first_page_url": "https://events.vex.com/api/v2/events/64256/teams?page=1",
-    "from": null,
-    "last_page": 1,
-    "last_page_url": "https://events.vex.com/api/v2/events/64256/teams?page=1",
-    "next_page_url": null,
-    "path": "https://events.vex.com/api/v2/events/64256/teams",
-    "per_page": 250,
-    "prev_page_url": null,
-    "to": null,
-    "total": 0,
-    "merged_pages": 1
-  },
-  "data": []
-}
+{"data":[{"id":70635,"number":"99766A","team_name":"Roadkill","robot_name":"","organization":"North Kirkwood Middle School","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Kirkwood","region":"Missouri","country":"United States"}},{"id":73223,"number":"99766B","team_name":"B","robot_name":"","organization":"North Kirkwood Middle School","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Kirkwood","region":"Missouri","country":"United States"}},{"id":73221,"number":"99766C","team_name":"GearShift","robot_name":"Stickdrift","organization":"North Kirkwood Middle School","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Kirkwood","region":"Missouri","country":"United States"}},{"id":97482,"number":"99766D","team_name":"Come back later","robot_name":"Cascade Platinum Plus","organization":"Kirkwood Robotics","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Kirkwood","region":"Missouri","country":"United States"}},{"id":119118,"number":"99766E","team_name":"E","robot_name":"Bobbert","organization":"NORTH KIRKWOOD MIDDLE","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Kirkwood","region":"Missouri","country":"United States"}},{"id":161082,"number":"99766F","team_name":"f","robot_name":"","organization":"North Kirkwood Middle School","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Kirkwood","region":"Missouri","country":"United States"}},{"id":73222,"number":"99766G","team_name":"The Digital Doughnuts","robot_name":"SprinklePuff","organization":"North Kirkwood Middle School","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Kirkwood","region":"Missouri","country":"United States"}}]}
