@@ -1,0 +1,20 @@
+name = "vexoverride-live"
+main = "workers/competition-live.js"
+compatibility_date = "2026-08-16"
+
+[vars]
+ALLOWED_ORIGINS = "https://vexoverride.com,https://www.vexoverride.com,https://vexoverride-review.mitchellschwartz.chatgpt.site"
+# Conservative starter budget, not a claim about VEX's quota. Confirm before increasing.
+VEX_REQUESTS_PER_MINUTE = "30"
+
+[[durable_objects.bindings]]
+name = "COMPETITIONS"
+class_name = "CompetitionCache"
+
+[[durable_objects.bindings]]
+name = "VEX_BUDGET"
+class_name = "VexRequestBudget"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["CompetitionCache", "VexRequestBudget"]

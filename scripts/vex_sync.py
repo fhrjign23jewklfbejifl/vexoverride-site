@@ -239,10 +239,9 @@ def due_events(events, config, root, now):
             close = False
         if age >= (5 * 3600 if close else 7 * 86400):
             entries.append((event, stamp, close))
-    priority = config.get("priorityEventIds", [])
     limit = config["maxEventsPerRun"]
     # Reserve half the batch for the oldest snapshots so active events cannot starve backfill.
-    urgent = sorted(entries, key=lambda x: (x[0]["id"] not in priority, not x[2], x[1], x[0]["id"]))
+    urgent = sorted(entries, key=lambda x: (not x[2], x[1], x[0]["id"]))
     picked = urgent[:max(1, limit // 2)]
     selected = {x[0]["id"] for x in picked}
     backlog = sorted((x for x in entries if x[0]["id"] not in selected), key=lambda x: (x[1], x[0]["id"]))

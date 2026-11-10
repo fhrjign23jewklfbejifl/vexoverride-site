@@ -681,6 +681,26 @@ th.num {
   text-decoration: underline;
   text-underline-offset: 4px;
 }
+.official-match .card-head {
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.official-alliances {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+}
+.official-alliances .alliance {
+  min-width: 0;
+}
+.official-alliances strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 28px;
+  font-variant-numeric: tabular-nums;
+}
+.official-alliances .team-link {
+  white-space: normal;
+}
 .vs {
   font-size: 11px;
   color: var(--muted);

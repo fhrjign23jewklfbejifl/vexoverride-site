@@ -19,7 +19,8 @@
     "test:v2": "node --test scripts/v2-tests.mjs",
     "build:teams": "node scripts/build-team-index.mjs",
     "vex:update:public": "python scripts/vex_sync.py --public-only",
-    "test:data": "python -m unittest discover -s scripts -p 'test_vex_sync.py' -v"
+    "test:data": "python -m unittest discover -s scripts -p 'test_vex_sync.py' -v",
+    "test:live": "node --test scripts/live-tests.mjs"
   },
   "devDependencies": {
     "playwright": "^1.54.2"

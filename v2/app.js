@@ -28,6 +28,8 @@ import {
   observationStats,
 } from "./modules/data.js";
 
+import { refreshOfficial, officialSchedule, matchTeams, matchState, freshnessLabel } from "./modules/live.js";
+
 const $ = (s) => document.querySelector(s);
 const esc = (v) =>
   String(v ?? "").replace(
@@ -100,6 +102,10 @@ let store,
   analysisDays = "all",
   analysisEvent = "all",
   eventTab = "schedule",
+  scheduleScope = "mine",
+  liveBusy = false,
+  liveNeedsRender = false,
+  liveError = "",
   scoreType = "head",
   zone = "top",
   storedRaw = null;
@@ -246,6 +252,8 @@ function overview() {
     driver = summary(all.filter((r) => r.type === "driver")),
     auton = summary(all.filter((r) => r.type === "autonomous"));
   const event = currentEvent();
+  const official = event?.source === "synced";
+  const nextPublished = official ? officialSchedule(event, store.team).find(m => !m.started && m.scored !== true && !m.alliances?.some(a => a.score > 0)) : null;
   const upcoming = store.schedules.filter(
     (s) =>
       s.eventId === store.activeEvent &&
@@ -259,7 +267,7 @@ function overview() {
       "Practice records, event preparation, and scouting in one place.",
       `<a class="button primary" href="#score">${icon("plus")} Score a run</a>`,
     ) +
-    `<div class="stats">${metric("Saved records", all.length, "On this device")}${metric("Head-to-head", head.length ? `${head.filter((r) => scoreRecord(r) > opponentScore(r)).length}W / ${head.filter((r) => scoreRecord(r) < opponentScore(r)).length}L` : "—", "Alliance results · ties excluded here")}${metric("Best Driver Skills", fmt(driver.best), driver.n + " saved attempts")}${metric("Best Autonomous Skills", fmt(auton.best), auton.n + " saved attempts")}</div><div class="grid main-side"><section class="card"><div class="card-head"><div><h2>Practice trajectory</h2><p>Driver Skills · separate from autonomous runs</p></div><a href="#analysis" class="link-button">View analysis →</a></div>${chart(all.filter((r) => r.type === "driver"))}</section><section class="card"><div class="card-head"><h2>Your next match</h2>${badge(event ? "Event workspace" : "No event")}</div>${upcoming ? matchCard(upcoming) : empty("Plan your next event", event ? "Add your schedule to bring your next match into this workspace." : "Select an event to connect scouting, schedules and picks.", `<a class="button" href="#event">Open competition</a>`)}</section></div><div class="grid two section-gap"><section class="card"><div class="card-head"><h2>Recent records</h2><a class="link-button" href="#analysis">View all →</a></div>${all.length ? recentRows(all) : empty("Your first record starts here", "Score a match or a Skills run to create your practice baseline.", `<a class="button primary" href="#score">Start scoring</a>`)}</section><section class="card"><div class="card-head"><h2>Event preparation</h2><a href="#picks" class="link-button">Open picklist →</a></div>${event ? `<p style="font-weight:600;margin-bottom:10px">${esc(event.name)}</p><div class="metric-line"><span>Teams in this event</span><strong>${event.teams.length}</strong></div><div class="metric-line"><span>Your scouting observations</span><strong>${observations().length}</strong></div><div class="metric-line"><span>Teams on your picklist</span><strong>${picks().length}</strong></div><p class="inline-note section-gap">${esc(sourceLabel(event))}. Saved locally. Prepare and print your picklist before alliance selection.</p>` : empty("Choose your competition", "Event-specific notes and picks stay together.", `<a class="button" href="#event">Browse events</a>`)}</section></div>`
+    `<div class="stats">${metric("Saved records", all.length, "On this device")}${metric("Head-to-head", head.length ? `${head.filter((r) => scoreRecord(r) > opponentScore(r)).length}W / ${head.filter((r) => scoreRecord(r) < opponentScore(r)).length}L` : "—", "Alliance results · ties excluded here")}${metric("Best Driver Skills", fmt(driver.best), driver.n + " saved attempts")}${metric("Best Autonomous Skills", fmt(auton.best), auton.n + " saved attempts")}</div><div class="grid main-side"><section class="card"><div class="card-head"><div><h2>Practice trajectory</h2><p>Driver Skills · separate from autonomous runs</p></div><a href="#analysis" class="link-button">View analysis →</a></div>${chart(all.filter((r) => r.type === "driver"))}</section><section class="card"><div class="card-head"><h2>Your next match</h2>${badge(event ? "Event workspace" : "No event")}</div>${official ? `${competitionStatus(event)}${nextPublished ? officialMatchCard(nextPublished) : empty("No upcoming match retrieved", "Check the competition schedule for published matches and results.", `<a class="button" href="#event">Open competition</a>`)}` : upcoming ? matchCard(upcoming) : empty("Plan your next event", "Select an event to connect scouting, schedules and picks.", `<a class="button" href="#event">Open competition</a>`)}</section></div><div class="grid two section-gap"><section class="card"><div class="card-head"><h2>Recent records</h2><a class="link-button" href="#analysis">View all →</a></div>${all.length ? recentRows(all) : empty("Your first record starts here", "Score a match or a Skills run to create your practice baseline.", `<a class="button primary" href="#score">Start scoring</a>`)}</section><section class="card"><div class="card-head"><h2>Event preparation</h2><a href="#picks" class="link-button">Open picklist →</a></div>${event ? `<p style="font-weight:600;margin-bottom:10px">${esc(event.name)}</p><div class="metric-line"><span>Teams in this event</span><strong>${event.teams.length}</strong></div><div class="metric-line"><span>Your scouting observations</span><strong>${observations().length}</strong></div><div class="metric-line"><span>Teams on your picklist</span><strong>${picks().length}</strong></div><p class="inline-note section-gap">${esc(sourceLabel(event))}. Saved locally. Prepare and print your picklist before alliance selection.</p>` : empty("Choose your competition", "Event-specific notes and picks stay together.", `<a class="button" href="#event">Browse events</a>`)}</section></div>`
   );
 }
 function typeSwitch(selected, action) {
@@ -345,54 +353,50 @@ function breakdown(parts, label, color) {
     )
     .join("")}</div>`;
 }
+function competitionStatus(e) {
+  const resource = page() === "scout" ? "skills" : eventTab === "rankings" && page() === "event" ? "rankings" : "matches";
+  return e.source === "synced" ? `<p class="inline-note" data-live-status="${resource}" role="status">${esc(freshnessLabel(e, Date.now(), resource))}${liveError ? " · " + esc(liveError) : ""}</p>` : "";
+}
+function officialMatchCard(m) {
+  const e = currentEvent();
+  const time = m.scheduled ? new Date(m.scheduled).toLocaleString(undefined, {month:"short", day:"numeric", hour:"numeric", minute:"2-digit"}) : "Time not published";
+  return `<article class="card official-match"><div class="card-head"><div><h3>${esc(m.name || "Match " + m.matchnum)}</h3><small>${esc(m.division?.name)} · ${esc(m.field || "Field pending")} · ${esc(time)}</small></div>${badge(matchState(m))}</div><div class="alliances official-alliances">${["red", "blue"].map(c => `<div class="alliance ${c}"><strong>${fmt(m.alliances?.find(a=>a.color===c)?.score)}</strong><div>${matchTeams(m,c).map(n => `<button class="team-link" data-action="team" data-team="${esc(n)}">${esc(n)}${n === store.team ? " · You" : ""}</button>`).join(" + ")}</div></div>`).join("")}</div></article>`;
+}
 function eventPage() {
   const e = currentEvent();
-  return (
-    title(
-      "COMPETITION",
-      "Competition workspace",
-      "Select a saved event or load a public VEX snapshot. Notes and picks stay attached to that event.",
-      button("Find an event", "events-dialog", "", "primary"),
-    ) +
-    (!e
-      ? empty(
-          "Choose your event",
-          "Load the teams and Skills data you already collected, or create a manual event.",
-          button("Browse events", "events-dialog", "", "primary"),
-        )
-      : `<section class="card"><div class="card-head"><div><h2>${esc(e.name)}</h2><p>${esc(date(e.date))} · ${esc(e.location)}</p></div>${badge(sourceLabel(e), e.source === "demo" ? "yellow" : "")}</div><div class="filters">${eventSelector()}<div class="actions">${button("Add match", "schedule-dialog")}${button("Scout teams", "go-scout")}</div></div><p class="inline-note">${e.source === "demo" ? "This event, its teams and results are demonstration data." : `Snapshot updated ${e.sourceUpdatedAt ? esc(date(e.sourceUpdatedAt)) : "at an unknown time"}. Loaded ${esc(date(e.loadedAt))}. Missing results are unknown, not zero.`}</p></section><div class="subnav section-gap">${[
-          ["schedule", "Your schedule"],
-          ["teams", "Event teams"],
-        ]
-          .map(
-            ([v, l]) =>
-              `<button data-action="event-tab" data-tab="${v}" class="${eventTab === v ? "active" : ""}">${l}</button>`,
-          )
-          .join("")}</div>${
-          eventTab === "teams"
-            ? `<section class="card">${teamTable(e.teams)}</section>`
-            : `<section class="card"><div class="card-head"><h2>Match schedule</h2>${badge("Manual schedule")}</div>${
-                store.schedules.filter((s) => s.eventId === e.id).length
-                  ? `<div class="grid two">${store.schedules
-                      .filter((s) => s.eventId === e.id)
-                      .map(
-                        (s) =>
-                          `<div class="card">${matchCard(s)}<div class="actions section-gap">${button(s.done ? "Mark upcoming" : "Mark complete", "schedule-done", `data-id="${esc(s.id)}"`, "small")}${button("Score this match", "score-schedule", `data-id="${esc(s.id)}"`, "small")}${button("Remove", "schedule-remove", `data-id="${esc(s.id)}"`, "small ghost")}</div>${s.done ? badge("Completed") : ""}</div>`,
-                      )
-                      .join("")}</div>`
-                  : empty(
-                      "No schedule has been loaded",
-                      "Your current event collector does not fetch match schedules. Add matches manually; this screen will not invent them.",
-                      button(
-                        "Add your first match",
-                        "schedule-dialog",
-                        "",
-                        "primary",
-                      ),
-                    )
-              }</section>`
-        }`)
-  );
+  const header = title("COMPETITION", "Competition workspace", "Schedules, results and scouting for your event.", button("Find an event", "events-dialog", "", "primary"));
+  if (!e) return header + empty("Choose your competition", "Search the worldwide event catalog.", button("Browse events", "events-dialog", "", "primary"));
+  const imported = officialSchedule(e, scheduleScope === "mine" ? store.team : "");
+  let body;
+  if (eventTab === "teams") body = `<section class="card">${teamTable(e.teams)}</section>`;
+  else if (eventTab === "rankings") body = `<section class="card"><h2>Official rankings</h2><div class="table-wrap"><table><thead><tr><th>Division</th><th>Rank</th><th>Team</th><th>W–L–T</th><th>WP</th></tr></thead><tbody>${[...(e.rankings || [])].sort((a,b)=>(a.division?.id || 0)-(b.division?.id || 0) || a.rank-b.rank).map(r=>`<tr><td>${esc(r.division?.name)}</td><td>${fmt(r.rank)}</td><td><button class="team-link" data-action="team" data-team="${esc(r.team?.name)}">${esc(r.team?.name)}</button></td><td>${fmt(r.wins)}–${fmt(r.losses)}–${fmt(r.ties)}</td><td>${fmt(r.wp)}</td></tr>`).join("")}</tbody></table></div>${e.rankings?.length ? "" : empty("Rankings unavailable", "Rankings will appear when published and retrieved.")}</section>`;
+  else if (e.matches?.length) body = `<section><div class="filters"><label>Matches<select id="schedule-scope">${selectedOptions([["mine","My team"],["all","All teams"]],scheduleScope)}</select></label><small>Times shown in ${esc(Intl.DateTimeFormat().resolvedOptions().timeZone)}</small></div><div class="grid two">${imported.map(officialMatchCard).join("") || empty("No matches for this team", "Choose All teams to view the complete event schedule.")}</div></section>`;
+  else {
+    const manual = store.schedules.filter(s=>s.eventId === e.id);
+    body = `<section class="card"><div class="card-head"><h2>Match schedule</h2>${button("Add private match", "schedule-dialog", "", "small")}</div>${manual.length ? `<div class="grid two">${manual.map(s=>`<article class="card">${matchCard(s)}<div class="actions">${button(s.done ? "Mark upcoming" : "Mark complete","schedule-done",`data-id="${esc(s.id)}"`,"small")}${button("Score this match","score-schedule",`data-id="${esc(s.id)}"`,"small")}${button("Remove","schedule-remove",`data-id="${esc(s.id)}"`,"small ghost")}</div></article>`).join("")}</div>` : empty("Schedule unavailable", "No published schedule has been retrieved yet.")}</section>`;
+  }
+  return header + `<section class="card"><div class="card-head"><div><h2>${esc(e.name)}</h2><p>${esc(date(e.date))} · ${esc(e.location)}</p></div>${badge(sourceLabel(e))}</div><div class="filters">${eventSelector()}<div class="actions">${e.source === "synced" ? button(liveBusy ? "Refreshing…" : "Refresh now", "refresh-event", liveBusy ? "disabled" : "") : ""}${button("Scout teams","go-scout")}</div></div>${competitionStatus(e)}</section><div class="subnav section-gap">${[["schedule","Schedule & results"],["teams","Event teams"],["rankings","Rankings"]].map(([v,l])=>`<button data-action="event-tab" data-tab="${v}" class="${eventTab === v ? "active" : ""}">${l}</button>`).join("")}</div>${body}`;
+}
+async function refreshCompetition(manual = false) {
+  const event = currentEvent();
+  if (demo || liveBusy || !event || event.source !== "synced" || !navigator.onLine || document.hidden) return;
+  if (!manual && !["event", "scout", "picks", "overview"].includes(page())) return;
+  liveBusy = true;
+  let changed = liveNeedsRender;
+  try {
+    const updated = await refreshOfficial(event);
+    if (store.activeEvent !== event.id) return;
+    changed ||= ["name", "date", "location", "teams", "matches", "rankings", "skills"].some(key => JSON.stringify(event[key]) !== JSON.stringify(updated[key]));
+    mutate(w => { const index = w.events.findIndex(e=>e.id===event.id); if (index>=0) w.events[index] = updated; });
+    liveError = updated.liveState === "partial" ? "Some updates are delayed" : "";
+  } catch(error) { liveError = error.message; }
+  finally {
+    liveBusy = false;
+    const editing = $("#dialog").open || document.activeElement?.matches("input,textarea,select,[contenteditable=true]");
+    liveNeedsRender = changed;
+    if (changed && !editing && ["event","scout","picks","overview"].includes(page())) { render(); liveNeedsRender = false; }
+    else if ($("[data-live-status]")) $("[data-live-status]").textContent = freshnessLabel(currentEvent() || event, Date.now(), $("[data-live-status]").dataset.liveStatus) + (liveError ? " · " + liveError : "");
+  }
 }
 function teamTable(teams) {
   const e = currentEvent();
@@ -446,7 +450,7 @@ function scouting() {
             ["notes", "Observation count"],
           ],
           scoutSort,
-        )}</select></label>${button("Add team", "add-team", "", "ghost")}</div><div class="card-head"><div><h2>${esc(e.name)}</h2><p>${teams.length} teams · autonomous fractions are observed task success, not alliance wins</p></div>${badge(sourceLabel(e))}</div>${teams.length ? teamTable(teams) : empty("No teams found", "Try another team number or add a team manually.")}</section><p class="inline-note section-gap">Skills results are from this event snapshot only. A missing score does not mean a team scored zero. Observations are entered by your team and are not official match statistics.</p>`)
+        )}</select></label>${button("Add team", "add-team", "", "ghost")}</div><div class="card-head"><div><h2>${esc(e.name)}</h2><p>${teams.length} teams · autonomous fractions are observed task success, not alliance wins</p></div>${badge(sourceLabel(e))}</div>${competitionStatus(e)}${teams.length ? teamTable(teams) : empty("No teams found", "Try another team number or add a team manually.")}</section><p class="inline-note section-gap">Skills results are from this event snapshot only. A missing score does not mean a team scored zero. Observations are entered by your team and are not official match statistics.</p>`)
   );
 }
 function pickPage() {
@@ -837,7 +841,7 @@ function compareDialog() {
 async function eventsDialog() {
   showDialog(
     "Find a competition",
-    `<label>Search name or location<input id="event-query" value="${esc(eventQuery)}" placeholder="Miami, Florida, or event name"></label><div class="actions section-gap">${button("Create manual event", "manual-event", "", "ghost")}</div><div id="event-results" class="section-gap"><p class="muted">Loading the event index…</p></div>`,
+    `<label>Search name or location<input id="event-query" value="${esc(eventQuery)}" placeholder="Event name, city, country or event code"></label><div class="actions section-gap">${button("Create manual event", "manual-event", "", "ghost")}</div><div id="event-results" class="section-gap"><p class="muted">Loading the event index…</p></div>`,
   );
   if (!index && !indexError) {
     try {
@@ -860,7 +864,7 @@ function renderEventResults() {
   }
   const q = eventQuery.toLowerCase().trim();
   let rows = index.events.filter((e) =>
-    (e.name + " " + e.location + " " + e.id).toLowerCase().includes(q),
+    (e.name + " " + e.location + " " + e.id + " " + (e.code || "")).toLowerCase().includes(q),
   );
   rows.sort(
     (a, b) =>
@@ -873,7 +877,7 @@ function renderEventResults() {
         .slice(0, 20)
         .map(
           (e) =>
-            `<div class="event-card"><div><h3>${esc(e.name)}</h3><p>${esc(date(e.date))} · ${esc(e.location)}</p><small>${e.teams} teams · event ${esc(e.id)}</small></div>${button("Load", "load-event", `data-id="${esc(e.id)}" ${busy ? "disabled" : ""}`, "small")}</div>`,
+            `<div class="event-card"><div><h3>${esc(e.name)}</h3><p>${esc(date(e.date))} · ${esc(e.location)}</p><small>${e.teams ?? "—"} saved teams · event ${esc(e.id)}</small></div>${button("Load", "load-event", `data-id="${esc(e.id)}" ${busy ? "disabled" : ""}`, "small")}</div>`,
         )
         .join("") ||
       empty(
@@ -1044,6 +1048,7 @@ async function action(el) {
     render();
     return;
   }
+  if (a === "refresh-event") return refreshCompetition(true);
   if (a === "events-dialog") return eventsDialog();
   if (a === "retry-index") {
     indexError = "";
@@ -1057,10 +1062,13 @@ async function action(el) {
     el.disabled = true;
     el.textContent = "Loading…";
     try {
-      const event = await loadEvent(d.id);
-      event.sourceUpdatedAt = index?.events.find(
-        (e) => e.id === d.id,
-      )?.sourceUpdatedAt;
+      let event;
+      liveError = "";
+      try { event = await loadEvent(d.id); }
+      catch {
+        const row = index?.events.find(e=>e.id===d.id);
+        event = await refreshOfficial({id:d.id, name:row?.name || "Competition", date:row?.date || "", location:row?.location || "", teams:[], skills:[], loadedAt:new Date().toISOString(), source:"synced"});
+      }
       mutate((w) => {
         w.events = w.events.filter((e) => e.id !== event.id);
         w.events.push(event);
@@ -1070,6 +1078,7 @@ async function action(el) {
       closeDialog();
       navigate("event");
       toast("Event saved on this device.");
+      void refreshCompetition();
     } finally {
       busy = false;
       if (el.isConnected) {
@@ -1268,6 +1277,8 @@ document.addEventListener("change", async (e) => {
     }
     if (el.id === "event-select") {
       mutate((w) => (w.activeEvent = el.value));
+      liveError = "";
+      void refreshCompetition();
       selectedCompare = [];
       render();
     }
@@ -1549,7 +1560,10 @@ window.addEventListener("storage", (event) => {
     );
   }
 });
-window.addEventListener("online", refresh);
+window.addEventListener("online", () => { refresh(); void refreshCompetition(); });
+document.addEventListener("visibilitychange", () => { if (!document.hidden) void refreshCompetition(); });
+window.addEventListener("hashchange", () => { void refreshCompetition(); });
+setInterval(() => { void refreshCompetition(); }, 30000);
 window.addEventListener("offline", refresh);
 render();
 if (!store.team && !startupError) settingsDialog();
@@ -1560,5 +1574,6 @@ if (!startupError) {
     toast("Storage is unavailable. Export before leaving this page.");
   }
 }
+void refreshCompetition();
 if ("serviceWorker" in navigator)
   navigator.serviceWorker.register("./sw.js").catch(() => {});

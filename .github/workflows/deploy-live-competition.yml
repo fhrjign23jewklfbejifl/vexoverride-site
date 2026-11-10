@@ -1,0 +1,63 @@
+name: Deploy live competition service
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: deploy-live-competition
+  cancel-in-progress: false
+jobs:
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      VEX_EVENTS_TOKEN: ${{ secrets.VEX_EVENTS_TOKEN }}
+      WRANGLER_SEND_METRICS: 'false'
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
+        with:
+          node-version: '22'
+      - name: Check deployment access
+        run: |
+          test -n "$CLOUDFLARE_API_TOKEN" || { echo 'Add the CLOUDFLARE_API_TOKEN repository secret.'; exit 1; }
+          test -n "$CLOUDFLARE_ACCOUNT_ID" || { echo 'Add the CLOUDFLARE_ACCOUNT_ID repository secret.'; exit 1; }
+          test -n "$VEX_EVENTS_TOKEN" || { echo 'Add the VEX_EVENTS_TOKEN repository secret.'; exit 1; }
+      - name: Validate worker bundle
+        run: npx --yes wrangler@4.159.0 deploy --dry-run --config wrangler.live.toml
+      - name: Deploy service
+        run: npx --yes wrangler@4.159.0 deploy --config wrangler.live.toml | tee /tmp/live-deploy.txt
+      - name: Configure private upstream credential
+        run: |
+          python -c 'import os,json; print(json.dumps({"VEX_EVENTS_TOKEN":os.environ["VEX_EVENTS_TOKEN"]}))' | npx --yes wrangler@4.159.0 secret bulk --config wrangler.live.toml
+      - name: Verify service before advertising its URL
+        run: |
+          python - <<'PY'
+          import json,re,pathlib,urllib.request
+          urls=re.findall(r'https://vexoverride-live\.[a-z0-9-]+\.workers\.dev',pathlib.Path('/tmp/live-deploy.txt').read_text())
+          if not urls: raise SystemExit('Deployment did not report its public URL')
+          base=urls[-1]
+          with urllib.request.urlopen(base+'/api/events/65030/live',timeout=90) as r:
+              data=json.load(r)
+          if data.get('state')=='unavailable' or any('data' not in data.get('resources',{}).get(k,{}) for k in ['event','teams','matches']):
+              raise SystemExit('Service deployed, but real event data did not verify; app remains on snapshots')
+          config={'baseUrl':base,'pollMs':30000}
+          pathlib.Path('data/live-service.json').write_text(json.dumps(config)+'\n')
+          if pathlib.Path('v2/live-config.json').exists():
+              pathlib.Path('v2/live-config.json').write_text(json.dumps(config)+'\n')
+          print('Verified live service: '+base)
+          PY
+      - name: Save verified service configuration
+        run: |
+          git add data/live-service.json
+          if [ -f v2/live-config.json ]; then git add v2/live-config.json; fi
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Connect verified live competition service'
+          git push origin HEAD:main

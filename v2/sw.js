@@ -1,4 +1,4 @@
-const CACHE = "vexoverride-v2-shell-2";
+const CACHE = "vexoverride-v2-shell-3";
 const FILES = [
   "./",
   "./index.html",
@@ -11,6 +11,8 @@ const FILES = [
   "./modules/analysis.js",
   "./modules/store.js",
   "./modules/data.js",
+  "./modules/live.js",
+  "./live-config.json",
   "./modules/demo.js",
 ];
 self.addEventListener("install", (event) =>

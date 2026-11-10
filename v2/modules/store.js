@@ -86,6 +86,23 @@ export function validateWorkspace(w) {
       throw new Error("Invalid official scores.");
   }
   for (const e of w.events) {
+    for (const key of ['matches', 'rankings']) {
+      if (e[key] != null && (!Array.isArray(e[key]) || e[key].length > 25000))
+        throw new Error('Invalid official event data.');
+    }
+    for (const match of e.matches || []) {
+      if (!match || !Number.isInteger(match.id) || !Array.isArray(match.alliances) ||
+          match.alliances.length > 2 || (match.scored != null && typeof match.scored !== 'boolean'))
+        throw new Error('Invalid official match.');
+      for (const a of match.alliances) {
+        if (!['red','blue'].includes(a.color) || !Array.isArray(a.teams) || a.teams.length > 3 ||
+            (a.score != null && (!Number.isFinite(a.score) || a.score < 0)) ||
+            a.teams.some(t => !validTeam(t?.team?.name))) throw new Error('Invalid match alliance.');
+      }
+    }
+    for (const ranking of e.rankings || [])
+      if (!ranking || !Number.isInteger(ranking.id) || !validTeam(ranking.team?.name))
+        throw new Error('Invalid official ranking.');
     if (
       !text(e.id, 100) ||
       !text(e.name, 500) ||

@@ -38,7 +38,7 @@ The workflow runs at 00:17, 06:17, 12:17, and 18:17 UTC. GitHub can delay schedu
 
 The updater makes one public Skills request, validates it, and saves the current snapshot plus that UTC day's history. It never adds separately reported best autonomous and driver values to invent an official total.
 
-With a valid token, it reads the actual season catalog, then refreshes up to 24 events. Recent and upcoming events are eligible again after five hours; older events after seven days. Half the batch is reserved for the oldest snapshots. Ransom event 65030 and event 64306 have priority. This is deliberately bounded backfill; it does not refresh the entire world every six hours. The event index includes only saved event snapshots, while the catalog holds discovered events.
+With a valid token, it reads the actual season catalog, then refreshes up to 24 events. Recent and upcoming events are eligible again after five hours; older events after seven days. Half the batch is reserved for the oldest snapshots. There are no preferred teams, countries, regions, or event IDs. This is deliberately bounded backfill; it does not refresh the entire world every six hours. The event index includes only saved event snapshots, while the catalog holds discovered events.
 
 Requests are sequential, at least two seconds apart. There is a 400-request run budget, a 40-second request timeout, bounded retries, and support for `Retry-After`. Long rate limits stop the run for a later retry. HTTP 401/403 stop authenticated work immediately. No credentials are sent to the public feed or forwarded across redirects. Unexpected pagination, duplicate IDs, wrong seasons, and large feed shrinkage fail validation.
 

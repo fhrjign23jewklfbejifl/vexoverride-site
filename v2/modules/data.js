@@ -8,7 +8,18 @@ async function read(path) {
   return response.json();
 }
 export async function eventIndex() {
-  const result = await read("index.json");
+  const [catalog, saved] = await Promise.allSettled([read("catalog.json"), read("index.json")]);
+  if (catalog.status === 'fulfilled' && Array.isArray(catalog.value.data)) {
+    const snapshots = new Map((saved.status === 'fulfilled' ? saved.value.events : []).map(e => [e.eventId, e]));
+    return {updatedAt: catalog.value.updatedAt, events: catalog.value.data.map(e => ({
+      id: String(e.id), name: e.name, code: e.sku || '', date: e.start || '',
+      location: [e.location?.city, e.location?.region, e.location?.country].filter(Boolean).join(', '),
+      teams: snapshots.get(e.id)?.teamCount ?? null,
+      sourceUpdatedAt: snapshots.get(e.id)?.updatedAt || null,
+    }))};
+  }
+  if (saved.status !== 'fulfilled') throw new Error('Competition catalog is unavailable.');
+  const result = saved.value;
   if (!Array.isArray(result.events))
     throw new Error("The event index is invalid.");
   return {
@@ -25,10 +36,13 @@ export async function eventIndex() {
 }
 export async function loadEvent(id) {
   if (!/^\d+$/.test(id)) throw new Error("Invalid event ID.");
-  const [metadata, teams, skills] = await Promise.all([
+  const [metadata, teams, skills, matches, rankings, meta] = await Promise.all([
     read(id + "/event.json"),
     read(id + "/teams.json"),
     read(id + "/skills.json"),
+    read(id + "/matches.json").catch(() => null),
+    read(id + "/rankings.json").catch(() => null),
+    read(id + "/meta.json").catch(() => null),
   ]);
   const e = metadata.data || metadata;
   return {
@@ -47,6 +61,9 @@ export async function loadEvent(id) {
       id: t.id,
     })),
     skills: skills.data || [],
+    matches: matches?.data || [],
+    rankings: rankings?.data || [],
+    sourceUpdatedAt: meta?.updatedAt || null,
     source: "synced",
     loadedAt: new Date().toISOString(),
   };

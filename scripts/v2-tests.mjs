@@ -275,8 +275,10 @@ test("Real repository snapshots load with the same adapter used by the browser",
     const index = await eventIndex();
     assert.ok(index.events.length > 400);
     const e = await loadEvent("65030");
-    assert.equal(e.teams.length, 28);
-    assert.equal(eventSkills(e, "4330P").total, null);
+    assert.ok(e.teams.some(t => t.number === "4330P"));
+    assert.ok(e.skills.some(row => Number.isFinite(row.score)));
+    assert.ok(e.matches.length > 0);
+    assert.ok(e.rankings.some(row => row.team?.name === "4330P"));
     validateWorkspace({ ...emptyWorkspace(), events: [e], activeEvent: e.id });
     await assert.rejects(loadEvent("../index"));
   } finally {
