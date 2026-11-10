@@ -316,3 +316,95 @@ test("All stored event snapshots meet the import contract", async () => {
     });
   }
 });
+
+const { analyze, practicePriorities, quantile } = await import(
+  "../v2/modules/analysis.js"
+);
+test("Analysis respects the saved alliance and official score overrides", () => {
+  const field = blankField();
+  field.zones.top.red = 10;
+  field.zones.top.blue = 1;
+  field.auton = "red";
+  const row = {
+    id: "a",
+    type: "head",
+    alliance: "blue",
+    field,
+    createdAt: "2026-10-01",
+    official: { red: 30, blue: 40 },
+  };
+  const a = analyze([row]);
+  assert.equal(a.margins[0].value, 10);
+  assert.equal(a.median, 40);
+  assert.equal(a.composition.pins, 5);
+  assert.equal(a.composition.auton, 0);
+  assert.equal(a.auton.lost, 1);
+  assert.equal(a.officialCount, 1);
+});
+test("Distributions count every attempt, including zero, and recent comparisons use chronological windows", () => {
+  const rows = Array.from({ length: 12 }, (_, i) => {
+    const field = blankField();
+    field.zones.top.blue = i;
+    return {
+      id: String(i),
+      type: "driver",
+      field,
+      createdAt: new Date(2026, 0, i + 1).toISOString(),
+    };
+  });
+  const a = analyze([...rows].reverse());
+  assert.equal(
+    a.bins.reduce((n, b) => n + b.n, 0),
+    12,
+  );
+  assert.equal(a.low, 0);
+  assert.equal(a.high, 55);
+  assert.deepEqual(a.recent, { previous: 20, latest: 45, delta: 25 });
+  assert.equal(a.q1, 13.75);
+  assert.equal(a.q3, 41.25);
+  assert.equal(quantile([], 0.5), null);
+  assert.equal(analyze(rows.slice(0, 9)).recent, null);
+  assert.throws(() => analyze([rows[0], { ...rows[1], type: "head" }]));
+});
+test("Zone contributions sum to field total minus autonomous bonus and respect Skills colors", () => {
+  for (const type of ["head", "driver", "autonomous"]) {
+    const rows = makeDemo().records.filter((r) => r.type === type);
+    const a = analyze(rows),
+      fields = rows.map((r) =>
+        type === "head" ? headScore(r.field, r.alliance) : skillsScore(r.field),
+      );
+    const expected =
+      fields.reduce((sum, r) => sum + r.total - r.auton, 0) / fields.length;
+    assert.ok(
+      Math.abs(a.zones.reduce((sum, z) => sum + z.mean, 0) - expected) < 1e-10,
+    );
+    assert.ok(
+      Math.abs(
+        Object.values(a.composition).reduce((sum, n) => sum + n, 0) -
+          fields.reduce((sum, r) => sum + r.total, 0) / fields.length,
+      ) < 1e-10,
+    );
+  }
+  const field = blankField();
+  field.zones.top.red = 30;
+  field.zones.top.yellow = 2;
+  field.zones.top.toggle = "red";
+  const a = analyze([{ type: "driver", field, createdAt: "2026-10-01" }]);
+  assert.equal(a.zones[0].mean, 0);
+  assert.equal(a.unownedYellow, 1);
+});
+test("Practice suggestions withhold performance claims for small samples and separate none from auton losses", () => {
+  assert.match(practicePriorities(analyze([]))[0].title, /baseline/);
+  const field = blankField();
+  const rows = Array.from({ length: 5 }, (_, i) => ({
+    id: String(i),
+    type: "head",
+    field,
+    alliance: "red",
+    createdAt: new Date(2026, 0, i + 1).toISOString(),
+  }));
+  const a = analyze(rows);
+  assert.equal(a.auton.none, 5);
+  assert.equal(a.auton.lost, 0);
+  assert.match(practicePriorities(a)[0].title, /No clear practice priority/);
+});

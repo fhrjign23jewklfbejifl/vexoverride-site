@@ -19,7 +19,7 @@ Baseline: `5ca75c3`. This document describes product work, not competition claim
 
 1. **Protect the baseline.** Work on `feature/v2-workspace`; keep the existing root app and data unchanged. Deliver the new workspace at `/v2/` for a reversible rollout.
 2. **Establish scoring and storage contracts.** Independent scoring functions, explicit pin-half labels, separate head/skills rules, event-linked records, isolated demo storage, reversible legacy import, validated backup/restore.
-3. **Build one design system.** Graphite surfaces, off-white text, teal for actions. Red/blue/yellow only for game data. Shared buttons, forms, tables, spacing, cards and empty states. Desktop sidebar; mobile navigation; large touch targets.
+3. **Build one design system.** Graphite surfaces, off-white text, electric lime (`#C1F449`) for actions. Red/blue/yellow only for game data. Shared buttons, forms, tables, spacing, cards and empty states. Desktop sidebar; mobile navigation; large touch targets.
 4. **Complete the practice workflow.** Head-to-head and Driver/Autonomous Skills scoring, undo, field overview, saved records, notes, run comparison and honest analysis. No forced recommendation when the records do not support one.
 5. **Complete the event workflow with available data.** Search the existing event index; load one event at a time; view teams and event-specific skills; attach structured observations; compare two teams; build and reorder a picklist; track selected/declined teams; print a list. Accept manual schedules until a verified automatic feed exists.
 6. **Make it usable offline.** Cache the v2 shell, persist selected event information and observations, indicate network/data age, export/import backup, printable picks. Demo opens populated and is labeled on every screen.
@@ -29,7 +29,7 @@ Baseline: `5ca75c3`. This document describes product work, not competition claim
 ## Explicitly deferred
 
 - Scheduled automatic VEX data collection: source and authorization need a separate implementation.
-- Shared cloud team accounts: need authentication, access controls, conflict handling and backup design. Local data is explicitly labeled as local.
+- Shared cloud team accounts: the next major product phase. See `TEAM_SYNC_PLAN.md` for membership, sync and acceptance requirements. Local data is explicitly labeled as local until that backend is deployed and tested.
 - Win probabilities, universal robot ratings, automatic partner recommendations: no validated model or sufficient individual observations yet.
 - Multiple seasons/programs and translated v2 copy: stabilize the V5 Override workflow first; keep v1 available.
 

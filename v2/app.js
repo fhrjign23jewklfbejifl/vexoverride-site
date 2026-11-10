@@ -19,6 +19,7 @@ import {
   REAL_KEY,
   DEMO_KEY,
 } from "./modules/store.js";
+import { analyze, practicePriorities } from "./modules/analysis.js";
 import { makeDemo } from "./modules/demo.js";
 import {
   eventIndex,
@@ -49,6 +50,12 @@ const date = (v) => {
     ? d.toLocaleDateString("en-US", { month: "short", day: "numeric" })
     : "Date unavailable";
 };
+const resultName = (r) =>
+  scoreRecord(r) > opponentScore(r)
+    ? "Win"
+    : scoreRecord(r) < opponentScore(r)
+      ? "Loss"
+      : "Tie";
 const typeName = (t) =>
   ({
     head: "Head-to-head",
@@ -91,6 +98,7 @@ let store,
   selectedCompare = [],
   analysisType = "head",
   analysisDays = "all",
+  analysisEvent = "all",
   eventTab = "schedule",
   scoreType = "head",
   zone = "top",
@@ -123,6 +131,16 @@ try {
 let alliance = "red",
   toastTimer,
   busy = false;
+try {
+  const savedAlliance = sessionStorage.getItem("vex-v2-alliance-" + demo);
+  if (["red", "blue"].includes(savedAlliance)) alliance = savedAlliance;
+} catch {}
+function setAlliance(value) {
+  alliance = value;
+  try {
+    sessionStorage.setItem("vex-v2-alliance-" + demo, value);
+  } catch {}
+}
 const currentEvent = () => store.events.find((e) => e.id === store.activeEvent);
 const records = () =>
   store.records
@@ -211,14 +229,14 @@ function chart(rows) {
   const x = (i) => 45 + (i * 600) / Math.max(1, all.length - 1),
     y = (v) => 180 - (v / max) * 150;
   const points = scores.map((v, i) => `${x(i)},${y(v)}`).join(" ");
-  return `<svg class="chart" viewBox="0 0 680 220" role="img" aria-label="${esc(typeName(all[0].type))} scores over ${all.length} saved records, from ${scores[0]} to ${scores.at(-1)} points"><path class="area" d="M45 180 L${points.replaceAll(" ", " L")} L645 180Z"/>${[0, 0.5, 1].map((p) => `<line class="gridline" x1="45" y1="${y(max * p)}" x2="655" y2="${y(max * p)}"/><text x="3" y="${y(max * p) + 4}">${Math.round(max * p)}</text>`).join("")}<polyline class="line" points="${points}"/>${scores.map((v, i) => `<circle cx="${x(i)}" cy="${y(v)}" r="4"><title>${esc(date(all[i].createdAt))}: ${v} points · ${esc(all[i].label)}</title></circle>`).join("")}<text x="45" y="207">${esc(date(all[0].createdAt))}</text><text x="645" y="207" text-anchor="end">${esc(date(all.at(-1).createdAt))}</text></svg><div class="chart-caption"><span>Exact results · ${all.length} most recent records</span></div>`;
+  return `<svg class="chart" viewBox="0 0 680 220" role="group" aria-label="${esc(typeName(all[0].type))} scores over ${all.length} saved records, from ${scores[0]} to ${scores.at(-1)} points"><path class="area" d="M45 180 L${points.replaceAll(" ", " L")} L645 180Z"/>${[0, 0.5, 1].map((p) => `<line class="gridline" x1="45" y1="${y(max * p)}" x2="655" y2="${y(max * p)}"/><text x="3" y="${y(max * p) + 4}">${Math.round(max * p)}</text>`).join("")}<polyline class="line" points="${points}"/>${scores.map((v, i) => `<circle cx="${x(i)}" cy="${y(v)}" r="5" data-action="record" data-id="${esc(all[i].id)}" role="button" tabindex="0" aria-label="Open ${esc(all[i].label)}, ${v} points"><title>${esc(date(all[i].createdAt))}: ${v} points · ${esc(all[i].label)}</title></circle>`).join("")}<text x="45" y="207">${esc(date(all[0].createdAt))}</text><text x="645" y="207" text-anchor="end">${esc(date(all.at(-1).createdAt))}</text></svg><div class="chart-caption"><span>Exact results · ${all.length} most recent records</span></div>`;
 }
 function recentRows(rows, limit = 5) {
   return rows
     .slice(0, limit)
     .map(
       (r) =>
-        `<div class="record-row"><button data-action="record" data-id="${esc(r.id)}"><strong>${esc(r.label || typeName(r.type))}</strong><small>${esc(typeName(r.type))} · ${esc(date(r.createdAt))}${r.route ? " · " + esc(r.route) : ""}</small></button>${r.source === "demo" ? badge("Sample") : badge(r.eventId ? "Event" : "Practice")}<span class="record-score">${fmt(scoreRecord(r))}${r.type === "head" ? ` <small>– ${fmt(opponentScore(r))}</small>` : ""}</span></div>`,
+        `<div class="record-row"><button data-action="record" data-id="${esc(r.id)}"><strong>${esc(r.label || typeName(r.type))}</strong><small>${esc(typeName(r.type))} · ${esc(date(r.createdAt))}${r.type === "head" ? ` · ${r.alliance === "red" ? "Red" : "Blue"} · ${resultName(r)}` : ""}${r.route ? " · " + esc(r.route) : ""}</small></button>${r.source === "demo" ? badge("Sample") : badge(r.eventId ? "Event" : "Practice")}<span class="record-score">${fmt(scoreRecord(r))}${r.type === "head" ? ` <small>– ${fmt(opponentScore(r))}</small>` : ""}</span></div>`,
     )
     .join("");
 }
@@ -245,10 +263,22 @@ function overview() {
   );
 }
 function typeSwitch(selected, action) {
-  return `<div class="segmented">${["head", "driver", "autonomous"].map((t) => `<button class="${selected === t ? "active teal" : ""}" data-action="${action}" data-type="${t}" aria-pressed="${selected === t}">${t === "head" ? "Head-to-head" : t === "driver" ? "Driver Skills" : "Autonomous"}</button>`).join("")}</div>`;
+  return `<div class="segmented">${["head", "driver", "autonomous"].map((t) => `<button class="${selected === t ? "active accent" : ""}" data-action="${action}" data-type="${t}" aria-pressed="${selected === t}">${t === "head" ? "Head-to-head" : t === "driver" ? "Driver Skills" : "Autonomous"}</button>`).join("")}</div>`;
 }
 function fieldMap(f) {
-  return `<div class="field-wrap"><svg class="field-map" viewBox="0 0 400 400" role="img" aria-label="Override field overview. Select a zone to enter its scored pin halves."><rect x="9" y="9" width="382" height="382" rx="18" fill="#121923" stroke="#556578" stroke-width="3"/><path d="M10 10L390 390 M390 10L10 390" stroke="#334151" stroke-width="2"/><path d="M200 133L267 200L200 267L133 200Z" fill="#1e2b37" stroke="#526677" stroke-width="2"/><rect x="166" y="4" width="68" height="10" rx="4" fill="${{ red: "#ff7e86", blue: "#80b8ff", neutral: "#f2d16b" }[f.zones.top.toggle]}"/><rect x="386" y="166" width="10" height="68" rx="4" fill="${{ red: "#ff7e86", blue: "#80b8ff", neutral: "#f2d16b" }[f.zones.right.toggle]}"/><rect x="166" y="386" width="68" height="10" rx="4" fill="${{ red: "#ff7e86", blue: "#80b8ff", neutral: "#f2d16b" }[f.zones.bottom.toggle]}"/><rect x="4" y="166" width="10" height="68" rx="4" fill="${{ red: "#ff7e86", blue: "#80b8ff", neutral: "#f2d16b" }[f.zones.left.toggle]}"/></svg>${ZONES.map((z) => `<button class="zone-button ${z} ${z === zone ? "active" : ""}" data-action="zone" data-zone="${z}" aria-label="Select ${z === "center" ? "midfield" : z} zone" aria-pressed="${z === zone}"><span>${z === "center" ? "Midfield" : z}</span><strong><b class="red-text">${f.zones[z].red}</b> / <b class="blue-text">${f.zones[z].blue}</b> / <b class="yellow-text">${f.zones[z].yellow}</b></strong></button>`).join("")}</div><div class="field-key"><span><i style="background:var(--red)"></i>Red halves</span><span><i style="background:var(--blue)"></i>Blue halves</span><span><i style="background:var(--yellow)"></i>Yellow halves</span></div>`;
+  return `<div class="field-wrap" role="group" aria-label="Field regions and toggles"><svg class="field-map" viewBox="0 0 400 400" aria-hidden="true"><rect x="9" y="9" width="382" height="382" rx="4" fill="var(--bg)" stroke="var(--border)" stroke-width="3"/><path d="M10 10L390 390 M390 10L10 390" stroke="var(--border)" stroke-width="2"/><path d="M200 133L267 200L200 267L133 200Z" fill="var(--panel)" stroke="var(--muted)" stroke-width="1.5"/></svg>${ZONES.map((z) => `<button class="zone-button ${z} ${z === zone ? "active" : ""}" data-action="zone" data-zone="${z}" aria-label="Select ${z === "center" ? "midfield" : z} zone" aria-pressed="${z === zone}"><span class="zone-label"><span class="zone-name">${z === "center" ? "Midfield" : z}</span><strong><b class="red-text">${f.zones[z].red}</b> / <b class="blue-text">${f.zones[z].blue}</b> / <b class="yellow-text">${f.zones[z].yellow}</b></strong></span></button>`).join("")}${ZONES.filter(
+    (z) => z !== "center",
+  )
+    .map(
+      (z) =>
+        `<button class="field-toggle ${z}" data-action="field-toggle" data-zone="${z}" style="--toggle-color:var(--${f.zones[z].toggle === "neutral" ? "yellow" : f.zones[z].toggle})" aria-label="${z} toggle: ${f.zones[z].toggle}. Cycle neutral, red, blue." title="${z}: ${f.zones[z].toggle} · click to cycle"></button>`,
+    )
+    .join(
+      "",
+    )}</div><div class="field-key"><span><i style="background:var(--red)"></i>Red halves</span><span><i style="background:var(--blue)"></i>Blue halves</span><span><i style="background:var(--yellow)"></i>Yellow halves</span></div>`;
+}
+function allianceControl() {
+  return `<div class="your-alliance"><small>Your alliance</small><div class="segmented">${["red", "blue"].map((c) => `<button data-action="alliance" data-value="${c}" class="${c}-text ${alliance === c ? "active" : ""}" aria-pressed="${alliance === c}">${c === "red" ? "Red" : "Blue"}</button>`).join("")}</div></div>`;
 }
 function scorePage() {
   const f = drafts[scoreType],
@@ -260,10 +290,10 @@ function scorePage() {
     title(
       "PRACTICE / SCORING",
       "Score the field.",
-      "Count visible, legally placed pin halves. Record the final field after it settles.",
+      "Select any region. Tap a field toggle to change its ownership.",
       typeSwitch(scoreType, "score-type"),
     ) +
-    `<section class="card score-header"><div class="score-total">${head ? `<div><small class="red-text">Red alliance</small><strong class="red-text">${r.total}</strong></div><span class="muted">:</span><div><small class="blue-text">Blue alliance</small><strong class="blue-text">${b.total}</strong></div>` : `<div><small>${esc(typeName(scoreType))}</small><strong class="teal-text">${s.total}</strong></div><small>points</small>`}</div><div class="actions">${button("Undo", "undo", undos[scoreType].length ? "" : "disabled", "ghost")}${button("Reset", "reset", "", "ghost")}${button("Save " + (head ? "match" : "run"), "save-dialog", "", "primary")}</div></section><div class="score-layout"><section class="card field-card"><div class="card-head"><div><h2>Field overview</h2><p>Choose a zone to edit</p></div>${badge("Manual v2.1")}</div>${fieldMap(f)}<p class="inline-note section-gap">${head ? "Zone totals combine the goals in that quadrant. AWP needs a separate autonomous-period check." : "Top/right are blue quadrants. Bottom/left are red quadrants. Wrong-color halves do not add Skills points."}</p></section><section class="card zone-editor"><div class="zone-tabs">${ZONES.map((z) => button(z === "center" ? "Midfield" : z[0].toUpperCase() + z.slice(1), "zone", `data-zone="${z}" aria-pressed="${zone === z}"`, "small " + (zone === z ? "primary" : "ghost"))).join("")}</div><div class="card-head"><div><div class="eyebrow">SELECTED ZONE</div><h2>${zone === "center" ? "Midfield" : zone[0].toUpperCase() + zone.slice(1) + " quadrant"}</h2></div>${badge(zone === "center" ? (head ? midfieldOwner(f) : f.skillsRobot ? "Owned" : "Unowned") + " ownership" : f.zones[zone].toggle + " toggle")}</div>${COLORS.map(
+    `<section class="card score-header"><div class="score-total">${head ? `<div><small class="red-text">Red alliance</small><strong class="red-text">${r.total}</strong></div><span class="muted">:</span><div><small class="blue-text">Blue alliance</small><strong class="blue-text">${b.total}</strong></div>` : `<div><small>${esc(typeName(scoreType))}</small><strong class="accent-text">${s.total}</strong></div><small>points</small>`}</div>${head ? allianceControl() : ""}<div class="actions">${button("Undo", "undo", undos[scoreType].length ? "" : "disabled", "ghost")}${button("Reset", "reset", "", "ghost")}${button("Save " + (head ? "match" : "run"), "save-dialog", "", "primary")}</div></section><div class="score-layout"><section class="card field-card"><div class="card-head"><div><h2>Field overview</h2><p>Click anywhere inside a region</p></div>${badge("Manual v2.1")}</div>${fieldMap(f)}<p class="inline-note section-gap">${head ? "Zone totals combine the goals in that quadrant. AWP needs a separate autonomous-period check." : "Top/right are blue quadrants. Bottom/left are red quadrants. Wrong-color halves do not add Skills points."}</p></section><section class="card zone-editor"><div class="zone-tabs">${ZONES.map((z) => button(z === "center" ? "Midfield" : z[0].toUpperCase() + z.slice(1), "zone", `data-zone="${z}" aria-pressed="${zone === z}"`, "small " + (zone === z ? "primary" : "ghost"))).join("")}</div><div class="card-head"><div><div class="eyebrow">SELECTED ZONE</div><h2>${zone === "center" ? "Midfield" : zone[0].toUpperCase() + zone.slice(1) + " quadrant"}</h2></div>${badge(zone === "center" ? (head ? midfieldOwner(f) : f.skillsRobot ? "Owned" : "Unowned") + " ownership" : f.zones[zone].toggle + " toggle")}</div>${COLORS.map(
       (c) => {
         const noScore =
           !head &&
@@ -274,29 +304,29 @@ function scorePage() {
       },
     ).join(
       "",
-    )}<div class="control-group"><h3>${zone === "center" ? "Midfield robots" : "Quadrant toggle"}</h3>${zone === "center" ? (head ? ["red", "blue"].map((c) => `<div class="counter-row"><span class="${c}-text">${c[0].toUpperCase() + c.slice(1)} robots</span><div class="segmented">${[0, 1, 2].map((n) => `<button data-action="robots" data-color="${c}" data-value="${n}" class="${f.robots[c] === n ? "active" : ""}" aria-label="${n} ${c} midfield robots" aria-pressed="${f.robots[c] === n}">${n}</button>`).join("")}</div></div>`).join("") : `<div class="toggle-controls">${[false, true].map((v) => `<button data-action="skills-robot" data-value="${v}" class="${f.skillsRobot === v ? "selected" : ""}">${v ? "Robot in midfield" : "No robot"}</button>`).join("")}</div>`) : `<div class="toggle-controls">${["red", "neutral", "blue"].map((c) => `<button data-action="toggle" data-value="${c}" class="${c} ${f.zones[zone].toggle === c ? "selected" : ""}" aria-pressed="${f.zones[zone].toggle === c}">${c === "neutral" ? "Neutral" : c[0].toUpperCase() + c.slice(1)}</button>`).join("")}</div><small>Robot contact or an unseated toggle means neutral.</small>`}</div>${
+    )}<div class="control-group"><h3>${zone === "center" ? "Midfield robots" : "Quadrant toggle"}</h3>${zone === "center" ? (head ? ["red", "blue"].map((c) => `<div class="counter-row"><span class="${c}-text">${c[0].toUpperCase() + c.slice(1)} robots</span><div class="segmented">${[0, 1, 2].map((n) => `<button data-action="robots" data-color="${c}" data-value="${n}" class="${f.robots[c] === n ? "active" : ""}" aria-label="${n} ${c} midfield robots" aria-pressed="${f.robots[c] === n}">${n}</button>`).join("")}</div></div>`).join("") : `<div class="toggle-controls">${[false, true].map((v) => `<button data-action="skills-robot" data-value="${v}" aria-pressed="${f.skillsRobot === v}" class="${f.skillsRobot === v ? "selected" : ""}">${v ? "Robot in midfield" : "No robot"}</button>`).join("")}</div>`) : `<div class="toggle-controls">${["red", "neutral", "blue"].map((c) => `<button data-action="toggle" data-value="${c}" class="${c} ${f.zones[zone].toggle === c ? "selected" : ""}" aria-pressed="${f.zones[zone].toggle === c}">${c === "neutral" ? "Neutral" : c[0].toUpperCase() + c.slice(1)}</button>`).join("")}</div><small>Robot contact or an unseated toggle means neutral.</small>`}</div>${
       head
         ? `<div class="control-group"><h3>Autonomous bonus</h3><div class="toggle-controls">${[
-            ["red", "Red +12"],
-            ["tie", "Tie +6"],
-            ["blue", "Blue +12"],
+            ["red", "Red"],
+            ["blue", "Blue"],
+            ["tie", "Tie"],
             ["none", "None"],
           ]
             .map(
               ([v, l]) =>
-                `<button data-action="auton" data-value="${v}" class="${v} ${f.auton === v ? "selected" : ""}">${l}</button>`,
+                `<button data-action="auton" data-value="${v}" aria-pressed="${f.auton === v}" class="${v} ${f.auton === v ? "selected" : ""}">${l}</button>`,
             )
             .join("")}</div></div>`
         : ""
-    }</section></div><section class="card section-gap"><div class="card-head"><h2>Score breakdown</h2><small>Calculated from this field</small></div><div class="grid two" id="score-breakdown">${head ? breakdown(r, "Red alliance", "red") + breakdown(b, "Blue alliance", "blue") : breakdown(s, typeName(scoreType), "teal") + `<p class="inline-note">Autonomous and Driver Skills use the same scoring rules. There is no autonomous bonus in Skills. Save each attempt under its actual run type.</p>`}</div></section>`
+    }</section></div><details class="card section-gap score-details"><summary>Score breakdown <small>Calculated from this field</small></summary><div class="grid two section-gap" id="score-breakdown">${head ? breakdown(r, "Red alliance", "red") + breakdown(b, "Blue alliance", "blue") : breakdown(s, typeName(scoreType), "accent") + `<p class="inline-note">Autonomous and Driver Skills use the same scoring rules. There is no autonomous bonus in Skills. Save each attempt under its actual run type.</p>`}</div></details>`
   );
 }
 function breakdown(parts, label, color) {
   return `<div><h3 class="${color}-text">${esc(label)} · ${parts.total} pts</h3><div class="breakdown">${[
-    ["pins", "#9aafc5"],
-    ["yellow", "#f2d16b"],
-    ["midfield", "#5ee0c1"],
-    ["auton", "#a699e3"],
+    ["pins", "var(--muted)"],
+    ["yellow", "var(--yellow)"],
+    ["midfield", "var(--accent)"],
+    ["auton", "var(--blue)"],
   ]
     .map(([k, c]) =>
       parts[k]
@@ -371,7 +401,7 @@ function teamTable(teams) {
       const stats = observationStats(observations(t.number)),
         skills = eventSkills(e, t.number),
         picked = picks().some((p) => p.team === t.number);
-      return `<tr><td><button class="team-link team-name" data-action="team" data-team="${esc(t.number)}"><strong>${esc(t.number)} ${t.number === store.team ? badge("You", "teal") : ""}</strong><small>${esc(t.name)}</small></button></td><td class="num" data-label="Event Skills">${fmt(skills.total)}${skills.partial ? "<small>Partial</small>" : ""}</td><td class="num" data-label="Observed auton">${stats.auton.n ? `${stats.auton.yes}/${stats.auton.n}` : "—"}</td><td class="num" data-label="Observations">${stats.n}</td><td><div class="row-actions">${t.number !== store.team ? button(picked ? "On list" : "+ Pick", "pick-toggle", `data-team="${esc(t.number)}"`, "small " + (picked ? "" : "ghost")) : ""}<label class="check" title="Compare ${esc(t.number)}"><input type="checkbox" data-compare="${esc(t.number)}" aria-label="Compare ${esc(t.number)}" ${selectedCompare.includes(t.number) ? "checked" : ""}></label></div></td></tr>`;
+      return `<tr><td><button class="team-link team-name" data-action="team" data-team="${esc(t.number)}"><strong>${esc(t.number)} ${t.number === store.team ? badge("You", "accent") : ""}</strong><small>${esc(t.name)}</small></button></td><td class="num" data-label="Event Skills">${fmt(skills.total)}${skills.partial ? "<small>Partial</small>" : ""}</td><td class="num" data-label="Observed auton">${stats.auton.n ? `${stats.auton.yes}/${stats.auton.n}` : "—"}</td><td class="num" data-label="Observations">${stats.n}</td><td><div class="row-actions">${t.number !== store.team ? button(picked ? "On list" : "+ Pick", "pick-toggle", `data-team="${esc(t.number)}"`, "small " + (picked ? "" : "ghost")) : ""}<label class="check" title="Compare ${esc(t.number)}"><input type="checkbox" data-compare="${esc(t.number)}" aria-label="Compare ${esc(t.number)}" ${selectedCompare.includes(t.number) ? "checked" : ""}></label></div></td></tr>`;
     })
     .join("")}</tbody></table></div>`;
 }
@@ -458,59 +488,145 @@ function pickPage() {
         }</section>`)
   );
 }
+function distributionChart(a) {
+  if (!a.n)
+    return empty(
+      "No scores to distribute",
+      "Save a run to see how often each score range occurs.",
+    );
+  const max = Math.max(...a.bins.map((b) => b.n));
+  return `<div class="distribution" role="img" aria-label="Score distribution: ${a.bins.map((b) => `${b.low} to ${b.high} points, ${b.n} records`).join("; ")}">${a.bins.map((b) => `<div class="histogram-column"><strong>${b.n}</strong><div class="histogram-track"><span style="height:${(b.n / max) * 100}%"></span></div><small>${b.low}–${b.high}</small></div>`).join("")}</div><p class="chart-caption">Score ranges · count of saved records, including zero scores</p>`;
+}
+function compositionChart(a) {
+  const labels = {
+    pins: "Red/blue halves",
+    yellow: "Owned yellow halves",
+    midfield: "Midfield robots",
+    auton: "Autonomous bonus",
+  };
+  const colors = {
+    pins: "muted",
+    yellow: "yellow",
+    midfield: "accent",
+    auton: "blue",
+  };
+  if (!a.n)
+    return empty(
+      "No scoring breakdown yet",
+      "Each saved field will contribute to this chart.",
+    );
+  const total = Object.values(a.composition).reduce((x, y) => x + y, 0);
+  return `<div class="composition-total"><strong>${fmt(total)}</strong><small>average field points</small></div><div class="composition-bar" role="img" aria-label="Average points: ${Object.entries(
+    a.composition,
+  )
+    .map(([k, v]) => `${labels[k]} ${fmt(v)}`)
+    .join(", ")}">${Object.entries(a.composition)
+    .filter(([, v]) => v > 0)
+    .map(
+      ([k, v]) =>
+        `<span style="width:${(v / (total || 1)) * 100}%;background:var(--${colors[k]})" title="${labels[k]}: ${fmt(v)} average points"></span>`,
+    )
+    .join("")}</div>${Object.entries(a.composition)
+    .filter(([k]) => a.head || k !== "auton")
+    .map(
+      ([k, v]) =>
+        `<div class="metric-line"><span><i class="legend-swatch" style="background:var(--${colors[k]})"></i>${labels[k]}</span><strong>${fmt(v)}</strong></div>`,
+    )
+    .join(
+      "",
+    )}<p class="inline-note section-gap">${a.head ? "Alliance field totals; individual robot contribution is not recorded." : "Only legally scoring colors and owned yellow halves count."}${a.officialCount ? ` ${a.officialCount} records use official scores for results; this chart retains the field calculation.` : ""}</p>`;
+}
+function zoneChart(a) {
+  if (!a.n)
+    return empty(
+      "No field records yet",
+      "Zone contributions appear after you save a field.",
+    );
+  const max = Math.max(1, ...a.zones.map((z) => z.mean));
+  return `<div class="zone-bars">${a.zones.map(({ zone, mean }) => `<div><span>${zone === "center" ? "Midfield" : zone[0].toUpperCase() + zone.slice(1)}</span><div class="zone-track"><i style="width:${(mean / max) * 100}%"></i></div><strong>${fmt(mean)}</strong></div>`).join("")}</div><p class="chart-caption">Average field points by zone. Midfield includes robots; autonomous bonus is separate.</p>`;
+}
+function marginChart(a) {
+  if (!a.n)
+    return empty(
+      "No match margins yet",
+      "Select your alliance when scoring to track the correct result.",
+    );
+  const rows = a.margins.slice(-16),
+    max = Math.max(10, ...rows.map((r) => Math.abs(r.value)));
+  return `<div class="margin-chart" aria-label="Your alliance's margin in its last ${rows.length} matches">${rows.map((r) => `<button data-action="record" data-id="${esc(r.id)}" class="margin-column" title="${esc(r.label)}: ${r.value > 0 ? "+" : ""}${r.value} points" aria-label="Open ${esc(r.label)}, ${r.value > 0 ? "won by" : r.value < 0 ? "lost by" : "tied"} ${Math.abs(r.value)} points"><span class="margin-top">${r.value >= 0 ? `<i style="height:${Math.max(2, (r.value / max) * 100)}%" class="positive"></i>` : ""}</span><span class="margin-bottom">${r.value < 0 ? `<i style="height:${(-r.value / max) * 100}%" class="negative"></i>` : ""}</span><small>${r.value > 0 ? "+" : ""}${r.value}</small></button>`).join("")}</div><p class="chart-caption">Most recent ${rows.length} matches, oldest → newest. Above zero = win. Select a bar to open its record.</p>`;
+}
 function analysisPage() {
-  const all = records();
-  let rows = all.filter(
+  const rows = records().filter(
     (r) =>
       r.type === analysisType &&
       (analysisDays === "all" ||
-        Date.now() - new Date(r.createdAt) <= Number(analysisDays) * 86400000),
+        Date.now() - new Date(r.createdAt) <=
+          Number(analysisDays) * 86400000) &&
+      (analysisEvent === "all" ||
+        r.eventId === (analysisEvent === "practice" ? "" : analysisEvent)),
   );
-  const stats = summary(rows),
+  const a = analyze(rows, analysisType),
     head = analysisType === "head";
-  const wins = rows.filter((r) => scoreRecord(r) > opponentScore(r)).length,
-    ties = rows.filter((r) => scoreRecord(r) === opponentScore(r)).length;
-  const knownAuton = rows.filter((r) => r.field.auton !== "none");
-  const autonWins = knownAuton.filter(
-      (r) => r.field.auton === r.alliance,
-    ).length,
-    autonTies = knownAuton.filter((r) => r.field.auton === "tie").length;
-  const midpoint = head
-    ? rows.filter((r) => r.field.robots[r.alliance] > 0).length
-    : rows.filter((r) => r.field.skillsRobot).length;
+  const wins = a.margins.filter((r) => r.value > 0).length,
+    losses = a.margins.filter((r) => r.value < 0).length;
   const routes = [...new Set(rows.map((r) => r.route || "Unlabeled"))];
   return (
     title(
       "ANALYSIS",
-      "Performance analysis",
-      "Track results across practice sessions and compare Skills route versions.",
+      "Know what to practice next.",
+      "Results, repeatability, and field patterns from your saved records.",
       typeSwitch(analysisType, "analysis-type"),
     ) +
-    `<div class="filters"><div class="segmented">${[
+    `<div class="filters analysis-filters"><div class="segmented">${[
       ["all", "All time"],
       ["7", "7 days"],
       ["30", "30 days"],
     ]
       .map(
         ([v, l]) =>
-          `<button data-action="analysis-days" data-value="${v}" class="${analysisDays === v ? "active" : ""}">${l}</button>`,
+          `<button data-action="analysis-days" data-value="${v}" aria-pressed="${analysisDays === v}" class="${analysisDays === v ? "active" : ""}">${l}</button>`,
       )
       .join(
         "",
-      )}</div>${badge(rows.length + " records")}</div><div class="stats">${metric(head ? "Median alliance score" : "Median score", fmt(stats.median), "Typical result in this set")}${metric("Best score", fmt(stats.best), "One result, not a prediction")}${metric("Lowest score", fmt(stats.low), "Includes failed attempts")}${metric(head ? "Win / loss / tie" : "Best minus median", head ? (rows.length ? `${wins} / ${rows.length - wins - ties} / ${ties}` : "—") : stats.n ? fmt(stats.best - stats.median) : "—", head ? "Your alliance result" : "Observed repeatability gap")}</div><div class="grid main-side"><section class="card"><div class="card-head"><h2>${head ? "Alliance score" : typeName(analysisType)} over time</h2></div>${chart(rows)}</section><section class="card"><div class="card-head"><h2>What is actually recorded</h2></div><div class="metric-line"><span>Sample size</span><strong>${rows.length}</strong></div>${head ? `<div class="metric-line"><span>Auton wins / ties</span><strong>${autonWins} / ${autonTies}</strong></div><div class="metric-line"><span>Recorded auton outcomes</span><strong>${knownAuton.length} of ${rows.length}</strong></div>` : ""}<div class="metric-line"><span>${head ? "At least one alliance robot" : "Robot"} in midfield</span><strong>${midpoint} of ${rows.length}</strong></div><p class="inline-note section-gap">${head ? "This is alliance-level data. It cannot identify your robot’s individual contribution or turn the opponent’s yellow points into your missed points." : "Keep failed attempts. Compare the same route and similar conditions. A higher score after a change alone does not prove that change caused the improvement."}</p></section></div>${
-      !head
-        ? `<section class="card section-gap"><div class="card-head"><div><h2>Compare your route versions</h2><p>Add a route/version label when saving a run.</p></div></div><div class="table-wrap"><table><thead><tr><th>Route / version</th><th class="num">Attempts</th><th class="num">Median</th><th class="num">Best</th><th class="num">Lowest</th></tr></thead><tbody>${routes
-            .map((route) => {
-              const s = summary(
-                rows.filter((r) => (r.route || "Unlabeled") === route),
-              );
-              return `<tr><td>${esc(route)}</td><td class="num">${s.n}</td><td class="num">${fmt(s.median)}</td><td class="num">${fmt(s.best)}</td><td class="num">${fmt(s.low)}</td></tr>`;
-            })
-            .join(
-              "",
-            )}</tbody></table></div>${!rows.length ? empty("No runs in this range", "Save attempts with a route label to compare your changes.") : ""}</section>`
-        : ""
-    }<section class="card section-gap"><div class="card-head"><h2>Saved ${head ? "matches" : "runs"}</h2><small>Open a record for the breakdown</small></div>${rows.length ? recentRows(rows, 100) : empty("No records in this range", "Change the date range or save your first attempt.", `<a class="button primary" href="#score">Score a run</a>`)}</section>`
+      )}</div><label>Record context<select id="analysis-event">${selectedOptions([["all", "All contexts"], ["practice", "Practice only"], ...store.events.map((e) => [e.id, e.name])], analysisEvent)}</select></label>${badge(rows.length + " records")}</div>
+  <div class="stats">${metric(head ? "Median alliance score" : "Median score", fmt(a.median), "Typical saved result")}${metric("Middle 50%", a.n ? `${fmt(a.q1)}–${fmt(a.q3)}` : "—", "25th–75th percentile · points")}${metric("Recent change", a.recent ? `${a.recent.delta > 0 ? "+" : ""}${fmt(a.recent.delta)}` : "—", a.recent ? "Last 5 median vs previous 5" : "Needs 10 records in this view")}${metric(head ? "Win / loss / tie" : "Best / lowest", head ? (a.n ? `${wins} / ${losses} / ${a.n - wins - losses}` : "—") : a.n ? `${fmt(a.high)} / ${fmt(a.low)}` : "—", head ? "Based on your selected alliance" : "All attempts in this view")}</div>
+  <div class="grid main-side"><section class="card"><div class="card-head"><div><h2>${head ? "Alliance results" : typeName(analysisType)} over time</h2><p>Select a point to inspect that record</p></div>${badge(a.n + " recorded")}</div>${chart(rows)}${a.recent ? `<div class="trend-detail"><span>Previous 5 median <strong>${fmt(a.recent.previous)}</strong></span><span>Latest 5 median <strong>${fmt(a.recent.latest)}</strong></span></div><p class="chart-caption">Describes these attempts; route, partner, and opponent changes may affect the comparison.</p>` : ""}</section><section class="card"><div class="card-head"><h2>Where points come from</h2></div>${compositionChart(a)}</section></div>
+  <div class="grid two section-gap"><section class="card"><div class="card-head"><div><h2>Score consistency</h2><p>One high score is different from a repeatable score</p></div></div>${distributionChart(a)}</section><section class="card"><div class="card-head"><div><h2>${head ? "Match margins" : "Scoring by field region"}</h2><p>${head ? "Your alliance minus its opponent" : "Find where your route is scoring"}</p></div></div>${head ? marginChart(a) : zoneChart(a)}</section></div>
+  <section class="card section-gap"><div class="card-head"><div><h2>Practice priorities</h2><p>Rule-based prompts from this view · no predicted wins or robot ratings</p></div>${badge(a.n < 5 ? "Small sample" : "Review with video")}</div><div class="priority-grid">${practicePriorities(
+    a,
+  )
+    .map(
+      (p, i) =>
+        `<article class="priority"><span class="priority-number">0${i + 1}</span><h3>${esc(p.title)}</h3><p class="priority-evidence">${esc(p.evidence)}</p><p>${esc(p.action)}</p></article>`,
+    )
+    .join("")}</div></section>
+  ${
+    head
+      ? `<div class="grid two section-gap"><section class="card"><div class="card-head"><h2>Autonomous bonus outcomes</h2></div>${[
+          ["Won", a.auton?.won || 0, "accent"],
+          ["Lost", a.auton?.lost || 0, "red"],
+          ["Tied", a.auton?.tied || 0, "blue"],
+          ["None selected", a.auton?.none || 0, "muted"],
+        ]
+          .map(
+            ([l, n, c]) =>
+              `<div class="outcome-row"><span>${l}</span><div><i style="width:${a.n ? (n / a.n) * 100 : 0}%;background:var(--${c})"></i></div><strong>${n}</strong></div>`,
+          )
+          .join(
+            "",
+          )}<p class="inline-note section-gap">None is excluded from wins, losses and ties. No autonomous-period robot actions are inferred from the final field.</p></section><section class="card"><div class="card-head"><h2>Scoring by field region</h2></div>${zoneChart(a)}</section></div>`
+      : `<section class="card section-gap"><div class="card-head"><div><h2>Compare your route versions</h2><p>Keep failed runs and label each version when saving.</p></div></div><div class="table-wrap"><table><thead><tr><th>Route / version</th><th class="num">Runs</th><th class="num">Median</th><th class="num">Middle 50%</th><th class="num">Best</th></tr></thead><tbody>${routes
+          .map((route) => {
+            const s = analyze(
+              rows.filter((r) => (r.route || "Unlabeled") === route),
+            );
+            return `<tr><td>${esc(route)}</td><td class="num">${s.n}</td><td class="num">${fmt(s.median)}</td><td class="num">${fmt(s.q1)}–${fmt(s.q3)}</td><td class="num">${fmt(s.high)}</td></tr>`;
+          })
+          .join(
+            "",
+          )}</tbody></table></div>${!a.n ? empty("No routes in this range", "Save attempts with a route label to compare your changes.") : ""}</section>`
+  }
+  <section class="card section-gap"><div class="card-head"><h2>Saved ${head ? "matches" : "runs"}</h2><small>${rows.length > 100 ? "Showing the latest 100 · export includes all records" : "Open a record for its field breakdown"}</small></div>${rows.length ? recentRows(rows, 100) : empty("No records in this range", "Change the date or context filter, or save your first attempt.", `<a class="button primary" href="#score">Score a run</a>`)}</section>`
   );
 }
 function render() {
@@ -529,6 +645,7 @@ function render() {
       }
     : null;
   const current = page();
+  document.body.dataset.page = current;
   $("#app").innerHTML =
     `<div class="layout"><aside class="sidebar"><a class="brand" href="#overview"><img src="icon.svg" alt=""><div>VexOverride<small>TEAM WORKSPACE</small></div></a><button class="team-switch" data-action="settings" aria-label="Team and data settings"><span><strong>${esc(store.team || "Choose team")}</strong><small>${esc(store.teamName)}</small></span><span class="muted">⌄</span></button><nav class="nav" aria-label="Main navigation">${[
       ["overview", "Overview"],
@@ -582,7 +699,7 @@ function saveDialog(schedule = null) {
               ["red", "Red alliance"],
               ["blue", "Blue alliance"],
             ],
-            schedule?.blue.includes(store.team) ? "blue" : alliance,
+            alliance,
           )}</select></label><label>Autonomous Win Point<select name="awp"><option value="unknown">Not recorded</option><option value="yes">Earned by our alliance</option><option value="no">Not earned</option></select></label><details class="wide"><summary>Official score differs from field calculation</summary><p class="dialog-intro">Use the posted result for penalties or disqualifications. Both scores are required; the original field stays available.</p><div class="form-grid"><label>Official red<input name="officialRed" type="number" min="0" max="9999" step="1"></label><label>Official blue<input name="officialBlue" type="number" min="0" max="9999" step="1"></label></div></details>`
         : `<label>Route / version<input name="route" placeholder="Route A · v3" maxlength="100"></label><label>Skills Stop Time (optional)<input name="stopTime" type="number" min="0" max="60" step="1" placeholder="Seconds remaining"></label>`
     }<label class="wide">Notes<textarea name="notes" maxlength="2000" placeholder="What changed? What failed? What should you check next?"></textarea></label></div><div class="dialog-actions">${button("Cancel", "close", "", "ghost")}<button class="button primary" type="submit">Save record</button></div><p class="form-error error" role="alert"></p></form>`,
@@ -596,7 +713,7 @@ function recordDialog(id) {
   const ops = head ? opportunities(r.field, r.alliance) : [];
   showDialog(
     r.label || typeName(r.type),
-    `<div class="actions">${badge(typeName(r.type))}${badge(r.source === "demo" ? "Sample record" : r.source === "legacy" ? "Imported from v1" : "Recorded by you")}</div><p class="detail-score">${fmt(scoreRecord(r))}${head ? ` <small>– ${fmt(opponentScore(r))}</small>` : ""}</p><p class="dialog-intro">${esc(date(r.createdAt))} · ${esc(r.team)}${r.route ? " · " + esc(r.route) : ""}${r.stopTime != null ? " · " + r.stopTime + " seconds remaining" : ""}</p>${r.official ? `<p class="inline-note warn">The displayed result uses entered official scores. The breakdown below describes the original field calculation.</p>` : ""}${breakdown(parts, head ? "Your alliance field calculation" : "Skills breakdown", "teal")}${head ? `<p class="inline-note section-gap">AWP: ${esc(r.awp || "not recorded")}. Autonomous bonus: ${esc(r.field.auton)}.</p><h3 class="section-gap">Toggle what-if</h3><p class="dialog-intro">Changes only one final toggle, holding the rest of the field constant. This is arithmetic, not a claim these points were yours or achievable.</p>${ops.length ? ops.map((o) => `<div class="metric-line"><span>Set ${esc(o.zone)} to ${esc(r.alliance)}</span><strong>+${o.delta} margin</strong></div>`).join("") : `<p class="muted">No outer-toggle change would improve your margin in this field.</p>`}` : ""}${r.notes ? `<p class="inline-note section-gap" style="white-space:pre-wrap">${esc(r.notes)}</p>` : ""}<div class="dialog-actions">${button("Delete record", "delete-record", `data-id="${esc(r.id)}"`, "danger ghost")}${button("Close", "close")}</div>`,
+    `<div class="actions">${badge(typeName(r.type))}${head ? badge((r.alliance === "red" ? "Red" : "Blue") + " alliance · " + resultName(r), r.alliance) : ""}${badge(r.source === "demo" ? "Sample record" : r.source === "legacy" ? "Imported from v1" : "Recorded by you")}</div><p class="detail-score">${fmt(scoreRecord(r))}${head ? ` <small>– ${fmt(opponentScore(r))}</small>` : ""}</p><p class="dialog-intro">${esc(date(r.createdAt))} · ${esc(r.team)}${r.route ? " · " + esc(r.route) : ""}${r.stopTime != null ? " · " + r.stopTime + " seconds remaining" : ""}</p>${r.official ? `<p class="inline-note warn">The displayed result uses entered official scores. The breakdown below describes the original field calculation.</p>` : ""}${breakdown(parts, head ? "Your alliance field calculation" : "Skills breakdown", "accent")}${head ? `<p class="inline-note section-gap">AWP: ${esc(r.awp || "not recorded")}. Autonomous bonus: ${esc(r.field.auton)}.</p><h3 class="section-gap">Toggle what-if</h3><p class="dialog-intro">Changes only one final toggle, holding the rest of the field constant. This is arithmetic, not a claim these points were yours or achievable.</p>${ops.length ? ops.map((o) => `<div class="metric-line"><span>Set ${esc(o.zone)} to ${esc(r.alliance)}</span><strong>+${o.delta} margin</strong></div>`).join("") : `<p class="muted">No outer-toggle change would improve your margin in this field.</p>`}` : ""}${r.notes ? `<p class="inline-note section-gap" style="white-space:pre-wrap">${esc(r.notes)}</p>` : ""}<div class="dialog-actions">${button("Delete record", "delete-record", `data-id="${esc(r.id)}"`, "danger ghost")}${button("Close", "close")}</div>`,
   );
 }
 function teamDialog(number) {
@@ -879,6 +996,17 @@ async function action(el) {
           Math.max(0, f.zones[zone][d.color] + Number(d.delta)),
         )),
     );
+  if (a === "alliance") {
+    setAlliance(d.value);
+    render();
+    return;
+  }
+  if (a === "field-toggle")
+    return editField((f) => {
+      const order = ["neutral", "red", "blue"];
+      f.zones[d.zone].toggle =
+        order[(order.indexOf(f.zones[d.zone].toggle) + 1) % order.length];
+    });
   if (a === "toggle") return editField((f) => (f.zones[zone].toggle = d.value));
   if (a === "robots")
     return editField((f) => (f.robots[d.color] = Number(d.value)));
@@ -1014,7 +1142,7 @@ async function action(el) {
     }
     pendingSchedule = scheduled;
     scoreType = "head";
-    alliance = pendingSchedule.blue.includes(store.team) ? "blue" : "red";
+    setAlliance(pendingSchedule.blue.includes(store.team) ? "blue" : "red");
     navigate("score");
     toast(
       "Scoring " +
@@ -1109,6 +1237,15 @@ async function action(el) {
     return;
   }
 }
+document.addEventListener("keydown", (e) => {
+  if (
+    (e.key === "Enter" || e.key === " ") &&
+    e.target.matches("svg [data-action]")
+  ) {
+    e.preventDefault();
+    action(e.target).catch((err) => toast(err.message));
+  }
+});
 document.addEventListener("click", (e) => {
   const el = e.target.closest("[data-action]");
   if (!el) return;
@@ -1124,6 +1261,10 @@ document.addEventListener("change", async (e) => {
         el.value = drafts[scoreType].zones[zone][el.dataset.count];
         toast("Enter a whole number from 0 to 126.");
       }
+    }
+    if (el.id === "analysis-event") {
+      analysisEvent = el.value;
+      render();
     }
     if (el.id === "event-select") {
       mutate((w) => (w.activeEvent = el.value));
@@ -1203,7 +1344,7 @@ document.addEventListener("input", (e) => {
       $("#score-breakdown").innerHTML = head
         ? breakdown(r, "Red alliance", "red") +
           breakdown(b, "Blue alliance", "blue")
-        : breakdown(s, typeName(scoreType), "teal");
+        : breakdown(s, typeName(scoreType), "accent");
       $('[data-action="undo"]').disabled = false;
       $(
         `[data-action="count"][data-color="${color}"][data-delta="-1"]`,
@@ -1265,6 +1406,7 @@ document.addEventListener("submit", (e) => {
           if (scheduled) scheduled.done = true;
         }
       });
+      if (scoreType === "head") setAlliance(r.alliance);
       pendingSchedule = null;
       closeDialog();
       render();

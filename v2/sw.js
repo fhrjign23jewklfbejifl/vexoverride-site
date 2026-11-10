@@ -1,4 +1,4 @@
-const CACHE = "vexoverride-v2-shell-1";
+const CACHE = "vexoverride-v2-shell-2";
 const FILES = [
   "./",
   "./index.html",
@@ -8,6 +8,7 @@ const FILES = [
   "./manifest.webmanifest",
   "./team-index.json",
   "./modules/scoring.js",
+  "./modules/analysis.js",
   "./modules/store.js",
   "./modules/data.js",
   "./modules/demo.js",

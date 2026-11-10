@@ -36,8 +36,16 @@
         <option selected>390</option>
         <option>768</option>
         <option>1024</option>
+        <option>1366</option>
       </select>
       px</label
+    ><label
+      >Height
+      <select id="height">
+        <option>700</option>
+        <option>768</option>
+        <option selected>820</option>
+      </select></label
     ><label
       >Page
       <select id="page">
@@ -57,6 +65,8 @@
   </p>
   <script>
     const frame = document.querySelector("iframe");
+    document.querySelector("#height").onchange = (e) =>
+      (frame.style.height = e.target.value + "px");
     document.querySelector("#width").onchange = (e) =>
       (frame.width = e.target.value);
     document.querySelector("#page").onchange = (e) =>
