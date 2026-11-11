@@ -1,17 +1,1 @@
-{
-  "meta": {
-    "current_page": 1,
-    "first_page_url": "https://events.vex.com/api/v2/events/65091/awards?page=1",
-    "from": null,
-    "last_page": 1,
-    "last_page_url": "https://events.vex.com/api/v2/events/65091/awards?page=1",
-    "next_page_url": null,
-    "path": "https://events.vex.com/api/v2/events/65091/awards",
-    "per_page": 250,
-    "prev_page_url": null,
-    "to": null,
-    "total": 0,
-    "merged_pages": 1
-  },
-  "data": []
-}
+{"data":[{"id":302595,"event":{"id":65091,"name":"Indonesia VEX V5 Override Blended Scrimmage (MS-HS) 26-27: Hosted by Sinarmas World Academy & ProVisi Mandiri Pratama","code":"RE-V5RC-26-5091"},"order":54,"title":"Tournament Champions (V5)","qualifications":[],"designation":null,"classification":null,"teamWinners":[{"division":{"id":1,"name":"Division 1","code":null},"team":{"id":200235,"name":"40591X","code":null}},{"division":{"id":1,"name":"Division 1","code":null},"team":{"id":142616,"name":"40591A","code":null}}]},{"id":302596,"event":{"id":65091,"name":"Indonesia VEX V5 Override Blended Scrimmage (MS-HS) 26-27: Hosted by Sinarmas World Academy & ProVisi Mandiri Pratama","code":"RE-V5RC-26-5091"},"order":64,"title":"Tournament Finalists (V5)","qualifications":[],"designation":null,"classification":null,"teamWinners":[{"division":{"id":1,"name":"Division 1","code":null},"team":{"id":194929,"name":"40591B","code":null}},{"division":{"id":1,"name":"Division 1","code":null},"team":{"id":195954,"name":"50251A","code":null}}]}]}
