@@ -1,17 +1,1 @@
-{
-  "meta": {
-    "current_page": 1,
-    "first_page_url": "https://events.vex.com/api/v2/events/64449/teams?page=1",
-    "from": null,
-    "last_page": 1,
-    "last_page_url": "https://events.vex.com/api/v2/events/64449/teams?page=1",
-    "next_page_url": null,
-    "path": "https://events.vex.com/api/v2/events/64449/teams",
-    "per_page": 250,
-    "prev_page_url": null,
-    "to": null,
-    "total": 0,
-    "merged_pages": 1
-  },
-  "data": []
-}
+{"data":[{"id":11044,"number":"8059F","team_name":"Blank.","robot_name":"Blank.","organization":"Anglo-Chinese School (Independent)","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Singapore","region":null,"country":"Singapore"}},{"id":187149,"number":"8501A","team_name":"Bullet","robot_name":"Bullet","organization":"Nan Hua High School","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Singapore","region":null,"country":"Singapore"}},{"id":199640,"number":"10060B","team_name":"AK Robotics Singapore - B Team","robot_name":"","organization":"AK Robotics Singapore","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Singapore","region":null,"country":"Singapore"}},{"id":199641,"number":"10060C","team_name":"AK Robotics Singapore - C Team","robot_name":"","organization":"AK Robotics Singapore","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Singapore","region":null,"country":"Singapore"}}]}

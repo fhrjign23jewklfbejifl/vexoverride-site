@@ -1,17 +1,1 @@
-{
-  "meta": {
-    "current_page": 1,
-    "first_page_url": "https://events.vex.com/api/v2/events/65503/teams?page=1",
-    "from": null,
-    "last_page": 1,
-    "last_page_url": "https://events.vex.com/api/v2/events/65503/teams?page=1",
-    "next_page_url": null,
-    "path": "https://events.vex.com/api/v2/events/65503/teams",
-    "per_page": 250,
-    "prev_page_url": null,
-    "to": null,
-    "total": 0,
-    "merged_pages": 1
-  },
-  "data": []
-}
+{"data":[{"id":126025,"number":"84443F","team_name":"Ingenuity","robot_name":"","organization":"RICE LAKE HIGH","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Rice Lake","region":"Wisconsin","country":"United States"}}]}
