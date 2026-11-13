@@ -1,17 +1,1 @@
-{
-  "meta": {
-    "current_page": 1,
-    "first_page_url": "https://events.vex.com/api/v2/events/64475/teams?page=1",
-    "from": null,
-    "last_page": 1,
-    "last_page_url": "https://events.vex.com/api/v2/events/64475/teams?page=1",
-    "next_page_url": null,
-    "path": "https://events.vex.com/api/v2/events/64475/teams",
-    "per_page": 250,
-    "prev_page_url": null,
-    "to": null,
-    "total": 0,
-    "merged_pages": 1
-  },
-  "data": []
-}
+{"data":[{"id":189727,"number":"21169A","team_name":"Atmos Beef","robot_name":"","organization":"Stamford American School Hong Kong WK","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Hong Kong","region":null,"country":"Hong Kong"}}]}
