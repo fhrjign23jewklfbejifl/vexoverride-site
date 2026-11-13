@@ -1,17 +1,1 @@
-{
-  "meta": {
-    "current_page": 1,
-    "first_page_url": "https://events.vex.com/api/v2/events/64484/teams?page=1",
-    "from": null,
-    "last_page": 1,
-    "last_page_url": "https://events.vex.com/api/v2/events/64484/teams?page=1",
-    "next_page_url": null,
-    "path": "https://events.vex.com/api/v2/events/64484/teams",
-    "per_page": 250,
-    "prev_page_url": null,
-    "to": null,
-    "total": 0,
-    "merged_pages": 1
-  },
-  "data": []
-}
+{"data":[{"id":179798,"number":"32275A","team_name":"Tech StacKing","robot_name":"VEXcalibur","organization":"HTL Wiener Neustadt/robo4you","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Wiener Neustadt","region":"Niederösterreich","country":"Austria"}},{"id":204533,"number":"32275B","team_name":"VEX Budget","robot_name":"LowCost.exe","organization":"HTL Wiener Neustadt/robo4you","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Wiener Neustadt","region":"Niederösterreich","country":"Austria"}},{"id":90883,"number":"76565A","team_name":"Team Heinitz A","robot_name":"Rüdi","organization":"Heinitz-Gymnasium Rüdersdorf","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Rüdersdorf","region":"Brandenburg","country":"Germany"}},{"id":168356,"number":"76565B","team_name":"Team Heinitz B","robot_name":"Heini","organization":"Heinitz-Gymnasium Rüdersdorf","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Rüdersdorf","region":"Brandenburg","country":"Germany"}},{"id":203904,"number":"76565C","team_name":"Team Heinitz C","robot_name":"Eichhörnchen","organization":"Heinitz-Gymnasium Rüdersdorf","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Rüdersdorf","region":"Brandenburg","country":"Germany"}}]}
