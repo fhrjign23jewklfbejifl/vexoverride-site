@@ -1,17 +1,1 @@
-{
-  "meta": {
-    "current_page": 1,
-    "first_page_url": "https://events.vex.com/api/v2/events/64635/awards?page=1",
-    "from": null,
-    "last_page": 1,
-    "last_page_url": "https://events.vex.com/api/v2/events/64635/awards?page=1",
-    "next_page_url": null,
-    "path": "https://events.vex.com/api/v2/events/64635/awards",
-    "per_page": 250,
-    "prev_page_url": null,
-    "to": null,
-    "total": 0,
-    "merged_pages": 1
-  },
-  "data": []
-}
+{"data":[{"id":303775,"event":{"id":64635,"name":"Hereford Zone Robotics Override Stampede: VEX V5 Robotics Competition - Blended, School-Based","code":"RE-V5RC-26-4635"},"order":50,"title":"Excellence Award (V5)","qualifications":[],"designation":null,"classification":null,"teamWinners":[]},{"id":303777,"event":{"id":64635,"name":"Hereford Zone Robotics Override Stampede: VEX V5 Robotics Competition - Blended, School-Based","code":"RE-V5RC-26-4635"},"order":57,"title":"Design Award (V5)","qualifications":[],"designation":null,"classification":null,"teamWinners":[]},{"id":303778,"event":{"id":64635,"name":"Hereford Zone Robotics Override Stampede: VEX V5 Robotics Competition - Blended, School-Based","code":"RE-V5RC-26-4635"},"order":60,"title":"Robot Skills Champion (V5)","qualifications":[],"designation":null,"classification":null,"teamWinners":[]},{"id":303780,"event":{"id":64635,"name":"Hereford Zone Robotics Override Stampede: VEX V5 Robotics Competition - Blended, School-Based","code":"RE-V5RC-26-4635"},"order":71,"title":"Judges Award (V5)","qualifications":[],"designation":null,"classification":null,"teamWinners":[]},{"id":303968,"event":{"id":64635,"name":"Hereford Zone Robotics Override Stampede: VEX V5 Robotics Competition - Blended, School-Based","code":"RE-V5RC-26-4635"},"order":54,"title":"Tournament Champions (V5)","qualifications":[],"designation":null,"classification":null,"teamWinners":[]}]}
