@@ -1,17 +1,1 @@
-{
-  "meta": {
-    "current_page": 1,
-    "first_page_url": "https://events.vex.com/api/v2/events/64679/teams?page=1",
-    "from": null,
-    "last_page": 1,
-    "last_page_url": "https://events.vex.com/api/v2/events/64679/teams?page=1",
-    "next_page_url": null,
-    "path": "https://events.vex.com/api/v2/events/64679/teams",
-    "per_page": 250,
-    "prev_page_url": null,
-    "to": null,
-    "total": 0,
-    "merged_pages": 1
-  },
-  "data": []
-}
+{"data":[{"id":199897,"number":"4051V","team_name":"Vantage","robot_name":"","organization":"Void Robotics","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"San Ramon","region":"California","country":"United States"}},{"id":18349,"number":"5327A","team_name":"Gael Force Ascension","robot_name":"clanker","organization":"DUBLIN HIGH","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Dublin","region":"California","country":"United States"}},{"id":199403,"number":"10829V","team_name":"Canned Tuna","robot_name":"","organization":"ARGUSBOT","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Campbell","region":"California","country":"United States"}},{"id":192394,"number":"21660A","team_name":"The Terminators","robot_name":"Master Terminator","organization":"The Terminators","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"San Jose","region":"California","country":"United States"}},{"id":82613,"number":"41190A","team_name":"Holy Names High School","robot_name":"","organization":"HOLY NAMES HIGH SCHOOL","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Oakland","region":"California","country":"United States"}},{"id":199782,"number":"73810A","team_name":"Gryphons Robotics","robot_name":"","organization":"Gryphons Robotics","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Hillsborough","region":"California","country":"United States"}},{"id":177862,"number":"76289X","team_name":"Blazing Bees","robot_name":"","organization":"Private","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Fremont","region":"California","country":"United States"}},{"id":180849,"number":"95120A","team_name":"REEVAAN","robot_name":"REEVAAN ROBOTICS A","organization":"REEVAAN ROBOTICS","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"San Jose","region":"California","country":"United States"}}]}

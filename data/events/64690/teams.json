@@ -1,17 +1,1 @@
-{
-  "meta": {
-    "current_page": 1,
-    "first_page_url": "https://events.vex.com/api/v2/events/64690/teams?page=1",
-    "from": null,
-    "last_page": 1,
-    "last_page_url": "https://events.vex.com/api/v2/events/64690/teams?page=1",
-    "next_page_url": null,
-    "path": "https://events.vex.com/api/v2/events/64690/teams",
-    "per_page": 250,
-    "prev_page_url": null,
-    "to": null,
-    "total": 0,
-    "merged_pages": 1
-  },
-  "data": []
-}
+{"data":[{"id":188277,"number":"11031A","team_name":"The Knights","robot_name":"Rusty","organization":"Providence Academy","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Johnson City","region":"Tennessee","country":"United States"}},{"id":141538,"number":"16859F","team_name":"₲ⱧØ₴₮_₲₳₦₲","robot_name":"Clyde","organization":"LAKEWAY CHRISTIAN ACADEMY","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"White Pine","region":"Tennessee","country":"United States"}},{"id":187465,"number":"16859X","team_name":"H.E.L.I.O.S","robot_name":"H.E.L.I.O.S","organization":"LAKEWAY CHRISTIAN ACADEMY","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"White Pine","region":"Tennessee","country":"United States"}},{"id":144528,"number":"42652C","team_name":"Slip Hazard","robot_name":"Slip Hazard","organization":"SULLIVAN EAST HIGH SCHOOL","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Bluff City","region":"Tennessee","country":"United States"}},{"id":111632,"number":"42652D","team_name":"Scrappy","robot_name":"Scrappy","organization":"SULLIVAN EAST HIGH SCHOOL","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Bluff City","region":"Tennessee","country":"United States"}},{"id":144529,"number":"42652E","team_name":"The Escapees","robot_name":"The Escapees","organization":"SULLIVAN EAST HIGH SCHOOL","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Bluff City","region":"Tennessee","country":"United States"}},{"id":186659,"number":"42652F","team_name":"Iron Patriots","robot_name":"","organization":"SULLIVAN EAST HIGH SCHOOL","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Bluff City","region":"Tennessee","country":"United States"}},{"id":71787,"number":"63303A","team_name":"JCHS Ashura","robot_name":"","organization":"JOHNSON CO HIGH SCHOOL","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Mountain City","region":"Tennessee","country":"United States"}},{"id":93462,"number":"63303Z","team_name":"JCHS Robotics","robot_name":"","organization":"JOHNSON CO HIGH SCHOOL","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Mountain City","region":"Tennessee","country":"United States"}},{"id":70119,"number":"97283A","team_name":"Patriot Prime","robot_name":"The Patriot","organization":"Jefferson County High School","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Dandridge","region":"Tennessee","country":"United States"}}]}
