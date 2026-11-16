@@ -1,17 +1,1 @@
-{
-  "meta": {
-    "current_page": 1,
-    "first_page_url": "https://events.vex.com/api/v2/events/64707/teams?page=1",
-    "from": null,
-    "last_page": 1,
-    "last_page_url": "https://events.vex.com/api/v2/events/64707/teams?page=1",
-    "next_page_url": null,
-    "path": "https://events.vex.com/api/v2/events/64707/teams",
-    "per_page": 250,
-    "prev_page_url": null,
-    "to": null,
-    "total": 0,
-    "merged_pages": 1
-  },
-  "data": []
-}
+{"data":[{"id":25099,"number":"9378S","team_name":"Wolfpack Robotics","robot_name":"Sigma","organization":"MERRILL F. WEST HIGH","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Tracy","region":"California","country":"United States"}},{"id":175776,"number":"19091A","team_name":"Smilodon","robot_name":"","organization":"Smilodon","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Palo Alto","region":"California","country":"United States"}},{"id":192394,"number":"21660A","team_name":"The Terminators","robot_name":"Master Terminator","organization":"The Terminators","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"San Jose","region":"California","country":"United States"}},{"id":197724,"number":"27000K","team_name":"Kalifornia Kondors","robot_name":"","organization":"Modus Novus Robotics Club","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Anderson","region":"California","country":"United States"}},{"id":144583,"number":"43426J","team_name":"Rubber Ducks","robot_name":"","organization":"Girl Scouts of Northern CA","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"San Jose","region":"California","country":"United States"}},{"id":187054,"number":"55114X","team_name":"Kookie Monsterz IRA","robot_name":"","organization":"Bobabots Inc.","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Palo Alto","region":"California","country":"United States"}},{"id":200550,"number":"61802A","team_name":"Omni","robot_name":"","organization":"Apex Robotics","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Redwood City","region":"California","country":"United States"}},{"id":198537,"number":"68699D","team_name":"Karrak’s Kitchen","robot_name":"","organization":"Ustar STEM Lab","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"San Jose","region":"California","country":"United States"}},{"id":198766,"number":"93239X","team_name":"metal gear solid","robot_name":"snake","organization":"pb robotics","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Fremont","region":"California","country":"United States"}},{"id":140823,"number":"95071X","team_name":"Saratoga High Extremity","robot_name":"Scrap Metal","organization":"Saratoga High School","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Saratoga","region":"California","country":"United States"}}]}
