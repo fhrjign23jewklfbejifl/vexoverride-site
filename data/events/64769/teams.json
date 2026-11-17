@@ -1,17 +1,1 @@
-{
-  "meta": {
-    "current_page": 1,
-    "first_page_url": "https://events.vex.com/api/v2/events/64769/teams?page=1",
-    "from": null,
-    "last_page": 1,
-    "last_page_url": "https://events.vex.com/api/v2/events/64769/teams?page=1",
-    "next_page_url": null,
-    "path": "https://events.vex.com/api/v2/events/64769/teams",
-    "per_page": 250,
-    "prev_page_url": null,
-    "to": null,
-    "total": 0,
-    "merged_pages": 1
-  },
-  "data": []
-}
+{"data":[{"id":192853,"number":"13636R","team_name":"Armor Robotics","robot_name":"","organization":"Archishop Riordan High School","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"San Francisco","region":"California","country":"United States"}},{"id":192904,"number":"13636S","team_name":"Armor Robotics","robot_name":"","organization":"Archishop Riordan High School","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"San Francisco","region":"California","country":"United States"}},{"id":72573,"number":"32430A","team_name":"Alisal Robotics Team 1","robot_name":"","organization":"Alisal High School","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Salinas","region":"California","country":"United States"}},{"id":72646,"number":"32430B","team_name":"Alisal Robotics Team 2","robot_name":"","organization":"Alisal High School","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Salinas","region":"California","country":"United States"}},{"id":198537,"number":"68699D","team_name":"Karrak’s Kitchen","robot_name":"","organization":"Ustar STEM Lab","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"San Jose","region":"California","country":"United States"}}]}
