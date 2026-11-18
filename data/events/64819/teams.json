@@ -1,17 +1,1 @@
-{
-  "meta": {
-    "current_page": 1,
-    "first_page_url": "https://events.vex.com/api/v2/events/64819/teams?page=1",
-    "from": null,
-    "last_page": 1,
-    "last_page_url": "https://events.vex.com/api/v2/events/64819/teams?page=1",
-    "next_page_url": null,
-    "path": "https://events.vex.com/api/v2/events/64819/teams",
-    "per_page": 250,
-    "prev_page_url": null,
-    "to": null,
-    "total": 0,
-    "merged_pages": 1
-  },
-  "data": []
-}
+{"data":[{"id":176233,"number":"31218W","team_name":"The Moderately Sized Wave","robot_name":"The Really Blue Bot","organization":"ETOWAH HIGH SCHOOL","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Attalla","region":"Alabama","country":"United States"}},{"id":188744,"number":"98601Y","team_name":"Atlantis (Troy)","robot_name":"Challenger","organization":"TROY HIGH NJROTC","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Fullerton","region":"California","country":"United States"}}]}
