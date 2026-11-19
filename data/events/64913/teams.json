@@ -1,17 +1,1 @@
-{
-  "meta": {
-    "current_page": 1,
-    "first_page_url": "https://events.vex.com/api/v2/events/64913/teams?page=1",
-    "from": null,
-    "last_page": 1,
-    "last_page_url": "https://events.vex.com/api/v2/events/64913/teams?page=1",
-    "next_page_url": null,
-    "path": "https://events.vex.com/api/v2/events/64913/teams",
-    "per_page": 250,
-    "prev_page_url": null,
-    "to": null,
-    "total": 0,
-    "merged_pages": 1
-  },
-  "data": []
-}
+{"data":[{"id":201530,"number":"11901A","team_name":"The Grant Park Corsairs","robot_name":"","organization":"Grant Park High School (Winnipeg School Division)","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Winnipeg","region":"Manitoba","country":"Canada"}},{"id":201531,"number":"11901B","team_name":"Stormbearers","robot_name":"","organization":"Grant Park High School (Winnipeg School Division)","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Winnipeg","region":"Manitoba","country":"Canada"}},{"id":201532,"number":"11901C","team_name":"The Iron Sigeons","robot_name":"","organization":"Grant Park High School (Winnipeg School Division)","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Winnipeg","region":"Manitoba","country":"Canada"}},{"id":201529,"number":"11901D","team_name":"The Jolly Rogers","robot_name":"","organization":"Grant Park High School (Winnipeg School Division)","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Winnipeg","region":"Manitoba","country":"Canada"}},{"id":201533,"number":"11901E","team_name":"The Quarterdeck Circuiteers","robot_name":"","organization":"Grant Park High School (Winnipeg School Division)","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Winnipeg","region":"Manitoba","country":"Canada"}},{"id":201534,"number":"11901F","team_name":"The Plank-Walk Scallywags","robot_name":"","organization":"Grant Park High School (Winnipeg School Division)","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Winnipeg","region":"Manitoba","country":"Canada"}},{"id":170468,"number":"88875M","team_name":"Blue Bomber","robot_name":"Blue Bomber","organization":"Morris School","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Morris","region":"Manitoba","country":"Canada"}}]}
