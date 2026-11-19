@@ -1,17 +1,1 @@
-{
-  "meta": {
-    "current_page": 1,
-    "first_page_url": "https://events.vex.com/api/v2/events/64967/teams?page=1",
-    "from": null,
-    "last_page": 1,
-    "last_page_url": "https://events.vex.com/api/v2/events/64967/teams?page=1",
-    "next_page_url": null,
-    "path": "https://events.vex.com/api/v2/events/64967/teams",
-    "per_page": 250,
-    "prev_page_url": null,
-    "to": null,
-    "total": 0,
-    "merged_pages": 1
-  },
-  "data": []
-}
+{"data":[{"id":149035,"number":"4471A","team_name":"Eagles Robotics","robot_name":"","organization":"Richmond Christian School","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Richmond","region":"British Columbia","country":"Canada"}},{"id":194783,"number":"4471S","team_name":"Eagles Robotics","robot_name":"","organization":"Richmond Christian School","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Richmond","region":"British Columbia","country":"Canada"}},{"id":147171,"number":"4471X","team_name":"Eagles Robotics","robot_name":"","organization":"Richmond Christian Secondary School","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Richmond","region":"British Columbia","country":"Canada"}},{"id":205758,"number":"4471Z","team_name":"Eagles Robotics","robot_name":"","organization":"Richmond Christian School","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Richmond","region":"British Columbia","country":"Canada"}}]}

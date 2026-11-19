@@ -1,17 +1,1 @@
-{
-  "meta": {
-    "current_page": 1,
-    "first_page_url": "https://events.vex.com/api/v2/events/64968/teams?page=1",
-    "from": null,
-    "last_page": 1,
-    "last_page_url": "https://events.vex.com/api/v2/events/64968/teams?page=1",
-    "next_page_url": null,
-    "path": "https://events.vex.com/api/v2/events/64968/teams",
-    "per_page": 250,
-    "prev_page_url": null,
-    "to": null,
-    "total": 0,
-    "merged_pages": 1
-  },
-  "data": []
-}
+{"data":[{"id":32641,"number":"4101A","team_name":"Error 404","robot_name":"Vise","organization":"Hillsboro Middle/high School","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Hillsboro","region":"Kansas","country":"United States"}},{"id":32647,"number":"4101B","team_name":"0pptimus Primates","robot_name":"Rusty","organization":"Hillsboro Middle/high School","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Hillsboro","region":"Kansas","country":"United States"}},{"id":32644,"number":"4101C","team_name":"Hillsboro Robotics","robot_name":"3","organization":"Hillsboro Middle/high School","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Hillsboro","region":"Kansas","country":"United States"}},{"id":49225,"number":"4101D","team_name":"ApexVoltage","robot_name":"Wall-3E","organization":"Hillsboro Middle/high School","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Hillsboro","region":"Kansas","country":"United States"}},{"id":49229,"number":"4101H","team_name":"High Ground","robot_name":"Gonky","organization":"HILLSBORO MIDDLE/HIGH SCHOOL","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Hillsboro","region":"Kansas","country":"United States"}},{"id":49230,"number":"4101J","team_name":"Morgan Freemen","robot_name":"Juneonenineteenthirtyseven","organization":"Hillsboro Middle/high School","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Hillsboro","region":"Kansas","country":"United States"}},{"id":144472,"number":"21020B","team_name":"Robotic Pioneers","robot_name":"Balrog","organization":"LEAVENWORTH SR HIGH","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Leavenworth","region":"Kansas","country":"United States"}},{"id":165586,"number":"79096A","team_name":"Cosmic Brownies","robot_name":"Viper","organization":"HEIGHTS HIGH AFJROTC","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Wichita","region":"Kansas","country":"United States"}},{"id":199615,"number":"79096R","team_name":"R9","robot_name":"Cobra","organization":"HEIGHTS HIGH AFJROTC","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Wichita","region":"Kansas","country":"United States"}},{"id":205570,"number":"79096X","team_name":"XETRIC","robot_name":"F-16","organization":"HEIGHTS HIGH AFJROTC","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Wichita","region":"Kansas","country":"United States"}}]}

@@ -1,17 +1,1 @@
-{
-  "meta": {
-    "current_page": 1,
-    "first_page_url": "https://events.vex.com/api/v2/events/64966/teams?page=1",
-    "from": null,
-    "last_page": 1,
-    "last_page_url": "https://events.vex.com/api/v2/events/64966/teams?page=1",
-    "next_page_url": null,
-    "path": "https://events.vex.com/api/v2/events/64966/teams",
-    "per_page": 250,
-    "prev_page_url": null,
-    "to": null,
-    "total": 0,
-    "merged_pages": 1
-  },
-  "data": []
-}
+{"data":[{"id":123927,"number":"87265A","team_name":"Robo Ridge","robot_name":"","organization":"Southridge School","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Surrey","region":"British Columbia","country":"Canada"}},{"id":134947,"number":"87265B","team_name":"Robo Ridge","robot_name":"Bowler","organization":"Southridge School","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Surrey","region":"British Columbia","country":"Canada"}},{"id":134948,"number":"87265C","team_name":"Robo Ridge","robot_name":"","organization":"Southridge School","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Surrey","region":"British Columbia","country":"Canada"}},{"id":134949,"number":"87265D","team_name":"Robo Ridge","robot_name":"","organization":"Southridge School","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Surrey","region":"British Columbia","country":"Canada"}},{"id":143614,"number":"87265E","team_name":"Robo Ridge","robot_name":"","organization":"Southridge School","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Surrey","region":"British Columbia","country":"Canada"}},{"id":158537,"number":"87265F","team_name":"Robo Ridge","robot_name":"","organization":"Southridge School","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Surrey","region":"British Columbia","country":"Canada"}},{"id":178384,"number":"87265H","team_name":"Horizon - Robo Ridge","robot_name":"","organization":"Southridge School","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Surrey","region":"British Columbia","country":"Canada"}},{"id":178385,"number":"87265J","team_name":"Robo Ridge","robot_name":"","organization":"Southridge School","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Surrey","region":"British Columbia","country":"Canada"}},{"id":178386,"number":"87265K","team_name":"Robo Ridge","robot_name":"","organization":"Southridge School","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Surrey","region":"British Columbia","country":"Canada"}}]}
