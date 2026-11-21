@@ -1,3 +1,4 @@
+import {compactRatingInput} from './lib/rating-input.mjs';
 import { readFile, writeFile } from "node:fs/promises";
 const read = async (p) =>
   JSON.parse(await readFile(new URL("../" + p, import.meta.url), "utf8"));
@@ -80,5 +81,5 @@ input.inputs = {
   eventSnapshots: events.length,
   catalogEvents: directory.catalogCount,
 };
-await writeFile(new URL('../data/rating-input.json',import.meta.url),JSON.stringify(input)+'\n');
+await writeFile(new URL('../data/rating-input.json',import.meta.url),JSON.stringify(compactRatingInput(input))+'\n');
 console.log(JSON.stringify({teams:input.teams.length,events:input.events.length,cutoff:input.cutoff}));

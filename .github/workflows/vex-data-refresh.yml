@@ -12,6 +12,7 @@ on:
       - 'scripts/publish-vex-data.py'
       - 'scripts/build-team-index.mjs'
       - 'scripts/prepare-rating-input.mjs'
+      - 'scripts/lib/rating-input.mjs'
       - 'scripts/test_vex_sync.py'
       - 'data/vex-sync-config.json'
 
