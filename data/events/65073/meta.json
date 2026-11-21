@@ -1,13 +1,1 @@
-{
-  "eventId": 65073,
-  "updatedAt": "2026-08-23T14:03:48.515Z",
-  "source": "browser-side events.vex.com collector",
-  "eventRegion": {
-    "id": null,
-    "name": "New Mexico",
-    "source": "listing",
-    "eventCode": "RE-V5RC-26-5073"
-  },
-  "officialRegionMapVersion": "2026-08-22T13:25:26.679Z",
-  "status": "ok"
-}
+{"eventId":65073,"updatedAt":"2026-11-21T19:25:56Z","source":"https://events.vex.com/api/v2","eventRegion":{"id":null,"name":"New Mexico","source":"listing","eventCode":"RE-V5RC-26-5073"},"officialRegionMapVersion":"2026-08-22T13:25:26.679Z","status":"ok","collectorVersion":1,"divisionCount":1}
