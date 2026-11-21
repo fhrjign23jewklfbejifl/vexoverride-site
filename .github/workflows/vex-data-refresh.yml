@@ -9,6 +9,8 @@ on:
     paths:
       - '.github/workflows/vex-data-refresh.yml'
       - 'scripts/vex_sync.py'
+      - 'scripts/publish-vex-data.py'
+      - 'scripts/build-team-index.mjs'
       - 'scripts/test_vex_sync.py'
       - 'data/vex-sync-config.json'
 
@@ -26,6 +28,7 @@ jobs:
     timeout-minutes: 25
     permissions:
       contents: write
+      id-token: write
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
@@ -52,10 +55,13 @@ jobs:
           if [ -f scripts/build-team-index.mjs ]; then
             node scripts/build-team-index.mjs
           fi
+      - name: Build current PigeonScore using the private site engine
+        if: steps.refresh.outputs.publishable == 'true'
+        run: python scripts/publish-vex-data.py build
       - name: Save valid snapshots and refresh status
         if: steps.refresh.outputs.publishable == 'true'
         run: |
-          git add data/events data/season-204
+          git add data/events data/season-204 v2/pigeonscore.json
           if [ -f v2/team-index.json ]; then
             git add v2/team-index.json
           fi
@@ -66,6 +72,11 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git commit -m 'Refresh public VEX data snapshots'
           git push origin HEAD:main
+      - name: Deliver committed data and connect the live API
+        if: steps.refresh.outputs.publishable == 'true'
+        env:
+          VEX_EVENTS_TOKEN: ${{ secrets.VEX_EVENTS_TOKEN }}
+        run: python scripts/publish-vex-data.py publish
       - name: Report refresh failure
         if: steps.refresh.outcome == 'failure'
         run: exit 1
