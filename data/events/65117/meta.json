@@ -1,13 +1,1 @@
-{
-  "eventId": 65117,
-  "updatedAt": "2026-08-23T14:03:47.775Z",
-  "source": "browser-side events.vex.com collector",
-  "eventRegion": {
-    "id": null,
-    "name": "Utah",
-    "source": "listing",
-    "eventCode": "RE-V5RC-26-5117"
-  },
-  "officialRegionMapVersion": "2026-08-22T13:25:26.679Z",
-  "status": "ok"
-}
+{"eventId":65117,"updatedAt":"2026-11-22T19:48:17Z","source":"https://events.vex.com/api/v2","eventRegion":{"id":null,"name":"Utah","source":"listing","eventCode":"RE-V5RC-26-5117"},"officialRegionMapVersion":"2026-08-22T13:25:26.679Z","status":"ok","collectorVersion":1,"divisionCount":1}
