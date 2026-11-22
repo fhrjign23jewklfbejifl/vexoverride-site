@@ -1,13 +1,1 @@
-{
-  "eventId": 65093,
-  "updatedAt": "2026-08-23T14:03:44.792Z",
-  "source": "browser-side events.vex.com collector",
-  "eventRegion": {
-    "id": null,
-    "name": "Indiana",
-    "source": "listing",
-    "eventCode": "RE-V5RC-26-5093"
-  },
-  "officialRegionMapVersion": "2026-08-22T13:25:26.679Z",
-  "status": "ok"
-}
+{"eventId":65093,"updatedAt":"2026-11-22T06:59:44Z","source":"https://events.vex.com/api/v2","eventRegion":{"id":null,"name":"Indiana","source":"listing","eventCode":"RE-V5RC-26-5093"},"officialRegionMapVersion":"2026-08-22T13:25:26.679Z","status":"ok","collectorVersion":1,"divisionCount":1}

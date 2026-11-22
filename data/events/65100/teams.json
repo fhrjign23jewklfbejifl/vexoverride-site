@@ -1,17 +1,1 @@
-{
-  "meta": {
-    "current_page": 1,
-    "first_page_url": "https://events.vex.com/api/v2/events/65100/teams?page=1",
-    "from": null,
-    "last_page": 1,
-    "last_page_url": "https://events.vex.com/api/v2/events/65100/teams?page=1",
-    "next_page_url": null,
-    "path": "https://events.vex.com/api/v2/events/65100/teams",
-    "per_page": 250,
-    "prev_page_url": null,
-    "to": null,
-    "total": 0,
-    "merged_pages": 1
-  },
-  "data": []
-}
+{"data":[{"id":63048,"number":"457A","team_name":"Cyber Sharks","robot_name":"","organization":"JENISON JUNIOR HIGH SCHOOL","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Jenison","region":"Michigan","country":"United States"}},{"id":63049,"number":"457B","team_name":"The Tin Men","robot_name":"","organization":"JENISON JUNIOR HIGH SCHOOL","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Jenison","region":"Michigan","country":"United States"}},{"id":63050,"number":"457C","team_name":"The","robot_name":"","organization":"JENISON JUNIOR HIGH SCHOOL","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Jenison","region":"Michigan","country":"United States"}},{"id":63051,"number":"457D","team_name":"Mission Control","robot_name":"","organization":"JENISON JUNIOR HIGH SCHOOL","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Jenison","region":"Michigan","country":"United States"}},{"id":63052,"number":"457E","team_name":"Wouldn't You Like To Know","robot_name":"","organization":"JENISON JUNIOR HIGH SCHOOL","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Jenison","region":"Michigan","country":"United States"}},{"id":129647,"number":"61187B","team_name":"AR: Tweenage Mutant Ninja Turtles","robot_name":"","organization":"ALLENDALE MIDDLE SCHOOL","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Allendale","region":"Michigan","country":"United States"}},{"id":130390,"number":"61187F","team_name":"AR: Gear Grinders","robot_name":"","organization":"ALLENDALE MIDDLE SCHOOL","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Allendale","region":"Michigan","country":"United States"}},{"id":142905,"number":"61187G","team_name":"AR:  Zip-Tie Gremlins","robot_name":"","organization":"ALLENDALE MIDDLE SCHOOL","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Allendale","region":"Michigan","country":"United States"}},{"id":201761,"number":"61187H","team_name":"AR: Redstone Nether Raiders","robot_name":"","organization":"ALLENDALE MIDDLE SCHOOL","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Allendale","region":"Michigan","country":"United States"}},{"id":73989,"number":"97311E","team_name":"Titanium Bots","robot_name":"","organization":"DUNCAN LAKE MIDDLE SCHOOL","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Caledonia","region":"Michigan","country":"United States"}}]}
