@@ -1,17 +1,1 @@
-{
-  "meta": {
-    "current_page": 1,
-    "first_page_url": "https://events.vex.com/api/v2/events/65165/teams?page=1",
-    "from": null,
-    "last_page": 1,
-    "last_page_url": "https://events.vex.com/api/v2/events/65165/teams?page=1",
-    "next_page_url": null,
-    "path": "https://events.vex.com/api/v2/events/65165/teams",
-    "per_page": 250,
-    "prev_page_url": null,
-    "to": null,
-    "total": 0,
-    "merged_pages": 1
-  },
-  "data": []
-}
+{"data":[{"id":17050,"number":"4330P","team_name":"RoboPigeons","robot_name":"The Pigeon","organization":"RANSOM EVERGLADES SCHOOL","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Miami","region":"Florida","country":"United States"}},{"id":27289,"number":"4330R","team_name":"Arr","robot_name":"Pirates","organization":"RANSOM EVERGLADES SCHOOL","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Miami","region":"Florida","country":"United States"}},{"id":107112,"number":"4330V","team_name":"The Ghosts (Blinky, Pinky, Inky and Clyde)","robot_name":"PacMan","organization":"RANSOM EVERGLADES SCHOOL","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Miami","region":"Florida","country":"United States"}},{"id":193341,"number":"4330W","team_name":"Singularity","robot_name":"OmniVan","organization":"RANSOM EVERGLADES SCHOOL","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Miami","region":"Florida","country":"United States"}}]}
