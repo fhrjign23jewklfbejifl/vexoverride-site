@@ -1,17 +1,1 @@
-{
-  "meta": {
-    "current_page": 1,
-    "first_page_url": "https://events.vex.com/api/v2/events/65251/teams?page=1",
-    "from": null,
-    "last_page": 1,
-    "last_page_url": "https://events.vex.com/api/v2/events/65251/teams?page=1",
-    "next_page_url": null,
-    "path": "https://events.vex.com/api/v2/events/65251/teams",
-    "per_page": 250,
-    "prev_page_url": null,
-    "to": null,
-    "total": 0,
-    "merged_pages": 1
-  },
-  "data": []
-}
+{"data":[{"id":198947,"number":"53397A","team_name":"The Best of the Rest","robot_name":"Dorito","organization":"South Coast Baptist College","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Waikiki","region":"Western Australia","country":"Australia"}},{"id":198948,"number":"53397B","team_name":"Tyrannosaurus VEX","robot_name":"","organization":"South Coast Baptist College","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Waikiki","region":"Western Australia","country":"Australia"}},{"id":188716,"number":"53397S","team_name":"HXZARDS","robot_name":"Haxzardous","organization":"South Coast Baptist College","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"Middle School","location":{"city":"Waikiki","region":"Western Australia","country":"Australia"}},{"id":188722,"number":"53397T","team_name":"JA-SO","robot_name":"Diva","organization":"South Coast Baptist College","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Waikiki","region":"Western Australia","country":"Australia"}},{"id":153765,"number":"79419N","team_name":"Golden Turtles","robot_name":"Raphael","organization":"Carey Baptist College","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Perth","region":"Western Australia","country":"Australia"}}]}

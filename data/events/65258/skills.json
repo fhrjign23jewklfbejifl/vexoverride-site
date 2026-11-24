@@ -1,17 +1,1 @@
-{
-  "meta": {
-    "current_page": 1,
-    "first_page_url": "https://events.vex.com/api/v2/events/65258/skills?page=1",
-    "from": null,
-    "last_page": 1,
-    "last_page_url": "https://events.vex.com/api/v2/events/65258/skills?page=1",
-    "next_page_url": null,
-    "path": "https://events.vex.com/api/v2/events/65258/skills",
-    "per_page": 250,
-    "prev_page_url": null,
-    "to": null,
-    "total": 0,
-    "merged_pages": 1
-  },
-  "data": []
-}
+{"data":[{"id":79283296,"event":{"id":65258,"name":"1ra Fecha de la LNR 2026-2027 Vex V5","code":"RE-V5RC-26-5258"},"team":{"id":156429,"name":"13459A","code":"HS"},"type":"driver","season":{"id":204,"name":"VEX V5 Robotics Competition 2026-2027: Override","code":null},"division":null,"rank":1,"score":58,"attempts":2},{"id":79283297,"event":{"id":65258,"name":"1ra Fecha de la LNR 2026-2027 Vex V5","code":"RE-V5RC-26-5258"},"team":{"id":156429,"name":"13459A","code":"HS"},"type":"programming","season":{"id":204,"name":"VEX V5 Robotics Competition 2026-2027: Override","code":null},"division":null,"rank":1,"score":58,"attempts":2},{"id":79283298,"event":{"id":65258,"name":"1ra Fecha de la LNR 2026-2027 Vex V5","code":"RE-V5RC-26-5258"},"team":{"id":191145,"name":"13459B","code":"MS"},"type":"driver","season":{"id":204,"name":"VEX V5 Robotics Competition 2026-2027: Override","code":null},"division":null,"rank":2,"score":68,"attempts":3},{"id":79283299,"event":{"id":65258,"name":"1ra Fecha de la LNR 2026-2027 Vex V5","code":"RE-V5RC-26-5258"},"team":{"id":191145,"name":"13459B","code":"MS"},"type":"programming","season":{"id":204,"name":"VEX V5 Robotics Competition 2026-2027: Override","code":null},"division":null,"rank":2,"score":18,"attempts":1},{"id":79283300,"event":{"id":65258,"name":"1ra Fecha de la LNR 2026-2027 Vex V5","code":"RE-V5RC-26-5258"},"team":{"id":199918,"name":"17410B","code":"HS"},"type":"driver","season":{"id":204,"name":"VEX V5 Robotics Competition 2026-2027: Override","code":null},"division":null,"rank":3,"score":48,"attempts":1},{"id":79283301,"event":{"id":65258,"name":"1ra Fecha de la LNR 2026-2027 Vex V5","code":"RE-V5RC-26-5258"},"team":{"id":199918,"name":"17410B","code":"HS"},"type":"programming","season":{"id":204,"name":"VEX V5 Robotics Competition 2026-2027: Override","code":null},"division":null,"rank":3,"score":5,"attempts":1},{"id":79283302,"event":{"id":65258,"name":"1ra Fecha de la LNR 2026-2027 Vex V5","code":"RE-V5RC-26-5258"},"team":{"id":200116,"name":"71748A","code":"HS"},"type":"driver","season":{"id":204,"name":"VEX V5 Robotics Competition 2026-2027: Override","code":null},"division":null,"rank":4,"score":28,"attempts":2},{"id":79283303,"event":{"id":65258,"name":"1ra Fecha de la LNR 2026-2027 Vex V5","code":"RE-V5RC-26-5258"},"team":{"id":200116,"name":"71748A","code":"HS"},"type":"programming","season":{"id":204,"name":"VEX V5 Robotics Competition 2026-2027: Override","code":null},"division":null,"rank":4,"score":8,"attempts":1},{"id":79283304,"event":{"id":65258,"name":"1ra Fecha de la LNR 2026-2027 Vex V5","code":"RE-V5RC-26-5258"},"team":{"id":160795,"name":"17410A","code":"HS"},"type":"driver","season":{"id":204,"name":"VEX V5 Robotics Competition 2026-2027: Override","code":null},"division":null,"rank":5,"score":13,"attempts":1},{"id":79283305,"event":{"id":65258,"name":"1ra Fecha de la LNR 2026-2027 Vex V5","code":"RE-V5RC-26-5258"},"team":{"id":160795,"name":"17410A","code":"HS"},"type":"programming","season":{"id":204,"name":"VEX V5 Robotics Competition 2026-2027: Override","code":null},"division":null,"rank":5,"score":0,"attempts":1}]}
