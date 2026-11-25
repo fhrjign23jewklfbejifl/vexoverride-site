@@ -1,17 +1,1 @@
-{
-  "meta": {
-    "current_page": 1,
-    "first_page_url": "https://events.vex.com/api/v2/events/65311/skills?page=1",
-    "from": null,
-    "last_page": 1,
-    "last_page_url": "https://events.vex.com/api/v2/events/65311/skills?page=1",
-    "next_page_url": null,
-    "path": "https://events.vex.com/api/v2/events/65311/skills",
-    "per_page": 250,
-    "prev_page_url": null,
-    "to": null,
-    "total": 0,
-    "merged_pages": 1
-  },
-  "data": []
-}
+{"data":[{"id":79283514,"event":{"id":65311,"name":"NE Vic and Sth'ern Riverina - Wangaratta Comp: Galen Catholic College","code":"RE-V5RC-26-5311"},"team":{"id":197503,"name":"42126A","code":"HS"},"type":"driver","season":{"id":204,"name":"VEX V5 Robotics Competition 2026-2027: Override","code":null},"division":null,"rank":1,"score":0,"attempts":1},{"id":79283515,"event":{"id":65311,"name":"NE Vic and Sth'ern Riverina - Wangaratta Comp: Galen Catholic College","code":"RE-V5RC-26-5311"},"team":{"id":197503,"name":"42126A","code":"HS"},"type":"programming","season":{"id":204,"name":"VEX V5 Robotics Competition 2026-2027: Override","code":null},"division":null,"rank":1,"score":0,"attempts":0}]}

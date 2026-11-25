@@ -1,17 +1,1 @@
-{
-  "meta": {
-    "current_page": 1,
-    "first_page_url": "https://events.vex.com/api/v2/events/65311/teams?page=1",
-    "from": null,
-    "last_page": 1,
-    "last_page_url": "https://events.vex.com/api/v2/events/65311/teams?page=1",
-    "next_page_url": null,
-    "path": "https://events.vex.com/api/v2/events/65311/teams",
-    "per_page": 250,
-    "prev_page_url": null,
-    "to": null,
-    "total": 0,
-    "merged_pages": 1
-  },
-  "data": []
-}
+{"data":[{"id":198912,"number":"13449K","team_name":"4K","robot_name":"DPO2","organization":"Myrtleford P12 College","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Myrtleford","region":"Victoria","country":"Australia"}},{"id":198913,"number":"13449T","team_name":"Armadillo Robotics","robot_name":"Adrian","organization":"Myrtleford P12 College","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Myrtleford","region":"Victoria","country":"Australia"}},{"id":197503,"number":"42126A","team_name":"Trinity Legacy","robot_name":"Spirit","organization":"Trinity Anglican College Albury","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Albury","region":"New South Wales","country":"Australia"}},{"id":197504,"number":"42126B","team_name":"Trinity Artemis","robot_name":"Orion","organization":"Trinity Anglican College Albury","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Albury","region":"New South Wales","country":"Australia"}},{"id":77299,"number":"48327T","team_name":"Galen VEX 1","robot_name":"GCC1","organization":"Galen Catholic College","registered":true,"program":{"id":1,"name":"VEX V5 Robotics Competition","code":"V5RC"},"grade":"High School","location":{"city":"Wangaratta","region":"Victoria","country":"Australia"}}]}
