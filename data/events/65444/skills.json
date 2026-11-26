@@ -1,17 +1,1 @@
-{
-  "meta": {
-    "current_page": 1,
-    "first_page_url": "https://events.vex.com/api/v2/events/65444/skills?page=1",
-    "from": null,
-    "last_page": 1,
-    "last_page_url": "https://events.vex.com/api/v2/events/65444/skills?page=1",
-    "next_page_url": null,
-    "path": "https://events.vex.com/api/v2/events/65444/skills",
-    "per_page": 250,
-    "prev_page_url": null,
-    "to": null,
-    "total": 0,
-    "merged_pages": 1
-  },
-  "data": []
-}
+{"data":[{"id":79247768,"event":{"id":65444,"name":"Auckland | VEX V5 Robotics Competition™ (Blended): Override™ Tournament #6 @ Onehunga High School","code":"RE-V5RC-26-5444"},"team":{"id":187488,"name":"22020C","code":"MS"},"type":"driver","season":{"id":204,"name":"VEX V5 Robotics Competition 2026-2027: Override","code":null},"division":null,"rank":1,"score":68,"attempts":3},{"id":79247769,"event":{"id":65444,"name":"Auckland | VEX V5 Robotics Competition™ (Blended): Override™ Tournament #6 @ Onehunga High School","code":"RE-V5RC-26-5444"},"team":{"id":187488,"name":"22020C","code":"MS"},"type":"programming","season":{"id":204,"name":"VEX V5 Robotics Competition 2026-2027: Override","code":null},"division":null,"rank":1,"score":0,"attempts":1},{"id":79247770,"event":{"id":65444,"name":"Auckland | VEX V5 Robotics Competition™ (Blended): Override™ Tournament #6 @ Onehunga High School","code":"RE-V5RC-26-5444"},"team":{"id":128421,"name":"2918X","code":"HS"},"type":"driver","season":{"id":204,"name":"VEX V5 Robotics Competition 2026-2027: Override","code":null},"division":null,"rank":2,"score":5,"attempts":1},{"id":79247771,"event":{"id":65444,"name":"Auckland | VEX V5 Robotics Competition™ (Blended): Override™ Tournament #6 @ Onehunga High School","code":"RE-V5RC-26-5444"},"team":{"id":128421,"name":"2918X","code":"HS"},"type":"programming","season":{"id":204,"name":"VEX V5 Robotics Competition 2026-2027: Override","code":null},"division":null,"rank":2,"score":0,"attempts":0}]}
