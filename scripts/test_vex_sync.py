@@ -156,6 +156,19 @@ class DataTests(unittest.TestCase):
             self.assertEqual([x["id"] for x in picked], [1, 2])
             self.assertEqual(due, 4)
 
+    def test_regional_priority_keeps_backfill_and_respects_freshness(self):
+        now = datetime(2026, 11, 26, tzinfo=timezone.utc)
+        config = {**CONFIG, "priorityEventIds": [], "priorityRegions": ["Florida"], "maxEventsPerRun": 2}
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            events = [{**copy.deepcopy(EVENT), "id": i, "start": "2026-12-19T00:00:00Z", "end": "2026-12-19T00:00:00Z", "location": {"region": "Florida" if i == 9 else "Ohio"}} for i in (1, 2, 9)]
+            selected, due = sync.due_events(events, config, root, now)
+            self.assertEqual([e["id"] for e in selected], [9, 1])
+            sync.write_json(root / "data/events/9/meta.json", {"collectorVersion": 1, "updatedAt": "2026-11-25T23:00:00Z"})
+            selected, due = sync.due_events(events, config, root, now)
+            self.assertNotIn(9, [e["id"] for e in selected])
+            self.assertEqual(due, 2)
+
     def test_failed_feed_preserves_previous_good_file_and_timestamp(self):
         with tempfile.TemporaryDirectory() as folder:
             root = Path(folder)
