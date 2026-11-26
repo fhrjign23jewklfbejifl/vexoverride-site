@@ -224,24 +224,32 @@ def clean_event(row):
 
 def due_events(events, config, root, now):
     entries = []
+    priority_ids = set(config.get("priorityEventIds", []))
+    priority_regions = {x.casefold() for x in config.get("priorityRegions", [])}
     for event in events:
         meta = read_json(root / "data/events" / str(event["id"]) / "meta.json", {})
         stamp = meta.get("updatedAt", "") if meta.get("collectorVersion") == 1 else ""
         try:
             age = (now - datetime.fromisoformat(stamp.replace("Z", "+00:00"))).total_seconds()
-        except ValueError:
+        except (ValueError, TypeError):
             age = float("inf")
+        close, regional = False, False
         try:
             start = datetime.fromisoformat(event["start"].replace("Z", "+00:00"))
             end = datetime.fromisoformat(event["end"].replace("Z", "+00:00"))
             close = start.timestamp() - 7 * 86400 <= now.timestamp() <= end.timestamp() + 7 * 86400
+            region = str((event.get("location") or {}).get("region") or "").casefold()
+            regional = (region in priority_regions and
+                        start.timestamp() - 30 * 86400 <= now.timestamp() <= end.timestamp() + 14 * 86400)
         except (ValueError, TypeError, KeyError):
-            close = False
-        if age >= (5 * 3600 if close else 7 * 86400):
-            entries.append((event, stamp, close))
+            pass
+        priority = event["id"] in priority_ids or regional
+        interval = 5 * 3600 if close else 23 * 3600 if priority else 7 * 86400
+        if age >= interval:
+            entries.append((event, stamp, close, priority))
     limit = config["maxEventsPerRun"]
-    # Reserve half the batch for the oldest snapshots so active events cannot starve backfill.
-    urgent = sorted(entries, key=lambda x: (not x[2], x[1], x[0]["id"]))
+    # Half for relevant/active events; half oldest first, so worldwide backfill keeps moving.
+    urgent = sorted(entries, key=lambda x: (not x[3], not x[2], x[1], x[0]["id"]))
     picked = urgent[:max(1, limit // 2)]
     selected = {x[0]["id"] for x in picked}
     backlog = sorted((x for x in entries if x[0]["id"] not in selected), key=lambda x: (x[1], x[0]["id"]))
