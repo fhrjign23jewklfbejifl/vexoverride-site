@@ -3,8 +3,17 @@
   "seasonName": "2026-2027",
   "programId": 1,
   "gradeLevel": "High School",
-  "priorityEventIds": [],
+  "priorityEventIds": [
+    64306,
+    66343,
+    65974
+  ],
   "maxEventsPerRun": 24,
   "maxRequestsPerRun": 400,
-  "requestDelaySeconds": 2
+  "requestDelaySeconds": 2,
+  "priorityRegions": [
+    "Florida",
+    "Florida - South",
+    "FL"
+  ]
 }
